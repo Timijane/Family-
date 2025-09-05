@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Okewunmi Solomon Dynasty - About</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', serif; background: #f5f5f5; color: #333; }
+
+  /* Navigation Bar */
+  nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    padding: 15px 0;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: #ffd700; }
+
+  /* About section */
+  .section { max-width: 1200px; margin: 120px auto 60px; padding: 0 20px; }
+
+  h2, h3 { text-align: center; margin-bottom: 20px; color: #4b0082; }
+  h2 { font-size: 3rem; font-weight: bold; }
+  h3 { font-size: 2rem; }
+
+  p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 15px; }
+
+  /* Children cards */
+  .children-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .children-grid { grid-template-columns: 1fr; }
+  }
+
+  .child-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .child-card:hover { transform: translateY(-5px); }
+
+  .child-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .child-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4b0082;
+  }
+
+  .child-card p { font-size: 1rem; color: #555; }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- About Section -->
+<div class="section">
+  <h2>Welcome to the Okewunmi Dynasty</h2>
+  <p>The Okewunmi Dynasty is a family rooted in truth, sacrifice, faith, and legacy. At the heart of this great family is Elder Solomon Okewunmi, a man widely respected for his integrity, wisdom, and selfless devotion. Born and raised in Ogun State, Egba, Abeokuta—Itori Oke, Elder Solomon has lived his life as a shining example of what it means to serve both family and community with unwavering commitment.</p>
+  <p>Now at the age of 71 (in 2025), Elder Solomon continues to stand as a pillar of strength and guidance. By his side is his beloved wife, Deaconess Adebola Okewunmi, a virtuous woman and nurturing mother of many. Together, they have built a strong family rooted in love, discipline, and godliness.</p>
+
+  <h3>The Okewunmi Children</h3>
+  <div class="children-grid">
+    <!-- Child 1 -->
+    <div class="child-card">
+      <img src="https://source.unsplash.com/200x200/?woman,portrait" alt="Oshode Damilola">
+      <h4>Oshode Damilola (née Mama Oshode)</h4>
+      <p>The firstborn of the family, Damilola, stands as a model of resilience, wisdom, and industriousness. A graduate of Computer Science from Ire Ekiti Polytechnic, she has carved a niche in the business world as a leather materials mogul. She is happily married to Mr. Oshode Damilare, and their union is blessed with two children, Ademide and Iremide.</p>
+    </div>
+
+    <!-- Child 2 -->
+    <div class="child-card">
+      <img src="https://source.unsplash.com/200x200/?man,portrait" alt="Engr. Okewunmi Ayomide">
+      <h4>Engr. Okewunmi Ayomide</h4>
+      <p>The second-born and first son, Ayomide, is a skilled engineer specializing in heavy-duty machine repairs. He is working on launching “Okewunmi Autos” to redefine the automobile industry. He is married to Simisola Okewunmi, and they are blessed with a son, Simon Okewunmi.</p>
+    </div>
+
+    <!-- Child 3 -->
+    <div class="child-card">
+      <img src="https://source.unsplash.com/200x200/?man,smile" alt="Okewunmi Oluwagbenga">
+      <h4>Okewunmi Oluwagbenga</h4>
+      <p>The third-born, Oluwagbenga, embodies the entrepreneurial creativity of the Okewunmi family. With a passion for style and innovation, he has ventured into the shoe and fashion industry, where his designs and business ideas continue to flourish. He is happily married and dedicated to building a home founded on love, respect, and godly values.</p>
+    </div>
+
+    <!-- Child 4 -->
+    <div class="child-card">
+      <img src="https://source.unsplash.com/200x200/?woman,smile" alt="Okewunmi Opeyemi">
+      <h4>Okewunmi Opeyemi (Mrs. Mathew)</h4>
+      <p>The fourth-born, Opeyemi, is a woman of elegance, intelligence, and godliness. She thrives in the fabric and textile industry, and is happily married to Pastor Mathew. Together they are raising a godly family.</p>
+    </div>
+
+    <!-- Add remaining children in the same format -->
+  </div>
+</div>
+
+</body>
+</html>
