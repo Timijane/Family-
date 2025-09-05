@@ -1,0 +1,53 @@
+<!-- Contact Page -->
+<section id="contact" class="py-16 bg-gray-50">
+  <!-- Navigation (reuse same for consistency) -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <h1 class="text-2xl font-bold text-purple-700">Okewunmi Solomon Dynasty</h1>
+      <ul class="flex space-x-6 text-purple-700 font-semibold">
+        <li><a href="#home" class="hover:text-purple-900">Home</a></li>
+        <li><a href="#about" class="hover:text-purple-900">About</a></li>
+        <li><a href="#contact" class="hover:text-purple-900">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Info Card -->
+  <div class="max-w-5xl mx-auto mt-24 p-8 bg-white rounded-2xl shadow-lg">
+    <h2 class="text-3xl font-bold text-center text-purple-700 mb-6">Contact Us</h2>
+    <p class="text-gray-700 text-lg mb-4">
+      <strong>Address:</strong> 3 Adaranijo Close, Ipokia Street off Agoro Road, Owode Otta, Ogun State, Nigeria
+    </p>
+    <p class="text-gray-700 text-lg mb-4"><strong>Phone:</strong> 09056658964</p>
+    <p class="text-gray-700 text-lg mb-4"><strong>Email:</strong> triangleofscholartimi@gmail.com</p>
+
+    <!-- Social Links -->
+    <div class="flex space-x-6 justify-center my-6">
+      <a href="https://www.facebook.com/YOUR_FACEBOOK_LINK" target="_blank" class="text-blue-600 font-bold hover:underline">Facebook</a>
+      <a href="https://www.youtube.com/YOUR_YOUTUBE_LINK" target="_blank" class="text-red-600 font-bold hover:underline">YouTube</a>
+    </div>
+
+    <!-- Google Map -->
+    <div class="w-full h-64 mb-6">
+      <iframe 
+        src="https://www.google.com/maps?q=3+Adaranijo+Close+Ipokia+Street+off+Agoro+Road+Owode+Otta+Ogun+State+Nigeria&output=embed"
+        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Google Form -->
+    <div class="w-full">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeN1kMPPgv2iPpUVwLFEwgaz2ByBReTDfZK72zkHqggERIJkQ/viewform?embedded=true" 
+        width="100%" height="717" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Responsive adjustments -->
+<style>
+  body { font-family: 'Georgia', serif; background-color: #f7f7f7; }
+  @media (max-width: 768px) {
+    nav ul { flex-direction: column; gap: 4px; }
+    .max-w-5xl { padding: 4px; }
+  }
+</style>
