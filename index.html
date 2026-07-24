@@ -1,151 +1,902 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Okewunmi Solomon Dynasty - Home</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; font-family: 'Georgia', serif; overflow-x: hidden; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Finish as Generation | NGO</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* Navigation Bar */
-  nav {
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-    padding: 15px 0;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  nav a:hover { color: #ffd700; }
+        :root {
+            --black: #1a1a1a;
+            --white: #f9f9f9;
+            --green: #2d6a4f;
+            --green-light: #409f7a;
+            --brown: #8b5a2b;
+            --brown-light: #b87c4b;
+            --gray: #e0e0e0;
+            --shadow: 0 8px 30px rgba(0,0,0,0.12);
+            --transition: 0.3s ease;
+        }
 
-  /* Slideshow background */
-  .slideshow-container {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    z-index: -1;
-  }
+        html {
+            scroll-behavior: smooth;
+        }
 
-  .overlay {
-    position: fixed; top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 0;
-  }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-  /* Main content */
-  .content {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-  }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
 
-  h1 {
-    font-size: 5rem;
-    font-weight: 900;
-    color: #ffd700;
-    text-shadow: 4px 4px 15px rgba(0,0,0,0.7);
-    margin-bottom: 40px;
-    animation: floatIn 2s ease forwards;
-  }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-  @keyframes floatIn {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+        /* ===== SKELETON LOADER ===== */
+        #skeleton-loader {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease;
+        }
 
-  .scripture {
-    font-size: 1.8rem;
-    max-width: 900px;
-    line-height: 1.6;
-    opacity: 0;
-    position: absolute;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-    transition: opacity 1s ease-in-out;
-  }
+        #skeleton-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-  .scripture.active { opacity: 1; position: relative; }
+        .skeleton-lady {
+            width: 120px;
+            height: 160px;
+            background: linear-gradient(90deg, var(--gray) 25%, #f0f0f0 50%, var(--gray) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 60px 60px 20px 20px;
+            position: relative;
+            margin-bottom: 30px;
+        }
 
-  @media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    .scripture { font-size: 1.3rem; padding: 0 10px; }
-  }
-</style>
+        .skeleton-lady::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 30px;
+            background: linear-gradient(90deg, var(--gray) 25%, #f0f0f0 50%, var(--gray) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 50%;
+        }
+
+        .skeleton-text {
+            width: 280px;
+            height: 16px;
+            background: linear-gradient(90deg, var(--gray) 25%, #f0f0f0 50%, var(--gray) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+
+        .skeleton-text:nth-child(2) { width: 220px; }
+        .skeleton-text:nth-child(3) { width: 180px; }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            padding: 16px 0;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--green);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--brown);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--black);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1.5px solid var(--gray);
+            border-radius: 40px;
+            padding: 4px 12px 4px 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .lang-toggle:hover {
+            border-color: var(--green);
+        }
+
+        .lang-toggle i {
+            font-size: 0.9rem;
+            color: var(--green);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 48px;
+            right: 0;
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 12px 0;
+            min-width: 180px;
+            border: 1px solid var(--gray);
+            z-index: 1100;
+        }
+
+        .lang-dropdown.open {
+            display: block;
+        }
+
+        .lang-dropdown li {
+            padding: 8px 24px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .lang-dropdown li:hover {
+            background: var(--green);
+            color: white;
+        }
+
+        .lang-dropdown li.active-lang {
+            background: var(--green);
+            color: white;
+        }
+
+        .lang-wrapper {
+            position: relative;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--black);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fbf9 0%, #e8f0ec 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(45,106,79,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content h1 .highlight {
+            color: var(--green);
+            position: relative;
+        }
+
+        .hero-content h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(45,106,79,0.15);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #444;
+            max-width: 540px;
+            margin-bottom: 36px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 34px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: white;
+            box-shadow: 0 4px 16px rgba(45,106,79,0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--green-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(45,106,79,0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-brown {
+            background: var(--brown);
+            color: white;
+            box-shadow: 0 4px 16px rgba(139,90,43,0.3);
+        }
+
+        .btn-brown:hover {
+            background: var(--brown-light);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image .art-circle {
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green) 0%, var(--brown) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(45,106,79,0.2);
+        }
+
+        .hero-image .art-circle::after {
+            content: '🌱';
+            font-size: 8rem;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.1));
+        }
+
+        .art-circle .ring {
+            position: absolute;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            animation: spin 20s linear infinite;
+        }
+
+        .art-circle .ring:nth-child(1) {
+            width: 90%;
+            height: 90%;
+        }
+
+        .art-circle .ring:nth-child(2) {
+            width: 70%;
+            height: 70%;
+            animation-duration: 14s;
+            animation-direction: reverse;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-image .art-circle {
+                width: 300px;
+                height: 300px;
+            }
+
+            .hero-image .art-circle::after {
+                font-size: 5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 20px 0 10px;
+                gap: 16px;
+                border-top: 1px solid var(--gray);
+                margin-top: 12px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .lang-wrapper {
+                width: 100%;
+            }
+
+            .lang-toggle {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .lang-dropdown {
+                right: auto;
+                left: 0;
+                width: 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero-image .art-circle {
+                width: 220px;
+                height: 220px;
+            }
+
+            .hero-image .art-circle::after {
+                font-size: 3.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* ===== FOOTER (minimal for now) ===== */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--green);
+        }
+
+        .footer a {
+            color: var(--green-light);
+        }
+
+        /* ===== PAGE TRANSITION ===== */
+        #main-content {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        #main-content.visible {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <!-- ===== SKELETON LOADER ===== -->
+    <div id="skeleton-loader" aria-hidden="true">
+        <div class="skeleton-lady"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <p style="margin-top: 20px; color: #aaa; font-weight: 300;">Loading...</p>
+    </div>
 
-<!-- Slideshow Background -->
-<div class="slideshow-container"></div>
-<div class="overlay"></div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="main-content">
 
-<!-- Main Content -->
-<div class="content">
-  <h1>Okewunmi Solomon Dynasty</h1>
+        <!-- ===== HEADER ===== -->
+        <header id="header">
+            <div class="container nav-container">
+                <a href="#" class="logo">Finish<span>As</span>Generation</a>
 
-  <div class="scripture active">“But as for me and my house, we will serve the Lord.” – Joshua 24:15</div>
-  <div class="scripture">“The Lord is my shepherd, I shall not want.” – Psalm 23:1</div>
-  <div class="scripture">“I can do all things through Christ who strengthens me.” – Philippians 4:13</div>
-  <div class="scripture">“Train up a child in the way he should go, and when he is old he will not depart from it.” – Proverbs 22:6</div>
-  <div class="scripture">“But they that wait upon the Lord shall renew their strength.” – Isaiah 40:31</div>
-</div>
+                <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </div>
 
-<script>
-  // Background images
-  const images = [
-    "https://source.unsplash.com/1600x900/?church,cross",
-    "https://source.unsplash.com/1600x900/?bible,prayer",
-    "https://source.unsplash.com/1600x900/?faith,christ",
-    "https://source.unsplash.com/1600x900/?worship,light",
-    "https://source.unsplash.com/1600x900/?god,church"
-  ]
+                <nav class="nav-links" id="navLinks">
+                    <a href="index.html" class="active" data-key="navHome">Home</a>
+                    <a href="about.html" data-key="navAbout">About</a>
+                    <a href="sponsor.html" data-key="navSponsor">Sponsor</a>
+                    <a href="blog.html" data-key="navBlog">Blog</a>
+                    <a href="journey.html" data-key="navJourney">Journey</a>
+                    <a href="contact.html" data-key="navContact">Contact</a>
+                    <a href="admin.html" data-key="navAdmin">Admin</a>
 
-  // Preload images
-  images.forEach(url => { const img = new Image(); img.src = url; });
+                    <div class="lang-wrapper">
+                        <div class="lang-toggle" id="langToggle">
+                            <i class="fas fa-globe"></i> <span id="currentLangLabel">EN (UK)</span> <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i>
+                        </div>
+                        <ul class="lang-dropdown" id="langDropdown">
+                            <li data-lang="en-uk" class="active-lang">🇬🇧 English (UK)</li>
+                            <li data-lang="en-us">🇺🇸 English (US)</li>
+                            <li data-lang="de">🇩🇪 Deutsch</li>
+                            <li data-lang="fr">🇫🇷 Français</li>
+                            <li data-lang="pt">🇵🇹 Português</li>
+                            <li data-lang="zh">🇨🇳 中文</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
-  const slideshow = document.querySelector('.slideshow-container');
-  const scriptures = document.querySelectorAll('.scripture');
-  let index = 0;
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>
+                        <span data-key="heroTitle1">From</span><br />
+                        <span class="highlight" data-key="heroTitle2">Training</span><br />
+                        <span data-key="heroTitle3">to Flourishing</span>
+                    </h1>
+                    <p data-key="heroDesc">
+                        Empowering young women and children to become self-sufficient, healthy, and happy — 
+                        because every generation deserves to flourish.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#!" class="btn btn-primary" data-key="heroBtn1">
+                            <i class="fas fa-seedling"></i> <span>Get Involved</span>
+                        </a>
+                        <a href="#!" class="btn btn-secondary" data-key="heroBtn2">
+                            <i class="fas fa-play-circle"></i> <span>Our Story</span>
+                        </a>
+                        <a href="#!" class="btn btn-brown" data-key="heroBtn3">
+                            <i class="fas fa-heart"></i> <span>Sponsor</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="art-circle">
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  function rotateContent() {
-    // Rotate background
-    index = (index + 1) % images.length;
-    slideshow.style.backgroundImage = `url(${images[index]})`;
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 <strong>Finish as Generation</strong> — <span data-key="footerTag">Nurturing lives, growing futures.</span></p>
+                <p style="margin-top:6px; font-size:0.8rem; opacity:0.6;">
+                    <span data-key="footerCredit">Built with ❤️ for a better world</span>
+                </p>
+            </div>
+        </footer>
 
-    // Rotate scriptures
-    scriptures.forEach(text => text.classList.remove('active'));
-    scriptures[index % scriptures.length].classList.add('active');
-  }
+    </div>
 
-  setInterval(rotateContent, 6000); // every 6 seconds
-</script>
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== LANGUAGE DATA =====
+            const translations = {
+                'en-uk': {
+                    navHome: 'Home',
+                    navAbout: 'About',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Journey',
+                    navContact: 'Contact',
+                    navAdmin: 'Admin',
+                    heroTitle1: 'From',
+                    heroTitle2: 'Training',
+                    heroTitle3: 'to Flourishing',
+                    heroDesc: 'Empowering young women and children to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
+                    heroBtn1: 'Get Involved',
+                    heroBtn2: 'Our Story',
+                    heroBtn3: 'Sponsor',
+                    footerTag: 'Nurturing lives, growing futures.',
+                    footerCredit: 'Built with ❤️ for a better world'
+                },
+                'en-us': {
+                    navHome: 'Home',
+                    navAbout: 'About',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Journey',
+                    navContact: 'Contact',
+                    navAdmin: 'Admin',
+                    heroTitle1: 'From',
+                    heroTitle2: 'Training',
+                    heroTitle3: 'to Flourishing',
+                    heroDesc: 'Empowering young women and children to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
+                    heroBtn1: 'Get Involved',
+                    heroBtn2: 'Our Story',
+                    heroBtn3: 'Sponsor',
+                    footerTag: 'Nurturing lives, growing futures.',
+                    footerCredit: 'Built with ❤️ for a better world'
+                },
+                'de': {
+                    navHome: 'Startseite',
+                    navAbout: 'Über uns',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Reise',
+                    navContact: 'Kontakt',
+                    navAdmin: 'Admin',
+                    heroTitle1: 'Von',
+                    heroTitle2: 'Training',
+                    heroTitle3: 'zum Aufblühen',
+                    heroDesc: 'Junge Frauen und Kinder befähigen, selbstständig, gesund und glücklich zu werden — denn jede Generation verdient es, aufzublühen.',
+                    heroBtn1: 'Mitmachen',
+                    heroBtn2: 'Unsere Geschichte',
+                    heroBtn3: 'Spenden',
+                    footerTag: 'Leben fördern, Zukunft wachsen.',
+                    footerCredit: 'Mit ❤️ für eine bessere Welt'
+                },
+                'fr': {
+                    navHome: 'Accueil',
+                    navAbout: 'À propos',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Parcours',
+                    navContact: 'Contact',
+                    navAdmin: 'Admin',
+                    heroTitle1: 'De',
+                    heroTitle2: 'la formation',
+                    heroTitle3: 'à lépanouissement',
+                    heroDesc: 'Autonomiser les jeunes femmes et les enfants pour qu\'ils deviennent autonomes, en bonne santé et heureux — parce que chaque génération mérite de sépanouir.',
+                    heroBtn1: 'S\'impliquer',
+                    heroBtn2: 'Notre histoire',
+                    heroBtn3: 'Parrainer',
+                    footerTag: 'Nourrir les vies, faire grandir l\'avenir.',
+                    footerCredit: 'Construit avec ❤️ pour un monde meilleur'
+                },
+                'pt': {
+                    navHome: 'Início',
+                    navAbout: 'Sobre',
+                    navSponsor: 'Patrocinar',
+                    navBlog: 'Blog',
+                    navJourney: 'Jornada',
+                    navContact: 'Contacto',
+                    navAdmin: 'Admin',
+                    heroTitle1: 'Da',
+                    heroTitle2: 'formação',
+                    heroTitle3: 'ao florescimento',
+                    heroDesc: 'Capacitar jovens mulheres e crianças para se tornarem autossuficientes, saudáveis e felizes — porque cada geração merece florescer.',
+                    heroBtn1: 'Envolver-se',
+                    heroBtn2: 'Nossa História',
+                    heroBtn3: 'Apoiar',
+                    footerTag: 'Nutrir vidas, cultivar futuros.',
+                    footerCredit: 'Feito com ❤️ para um mundo melhor'
+                },
+                'zh': {
+                    navHome: '首页',
+                    navAbout: '关于我们',
+                    navSponsor: '赞助',
+                    navBlog: '博客',
+                    navJourney: '历程',
+                    navContact: '联系',
+                    navAdmin: '管理',
+                    heroTitle1: '从',
+                    heroTitle2: '训练',
+                    heroTitle3: '到繁荣',
+                    heroDesc: '赋能年轻女性和儿童，使他们自立、健康、快乐 — 因为每一代人都值得繁荣。',
+                    heroBtn1: '参与',
+                    heroBtn2: '我们的故事',
+                    heroBtn3: '赞助',
+                    footerTag: '滋养生命，培育未来。',
+                    footerCredit: '用 ❤️ 为更美好的世界而建'
+                }
+            };
+
+            // ===== STATE =====
+            let currentLang = localStorage.getItem('finishLang') || 'en-uk';
+
+            // ===== DOM REFS =====
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const currentLangLabel = document.getElementById('currentLangLabel');
+            const allTranslatable = document.querySelectorAll('[data-key]');
+            const skeleton = document.getElementById('skeleton-loader');
+            const mainContent = document.getElementById('main-content');
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            // ===== FUNCTIONS =====
+            function applyLanguage(lang) {
+                if (!translations[lang]) return;
+
+                const dict = translations[lang];
+                allTranslatable.forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (dict[key] !== undefined) {
+                        // Preserve inner HTML if there are child elements like icons
+                        const icon = el.querySelector('i');
+                        if (icon) {
+                            // If there's an icon, keep it and only change text
+                            const textNode = el.childNodes[el.childNodes.length - 1];
+                            if (textNode && textNode.nodeType === 3) {
+                                textNode.textContent = ' ' + dict[key];
+                            } else {
+                                // Fallback: set innerHTML with icon
+                                el.innerHTML = `<i class="${icon.className}"></i> ${dict[key]}`;
+                            }
+                        } else {
+                            el.textContent = dict[key];
+                        }
+                    }
+                });
+
+                // Update dropdown active
+                document.querySelectorAll('.lang-dropdown li').forEach(li => {
+                    li.classList.toggle('active-lang', li.dataset.lang === lang);
+                });
+
+                // Update label
+                const langNames = {
+                    'en-uk': 'EN (UK)',
+                    'en-us': 'EN (US)',
+                    'de': 'DE',
+                    'fr': 'FR',
+                    'pt': 'PT',
+                    'zh': '中文'
+                };
+                currentLangLabel.textContent = langNames[lang] || 'EN';
+
+                localStorage.setItem('finishLang', lang);
+                currentLang = lang;
+            }
+
+            function toggleDropdown(e) {
+                e.stopPropagation();
+                langDropdown.classList.toggle('open');
+            }
+
+            function closeDropdown() {
+                langDropdown.classList.remove('open');
+            }
+
+            // ===== EVENT LISTENERS =====
+            // Language toggle
+            langToggle.addEventListener('click', toggleDropdown);
+
+            // Language selection
+            langDropdown.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', function(e) {
+                    const lang = this.dataset.lang;
+                    applyLanguage(lang);
+                    closeDropdown();
+                });
+            });
+
+            // Close dropdown on outside click
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.lang-wrapper')) {
+                    closeDropdown();
+                }
+            });
+
+            // Hamburger
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+                const icon = this.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+
+            // Close nav on link click (mobile)
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    const icon = hamburger.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // Header scroll shadow
+            window.addEventListener('scroll', function() {
+                header.classList.toggle('scrolled', window.scrollY > 20);
+            });
+
+            // ===== SKELETON LOADER =====
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    skeleton.classList.add('hidden');
+                    mainContent.classList.add('visible');
+                }, 1200); // Simulate loading — adjust as needed
+            });
+
+            // ===== APPLY INITIAL LANGUAGE =====
+            applyLanguage(currentLang);
+
+            // ===== NAV ACTIVE STATE (simple) =====
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            navLinks.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+        })();
+    </script>
 
 </body>
 </html>
