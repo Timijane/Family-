@@ -1,152 +1,1841 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Okewunmi Solomon Dynasty - About</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Georgia', serif; background: #f5f5f5; color: #333; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Finish as Generation — Global NGO</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <style>
+        /* ============================================
+                   ROOT VARIABLES & RESET
+                   ============================================ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* Navigation Bar */
-  nav {
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-    padding: 15px 0;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  nav a:hover { color: #ffd700; }
+        :root {
+            /* Primary Colors */
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --white: #fafafa;
+            --white-pure: #ffffff;
+            
+            /* Brand Colors */
+            --green-deep: #1e4d3a;
+            --green-primary: #2d6a4f;
+            --green-mature: #3d8b6b;
+            --green-light: #52b788;
+            --green-pale: #e8f5ee;
+            
+            --brown-deep: #5a3a1a;
+            --brown-primary: #8b5a2b;
+            --brown-mature: #b87c4b;
+            --brown-light: #d4a574;
+            --brown-pale: #f5ede4;
+            
+            /* Neutrals */
+            --gray-50: #f8f8f8;
+            --gray-100: #f0f0f0;
+            --gray-200: #e0e0e0;
+            --gray-300: #c0c0c0;
+            --gray-400: #999999;
+            --gray-500: #666666;
+            --gray-600: #444444;
+            --gray-700: #2a2a2a;
+            
+            /* Semantic */
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+            --shadow-xl: 0 40px 80px rgba(0,0,0,0.16);
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --max-width: 1280px;
+        }
 
-  /* About section */
-  .section { max-width: 1200px; margin: 120px auto 60px; padding: 0 20px; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-  h2, h3 { text-align: center; margin-bottom: 20px; color: #4b0082; }
-  h2 { font-size: 3rem; font-weight: bold; }
-  h3 { font-size: 2rem; }
+        body {
+            font-family: var(--font-primary);
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-  p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 15px; }
+        ::selection {
+            background: var(--green-primary);
+            color: var(--white-pure);
+        }
 
-  /* Children cards */
-  .children-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 40px;
-  }
+        /* ============================================
+                   UTILITY CLASSES
+                   ============================================ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
 
-  @media (max-width: 768px) {
-    .children-grid { grid-template-columns: 1fr; }
-  }
+        .section-padding {
+            padding: 100px 0;
+        }
 
-  .child-card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  .child-card:hover { transform: translateY(-5px); }
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--green-primary);
+            background: var(--green-pale);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            margin-bottom: 16px;
+        }
 
-  .child-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  }
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
 
-  .child-card h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #4b0082;
-  }
+        .section-title .highlight {
+            color: var(--green-primary);
+            position: relative;
+        }
 
-  .child-card p { font-size: 1rem; color: #555; }
-</style>
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: rgba(45, 106, 79, 0.15);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--gray-500);
+            max-width: 560px;
+            line-height: 1.8;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gap-4 {
+            gap: 16px;
+        }
+        .gap-6 {
+            gap: 24px;
+        }
+        .gap-8 {
+            gap: 32px;
+        }
+
+        /* ============================================
+                   SKELETON LOADER — PREMIUM
+                   ============================================ */
+        #skeleton-loader {
+            position: fixed;
+            inset: 0;
+            background: var(--white-pure);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #skeleton-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .skeleton-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .skeleton-lady {
+            width: 140px;
+            height: 190px;
+            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
+            background-size: 300% 100%;
+            animation: shimmerLoad 1.8s infinite;
+            border-radius: 70px 70px 24px 24px;
+            position: relative;
+            box-shadow: var(--shadow-md);
+        }
+
+        .skeleton-lady::after {
+            content: '';
+            position: absolute;
+            bottom: -48px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
+            background-size: 300% 100%;
+            animation: shimmerLoad 1.8s infinite;
+            border-radius: 50%;
+        }
+
+        .skeleton-lines {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .skeleton-line {
+            height: 14px;
+            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
+            background-size: 300% 100%;
+            animation: shimmerLoad 1.8s infinite;
+            border-radius: var(--radius-full);
+        }
+
+        .skeleton-line:nth-child(1) { width: 320px; }
+        .skeleton-line:nth-child(2) { width: 260px; }
+        .skeleton-line:nth-child(3) { width: 200px; }
+
+        .skeleton-badge {
+            width: 120px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
+            background-size: 300% 100%;
+            animation: shimmerLoad 1.8s infinite;
+            border-radius: var(--radius-full);
+            margin-top: 8px;
+        }
+
+        @keyframes shimmerLoad {
+            0% { background-position: -300% 0; }
+            100% { background-position: 300% 0; }
+        }
+
+        .skeleton-progress {
+            margin-top: 20px;
+            width: 200px;
+            height: 3px;
+            background: var(--gray-200);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skeleton-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--green-primary), transparent);
+            animation: progressLoad 1.5s infinite;
+        }
+
+        @keyframes progressLoad {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* ============================================
+                   HEADER / NAV — INDUSTRIAL GRADE
+                   ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10000;
+            padding: 18px 0;
+            transition: all var(--transition-base);
+            background: transparent;
+        }
+
+        .header.scrolled {
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .header.scrolled .logo-text {
+            color: var(--black);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            z-index: 10001;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--green-primary), var(--green-mature));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 800;
+            box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+        }
+
+        .logo-text {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--white-pure);
+            transition: color var(--transition-fast);
+        }
+
+        .header.scrolled .logo-text {
+            color: var(--black);
+        }
+
+        .logo-text span {
+            color: var(--green-light);
+        }
+
+        /* Navigation */
+        .nav-primary {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-primary a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            position: relative;
+            padding: 4px 0;
+            letter-spacing: 0.01em;
+        }
+
+        .header.scrolled .nav-primary a {
+            color: var(--gray-600);
+        }
+
+        .nav-primary a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--green-primary);
+            border-radius: var(--radius-full);
+            transition: width var(--transition-base);
+        }
+
+        .nav-primary a:hover::after,
+        .nav-primary a.active::after {
+            width: 100%;
+        }
+
+        .nav-primary a:hover {
+            color: var(--white-pure);
+        }
+
+        .header.scrolled .nav-primary a:hover {
+            color: var(--black);
+        }
+
+        .nav-primary a.active {
+            color: var(--white-pure);
+        }
+
+        .header.scrolled .nav-primary a.active {
+            color: var(--black);
+        }
+
+        /* Language Toggle — Premium */
+        .lang-wrapper {
+            position: relative;
+        }
+
+        .lang-trigger {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-full);
+            padding: 8px 16px 8px 20px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .header.scrolled .lang-trigger {
+            background: var(--gray-50);
+            border-color: var(--gray-200);
+            color: var(--gray-600);
+        }
+
+        .lang-trigger:hover {
+            background: rgba(255, 255, 255, 0.20);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .header.scrolled .lang-trigger:hover {
+            background: var(--gray-100);
+        }
+
+        .lang-trigger i {
+            font-size: 0.85rem;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 12px);
+            right: 0;
+            min-width: 200px;
+            background: var(--white-pure);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            padding: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all var(--transition-base);
+            border: 1px solid var(--gray-100);
+        }
+
+        .lang-dropdown.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-dropdown li {
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .lang-dropdown li:hover {
+            background: var(--green-pale);
+            color: var(--green-primary);
+        }
+
+        .lang-dropdown li.active-lang {
+            background: var(--green-primary);
+            color: var(--white-pure);
+        }
+
+        .lang-dropdown li .lang-flag {
+            font-size: 1.1rem;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 10001;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2.5px;
+            background: var(--white-pure);
+            border-radius: var(--radius-full);
+            transition: all var(--transition-base);
+            transform-origin: center;
+        }
+
+        .header.scrolled .hamburger span {
+            background: var(--black);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ============================================
+                   HERO — CINEMATIC
+                   ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--black);
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .hero-bg .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+        }
+
+        .hero-bg .orb-1 {
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            right: -100px;
+            background: radial-gradient(circle, var(--green-primary), transparent);
+            animation: floatOrb 20s ease-in-out infinite;
+        }
+
+        .hero-bg .orb-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: -100px;
+            background: radial-gradient(circle, var(--brown-primary), transparent);
+            animation: floatOrb 25s ease-in-out infinite reverse;
+        }
+
+        .hero-bg .orb-3 {
+            width: 300px;
+            height: 300px;
+            top: 40%;
+            left: 40%;
+            background: radial-gradient(circle, rgba(82, 183, 136, 0.3), transparent);
+            animation: floatOrb 18s ease-in-out infinite 2s;
+        }
+
+        @keyframes floatOrb {
+            0%,
+            100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        .hero-grid-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.7) 100%);
+            z-index: 2;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            color: var(--white-pure);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            padding: 8px 20px 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 28px;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--green-light);
+            border-radius: 50%;
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseDot {
+            0%,
+            100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.8rem, 7vw, 5.2rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+        }
+
+        .hero-content h1 .gradient-text {
+            background: linear-gradient(135deg, var(--green-light), var(--green-primary), var(--brown-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 520px;
+            line-height: 1.9;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* Buttons — Premium */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green-primary), var(--green-mature));
+            color: var(--white-pure);
+            box-shadow: 0 4px 20px rgba(45, 106, 79, 0.35);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--green-mature), var(--green-light));
+            opacity: 0;
+            transition: opacity var(--transition-base);
+            border-radius: inherit;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(45, 106, 79, 0.45);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary span,
+        .btn-primary i {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            color: var(--white-pure);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .btn-brown {
+            background: linear-gradient(135deg, var(--brown-primary), var(--brown-deep));
+            color: var(--white-pure);
+            box-shadow: 0 4px 20px rgba(139, 90, 43, 0.3);
+        }
+
+        .btn-brown:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(139, 90, 43, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--green-primary);
+            color: var(--green-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--green-primary);
+            color: var(--white-pure);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-art {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 1;
+        }
+
+        .hero-art .ring-container {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-art .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            animation: spinRing 30s linear infinite;
+        }
+
+        .hero-art .ring:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            animation-duration: 25s;
+        }
+
+        .hero-art .ring:nth-child(2) {
+            width: 80%;
+            height: 80%;
+            animation-duration: 18s;
+            animation-direction: reverse;
+            border-color: rgba(82, 183, 136, 0.15);
+        }
+
+        .hero-art .ring:nth-child(3) {
+            width: 60%;
+            height: 60%;
+            animation-duration: 22s;
+            border-color: rgba(184, 124, 75, 0.15);
+        }
+
+        @keyframes spinRing {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-art .center-icon {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, rgba(45, 106, 79, 0.2), rgba(139, 90, 43, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            animation: floatCenter 6s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes floatCenter {
+            0%,
+            100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .hero-art .center-icon .emoji-bg {
+            font-size: 5.5rem;
+            filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.3));
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 48px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .hero-stat .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white-pure);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-stat .label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+
+        /* ============================================
+                   RESPONSIVE
+                   ============================================ */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-art {
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .hero-art .center-icon {
+                width: 140px;
+                height: 140px;
+                font-size: 3.5rem;
+            }
+
+            .hero-art .center-icon .emoji-bg {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            /* Nav */
+            .nav-primary {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 360px;
+                height: 100vh;
+                background: var(--white-pure);
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                gap: 20px;
+                transition: right var(--transition-base);
+                box-shadow: var(--shadow-xl);
+                overflow-y: auto;
+            }
+
+            .nav-primary.open {
+                right: 0;
+            }
+
+            .nav-primary a {
+                color: var(--gray-600) !important;
+                font-size: 1.1rem;
+                padding: 8px 0;
+                width: 100%;
+                border-bottom: 1px solid var(--gray-100);
+            }
+
+            .nav-primary a::after {
+                display: none;
+            }
+
+            .nav-primary a.active {
+                color: var(--green-primary) !important;
+            }
+
+            .nav-primary a:hover {
+                color: var(--green-primary) !important;
+            }
+
+            .lang-wrapper {
+                width: 100%;
+                margin-top: 8px;
+            }
+
+            .lang-trigger {
+                width: 100%;
+                justify-content: center;
+                background: var(--gray-50) !important;
+                border-color: var(--gray-200) !important;
+                color: var(--gray-600) !important;
+            }
+
+            .lang-dropdown {
+                right: auto;
+                left: 0;
+                width: 100%;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            /* Mobile overlay */
+            .nav-overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 9999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all var(--transition-base);
+            }
+
+            .nav-overlay.open {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+                min-height: 90vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+
+            .hero-stat .number {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                padding: 14px 28px;
+                font-size: 0.85rem;
+            }
+
+            .hero-art .center-icon {
+                width: 110px;
+                height: 110px;
+                font-size: 2.8rem;
+            }
+
+            .hero-art .center-icon .emoji-bg {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ============================================
+                   FOOTER — PREMIUM
+                   ============================================ */
+        .footer {
+            background: var(--black-light);
+            color: var(--gray-400);
+            padding: 60px 0 32px;
+            border-top: 2px solid var(--green-primary);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo-text {
+            color: var(--white-pure) !important;
+            font-size: 1.5rem;
+        }
+
+        .footer-brand p {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            max-width: 320px;
+            color: var(--gray-500);
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: var(--white-pure);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 4px 0;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-col a:hover {
+            color: var(--green-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.8rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            color: var(--gray-500);
+            transition: color var(--transition-fast);
+            font-size: 1.2rem;
+        }
+
+        .footer-social a:hover {
+            color: var(--green-light);
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        /* ============================================
+                   PAGE TRANSITION
+                   ============================================ */
+        #main-content {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        #main-content.visible {
+            opacity: 1;
+        }
+
+        /* ============================================
+                   SCROLL INDICATOR
+                   ============================================ */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            animation: bounceDown 2.5s ease-in-out infinite;
+        }
+
+        .scroll-indicator .mouse {
+            width: 24px;
+            height: 38px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator .mouse::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 10px;
+            background: var(--green-light);
+            border-radius: var(--radius-full);
+            animation: scrollWheel 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollWheel {
+            0%,
+            100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+            50% { transform: translateX(-50%) translateY(12px); opacity: 0.3; }
+        }
+
+        @keyframes bounceDown {
+            0%,
+            100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(6px); }
+        }
+
+        @media (max-width: 768px) {
+            .scroll-indicator {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<!-- About Section -->
-<div class="section">
-  <h2>Welcome to the Okewunmi Dynasty</h2>
-  <p>The Okewunmi Dynasty is a family rooted in truth, sacrifice, faith, and legacy. At the heart of this great family is Elder Solomon Okewunmi, a man widely respected for his integrity, wisdom, and selfless devotion. Born and raised in Ogun State, Egba, Abeokuta—Itori Oke, Elder Solomon has lived his life as a shining example of what it means to serve both family and community with unwavering commitment.</p>
-  <p>Now at the age of 71 (in 2025), Elder Solomon continues to stand as a pillar of strength and guidance. By his side is his beloved wife, Deaconess Adebola Okewunmi, a virtuous woman and nurturing mother of many. Together, they have built a strong family rooted in love, discipline, and godliness.</p>
-
-  <h3>The Okewunmi Children</h3>
-  <div class="children-grid">
-    <!-- Child 1 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?woman,portrait" alt="Oshode Damilola">
-      <h4>Oshode Damilola (née Mama Oshode)</h4>
-      <p>The firstborn of the family, Damilola, stands as a model of resilience, wisdom, and industriousness. A graduate of Computer Science from Ire Ekiti Polytechnic, she has carved a niche in the business world as a leather materials mogul. She is happily married to Mr. Oshode Damilare, and their union is blessed with two children, Ademide and Iremide.</p>
+    <!-- ===== SKELETON LOADER ===== -->
+    <div id="skeleton-loader" aria-hidden="true">
+        <div class="skeleton-container">
+            <div class="skeleton-lady"></div>
+            <div class="skeleton-lines">
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+            </div>
+            <div class="skeleton-badge"></div>
+            <div class="skeleton-progress"></div>
+        </div>
     </div>
 
-    <!-- Child 2 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?man,portrait" alt="Engr. Okewunmi Ayomide">
-      <h4>Engr. Okewunmi Ayomide</h4>
-      <p>The second-born and first son, Ayomide, is a skilled engineer specializing in heavy-duty machine repairs. He is working on launching “Okewunmi Autos” to redefine the automobile industry. He is married to Simisola Okewunmi, and they are blessed with a son, Simon Okewunmi.</p>
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="main-content">
+
+        <!-- ===== HEADER ===== -->
+        <header class="header" id="header" role="banner">
+            <div class="container header-inner">
+                <a href="index.html" class="logo" aria-label="Finish as Generation Home">
+                    <div class="logo-icon">🌱</div>
+                    <span class="logo-text">Finish<span>As</span>Generation</span>
+                </a>
+
+                <!-- Mobile Overlay -->
+                <div class="nav-overlay" id="navOverlay"></div>
+
+                <nav class="nav-primary" id="navPrimary" role="navigation" aria-label="Main Navigation">
+                    <a href="index.html" class="active" data-key="navHome">Home</a>
+                    <a href="about.html" data-key="navAbout">About</a>
+                    <a href="sponsor.html" data-key="navSponsor">Sponsor</a>
+                    <a href="blog.html" data-key="navBlog">Blog</a>
+                    <a href="journey.html" data-key="navJourney">Journey</a>
+                    <a href="contact.html" data-key="navContact">Contact</a>
+                    <a href="admin.html" data-key="navAdmin">Admin</a>
+
+                    <div class="lang-wrapper">
+                        <div class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLangLabel">EN</span>
+                            <i class="fas fa-chevron-down" style="font-size:0.6rem;"></i>
+                        </div>
+                        <ul class="lang-dropdown" id="langDropdown" role="menu">
+                            <li data-lang="en-uk" class="active-lang" role="menuitem">
+                                <span class="lang-flag">🇬🇧</span> English (UK)
+                            </li>
+                            <li data-lang="en-us" role="menuitem">
+                                <span class="lang-flag">🇺🇸</span> English (US)
+                            </li>
+                            <li data-lang="de" role="menuitem">
+                                <span class="lang-flag">🇩🇪</span> Deutsch
+                            </li>
+                            <li data-lang="fr" role="menuitem">
+                                <span class="lang-flag">🇫🇷</span> Français
+                            </li>
+                            <li data-lang="pt" role="menuitem">
+                                <span class="lang-flag">🇵🇹</span> Português
+                            </li>
+                            <li data-lang="zh" role="menuitem">
+                                <span class="lang-flag">🇨🇳</span> 中文
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="hero" aria-label="Hero Section">
+            <div class="hero-bg">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+            <div class="hero-grid-overlay"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        <span data-key="heroBadge">Global Impact NGO • Est. 2016</span>
+                    </div>
+
+                    <h1>
+                        <span data-key="heroTitle1">From</span><br />
+                        <span class="gradient-text" data-key="heroTitle2">Training</span><br />
+                        <span data-key="heroTitle3">to Flourishing</span>
+                    </h1>
+
+                    <p data-key="heroDesc">
+                        Empowering young women and children across the globe to become 
+                        self-sufficient, healthy, and happy — because every generation 
+                        deserves to flourish.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="sponsor.html" class="btn btn-primary">
+                            <i class="fas fa-seedling"></i>
+                            <span data-key="heroBtn1">Get Involved</span>
+                        </a>
+                        <a href="about.html" class="btn btn-secondary">
+                            <i class="fas fa-play-circle"></i>
+                            <span data-key="heroBtn2">Our Story</span>
+                        </a>
+                        <a href="sponsor.html" class="btn btn-brown">
+                            <i class="fas fa-heart"></i>
+                            <span data-key="heroBtn3">Sponsor Now</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="number" data-key="stat1">10K+</div>
+                            <div class="label" data-key="stat1Label">Lives Impacted</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="number" data-key="stat2">12</div>
+                            <div class="label" data-key="stat2Label">Countries</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="number" data-key="stat3">8</div>
+                            <div class="label" data-key="stat3Label">Years of Service</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="hero-art">
+                        <div class="ring-container">
+                            <div class="ring"></div>
+                            <div class="ring"></div>
+                            <div class="ring"></div>
+                        </div>
+                        <div class="center-icon">
+                            <span class="emoji-bg">🌱</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="mouse"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo" style="margin-bottom:8px;">
+                            <div class="logo-icon">🌱</div>
+                            <span class="logo-text" style="color:white;">Finish<span>As</span>Generation</span>
+                        </div>
+                        <p data-key="footerDesc">
+                            Nurturing lives and growing futures through education, 
+                            health, and empowerment for young women and children worldwide.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-key="footerNavTitle">Navigation</h4>
+                        <a href="index.html" data-key="navHome">Home</a>
+                        <a href="about.html" data-key="navAbout">About</a>
+                        <a href="sponsor.html" data-key="navSponsor">Sponsor</a>
+                        <a href="blog.html" data-key="navBlog">Blog</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-key="footerSupportTitle">Support</h4>
+                        <a href="contact.html" data-key="navContact">Contact</a>
+                        <a href="sponsor.html" data-key="footerDonate">Donate</a>
+                        <a href="journey.html" data-key="footerJourney">Our Journey</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-key="footerLegal">Legal</h4>
+                        <a href="#" data-key="footerPrivacy">Privacy Policy</a>
+                        <a href="#" data-key="footerTerms">Terms of Service</a>
+                        <a href="#" data-key="footerCookies">Cookie Policy</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <span data-key="footerCopyright">
+                        &copy; 2026 Finish as Generation. All rights reserved.
+                    </span>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
-    <!-- Child 3 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?man,smile" alt="Okewunmi Oluwagbenga">
-      <h4>Okewunmi Oluwagbenga</h4>
-      <p>The third-born, Oluwagbenga, embodies the entrepreneurial creativity of the Okewunmi family. With a passion for style and innovation, he has ventured into the shoe and fashion industry, where his designs and business ideas continue to flourish. He is happily married and dedicated to building a home founded on love, respect, and godly values.</p>
-    </div>
+    <!-- ============================================
+    JAVASCRIPT — INDUSTRIAL GRADE
+    ============================================ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        (function() {
+            'use strict';
 
-    <!-- Child 4 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?woman,smile" alt="Okewunmi Opeyemi">
-      <h4>Okewunmi Opeyemi (Mrs. Mathew)</h4>
-      <p>The fourth-born, Opeyemi, is a woman of elegance, intelligence, and godliness. She thrives in the fabric and textile industry, and is happily married to Pastor Mathew. Together they are raising a godly family.</p>
-    </div>
+            // ===== AOS INIT =====
+            AOS.init({
+                once: true,
+                offset: 40,
+                duration: 800,
+                easing: 'ease-out-cubic',
+            });
 
-    <!-- Child 5 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?pastor,man" alt="Pastor Okewunmi Abayomi">
-      <h4>Pastor Okewunmi Abayomi (Yomi)</h4>
-      <p>The fifth-born, fondly called Yomi, stands out as both a scholar and a minister of the Gospel. He graduated with Distinction in Insurance from The Polytechnic Ibadan and First-Class honors from the University of Ibadan. He serves as Senior Pastor at Salvation Proclaimers Anointed Church and is also the founder of Edu Top Consultant. He is happily married to Dr. (Mrs.) Kehinde Okewunmi, and they are blessed with a son.</p>
-    </div>
+            // ===== TRANSLATIONS =====
+            const translations = {
+                'en-uk': {
+                    navHome: 'Home',
+                    navAbout: 'About',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Journey',
+                    navContact: 'Contact',
+                    navAdmin: 'Admin',
+                    heroBadge: 'Global Impact NGO • Est. 2016',
+                    heroTitle1: 'From',
+                    heroTitle2: 'Training',
+                    heroTitle3: 'to Flourishing',
+                    heroDesc: 'Empowering young women and children across the globe to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
+                    heroBtn1: 'Get Involved',
+                    heroBtn2: 'Our Story',
+                    heroBtn3: 'Sponsor Now',
+                    stat1: '10K+',
+                    stat1Label: 'Lives Impacted',
+                    stat2: '12',
+                    stat2Label: 'Countries',
+                    stat3: '8',
+                    stat3Label: 'Years of Service',
+                    footerDesc: 'Nurturing lives and growing futures through education, health, and empowerment for young women and children worldwide.',
+                    footerNavTitle: 'Navigation',
+                    footerSupportTitle: 'Support',
+                    footerDonate: 'Donate',
+                    footerJourney: 'Our Journey',
+                    footerLegal: 'Legal',
+                    footerPrivacy: 'Privacy Policy',
+                    footerTerms: 'Terms of Service',
+                    footerCookies: 'Cookie Policy',
+                    footerCopyright: '© 2026 Finish as Generation. All rights reserved.'
+                },
+                'en-us': {
+                    navHome: 'Home',
+                    navAbout: 'About',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Journey',
+                    navContact: 'Contact',
+                    navAdmin: 'Admin',
+                    heroBadge: 'Global Impact NGO • Est. 2016',
+                    heroTitle1: 'From',
+                    heroTitle2: 'Training',
+                    heroTitle3: 'to Flourishing',
+                    heroDesc: 'Empowering young women and children across the globe to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
+                    heroBtn1: 'Get Involved',
+                    heroBtn2: 'Our Story',
+                    heroBtn3: 'Sponsor Now',
+                    stat1: '10K+',
+                    stat1Label: 'Lives Impacted',
+                    stat2: '12',
+                    stat2Label: 'Countries',
+                    stat3: '8',
+                    stat3Label: 'Years of Service',
+                    footerDesc: 'Nurturing lives and growing futures through education, health, and empowerment for young women and children worldwide.',
+                    footerNavTitle: 'Navigation',
+                    footerSupportTitle: 'Support',
+                    footerDonate: 'Donate',
+                    footerJourney: 'Our Journey',
+                    footerLegal: 'Legal',
+                    footerPrivacy: 'Privacy Policy',
+                    footerTerms: 'Terms of Service',
+                    footerCookies: 'Cookie Policy',
+                    footerCopyright: '© 2026 Finish as Generation. All rights reserved.'
+                },
+                'de': {
+                    navHome: 'Startseite',
+                    navAbout: 'Über uns',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Reise',
+                    navContact: 'Kontakt',
+                    navAdmin: 'Admin',
+                    heroBadge: 'Globales Impact-NGO • Gegr. 2016',
+                    heroTitle1: 'Von',
+                    heroTitle2: 'Training',
+                    heroTitle3: 'zum Aufblühen',
+                    heroDesc: 'Junge Frauen und Kinder weltweit befähigen, selbstständig, gesund und glücklich zu werden — denn jede Generation verdient es, aufzublühen.',
+                    heroBtn1: 'Mitmachen',
+                    heroBtn2: 'Unsere Geschichte',
+                    heroBtn3: 'Jetzt Spenden',
+                    stat1: '10K+',
+                    stat1Label: 'Leben berührt',
+                    stat2: '12',
+                    stat2Label: 'Länder',
+                    stat3: '8',
+                    stat3Label: 'Jahre Einsatz',
+                    footerDesc: 'Leben fördern und Zukunft wachsen lassen durch Bildung, Gesundheit und Empowerment für junge Frauen und Kinder weltweit.',
+                    footerNavTitle: 'Navigation',
+                    footerSupportTitle: 'Unterstützung',
+                    footerDonate: 'Spenden',
+                    footerJourney: 'Unsere Reise',
+                    footerLegal: 'Rechtliches',
+                    footerPrivacy: 'Datenschutz',
+                    footerTerms: 'AGB',
+                    footerCookies: 'Cookie-Richtlinie',
+                    footerCopyright: '© 2026 Finish as Generation. Alle Rechte vorbehalten.'
+                },
+                'fr': {
+                    navHome: 'Accueil',
+                    navAbout: 'À propos',
+                    navSponsor: 'Sponsor',
+                    navBlog: 'Blog',
+                    navJourney: 'Parcours',
+                    navContact: 'Contact',
+                    navAdmin: 'Admin',
+                    heroBadge: 'ONG à Impact Global • Établie en 2016',
+                    heroTitle1: 'De',
+                    heroTitle2: 'la formation',
+                    heroTitle3: "à l'épanouissement",
+                    heroDesc: "Autonomiser les jeunes femmes et les enfants du monde entier pour qu'ils deviennent autonomes, en bonne santé et heureux — parce que chaque génération mérite de s'épanouir.",
+                    heroBtn1: "S'impliquer",
+                    heroBtn2: 'Notre histoire',
+                    heroBtn3: 'Parrainer',
+                    stat1: '10K+',
+                    stat1Label: 'Vies impactées',
+                    stat2: '12',
+                    stat2Label: 'Pays',
+                    stat3: '8',
+                    stat3Label: "Années d'engagement",
+                    footerDesc: "Nourrir les vies et faire grandir l'avenir par l'éducation, la santé et l'autonomisation des jeunes femmes et des enfants dans le monde.",
+                    footerNavTitle: 'Navigation',
+                    footerSupportTitle: 'Soutien',
+                    footerDonate: 'Faire un don',
+                    footerJourney: 'Notre parcours',
+                    footerLegal: 'Mentions légales',
+                    footerPrivacy: 'Politique de confidentialité',
+                    footerTerms: "Conditions d'utilisation",
+                    footerCookies: 'Politique des cookies',
+                    footerCopyright: '© 2026 Finish as Generation. Tous droits réservés.'
+                },
+                'pt': {
+                    navHome: 'Início',
+                    navAbout: 'Sobre',
+                    navSponsor: 'Patrocinar',
+                    navBlog: 'Blog',
+                    navJourney: 'Jornada',
+                    navContact: 'Contacto',
+                    navAdmin: 'Admin',
+                    heroBadge: 'ONG de Impacto Global • Fundada em 2016',
+                    heroTitle1: 'Da',
+                    heroTitle2: 'formação',
+                    heroTitle3: 'ao florescimento',
+                    heroDesc: 'Capacitar jovens mulheres e crianças em todo o mundo para se tornarem autossuficientes, saudáveis e felizes — porque cada geração merece florescer.',
+                    heroBtn1: 'Envolver-se',
+                    heroBtn2: 'Nossa história',
+                    heroBtn3: 'Apoiar agora',
+                    stat1: '10K+',
+                    stat1Label: 'Vidas impactadas',
+                    stat2: '12',
+                    stat2Label: 'Países',
+                    stat3: '8',
+                    stat3Label: 'Anos de serviço',
+                    footerDesc: 'Nutrir vidas e cultivar futuros através da educação, saúde e capacitação de jovens mulheres e crianças em todo o mundo.',
+                    footerNavTitle: 'Navegação',
+                    footerSupportTitle: 'Apoio',
+                    footerDonate: 'Doar',
+                    footerJourney: 'Nossa jornada',
+                    footerLegal: 'Legal',
+                    footerPrivacy: 'Política de Privacidade',
+                    footerTerms: 'Termos de Serviço',
+                    footerCookies: 'Política de Cookies',
+                    footerCopyright: '© 2026 Finish as Generation. Todos os direitos reservados.'
+                },
+                'zh': {
+                    navHome: '首页',
+                    navAbout: '关于我们',
+                    navSponsor: '赞助',
+                    navBlog: '博客',
+                    navJourney: '历程',
+                    navContact: '联系',
+                    navAdmin: '管理',
+                    heroBadge: '全球影响力非政府组织 • 成立于2016年',
+                    heroTitle1: '从',
+                    heroTitle2: '训练',
+                    heroTitle3: '到繁荣',
+                    heroDesc: '赋能全球年轻女性和儿童，使他们自立、健康、快乐 — 因为每一代人都值得繁荣。',
+                    heroBtn1: '参与',
+                    heroBtn2: '我们的故事',
+                    heroBtn3: '立即赞助',
+                    stat1: '10K+',
+                    stat1Label: '影响生命',
+                    stat2: '12',
+                    stat2Label: '国家',
+                    stat3: '8',
+                    stat3Label: '服务年限',
+                    footerDesc: '通过教育、健康和赋权，滋养生命，培育未来，服务全球年轻女性和儿童。',
+                    footerNavTitle: '导航',
+                    footerSupportTitle: '支持',
+                    footerDonate: '捐赠',
+                    footerJourney: '我们的历程',
+                    footerLegal: '法律',
+                    footerPrivacy: '隐私政策',
+                    footerTerms: '服务条款',
+                    footerCookies: 'Cookie政策',
+                    footerCopyright: '© 2026 Finish as Generation。保留所有权利。'
+                }
+            };
 
-    <!-- Child 6 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?lady,portrait" alt="Okewunmi Motunrayo">
-      <h4>Okewunmi Motunrayo (Mrs. Lucky Aba)</h4>
-      <p>The sixth-born, Motunrayo, is a shining example of beauty, talent, and versatility. A graduate of Adekunle Ajasin University and a trained Laboratory Scientist, she has made her mark as a fashionista, NGO founder, minister of the Word, and skilled entrepreneur. She is happily married to Mr. Lucky Aba, and they are blessed with a son.</p>
-    </div>
+            // ===== STATE =====
+            let currentLang = localStorage.getItem('finishLang') || 'en-uk';
+            const allTranslatable = document.querySelectorAll('[data-key]');
 
-    <!-- Child 7 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?young,man" alt="Okewunmi Timileyin">
-      <h4>Okewunmi Timileyin</h4>
-      <p>The seventh-born, Timileyin, is a man of intellect, creativity, and vision. A graduate of Counseling Psychology from Olabisi Onabanjo University (OOU), he is also a poet, novelist, software developer, cybersecurity graduate, and media director at Kingdom Citizens Church International. Though unmarried, he is in a promising relationship. His journey reflects the dynamism and modern edge of the Okewunmi Dynasty.</p>
-    </div>
+            // ===== DOM REFS =====
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const navPrimary = document.getElementById('navPrimary');
+            const navOverlay = document.getElementById('navOverlay');
+            const langTrigger = document.getElementById('langTrigger');
+            const langDropdown = document.getElementById('langDropdown');
+            const currentLangLabel = document.getElementById('currentLangLabel');
+            const skeleton = document.getElementById('skeleton-loader');
+            const mainContent = document.getElementById('main-content');
 
-    <!-- Child 8 -->
-    <div class="child-card">
-      <img src="https://source.unsplash.com/200x200/?student,man" alt="Okewunmi Pelumi Paul">
-      <h4>Okewunmi Pelumi Paul</h4>
-      <p>The last-born, Pelumi Paul, is a powerhouse of vision, innovation, and determination. Currently a law student at Kola Daisi University, Ibadan, he is also a tech-driven entrepreneur, Amazon affiliate marketer, poet, novelist, motivational speaker, and online trader. Known as the youngest motivational speaker in Africa, he inspires countless lives through his platform, Upphillan TV.</p>
-    </div>
+            // ===== APPLY LANGUAGE =====
+            function applyLanguage(lang) {
+                if (!translations[lang]) return;
+                const dict = translations[lang];
+
+                allTranslatable.forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (dict[key] !== undefined) {
+                        const icon = el.querySelector('i');
+                        if (icon) {
+                            const textNode = el.childNodes[el.childNodes.length - 1];
+                            if (textNode && textNode.nodeType === 3) {
+                                textNode.textContent = ' ' + dict[key];
+                            } else {
+                                el.innerHTML = `<i class="${icon.className}"></i> ${dict[key]}`;
+                            }
+                        } else {
+                            el.textContent = dict[key];
+                        }
+                    }
+                });
+
+                // Update dropdown
+                document.querySelectorAll('.lang-dropdown li').forEach(li => {
+                    li.classList.toggle('active-lang', li.dataset.lang === lang);
+                });
+
+                // Update label
+                const langMap = {
+                    'en-uk': 'EN',
+                    'en-us': 'EN',
+                    'de': 'DE',
+                    'fr': 'FR',
+                    'pt': 'PT',
+                    'zh': '中文'
+                };
+                currentLangLabel.textContent = langMap[lang] || 'EN';
+
+                localStorage.setItem('finishLang', lang);
+                currentLang = lang;
+            }
+
+            // ===== LANG DROPDOWN =====
+            langTrigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isOpen = langDropdown.classList.contains('open');
+                langDropdown.classList.toggle('open');
+                this.setAttribute('aria-expanded', !isOpen);
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.lang-wrapper')) {
+                    langDropdown.classList.remove('open');
+                    langTrigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            langDropdown.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', function() {
+                    const lang = this.dataset.lang;
+                    applyLanguage(lang);
+                    langDropdown.classList.remove('open');
+                    langTrigger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // ===== HAMBURGER =====
+            hamburger.addEventListener('click', function() {
+                const isOpen = navPrimary.classList.contains('open');
+                navPrimary.classList.toggle('open');
+                navOverlay.classList.toggle('open');
+                this.classList.toggle('active');
+                this.setAttribute('aria-expanded', !isOpen);
+                document.body.style.overflow = isOpen ? '' : 'hidden';
+            });
+
+            navOverlay.addEventListener('click', function() {
+                navPrimary.classList.remove('open');
+                navOverlay.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+
+            // Close nav on link click
+            navPrimary.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navPrimary.classList.remove('open');
+                    navOverlay.classList.remove('open');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // ===== HEADER SCROLL =====
+            let lastScroll = 0;
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                header.classList.toggle('scrolled', currentScroll > 20);
+                lastScroll = currentScroll;
+            }, { passive: true });
+
+            // ===== SKELETON LOADER =====
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    skeleton.classList.add('hidden');
+                    mainContent.classList.add('visible');
+                }, 1500);
+            });
+
+            // ===== APPLY INITIAL LANGUAGE =====
+            applyLanguage(currentLang);
+
+            // ===== ACTIVE NAV STATE =====
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            navPrimary.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // ===== KEYBOARD ACCESSIBILITY =====
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    navPrimary.classList.remove('open');
+                    navOverlay.classList.remove('open');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    langDropdown.classList.remove('open');
+                    langTrigger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
