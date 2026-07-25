@@ -484,7 +484,6 @@
             border: 3px solid var(--gold);
         }
 
-        /* Blog Grid */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -631,7 +630,6 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
         }
 
-        /* Admin button - faint and barely noticeable */
         .admin-link {
             position: fixed;
             bottom: 10px;
@@ -2776,7 +2774,6 @@
             'use strict';
 
             // ===== BLOG DATA =====
-            // Sample blog posts - these would normally come from adminconsole.html
             const defaultBlogPosts = [
                 {
                     id: 1,
@@ -2812,7 +2809,6 @@
                 }
             ];
 
-            // Load blog posts from localStorage or use defaults
             function getBlogPosts() {
                 const stored = localStorage.getItem('phinehasBlogPosts');
                 if (stored) {
@@ -2821,22 +2817,17 @@
                         if (Array.isArray(parsed) && parsed.length > 0) {
                             return parsed;
                         }
-                    } catch(e) {
-                        // If parsing fails, use defaults
-                    }
+                    } catch(e) {}
                 }
-                // If no stored posts, save defaults and return them
                 localStorage.setItem('phinehasBlogPosts', JSON.stringify(defaultBlogPosts));
                 return defaultBlogPosts;
             }
 
-            // Render blog posts
             function renderBlogPosts() {
                 const blogGrid = document.getElementById('blogGrid');
                 if (!blogGrid) return;
                 
                 const posts = getBlogPosts();
-                // Get only the 4 most recent posts
                 const latestPosts = posts.slice(0, 4);
                 
                 if (latestPosts.length === 0) {
@@ -2858,7 +2849,7 @@
                 `).join('');
             }
 
-            // ===== TRANSLATIONS =====
+            // ===== COMPLETE TRANSLATIONS (English, French, German) =====
             const translations = {
                 'en': {
                     navHome: 'Home', navAbout: 'About Us', navPrograms: 'Our Programs',
@@ -2994,7 +2985,6 @@
                     cookieAccept: 'Accept', cookieDecline: 'Decline'
                 },
                 'fr': {
-                    // French translations (kept minimal for brevity)
                     navHome: 'Accueil', navAbout: 'À propos', navPrograms: 'Programmes',
                     navBlog: 'Blog / Actualités', navVolunteer: 'Bénévolat', navContact: 'Contact', navDonate: 'Don',
                     heroTag: 'PHINEHAS GENERATION FOUNDATION',
@@ -3126,7 +3116,6 @@
                     cookieAccept: 'Accepter', cookieDecline: 'Refuser'
                 },
                 'de': {
-                    // German translations (kept minimal for brevity)
                     navHome: 'Startseite', navAbout: 'Über uns', navPrograms: 'Programme',
                     navBlog: 'Blog / News', navVolunteer: 'Mithelfen', navContact: 'Kontakt', navDonate: 'Spenden',
                     heroTag: 'PHINEHAS GENERATION FOUNDATION',
@@ -3458,7 +3447,7 @@
             applyLanguage(currentLang);
             renderBlogPosts();
 
-            // ===== LISTEN FOR STORAGE CHANGES (for blog updates from admin) =====
+            // ===== LISTEN FOR STORAGE CHANGES =====
             window.addEventListener('storage', function(e) {
                 if (e.key === 'phinehasBlogPosts') {
                     renderBlogPosts();
