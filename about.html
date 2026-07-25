@@ -4,12 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Learn about PHINEHAS GENERATION FOUNDATION — our story, mission, vision, and the journey of transforming lives across Nigeria and the UK." />
+    <meta name="theme-color" content="#1a1a1a" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Us | PHINEHAS GENERATION FOUNDATION" />
+    <meta property="og:description" content="Discover the story of PHINEHAS GENERATION FOUNDATION — empowering teenagers and honouring the elderly since 2016." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://phinehasgeneration.org/about.html" />
+    <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us | PHINEHAS GENERATION FOUNDATION" />
+    <meta name="twitter:description" content="Empowering teenagers and honouring the elderly across Nigeria and the UK." />
+    
+    <link rel="canonical" href="https://phinehasgeneration.org/about.html" />
     <title>About Us | PHINEHAS GENERATION FOUNDATION</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Google Fonts: Inter + Playfair Display -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -74,6 +87,22 @@
         img {
             max-width: 100%;
             display: block;
+        }
+
+        /* Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            border-radius: 0 0 var(--radius-sm) 0;
+        }
+        .skip-link:focus {
+            top: 0;
         }
 
         .container {
@@ -518,7 +547,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(26, 26, 26, 0.55);
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.35) 100%);
         }
 
         .page-hero .container {
@@ -1418,6 +1447,9 @@
 </head>
 <body>
 
+    <!-- ===== SKIP TO CONTENT ===== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- ===== SKELETON LOADER ===== -->
     <div id="skeleton-loader" aria-hidden="true">
         <div class="skeleton-logo">
@@ -1427,13 +1459,13 @@
     </div>
 
     <!-- ===== SCROLL PROGRESS ===== -->
-    <div id="scroll-progress"></div>
+    <div id="scroll-progress" role="progressbar" aria-label="Scroll progress"></div>
 
     <!-- ===== MAIN CONTENT ===== -->
     <div id="main-content">
 
         <!-- ===== HEADER ===== -->
-        <header id="header">
+        <header id="header" role="banner">
             <div class="container nav-container">
                 <a href="index.html" class="logo" aria-label="PHINEHAS GENERATION FOUNDATION Home">
                     <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION FOUNDATION Logo" width="44" height="44" />
@@ -1445,14 +1477,14 @@
                 </button>
 
                 <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
-                    <a href="index.html">Home</a>
-                    <a href="about.html" class="active">About Us</a>
-                    <a href="programs.html">Our Programs</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="blog.html">Blog / News</a>
-                    <a href="volunteer.html">Volunteer</a>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="donate.html" class="nav-donate-btn"><i class="fas fa-heart"></i> Donate Now</a>
+                    <a href="index.html" data-i18n="navHome">Home</a>
+                    <a href="about.html" class="active" data-i18n="navAbout">About Us</a>
+                    <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
+                    <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+                    <a href="blog.html" data-i18n="navBlog">Blog / News</a>
+                    <a href="volunteer.html" data-i18n="navVolunteer">Volunteer</a>
+                    <a href="contact.html" data-i18n="navContact">Contact Us</a>
+                    <a href="donate.html" class="nav-donate-btn" data-i18n="navDonate"><i class="fas fa-heart"></i> Donate Now</a>
 
                     <div class="lang-wrapper">
                         <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
@@ -1469,85 +1501,85 @@
         </header>
 
         <!-- ===== PAGE HERO ===== -->
-        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');">
+        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');" aria-label="About Us hero image">
             <div class="container">
-                <h1>About Us</h1>
-                <p class="hero-sub">A Journey of Compassion, Hope, and Generational Transformation</p>
+                <h1 data-i18n="heroTitle">About Us</h1>
+                <p class="hero-sub" data-i18n="heroSub">A Journey of Compassion, Hope, and Generational Transformation</p>
                 <div class="breadcrumb">
-                    <a href="index.html">Home</a>
+                    <a href="index.html" data-i18n="navHome">Home</a>
                     <span>/</span>
-                    <span class="current">About Us</span>
+                    <span class="current" data-i18n="navAbout">About Us</span>
                 </div>
             </div>
         </section>
 
         <!-- ===== OUR STORY ===== -->
-        <section class="section-padding">
+        <section class="section-padding" id="our-story">
             <div class="container">
                 <div class="story-content">
-                    <span class="section-eyebrow text-center" style="display:block; text-align:center;">Our Story</span>
-                    <h2 class="section-title text-center">A Vision That Began with <span class="highlight">One Heart</span></h2>
-                    <p class="text-center" style="color:var(--gray-dark); margin-bottom:40px; font-size:1.05rem;">And Grew into a Movement of Hope</p>
+                    <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="storyEyebrow">Our Story</span>
+                    <h2 class="section-title text-center" data-i18n="storyTitle">A Vision That Began with <span class="highlight">One Heart</span></h2>
+                    <p class="text-center" style="color:var(--gray-dark); margin-bottom:40px; font-size:1.05rem;" data-i18n="storySub">And Grew into a Movement of Hope</p>
 
-                    <p class="dropcap">
+                    <p class="dropcap" data-i18n="storyP1">
                         Every meaningful journey begins with a single step. For PHINEHAS GENERATION FOUNDATION, that step was taken in 2016 by Mrs. Oluwatosin Balogun Akano, whose compassion for people became the seed of a vision that continues to transform lives today.
                     </p>
 
-                    <p>
+                    <p data-i18n="storyP2">
                         At a time when many teenagers were silently struggling with low self-esteem, depression, peer pressure, abuse, and uncertainty about their future, Mrs. Akano recognized a pressing need for guidance and mentorship. She believed that with the right support, every young person could discover purpose, make wise decisions, and become a positive influence in society.
                     </p>
 
-                    <p>
+                    <p data-i18n="storyP3">
                         Driven by this conviction, she established PHINEHAS GENERATION FOUNDATION as a platform where teenagers could learn, grow, ask questions freely, and receive practical guidance on issues that shape their lives. What began as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people.
                     </p>
 
-                    <h3>A Landmark Moment</h3>
+                    <h3 data-i18n="storyH3_1">A Landmark Moment</h3>
 
-                    <p>
+                    <p data-i18n="storyP4">
                         One of the foundation's landmark moments came in 2018, when teenagers from different communities gathered at the Obasanjo Presidential Library in Abeokuta for a life-changing youth hangout. Through mentorship, interactive sessions, and inspirational talks, many participants discovered new confidence, clarified their goals, and found renewed purpose. Today, many of those young people have completed higher education and are contributing meaningfully to society as graduates and professionals.
                     </p>
 
                     <div class="highlight-box">
-                        <p>
+                        <p data-i18n="storyHighlight">
                             "What started as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people."
                         </p>
                     </div>
 
-                    <h3>Expanding the Vision</h3>
+                    <h3 data-i18n="storyH3_2">Expanding the Vision</h3>
 
-                    <p>
+                    <p data-i18n="storyP5">
                         As the foundation expanded its activities across Abeokuta and later into Magodo, Lagos, another need became increasingly evident. During community visits and outreach programs, the team encountered many elderly men and women who had been left behind by society. Some struggled with poor health, failing eyesight, loneliness, and financial hardship. Others simply longed for someone to listen, care, and remind them that they still mattered.
                     </p>
 
-                    <p>
+                    <p data-i18n="storyP6">
                         These encounters transformed the foundation's mission. Recognizing that a truly compassionate society must care for both its future and its past, PHINEHAS GENERATION FOUNDATION broadened its focus to include elderly care. Medical outreaches, free eye examinations, cataract interventions, prescription glasses, food distribution, financial support, and regular welfare visits became integral to the organization's work.
                     </p>
 
-                    <h3>A Story of Restored Hope</h3>
+                    <h3 data-i18n="storyH3_3">A Story of Restored Hope</h3>
 
-                    <p>
+                    <p data-i18n="storyP7">
                         One particularly memorable outreach took place in Igbore, Abeokuta, where Mrs. Lawal Abeke, an elderly woman living with severe cataracts, received life-changing medical attention. Following successful treatment and the provision of prescription glasses, she regained her sight and expressed overwhelming joy that the hope she thought she had lost had finally been restored. Her story remains a powerful reminder of why the foundation exists—to restore hope where it has faded and to remind every person that they are valued.
                     </p>
 
-                    <h3>Looking Ahead</h3>
+                    <h3 data-i18n="storyH3_4">Looking Ahead</h3>
 
-                    <p>
+                    <p data-i18n="storyP8">
                         Over the years, PHINEHAS GENERATION FOUNDATION has grown beyond its humble beginnings. What started as a local initiative in Ogun State has expanded into Lagos and now reaches communities in the United Kingdom, building partnerships and extending its impact across borders while remaining rooted in its original mission of service.
                     </p>
 
-                    <p>
+                    <p data-i18n="storyP9">
                         Today, PHINEHAS GENERATION FOUNDATION stands as a bridge between generations. We empower teenagers to become confident, responsible, and purpose-driven leaders while ensuring that elderly people receive the dignity, care, and respect they deserve.
                     </p>
 
-                    <p>
+                    <p data-i18n="storyP10">
                         Although our reach continues to grow, our purpose remains unchanged. Every program we organize, every community we visit, every volunteer we mobilize, and every life we touch reflects our unwavering commitment to building a society where no young person is left without guidance and no elderly person is forgotten.
                     </p>
 
-                    <p>
+                    <p data-i18n="storyP11">
                         <strong>Our story is still being written.</strong> With every life transformed, every partnership formed, and every act of kindness shared, we move one step closer to realizing our vision of a world where compassion unites generations, hope overcomes hardship, and every individual has the opportunity to thrive.
                     </p>
 
-                    <p class="story-quote">
+                    <p class="story-quote" data-i18n="storyQuote">
                         "This is our history. This is our purpose. This is the legacy we are building—one life, one family, and one generation at a time."
                     </p>
                 </div>
@@ -1555,77 +1587,77 @@
         </section>
 
         <!-- ===== STATS BAR ===== -->
-        <section class="stats-bar">
+        <section class="stats-bar" aria-label="Foundation impact statistics">
             <div class="container">
                 <div class="stats-bar-grid">
                     <div class="stats-bar-item fade-up">
-                        <div class="number">2016</div>
-                        <div class="label">Year Founded</div>
+                        <div class="number" data-i18n="stat1">2016</div>
+                        <div class="label" data-i18n="stat1Label">Year Founded</div>
                     </div>
                     <div class="stats-bar-item fade-up">
-                        <div class="number">1,000+</div>
-                        <div class="label">Teenagers Empowered</div>
+                        <div class="number" data-i18n="stat2">1,000+</div>
+                        <div class="label" data-i18n="stat2Label">Teenagers Empowered</div>
                     </div>
                     <div class="stats-bar-item fade-up">
-                        <div class="number">500+</div>
-                        <div class="label">Elderly People Served</div>
+                        <div class="number" data-i18n="stat3">500+</div>
+                        <div class="label" data-i18n="stat3Label">Elderly People Served</div>
                     </div>
                     <div class="stats-bar-item fade-up">
-                        <div class="number">2</div>
-                        <div class="label">Countries Reached</div>
+                        <div class="number" data-i18n="stat4">2</div>
+                        <div class="label" data-i18n="stat4Label">Countries Reached</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== TIMELINE ===== -->
-        <section class="timeline-section section-padding">
+        <section class="timeline-section section-padding" id="timeline" aria-label="Foundation timeline">
             <div class="container">
-                <span class="section-eyebrow text-center" style="display:block; text-align:center;">Our Journey</span>
-                <h2 class="section-title text-center">Key <span class="highlight">Milestones</span></h2>
-                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;">The moments that shaped our mission</p>
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="timelineEyebrow">Our Journey</span>
+                <h2 class="section-title text-center" data-i18n="timelineTitle">Key <span class="highlight">Milestones</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="timelineSub">The moments that shaped our mission</p>
 
                 <div class="timeline">
                     <div class="timeline-item fade-up">
                         <div>
-                            <div class="year">2016</div>
-                            <h4>Foundation Established</h4>
-                            <p>PHINEHAS GENERATION FOUNDATION was founded by Mrs. Oluwatosin Balogun Akano in Abeokuta, Ogun State, Nigeria.</p>
+                            <div class="year" data-i18n="tYear1">2016</div>
+                            <h4 data-i18n="tTitle1">Foundation Established</h4>
+                            <p data-i18n="tDesc1">PHINEHAS GENERATION FOUNDATION was founded by Mrs. Oluwatosin Balogun Akano in Abeokuta, Ogun State, Nigeria.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up">
                         <div>
-                            <div class="year">2018</div>
-                            <h4>Landmark Youth Event</h4>
-                            <p>Hundreds of teenagers gathered at the Obasanjo Presidential Library, Abeokuta, for a transformative youth hangout and mentorship program.</p>
+                            <div class="year" data-i18n="tYear2">2018</div>
+                            <h4 data-i18n="tTitle2">Landmark Youth Event</h4>
+                            <p data-i18n="tDesc2">Hundreds of teenagers gathered at the Obasanjo Presidential Library, Abeokuta, for a transformative youth hangout and mentorship program.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up">
                         <div>
-                            <div class="year">2019</div>
-                            <h4>Expansion to Lagos</h4>
-                            <p>The foundation expanded its operations into Magodo, Lagos, reaching more young people and communities.</p>
+                            <div class="year" data-i18n="tYear3">2019</div>
+                            <h4 data-i18n="tTitle3">Expansion to Lagos</h4>
+                            <p data-i18n="tDesc3">The foundation expanded its operations into Magodo, Lagos, reaching more young people and communities.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up">
                         <div>
-                            <div class="year">2020</div>
-                            <h4>Elderly Care Initiative</h4>
-                            <p>Mission expanded to include elderly care, medical outreaches, and humanitarian support for senior citizens.</p>
+                            <div class="year" data-i18n="tYear4">2020</div>
+                            <h4 data-i18n="tTitle4">Elderly Care Initiative</h4>
+                            <p data-i18n="tDesc4">Mission expanded to include elderly care, medical outreaches, and humanitarian support for senior citizens.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up">
                         <div>
-                            <div class="year">2022</div>
-                            <h4>International Presence</h4>
-                            <p>The foundation established a presence in the United Kingdom, extending its impact across borders.</p>
+                            <div class="year" data-i18n="tYear5">2022</div>
+                            <h4 data-i18n="tTitle5">International Presence</h4>
+                            <p data-i18n="tDesc5">The foundation established a presence in the United Kingdom, extending its impact across borders.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up">
                         <div>
-                            <div class="year">Present</div>
-                            <h4>Continuing the Mission</h4>
-                            <p>Empowering teenagers and restoring dignity to elderly people across Nigeria, the UK, and beyond.</p>
+                            <div class="year" data-i18n="tYear6">Present</div>
+                            <h4 data-i18n="tTitle6">Continuing the Mission</h4>
+                            <p data-i18n="tDesc6">Empowering teenagers and restoring dignity to elderly people across Nigeria, the UK, and beyond.</p>
                         </div>
                     </div>
                 </div>
@@ -1633,100 +1665,100 @@
         </section>
 
         <!-- ===== MISSION & VISION ===== -->
-        <section class="section-padding">
+        <section class="section-padding" id="mission-vision">
             <div class="container">
                 <div class="mission-vision-grid">
                     <div class="mv-card fade-up">
                         <span class="icon"><i class="fas fa-bullseye"></i></span>
-                        <h3>Our Mission</h3>
-                        <p>To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.</p>
+                        <h3 data-i18n="missionTitle">Our Mission</h3>
+                        <p data-i18n="missionText">To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.</p>
                     </div>
                     <div class="mv-card vision fade-up">
                         <span class="icon"><i class="fas fa-eye"></i></span>
-                        <h3>Our Vision</h3>
-                        <p>To build a world where no child is neglected and no elderly person is abandoned.</p>
+                        <h3 data-i18n="visionTitle">Our Vision</h3>
+                        <p data-i18n="visionText">To build a world where no child is neglected and no elderly person is abandoned.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== CORE VALUES ===== -->
-        <section class="section-padding" style="background: var(--green-paler);">
+        <section class="section-padding" style="background: var(--green-paler);" id="values">
             <div class="container">
-                <span class="section-eyebrow text-center" style="display:block; text-align:center;">What Guides Us</span>
-                <h2 class="section-title text-center">Our <span class="highlight">Core Values</span></h2>
-                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;">The principles that guide everything we do</p>
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="valuesEyebrow">What Guides Us</span>
+                <h2 class="section-title text-center" data-i18n="valuesTitle">Our <span class="highlight">Core Values</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="valuesSub">The principles that guide everything we do</p>
 
                 <div class="values-grid stagger-children">
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-heart"></i></span>
-                        <h4>Compassion</h4>
-                        <p>We serve every individual with love, empathy, and genuine care.</p>
+                        <h4 data-i18n="val1Title">Compassion</h4>
+                        <p data-i18n="val1Desc">We serve every individual with love, empathy, and genuine care.</p>
                     </div>
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-shield-alt"></i></span>
-                        <h4>Integrity</h4>
-                        <p>We uphold honesty, transparency, and accountability in all we do.</p>
+                        <h4 data-i18n="val2Title">Integrity</h4>
+                        <p data-i18n="val2Desc">We uphold honesty, transparency, and accountability in all we do.</p>
                     </div>
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-seedling"></i></span>
-                        <h4>Empowerment</h4>
-                        <p>We equip people with the knowledge, skills, and confidence to succeed.</p>
+                        <h4 data-i18n="val3Title">Empowerment</h4>
+                        <p data-i18n="val3Desc">We equip people with the knowledge, skills, and confidence to succeed.</p>
                     </div>
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-star"></i></span>
-                        <h4>Excellence</h4>
-                        <p>We pursue the highest standards in service and impact.</p>
+                        <h4 data-i18n="val4Title">Excellence</h4>
+                        <p data-i18n="val4Desc">We pursue the highest standards in service and impact.</p>
                     </div>
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-handshake"></i></span>
-                        <h4>Respect</h4>
-                        <p>We honour the dignity and worth of every human life.</p>
+                        <h4 data-i18n="val5Title">Respect</h4>
+                        <p data-i18n="val5Desc">We honour the dignity and worth of every human life.</p>
                     </div>
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-hands-helping"></i></span>
-                        <h4>Service</h4>
-                        <p>We believe true leadership begins with serving others.</p>
+                        <h4 data-i18n="val6Title">Service</h4>
+                        <p data-i18n="val6Desc">We believe true leadership begins with serving others.</p>
                     </div>
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-users"></i></span>
-                        <h4>Collaboration</h4>
-                        <p>We create lasting impact by working with communities and partners.</p>
+                        <h4 data-i18n="val7Title">Collaboration</h4>
+                        <p data-i18n="val7Desc">We create lasting impact by working with communities and partners.</p>
                     </div>
                     <div class="value-card">
                         <span class="icon"><i class="fas fa-sun"></i></span>
-                        <h4>Hope</h4>
-                        <p>We inspire confidence for a brighter future, regardless of life's challenges.</p>
+                        <h4 data-i18n="val8Title">Hope</h4>
+                        <p data-i18n="val8Desc">We inspire confidence for a brighter future, regardless of life's challenges.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== FOUNDER PREVIEW ===== -->
-        <section class="founder-preview section-padding">
+        <section class="founder-preview section-padding" id="founder">
             <div class="container">
-                <span class="section-eyebrow text-center" style="display:block; text-align:center;">Our Leader</span>
-                <h2 class="section-title text-center">Meet Our <span class="highlight">Founder</span></h2>
-                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;">A Vision Born from Compassion</p>
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="founderEyebrow">Our Leader</span>
+                <h2 class="section-title text-center" data-i18n="founderTitle">Meet Our <span class="highlight">Founder</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="founderSub">A Vision Born from Compassion</p>
 
                 <div class="founder-preview-grid">
                     <div class="founder-preview-image fade-up">
                         <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938653/1784934975518_slmphx.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder and Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
-                        <span class="image-badge"><i class="fas fa-crown"></i> Founder</span>
+                        <span class="image-badge"><i class="fas fa-crown"></i> <span data-i18n="founderBadge">Founder</span></span>
                     </div>
                     <div class="founder-preview-content fade-up">
-                        <h3>Mrs. Oluwatosin Balogun Akano</h3>
-                        <span class="title">Founder & Executive Director</span>
-                        <p>
+                        <h3 data-i18n="founderName">Mrs. Oluwatosin Balogun Akano</h3>
+                        <span class="title" data-i18n="founderRole">Founder & Executive Director</span>
+                        <p data-i18n="founderP1">
                             With a heart for service and a vision for transformation, Mrs. Oluwatosin Balogun Akano founded PHINEHAS GENERATION FOUNDATION in 2016. Her passion for empowering young people and caring for the elderly has driven the organization's growth from a small mentorship initiative in Abeokuta to a movement reaching communities across Nigeria and the United Kingdom.
                         </p>
-                        <p>
+                        <p data-i18n="founderP2">
                             A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.
                         </p>
-                        <div class="founder-quote">
+                        <div class="founder-quote" data-i18n="founderQuote">
                             "Raising tomorrow's leaders while honouring yesterday's heroes."
                         </div>
-                        <a href="founder.html" class="btn btn-primary">Learn More About Our Founder <i class="fas fa-arrow-right"></i></a>
+                        <a href="about.html#founder" class="btn btn-primary" data-i18n="founderBtn">Learn More About Our Founder <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -1735,11 +1767,11 @@
         <!-- ===== CTA ===== -->
         <section class="cta-section">
             <div class="container">
-                <h2>You Can Change a Life Today</h2>
-                <p>Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.</p>
+                <h2 data-i18n="ctaTitle">You Can Change a Life Today</h2>
+                <p data-i18n="ctaText">Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.</p>
                 <div class="cta-buttons">
-                    <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
-                    <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+                    <a href="donate.html" class="btn btn-primary" data-i18n="ctaBtn1"><i class="fas fa-heart"></i> Donate Now</a>
+                    <a href="volunteer.html" class="btn btn-outline-light" data-i18n="ctaBtn2"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
                 </div>
             </div>
         </section>
@@ -1753,7 +1785,7 @@
                             <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" style="height:40px;" width="40" height="40" loading="lazy" />
                             PHINEHAS <span class="logo-gold">GENERATION</span>
                         </a>
-                        <p>Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+                        <p data-i18n="footerTag">Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
                         <div class="footer-social">
                             <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -1762,34 +1794,34 @@
                         </div>
                     </div>
                     <div class="footer-links">
-                        <h4>Quick Links</h4>
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About Us</a>
-                        <a href="programs.html">Our Programs</a>
-                        <a href="gallery.html">Gallery</a>
-                        <a href="blog.html">Blog / News</a>
-                        <a href="volunteer.html">Volunteer</a>
-                        <a href="contact.html">Contact Us</a>
-                        <a href="donate.html">Donate</a>
+                        <h4 data-i18n="footerQuick">Quick Links</h4>
+                        <a href="index.html" data-i18n="footerHome">Home</a>
+                        <a href="about.html" data-i18n="footerAbout">About Us</a>
+                        <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
+                        <a href="gallery.html" data-i18n="footerGallery">Gallery</a>
+                        <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
+                        <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
+                        <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
+                        <a href="donate.html" data-i18n="footerDonate">Donate</a>
                     </div>
                     <div class="footer-links">
-                        <h4>Programs</h4>
-                        <a href="programs.html">Youth Development</a>
-                        <a href="programs.html">Elderly Care</a>
-                        <a href="programs.html">Medical Outreach</a>
-                        <a href="programs.html">Community Development</a>
-                        <a href="programs.html">Leadership Training</a>
+                        <h4 data-i18n="footerPrograms">Programs</h4>
+                        <a href="programs.html" data-i18n="footerProg1">Youth Development</a>
+                        <a href="programs.html" data-i18n="footerProg2">Elderly Care</a>
+                        <a href="programs.html" data-i18n="footerProg3">Medical Outreach</a>
+                        <a href="programs.html" data-i18n="footerProg4">Community Development</a>
+                        <a href="programs.html" data-i18n="footerProg5">Leadership Training</a>
                     </div>
                     <div class="footer-links">
-                        <h4>Contact</h4>
+                        <h4 data-i18n="footerContact">Contact</h4>
                         <a href="tel:+2348161370219"><i class="fas fa-phone"></i> +234 816 137 0219</a>
                         <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> UK Office, London</a>
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> Nigeria Office, Lagos</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerUK">UK Office, London</span></a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerNigeria">Nigeria Office, Lagos</span></a>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 <strong>PHINEHAS GENERATION FOUNDATION</strong> — Registered Charity. All rights reserved. | <a href="#">Privacy Policy</a></p>
+                    <p>&copy; 2026 <strong>PHINEHAS GENERATION FOUNDATION</strong> — <span data-i18n="footerCopy">Registered Charity. All rights reserved.</span> | <a href="#" data-i18n="footerPrivacy">Privacy Policy</a></p>
                 </div>
             </div>
         </footer>
@@ -1804,12 +1836,36 @@
 
     <!-- ===== COOKIE BANNER ===== -->
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
-        <p>🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
+        <p data-i18n="cookieText">🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
         <div style="display:flex; gap:10px;">
-            <button class="btn-sm" style="background:var(--gold); color:white; border:none; padding:8px 20px; border-radius:9999px; font-weight:600; cursor:pointer;" id="acceptCookies">Accept</button>
-            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px; padding:8px 20px; cursor:pointer;" id="declineCookies">Decline</button>
+            <button class="btn-sm" style="background:var(--gold); color:white; border:none; padding:8px 20px; border-radius:9999px; font-weight:600; cursor:pointer;" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
+            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px; padding:8px 20px; cursor:pointer;" id="declineCookies" data-i18n="cookieDecline">Decline</button>
         </div>
     </div>
+
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Us | PHINEHAS GENERATION FOUNDATION",
+        "description": "Learn about PHINEHAS GENERATION FOUNDATION — our story, mission, vision, and the journey of transforming lives across Nigeria and the UK.",
+        "url": "https://phinehasgeneration.org/about.html",
+        "isPartOf": {
+            "@type": "Organization",
+            "name": "PHINEHAS GENERATION FOUNDATION",
+            "foundingDate": "2016",
+            "founder": {
+                "@type": "Person",
+                "name": "Oluwatosin Balogun Akano",
+                "jobTitle": "Founder & Executive Director"
+            },
+            "areaServed": ["Nigeria", "United Kingdom"],
+            "email": "info@phinehasgeneration.org",
+            "telephone": "+2348161370219"
+        }
+    }
+    </script>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -1831,6 +1887,99 @@
                     // Hero
                     heroTitle: 'About Us',
                     heroSub: 'A Journey of Compassion, Hope, and Generational Transformation',
+                    // Story
+                    storyEyebrow: 'Our Story',
+                    storyTitle: 'A Vision That Began with <span class="highlight">One Heart</span>',
+                    storySub: 'And Grew into a Movement of Hope',
+                    storyP1: 'Every meaningful journey begins with a single step. For PHINEHAS GENERATION FOUNDATION, that step was taken in 2016 by Mrs. Oluwatosin Balogun Akano, whose compassion for people became the seed of a vision that continues to transform lives today.',
+                    storyP2: 'At a time when many teenagers were silently struggling with low self-esteem, depression, peer pressure, abuse, and uncertainty about their future, Mrs. Akano recognized a pressing need for guidance and mentorship. She believed that with the right support, every young person could discover purpose, make wise decisions, and become a positive influence in society.',
+                    storyP3: 'Driven by this conviction, she established PHINEHAS GENERATION FOUNDATION as a platform where teenagers could learn, grow, ask questions freely, and receive practical guidance on issues that shape their lives. What began as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people.',
+                    storyH3_1: 'A Landmark Moment',
+                    storyP4: 'One of the foundation\'s landmark moments came in 2018, when teenagers from different communities gathered at the Obasanjo Presidential Library in Abeokuta for a life-changing youth hangout. Through mentorship, interactive sessions, and inspirational talks, many participants discovered new confidence, clarified their goals, and found renewed purpose. Today, many of those young people have completed higher education and are contributing meaningfully to society as graduates and professionals.',
+                    storyHighlight: '"What started as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people."',
+                    storyH3_2: 'Expanding the Vision',
+                    storyP5: 'As the foundation expanded its activities across Abeokuta and later into Magodo, Lagos, another need became increasingly evident. During community visits and outreach programs, the team encountered many elderly men and women who had been left behind by society. Some struggled with poor health, failing eyesight, loneliness, and financial hardship. Others simply longed for someone to listen, care, and remind them that they still mattered.',
+                    storyP6: 'These encounters transformed the foundation\'s mission. Recognizing that a truly compassionate society must care for both its future and its past, PHINEHAS GENERATION FOUNDATION broadened its focus to include elderly care. Medical outreaches, free eye examinations, cataract interventions, prescription glasses, food distribution, financial support, and regular welfare visits became integral to the organization\'s work.',
+                    storyH3_3: 'A Story of Restored Hope',
+                    storyP7: 'One particularly memorable outreach took place in Igbore, Abeokuta, where Mrs. Lawal Abeke, an elderly woman living with severe cataracts, received life-changing medical attention. Following successful treatment and the provision of prescription glasses, she regained her sight and expressed overwhelming joy that the hope she thought she had lost had finally been restored. Her story remains a powerful reminder of why the foundation exists—to restore hope where it has faded and to remind every person that they are valued.',
+                    storyH3_4: 'Looking Ahead',
+                    storyP8: 'Over the years, PHINEHAS GENERATION FOUNDATION has grown beyond its humble beginnings. What started as a local initiative in Ogun State has expanded into Lagos and now reaches communities in the United Kingdom, building partnerships and extending its impact across borders while remaining rooted in its original mission of service.',
+                    storyP9: 'Today, PHINEHAS GENERATION FOUNDATION stands as a bridge between generations. We empower teenagers to become confident, responsible, and purpose-driven leaders while ensuring that elderly people receive the dignity, care, and respect they deserve.',
+                    storyP10: 'Although our reach continues to grow, our purpose remains unchanged. Every program we organize, every community we visit, every volunteer we mobilize, and every life we touch reflects our unwavering commitment to building a society where no young person is left without guidance and no elderly person is forgotten.',
+                    storyP11: '<strong>Our story is still being written.</strong> With every life transformed, every partnership formed, and every act of kindness shared, we move one step closer to realizing our vision of a world where compassion unites generations, hope overcomes hardship, and every individual has the opportunity to thrive.',
+                    storyQuote: '"This is our history. This is our purpose. This is the legacy we are building—one life, one family, and one generation at a time."',
+                    // Stats
+                    stat1: '2016',
+                    stat1Label: 'Year Founded',
+                    stat2: '1,000+',
+                    stat2Label: 'Teenagers Empowered',
+                    stat3: '500+',
+                    stat3Label: 'Elderly People Served',
+                    stat4: '2',
+                    stat4Label: 'Countries Reached',
+                    // Timeline
+                    timelineEyebrow: 'Our Journey',
+                    timelineTitle: 'Key <span class="highlight">Milestones</span>',
+                    timelineSub: 'The moments that shaped our mission',
+                    tYear1: '2016',
+                    tTitle1: 'Foundation Established',
+                    tDesc1: 'PHINEHAS GENERATION FOUNDATION was founded by Mrs. Oluwatosin Balogun Akano in Abeokuta, Ogun State, Nigeria.',
+                    tYear2: '2018',
+                    tTitle2: 'Landmark Youth Event',
+                    tDesc2: 'Hundreds of teenagers gathered at the Obasanjo Presidential Library, Abeokuta, for a transformative youth hangout and mentorship program.',
+                    tYear3: '2019',
+                    tTitle3: 'Expansion to Lagos',
+                    tDesc3: 'The foundation expanded its operations into Magodo, Lagos, reaching more young people and communities.',
+                    tYear4: '2020',
+                    tTitle4: 'Elderly Care Initiative',
+                    tDesc4: 'Mission expanded to include elderly care, medical outreaches, and humanitarian support for senior citizens.',
+                    tYear5: '2022',
+                    tTitle5: 'International Presence',
+                    tDesc5: 'The foundation established a presence in the United Kingdom, extending its impact across borders.',
+                    tYear6: 'Present',
+                    tTitle6: 'Continuing the Mission',
+                    tDesc6: 'Empowering teenagers and restoring dignity to elderly people across Nigeria, the UK, and beyond.',
+                    // Mission & Vision
+                    missionTitle: 'Our Mission',
+                    missionText: 'To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.',
+                    visionTitle: 'Our Vision',
+                    visionText: 'To build a world where no child is neglected and no elderly person is abandoned.',
+                    // Values
+                    valuesEyebrow: 'What Guides Us',
+                    valuesTitle: 'Our <span class="highlight">Core Values</span>',
+                    valuesSub: 'The principles that guide everything we do',
+                    val1Title: 'Compassion',
+                    val1Desc: 'We serve every individual with love, empathy, and genuine care.',
+                    val2Title: 'Integrity',
+                    val2Desc: 'We uphold honesty, transparency, and accountability in all we do.',
+                    val3Title: 'Empowerment',
+                    val3Desc: 'We equip people with the knowledge, skills, and confidence to succeed.',
+                    val4Title: 'Excellence',
+                    val4Desc: 'We pursue the highest standards in service and impact.',
+                    val5Title: 'Respect',
+                    val5Desc: 'We honour the dignity and worth of every human life.',
+                    val6Title: 'Service',
+                    val6Desc: 'We believe true leadership begins with serving others.',
+                    val7Title: 'Collaboration',
+                    val7Desc: 'We create lasting impact by working with communities and partners.',
+                    val8Title: 'Hope',
+                    val8Desc: 'We inspire confidence for a brighter future, regardless of life\'s challenges.',
+                    // Founder
+                    founderEyebrow: 'Our Leader',
+                    founderTitle: 'Meet Our <span class="highlight">Founder</span>',
+                    founderSub: 'A Vision Born from Compassion',
+                    founderBadge: 'Founder',
+                    founderName: 'Mrs. Oluwatosin Balogun Akano',
+                    founderRole: 'Founder & Executive Director',
+                    founderP1: 'With a heart for service and a vision for transformation, Mrs. Oluwatosin Balogun Akano founded PHINEHAS GENERATION FOUNDATION in 2016. Her passion for empowering young people and caring for the elderly has driven the organization\'s growth from a small mentorship initiative in Abeokuta to a movement reaching communities across Nigeria and the United Kingdom.',
+                    founderP2: 'A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.',
+                    founderQuote: '"Raising tomorrow\'s leaders while honouring yesterday\'s heroes."',
+                    founderBtn: 'Learn More About Our Founder <i class="fas fa-arrow-right"></i>',
+                    // CTA
+                    ctaTitle: 'You Can Change a Life Today',
+                    ctaText: 'Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.',
+                    ctaBtn1: '<i class="fas fa-heart"></i> Donate Now',
+                    ctaBtn2: '<i class="fas fa-hands-helping"></i> Become a Volunteer',
                     // Footer
                     footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
                     footerQuick: 'Quick Links',
@@ -1869,6 +2018,92 @@
                     navDonate: 'Faire un don',
                     heroTitle: 'À propos',
                     heroSub: 'Un voyage de compassion, d\'espoir et de transformation générationnelle',
+                    storyEyebrow: 'Notre histoire',
+                    storyTitle: 'Une vision qui a commencé avec <span class="highlight">un cœur</span>',
+                    storySub: 'Et qui est devenue un mouvement d\'espoir',
+                    storyP1: 'Tout voyage significatif commence par un premier pas. Pour PHINEHAS GENERATION FOUNDATION, ce pas a été franchi en 2016 par Mme Oluwatosin Balogun Akano, dont la compassion pour les gens est devenue la graine d\'une vision qui continue de transformer des vies aujourd\'hui.',
+                    storyP2: 'À une époque où de nombreux adolescents luttaient silencieusement contre une faible estime de soi, la dépression, la pression des pairs, les abus et l\'incertitude quant à leur avenir, Mme Akano a reconnu un besoin urgent de conseils et de mentorat. Elle croyait qu\'avec le bon soutien, chaque jeune pouvait découvrir un but, prendre des décisions judicieuses et devenir une influence positive dans la société.',
+                    storyP3: 'Animée par cette conviction, elle a fondé PHINEHAS GENERATION FOUNDATION comme une plateforme où les adolescents pouvaient apprendre, grandir, poser des questions librement et recevoir des conseils pratiques sur les questions qui façonnent leur vie. Ce qui a commencé comme de petits rassemblements et des séances de mentorat s\'est rapidement transformé en conférences, séminaires, ateliers de leadership et actions communautaires qui ont inspiré des centaines de jeunes.',
+                    storyH3_1: 'Un moment historique',
+                    storyP4: 'L\'un des moments marquants de la fondation a eu lieu en 2018, lorsque des adolescents de différentes communautés se sont réunis à la Bibliothèque présidentielle Obasanjo à Abeokuta pour une rencontre de jeunes qui a changé leur vie. Grâce au mentorat, aux sessions interactives et aux discours inspirants, de nombreux participants ont découvert une nouvelle confiance, clarifié leurs objectifs et trouvé un nouveau but. Aujourd\'hui, beaucoup de ces jeunes ont terminé leurs études supérieures et contribuent de manière significative à la société en tant que diplômés et professionnels.',
+                    storyHighlight: '"Ce qui a commencé comme de petits rassemblements et des séances de mentorat s\'est rapidement transformé en conférences, séminaires, ateliers de leadership et actions communautaires qui ont inspiré des centaines de jeunes."',
+                    storyH3_2: 'Élargir la vision',
+                    storyP5: 'Alors que la fondation élargissait ses activités à travers Abeokuta et plus tard à Magodo, Lagos, un autre besoin est devenu de plus en plus évident. Lors des visites communautaires et des programmes de sensibilisation, l\'équipe a rencontré de nombreuses personnes âgées qui avaient été laissées pour compte par la société. Certaines luttaient contre une mauvaise santé, une vue déclinante, la solitude et des difficultés financières. D\'autres aspiraient simplement à ce que quelqu\'un les écoute, prenne soin d\'elles et leur rappelle qu\'elles comptaient encore.',
+                    storyP6: 'Ces rencontres ont transformé la mission de la fondation. Reconnaissant qu\'une société vraiment compatissante doit prendre soin à la fois de son avenir et de son passé, PHINEHAS GENERATION FOUNDATION a élargi son champ d\'action pour inclure les soins aux personnes âgées. Les actions médicales, les examens de la vue gratuits, les interventions contre la cataracte, les lunettes de prescription, la distribution de nourriture, le soutien financier et les visites de bien-être régulières sont devenus partie intégrante du travail de l\'organisation.',
+                    storyH3_3: 'Une histoire d\'espoir retrouvé',
+                    storyP7: 'Une action particulièrement mémorable a eu lieu à Igbore, Abeokuta, où Mme Lawal Abeke, une personne âgée vivant avec une cataracte sévère, a reçu une attention médicale qui a changé sa vie. Après un traitement réussi et la fourniture de lunettes de prescription, elle a retrouvé la vue et a exprimé une joie immense que l\'espoir qu\'elle croyait perdu avait finalement été restauré. Son histoire reste un puissant rappel de la raison d\'être de la fondation — restaurer l\'espoir là où il s\'est estompé et rappeler à chaque personne qu\'elle est valorisée.',
+                    storyH3_4: 'Regarder vers l\'avenir',
+                    storyP8: 'Au fil des ans, PHINEHAS GENERATION FOUNDATION a dépassé ses modestes débuts. Ce qui a commencé comme une initiative locale dans l\'État d\'Ogun s\'est étendu à Lagos et atteint maintenant des communautés au Royaume-Uni, créant des partenariats et étendant son impact au-delà des frontières tout en restant enracinée dans sa mission originale de service.',
+                    storyP9: 'Aujourd\'hui, PHINEHAS GENERATION FOUNDATION est un pont entre les générations. Nous donnons aux adolescents les moyens de devenir des leaders confiants, responsables et motivés tout en veillant à ce que les personnes âgées reçoivent la dignité, les soins et le respect qu\'elles méritent.',
+                    storyP10: 'Bien que notre portée continue de croître, notre objectif reste inchangé. Chaque programme que nous organisons, chaque communauté que nous visitons, chaque bénévole que nous mobilisons et chaque vie que nous touchons reflète notre engagement indéfectible à construire une société où aucun jeune n\'est laissé sans conseils et aucune personne âgée n\'est oubliée.',
+                    storyP11: '<strong>Notre histoire est encore en cours d\'écriture.</strong> Avec chaque vie transformée, chaque partenariat formé et chaque acte de gentillesse partagé, nous nous rapprochons un peu plus de la réalisation de notre vision d\'un monde où la compassion unit les générations, l\'espoir surmonte les épreuves et chaque individu a la possibilité de s\'épanouir.',
+                    storyQuote: '"C\'est notre histoire. C\'est notre objectif. C\'est l\'héritage que nous construisons — une vie, une famille et une génération à la fois."',
+                    stat1: '2016',
+                    stat1Label: 'Année de fondation',
+                    stat2: '1 000+',
+                    stat2Label: 'Adolescents autonomisés',
+                    stat3: '500+',
+                    stat3Label: 'Personnes âgées servies',
+                    stat4: '2',
+                    stat4Label: 'Pays touchés',
+                    timelineEyebrow: 'Notre parcours',
+                    timelineTitle: 'Étapes <span class="highlight">clés</span>',
+                    timelineSub: 'Les moments qui ont façonné notre mission',
+                    tYear1: '2016',
+                    tTitle1: 'Fondation de l\'organisation',
+                    tDesc1: 'PHINEHAS GENERATION FOUNDATION a été fondée par Mme Oluwatosin Balogun Akano à Abeokuta, État d\'Ogun, Nigéria.',
+                    tYear2: '2018',
+                    tTitle2: 'Événement jeunesse marquant',
+                    tDesc2: 'Des centaines d\'adolescents se sont réunis à la Bibliothèque présidentielle Obasanjo, Abeokuta, pour un rassemblement de jeunes transformateur et un programme de mentorat.',
+                    tYear3: '2019',
+                    tTitle3: 'Expansion à Lagos',
+                    tDesc3: 'La fondation a étendu ses opérations à Magodo, Lagos, touchant plus de jeunes et de communautés.',
+                    tYear4: '2020',
+                    tTitle4: 'Initiative de soins aux personnes âgées',
+                    tDesc4: 'La mission s\'est élargie pour inclure les soins aux personnes âgées, les actions médicales et le soutien humanitaire aux aînés.',
+                    tYear5: '2022',
+                    tTitle5: 'Présence internationale',
+                    tDesc5: 'La fondation a établi une présence au Royaume-Uni, étendant son impact au-delà des frontières.',
+                    tYear6: 'Présent',
+                    tTitle6: 'Poursuite de la mission',
+                    tDesc6: 'Autonomiser les adolescents et redonner dignité aux personnes âgées au Nigéria, au Royaume-Uni et au-delà.',
+                    missionTitle: 'Notre mission',
+                    missionText: 'Autonomiser les jeunes par le mentorat, l\'éducation et le développement du leadership tout en redonnant dignité, espoir et bonheur aux personnes âgées grâce à des soins compatissants et à l\'aide humanitaire.',
+                    visionTitle: 'Notre vision',
+                    visionText: 'Construire un monde où aucun enfant n\'est négligé et aucune personne âgée n\'est abandonnée.',
+                    valuesEyebrow: 'Ce qui nous guide',
+                    valuesTitle: 'Nos <span class="highlight">valeurs fondamentales</span>',
+                    valuesSub: 'Les principes qui guident tout ce que nous faisons',
+                    val1Title: 'Compassion',
+                    val1Desc: 'Nous servons chaque personne avec amour, empathie et soin véritable.',
+                    val2Title: 'Intégrité',
+                    val2Desc: 'Nous respectons l\'honnêteté, la transparence et la responsabilité dans tout ce que nous faisons.',
+                    val3Title: 'Autonomisation',
+                    val3Desc: 'Nous équipons les gens avec les connaissances, les compétences et la confiance pour réussir.',
+                    val4Title: 'Excellence',
+                    val4Desc: 'Nous poursuivons les normes les plus élevées en matière de service et d\'impact.',
+                    val5Title: 'Respect',
+                    val5Desc: 'Nous honorons la dignité et la valeur de chaque vie humaine.',
+                    val6Title: 'Service',
+                    val6Desc: 'Nous croyons que le vrai leadership commence par le service aux autres.',
+                    val7Title: 'Collaboration',
+                    val7Desc: 'Nous créons un impact durable en travaillant avec les communautés et les partenaires.',
+                    val8Title: 'Espoir',
+                    val8Desc: 'Nous inspirons la confiance en un avenir meilleur, quels que soient les défis de la vie.',
+                    founderEyebrow: 'Notre leader',
+                    founderTitle: 'Rencontrez notre <span class="highlight">fondatrice</span>',
+                    founderSub: 'Une vision née de la compassion',
+                    founderBadge: 'Fondatrice',
+                    founderName: 'Mme Oluwatosin Balogun Akano',
+                    founderRole: 'Fondatrice et directrice exécutive',
+                    founderP1: 'Avec un cœur pour le service et une vision pour la transformation, Mme Oluwatosin Balogun Akano a fondé PHINEHAS GENERATION FOUNDATION en 2016. Sa passion pour l\'autonomisation des jeunes et les soins aux personnes âgées a fait passer l\'organisation d\'une petite initiative de mentorat à Abeokuta à un mouvement atteignant des communautés à travers le Nigéria et le Royaume-Uni.',
+                    founderP2: 'Leader humanitaire et communautaire dévouée, elle croit que chaque génération mérite l\'espoir et que le changement durable commence par l\'investissement dans les personnes.',
+                    founderQuote: '"Former les leaders de demain tout en honorant les héros d\'hier."',
+                    founderBtn: 'En savoir plus sur notre fondatrice <i class="fas fa-arrow-right"></i>',
+                    ctaTitle: 'Vous pouvez changer une vie aujourd\'hui',
+                    ctaText: 'Chaque acte de bonté crée une onde d\'espoir. Que vous soyez bénévole, donateur ou partenaire, vous faites partie d\'un mouvement qui autonomise les adolescents et redonne dignité aux personnes âgées.',
+                    ctaBtn1: '<i class="fas fa-heart"></i> Faire un don',
+                    ctaBtn2: '<i class="fas fa-hands-helping"></i> Devenir bénévole',
                     footerTag: 'Autonomiser les adolescents. Honorer les personnes âgées. Bâtir des communautés meilleures.',
                     footerQuick: 'Liens rapides',
                     footerHome: 'Accueil',
@@ -1905,6 +2140,92 @@
                     navDonate: 'Jetzt spenden',
                     heroTitle: 'Über uns',
                     heroSub: 'Eine Reise der Barmherzigkeit, Hoffnung und generationenübergreifenden Transformation',
+                    storyEyebrow: 'Unsere Geschichte',
+                    storyTitle: 'Eine Vision, die mit <span class="highlight">einem Herzen</span> begann',
+                    storySub: 'Und zu einer Bewegung der Hoffnung wurde',
+                    storyP1: 'Jede bedeutungsvolle Reise beginnt mit einem einzigen Schritt. Für PHINEHAS GENERATION FOUNDATION wurde dieser Schritt 2016 von Frau Oluwatosin Balogun Akano getan, deren Mitgefühl für Menschen zum Samen einer Vision wurde, die bis heute Leben verändert.',
+                    storyP2: 'Zu einer Zeit, als viele Jugendliche still mit geringem Selbstwertgefühl, Depressionen, Gruppenzwang, Missbrauch und Unsicherheit über ihre Zukunft kämpften, erkannte Frau Akano den dringenden Bedarf an Beratung und Mentoring. Sie glaubte, dass mit der richtigen Unterstützung jeder junge Mensch einen Sinn entdecken, kluge Entscheidungen treffen und ein positiver Einfluss in der Gesellschaft werden kann.',
+                    storyP3: 'Getrieben von dieser Überzeugung gründete sie PHINEHAS GENERATION FOUNDATION als Plattform, auf der Jugendliche lernen, wachsen, frei Fragen stellen und praktische Beratung zu Themen erhalten können, die ihr Leben prägen. Was als kleine Zusammenkünfte und Mentoring-Sitzungen begann, entwickelte sich schnell zu Konferenzen, Seminaren, Führungsworkshops und Gemeinschaftsaktionen, die Hunderte von Jugendlichen inspirierten.',
+                    storyH3_1: 'Ein Meilenstein',
+                    storyP4: 'Einer der Meilensteine der Stiftung war 2018, als Jugendliche aus verschiedenen Gemeinschaften in der Obasanjo Presidential Library in Abeokuta zusammenkamen, um an einem lebensverändernden Jugendevent teilzunehmen. Durch Mentoring, interaktive Sitzungen und inspirierende Gespräche entdeckten viele Teilnehmer neues Selbstvertrauen, klärten ihre Ziele und fanden einen neuen Lebenssinn. Heute haben viele dieser jungen Menschen ihr Studium abgeschlossen und leisten als Absolventen und Fachkräfte einen bedeutenden Beitrag zur Gesellschaft.',
+                    storyHighlight: '"Was als kleine Zusammenkünfte und Mentoring-Sitzungen begann, entwickelte sich schnell zu Konferenzen, Seminaren, Führungsworkshops und Gemeinschaftsaktionen, die Hunderte von Jugendlichen inspirierten."',
+                    storyH3_2: 'Die Vision erweitern',
+                    storyP5: 'Als die Stiftung ihre Aktivitäten in Abeokuta und später in Magodo, Lagos, ausweitete, wurde ein weiterer Bedarf immer deutlicher. Bei Gemeindebesuchen und Outreach-Programmen traf das Team auf viele ältere Menschen, die von der Gesellschaft zurückgelassen worden waren. Einige kämpften mit schlechter Gesundheit, nachlassendem Sehvermögen, Einsamkeit und finanziellen Schwierigkeiten. Andere sehnten sich einfach danach, dass jemand zuhört, sich kümmert und sie daran erinnert, dass sie immer noch zählen.',
+                    storyP6: 'Diese Begegnungen veränderten die Mission der Stiftung. In der Erkenntnis, dass eine wirklich mitfühlende Gesellschaft sowohl für ihre Zukunft als auch für ihre Vergangenheit sorgen muss, weitete PHINEHAS GENERATION FOUNDATION ihren Fokus auf die Altenpflege aus. Medizinische Einsätze, kostenlose Augenuntersuchungen, Katarakt-Interventionen, Brillen, Lebensmittelverteilung, finanzielle Unterstützung und regelmäßige Wohlfahrtsbesuche wurden zu einem festen Bestandteil der Arbeit der Organisation.',
+                    storyH3_3: 'Eine Geschichte der wiederhergestellten Hoffnung',
+                    storyP7: 'Ein besonders denkwürdiger Einsatz fand in Igbore, Abeokuta, statt, wo Frau Lawal Abeke, eine ältere Frau mit schwerem Katarakt, lebensverändernde medizinische Hilfe erhielt. Nach erfolgreicher Behandlung und der Bereitstellung einer Brille erlangte sie ihr Augenlicht zurück und drückte ihre große Freude darüber aus, dass die Hoffnung, die sie verloren geglaubt hatte, endlich wiederhergestellt war. Ihre Geschichte bleibt eine kraftvolle Erinnerung daran, warum die Stiftung existiert — um Hoffnung dort wiederherzustellen, wo sie verblasst ist, und um jeden Menschen daran zu erinnern, dass er wertvoll ist.',
+                    storyH3_4: 'Blick nach vorn',
+                    storyP8: 'Im Laufe der Jahre ist PHINEHAS GENERATION FOUNDATION über ihre bescheidenen Anfänge hinausgewachsen. Was als lokale Initiative im Bundesstaat Ogun begann, hat sich auf Lagos ausgeweitet und erreicht heute Gemeinschaften im Vereinigten Königreich, knüpft Partnerschaften und erweitert ihre Wirkung über Grenzen hinweg, während sie in ihrer ursprünglichen Mission des Dienens verwurzelt bleibt.',
+                    storyP9: 'Heute steht PHINEHAS GENERATION FOUNDATION als Brücke zwischen den Generationen. Wir befähigen Jugendliche, selbstbewusste, verantwortungsbewusste und zielorientierte Führungskräfte zu werden, und stellen gleichzeitig sicher, dass ältere Menschen die Würde, Fürsorge und den Respekt erhalten, die sie verdienen.',
+                    storyP10: 'Obwohl unsere Reichweite weiter wächst, bleibt unser Zweck unverändert. Jedes Programm, das wir organisieren, jede Gemeinschaft, die wir besuchen, jeder Freiwillige, den wir mobilisieren, und jedes Leben, das wir berühren, spiegelt unser unerschütterliches Engagement wider, eine Gesellschaft aufzubauen, in der kein junger Mensch ohne Führung und kein älterer Mensch vergessen wird.',
+                    storyP11: '<strong>Unsere Geschichte wird noch geschrieben.</strong> Mit jedem veränderten Leben, jeder geschlossenen Partnerschaft und jedem geteilten Akt der Freundlichkeit kommen wir unserem Ziel näher, eine Welt zu schaffen, in der Mitgefühl Generationen verbindet, Hoffnung Schwierigkeiten überwindet und jeder Einzelne die Möglichkeit hat, zu gedeihen.',
+                    storyQuote: '"Das ist unsere Geschichte. Das ist unser Zweck. Das ist das Vermächtnis, das wir aufbauen — ein Leben, eine Familie und eine Generation nach der anderen."',
+                    stat1: '2016',
+                    stat1Label: 'Gründungsjahr',
+                    stat2: '1.000+',
+                    stat2Label: 'Jugendliche gestärkt',
+                    stat3: '500+',
+                    stat3Label: 'Ältere Menschen betreut',
+                    stat4: '2',
+                    stat4Label: 'Länder erreicht',
+                    timelineEyebrow: 'Unser Weg',
+                    timelineTitle: 'Wichtige <span class="highlight">Meilensteine</span>',
+                    timelineSub: 'Die Momente, die unsere Mission geprägt haben',
+                    tYear1: '2016',
+                    tTitle1: 'Gründung der Stiftung',
+                    tDesc1: 'PHINEHAS GENERATION FOUNDATION wurde von Frau Oluwatosin Balogun Akano in Abeokuta, Bundesstaat Ogun, Nigeria, gegründet.',
+                    tYear2: '2018',
+                    tTitle2: 'Bedeutendes Jugendevent',
+                    tDesc2: 'Hunderte von Jugendlichen versammelten sich in der Obasanjo Presidential Library in Abeokuta für ein transformatives Jugendevent und Mentoring-Programm.',
+                    tYear3: '2019',
+                    tTitle3: 'Expansion nach Lagos',
+                    tDesc3: 'Die Stiftung erweiterte ihre Aktivitäten nach Magodo, Lagos, und erreichte mehr junge Menschen und Gemeinschaften.',
+                    tYear4: '2020',
+                    tTitle4: 'Altenpflege-Initiative',
+                    tDesc4: 'Die Mission wurde um die Altenpflege, medizinische Einsätze und humanitäre Unterstützung für Senioren erweitert.',
+                    tYear5: '2022',
+                    tTitle5: 'Internationale Präsenz',
+                    tDesc5: 'Die Stiftung etablierte eine Präsenz im Vereinigten Königreich und erweiterte ihre Wirkung über Grenzen hinweg.',
+                    tYear6: 'Gegenwart',
+                    tTitle6: 'Fortsetzung der Mission',
+                    tDesc6: 'Stärkung von Jugendlichen und Wiederherstellung der Würde älterer Menschen in Nigeria, Großbritannien und darüber hinaus.',
+                    missionTitle: 'Unsere Mission',
+                    missionText: 'Junge Menschen durch Mentoring, Bildung und Führungsentwicklung zu befähigen und gleichzeitig älteren Menschen durch mitfühlende Betreuung und humanitäre Hilfe Würde, Hoffnung und Glück zurückzugeben.',
+                    visionTitle: 'Unsere Vision',
+                    visionText: 'Eine Welt zu schaffen, in der kein Kind vernachlässigt und kein älterer Mensch verlassen wird.',
+                    valuesEyebrow: 'Was uns leitet',
+                    valuesTitle: 'Unsere <span class="highlight">Kernwerte</span>',
+                    valuesSub: 'Die Prinzipien, die alles leiten, was wir tun',
+                    val1Title: 'Mitgefühl',
+                    val1Desc: 'Wir dienen jedem Menschen mit Liebe, Empathie und echter Fürsorge.',
+                    val2Title: 'Integrität',
+                    val2Desc: 'Wir wahren Ehrlichkeit, Transparenz und Rechenschaftspflicht in allem, was wir tun.',
+                    val3Title: 'Ermächtigung',
+                    val3Desc: 'Wir statten Menschen mit dem Wissen, den Fähigkeiten und dem Selbstvertrauen aus, um erfolgreich zu sein.',
+                    val4Title: 'Exzellenz',
+                    val4Desc: 'Wir streben nach höchsten Standards in Dienst und Wirkung.',
+                    val5Title: 'Respekt',
+                    val5Desc: 'Wir ehren die Würde und den Wert jedes menschlichen Lebens.',
+                    val6Title: 'Dienst',
+                    val6Desc: 'Wir glauben, dass wahre Führung mit dem Dienst an anderen beginnt.',
+                    val7Title: 'Zusammenarbeit',
+                    val7Desc: 'Wir schaffen nachhaltige Wirkung durch die Zusammenarbeit mit Gemeinschaften und Partnern.',
+                    val8Title: 'Hoffnung',
+                    val8Desc: 'Wir wecken Vertrauen in eine bessere Zukunft, unabhängig von den Herausforderungen des Lebens.',
+                    founderEyebrow: 'Unsere Leiterin',
+                    founderTitle: 'Lernen Sie unsere <span class="highlight">Gründerin</span> kennen',
+                    founderSub: 'Eine Vision, geboren aus Mitgefühl',
+                    founderBadge: 'Gründerin',
+                    founderName: 'Frau Oluwatosin Balogun Akano',
+                    founderRole: 'Gründerin & Geschäftsführerin',
+                    founderP1: 'Mit einem Herzen für den Dienst und einer Vision für die Transformation gründete Frau Oluwatosin Balogun Akano 2016 PHINEHAS GENERATION FOUNDATION. Ihre Leidenschaft für die Stärkung junger Menschen und die Betreuung älterer Menschen hat die Organisation von einer kleinen Mentoring-Initiative in Abeokuta zu einer Bewegung geführt, die Gemeinschaften in Nigeria und dem Vereinigten Königreich erreicht.',
+                    founderP2: 'Eine engagierte humanitäre und Gemeindeleiterin glaubt sie, dass jede Generation Hoffnung verdient und dass nachhaltige Veränderung mit der Investition in Menschen beginnt.',
+                    founderQuote: '"Die Führungskräfte von morgen fördern und gleichzeitig die Helden von gestern ehren."',
+                    founderBtn: 'Mehr über unsere Gründerin erfahren <i class="fas fa-arrow-right"></i>',
+                    ctaTitle: 'Sie können heute ein Leben verändern',
+                    ctaText: 'Jede noch so kleine Tat der Freundlichkeit erzeugt eine Welle der Hoffnung. Ob Sie sich ehrenamtlich engagieren, spenden oder mit uns zusammenarbeiten — Sie werden Teil einer Bewegung, die Jugendliche stärkt und älteren Menschen Würde zurückgibt.',
+                    ctaBtn1: '<i class="fas fa-heart"></i> Jetzt spenden',
+                    ctaBtn2: '<i class="fas fa-hands-helping"></i> Freiwilliger werden',
                     footerTag: 'Jugendliche stärken. Ältere ehren. Bessere Gemeinschaften aufbauen.',
                     footerQuick: 'Schnelllinks',
                     footerHome: 'Startseite',
