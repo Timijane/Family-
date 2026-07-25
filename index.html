@@ -345,6 +345,149 @@
             line-height: 1.7;
         }
 
+        /* ===== UPDATED: Stat Image Row ===== */
+        .stat-image-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .stat-image-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 280px;
+        }
+        .stat-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .stat-image-card:hover img {
+            transform: scale(1.06);
+        }
+        .stat-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ===== UPDATED: Enhanced Program Cards ===== */
+        .program-card-enhanced {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+        .program-card-enhanced:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .program-card-enhanced .program-thumb {
+            height: 180px;
+            overflow: hidden;
+        }
+        .program-card-enhanced .program-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .program-card-enhanced:hover .program-thumb img {
+            transform: scale(1.08);
+        }
+        .program-card-enhanced .program-info {
+            padding: 24px 20px;
+        }
+        .program-card-enhanced .icon {
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        .program-card-enhanced h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .program-card-enhanced p {
+            font-size: 0.85rem;
+            color: var(--gray-dark);
+            line-height: 1.5;
+        }
+
+        /* ===== UPDATED: Image Divider ===== */
+        .image-divider {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .divider-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(26,26,26,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .divider-overlay blockquote {
+            color: white;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            font-style: italic;
+            text-align: center;
+            max-width: 600px;
+            padding: 0 24px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* ===== UPDATED: Founder Gallery ===== */
+        .founder-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .founder-gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        .founder-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow);
+        }
+
+        /* ===== UPDATED: Testimonial with Avatar ===== */
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        .testimonial-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+
         /* Skip to content */
         .skip-link {
             position: absolute;
@@ -993,36 +1136,6 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
-        .program-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 30px 22px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid var(--gray-light);
-            position: relative;
-            overflow: hidden;
-        }
-        .program-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow);
-            border-color: var(--gold);
-        }
-        .program-card .icon {
-            font-size: 1.4rem;
-            color: var(--gold);
-            margin-bottom: 10px;
-        }
-        .program-card h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .program-card p {
-            font-size: 0.85rem;
-            color: var(--gray-dark);
-            line-height: 1.5;
-        }
 
         /* ===== WHY WE EXIST ===== */
         .why-section {
@@ -1516,6 +1629,11 @@
             .stat-cards-row {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            /* UPDATED: Stat Image Row responsive */
+            .stat-image-row {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1594,6 +1712,20 @@
             .bar-label {
                 width: 100px;
                 font-size: 0.7rem;
+            }
+
+            /* UPDATED: Image Divider responsive */
+            .image-divider {
+                height: 280px;
+                background-attachment: scroll;
+            }
+            .divider-overlay blockquote {
+                font-size: 1.4rem;
+            }
+
+            /* UPDATED: Founder Gallery responsive */
+            .founder-gallery {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1805,33 +1937,56 @@
                 </div>
             </div>
 
-            <!-- Chart: Ageing Demographics (Donut) -->
+            <!-- UPDATED: Enhanced Donut Chart -->
             <div class="container mt-48">
                 <div class="chart-grid">
                     <div class="chart-visual fade-up">
-                        <svg viewBox="0 0 320 320" width="320" height="320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart showing 80% of older people will live in low and middle-income countries by 2050">
+                        <svg viewBox="0 0 400 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart showing 80% of older people will live in low and middle-income countries by 2050">
                             <defs>
                                 <linearGradient id="donutGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#c8943e;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#dab86a;stop-opacity:1" />
+                                    <stop offset="0%" style="stop-color:#f0d078;stop-opacity:1"/>
+                                    <stop offset="50%" style="stop-color:#c8943e;stop-opacity:1"/>
+                                    <stop offset="100%" style="stop-color:#8b6914;stop-opacity:1"/>
                                 </linearGradient>
                                 <linearGradient id="donutGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#5c8a67;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#7faa8a;stop-opacity:1" />
+                                    <stop offset="0%" style="stop-color:#a8d5b0;stop-opacity:1"/>
+                                    <stop offset="50%" style="stop-color:#6b8f71;stop-opacity:1"/>
+                                    <stop offset="100%" style="stop-color:#3d5a42;stop-opacity:1"/>
                                 </linearGradient>
-                                <filter id="donutShadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000015"/></filter>
+                                <filter id="glowGold">
+                                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                                </filter>
+                                <filter id="innerShadow">
+                                    <feOffset dx="0" dy="2"/>
+                                    <feGaussianBlur stdDeviation="3" result="offset-blur"/>
+                                    <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+                                    <feFlood flood-color="black" flood-opacity="0.15" result="color"/>
+                                    <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+                                    <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+                                </filter>
                             </defs>
-                            <circle cx="160" cy="160" r="120" fill="none" stroke="#f0ede8" stroke-width="40" />
-                            <circle cx="160" cy="160" r="120" fill="none" stroke="url(#donutGold)" stroke-width="40"
-                                stroke-dasharray="603.19 753.98" stroke-dashoffset="0" transform="rotate(-90 160 160)"
-                                stroke-linecap="butt" filter="url(#donutShadow)" class="chart-animate" />
-                            <circle cx="160" cy="160" r="120" fill="none" stroke="url(#donutGreen)" stroke-width="40"
-                                stroke-dasharray="150.8 753.98" stroke-dashoffset="-603.19" transform="rotate(-90 160 160)"
-                                stroke-linecap="butt" class="chart-animate" />
-                            <text x="160" y="148" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="900" fill="#0d0d0d">80%</text>
-                            <text x="160" y="172" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">of older people will live in</text>
-                            <text x="160" y="188" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">low- & middle-income countries</text>
-                            <text x="160" y="204" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#c8943e" font-weight="700">by 2050</text>
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="#f5f2ec" stroke-width="45" />
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="url(#donutGold)" stroke-width="45"
+                                stroke-dasharray="753.98 942.48" stroke-dashoffset="0" transform="rotate(-90 200 200)"
+                                stroke-linecap="round" filter="url(#glowGold)" class="chart-animate" />
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="url(#donutGreen)" stroke-width="45"
+                                stroke-dasharray="188.50 942.48" stroke-dashoffset="-753.98" transform="rotate(-90 200 200)"
+                                stroke-linecap="round" class="chart-animate" />
+                            <circle cx="200" cy="200" r="105" fill="white" filter="url(#innerShadow)" />
+                            <circle cx="200" cy="200" r="100" fill="#fafaf9" />
+                            <text x="200" y="185" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="900" fill="#c8943e">80%</text>
+                            <text x="200" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" fill="#5a5a5a" letter-spacing="0.5">of older people</text>
+                            <text x="200" y="232" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#9a9a9a">will live in LMICs</text>
+                            <text x="200" y="255" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#c8943e" font-weight="700" letter-spacing="2">BY 2050</text>
+                            <g transform="translate(50, 340)">
+                                <rect x="0" y="0" width="14" height="14" rx="3" fill="url(#donutGold)"/>
+                                <text x="20" y="12" font-family="'Inter', sans-serif" font-size="11" fill="#5a5a5a">Low &amp; Middle-Income Countries</text>
+                            </g>
+                            <g transform="translate(250, 340)">
+                                <rect x="0" y="0" width="14" height="14" rx="3" fill="url(#donutGreen)"/>
+                                <text x="20" y="12" font-family="'Inter', sans-serif" font-size="11" fill="#5a5a5a">High-Income Countries</text>
+                            </g>
                         </svg>
                     </div>
                     <div class="chart-insight fade-up">
@@ -1865,6 +2020,18 @@
                     </div>
                 </div>
 
+                <!-- UPDATED: Elderly Portrait Images -->
+                <div class="stat-image-row mt-48 fade-up">
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Elderly woman with dignity and wisdom — representing the millions of seniors PHINEHAS GENERATION serves" loading="lazy" />
+                        <div class="stat-image-overlay">Dignity knows no age — every elderly person deserves care</div>
+                    </div>
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972754947_uulto2.jpg" alt="Community health outreach providing medical care to elderly persons" loading="lazy" />
+                        <div class="stat-image-overlay">Medical outreach restoring hope and health to communities</div>
+                    </div>
+                </div>
+
                 <!-- Conclusion Box -->
                 <div class="conclusion-box fade-up mt-48">
                     <h4 data-i18n="ageConclusionTitle">Why PHINEHAS GENERATION Is Responding</h4>
@@ -1894,7 +2061,7 @@
                 </div>
             </div>
 
-            <!-- Chart: Youth Demographics (Bar Chart) -->
+            <!-- UPDATED: Enhanced Bar Chart -->
             <div class="container mt-48">
                 <div class="chart-grid">
                     <div class="chart-insight fade-up">
@@ -1902,28 +2069,59 @@
                         <p data-i18n="youthChartDesc1">The scale of the youth population is unprecedented. More than 3 billion people are under the age of 25. Adolescents alone — those aged 10 to 19 — number 1.3 billion. The vast majority live in regions where opportunity is scarce, making targeted mentorship and education not just beneficial but essential.</p>
                     </div>
                     <div class="chart-visual fade-up">
-                        <div class="bar-chart-wrap">
-                            <div class="bar-row">
-                                <div class="bar-label">Under 25 years</div>
-                                <div class="bar-track"><div class="bar-fill gold" style="--target-width:100%;" aria-label="3 billion plus people under 25"></div></div>
-                                <div class="bar-value">3 bn+</div>
-                            </div>
-                            <div class="bar-row">
-                                <div class="bar-label">Adolescents (10–19)</div>
-                                <div class="bar-track"><div class="bar-fill green" style="--target-width:43%;" aria-label="1.3 billion adolescents"></div></div>
-                                <div class="bar-value">1.3 bn</div>
-                            </div>
-                            <div class="bar-row">
-                                <div class="bar-label">In LMICs</div>
-                                <div class="bar-track"><div class="bar-fill dark" style="--target-width:90%;" aria-label="90 percent in low and middle-income countries"></div></div>
-                                <div class="bar-value">~90%</div>
-                            </div>
-                            <div class="bar-row">
-                                <div class="bar-label">Mental health affected</div>
-                                <div class="bar-track"><div class="bar-fill gold" style="--target-width:14%;" aria-label="1 in 7 affected by mental health issues"></div></div>
-                                <div class="bar-value">1 in 7</div>
-                            </div>
-                        </div>
+                        <svg viewBox="0 0 500 320" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart of global youth demographics">
+                            <defs>
+                                <linearGradient id="barGold" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#c8943e;stop-opacity:1"/>
+                                    <stop offset="100%" style="stop-color:#f0d078;stop-opacity:1"/>
+                                </linearGradient>
+                                <linearGradient id="barGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#6b8f71;stop-opacity:1"/>
+                                    <stop offset="100%" style="stop-color:#a8d5b0;stop-opacity:1"/>
+                                </linearGradient>
+                                <linearGradient id="barDark" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1"/>
+                                    <stop offset="100%" style="stop-color:#5a5a5a;stop-opacity:1"/>
+                                </linearGradient>
+                                <filter id="barShadow">
+                                    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#00000012"/>
+                                </filter>
+                            </defs>
+                            <!-- Grid lines -->
+                            <g stroke="#e8e6e1" stroke-width="1" stroke-dasharray="4,4" opacity="0.5">
+                                <line x1="120" y1="60" x2="480" y2="60"/>
+                                <line x1="120" y1="120" x2="480" y2="120"/>
+                                <line x1="120" y1="180" x2="480" y2="180"/>
+                                <line x1="120" y1="240" x2="480" y2="240"/>
+                            </g>
+                            <!-- Bar 1 -->
+                            <g filter="url(#barShadow)">
+                                <rect x="120" y="40" width="360" height="28" rx="14" fill="url(#barGold)" class="bar-animate" data-width="360"/>
+                            </g>
+                            <text x="105" y="59" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">Under 25</text>
+                            <text x="488" y="59" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#c8943e">3 bn+</text>
+                            <!-- Bar 2 -->
+                            <g filter="url(#barShadow)">
+                                <rect x="120" y="100" width="155" height="28" rx="14" fill="url(#barGreen)" class="bar-animate" data-width="155"/>
+                            </g>
+                            <text x="105" y="119" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">Adolescents (10-19)</text>
+                            <text x="283" y="119" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#6b8f71">1.3 bn</text>
+                            <!-- Bar 3 -->
+                            <g filter="url(#barShadow)">
+                                <rect x="120" y="160" width="324" height="28" rx="14" fill="url(#barDark)" class="bar-animate" data-width="324"/>
+                            </g>
+                            <text x="105" y="179" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">In LMICs</text>
+                            <text x="452" y="179" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#2a2a2a">~90%</text>
+                            <!-- Bar 4 -->
+                            <g filter="url(#barShadow)">
+                                <rect x="120" y="220" width="50" height="28" rx="14" fill="url(#barGold)" class="bar-animate" data-width="50"/>
+                            </g>
+                            <text x="105" y="239" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">Mental health affected</text>
+                            <text x="178" y="239" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#c8943e">1 in 7</text>
+                            <!-- Title -->
+                            <text x="250" y="295" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="14" font-weight="700" fill="#2a2a2a">Global Youth Demographics</text>
+                            <text x="250" y="312" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#9a9a9a">Source: WHO, UN DESA, World Population Prospects 2024</text>
+                        </svg>
                     </div>
                 </div>
 
@@ -1948,6 +2146,18 @@
                         <div class="mini-icon"><i class="fas fa-brain"></i></div>
                         <div class="mini-num">1 in 7</div>
                         <div class="mini-desc" data-i18n="youthStat4">adolescents experience a mental disorder</div>
+                    </div>
+                </div>
+
+                <!-- UPDATED: Youth Group Images -->
+                <div class="stat-image-row mt-48 fade-up">
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784229854_ktdfci.jpg" alt="Youth group engaged in community activities — the next generation of leaders" loading="lazy" />
+                        <div class="stat-image-overlay">The largest youth generation in history deserves guidance</div>
+                    </div>
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972471198_hxwsgc.jpg" alt="School children outreach program by PHINEHAS GENERATION FOUNDATION" loading="lazy" />
+                        <div class="stat-image-overlay">Education and mentorship reaching the next generation</div>
                     </div>
                 </div>
 
@@ -1979,19 +2189,40 @@
 
                 <div class="chart-grid mt-32">
                     <div class="chart-visual fade-up">
-                        <svg viewBox="0 0 320 320" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart showing 280 million people live with depression worldwide">
+                        <!-- UPDATED: Enhanced Mental Health Pie Chart -->
+                        <svg viewBox="0 0 400 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart showing 280 million people live with depression worldwide">
                             <defs>
-                                <linearGradient id="pieGoldMH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#c8943e"/><stop offset="100%" style="stop-color:#dab86a"/></linearGradient>
-                                <linearGradient id="pieDarkMH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2a2a2a"/><stop offset="100%" style="stop-color:#4a4a4a"/></linearGradient>
-                                <linearGradient id="pieGreenMH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#5c8a67"/><stop offset="100%" style="stop-color:#8aab90"/></linearGradient>
+                                <linearGradient id="pieGoldMH" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f0d078"/>
+                                    <stop offset="50%" style="stop-color:#c8943e"/>
+                                    <stop offset="100%" style="stop-color:#8b6914"/>
+                                </linearGradient>
+                                <linearGradient id="pieDarkMH" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4a4a4a"/>
+                                    <stop offset="100%" style="stop-color:#2a2a2a"/>
+                                </linearGradient>
+                                <linearGradient id="pieGreenMH" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#a8d5b0"/>
+                                    <stop offset="50%" style="stop-color:#6b8f71"/>
+                                    <stop offset="100%" style="stop-color:#3d5a42"/>
+                                </linearGradient>
+                                <filter id="pieShadow">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000015"/>
+                                </filter>
                             </defs>
-                            <circle cx="160" cy="160" r="110" fill="none" stroke="#f0ede8" stroke-width="35" />
-                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieGoldMH)" stroke-width="35" stroke-dasharray="345.58 691.15" stroke-dashoffset="0" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
-                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieDarkMH)" stroke-width="35" stroke-dasharray="25 691.15" stroke-dashoffset="-345.58" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
-                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieGreenMH)" stroke-width="35" stroke-dasharray="98.74 691.15" stroke-dashoffset="-370.58" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
-                            <text x="160" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="900" fill="#0d0d0d">280M</text>
-                            <text x="160" y="172" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">live with depression</text>
-                            <text x="160" y="188" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">worldwide</text>
+                            <circle cx="200" cy="200" r="140" fill="none" stroke="#f0ede8" stroke-width="40" />
+                            <circle cx="200" cy="200" r="140" fill="none" stroke="url(#pieGoldMH)" stroke-width="40"
+                                stroke-dasharray="439.82 879.65" stroke-dashoffset="0" transform="rotate(-90 200 200)"
+                                stroke-linecap="butt" filter="url(#pieShadow)" class="chart-animate" />
+                            <circle cx="200" cy="200" r="140" fill="none" stroke="url(#pieDarkMH)" stroke-width="40"
+                                stroke-dasharray="31.82 879.65" stroke-dashoffset="-439.82" transform="rotate(-90 200 200)"
+                                stroke-linecap="butt" class="chart-animate" />
+                            <circle cx="200" cy="200" r="140" fill="none" stroke="url(#pieGreenMH)" stroke-width="40"
+                                stroke-dasharray="125.66 879.65" stroke-dashoffset="-471.64" transform="rotate(-90 200 200)"
+                                stroke-linecap="butt" class="chart-animate" />
+                            <text x="200" y="188" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="900" fill="#0d0d0d">280M</text>
+                            <text x="200" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#5a5a5a">live with depression</text>
+                            <text x="200" y="232" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#c8943e" font-weight="700">worldwide</text>
                         </svg>
                     </div>
                     <div class="chart-insight fade-up">
@@ -2003,6 +2234,18 @@
                 <div class="conclusion-box fade-up mt-32">
                     <h4 data-i18n="mhConclusionTitle">Our Mental Health Awareness Program</h4>
                     <p data-i18n="mhConclusionText">PHINEHAS GENERATION FOUNDATION addresses this crisis directly through our <strong>Mental Health Awareness</strong> program. We educate teenagers on depression, emotional wellbeing, and resilience — creating safe spaces for conversation in schools and communities where the topic is often taboo. Early intervention saves lives.</p>
+                </div>
+
+                <!-- UPDATED: Mental Health & Founder with Teenagers images -->
+                <div class="stat-image-row mt-48 fade-up">
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972754947_uulto2.jpg" alt="Mental health awareness and community support circle" loading="lazy" />
+                        <div class="stat-image-overlay">Creating safe spaces for mental health conversations</div>
+                    </div>
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786485653_gth2i5.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with teenagers after a seminar" loading="lazy" />
+                        <div class="stat-image-overlay">Mentorship that shapes character and builds confidence</div>
+                    </div>
                 </div>
             </div>
 
@@ -2071,6 +2314,25 @@
                     <h4 data-i18n="drugConclusionTitle">Prevention Through Mentorship</h4>
                     <p data-i18n="drugConclusionText">PHINEHAS GENERATION FOUNDATION's youth mentorship and <strong>Sexual Purity</strong> programs equip teenagers with the self-esteem, decision-making skills, and positive peer networks necessary to resist destructive behaviours. We believe that a guided teenager is far less likely to become a statistic.</p>
                 </div>
+
+                <!-- UPDATED: Founder with Children & Medical Outreach images -->
+                <div class="stat-image-row mt-48 fade-up">
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with children during community outreach" loading="lazy" />
+                        <div class="stat-image-overlay">Building tomorrow's leaders through compassion and guidance</div>
+                    </div>
+                    <div class="stat-image-card">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938660/1784785403963_qyohyv.jpg" alt="Medical outreach providing healthcare to community members" loading="lazy" />
+                        <div class="stat-image-overlay">Healthcare access changing lives in underserved communities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== UPDATED: Sunrise Image Divider ===== -->
+        <section class="image-divider" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784981609/sunrise-wildlife-shots_bn7p3z.jpg');">
+            <div class="divider-overlay">
+                <blockquote>"Raising tomorrow's leaders while honouring yesterday's heroes."</blockquote>
             </div>
         </section>
 
@@ -2168,7 +2430,7 @@
             </div>
         </section>
 
-        <!-- ===== PROGRAMS ===== -->
+        <!-- ===== UPDATED: PROGRAMS WITH ENHANCED CARDS ===== -->
         <section class="section-padding" style="background: var(--white-soft);">
             <div class="container">
                 <div class="text-center" style="margin-bottom: 40px;">
@@ -2177,12 +2439,66 @@
                     <p class="section-subtitle mx-auto" data-i18n="programsSub">Creating impact through targeted initiatives</p>
                 </div>
                 <div class="programs-grid" id="programsGrid">
-                    <div class="program-card"><span class="icon"><i class="fas fa-star"></i></span><h4 data-i18n="prog1Title">Self-Esteem Development</h4><p data-i18n="prog1Desc">Helping teenagers discover their worth and confidence.</p></div>
-                    <div class="program-card"><span class="icon"><i class="fas fa-shield-alt"></i></span><h4 data-i18n="prog2Title">Real Men Don't Rape</h4><p data-i18n="prog2Desc">Promoting respect, responsibility, and gender-based violence prevention.</p></div>
-                    <div class="program-card"><span class="icon"><i class="fas fa-dove"></i></span><h4 data-i18n="prog3Title">Sexual Purity</h4><p data-i18n="prog3Desc">Teaching healthy values and responsible decision-making.</p></div>
-                    <div class="program-card"><span class="icon"><i class="fas fa-brain"></i></span><h4 data-i18n="prog4Title">Mental Health Awareness</h4><p data-i18n="prog4Desc">Supporting young people through education on depression, emotional wellbeing, and resilience.</p></div>
-                    <div class="program-card"><span class="icon"><i class="fas fa-stethoscope"></i></span><h4 data-i18n="prog5Title">Medical Outreach</h4><p data-i18n="prog5Desc">Providing free healthcare services, eye tests, and prescription glasses.</p></div>
-                    <div class="program-card"><span class="icon"><i class="fas fa-hand-holding-heart"></i></span><h4 data-i18n="prog6Title">Community Welfare</h4><p data-i18n="prog6Desc">Food distribution, financial assistance, and support for vulnerable elderly people.</p></div>
+                    <div class="program-card-enhanced fade-up">
+                        <div class="program-thumb">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786485653_gth2i5.jpg" alt="Self-Esteem Development workshop with teenagers" loading="lazy" />
+                        </div>
+                        <div class="program-info">
+                            <span class="icon"><i class="fas fa-star"></i></span>
+                            <h4 data-i18n="prog1Title">Self-Esteem Development</h4>
+                            <p data-i18n="prog1Desc">Helping teenagers discover their worth and confidence.</p>
+                        </div>
+                    </div>
+                    <div class="program-card-enhanced fade-up">
+                        <div class="program-thumb">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972471198_hxwsgc.jpg" alt="School outreach promoting respect and responsibility" loading="lazy" />
+                        </div>
+                        <div class="program-info">
+                            <span class="icon"><i class="fas fa-shield-alt"></i></span>
+                            <h4 data-i18n="prog2Title">Real Men Don't Rape</h4>
+                            <p data-i18n="prog2Desc">Promoting respect, responsibility, and gender-based violence prevention.</p>
+                        </div>
+                    </div>
+                    <div class="program-card-enhanced fade-up">
+                        <div class="program-thumb">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg" alt="Founder teaching healthy values to children" loading="lazy" />
+                        </div>
+                        <div class="program-info">
+                            <span class="icon"><i class="fas fa-dove"></i></span>
+                            <h4 data-i18n="prog3Title">Sexual Purity</h4>
+                            <p data-i18n="prog3Desc">Teaching healthy values and responsible decision-making.</p>
+                        </div>
+                    </div>
+                    <div class="program-card-enhanced fade-up">
+                        <div class="program-thumb">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972754947_uulto2.jpg" alt="Mental health awareness session with youth" loading="lazy" />
+                        </div>
+                        <div class="program-info">
+                            <span class="icon"><i class="fas fa-brain"></i></span>
+                            <h4 data-i18n="prog4Title">Mental Health Awareness</h4>
+                            <p data-i18n="prog4Desc">Supporting young people through education on depression, emotional wellbeing, and resilience.</p>
+                        </div>
+                    </div>
+                    <div class="program-card-enhanced fade-up">
+                        <div class="program-thumb">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938660/1784785403963_qyohyv.jpg" alt="Medical outreach providing free healthcare services" loading="lazy" />
+                        </div>
+                        <div class="program-info">
+                            <span class="icon"><i class="fas fa-stethoscope"></i></span>
+                            <h4 data-i18n="prog5Title">Medical Outreach</h4>
+                            <p data-i18n="prog5Desc">Providing free healthcare services, eye tests, and prescription glasses.</p>
+                        </div>
+                    </div>
+                    <div class="program-card-enhanced fade-up">
+                        <div class="program-thumb">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Community welfare supporting vulnerable elderly people" loading="lazy" />
+                        </div>
+                        <div class="program-info">
+                            <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
+                            <h4 data-i18n="prog6Title">Community Welfare</h4>
+                            <p data-i18n="prog6Desc">Food distribution, financial assistance, and support for vulnerable elderly people.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="text-center" style="margin-top: 36px;">
                     <a href="programs.html" class="btn btn-dark" data-i18n="programsBtn">View All Programs <i class="fas fa-arrow-right"></i></a>
@@ -2230,6 +2546,13 @@
                             What began as a passion to mentor teenagers has grown into a movement that empowers young people, restores dignity to senior citizens, and inspires communities to care for one another. Her unwavering commitment to compassion, service, and human development continues to shape every program, outreach, and life touched by the foundation.
                         </p>
                         <p class="founder-quote" data-i18n="founderQuote">"Raising tomorrow's leaders while honouring yesterday's heroes."</p>
+
+                        <!-- UPDATED: Founder Gallery Images -->
+                        <div class="founder-gallery">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg" alt="Founder with children during community outreach" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786485653_gth2i5.jpg" alt="Founder with teenagers after seminar program" loading="lazy" />
+                        </div>
+
                         <a href="founder.html" class="btn btn-dark" style="margin-top:16px;" data-i18n="founderBtn">Read Her Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -2932,7 +3255,7 @@
             goToSlide(0);
             startSlideshow();
 
-            // ===== SCROLL ANIMATIONS (including chart animations) =====
+            // ===== UPDATED: SCROLL ANIMATIONS (with enhanced chart animations) =====
             const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
@@ -2947,13 +3270,13 @@
                             }, 200);
                         });
 
-                        // Animate SVG chart circles
+                        // Enhanced SVG chart circle animations
                         const chartCircles = entry.target.querySelectorAll('.chart-animate');
-                        chartCircles.forEach(circle => {
+                        chartCircles.forEach((circle, index) => {
                             const originalDash = circle.getAttribute('stroke-dasharray');
                             circle.style.strokeDasharray = '0 1000';
                             setTimeout(() => {
-                                circle.style.transition = 'stroke-dasharray 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                                circle.style.transition = `stroke-dasharray 1.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.2}s`;
                                 circle.style.strokeDasharray = originalDash;
                             }, 300);
                         });
