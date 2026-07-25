@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="PHINEHAS GENERATION FOUNDATION — Empowering teenagers and honouring the elderly through mentorship, healthcare, and community outreach across Nigeria and the UK." />
     <meta name="theme-color" content="#1a1a1a" />
+    <meta property="og:title" content="PHINEHAS GENERATION FOUNDATION | Empowering Teenagers. Honouring the Elderly." />
+    <meta property="og:description" content="Bridging generations through mentorship, healthcare, and community outreach across Nigeria and the UK." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://phinehasgeneration.org" />
+    <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PHINEHAS GENERATION FOUNDATION" />
+    <meta name="twitter:description" content="Bridging generations through mentorship, healthcare, and community outreach." />
+    <link rel="canonical" href="https://phinehasgeneration.org" />
     <title>PHINEHAS GENERATION FOUNDATION | Empowering Teenagers. Honouring the Elderly.</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Google Fonts: Inter + Playfair Display for elegance -->
+    <!-- Google Fonts: Inter + Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
 
     <style>
@@ -25,6 +36,8 @@
             --gold: #c8943e;
             --gold-light: #d4a94e;
             --gold-dark: #a67a2e;
+            --gold-pale: #fdf8f0;
+            --gold-gradient: linear-gradient(135deg, #c8943e, #dab86a);
             --black: #1a1a1a;
             --black-soft: #2a2a2a;
             --green: #6b8f71;
@@ -34,6 +47,7 @@
             --white: #ffffff;
             --white-soft: #fafaf9;
             --gray-light: #e8e6e1;
+            --gray-border: #e0ddd8;
             --gray: #9a9a9a;
             --gray-dark: #5a5a5a;
             --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -78,6 +92,12 @@
             padding: 0 28px;
         }
 
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
         .section-padding {
             padding: 90px 0;
         }
@@ -90,6 +110,16 @@
             letter-spacing: 2.5px;
             color: var(--gold);
             margin-bottom: 12px;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-dark);
+            margin-bottom: 10px;
         }
 
         .section-title {
@@ -119,6 +149,216 @@
         .mx-auto {
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .mt-32 {
+            margin-top: 32px;
+        }
+        .mt-48 {
+            margin-top: 48px;
+        }
+        .mb-32 {
+            margin-bottom: 32px;
+        }
+        .mb-48 {
+            margin-bottom: 48px;
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 40px 0;
+        }
+        .section-divider .line {
+            flex: 1;
+            height: 1px;
+            background: var(--gray-border);
+        }
+        .section-divider span {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--green);
+            white-space: nowrap;
+        }
+
+        .narrative-text {
+            font-size: 1.05rem;
+            color: var(--gray-dark);
+            line-height: 1.9;
+            max-width: 780px;
+        }
+        .narrative-text strong {
+            color: var(--black);
+        }
+        .narrative-text .dropcap {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding-right: 14px;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .chart-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chart-visual svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .chart-insight h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .chart-insight p {
+            font-size: 0.95rem;
+            color: var(--gray-dark);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .stat-cards-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+        .stat-card-mini {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 26px 18px;
+            text-align: center;
+            border: 1px solid var(--gray-border);
+            transition: var(--transition);
+        }
+        .stat-card-mini:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            border-color: var(--gold);
+        }
+        .stat-card-mini .mini-icon {
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        .stat-card-mini .mini-num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--black);
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1;
+        }
+        .stat-card-mini .mini-unit {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gold);
+        }
+        .stat-card-mini .mini-desc {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        .bar-chart-wrap {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .bar-label {
+            width: 140px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--black-soft);
+            text-align: right;
+            flex-shrink: 0;
+        }
+        .bar-track {
+            flex: 1;
+            height: 28px;
+            background: var(--gray-light);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: var(--radius-full);
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0;
+        }
+        .bar-fill.animated {
+            width: var(--target-width);
+        }
+        .bar-fill.gold {
+            background: var(--gold-gradient);
+        }
+        .bar-fill.green {
+            background: linear-gradient(135deg, #5c8a67, #7faa8a);
+        }
+        .bar-fill.dark {
+            background: linear-gradient(135deg, #2a2a2a, #4a4a4a);
+        }
+        .bar-value {
+            width: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--black);
+            flex-shrink: 0;
+        }
+
+        .conclusion-box {
+            background: linear-gradient(135deg, var(--gold-pale) 0%, rgba(200, 148, 62, 0.08) 100%);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 28px 30px;
+            margin-top: 36px;
+        }
+        .conclusion-box h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        .conclusion-box p {
+            font-size: 0.93rem;
+            color: var(--gray-dark);
+            line-height: 1.7;
+        }
+
+        /* Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            border-radius: 0 0 var(--radius-sm) 0;
+        }
+        .skip-link:focus {
+            top: 0;
         }
 
         /* ===== BUTTONS ===== */
@@ -301,6 +541,7 @@
             font-size: 0.82rem;
             font-weight: 500;
             color: var(--black-soft);
+            font-family: 'Inter', system-ui, sans-serif;
         }
         .lang-toggle:hover {
             border-color: var(--gold);
@@ -485,7 +726,7 @@
             background: rgba(255, 255, 255, 0.7);
         }
 
-        /* ===== STAT DEMOGRAPHICS SECTION ===== */
+        /* ===== STAT DEMOGRAPHICS SECTION (Quick Overview) ===== */
         .stats-section {
             background: var(--white);
             padding: 70px 0;
@@ -559,6 +800,21 @@
             letter-spacing: 2px;
             color: var(--green);
             white-space: nowrap;
+        }
+
+        .stats-read-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .stats-read-more a {
+            color: var(--gold-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed var(--gold);
+            transition: var(--transition);
+        }
+        .stats-read-more a:hover {
+            color: var(--gold);
         }
 
         /* ===== ABOUT PREVIEW ===== */
@@ -1187,6 +1443,7 @@
             cursor: pointer;
             border: none;
             transition: var(--transition);
+            font-family: 'Inter', system-ui, sans-serif;
         }
 
         /* ===== ANIMATIONS ===== */
@@ -1252,6 +1509,12 @@
             }
             .stories-grid {
                 grid-template-columns: 1fr;
+            }
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+            .stat-cards-row {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -1325,6 +1588,13 @@
             .cookie-banner p {
                 max-width: 100%;
             }
+            .stat-cards-row {
+                grid-template-columns: 1fr 1fr;
+            }
+            .bar-label {
+                width: 100px;
+                font-size: 0.7rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1336,6 +1606,9 @@
                 font-size: 0.85rem;
             }
             .container {
+                padding: 0 16px;
+            }
+            .container-narrow {
                 padding: 0 16px;
             }
             .stats-grid,
@@ -1353,24 +1626,34 @@
             .logo img {
                 height: 34px;
             }
+            .stat-cards-row {
+                grid-template-columns: 1fr;
+            }
+            .bar-label {
+                width: 80px;
+                font-size: 0.65rem;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Skip to content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- ===== HEADER ===== -->
     <header id="header">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION FOUNDATION Logo" />
+            <a href="index.html" class="logo" aria-label="PHINEHAS GENERATION FOUNDATION Home">
+                <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION FOUNDATION Logo" width="44" height="44" />
                 PHINEHAS <span class="logo-gold">GENERATION</span>
             </a>
 
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <nav class="nav-links" id="navLinks">
+            <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
                 <a href="index.html" class="active" data-i18n="navHome">Home</a>
                 <a href="about.html" data-i18n="navAbout">About Us</a>
                 <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
@@ -1381,368 +1664,665 @@
                 <a href="donate.html" class="nav-donate-btn" data-i18n="navDonate"><i class="fas fa-heart"></i> Donate Now</a>
 
                 <div class="lang-wrapper">
-                    <div class="lang-toggle" id="langToggle">
+                    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
                         <i class="fas fa-globe"></i> <span id="currentLangLabel">EN</span> <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i>
-                    </div>
-                    <ul class="lang-dropdown" id="langDropdown">
-                        <li data-lang="en" class="active-lang">🇬🇧 English</li>
-                        <li data-lang="fr">🇫🇷 Français</li>
-                        <li data-lang="de">🇩🇪 Deutsch</li>
+                    </button>
+                    <ul class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Language options">
+                        <li role="option" data-lang="en" class="active-lang" aria-selected="true">🇬🇧 English</li>
+                        <li role="option" data-lang="fr" aria-selected="false">🇫🇷 Français</li>
+                        <li role="option" data-lang="de" aria-selected="false">🇩🇪 Deutsch</li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-        <div class="hero-slides" id="heroSlides">
-            <div class="hero-slide active" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784785469497_wgtrih.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784938756_fom806.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784229854_ktdfci.jpg');"></div>
-        </div>
+    <main id="main-content">
 
-        <div class="hero-overlay">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <span class="hero-tag" data-i18n="heroTag">PHINEHAS GENERATION FOUNDATION</span>
-                    <h1 data-i18n="heroTitle">Bridging Generations.<br /><span class="highlight">Inspiring Hope.</span><br />Transforming Lives.</h1>
-                    <p data-i18n="heroDesc">Empowering teenagers with knowledge, mentorship, and life-changing opportunities while restoring dignity, hope, and joy to elderly people through compassionate care and community outreach.</p>
-                    <div class="hero-buttons">
-                        <a href="volunteer.html" class="btn btn-primary" data-i18n="heroBtn1"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
-                        <a href="donate.html" class="btn btn-outline-light" data-i18n="heroBtn2"><i class="fas fa-heart"></i> Donate Now</a>
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="hero">
+            <div class="hero-slides" id="heroSlides">
+                <div class="hero-slide active" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784785469497_wgtrih.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784938756_fom806.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784229854_ktdfci.jpg');"></div>
+            </div>
+
+            <div class="hero-overlay">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <span class="hero-tag" data-i18n="heroTag">PHINEHAS GENERATION FOUNDATION</span>
+                        <h1 data-i18n="heroTitle">Bridging Generations.<br /><span class="highlight">Inspiring Hope.</span><br />Transforming Lives.</h1>
+                        <p data-i18n="heroDesc">Empowering teenagers with knowledge, mentorship, and life-changing opportunities while restoring dignity, hope, and joy to elderly people through compassionate care and community outreach.</p>
+                        <div class="hero-buttons">
+                            <a href="volunteer.html" class="btn btn-primary" data-i18n="heroBtn1"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+                            <a href="donate.html" class="btn btn-outline-light" data-i18n="heroBtn2"><i class="fas fa-heart"></i> Donate Now</a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-stat-card">
-                    <div class="stat-number">2016</div>
-                    <div class="stat-label" data-i18n="heroStat">Founded with a vision to serve two generations — teenagers and the elderly — across Nigeria and beyond.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-dots" id="heroDots">
-            <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
-            <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
-            <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
-            <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
-            <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
-        </div>
-    </section>
-
-    <!-- ===== DEMOGRAPHIC STATISTICS ===== -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 30px;">
-                <span class="section-label" data-i18n="statsLabel">The Need Is Urgent</span>
-                <h2 class="section-title" data-i18n="statsTitleAgeing">Demographics for an <span class="highlight">Ageing World</span></h2>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card gold-accent">
-                    <div class="stat-icon"><i class="fas fa-users"></i></div>
-                    <div class="stat-number">1.4 <span class="stat-unit">bn</span></div>
-                    <div class="stat-label" data-i18n="statAge1">people will be aged 60 years or over by 2030</div>
-                </div>
-                <div class="stat-card gold-accent">
-                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="stat-number">2.1 <span class="stat-unit">bn</span></div>
-                    <div class="stat-label" data-i18n="statAge2">older people will make up more than one-fifth of the total population by 2050</div>
-                </div>
-                <div class="stat-card gold-accent">
-                    <div class="stat-icon"><i class="fas fa-globe-africa"></i></div>
-                    <div class="stat-number">80 <span class="stat-unit">%</span></div>
-                    <div class="stat-label" data-i18n="statAge3">of older people will live in low- and middle-income countries by 2050</div>
-                </div>
-                <div class="stat-card gold-accent">
-                    <div class="stat-icon"><i class="fas fa-heart"></i></div>
-                    <div class="stat-number">426 <span class="stat-unit">m</span></div>
-                    <div class="stat-label" data-i18n="statAge4">the number of people aged ≥ 80 years by 2050</div>
-                </div>
-            </div>
-
-            <div class="stats-section-divider">
-                <div class="line"></div>
-                <span data-i18n="statsDivider">And The Next Generation</span>
-                <div class="line"></div>
-            </div>
-
-            <div class="text-center" style="margin-bottom: 30px;">
-                <h2 class="section-title" data-i18n="statsTitleYouth">Demographics for <span class="highlight">Children, Adolescents & Youth</span></h2>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card green-accent">
-                    <div class="stat-icon"><i class="fas fa-child"></i></div>
-                    <div class="stat-number">1.3 <span class="stat-unit">bn</span></div>
-                    <div class="stat-label" data-i18n="statYouth1">adolescents (aged 10–19 years) worldwide — about one-sixth of the global population</div>
-                </div>
-                <div class="stat-card green-accent">
-                    <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
-                    <div class="stat-number">3 <span class="stat-unit">bn+</span></div>
-                    <div class="stat-label" data-i18n="statYouth2">people are younger than 25 years — roughly 42% of the global population</div>
-                </div>
-                <div class="stat-card green-accent">
-                    <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="stat-number">~90 <span class="stat-unit">%</span></div>
-                    <div class="stat-label" data-i18n="statYouth3">of adolescents aged 10–19 years live in low- and middle-income countries</div>
-                </div>
-                <div class="stat-card green-accent">
-                    <div class="stat-icon"><i class="fas fa-percentage"></i></div>
-                    <div class="stat-number">16 <span class="stat-unit">%</span></div>
-                    <div class="stat-label" data-i18n="statYouth4">adolescents account for over 16% of the global population</div>
-                </div>
-            </div>
-            <p class="text-center" style="margin-top: 24px; font-size: 0.82rem; color: var(--gray);" data-i18n="statsSource">Sources: WHO, UN DESA, World Population Prospects</p>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT PREVIEW ===== -->
-    <section class="section-padding" style="background: var(--white-soft);">
-        <div class="container">
-            <div class="about-preview">
-                <div class="about-image fade-up">
-                    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg" alt="PHINEHAS GENERATION FOUNDATION Team 2019" />
-                    <span class="image-badge">Est. 2016</span>
-                </div>
-                <div class="about-content fade-up">
-                    <span class="section-label" data-i18n="aboutLabel">Who We Are</span>
-                    <h2 class="section-title" data-i18n="aboutTitle">About <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION</h2>
-                    <p style="font-size:1.02rem; color:var(--gray-dark); line-height:1.8; margin-bottom:14px;" data-i18n="aboutP1">
-                        Founded in 2016 by <strong>Mrs. Oluwatosin Balogun Akano</strong>, PHINEHAS GENERATION FOUNDATION is a non-governmental organization committed to building stronger communities by empowering teenagers and caring for elderly people.
-                    </p>
-                    <p style="color:var(--gray-dark); line-height:1.8; margin-bottom:14px;" data-i18n="aboutP2">
-                        What started as a vision to mentor young people has grown into a movement of hope that now reaches families, communities, and senior citizens through education, advocacy, humanitarian outreach, and compassionate service.
-                    </p>
-                    <p style="color:var(--gray-dark); line-height:1.8; margin-bottom:20px;" data-i18n="aboutP3">
-                        From our beginnings in Abeokuta to our expansion into Lagos and the United Kingdom, our commitment remains the same: <strong>raising tomorrow's leaders while honouring yesterday's heroes.</strong>
-                    </p>
-                    <a href="about.html" class="btn btn-dark" data-i18n="aboutBtn">Read Our Story <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== MISSION & VISION ===== -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="mission-vision-grid">
-                <div class="mv-card fade-up">
-                    <span class="icon"><i class="fas fa-bullseye"></i></span>
-                    <h3 data-i18n="missionTitle">Our Mission</h3>
-                    <p data-i18n="missionText">To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.</p>
-                </div>
-                <div class="mv-card vision fade-up">
-                    <span class="icon"><i class="fas fa-eye"></i></span>
-                    <h3 data-i18n="visionTitle">Our Vision</h3>
-                    <p data-i18n="visionText">To build a world where no child is neglected and no elderly person is abandoned.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== WHO WE SERVE ===== -->
-    <section class="section-padding" style="background: var(--green-paler);">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <span class="section-label" data-i18n="serveLabel">Our Focus</span>
-                <h2 class="section-title" data-i18n="serveTitle">Who <span class="highlight">We Serve</span></h2>
-                <p class="section-subtitle mx-auto" data-i18n="serveSub">Two generations that shape every society</p>
-            </div>
-            <div class="serve-grid">
-                <div class="serve-card fade-up">
-                    <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');"></div>
-                    <div class="serve-content">
-                        <span class="serve-icon" style="color:var(--gold);"><i class="fas fa-user-graduate"></i></span>
-                        <h3 data-i18n="serveTeen">Teenagers</h3>
-                        <p data-i18n="serveTeenDesc">Helping young people develop confidence, character, leadership, and purpose through mentorship, education, and life skills.</p>
-                    </div>
-                </div>
-                <div class="serve-card fade-up">
-                    <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973206/1784972430153_u0b6q2.jpg');"></div>
-                    <div class="serve-content">
-                        <span class="serve-icon" style="color:var(--green);"><i class="fas fa-heart"></i></span>
-                        <h3 data-i18n="serveElder">Elderly People</h3>
-                        <p data-i18n="serveElderDesc">Providing care, medical outreach, food support, emotional encouragement, and companionship to senior citizens.</p>
+                    <div class="hero-stat-card">
+                        <div class="stat-number">2016</div>
+                        <div class="stat-label" data-i18n="heroStat">Founded with a vision to serve two generations — teenagers and the elderly — across Nigeria and beyond.</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ===== CORE VALUES ===== -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <span class="section-label" data-i18n="valuesLabel">What Guides Us</span>
-                <h2 class="section-title" data-i18n="valuesTitle">Our <span class="highlight">Core Values</span></h2>
-                <p class="section-subtitle mx-auto" data-i18n="valuesSub">The principles that guide everything we do</p>
+            <div class="hero-dots" id="heroDots">
+                <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+                <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
             </div>
-            <div class="values-grid" id="valuesGrid">
-                <div class="value-card"><span class="icon"><i class="fas fa-heart"></i></span><h4 data-i18n="val1Title">Compassion</h4><p data-i18n="val1Desc">We serve every individual with love, empathy, and genuine care.</p></div>
-                <div class="value-card"><span class="icon"><i class="fas fa-shield-alt"></i></span><h4 data-i18n="val2Title">Integrity</h4><p data-i18n="val2Desc">We uphold honesty, transparency, and accountability in all we do.</p></div>
-                <div class="value-card"><span class="icon"><i class="fas fa-seedling"></i></span><h4 data-i18n="val3Title">Empowerment</h4><p data-i18n="val3Desc">We equip people with the knowledge, skills, and confidence to succeed.</p></div>
-                <div class="value-card"><span class="icon"><i class="fas fa-star"></i></span><h4 data-i18n="val4Title">Excellence</h4><p data-i18n="val4Desc">We pursue the highest standards in service and impact.</p></div>
-                <div class="value-card"><span class="icon"><i class="fas fa-handshake"></i></span><h4 data-i18n="val5Title">Respect</h4><p data-i18n="val5Desc">We honour the dignity and worth of every human life.</p></div>
-                <div class="value-card"><span class="icon"><i class="fas fa-hands-helping"></i></span><h4 data-i18n="val6Title">Service</h4><p data-i18n="val6Desc">We believe true leadership begins with serving others.</p></div>
-                <div class="value-card"><span class="icon"><i class="fas fa-users"></i></span><h4 data-i18n="val7Title">Collaboration</h4><p data-i18n="val7Desc">We create lasting impact by working with communities and partners.</p></div>
-                <div class="value-card"><span class="icon"><i class="fas fa-sun"></i></span><h4 data-i18n="val8Title">Hope</h4><p data-i18n="val8Desc">We inspire confidence for a brighter future, regardless of life's challenges.</p></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== PROGRAMS ===== -->
-    <section class="section-padding" style="background: var(--white-soft);">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <span class="section-label" data-i18n="programsLabel">What We Do</span>
-                <h2 class="section-title" data-i18n="programsTitle">Our <span class="highlight">Programs</span></h2>
-                <p class="section-subtitle mx-auto" data-i18n="programsSub">Creating impact through targeted initiatives</p>
-            </div>
-            <div class="programs-grid" id="programsGrid">
-                <div class="program-card"><span class="icon"><i class="fas fa-star"></i></span><h4 data-i18n="prog1Title">Self-Esteem Development</h4><p data-i18n="prog1Desc">Helping teenagers discover their worth and confidence.</p></div>
-                <div class="program-card"><span class="icon"><i class="fas fa-shield-alt"></i></span><h4 data-i18n="prog2Title">Real Men Don't Rape</h4><p data-i18n="prog2Desc">Promoting respect, responsibility, and gender-based violence prevention.</p></div>
-                <div class="program-card"><span class="icon"><i class="fas fa-dove"></i></span><h4 data-i18n="prog3Title">Sexual Purity</h4><p data-i18n="prog3Desc">Teaching healthy values and responsible decision-making.</p></div>
-                <div class="program-card"><span class="icon"><i class="fas fa-brain"></i></span><h4 data-i18n="prog4Title">Mental Health Awareness</h4><p data-i18n="prog4Desc">Supporting young people through education on depression, emotional wellbeing, and resilience.</p></div>
-                <div class="program-card"><span class="icon"><i class="fas fa-stethoscope"></i></span><h4 data-i18n="prog5Title">Medical Outreach</h4><p data-i18n="prog5Desc">Providing free healthcare services, eye tests, and prescription glasses.</p></div>
-                <div class="program-card"><span class="icon"><i class="fas fa-hand-holding-heart"></i></span><h4 data-i18n="prog6Title">Community Welfare</h4><p data-i18n="prog6Desc">Food distribution, financial assistance, and support for vulnerable elderly people.</p></div>
-            </div>
-            <div class="text-center" style="margin-top: 36px;">
-                <a href="programs.html" class="btn btn-dark" data-i18n="programsBtn">View All Programs <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== WHY WE EXIST ===== -->
-    <section class="why-section section-padding">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <span class="section-label" style="color:rgba(200,148,62,0.8);" data-i18n="whyLabel">Our Reason</span>
-                <h2 class="section-title" style="color:var(--white);" data-i18n="whyTitle">Why <span style="color:var(--gold-light);">We Exist</span></h2>
-                <p style="text-align:center; color:rgba(255,255,255,0.6);" data-i18n="whySub">Every generation deserves hope</p>
-            </div>
-            <div class="why-grid">
-                <div class="why-item"><span class="icon"><i class="fas fa-seedling"></i></span><h4 data-i18n="why1Title">Teenagers</h4><p data-i18n="why1Desc">Deserve guidance</p></div>
-                <div class="why-item"><span class="icon"><i class="fas fa-heart"></i></span><h4 data-i18n="why2Title">The Elderly</h4><p data-i18n="why2Desc">Deserve dignity</p></div>
-                <div class="why-item"><span class="icon"><i class="fas fa-users"></i></span><h4 data-i18n="why3Title">Communities</h4><p data-i18n="why3Desc">Deserve compassion</p></div>
-                <div class="why-item"><span class="icon"><i class="fas fa-globe"></i></span><h4 data-i18n="why4Title">Every Generation</h4><p data-i18n="why4Desc">Deserves hope</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOUNDER ===== -->
-    <section class="founder-section section-padding">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <span class="section-label" data-i18n="founderLabel">Our Leader</span>
-                <h2 class="section-title" data-i18n="founderTitle">Meet Our <span class="highlight">Founder</span></h2>
-                <p class="section-subtitle mx-auto" data-i18n="founderSub">A Vision Born from Compassion</p>
-            </div>
-            <div class="founder-grid">
-                <div class="founder-image fade-up">
-                    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938653/1784934975518_slmphx.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder" />
-                    <span class="founder-badge"><i class="fas fa-crown"></i> <span data-i18n="founderBadge">Founder</span></span>
+        <!-- ===== QUICK STATS OVERVIEW ===== -->
+        <section class="stats-section" id="quick-stats">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 30px;">
+                    <span class="section-label" data-i18n="statsLabel">The Need Is Urgent</span>
+                    <h2 class="section-title" data-i18n="statsTitleAgeing">Demographics at a Glance: <span class="highlight">An Ageing World</span></h2>
                 </div>
-                <div class="founder-content fade-up">
-                    <h3 data-i18n="founderName">Mrs. Oluwatosin Balogun Akano</h3>
-                    <span class="title" data-i18n="founderRole">Founder & Executive Director</span>
-                    <p data-i18n="founderBio1">
-                        Behind every life transformed by PHINEHAS GENERATION FOUNDATION is a woman whose heart has always been drawn to people. In 2016, Mrs. Oluwatosin Balogun Akano founded the organization with a simple but profound conviction: that every young person deserves guidance, and every elderly person deserves to be valued.
-                    </p>
-                    <p data-i18n="founderBio2">
-                        What began as a passion to mentor teenagers has grown into a movement that empowers young people, restores dignity to senior citizens, and inspires communities to care for one another. Her unwavering commitment to compassion, service, and human development continues to shape every program, outreach, and life touched by the foundation.
-                    </p>
-                    <p class="founder-quote" data-i18n="founderQuote">"Raising tomorrow's leaders while honouring yesterday's heroes."</p>
-                    <a href="founder.html" class="btn btn-dark" style="margin-top:16px;" data-i18n="founderBtn">Read Her Story <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SUCCESS STORIES ===== -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <span class="section-label" data-i18n="storiesLabel">Impact</span>
-                <h2 class="section-title" data-i18n="storiesTitle">Success <span class="highlight">Stories</span></h2>
-                <p class="section-subtitle mx-auto" data-i18n="storiesSub">Real lives changed by your support</p>
-            </div>
-            <div class="stories-grid">
-                <div class="story-card fade-up">
-                    <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938656/1784785406845_bfvjb3.jpg');"></div>
-                    <div class="story-content">
-                        <span class="story-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="story1Location">Igbore, Abeokuta, Ogun State, Nigeria</span></span>
-                        <h4 data-i18n="story1Title">Restoring Hope Through Sight</h4>
-                        <p data-i18n="story1Text">Mrs. Lawal Abeke had been living with severe cataracts that significantly impaired her vision. Through our medical outreach, she received comprehensive eye examination, cataract surgery, and prescription glasses — regaining her independence, confidence, and hope.</p>
+                <div class="stats-grid">
+                    <div class="stat-card gold-accent">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-number">1.4 <span class="stat-unit">bn</span></div>
+                        <div class="stat-label" data-i18n="statAge1">people will be aged 60 years or over by 2030</div>
+                    </div>
+                    <div class="stat-card gold-accent">
+                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="stat-number">2.1 <span class="stat-unit">bn</span></div>
+                        <div class="stat-label" data-i18n="statAge2">older people will make up more than one-fifth of the total population by 2050</div>
+                    </div>
+                    <div class="stat-card gold-accent">
+                        <div class="stat-icon"><i class="fas fa-globe-africa"></i></div>
+                        <div class="stat-number">80 <span class="stat-unit">%</span></div>
+                        <div class="stat-label" data-i18n="statAge3">of older people will live in low- and middle-income countries by 2050</div>
+                    </div>
+                    <div class="stat-card gold-accent">
+                        <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                        <div class="stat-number">426 <span class="stat-unit">m</span></div>
+                        <div class="stat-label" data-i18n="statAge4">the number of people aged ≥ 80 years by 2050</div>
                     </div>
                 </div>
-                <div class="story-card fade-up">
-                    <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786350528_z8qsei.jpg');"></div>
-                    <div class="story-content">
-                        <span class="story-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="story2Location">Obasanjo Presidential Library, Abeokuta (2018)</span></span>
-                        <h4 data-i18n="story2Title">Inspiring Purpose in the Next Generation</h4>
-                        <p data-i18n="story2Text">In 2018, we brought together teenagers from different backgrounds for a day of mentorship on self-esteem, leadership, purpose, and healthy relationships. Years later, many have completed university and are making meaningful contributions in their communities.</p>
+
+                <div class="stats-section-divider">
+                    <div class="line"></div>
+                    <span data-i18n="statsDivider">And The Next Generation</span>
+                    <div class="line"></div>
+                </div>
+
+                <div class="text-center" style="margin-bottom: 30px;">
+                    <h2 class="section-title" data-i18n="statsTitleYouth">Demographics for <span class="highlight">Children, Adolescents & Youth</span></h2>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card green-accent">
+                        <div class="stat-icon"><i class="fas fa-child"></i></div>
+                        <div class="stat-number">1.3 <span class="stat-unit">bn</span></div>
+                        <div class="stat-label" data-i18n="statYouth1">adolescents (aged 10–19 years) worldwide — about one-sixth of the global population</div>
+                    </div>
+                    <div class="stat-card green-accent">
+                        <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="stat-number">3 <span class="stat-unit">bn+</span></div>
+                        <div class="stat-label" data-i18n="statYouth2">people are younger than 25 years — roughly 42% of the global population</div>
+                    </div>
+                    <div class="stat-card green-accent">
+                        <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="stat-number">~90 <span class="stat-unit">%</span></div>
+                        <div class="stat-label" data-i18n="statYouth3">of adolescents aged 10–19 years live in low- and middle-income countries</div>
+                    </div>
+                    <div class="stat-card green-accent">
+                        <div class="stat-icon"><i class="fas fa-percentage"></i></div>
+                        <div class="stat-number">16 <span class="stat-unit">%</span></div>
+                        <div class="stat-label" data-i18n="statYouth4">adolescents account for over 16% of the global population</div>
+                    </div>
+                </div>
+                <p class="text-center" style="margin-top: 20px; font-size: 0.82rem; color: var(--gray);" data-i18n="statsSource">Sources: WHO, UN DESA, World Population Prospects</p>
+                <div class="stats-read-more">
+                    <a href="#ageing-world" data-i18n="statsReadMore">Read the full story behind the numbers <i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 1: THE AGEING WORLD -->
+        <!-- ============================================ -->
+        <section class="section-padding narrative-section" id="ageing-world">
+            <div class="container-narrow">
+                <span class="section-eyebrow" data-i18n="ageEyebrow">The Global Reality</span>
+                <h2 class="section-title" data-i18n="ageTitle">An <span class="highlight">Ageing World</span> That Cannot Be Ignored</h2>
+
+                <div class="narrative-text mb-32">
+                    <p style="margin-bottom:18px;">
+                        <span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, and humanitarian implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. By 2030, <strong>1.4 billion people</strong> will be aged 60 or over. By 2050, that figure will rise to <strong>2.1 billion</strong> — more than one-fifth of the entire global population.
+                    </p>
+                    <p style="margin-bottom:18px;">
+                        What makes this shift even more urgent is where these older people will live. The World Health Organization projects that <strong>80% of older persons will reside in low- and middle-income countries</strong> by 2050 — nations where social safety nets, healthcare infrastructure, and elderly care systems are often underdeveloped or entirely absent. In these contexts, ageing is not accompanied by security; it is accompanied by vulnerability.
+                    </p>
+                    <p>
+                        The fastest-growing segment is the oldest old — those aged 80 years and above. By 2050, <strong>426 million people</strong> will belong to this group. They face the highest risk of disability, chronic illness, social isolation, and poverty. Without deliberate intervention, millions will spend their final years without dignity, care, or companionship.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Chart: Ageing Demographics (Donut) -->
+            <div class="container mt-48">
+                <div class="chart-grid">
+                    <div class="chart-visual fade-up">
+                        <svg viewBox="0 0 320 320" width="320" height="320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart showing 80% of older people will live in low and middle-income countries by 2050">
+                            <defs>
+                                <linearGradient id="donutGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#c8943e;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#dab86a;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="donutGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#5c8a67;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#7faa8a;stop-opacity:1" />
+                                </linearGradient>
+                                <filter id="donutShadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000015"/></filter>
+                            </defs>
+                            <circle cx="160" cy="160" r="120" fill="none" stroke="#f0ede8" stroke-width="40" />
+                            <circle cx="160" cy="160" r="120" fill="none" stroke="url(#donutGold)" stroke-width="40"
+                                stroke-dasharray="603.19 753.98" stroke-dashoffset="0" transform="rotate(-90 160 160)"
+                                stroke-linecap="butt" filter="url(#donutShadow)" class="chart-animate" />
+                            <circle cx="160" cy="160" r="120" fill="none" stroke="url(#donutGreen)" stroke-width="40"
+                                stroke-dasharray="150.8 753.98" stroke-dashoffset="-603.19" transform="rotate(-90 160 160)"
+                                stroke-linecap="butt" class="chart-animate" />
+                            <text x="160" y="148" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="900" fill="#0d0d0d">80%</text>
+                            <text x="160" y="172" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">of older people will live in</text>
+                            <text x="160" y="188" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">low- & middle-income countries</text>
+                            <text x="160" y="204" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#c8943e" font-weight="700">by 2050</text>
+                        </svg>
+                    </div>
+                    <div class="chart-insight fade-up">
+                        <h3 data-i18n="ageChartTitle1">Where the Burden Falls Heaviest</h3>
+                        <p data-i18n="ageChartDesc1">The overwhelming majority of the world's older population will live in countries least equipped to support them. This means families — often already struggling — must bear the full weight of elder care without institutional support.</p>
+                        <p data-i18n="ageChartDesc1b">In Nigeria alone, the traditional extended family structure that once cared for the elderly is eroding under economic pressure, urbanization, and migration. Millions of seniors are left without adequate care.</p>
+                    </div>
+                </div>
+
+                <!-- Mini Stat Cards -->
+                <div class="stat-cards-row mt-48 fade-up">
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-users"></i></div>
+                        <div class="mini-num">1.4 <span class="mini-unit">bn</span></div>
+                        <div class="mini-desc" data-i18n="ageStat1">people aged 60+ by 2030</div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="mini-num">2.1 <span class="mini-unit">bn</span></div>
+                        <div class="mini-desc" data-i18n="ageStat2">older people by 2050 — over one-fifth of humanity</div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-globe-africa"></i></div>
+                        <div class="mini-num">80 <span class="mini-unit">%</span></div>
+                        <div class="mini-desc" data-i18n="ageStat3">will live in low- and middle-income countries</div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-heart"></i></div>
+                        <div class="mini-num">426 <span class="mini-unit">m</span></div>
+                        <div class="mini-desc" data-i18n="ageStat4">people aged 80+ by 2050 — the most vulnerable group</div>
+                    </div>
+                </div>
+
+                <!-- Conclusion Box -->
+                <div class="conclusion-box fade-up mt-48">
+                    <h4 data-i18n="ageConclusionTitle">Why PHINEHAS GENERATION Is Responding</h4>
+                    <p data-i18n="ageConclusionText">These numbers are not abstract. They represent grandmothers, grandfathers, widows, and retired community builders — people who have given their best years to society and now face isolation, untreated medical conditions, and poverty. PHINEHAS GENERATION FOUNDATION exists to restore dignity to these lives through medical outreach, food support, companionship, and compassionate care. We believe that honouring the elderly is not charity — it is a moral obligation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 2: THE NEXT GENERATION -->
+        <!-- ============================================ -->
+        <section class="section-padding chart-section" id="youth-world" style="background: var(--white-soft);">
+            <div class="container-narrow">
+                <span class="section-eyebrow" data-i18n="youthEyebrow">The Future Is Young</span>
+                <h2 class="section-title" data-i18n="youthTitle">The <span class="highlight">Largest Generation</span> of Young People in History</h2>
+
+                <div class="narrative-text mb-32">
+                    <p style="margin-bottom:18px;">
+                        <span class="dropcap">W</span>hile the world ages, it is simultaneously experiencing the largest youth population in human history. There are <strong>1.3 billion adolescents</strong> aged 10–19 years alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — representing roughly 42% of humanity.
+                    </p>
+                    <p style="margin-bottom:18px;">
+                        The geographic distribution of these young people mirrors the ageing crisis: <strong>nearly 90% of adolescents live in low- and middle-income countries</strong>. These are young people growing up in environments where access to quality education, mentorship, healthcare, and economic opportunity is severely limited. Without intervention, their potential remains untapped — and the consequences ripple across generations.
+                    </p>
+                    <p>
+                        The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people. Yet, in most low-resource settings, mental health services for adolescents are virtually nonexistent.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Chart: Youth Demographics (Bar Chart) -->
+            <div class="container mt-48">
+                <div class="chart-grid">
+                    <div class="chart-insight fade-up">
+                        <h3 data-i18n="youthChartTitle1">A Demographic Snapshot of Global Youth</h3>
+                        <p data-i18n="youthChartDesc1">The scale of the youth population is unprecedented. More than 3 billion people are under the age of 25. Adolescents alone — those aged 10 to 19 — number 1.3 billion. The vast majority live in regions where opportunity is scarce, making targeted mentorship and education not just beneficial but essential.</p>
+                    </div>
+                    <div class="chart-visual fade-up">
+                        <div class="bar-chart-wrap">
+                            <div class="bar-row">
+                                <div class="bar-label">Under 25 years</div>
+                                <div class="bar-track"><div class="bar-fill gold" style="--target-width:100%;" aria-label="3 billion plus people under 25"></div></div>
+                                <div class="bar-value">3 bn+</div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label">Adolescents (10–19)</div>
+                                <div class="bar-track"><div class="bar-fill green" style="--target-width:43%;" aria-label="1.3 billion adolescents"></div></div>
+                                <div class="bar-value">1.3 bn</div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label">In LMICs</div>
+                                <div class="bar-track"><div class="bar-fill dark" style="--target-width:90%;" aria-label="90 percent in low and middle-income countries"></div></div>
+                                <div class="bar-value">~90%</div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label">Mental health affected</div>
+                                <div class="bar-track"><div class="bar-fill gold" style="--target-width:14%;" aria-label="1 in 7 affected by mental health issues"></div></div>
+                                <div class="bar-value">1 in 7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Stat Cards -->
+                <div class="stat-cards-row mt-48 fade-up">
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-child"></i></div>
+                        <div class="mini-num">1.3 <span class="mini-unit">bn</span></div>
+                        <div class="mini-desc" data-i18n="youthStat1">adolescents aged 10–19 worldwide</div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="mini-num">3 <span class="mini-unit">bn+</span></div>
+                        <div class="mini-desc" data-i18n="youthStat2">people younger than 25 — 42% of humanity</div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="mini-num">~90 <span class="mini-unit">%</span></div>
+                        <div class="mini-desc" data-i18n="youthStat3">live in low- and middle-income countries</div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="mini-icon"><i class="fas fa-brain"></i></div>
+                        <div class="mini-num">1 in 7</div>
+                        <div class="mini-desc" data-i18n="youthStat4">adolescents experience a mental disorder</div>
+                    </div>
+                </div>
+
+                <!-- Conclusion Box -->
+                <div class="conclusion-box fade-up mt-48" style="border-left-color: var(--green);">
+                    <h4 data-i18n="youthConclusionTitle">Why PHINEHAS GENERATION Invests in Youth</h4>
+                    <p data-i18n="youthConclusionText">Every statistic above represents a young person with dreams, potential, and the capacity to lead — if given the right tools. PHINEHAS GENERATION FOUNDATION runs mentorship programs, self-esteem workshops, mental health awareness campaigns, and educational outreach specifically designed to equip teenagers with confidence, character, and purpose. We are not simply filling gaps; we are building the next generation of ethical, capable leaders.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 3: GLOBAL CHALLENGES WE ADDRESS -->
+        <!-- ============================================ -->
+        <section class="section-padding narrative-section" id="global-challenges">
+            <div class="container-narrow text-center mb-48">
+                <span class="section-eyebrow" data-i18n="challengesEyebrow">The Urgent Issues</span>
+                <h2 class="section-title" data-i18n="challengesTitle">Global Challenges <span class="highlight">We Confront</span></h2>
+                <p class="section-subtitle mx-auto" data-i18n="challengesSub">Beyond demographics, there are pressing social crises that disproportionately affect the populations we serve. These statistics are not merely numbers — they are the reasons our programs exist.</p>
+            </div>
+
+            <!-- Sub-section A: Mental Health -->
+            <div class="container mt-32">
+                <div class="section-divider">
+                    <div class="line"></div>
+                    <span data-i18n="challengeDivider1">Mental Health Crisis</span>
+                    <div class="line"></div>
+                </div>
+
+                <div class="chart-grid mt-32">
+                    <div class="chart-visual fade-up">
+                        <svg viewBox="0 0 320 320" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart showing 280 million people live with depression worldwide">
+                            <defs>
+                                <linearGradient id="pieGoldMH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#c8943e"/><stop offset="100%" style="stop-color:#dab86a"/></linearGradient>
+                                <linearGradient id="pieDarkMH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2a2a2a"/><stop offset="100%" style="stop-color:#4a4a4a"/></linearGradient>
+                                <linearGradient id="pieGreenMH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#5c8a67"/><stop offset="100%" style="stop-color:#8aab90"/></linearGradient>
+                            </defs>
+                            <circle cx="160" cy="160" r="110" fill="none" stroke="#f0ede8" stroke-width="35" />
+                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieGoldMH)" stroke-width="35" stroke-dasharray="345.58 691.15" stroke-dashoffset="0" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
+                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieDarkMH)" stroke-width="35" stroke-dasharray="25 691.15" stroke-dashoffset="-345.58" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
+                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieGreenMH)" stroke-width="35" stroke-dasharray="98.74 691.15" stroke-dashoffset="-370.58" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
+                            <text x="160" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="900" fill="#0d0d0d">280M</text>
+                            <text x="160" y="172" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">live with depression</text>
+                            <text x="160" y="188" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">worldwide</text>
+                        </svg>
+                    </div>
+                    <div class="chart-insight fade-up">
+                        <h3 data-i18n="mhTitle">Mental Health: A Silent Epidemic</h3>
+                        <p data-i18n="mhDesc1"><strong>280 million people</strong> worldwide live with depression. Among adults, <strong>5%</strong> experience clinical depression globally. For adolescents, the figure is stark: <strong>1 in 7</strong> young people aged 10–19 experience a mental health disorder.</p>
+                        <p data-i18n="mhDesc2">Most devastatingly, <strong>727,000 people die by suicide every year</strong> — making it the third leading cause of death among 15–29-year-olds. The overwhelming majority of these deaths occur in low- and middle-income countries where mental health services are scarce or stigmatized.</p>
+                    </div>
+                </div>
+                <div class="conclusion-box fade-up mt-32">
+                    <h4 data-i18n="mhConclusionTitle">Our Mental Health Awareness Program</h4>
+                    <p data-i18n="mhConclusionText">PHINEHAS GENERATION FOUNDATION addresses this crisis directly through our <strong>Mental Health Awareness</strong> program. We educate teenagers on depression, emotional wellbeing, and resilience — creating safe spaces for conversation in schools and communities where the topic is often taboo. Early intervention saves lives.</p>
+                </div>
+            </div>
+
+            <!-- Sub-section B: Violence Against Women & Girls -->
+            <div class="container mt-48">
+                <div class="section-divider">
+                    <div class="line"></div>
+                    <span data-i18n="challengeDivider2">Violence Against Women</span>
+                    <div class="line"></div>
+                </div>
+
+                <div class="chart-grid mt-32">
+                    <div class="chart-insight fade-up">
+                        <h3 data-i18n="vawTitle">The Scale of Gender-Based Violence</h3>
+                        <p data-i18n="vawDesc1">The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime. This translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner.</p>
+                        <p data-i18n="vawDesc2">Violence against women is not merely a personal tragedy; it is a public health crisis of epidemic proportions. It crosses every border, culture, and socioeconomic class — but its impact is most severe where legal protections are weakest and support services are unavailable.</p>
+                    </div>
+                    <div class="chart-visual fade-up">
+                        <svg viewBox="0 0 320 320" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chart showing 1 in 3 women experience violence in their lifetime">
+                            <circle cx="160" cy="160" r="110" fill="none" stroke="#f0ede8" stroke-width="35" />
+                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieDarkMH)" stroke-width="35" stroke-dasharray="345.58 691.15" stroke-dashoffset="0" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
+                            <circle cx="160" cy="160" r="110" fill="none" stroke="url(#pieGoldMH)" stroke-width="35" stroke-dasharray="230.38 691.15" stroke-dashoffset="-345.58" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate" />
+                            <text x="160" y="148" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="900" fill="#0d0d0d">1 in 3</text>
+                            <text x="160" y="170" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">women experience</text>
+                            <text x="160" y="186" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">physical or sexual violence</text>
+                            <text x="160" y="202" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#c8943e" font-weight="700">in their lifetime</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="conclusion-box fade-up mt-32" style="border-left-color: var(--black);">
+                    <h4 data-i18n="vawConclusionTitle">Our "Real Men Don't Rape" Initiative</h4>
+                    <p data-i18n="vawConclusionText">PHINEHAS GENERATION FOUNDATION confronts this crisis through our <strong>"Real Men Don't Rape"</strong> program — an educational campaign that promotes respect, responsibility, and gender-based violence prevention among teenage boys and young men. By reshaping attitudes early, we contribute to breaking the cycle of violence before it begins.</p>
+                </div>
+            </div>
+
+            <!-- Sub-section C: Drug Use & Addiction -->
+            <div class="container mt-48">
+                <div class="section-divider">
+                    <div class="line"></div>
+                    <span data-i18n="challengeDivider3">Substance Abuse</span>
+                    <div class="line"></div>
+                </div>
+
+                <div class="chart-grid mt-32">
+                    <div class="chart-visual fade-up">
+                        <div class="bar-chart-wrap">
+                            <div class="bar-row">
+                                <div class="bar-label">Used drugs (2021)</div>
+                                <div class="bar-track"><div class="bar-fill gold" style="--target-width:100%;" aria-label="296 million people used drugs in 2021"></div></div>
+                                <div class="bar-value">296M</div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label">Need treatment</div>
+                                <div class="bar-track"><div class="bar-fill dark" style="--target-width:13.3%;" aria-label="39.5 million need treatment"></div></div>
+                                <div class="bar-value">39.5M</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-insight fade-up">
+                        <h3 data-i18n="drugTitle">The Addiction Crisis</h3>
+                        <p data-i18n="drugDesc1">According to the United Nations Office on Drugs and Crime (UNODC), <strong>296 million people</strong> worldwide used drugs in 2021 — a figure that has grown significantly over the past decade. Of these, <strong>39.5 million</strong> suffer from drug use disorders that require professional treatment.</p>
+                        <p data-i18n="drugDesc2">Young people are disproportionately affected. Substance abuse often begins in adolescence, fueled by peer pressure, trauma, lack of guidance, and economic hopelessness. Without early intervention, addiction derails education, destroys families, and perpetuates cycles of poverty.</p>
+                    </div>
+                </div>
+                <div class="conclusion-box fade-up mt-32">
+                    <h4 data-i18n="drugConclusionTitle">Prevention Through Mentorship</h4>
+                    <p data-i18n="drugConclusionText">PHINEHAS GENERATION FOUNDATION's youth mentorship and <strong>Sexual Purity</strong> programs equip teenagers with the self-esteem, decision-making skills, and positive peer networks necessary to resist destructive behaviours. We believe that a guided teenager is far less likely to become a statistic.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT PREVIEW ===== -->
+        <section class="section-padding" style="background: var(--white-soft);">
+            <div class="container">
+                <div class="about-preview">
+                    <div class="about-image fade-up">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg" alt="PHINEHAS GENERATION FOUNDATION Team during a community outreach event in 2019" loading="lazy" />
+                        <span class="image-badge">Est. 2016</span>
+                    </div>
+                    <div class="about-content fade-up">
+                        <span class="section-label" data-i18n="aboutLabel">Who We Are</span>
+                        <h2 class="section-title" data-i18n="aboutTitle">About <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION</h2>
+                        <p style="font-size:1.02rem; color:var(--gray-dark); line-height:1.8; margin-bottom:14px;" data-i18n="aboutP1">
+                            Founded in 2016 by <strong>Mrs. Oluwatosin Balogun Akano</strong>, PHINEHAS GENERATION FOUNDATION is a non-governmental organization committed to building stronger communities by empowering teenagers and caring for elderly people.
+                        </p>
+                        <p style="color:var(--gray-dark); line-height:1.8; margin-bottom:14px;" data-i18n="aboutP2">
+                            What started as a vision to mentor young people has grown into a movement of hope that now reaches families, communities, and senior citizens through education, advocacy, humanitarian outreach, and compassionate service.
+                        </p>
+                        <p style="color:var(--gray-dark); line-height:1.8; margin-bottom:20px;" data-i18n="aboutP3">
+                            From our beginnings in Abeokuta to our expansion into Lagos and the United Kingdom, our commitment remains the same: <strong>raising tomorrow's leaders while honouring yesterday's heroes.</strong>
+                        </p>
+                        <a href="about.html" class="btn btn-dark" data-i18n="aboutBtn">Read Our Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="section-padding" style="background: var(--green-paler);">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <span class="section-label" data-i18n="testimonialsLabel">Testimonials</span>
-                <h2 class="section-title" data-i18n="testimonialsTitle">What People <span class="highlight">Say</span></h2>
-                <p class="section-subtitle mx-auto" data-i18n="testimonialsSub">Stories of hope and transformation</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-up">
-                    <span class="quote-icon">"</span>
-                    <p data-i18n="testimonial1Text">"Attending the PHINEHAS GENERATION youth conference changed the way I viewed my future. I learned to believe in myself, set meaningful goals, and pursue them with confidence. Today, I am a university graduate, and I remain grateful for the encouragement I received."</p>
-                    <div class="author" data-i18n="testimonial1Author">Deborah A.</div>
-                    <div class="role" data-i18n="testimonial1Role">Youth Conference Participant</div>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <span class="quote-icon">"</span>
-                    <p data-i18n="testimonial2Text">"I never imagined I would regain my sight. The medical outreach gave me access to treatment and glasses that completely changed my daily life. I thank God and PHINEHAS GENERATION FOUNDATION for restoring my hope."</p>
-                    <div class="author" data-i18n="testimonial2Author">Mrs. Lawal Abeke</div>
-                    <div class="role" data-i18n="testimonial2Role">Medical Outreach Beneficiary</div>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <span class="quote-icon">"</span>
-                    <p data-i18n="testimonial3Text">"Volunteering with PHINEHAS GENERATION FOUNDATION has shown me the true meaning of service. Watching young people grow and seeing smiles return to the faces of elderly people has been one of the most rewarding experiences of my life."</p>
-                    <div class="author" data-i18n="testimonial3Author">Volunteer</div>
-                    <div class="role" data-i18n="testimonial3Role">Community Volunteer</div>
+        <!-- ===== MISSION & VISION ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mv-card fade-up">
+                        <span class="icon"><i class="fas fa-bullseye"></i></span>
+                        <h3 data-i18n="missionTitle">Our Mission</h3>
+                        <p data-i18n="missionText">To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.</p>
+                    </div>
+                    <div class="mv-card vision fade-up">
+                        <span class="icon"><i class="fas fa-eye"></i></span>
+                        <h3 data-i18n="visionTitle">Our Vision</h3>
+                        <p data-i18n="visionText">To build a world where no child is neglected and no elderly person is abandoned.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== CTA ===== -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 data-i18n="ctaTitle">You Can Change a Life Today</h2>
-            <p data-i18n="ctaText">Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.</p>
-            <div class="cta-buttons">
-                <a href="donate.html" class="btn btn-primary" data-i18n="ctaBtn1"><i class="fas fa-heart"></i> Donate Now</a>
-                <a href="volunteer.html" class="btn btn-outline-light" data-i18n="ctaBtn2"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+        <!-- ===== WHO WE SERVE ===== -->
+        <section class="section-padding" style="background: var(--green-paler);">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" data-i18n="serveLabel">Our Focus</span>
+                    <h2 class="section-title" data-i18n="serveTitle">Who <span class="highlight">We Serve</span></h2>
+                    <p class="section-subtitle mx-auto" data-i18n="serveSub">Two generations that shape every society</p>
+                </div>
+                <div class="serve-grid">
+                    <div class="serve-card fade-up">
+                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');"></div>
+                        <div class="serve-content">
+                            <span class="serve-icon" style="color:var(--gold);"><i class="fas fa-user-graduate"></i></span>
+                            <h3 data-i18n="serveTeen">Teenagers</h3>
+                            <p data-i18n="serveTeenDesc">Helping young people develop confidence, character, leadership, and purpose through mentorship, education, and life skills.</p>
+                        </div>
+                    </div>
+                    <div class="serve-card fade-up">
+                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973206/1784972430153_u0b6q2.jpg');"></div>
+                        <div class="serve-content">
+                            <span class="serve-icon" style="color:var(--green);"><i class="fas fa-heart"></i></span>
+                            <h3 data-i18n="serveElder">Elderly People</h3>
+                            <p data-i18n="serveElderDesc">Providing care, medical outreach, food support, emotional encouragement, and companionship to senior citizens.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- ===== CORE VALUES ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" data-i18n="valuesLabel">What Guides Us</span>
+                    <h2 class="section-title" data-i18n="valuesTitle">Our <span class="highlight">Core Values</span></h2>
+                    <p class="section-subtitle mx-auto" data-i18n="valuesSub">The principles that guide everything we do</p>
+                </div>
+                <div class="values-grid" id="valuesGrid">
+                    <div class="value-card"><span class="icon"><i class="fas fa-heart"></i></span><h4 data-i18n="val1Title">Compassion</h4><p data-i18n="val1Desc">We serve every individual with love, empathy, and genuine care.</p></div>
+                    <div class="value-card"><span class="icon"><i class="fas fa-shield-alt"></i></span><h4 data-i18n="val2Title">Integrity</h4><p data-i18n="val2Desc">We uphold honesty, transparency, and accountability in all we do.</p></div>
+                    <div class="value-card"><span class="icon"><i class="fas fa-seedling"></i></span><h4 data-i18n="val3Title">Empowerment</h4><p data-i18n="val3Desc">We equip people with the knowledge, skills, and confidence to succeed.</p></div>
+                    <div class="value-card"><span class="icon"><i class="fas fa-star"></i></span><h4 data-i18n="val4Title">Excellence</h4><p data-i18n="val4Desc">We pursue the highest standards in service and impact.</p></div>
+                    <div class="value-card"><span class="icon"><i class="fas fa-handshake"></i></span><h4 data-i18n="val5Title">Respect</h4><p data-i18n="val5Desc">We honour the dignity and worth of every human life.</p></div>
+                    <div class="value-card"><span class="icon"><i class="fas fa-hands-helping"></i></span><h4 data-i18n="val6Title">Service</h4><p data-i18n="val6Desc">We believe true leadership begins with serving others.</p></div>
+                    <div class="value-card"><span class="icon"><i class="fas fa-users"></i></span><h4 data-i18n="val7Title">Collaboration</h4><p data-i18n="val7Desc">We create lasting impact by working with communities and partners.</p></div>
+                    <div class="value-card"><span class="icon"><i class="fas fa-sun"></i></span><h4 data-i18n="val8Title">Hope</h4><p data-i18n="val8Desc">We inspire confidence for a brighter future, regardless of life's challenges.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROGRAMS ===== -->
+        <section class="section-padding" style="background: var(--white-soft);">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" data-i18n="programsLabel">What We Do</span>
+                    <h2 class="section-title" data-i18n="programsTitle">Our <span class="highlight">Programs</span></h2>
+                    <p class="section-subtitle mx-auto" data-i18n="programsSub">Creating impact through targeted initiatives</p>
+                </div>
+                <div class="programs-grid" id="programsGrid">
+                    <div class="program-card"><span class="icon"><i class="fas fa-star"></i></span><h4 data-i18n="prog1Title">Self-Esteem Development</h4><p data-i18n="prog1Desc">Helping teenagers discover their worth and confidence.</p></div>
+                    <div class="program-card"><span class="icon"><i class="fas fa-shield-alt"></i></span><h4 data-i18n="prog2Title">Real Men Don't Rape</h4><p data-i18n="prog2Desc">Promoting respect, responsibility, and gender-based violence prevention.</p></div>
+                    <div class="program-card"><span class="icon"><i class="fas fa-dove"></i></span><h4 data-i18n="prog3Title">Sexual Purity</h4><p data-i18n="prog3Desc">Teaching healthy values and responsible decision-making.</p></div>
+                    <div class="program-card"><span class="icon"><i class="fas fa-brain"></i></span><h4 data-i18n="prog4Title">Mental Health Awareness</h4><p data-i18n="prog4Desc">Supporting young people through education on depression, emotional wellbeing, and resilience.</p></div>
+                    <div class="program-card"><span class="icon"><i class="fas fa-stethoscope"></i></span><h4 data-i18n="prog5Title">Medical Outreach</h4><p data-i18n="prog5Desc">Providing free healthcare services, eye tests, and prescription glasses.</p></div>
+                    <div class="program-card"><span class="icon"><i class="fas fa-hand-holding-heart"></i></span><h4 data-i18n="prog6Title">Community Welfare</h4><p data-i18n="prog6Desc">Food distribution, financial assistance, and support for vulnerable elderly people.</p></div>
+                </div>
+                <div class="text-center" style="margin-top: 36px;">
+                    <a href="programs.html" class="btn btn-dark" data-i18n="programsBtn">View All Programs <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHY WE EXIST ===== -->
+        <section class="why-section section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" style="color:rgba(200,148,62,0.8);" data-i18n="whyLabel">Our Reason</span>
+                    <h2 class="section-title" style="color:var(--white);" data-i18n="whyTitle">Why <span style="color:var(--gold-light);">We Exist</span></h2>
+                    <p style="text-align:center; color:rgba(255,255,255,0.6);" data-i18n="whySub">Every generation deserves hope</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-item"><span class="icon"><i class="fas fa-seedling"></i></span><h4 data-i18n="why1Title">Teenagers</h4><p data-i18n="why1Desc">Deserve guidance</p></div>
+                    <div class="why-item"><span class="icon"><i class="fas fa-heart"></i></span><h4 data-i18n="why2Title">The Elderly</h4><p data-i18n="why2Desc">Deserve dignity</p></div>
+                    <div class="why-item"><span class="icon"><i class="fas fa-users"></i></span><h4 data-i18n="why3Title">Communities</h4><p data-i18n="why3Desc">Deserve compassion</p></div>
+                    <div class="why-item"><span class="icon"><i class="fas fa-globe"></i></span><h4 data-i18n="why4Title">Every Generation</h4><p data-i18n="why4Desc">Deserves hope</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOUNDER ===== -->
+        <section class="founder-section section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" data-i18n="founderLabel">Our Leader</span>
+                    <h2 class="section-title" data-i18n="founderTitle">Meet Our <span class="highlight">Founder</span></h2>
+                    <p class="section-subtitle mx-auto" data-i18n="founderSub">A Vision Born from Compassion</p>
+                </div>
+                <div class="founder-grid">
+                    <div class="founder-image fade-up">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938653/1784934975518_slmphx.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder and Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
+                        <span class="founder-badge"><i class="fas fa-crown"></i> <span data-i18n="founderBadge">Founder</span></span>
+                    </div>
+                    <div class="founder-content fade-up">
+                        <h3 data-i18n="founderName">Mrs. Oluwatosin Balogun Akano</h3>
+                        <span class="title" data-i18n="founderRole">Founder & Executive Director</span>
+                        <p data-i18n="founderBio1">
+                            Behind every life transformed by PHINEHAS GENERATION FOUNDATION is a woman whose heart has always been drawn to people. In 2016, Mrs. Oluwatosin Balogun Akano founded the organization with a simple but profound conviction: that every young person deserves guidance, and every elderly person deserves to be valued.
+                        </p>
+                        <p data-i18n="founderBio2">
+                            What began as a passion to mentor teenagers has grown into a movement that empowers young people, restores dignity to senior citizens, and inspires communities to care for one another. Her unwavering commitment to compassion, service, and human development continues to shape every program, outreach, and life touched by the foundation.
+                        </p>
+                        <p class="founder-quote" data-i18n="founderQuote">"Raising tomorrow's leaders while honouring yesterday's heroes."</p>
+                        <a href="founder.html" class="btn btn-dark" style="margin-top:16px;" data-i18n="founderBtn">Read Her Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SUCCESS STORIES ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" data-i18n="storiesLabel">Impact</span>
+                    <h2 class="section-title" data-i18n="storiesTitle">Success <span class="highlight">Stories</span></h2>
+                    <p class="section-subtitle mx-auto" data-i18n="storiesSub">Real lives changed by your support</p>
+                </div>
+                <div class="stories-grid">
+                    <div class="story-card fade-up">
+                        <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938656/1784785406845_bfvjb3.jpg');"></div>
+                        <div class="story-content">
+                            <span class="story-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="story1Location">Igbore, Abeokuta, Ogun State, Nigeria</span></span>
+                            <h4 data-i18n="story1Title">Restoring Hope Through Sight</h4>
+                            <p data-i18n="story1Text">Mrs. Lawal Abeke had been living with severe cataracts that significantly impaired her vision. Through our medical outreach, she received comprehensive eye examination, cataract surgery, and prescription glasses — regaining her independence, confidence, and hope.</p>
+                        </div>
+                    </div>
+                    <div class="story-card fade-up">
+                        <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786350528_z8qsei.jpg');"></div>
+                        <div class="story-content">
+                            <span class="story-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="story2Location">Obasanjo Presidential Library, Abeokuta (2018)</span></span>
+                            <h4 data-i18n="story2Title">Inspiring Purpose in the Next Generation</h4>
+                            <p data-i18n="story2Text">In 2018, we brought together teenagers from different backgrounds for a day of mentorship on self-esteem, leadership, purpose, and healthy relationships. Years later, many have completed university and are making meaningful contributions in their communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="section-padding" style="background: var(--green-paler);">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" data-i18n="testimonialsLabel">Testimonials</span>
+                    <h2 class="section-title" data-i18n="testimonialsTitle">What People <span class="highlight">Say</span></h2>
+                    <p class="section-subtitle mx-auto" data-i18n="testimonialsSub">Stories of hope and transformation</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-up">
+                        <span class="quote-icon">"</span>
+                        <p data-i18n="testimonial1Text">"Attending the PHINEHAS GENERATION youth conference changed the way I viewed my future. I learned to believe in myself, set meaningful goals, and pursue them with confidence. Today, I am a university graduate, and I remain grateful for the encouragement I received."</p>
+                        <div class="author" data-i18n="testimonial1Author">Deborah A.</div>
+                        <div class="role" data-i18n="testimonial1Role">Youth Conference Participant</div>
+                    </div>
+                    <div class="testimonial-card fade-up">
+                        <span class="quote-icon">"</span>
+                        <p data-i18n="testimonial2Text">"I never imagined I would regain my sight. The medical outreach gave me access to treatment and glasses that completely changed my daily life. I thank God and PHINEHAS GENERATION FOUNDATION for restoring my hope."</p>
+                        <div class="author" data-i18n="testimonial2Author">Mrs. Lawal Abeke</div>
+                        <div class="role" data-i18n="testimonial2Role">Medical Outreach Beneficiary</div>
+                    </div>
+                    <div class="testimonial-card fade-up">
+                        <span class="quote-icon">"</span>
+                        <p data-i18n="testimonial3Text">"Volunteering with PHINEHAS GENERATION FOUNDATION has shown me the true meaning of service. Watching young people grow and seeing smiles return to the faces of elderly people has been one of the most rewarding experiences of my life."</p>
+                        <div class="author" data-i18n="testimonial3Author">Volunteer</div>
+                        <div class="role" data-i18n="testimonial3Role">Community Volunteer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 data-i18n="ctaTitle">You Can Change a Life Today</h2>
+                <p data-i18n="ctaText">Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.</p>
+                <div class="cta-buttons">
+                    <a href="donate.html" class="btn btn-primary" data-i18n="ctaBtn1"><i class="fas fa-heart"></i> Donate Now</a>
+                    <a href="volunteer.html" class="btn btn-outline-light" data-i18n="ctaBtn2"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo" style="color:var(--white);">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" style="height:40px;" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" style="height:40px;" width="40" height="40" loading="lazy" />
                         PHINEHAS <span class="logo-gold">GENERATION</span>
                     </a>
                     <p data-i18n="footerTag">Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
@@ -1784,16 +2364,40 @@
     <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
     <!-- ===== WHATSAPP FLOAT ===== -->
-    <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
 
     <!-- ===== COOKIE BANNER ===== -->
-    <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
         <p data-i18n="cookieText">🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
         <div style="display:flex; gap:10px;">
             <button class="btn-sm btn-primary" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
-            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px;" id="declineCookies" data-i18n="cookieDecline">Decline</button>
+            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px; cursor:pointer;" id="declineCookies" data-i18n="cookieDecline">Decline</button>
         </div>
     </div>
+
+    <!-- ===== JSON-LD Structured Data ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "PHINEHAS GENERATION FOUNDATION",
+        "foundingDate": "2016",
+        "founder": {
+            "@type": "Person",
+            "name": "Oluwatosin Balogun Akano",
+            "jobTitle": "Founder & Executive Director"
+        },
+        "description": "Empowering teenagers and honouring the elderly through mentorship, healthcare, and community outreach across Nigeria and the UK.",
+        "url": "https://phinehasgeneration.org",
+        "email": "info@phinehasgeneration.org",
+        "telephone": "+2348161370219",
+        "areaServed": ["Nigeria", "United Kingdom"],
+        "sameAs": [
+            "https://www.facebook.com/balogun.oluwatosin.9",
+            "https://www.instagram.com/tosin_akano"
+        ]
+    }
+    </script>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -1813,9 +2417,9 @@
                     heroBtn1: '<i class="fas fa-hands-helping"></i> Become a Volunteer',
                     heroBtn2: '<i class="fas fa-heart"></i> Donate Now',
                     heroStat: 'Founded with a vision to serve two generations — teenagers and the elderly — across Nigeria and beyond.',
-                    // Stats
+                    // Stats Quick Overview
                     statsLabel: 'The Need Is Urgent',
-                    statsTitleAgeing: 'Demographics for an <span class="highlight">Ageing World</span>',
+                    statsTitleAgeing: 'Demographics at a Glance: <span class="highlight">An Ageing World</span>',
                     statAge1: 'people will be aged 60 years or over by 2030',
                     statAge2: 'older people will make up more than one-fifth of the total population by 2050',
                     statAge3: 'of older people will live in low- and middle-income countries by 2050',
@@ -1827,6 +2431,52 @@
                     statYouth3: 'of adolescents aged 10–19 years live in low- and middle-income countries',
                     statYouth4: 'adolescents account for over 16% of the global population',
                     statsSource: 'Sources: WHO, UN DESA, World Population Prospects',
+                    statsReadMore: 'Read the full story behind the numbers <i class="fas fa-arrow-down"></i>',
+                    // Section 1: Ageing World
+                    ageEyebrow: 'The Global Reality',
+                    ageTitle: 'An <span class="highlight">Ageing World</span> That Cannot Be Ignored',
+                    ageChartTitle1: 'Where the Burden Falls Heaviest',
+                    ageChartDesc1: 'The overwhelming majority of the world\'s older population will live in countries least equipped to support them. This means families — often already struggling — must bear the full weight of elder care without institutional support.',
+                    ageChartDesc1b: 'In Nigeria alone, the traditional extended family structure that once cared for the elderly is eroding under economic pressure, urbanization, and migration. Millions of seniors are left without adequate care.',
+                    ageStat1: 'people aged 60+ by 2030',
+                    ageStat2: 'older people by 2050 — over one-fifth of humanity',
+                    ageStat3: 'will live in low- and middle-income countries',
+                    ageStat4: 'people aged 80+ by 2050 — the most vulnerable group',
+                    ageConclusionTitle: 'Why PHINEHAS GENERATION Is Responding',
+                    ageConclusionText: 'These numbers are not abstract. They represent grandmothers, grandfathers, widows, and retired community builders — people who have given their best years to society and now face isolation, untreated medical conditions, and poverty. PHINEHAS GENERATION FOUNDATION exists to restore dignity to these lives through medical outreach, food support, companionship, and compassionate care. We believe that honouring the elderly is not charity — it is a moral obligation.',
+                    // Section 2: Next Generation
+                    youthEyebrow: 'The Future Is Young',
+                    youthTitle: 'The <span class="highlight">Largest Generation</span> of Young People in History',
+                    youthChartTitle1: 'A Demographic Snapshot of Global Youth',
+                    youthChartDesc1: 'The scale of the youth population is unprecedented. More than 3 billion people are under the age of 25. Adolescents alone — those aged 10 to 19 — number 1.3 billion. The vast majority live in regions where opportunity is scarce, making targeted mentorship and education not just beneficial but essential.',
+                    youthStat1: 'adolescents aged 10–19 worldwide',
+                    youthStat2: 'people younger than 25 — 42% of humanity',
+                    youthStat3: 'live in low- and middle-income countries',
+                    youthStat4: 'adolescents experience a mental disorder',
+                    youthConclusionTitle: 'Why PHINEHAS GENERATION Invests in Youth',
+                    youthConclusionText: 'Every statistic above represents a young person with dreams, potential, and the capacity to lead — if given the right tools. PHINEHAS GENERATION FOUNDATION runs mentorship programs, self-esteem workshops, mental health awareness campaigns, and educational outreach specifically designed to equip teenagers with confidence, character, and purpose. We are not simply filling gaps; we are building the next generation of ethical, capable leaders.',
+                    // Section 3: Global Challenges
+                    challengesEyebrow: 'The Urgent Issues',
+                    challengesTitle: 'Global Challenges <span class="highlight">We Confront</span>',
+                    challengesSub: 'Beyond demographics, there are pressing social crises that disproportionately affect the populations we serve. These statistics are not merely numbers — they are the reasons our programs exist.',
+                    challengeDivider1: 'Mental Health Crisis',
+                    challengeDivider2: 'Violence Against Women',
+                    challengeDivider3: 'Substance Abuse',
+                    mhTitle: 'Mental Health: A Silent Epidemic',
+                    mhDesc1: '<strong>280 million people</strong> worldwide live with depression. Among adults, <strong>5%</strong> experience clinical depression globally. For adolescents, the figure is stark: <strong>1 in 7</strong> young people aged 10–19 experience a mental health disorder.',
+                    mhDesc2: 'Most devastatingly, <strong>727,000 people die by suicide every year</strong> — making it the third leading cause of death among 15–29-year-olds. The overwhelming majority of these deaths occur in low- and middle-income countries where mental health services are scarce or stigmatized.',
+                    mhConclusionTitle: 'Our Mental Health Awareness Program',
+                    mhConclusionText: 'PHINEHAS GENERATION FOUNDATION addresses this crisis directly through our <strong>Mental Health Awareness</strong> program. We educate teenagers on depression, emotional wellbeing, and resilience — creating safe spaces for conversation in schools and communities where the topic is often taboo. Early intervention saves lives.',
+                    vawTitle: 'The Scale of Gender-Based Violence',
+                    vawDesc1: 'The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime. This translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner.',
+                    vawDesc2: 'Violence against women is not merely a personal tragedy; it is a public health crisis of epidemic proportions. It crosses every border, culture, and socioeconomic class — but its impact is most severe where legal protections are weakest and support services are unavailable.',
+                    vawConclusionTitle: 'Our "Real Men Don\'t Rape" Initiative',
+                    vawConclusionText: 'PHINEHAS GENERATION FOUNDATION confronts this crisis through our <strong>"Real Men Don\'t Rape"</strong> program — an educational campaign that promotes respect, responsibility, and gender-based violence prevention among teenage boys and young men. By reshaping attitudes early, we contribute to breaking the cycle of violence before it begins.',
+                    drugTitle: 'The Addiction Crisis',
+                    drugDesc1: 'According to the United Nations Office on Drugs and Crime (UNODC), <strong>296 million people</strong> worldwide used drugs in 2021 — a figure that has grown significantly over the past decade. Of these, <strong>39.5 million</strong> suffer from drug use disorders that require professional treatment.',
+                    drugDesc2: 'Young people are disproportionately affected. Substance abuse often begins in adolescence, fueled by peer pressure, trauma, lack of guidance, and economic hopelessness. Without early intervention, addiction derails education, destroys families, and perpetuates cycles of poverty.',
+                    drugConclusionTitle: 'Prevention Through Mentorship',
+                    drugConclusionText: 'PHINEHAS GENERATION FOUNDATION\'s youth mentorship and <strong>Sexual Purity</strong> programs equip teenagers with the self-esteem, decision-making skills, and positive peer networks necessary to resist destructive behaviours. We believe that a guided teenager is far less likely to become a statistic.',
                     // About
                     aboutLabel: 'Who We Are',
                     aboutTitle: 'About <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION',
@@ -1915,7 +2565,7 @@
                     heroBtn2: '<i class="fas fa-heart"></i> Faire un don',
                     heroStat: 'Fondée avec la vision de servir deux générations — les adolescents et les personnes âgées — au Nigeria et au-delà.',
                     statsLabel: 'Le besoin est urgent',
-                    statsTitleAgeing: 'Démographie d\'un <span class="highlight">monde vieillissant</span>',
+                    statsTitleAgeing: 'Démographie en un coup d\'œil : <span class="highlight">un monde vieillissant</span>',
                     statAge1: 'personnes auront 60 ans ou plus d\'ici 2030',
                     statAge2: 'les personnes âgées représenteront plus d\'un cinquième de la population totale d\'ici 2050',
                     statAge3: 'des personnes âgées vivront dans des pays à revenu faible ou intermédiaire d\'ici 2050',
@@ -1927,6 +2577,49 @@
                     statYouth3: 'des adolescents de 10–19 ans vivent dans des pays à revenu faible ou intermédiaire',
                     statYouth4: 'les adolescents représentent plus de 16 % de la population mondiale',
                     statsSource: 'Sources : OMS, DAES de l\'ONU, Perspectives de la population mondiale',
+                    statsReadMore: 'Lire l\'histoire complète derrière les chiffres <i class="fas fa-arrow-down"></i>',
+                    ageEyebrow: 'La réalité mondiale',
+                    ageTitle: 'Un <span class="highlight">monde vieillissant</span> qu\'on ne peut ignorer',
+                    ageChartTitle1: 'Là où le fardeau pèse le plus lourd',
+                    ageChartDesc1: 'La grande majorité des personnes âgées vivra dans les pays les moins équipés pour les soutenir. Les familles, déjà en difficulté, doivent assumer seules la charge des soins.',
+                    ageChartDesc1b: 'Au Nigeria, la structure familiale élargie qui prenait soin des aînés s\'érode sous la pression économique. Des millions de seniors restent sans soins adéquats.',
+                    ageStat1: 'personnes âgées de 60+ d\'ici 2030',
+                    ageStat2: 'personnes âgées d\'ici 2050',
+                    ageStat3: 'vivront dans des pays à revenu faible ou intermédiaire',
+                    ageStat4: 'personnes âgées de 80+ d\'ici 2050',
+                    ageConclusionTitle: 'Pourquoi PHINEHAS GENERATION répond',
+                    ageConclusionText: 'Ces chiffres représentent des grands-mères, des grands-pères, des veuves — des personnes qui ont donné leurs meilleures années à la société. PHINEHAS GENERATION existe pour restaurer leur dignité.',
+                    youthEyebrow: 'L\'avenir est jeune',
+                    youthTitle: 'La <span class="highlight">plus grande génération</span> de jeunes de l\'histoire',
+                    youthChartTitle1: 'Aperçu démographique de la jeunesse mondiale',
+                    youthChartDesc1: 'Plus de 3 milliards de personnes ont moins de 25 ans. La grande majorité vit dans des régions où les opportunités sont rares.',
+                    youthStat1: 'adolescents de 10–19 ans dans le monde',
+                    youthStat2: 'personnes de moins de 25 ans',
+                    youthStat3: 'vivent dans des pays à revenu faible ou intermédiaire',
+                    youthStat4: 'adolescents souffrent d\'un trouble mental',
+                    youthConclusionTitle: 'Pourquoi PHINEHAS GENERATION investit dans la jeunesse',
+                    youthConclusionText: 'Chaque statistique représente un jeune avec des rêves et du potentiel. Nos programmes de mentorat et de sensibilisation sont conçus pour équiper les adolescents avec confiance et caractère.',
+                    challengesEyebrow: 'Les enjeux urgents',
+                    challengesTitle: 'Défis mondiaux <span class="highlight">que nous affrontons</span>',
+                    challengesSub: 'Au-delà de la démographie, des crises sociales touchent nos populations.',
+                    challengeDivider1: 'Crise de santé mentale',
+                    challengeDivider2: 'Violence contre les femmes',
+                    challengeDivider3: 'Abus de substances',
+                    mhTitle: 'Santé mentale : une épidémie silencieuse',
+                    mhDesc1: '<strong>280 millions</strong> de personnes vivent avec une dépression. <strong>1 adolescent sur 7</strong> souffre d\'un trouble mental.',
+                    mhDesc2: '<strong>727 000 personnes</strong> meurent par suicide chaque année — troisième cause de décès chez les 15–29 ans.',
+                    mhConclusionTitle: 'Notre programme de sensibilisation',
+                    mhConclusionText: 'PHINEHAS GENERATION éduque les adolescents sur la dépression et la résilience, créant des espaces de dialogue sûrs dans les écoles.',
+                    vawTitle: 'L\'ampleur de la violence basée sur le genre',
+                    vawDesc1: '<strong>1 femme sur 3</strong> subit des violences physiques ou sexuelles au cours de sa vie — soit <strong>736 millions</strong> de femmes et de filles.',
+                    vawDesc2: 'La violence contre les femmes est une crise de santé publique mondiale.',
+                    vawConclusionTitle: 'Notre initiative "Les vrais hommes ne violent pas"',
+                    vawConclusionText: 'Nous promouvons le respect et la prévention de la violence basée sur le genre auprès des adolescents.',
+                    drugTitle: 'La crise de l\'addiction',
+                    drugDesc1: '<strong>296 millions</strong> de personnes ont consommé des drogues en 2021. <strong>39,5 millions</strong> souffrent de troubles nécessitant un traitement.',
+                    drugDesc2: 'Les jeunes sont touchés de manière disproportionnée. L\'abus de substances commence souvent à l\'adolescence.',
+                    drugConclusionTitle: 'Prévention par le mentorat',
+                    drugConclusionText: 'Nos programmes de mentorat aident les adolescents à développer l\'estime de soi et les compétences décisionnelles pour résister aux comportements destructeurs.',
                     aboutLabel: 'Qui nous sommes',
                     aboutTitle: 'À propos de <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION',
                     aboutP1: 'Fondée en 2016 par <strong>Mme Oluwatosin Balogun Akano</strong>, PHINEHAS GENERATION FOUNDATION est une organisation non gouvernementale engagée à bâtir des communautés plus fortes en autonomisant les adolescents et en prenant soin des personnes âgées.',
@@ -2001,7 +2694,7 @@
                     heroBtn2: '<i class="fas fa-heart"></i> Jetzt spenden',
                     heroStat: 'Gegründet mit der Vision, zwei Generationen zu dienen — Jugendlichen und älteren Menschen — in Nigeria und darüber hinaus.',
                     statsLabel: 'Die Not ist dringend',
-                    statsTitleAgeing: 'Demografie einer <span class="highlight">alternden Welt</span>',
+                    statsTitleAgeing: 'Demografie auf einen Blick: <span class="highlight">Eine alternde Welt</span>',
                     statAge1: 'Menschen werden bis 2030 60 Jahre oder älter sein',
                     statAge2: 'ältere Menschen werden bis 2050 mehr als ein Fünftel der Gesamtbevölkerung ausmachen',
                     statAge3: 'der älteren Menschen werden bis 2050 in Ländern mit niedrigem und mittlerem Einkommen leben',
@@ -2013,6 +2706,49 @@
                     statYouth3: 'der Jugendlichen im Alter von 10–19 Jahren leben in Ländern mit niedrigem und mittlerem Einkommen',
                     statYouth4: 'Jugendliche machen über 16 % der Weltbevölkerung aus',
                     statsSource: 'Quellen: WHO, UN DESA, World Population Prospects',
+                    statsReadMore: 'Die ganze Geschichte hinter den Zahlen lesen <i class="fas fa-arrow-down"></i>',
+                    ageEyebrow: 'Die globale Realität',
+                    ageTitle: 'Eine <span class="highlight">alternde Welt</span>, die nicht ignoriert werden kann',
+                    ageChartTitle1: 'Wo die Last am schwersten wiegt',
+                    ageChartDesc1: 'Die Mehrheit der älteren Menschen wird in Ländern leben, die am wenigsten für sie ausgestattet sind.',
+                    ageChartDesc1b: 'In Nigeria erodiert die traditionelle Familienstruktur unter wirtschaftlichem Druck.',
+                    ageStat1: 'Menschen 60+ bis 2030',
+                    ageStat2: 'ältere Menschen bis 2050',
+                    ageStat3: 'leben in Ländern mit niedrigem Einkommen',
+                    ageStat4: 'Menschen 80+ bis 2050',
+                    ageConclusionTitle: 'Warum PHINEHAS GENERATION handelt',
+                    ageConclusionText: 'Diese Zahlen sind keine Abstraktion. Sie repräsentieren Großeltern und Witwen. PHINEHAS GENERATION existiert, um ihre Würde wiederherzustellen.',
+                    youthEyebrow: 'Die Zukunft ist jung',
+                    youthTitle: 'Die <span class="highlight">größte Jugendgeneration</span> der Geschichte',
+                    youthChartTitle1: 'Demografischer Überblick',
+                    youthChartDesc1: 'Mehr als 3 Milliarden Menschen sind unter 25. Die Mehrheit lebt in Regionen mit wenigen Chancen.',
+                    youthStat1: 'Jugendliche weltweit',
+                    youthStat2: 'Menschen unter 25',
+                    youthStat3: 'leben in LMICs',
+                    youthStat4: 'Jugendliche mit psychischer Störung',
+                    youthConclusionTitle: 'Warum PHINEHAS GENERATION in Jugend investiert',
+                    youthConclusionText: 'Jede Statistik steht für einen jungen Menschen mit Potenzial. Unsere Programme vermitteln Selbstvertrauen und Charakter.',
+                    challengesEyebrow: 'Die dringenden Probleme',
+                    challengesTitle: 'Globale Herausforderungen <span class="highlight">denen wir begegnen</span>',
+                    challengesSub: 'Jenseits der Demografie gibt es soziale Krisen.',
+                    challengeDivider1: 'Psychische Gesundheit',
+                    challengeDivider2: 'Gewalt gegen Frauen',
+                    challengeDivider3: 'Drogenmissbrauch',
+                    mhTitle: 'Psychische Gesundheit: eine stille Epidemie',
+                    mhDesc1: '<strong>280 Millionen</strong> Menschen leben mit Depressionen. <strong>1 von 7</strong> Jugendlichen leidet an einer psychischen Störung.',
+                    mhDesc2: '<strong>727.000 Menschen</strong> sterben jährlich durch Suizid.',
+                    mhConclusionTitle: 'Unser Aufklärungsprogramm',
+                    mhConclusionText: 'PHINEHAS GENERATION schafft sichere Gesprächsräume in Schulen.',
+                    vawTitle: 'Das Ausmaß geschlechtsspezifischer Gewalt',
+                    vawDesc1: '<strong>1 von 3 Frauen</strong> erlebt Gewalt — <strong>736 Millionen</strong> Frauen und Mädchen.',
+                    vawDesc2: 'Gewalt gegen Frauen ist eine globale Gesundheitskrise.',
+                    vawConclusionTitle: 'Unsere "Echte Männer vergewaltigen nicht" Initiative',
+                    vawConclusionText: 'Wir fördern Respekt und Gewaltprävention bei Jugendlichen.',
+                    drugTitle: 'Die Suchtkrise',
+                    drugDesc1: '<strong>296 Millionen</strong> Menschen konsumierten 2021 Drogen. <strong>39,5 Millionen</strong> benötigen Behandlung.',
+                    drugDesc2: 'Jugendliche sind überproportional betroffen.',
+                    drugConclusionTitle: 'Prävention durch Mentoring',
+                    drugConclusionText: 'Unsere Programme helfen Jugendlichen, Selbstwertgefühl zu entwickeln.',
                     aboutLabel: 'Wer wir sind',
                     aboutTitle: 'Über <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION',
                     aboutP1: 'Gegründet 2016 von <strong>Frau Oluwatosin Balogun Akano</strong>, ist PHINEHAS GENERATION FOUNDATION eine Nichtregierungsorganisation, die sich dem Aufbau stärkerer Gemeinschaften widmet, indem sie Jugendliche stärkt und ältere Menschen betreut.',
@@ -2110,6 +2846,7 @@
                 });
                 document.querySelectorAll('.lang-dropdown li').forEach(li => {
                     li.classList.toggle('active-lang', li.dataset.lang === lang);
+                    li.setAttribute('aria-selected', li.dataset.lang === lang ? 'true' : 'false');
                 });
                 const langNames = { en: 'EN', fr: 'FR', de: 'DE' };
                 currentLangLabel.textContent = langNames[lang] || 'EN';
@@ -2121,21 +2858,27 @@
             // ===== LANGUAGE TOGGLE =====
             langToggle.addEventListener('click', function(e) {
                 e.stopPropagation();
-                langDropdown.classList.toggle('open');
+                const isOpen = langDropdown.classList.toggle('open');
+                langToggle.setAttribute('aria-expanded', isOpen);
             });
             langDropdown.querySelectorAll('li').forEach(li => {
                 li.addEventListener('click', function() {
                     applyLanguage(this.dataset.lang);
                     langDropdown.classList.remove('open');
+                    langToggle.setAttribute('aria-expanded', 'false');
                 });
             });
             document.addEventListener('click', function(e) {
-                if (!e.target.closest('.lang-wrapper')) langDropdown.classList.remove('open');
+                if (!e.target.closest('.lang-wrapper')) {
+                    langDropdown.classList.remove('open');
+                    langToggle.setAttribute('aria-expanded', 'false');
+                }
             });
 
             // ===== HAMBURGER =====
             hamburger.addEventListener('click', function() {
-                navLinks.classList.toggle('open');
+                const isOpen = navLinks.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
                 const icon = this.querySelector('i');
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-times');
@@ -2143,6 +2886,7 @@
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     navLinks.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
                     const icon = hamburger.querySelector('i');
                     if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
                 });
@@ -2180,18 +2924,40 @@
             });
 
             const heroSection = document.getElementById('hero');
-            heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
-            heroSection.addEventListener('mouseleave', startSlideshow);
+            if (heroSection) {
+                heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+                heroSection.addEventListener('mouseleave', startSlideshow);
+            }
 
             goToSlide(0);
             startSlideshow();
 
-            // ===== SCROLL ANIMATIONS =====
-            const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
+            // ===== SCROLL ANIMATIONS (including chart animations) =====
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+
+                        // Animate bar charts
+                        const barFills = entry.target.querySelectorAll('.bar-fill');
+                        barFills.forEach(bar => {
+                            setTimeout(() => {
+                                bar.classList.add('animated');
+                            }, 200);
+                        });
+
+                        // Animate SVG chart circles
+                        const chartCircles = entry.target.querySelectorAll('.chart-animate');
+                        chartCircles.forEach(circle => {
+                            const originalDash = circle.getAttribute('stroke-dasharray');
+                            circle.style.strokeDasharray = '0 1000';
+                            setTimeout(() => {
+                                circle.style.transition = 'stroke-dasharray 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                                circle.style.strokeDasharray = originalDash;
+                            }, 300);
+                        });
+
                         observer.unobserve(entry.target);
                     }
                 });
