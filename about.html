@@ -17,6 +17,7 @@
     <meta name="twitter:description" content="Empowering teenagers and honouring the elderly across Nigeria and the UK." />
     
     <link rel="canonical" href="https://phinehasgeneration.org/about.html" />
+    <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" type="image/png" />
     <title>About Us | PHINEHAS GENERATION FOUNDATION</title>
 
     <!-- Font Awesome -->
@@ -249,6 +250,24 @@
         @keyframes fadePulse {
             0%, 100% { opacity: 0.6; }
             50% { opacity: 1; }
+        }
+
+        /* ===== ADMIN LINK (Faint) ===== */
+        .admin-link {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            opacity: 0.08;
+            font-size: 0.6rem;
+            color: var(--gray);
+            z-index: 1;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        .admin-link:hover {
+            opacity: 0.3;
         }
 
         /* ===== BUTTONS ===== */
@@ -1120,6 +1139,25 @@
             font-family: 'Inter', system-ui, sans-serif;
         }
 
+        .cookie-banner .btn-accept {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        .cookie-banner .btn-accept:hover {
+            background: var(--gold-light);
+        }
+
+        .cookie-banner .btn-decline {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+        }
+
+        .cookie-banner .btn-decline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: var(--black);
@@ -1461,6 +1499,9 @@
     <!-- ===== SCROLL PROGRESS ===== -->
     <div id="scroll-progress" role="progressbar" aria-label="Scroll progress"></div>
 
+    <!-- ===== ADMIN LINK (Faint) ===== -->
+    <a href="admin.html" class="admin-link" aria-label="Admin Panel">⚙ admin</a>
+
     <!-- ===== MAIN CONTENT ===== -->
     <div id="main-content">
 
@@ -1480,7 +1521,6 @@
                     <a href="index.html" data-i18n="navHome">Home</a>
                     <a href="about.html" class="active" data-i18n="navAbout">About Us</a>
                     <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
-                    <a href="gallery.html" data-i18n="navGallery">Gallery</a>
                     <a href="blog.html" data-i18n="navBlog">Blog / News</a>
                     <a href="volunteer.html" data-i18n="navVolunteer">Volunteer</a>
                     <a href="contact.html" data-i18n="navContact">Contact Us</a>
@@ -1758,7 +1798,7 @@
                         <div class="founder-quote" data-i18n="founderQuote">
                             "Raising tomorrow's leaders while honouring yesterday's heroes."
                         </div>
-                        <a href="about.html#founder" class="btn btn-primary" data-i18n="founderBtn">Learn More About Our Founder <i class="fas fa-arrow-right"></i></a>
+                        <a href="founder.html" class="btn btn-primary" data-i18n="founderBtn">Learn More About Our Founder <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -1798,7 +1838,6 @@
                         <a href="index.html" data-i18n="footerHome">Home</a>
                         <a href="about.html" data-i18n="footerAbout">About Us</a>
                         <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
-                        <a href="gallery.html" data-i18n="footerGallery">Gallery</a>
                         <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
                         <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
                         <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
@@ -1838,8 +1877,8 @@
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
         <p data-i18n="cookieText">🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
         <div style="display:flex; gap:10px;">
-            <button class="btn-sm" style="background:var(--gold); color:white; border:none; padding:8px 20px; border-radius:9999px; font-weight:600; cursor:pointer;" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
-            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px; padding:8px 20px; cursor:pointer;" id="declineCookies" data-i18n="cookieDecline">Decline</button>
+            <button class="btn-sm btn-accept" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
+            <button class="btn-sm btn-decline" id="declineCookies" data-i18n="cookieDecline">Decline</button>
         </div>
     </div>
 
@@ -1875,19 +1914,15 @@
             // ===== TRANSLATIONS =====
             const translations = {
                 'en': {
-                    // Nav
                     navHome: 'Home',
                     navAbout: 'About Us',
                     navPrograms: 'Our Programs',
-                    navGallery: 'Gallery',
                     navBlog: 'Blog / News',
                     navVolunteer: 'Volunteer',
                     navContact: 'Contact Us',
                     navDonate: 'Donate Now',
-                    // Hero
                     heroTitle: 'About Us',
                     heroSub: 'A Journey of Compassion, Hope, and Generational Transformation',
-                    // Story
                     storyEyebrow: 'Our Story',
                     storyTitle: 'A Vision That Began with <span class="highlight">One Heart</span>',
                     storySub: 'And Grew into a Movement of Hope',
@@ -1908,7 +1943,6 @@
                     storyP10: 'Although our reach continues to grow, our purpose remains unchanged. Every program we organize, every community we visit, every volunteer we mobilize, and every life we touch reflects our unwavering commitment to building a society where no young person is left without guidance and no elderly person is forgotten.',
                     storyP11: '<strong>Our story is still being written.</strong> With every life transformed, every partnership formed, and every act of kindness shared, we move one step closer to realizing our vision of a world where compassion unites generations, hope overcomes hardship, and every individual has the opportunity to thrive.',
                     storyQuote: '"This is our history. This is our purpose. This is the legacy we are building—one life, one family, and one generation at a time."',
-                    // Stats
                     stat1: '2016',
                     stat1Label: 'Year Founded',
                     stat2: '1,000+',
@@ -1917,7 +1951,6 @@
                     stat3Label: 'Elderly People Served',
                     stat4: '2',
                     stat4Label: 'Countries Reached',
-                    // Timeline
                     timelineEyebrow: 'Our Journey',
                     timelineTitle: 'Key <span class="highlight">Milestones</span>',
                     timelineSub: 'The moments that shaped our mission',
@@ -1939,12 +1972,10 @@
                     tYear6: 'Present',
                     tTitle6: 'Continuing the Mission',
                     tDesc6: 'Empowering teenagers and restoring dignity to elderly people across Nigeria, the UK, and beyond.',
-                    // Mission & Vision
                     missionTitle: 'Our Mission',
                     missionText: 'To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.',
                     visionTitle: 'Our Vision',
                     visionText: 'To build a world where no child is neglected and no elderly person is abandoned.',
-                    // Values
                     valuesEyebrow: 'What Guides Us',
                     valuesTitle: 'Our <span class="highlight">Core Values</span>',
                     valuesSub: 'The principles that guide everything we do',
@@ -1964,7 +1995,6 @@
                     val7Desc: 'We create lasting impact by working with communities and partners.',
                     val8Title: 'Hope',
                     val8Desc: 'We inspire confidence for a brighter future, regardless of life\'s challenges.',
-                    // Founder
                     founderEyebrow: 'Our Leader',
                     founderTitle: 'Meet Our <span class="highlight">Founder</span>',
                     founderSub: 'A Vision Born from Compassion',
@@ -1975,18 +2005,15 @@
                     founderP2: 'A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.',
                     founderQuote: '"Raising tomorrow\'s leaders while honouring yesterday\'s heroes."',
                     founderBtn: 'Learn More About Our Founder <i class="fas fa-arrow-right"></i>',
-                    // CTA
                     ctaTitle: 'You Can Change a Life Today',
                     ctaText: 'Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.',
                     ctaBtn1: '<i class="fas fa-heart"></i> Donate Now',
                     ctaBtn2: '<i class="fas fa-hands-helping"></i> Become a Volunteer',
-                    // Footer
                     footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
                     footerQuick: 'Quick Links',
                     footerHome: 'Home',
                     footerAbout: 'About Us',
                     footerProgramsLink: 'Our Programs',
-                    footerGallery: 'Gallery',
                     footerBlog: 'Blog / News',
                     footerVolunteer: 'Volunteer',
                     footerContactLink: 'Contact Us',
@@ -2002,7 +2029,6 @@
                     footerNigeria: 'Nigeria Office, Lagos',
                     footerCopy: 'Registered Charity. All rights reserved.',
                     footerPrivacy: 'Privacy Policy',
-                    // Cookie
                     cookieText: '🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.',
                     cookieAccept: 'Accept',
                     cookieDecline: 'Decline'
@@ -2011,7 +2037,6 @@
                     navHome: 'Accueil',
                     navAbout: 'À propos',
                     navPrograms: 'Nos programmes',
-                    navGallery: 'Galerie',
                     navBlog: 'Blog / Actualités',
                     navVolunteer: 'Bénévolat',
                     navContact: 'Contact',
@@ -2109,7 +2134,6 @@
                     footerHome: 'Accueil',
                     footerAbout: 'À propos',
                     footerProgramsLink: 'Nos programmes',
-                    footerGallery: 'Galerie',
                     footerBlog: 'Blog / Actualités',
                     footerVolunteer: 'Bénévolat',
                     footerContactLink: 'Contact',
@@ -2133,11 +2157,10 @@
                     navHome: 'Startseite',
                     navAbout: 'Über uns',
                     navPrograms: 'Programme',
-                    navGallery: 'Galerie',
                     navBlog: 'Blog / News',
                     navVolunteer: 'Mithelfen',
                     navContact: 'Kontakt',
-                    navDonate: 'Jetzt spenden',
+                    navDonate: 'Spenden',
                     heroTitle: 'Über uns',
                     heroSub: 'Eine Reise der Barmherzigkeit, Hoffnung und generationenübergreifenden Transformation',
                     storyEyebrow: 'Unsere Geschichte',
@@ -2231,7 +2254,6 @@
                     footerHome: 'Startseite',
                     footerAbout: 'Über uns',
                     footerProgramsLink: 'Programme',
-                    footerGallery: 'Galerie',
                     footerBlog: 'Blog / News',
                     footerVolunteer: 'Mithelfen',
                     footerContactLink: 'Kontakt',
