@@ -1,53 +1,2087 @@
-<!-- Contact Page -->
-<section id="contact" class="py-16 bg-gray-50">
-  <!-- Navigation (reuse same for consistency) -->
-  <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-      <h1 class="text-2xl font-bold text-purple-700">Okewunmi Solomon Dynasty</h1>
-      <ul class="flex space-x-6 text-purple-700 font-semibold">
-        <li><a href="#home" class="hover:text-purple-900">Home</a></li>
-        <li><a href="#about" class="hover:text-purple-900">About</a></li>
-        <li><a href="#contact" class="hover:text-purple-900">Contact</a></li>
-      </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Contact PHINEHAS GENERATION FOUNDATION — We'd love to hear from you. Get in touch about volunteering, donations, partnerships, or support." />
+    <meta name="theme-color" content="#1a1a1a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | PHINEHAS GENERATION FOUNDATION" />
+    <meta property="og:description" content="Get in touch with PHINEHAS GENERATION FOUNDATION — we'd love to hear from you about volunteering, donations, or partnerships." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://phinehasgeneration.org/contact.html" />
+    <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us | PHINEHAS GENERATION FOUNDATION" />
+    <meta name="twitter:description" content="Get in touch with PHINEHAS GENERATION FOUNDATION." />
+
+    <link rel="canonical" href="https://phinehasgeneration.org/contact.html" />
+    <title>Contact Us | PHINEHAS GENERATION FOUNDATION</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #c8943e;
+            --gold-light: #d4a94e;
+            --gold-dark: #a67a2e;
+            --gold-pale: #fdf8f0;
+            --gold-gradient: linear-gradient(135deg, #c8943e, #dab86a);
+            --black: #1a1a1a;
+            --black-soft: #2a2a2a;
+            --green: #6b8f71;
+            --green-light: #8aab90;
+            --green-dark: #3d5a42;
+            --green-pale: #e8efe9;
+            --green-paler: #f4f7f4;
+            --white: #ffffff;
+            --white-soft: #fafaf9;
+            --gray-light: #e8e6e1;
+            --gray-border: #e0ddd8;
+            --gray: #9a9a9a;
+            --gray-dark: #5a5a5a;
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            border-radius: 0 0 var(--radius-sm) 0;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.18;
+            margin-bottom: 18px;
+            letter-spacing: -0.6px;
+            color: var(--black);
+        }
+
+        .section-title .highlight {
+            color: var(--gold);
+            position: relative;
+        }
+
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(200, 148, 62, 0.2);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== SKELETON LOADER ===== */
+        #skeleton-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease;
+        }
+        #skeleton-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .skeleton-logo {
+            width: 120px;
+            height: 120px;
+            animation: zoomPulse 1.8s ease-in-out infinite;
+            margin-bottom: 24px;
+        }
+        .skeleton-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @keyframes zoomPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        .skeleton-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 1px;
+            animation: fadePulse 2s ease-in-out infinite;
+        }
+        .skeleton-name span {
+            color: var(--gold-dark);
+        }
+        @keyframes fadePulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 36px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.2px;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(200, 148, 62, 0.3);
+        }
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(200, 148, 62, 0.4);
+        }
+
+        .btn-success {
+            background: #059669;
+            color: white;
+            box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3);
+        }
+        .btn-success:hover {
+            background: #047857;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(5, 150, 105, 0.4);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        .btn-outline-light:hover {
+            background: var(--white);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 14px 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 44px;
+            width: auto;
+        }
+        .logo .logo-gold {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--black-soft);
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+            border-radius: 1px;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            color: var(--gold-dark);
+        }
+
+        .nav-donate-btn {
+            background: var(--gold);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .nav-donate-btn::after {
+            display: none !important;
+        }
+        .nav-donate-btn:hover {
+            background: var(--gold-light);
+            color: var(--white) !important;
+            transform: scale(1.03);
+        }
+
+        /* Language Toggle */
+        .lang-wrapper {
+            position: relative;
+        }
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1.5px solid var(--gray-light);
+            border-radius: var(--radius-full);
+            padding: 6px 14px 6px 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--black-soft);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .lang-toggle:hover {
+            border-color: var(--gold);
+        }
+        .lang-toggle i {
+            font-size: 0.85rem;
+            color: var(--gold);
+        }
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 46px;
+            right: 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 8px 0;
+            min-width: 180px;
+            border: 1px solid var(--gray-light);
+            z-index: 1100;
+        }
+        .lang-dropdown.open {
+            display: block;
+        }
+        .lang-dropdown li {
+            padding: 10px 22px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.88rem;
+            color: var(--black-soft);
+        }
+        .lang-dropdown li:hover {
+            background: var(--green-pale);
+            color: var(--black);
+        }
+        .lang-dropdown li.active-lang {
+            background: var(--gold);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--black);
+            background: none;
+            border: none;
+            padding: 6px;
+        }
+
+        /* ===== SCROLL PROGRESS ===== */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            padding: 160px 0 90px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.35) 100%);
+        }
+        .page-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        .page-hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .page-hero h1 .highlight-gold {
+            color: var(--gold-light);
+        }
+        .page-hero .hero-sub {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin-top: 16px;
+            line-height: 1.8;
+        }
+        .page-hero .breadcrumb {
+            display: flex;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        .page-hero .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        .page-hero .breadcrumb a:hover {
+            color: var(--gold-light);
+        }
+        .page-hero .breadcrumb .current {
+            color: var(--gold-light);
+        }
+
+        /* ===== CONTACT INFO ===== */
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .contact-info-card {
+            background: white;
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            border: 1px solid var(--gray-light);
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-bottom-color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .contact-info-card .icon {
+            font-size: 2.4rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .contact-info-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .contact-info-card p {
+            color: var(--gray-dark);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .contact-info-card a {
+            color: var(--gold);
+            transition: var(--transition);
+        }
+        .contact-info-card a:hover {
+            color: var(--gold-dark);
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form-section {
+            background: var(--green-paler);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 24px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            color: var(--black);
+        }
+
+        .contact-form label .required {
+            color: #dc2626;
+            margin-left: 2px;
+        }
+
+        .contact-form label .character-count {
+            font-weight: 400;
+            font-size: 0.78rem;
+            color: var(--gray);
+            float: right;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid var(--gray-border);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(200, 148, 62, 0.12);
+        }
+
+        .contact-form input.error,
+        .contact-form select.error,
+        .contact-form textarea.error {
+            border-color: #dc2626;
+        }
+
+        .contact-form .error-message {
+            color: #dc2626;
+            font-size: 0.8rem;
+            margin-top: 4px;
+            display: none;
+        }
+        .contact-form .error-message.show {
+            display: block;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-form .form-submit {
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        /* ===== FORM SUCCESS ===== */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: var(--green-paler);
+            border-radius: var(--radius);
+            border: 2px solid var(--green-light);
+        }
+        .form-success.show {
+            display: block;
+        }
+        .form-success .icon {
+            font-size: 4rem;
+            color: var(--green);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .form-success h3 {
+            font-size: 1.6rem;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .form-success p {
+            color: var(--gray-dark);
+            font-size: 1.05rem;
+        }
+
+        /* ===== CONTACT SIDEBAR ===== */
+        .contact-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-sidebar .info-box {
+            background: white;
+            padding: 28px 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .contact-sidebar .info-box:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .contact-sidebar .info-box h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-bottom: 12px;
+        }
+
+        .contact-sidebar .info-box h4 i {
+            margin-right: 8px;
+            color: var(--gold);
+        }
+
+        .contact-sidebar .info-box p {
+            color: var(--gray-dark);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .contact-sidebar .info-box .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .contact-sidebar .info-box .social-links a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            color: var(--black-soft);
+        }
+
+        .contact-sidebar .info-box .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-sidebar .info-box .social-links a.facebook:hover { background: #1877f2; color: white; }
+        .contact-sidebar .info-box .social-links a.instagram:hover { background: #e4405f; color: white; }
+        .contact-sidebar .info-box .social-links a.linkedin:hover { background: #0a66c2; color: white; }
+        .contact-sidebar .info-box .social-links a.youtube:hover { background: #ff0000; color: white; }
+        .contact-sidebar .info-box .social-links a.whatsapp:hover { background: #25d366; color: white; }
+        .contact-sidebar .info-box .social-links a.x-twitter:hover { background: #000000; color: white; }
+
+        .contact-sidebar .info-box .quick-link {
+            display: block;
+            padding: 8px 0;
+            color: var(--gold-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            border-bottom: 1px solid var(--gray-light);
+        }
+        .contact-sidebar .info-box .quick-link:last-child {
+            border-bottom: none;
+        }
+        .contact-sidebar .info-box .quick-link:hover {
+            color: var(--gold);
+            padding-left: 8px;
+        }
+
+        /* ===== MAP ===== */
+        .map-section {
+            padding: 0 0 80px;
+        }
+
+        .map-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(160deg, var(--black) 0%, var(--black-soft) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: rgba(200, 148, 62, 0.06);
+            border-radius: 50%;
+        }
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 250px;
+            height: 250px;
+            background: rgba(107, 143, 113, 0.08);
+            border-radius: 50%;
+        }
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        .cta-section h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 560px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        #back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(16px);
+            z-index: 900;
+        }
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        #back-to-top:hover {
+            background: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 88px;
+            right: 28px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #25d366;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+            z-index: 899;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+        }
+
+        /* ===== COOKIE BANNER ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            color: var(--white);
+            padding: 14px 24px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            z-index: 999;
+            font-size: 0.85rem;
+        }
+        .cookie-banner.show {
+            display: flex;
+        }
+        .cookie-banner p {
+            opacity: 0.7;
+            max-width: 65%;
+            line-height: 1.5;
+        }
+        .cookie-banner a {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+        .cookie-banner .btn-sm {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png');
+            background-size: 300px auto;
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            opacity: 0.04;
+            z-index: 0;
+        }
+        .footer .container {
+            position: relative;
+            z-index: 1;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand .logo {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .footer-brand .logo .logo-gold {
+            color: var(--gold-light);
+        }
+        .footer-brand p {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            max-width: 280px;
+            line-height: 1.7;
+        }
+        .footer h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .footer-links a {
+            display: block;
+            opacity: 0.6;
+            font-size: 0.88rem;
+            transition: var(--transition);
+            margin-bottom: 8px;
+        }
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold-light);
+        }
+        .footer-links a i {
+            width: 18px;
+            margin-right: 4px;
+            font-size: 0.75rem;
+            color: var(--gold-light);
+        }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+        .footer-social a:hover {
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        .footer-bottom a {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-children>* {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .stagger-children.visible>*:nth-child(1) { transition-delay: 0.05s; }
+        .stagger-children.visible>*:nth-child(2) { transition-delay: 0.1s; }
+        .stagger-children.visible>*:nth-child(3) { transition-delay: 0.15s; }
+        .stagger-children.visible>*:nth-child(4) { transition-delay: 0.2s; }
+        .stagger-children.visible>* {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #main-content {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+        #main-content.visible {
+            opacity: 1;
+        }
+
+        /* ===== FORM LOADING ===== */
+        .btn-loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        .btn-loading .btn-text {
+            visibility: hidden;
+        }
+        .btn-loading::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .contact-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .page-hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 18px 0 10px;
+                gap: 12px;
+                border-top: 1px solid var(--gray-light);
+                margin-top: 12px;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+
+            .page-hero h1 {
+                font-size: 2.4rem;
+            }
+            .page-hero {
+                min-height: 40vh;
+                padding: 140px 0 60px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .contact-info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-form {
+                padding: 28px 20px;
+            }
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .footer-social {
+                justify-content: center;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .map-container {
+                height: 280px;
+            }
+            .whatsapp-float {
+                bottom: 80px;
+                right: 14px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.4rem;
+            }
+            #back-to-top {
+                bottom: 14px;
+                right: 14px;
+                width: 40px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+            .cookie-banner p {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.85rem;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .section-padding {
+                padding: 50px 0;
+            }
+            .logo {
+                font-size: 1rem;
+            }
+            .logo img {
+                height: 34px;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form {
+                padding: 20px 16px;
+            }
+            .contact-sidebar .info-box {
+                padding: 20px 18px;
+            }
+            .form-success {
+                padding: 30px 20px;
+            }
+            .form-success h3 {
+                font-size: 1.3rem;
+            }
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== SKIP TO CONTENT ===== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== SKELETON LOADER ===== -->
+    <div id="skeleton-loader" aria-hidden="true">
+        <div class="skeleton-logo">
+            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION" />
+        </div>
+        <div class="skeleton-name">PHINEHAS <span>GENERATION</span></div>
     </div>
-  </nav>
 
-  <!-- Contact Info Card -->
-  <div class="max-w-5xl mx-auto mt-24 p-8 bg-white rounded-2xl shadow-lg">
-    <h2 class="text-3xl font-bold text-center text-purple-700 mb-6">Contact Us</h2>
-    <p class="text-gray-700 text-lg mb-4">
-      <strong>Address:</strong> 3 Adaranijo Close, Ipokia Street off Agoro Road, Owode Otta, Ogun State, Nigeria
-    </p>
-    <p class="text-gray-700 text-lg mb-4"><strong>Phone:</strong> 09056658964</p>
-    <p class="text-gray-700 text-lg mb-4"><strong>Email:</strong> triangleofscholartimi@gmail.com</p>
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div id="scroll-progress" role="progressbar" aria-label="Scroll progress"></div>
 
-    <!-- Social Links -->
-    <div class="flex space-x-6 justify-center my-6">
-      <a href="https://www.facebook.com/YOUR_FACEBOOK_LINK" target="_blank" class="text-blue-600 font-bold hover:underline">Facebook</a>
-      <a href="https://www.youtube.com/YOUR_YOUTUBE_LINK" target="_blank" class="text-red-600 font-bold hover:underline">YouTube</a>
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="main-content">
+
+        <!-- ===== HEADER ===== -->
+        <header id="header" role="banner">
+            <div class="container nav-container">
+                <a href="index.html" class="logo" aria-label="PHINEHAS GENERATION FOUNDATION Home">
+                    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION FOUNDATION Logo" width="44" height="44" />
+                    PHINEHAS <span class="logo-gold">GENERATION</span>
+                </a>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" data-i18n="navHome">Home</a>
+                    <a href="about.html" data-i18n="navAbout">About Us</a>
+                    <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
+                    <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+                    <a href="blog.html" data-i18n="navBlog">Blog / News</a>
+                    <a href="volunteer.html" data-i18n="navVolunteer">Volunteer</a>
+                    <a href="contact.html" class="active" data-i18n="navContact">Contact Us</a>
+                    <a href="donate.html" class="nav-donate-btn" data-i18n="navDonate"><i class="fas fa-heart"></i> Donate Now</a>
+
+                    <div class="lang-wrapper">
+                        <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+                            <i class="fas fa-globe"></i> <span id="currentLangLabel">EN</span> <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i>
+                        </button>
+                        <ul class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Language options">
+                            <li role="option" data-lang="en" class="active-lang" aria-selected="true">🇬🇧 English</li>
+                            <li role="option" data-lang="fr" aria-selected="false">🇫🇷 Français</li>
+                            <li role="option" data-lang="de" aria-selected="false">🇩🇪 Deutsch</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg');" aria-label="Contact hero image">
+            <div class="container">
+                <h1 data-i18n="heroTitle">Contact <span class="highlight-gold">Us</span></h1>
+                <p class="hero-sub" data-i18n="heroSub">We'd love to hear from you. Whether you have a question, want to partner with us, or need support — reach out.</p>
+                <div class="breadcrumb">
+                    <a href="index.html" data-i18n="navHome">Home</a>
+                    <span>/</span>
+                    <span class="current" data-i18n="navContact">Contact Us</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT INFO ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="infoEyebrow">Get In Touch</span>
+                <h2 class="section-title text-center" data-i18n="infoTitle">Get In <span class="highlight">Touch</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 20px;" data-i18n="infoSub">We're here to answer your questions and connect with you</p>
+
+                <div class="contact-info-grid stagger-children">
+                    <div class="contact-info-card">
+                        <span class="icon"><i class="fas fa-phone-alt"></i></span>
+                        <h4 data-i18n="phone">Phone</h4>
+                        <p><a href="tel:+2348161370219">+234 816 137 0219</a></p>
+                        <p style="font-size:0.8rem; color:var(--gray);" data-i18n="phoneHours">Mon–Fri, 9am–5pm WAT</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <span class="icon"><i class="fas fa-envelope"></i></span>
+                        <h4 data-i18n="email">Email</h4>
+                        <p><a href="mailto:info@phinehasgeneration.org">info@phinehasgeneration.org</a></p>
+                        <p style="font-size:0.8rem; color:var(--gray);" data-i18n="emailHours">We reply within 24–48 hours</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <h4 data-i18n="nigeria">Nigeria Office</h4>
+                        <p data-i18n="nigeriaAddress">Abeokuta, Ogun State<br />Lagos, Nigeria</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <span class="icon"><i class="fas fa-globe-europe"></i></span>
+                        <h4 data-i18n="uk">UK Office</h4>
+                        <p data-i18n="ukAddress">United Kingdom</p>
+                        <p style="font-size:0.8rem; color:var(--gray);" data-i18n="ukTag">International partnerships</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT FORM & SIDEBAR ===== -->
+        <section class="contact-form-section section-padding" id="contactFormSection">
+            <div class="container">
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="formEyebrow">Send a Message</span>
+                <h2 class="section-title text-center" data-i18n="formTitle">Send Us a <span class="highlight">Message</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 40px;" data-i18n="formSub">Fill in the form below and we'll get back to you as soon as possible</p>
+
+                <div class="contact-wrapper">
+                    <!-- Form -->
+                    <div class="contact-form" id="contactForm">
+                        <form id="contactFormSubmit" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName" data-i18n="formName">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                                    <div class="error-message" data-i18n="formErrorName">Please enter your full name</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" data-i18n="formEmail">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <div class="error-message" data-i18n="formErrorEmail">Please enter a valid email address</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-i18n="formPhone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" data-i18n="formSubject">Subject <span class="required">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" data-i18n="subjectSelect">Select a subject</option>
+                                    <option value="General Inquiry" data-i18n="subject1">General Inquiry</option>
+                                    <option value="Partnership" data-i18n="subject2">Partnership</option>
+                                    <option value="Volunteering" data-i18n="subject3">Volunteering</option>
+                                    <option value="Donation" data-i18n="subject4">Donation</option>
+                                    <option value="Program Support" data-i18n="subject5">Program Support</option>
+                                    <option value="Media & Press" data-i18n="subject6">Media & Press</option>
+                                    <option value="Prayer Request" data-i18n="subject7">Prayer Request</option>
+                                    <option value="Other" data-i18n="subject8">Other</option>
+                                </select>
+                                <div class="error-message" data-i18n="formErrorSubject">Please select a subject</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" data-i18n="formMessage">Your Message <span class="required">*</span>
+                                    <span class="character-count"><span id="messageCount">0</span>/1000</span>
+                                </label>
+                                <textarea id="message" name="message" placeholder="Tell us how we can help you..." required maxlength="1000"></textarea>
+                                <div class="error-message" data-i18n="formErrorMessage">Please enter your message</div>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-success" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i> <span class="btn-text" data-i18n="sendBtn">Send Message</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div class="form-success" id="formSuccess">
+                            <span class="icon"><i class="fas fa-check-circle"></i></span>
+                            <h3 data-i18n="successTitle">Message Sent!</h3>
+                            <p data-i18n="successText">Thank you for reaching out to PHINEHAS GENERATION FOUNDATION. We'll get back to you within 24–48 hours.</p>
+                            <br>
+                            <a href="contact.html" class="btn btn-primary" data-i18n="successBtn">Send Another Message</a>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="contact-sidebar">
+                        <div class="info-box fade-up">
+                            <h4><i class="fas fa-heart"></i> <span data-i18n="connectTitle">Connect With Us</span></h4>
+                            <p data-i18n="connectText">Follow us on social media to stay updated on our programs, outreach events, and impact stories.</p>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/balogun.oluwatosin.9" class="facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" class="instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="#" class="x-twitter" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+                                <a href="https://wa.me/2348161370219" class="whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="info-box fade-up">
+                            <h4><i class="fas fa-clock"></i> <span data-i18n="hoursTitle">Office Hours</span></h4>
+                            <p><strong data-i18n="hoursNigeria">Nigeria:</strong><br><span data-i18n="hoursNigeriaTime">Monday–Friday: 9:00am – 5:00pm (WAT)</span></p>
+                            <p style="margin-top:8px;"><strong data-i18n="hoursUK">UK:</strong><br><span data-i18n="hoursUKTime">Monday–Friday: 9:00am – 5:00pm (GMT)</span></p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:var(--gray);" data-i18n="hoursResponse">We respond to emails within 24–48 hours.</p>
+                        </div>
+
+                        <div class="info-box fade-up">
+                            <h4><i class="fas fa-link"></i> <span data-i18n="quickTitle">Quick Links</span></h4>
+                            <a href="volunteer.html" class="quick-link" data-i18n="quick1"><i class="fas fa-arrow-right" style="color:var(--gold);"></i> Become a Volunteer</a>
+                            <a href="donate.html" class="quick-link" data-i18n="quick2"><i class="fas fa-arrow-right" style="color:var(--gold);"></i> Make a Donation</a>
+                            <a href="programs.html" class="quick-link" data-i18n="quick3"><i class="fas fa-arrow-right" style="color:var(--gold);"></i> View Our Programs</a>
+                            <a href="about.html" class="quick-link" data-i18n="quick4"><i class="fas fa-arrow-right" style="color:var(--gold);"></i> Learn About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MAP ===== -->
+        <section class="map-section">
+            <div class="container">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.4374638959!2d3.211727228739348!3d6.548186252067585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367d3b4e!2sAbeokuta%2C%20Ogun%20State%2C%20Nigeria!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing PHINEHAS GENERATION FOUNDATION location in Abeokuta, Nigeria"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 data-i18n="ctaTitle">Want to Make a Difference?</h2>
+                <p data-i18n="ctaText">Whether you want to volunteer, donate, partner with us, or simply learn more — we'd love to connect with you.</p>
+                <div class="cta-buttons">
+                    <a href="volunteer.html" class="btn btn-primary" data-i18n="ctaBtn1"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+                    <a href="donate.html" class="btn btn-outline-light" data-i18n="ctaBtn2"><i class="fas fa-heart"></i> Donate Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo" style="color:var(--white);">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" style="height:40px;" width="40" height="40" loading="lazy" />
+                            PHINEHAS <span class="logo-gold">GENERATION</span>
+                        </a>
+                        <p data-i18n="footerTag">Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerQuick">Quick Links</h4>
+                        <a href="index.html" data-i18n="footerHome">Home</a>
+                        <a href="about.html" data-i18n="footerAbout">About Us</a>
+                        <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
+                        <a href="gallery.html" data-i18n="footerGallery">Gallery</a>
+                        <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
+                        <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
+                        <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
+                        <a href="donate.html" data-i18n="footerDonate">Donate</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerPrograms">Programs</h4>
+                        <a href="programs.html" data-i18n="footerProg1">Youth Development</a>
+                        <a href="programs.html" data-i18n="footerProg2">Elderly Care</a>
+                        <a href="programs.html" data-i18n="footerProg3">Medical Outreach</a>
+                        <a href="programs.html" data-i18n="footerProg4">Community Development</a>
+                        <a href="programs.html" data-i18n="footerProg5">Leadership Training</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerContact">Contact</h4>
+                        <a href="tel:+2348161370219"><i class="fas fa-phone"></i> +234 816 137 0219</a>
+                        <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerUK">UK Office, London</span></a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerNigeria">Nigeria Office, Lagos</span></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="currentYear">2026</span> <strong>PHINEHAS GENERATION FOUNDATION</strong> — <span data-i18n="footerCopy">Registered Charity. All rights reserved.</span> | <a href="#" data-i18n="footerPrivacy">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
-    <!-- Google Map -->
-    <div class="w-full h-64 mb-6">
-      <iframe 
-        src="https://www.google.com/maps?q=3+Adaranijo+Close+Ipokia+Street+off+Agoro+Road+Owode+Otta+Ogun+State+Nigeria&output=embed"
-        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+        <p data-i18n="cookieText">🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
+        <div style="display:flex; gap:10px;">
+            <button class="btn-sm" style="background:var(--gold); color:white; border:none; padding:8px 20px; border-radius:9999px; font-weight:600; cursor:pointer;" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
+            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px; padding:8px 20px; cursor:pointer;" id="declineCookies" data-i18n="cookieDecline">Decline</button>
+        </div>
     </div>
 
-    <!-- Google Form -->
-    <div class="w-full">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeN1kMPPgv2iPpUVwLFEwgaz2ByBReTDfZK72zkHqggERIJkQ/viewform?embedded=true" 
-        width="100%" height="717" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-  </div>
-</section>
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Us | PHINEHAS GENERATION FOUNDATION",
+        "description": "Get in touch with PHINEHAS GENERATION FOUNDATION — we'd love to hear from you about volunteering, donations, or partnerships.",
+        "url": "https://phinehasgeneration.org/contact.html",
+        "isPartOf": {
+            "@type": "Organization",
+            "name": "PHINEHAS GENERATION FOUNDATION",
+            "foundingDate": "2016",
+            "areaServed": ["Nigeria", "United Kingdom"],
+            "email": "info@phinehasgeneration.org",
+            "telephone": "+2348161370219"
+        }
+    }
+    </script>
 
-<!-- Responsive adjustments -->
-<style>
-  body { font-family: 'Georgia', serif; background-color: #f7f7f7; }
-  @media (max-width: 768px) {
-    nav ul { flex-direction: column; gap: 4px; }
-    .max-w-5xl { padding: 4px; }
-  }
-</style>
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== DYNAMIC COPYRIGHT YEAR =====
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // ===== TRANSLATIONS =====
+            const translations = {
+                'en': {
+                    // Nav
+                    navHome: 'Home',
+                    navAbout: 'About Us',
+                    navPrograms: 'Our Programs',
+                    navGallery: 'Gallery',
+                    navBlog: 'Blog / News',
+                    navVolunteer: 'Volunteer',
+                    navContact: 'Contact Us',
+                    navDonate: 'Donate Now',
+                    // Hero
+                    heroTitle: 'Contact Us',
+                    heroSub: 'We\'d love to hear from you. Whether you have a question, want to partner with us, or need support — reach out.',
+                    // Info
+                    infoEyebrow: 'Get In Touch',
+                    infoTitle: 'Get In <span class="highlight">Touch</span>',
+                    infoSub: 'We\'re here to answer your questions and connect with you',
+                    phone: 'Phone',
+                    phoneHours: 'Mon–Fri, 9am–5pm WAT',
+                    email: 'Email',
+                    emailHours: 'We reply within 24–48 hours',
+                    nigeria: 'Nigeria Office',
+                    nigeriaAddress: 'Abeokuta, Ogun State<br />Lagos, Nigeria',
+                    uk: 'UK Office',
+                    ukAddress: 'United Kingdom',
+                    ukTag: 'International partnerships',
+                    // Form
+                    formEyebrow: 'Send a Message',
+                    formTitle: 'Send Us a <span class="highlight">Message</span>',
+                    formSub: 'Fill in the form below and we\'ll get back to you as soon as possible',
+                    formName: 'Full Name',
+                    formEmail: 'Email Address',
+                    formPhone: 'Phone Number',
+                    formSubject: 'Subject',
+                    subjectSelect: 'Select a subject',
+                    subject1: 'General Inquiry',
+                    subject2: 'Partnership',
+                    subject3: 'Volunteering',
+                    subject4: 'Donation',
+                    subject5: 'Program Support',
+                    subject6: 'Media & Press',
+                    subject7: 'Prayer Request',
+                    subject8: 'Other',
+                    formMessage: 'Your Message',
+                    sendBtn: 'Send Message',
+                    formErrorName: 'Please enter your full name',
+                    formErrorEmail: 'Please enter a valid email address',
+                    formErrorSubject: 'Please select a subject',
+                    formErrorMessage: 'Please enter your message',
+                    // Success
+                    successTitle: 'Message Sent!',
+                    successText: 'Thank you for reaching out to PHINEHAS GENERATION FOUNDATION. We\'ll get back to you within 24–48 hours.',
+                    successBtn: 'Send Another Message',
+                    // Sidebar
+                    connectTitle: 'Connect With Us',
+                    connectText: 'Follow us on social media to stay updated on our programs, outreach events, and impact stories.',
+                    hoursTitle: 'Office Hours',
+                    hoursNigeria: 'Nigeria:',
+                    hoursNigeriaTime: 'Monday–Friday: 9:00am – 5:00pm (WAT)',
+                    hoursUK: 'UK:',
+                    hoursUKTime: 'Monday–Friday: 9:00am – 5:00pm (GMT)',
+                    hoursResponse: 'We respond to emails within 24–48 hours.',
+                    quickTitle: 'Quick Links',
+                    quick1: 'Become a Volunteer',
+                    quick2: 'Make a Donation',
+                    quick3: 'View Our Programs',
+                    quick4: 'Learn About Us',
+                    // CTA
+                    ctaTitle: 'Want to Make a Difference?',
+                    ctaText: 'Whether you want to volunteer, donate, partner with us, or simply learn more — we\'d love to connect with you.',
+                    ctaBtn1: '<i class="fas fa-hands-helping"></i> Become a Volunteer',
+                    ctaBtn2: '<i class="fas fa-heart"></i> Donate Now',
+                    // Footer
+                    footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
+                    footerQuick: 'Quick Links',
+                    footerHome: 'Home',
+                    footerAbout: 'About Us',
+                    footerProgramsLink: 'Our Programs',
+                    footerGallery: 'Gallery',
+                    footerBlog: 'Blog / News',
+                    footerVolunteer: 'Volunteer',
+                    footerContactLink: 'Contact Us',
+                    footerDonate: 'Donate',
+                    footerPrograms: 'Programs',
+                    footerProg1: 'Youth Development',
+                    footerProg2: 'Elderly Care',
+                    footerProg3: 'Medical Outreach',
+                    footerProg4: 'Community Development',
+                    footerProg5: 'Leadership Training',
+                    footerContact: 'Contact',
+                    footerUK: 'UK Office, London',
+                    footerNigeria: 'Nigeria Office, Lagos',
+                    footerCopy: 'Registered Charity. All rights reserved.',
+                    footerPrivacy: 'Privacy Policy',
+                    // Cookie
+                    cookieText: '🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.',
+                    cookieAccept: 'Accept',
+                    cookieDecline: 'Decline'
+                },
+                'fr': {
+                    navHome: 'Accueil',
+                    navAbout: 'À propos',
+                    navPrograms: 'Nos programmes',
+                    navGallery: 'Galerie',
+                    navBlog: 'Blog / Actualités',
+                    navVolunteer: 'Bénévolat',
+                    navContact: 'Contact',
+                    navDonate: 'Faire un don',
+                    heroTitle: 'Contactez-nous',
+                    heroSub: 'Nous serions ravis de vous entendre. Que vous ayez une question, que vous souhaitiez vous associer à nous ou que vous ayez besoin de soutien — contactez-nous.',
+                    infoEyebrow: 'Entrez en contact',
+                    infoTitle: 'Entrez en <span class="highlight">contact</span>',
+                    infoSub: 'Nous sommes là pour répondre à vos questions et vous connecter',
+                    phone: 'Téléphone',
+                    phoneHours: 'Lun–Ven, 9h–17h WAT',
+                    email: 'E-mail',
+                    emailHours: 'Nous répondons sous 24–48 heures',
+                    nigeria: 'Bureau Nigéria',
+                    nigeriaAddress: 'Abeokuta, État d\'Ogun<br />Lagos, Nigéria',
+                    uk: 'Bureau Royaume-Uni',
+                    ukAddress: 'Royaume-Uni',
+                    ukTag: 'Partenariats internationaux',
+                    formEyebrow: 'Envoyer un message',
+                    formTitle: 'Envoyez-nous un <span class="highlight">message</span>',
+                    formSub: 'Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais',
+                    formName: 'Nom complet',
+                    formEmail: 'Adresse e-mail',
+                    formPhone: 'Numéro de téléphone',
+                    formSubject: 'Sujet',
+                    subjectSelect: 'Sélectionnez un sujet',
+                    subject1: 'Demande générale',
+                    subject2: 'Partenariat',
+                    subject3: 'Bénévolat',
+                    subject4: 'Don',
+                    subject5: 'Soutien aux programmes',
+                    subject6: 'Médias & Presse',
+                    subject7: 'Demande de prière',
+                    subject8: 'Autre',
+                    formMessage: 'Votre message',
+                    sendBtn: 'Envoyer le message',
+                    formErrorName: 'Veuillez entrer votre nom complet',
+                    formErrorEmail: 'Veuillez entrer une adresse e-mail valide',
+                    formErrorSubject: 'Veuillez sélectionner un sujet',
+                    formErrorMessage: 'Veuillez entrer votre message',
+                    successTitle: 'Message envoyé !',
+                    successText: 'Merci d\'avoir contacté PHINEHAS GENERATION FOUNDATION. Nous vous répondrons sous 24–48 heures.',
+                    successBtn: 'Envoyer un autre message',
+                    connectTitle: 'Connectez-vous avec nous',
+                    connectText: 'Suivez-nous sur les réseaux sociaux pour rester informé de nos programmes, événements et histoires d\'impact.',
+                    hoursTitle: 'Heures d\'ouverture',
+                    hoursNigeria: 'Nigéria :',
+                    hoursNigeriaTime: 'Lundi–Vendredi : 9h00 – 17h00 (WAT)',
+                    hoursUK: 'Royaume-Uni :',
+                    hoursUKTime: 'Lundi–Vendredi : 9h00 – 17h00 (GMT)',
+                    hoursResponse: 'Nous répondons aux e-mails sous 24–48 heures.',
+                    quickTitle: 'Liens rapides',
+                    quick1: 'Devenir bénévole',
+                    quick2: 'Faire un don',
+                    quick3: 'Voir nos programmes',
+                    quick4: 'En savoir plus sur nous',
+                    ctaTitle: 'Vous voulez faire la différence ?',
+                    ctaText: 'Que vous souhaitiez faire du bénévolat, faire un don, vous associer à nous ou simplement en savoir plus — nous serions ravis de vous connecter.',
+                    ctaBtn1: '<i class="fas fa-hands-helping"></i> Devenir bénévole',
+                    ctaBtn2: '<i class="fas fa-heart"></i> Faire un don',
+                    footerTag: 'Autonomiser les adolescents. Honorer les personnes âgées. Bâtir des communautés meilleures.',
+                    footerQuick: 'Liens rapides',
+                    footerHome: 'Accueil',
+                    footerAbout: 'À propos',
+                    footerProgramsLink: 'Nos programmes',
+                    footerGallery: 'Galerie',
+                    footerBlog: 'Blog / Actualités',
+                    footerVolunteer: 'Bénévolat',
+                    footerContactLink: 'Contact',
+                    footerDonate: 'Faire un don',
+                    footerPrograms: 'Programmes',
+                    footerProg1: 'Développement des jeunes',
+                    footerProg2: 'Soins aux personnes âgées',
+                    footerProg3: 'Actions médicales',
+                    footerProg4: 'Développement communautaire',
+                    footerProg5: 'Formation au leadership',
+                    footerContact: 'Contact',
+                    footerUK: 'Bureau UK, Londres',
+                    footerNigeria: 'Bureau Nigeria, Lagos',
+                    footerCopy: 'Organisme de bienfaisance enregistré. Tous droits réservés.',
+                    footerPrivacy: 'Politique de confidentialité',
+                    cookieText: '🍪 Nous utilisons des cookies pour améliorer votre expérience. En utilisant notre site, vous acceptez notre <a href="#">politique de cookies</a>.',
+                    cookieAccept: 'Accepter',
+                    cookieDecline: 'Refuser'
+                },
+                'de': {
+                    navHome: 'Startseite',
+                    navAbout: 'Über uns',
+                    navPrograms: 'Programme',
+                    navGallery: 'Galerie',
+                    navBlog: 'Blog / News',
+                    navVolunteer: 'Mithelfen',
+                    navContact: 'Kontakt',
+                    navDonate: 'Jetzt spenden',
+                    heroTitle: 'Kontaktieren Sie uns',
+                    heroSub: 'Wir freuen uns von Ihnen zu hören. Ob Sie eine Frage haben, mit uns zusammenarbeiten möchten oder Unterstützung benötigen — kontaktieren Sie uns.',
+                    infoEyebrow: 'Nehmen Sie Kontakt auf',
+                    infoTitle: 'Nehmen Sie <span class="highlight">Kontakt</span> auf',
+                    infoSub: 'Wir sind hier, um Ihre Fragen zu beantworten und mit Ihnen in Verbindung zu treten',
+                    phone: 'Telefon',
+                    phoneHours: 'Mo–Fr, 9–17 Uhr WAT',
+                    email: 'E-Mail',
+                    emailHours: 'Wir antworten innerhalb von 24–48 Stunden',
+                    nigeria: 'Büro Nigeria',
+                    nigeriaAddress: 'Abeokuta, Bundesstaat Ogun<br />Lagos, Nigeria',
+                    uk: 'Büro Großbritannien',
+                    ukAddress: 'Vereinigtes Königreich',
+                    ukTag: 'Internationale Partnerschaften',
+                    formEyebrow: 'Nachricht senden',
+                    formTitle: 'Senden Sie uns eine <span class="highlight">Nachricht</span>',
+                    formSub: 'Füllen Sie das untenstehende Formular aus und wir melden uns so schnell wie möglich bei Ihnen',
+                    formName: 'Vollständiger Name',
+                    formEmail: 'E-Mail-Adresse',
+                    formPhone: 'Telefonnummer',
+                    formSubject: 'Betreff',
+                    subjectSelect: 'Wählen Sie einen Betreff',
+                    subject1: 'Allgemeine Anfrage',
+                    subject2: 'Partnerschaft',
+                    subject3: 'Ehrenamt',
+                    subject4: 'Spende',
+                    subject5: 'Programm-Unterstützung',
+                    subject6: 'Medien & Presse',
+                    subject7: 'Gebetsanfrage',
+                    subject8: 'Sonstiges',
+                    formMessage: 'Ihre Nachricht',
+                    sendBtn: 'Nachricht senden',
+                    formErrorName: 'Bitte geben Sie Ihren vollständigen Namen ein',
+                    formErrorEmail: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+                    formErrorSubject: 'Bitte wählen Sie einen Betreff',
+                    formErrorMessage: 'Bitte geben Sie Ihre Nachricht ein',
+                    successTitle: 'Nachricht gesendet!',
+                    successText: 'Vielen Dank, dass Sie sich an PHINEHAS GENERATION FOUNDATION gewandt haben. Wir werden uns innerhalb von 24–48 Stunden bei Ihnen melden.',
+                    successBtn: 'Eine weitere Nachricht senden',
+                    connectTitle: 'Verbinden Sie sich mit uns',
+                    connectText: 'Folgen Sie uns in den sozialen Medien, um über unsere Programme, Veranstaltungen und Wirkungsgeschichten auf dem Laufenden zu bleiben.',
+                    hoursTitle: 'Bürozeiten',
+                    hoursNigeria: 'Nigeria:',
+                    hoursNigeriaTime: 'Montag–Freitag: 9:00 – 17:00 Uhr (WAT)',
+                    hoursUK: 'Großbritannien:',
+                    hoursUKTime: 'Montag–Freitag: 9:00 – 17:00 Uhr (GMT)',
+                    hoursResponse: 'Wir antworten auf E-Mails innerhalb von 24–48 Stunden.',
+                    quickTitle: 'Schnelllinks',
+                    quick1: 'Freiwilliger werden',
+                    quick2: 'Spenden',
+                    quick3: 'Unsere Programme ansehen',
+                    quick4: 'Mehr über uns erfahren',
+                    ctaTitle: 'Möchten Sie etwas bewegen?',
+                    ctaText: 'Ob Sie sich ehrenamtlich engagieren, spenden, mit uns zusammenarbeiten oder einfach mehr erfahren möchten — wir würden uns freuen, mit Ihnen in Kontakt zu treten.',
+                    ctaBtn1: '<i class="fas fa-hands-helping"></i> Freiwilliger werden',
+                    ctaBtn2: '<i class="fas fa-heart"></i> Jetzt spenden',
+                    footerTag: 'Jugendliche stärken. Ältere ehren. Bessere Gemeinschaften aufbauen.',
+                    footerQuick: 'Schnelllinks',
+                    footerHome: 'Startseite',
+                    footerAbout: 'Über uns',
+                    footerProgramsLink: 'Programme',
+                    footerGallery: 'Galerie',
+                    footerBlog: 'Blog / News',
+                    footerVolunteer: 'Mithelfen',
+                    footerContactLink: 'Kontakt',
+                    footerDonate: 'Spenden',
+                    footerPrograms: 'Programme',
+                    footerProg1: 'Jugendentwicklung',
+                    footerProg2: 'Altenpflege',
+                    footerProg3: 'Medizinische Hilfe',
+                    footerProg4: 'Gemeindeentwicklung',
+                    footerProg5: 'Führungstraining',
+                    footerContact: 'Kontakt',
+                    footerUK: 'Büro UK, London',
+                    footerNigeria: 'Büro Nigeria, Lagos',
+                    footerCopy: 'Eingetragene Wohltätigkeitsorganisation. Alle Rechte vorbehalten.',
+                    footerPrivacy: 'Datenschutzrichtlinie',
+                    cookieText: '🍪 Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website akzeptieren Sie unsere <a href="#">Cookie-Richtlinie</a>.',
+                    cookieAccept: 'Akzeptieren',
+                    cookieDecline: 'Ablehnen'
+                }
+            };
+
+            // ===== STATE =====
+            let currentLang = localStorage.getItem('phinehasLang') || 'en';
+
+            // ===== DOM REFS =====
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const currentLangLabel = document.getElementById('currentLangLabel');
+            const skeleton = document.getElementById('skeleton-loader');
+            const mainContent = document.getElementById('main-content');
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const scrollProgress = document.getElementById('scroll-progress');
+            const backToTop = document.getElementById('back-to-top');
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+
+            // ===== APPLY LANGUAGE =====
+            function applyLanguage(lang) {
+                if (!translations[lang]) {
+                    lang = 'en';
+                }
+                const dict = translations[lang];
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[key] !== undefined) {
+                        if (dict[key].includes('<')) {
+                            el.innerHTML = dict[key];
+                        } else {
+                            el.textContent = dict[key];
+                        }
+                    }
+                });
+                document.querySelectorAll('.lang-dropdown li').forEach(li => {
+                    li.classList.toggle('active-lang', li.dataset.lang === lang);
+                    li.setAttribute('aria-selected', li.dataset.lang === lang ? 'true' : 'false');
+                });
+                const langNames = { en: 'EN', fr: 'FR', de: 'DE' };
+                currentLangLabel.textContent = langNames[lang] || 'EN';
+                localStorage.setItem('phinehasLang', lang);
+                currentLang = lang;
+                document.documentElement.lang = lang;
+            }
+
+            // ===== LANGUAGE TOGGLE =====
+            langToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isOpen = langDropdown.classList.toggle('open');
+                langToggle.setAttribute('aria-expanded', isOpen);
+            });
+
+            langDropdown.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', function() {
+                    applyLanguage(this.dataset.lang);
+                    langDropdown.classList.remove('open');
+                    langToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.lang-wrapper')) {
+                    langDropdown.classList.remove('open');
+                    langToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // ===== HAMBURGER =====
+            hamburger.addEventListener('click', function() {
+                const isOpen = navLinks.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    const icon = hamburger.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // ===== HEADER SCROLL =====
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                header.classList.toggle('scrolled', scrollY > 20);
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                scrollProgress.style.width = scrollPercent + '%';
+                backToTop.classList.toggle('visible', scrollY > 400);
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== CHARACTER COUNTER =====
+            const messageTextarea = document.getElementById('message');
+            const messageCount = document.getElementById('messageCount');
+
+            if (messageTextarea && messageCount) {
+                messageTextarea.addEventListener('input', function() {
+                    messageCount.textContent = this.value.length;
+                });
+            }
+
+            // ===== FORM SUBMISSION =====
+            const form = document.getElementById('contactFormSubmit');
+            const submitBtn = document.getElementById('submitBtn');
+            const formSuccess = document.getElementById('formSuccess');
+
+            function showError(field) {
+                const parent = field.closest('.form-group');
+                const errorMsg = parent.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.classList.add('show');
+                }
+                field.classList.add('error');
+            }
+
+            function hideError(field) {
+                const parent = field.closest('.form-group');
+                const errorMsg = parent.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.classList.remove('show');
+                }
+                field.classList.remove('error');
+            }
+
+            function validateField(field) {
+                if (field.hasAttribute('required') && !field.value.trim()) {
+                    showError(field);
+                    return false;
+                }
+                if (field.type === 'email' && field.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value.trim())) {
+                        showError(field);
+                        return false;
+                    }
+                }
+                hideError(field);
+                return true;
+            }
+
+            form.querySelectorAll('input, textarea, select').forEach(field => {
+                field.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        hideError(this);
+                    }
+                });
+                field.addEventListener('change', function() {
+                    if (this.value.trim()) {
+                        hideError(this);
+                    }
+                });
+            });
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                let valid = true;
+                const required = form.querySelectorAll('[required]');
+                required.forEach(field => {
+                    if (!validateField(field)) {
+                        valid = false;
+                    }
+                });
+
+                if (!valid) {
+                    const firstError = form.querySelector('.error');
+                    if (firstError) {
+                        firstError.focus();
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                submitBtn.classList.add('btn-loading');
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    submitBtn.classList.remove('btn-loading');
+                    submitBtn.disabled = false;
+                    form.style.display = 'none';
+                    formSuccess.classList.add('show');
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 2000);
+            });
+
+            // ===== SUCCESS BUTTON =====
+            const successBtn = formSuccess.querySelector('.btn-primary');
+            if (successBtn) {
+                successBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    form.reset();
+                    form.style.display = 'block';
+                    formSuccess.classList.remove('show');
+                    if (messageCount) messageCount.textContent = '0';
+                    document.getElementById('contactFormSection').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // ===== SKELETON LOADER =====
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    skeleton.classList.add('hidden');
+                    mainContent.classList.add('visible');
+                    document.querySelectorAll('.fade-up').forEach((el, i) => {
+                        setTimeout(() => el.classList.add('visible'), 200 + i * 100);
+                    });
+                    document.querySelectorAll('.stagger-children').forEach((el) => {
+                        el.classList.add('visible');
+                    });
+                }, 1000);
+            });
+
+            // ===== COOKIE BANNER =====
+            if (!localStorage.getItem('cookiesAccepted')) {
+                cookieBanner.classList.add('show');
+            }
+
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+
+            declineCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieBanner.classList.remove('show');
+            });
+
+            // ===== NAV ACTIVE STATE =====
+            const currentPath = window.location.pathname.split('/').pop() || 'contact.html';
+            navLinks.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+
+            // ===== INIT =====
+            applyLanguage(currentLang);
+
+        })();
+    </script>
+
+</body>
+</html>
