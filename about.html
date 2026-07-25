@@ -3,144 +3,93 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Finish as Generation — Global NGO</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
-    
+    <title>About Us | PHINEHAS GENERATION FOUNDATION</title>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
     <style>
-        /* ============================================
-                   ROOT VARIABLES & RESET
-                   ============================================ */
-        *,
-        *::before,
-        *::after {
+        /* ===== RESET & BASE ===== */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            /* Primary Colors */
-            --black: #0a0a0a;
-            --black-light: #1a1a1a;
-            --white: #fafafa;
-            --white-pure: #ffffff;
-            
-            /* Brand Colors */
-            --green-deep: #1e4d3a;
-            --green-primary: #2d6a4f;
-            --green-mature: #3d8b6b;
-            --green-light: #52b788;
-            --green-pale: #e8f5ee;
-            
-            --brown-deep: #5a3a1a;
-            --brown-primary: #8b5a2b;
-            --brown-mature: #b87c4b;
-            --brown-light: #d4a574;
-            --brown-pale: #f5ede4;
-            
-            /* Neutrals */
-            --gray-50: #f8f8f8;
-            --gray-100: #f0f0f0;
-            --gray-200: #e0e0e0;
-            --gray-300: #c0c0c0;
-            --gray-400: #999999;
-            --gray-500: #666666;
-            --gray-600: #444444;
-            --gray-700: #2a2a2a;
-            
-            /* Semantic */
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-            --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
-            --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
-            --shadow-xl: 0 40px 80px rgba(0,0,0,0.16);
-            
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
-            --radius-xl: 32px;
-            --radius-full: 9999px;
-            
-            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --max-width: 1280px;
+            --black: #1a1a1a;
+            --white: #f9f9f9;
+            --green: #2d6a4f;
+            --green-light: #409f7a;
+            --green-dark: #1b4332;
+            --brown: #8b5a2b;
+            --brown-light: #b87c4b;
+            --gray: #e0e0e0;
+            --gray-light: #f0f0f0;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.18);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 20px;
+            --radius-sm: 12px;
         }
 
         html {
             scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
-            font-family: var(--font-primary);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background: var(--white);
             color: var(--black);
-            line-height: 1.7;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        ::selection {
-            background: var(--green-primary);
-            color: var(--white-pure);
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
         }
 
-        /* ============================================
-                   UTILITY CLASSES
-                   ============================================ */
         .container {
-            max-width: var(--max-width);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 24px;
         }
 
         .section-padding {
-            padding: 100px 0;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--green-primary);
-            background: var(--green-pale);
-            padding: 6px 16px;
-            border-radius: var(--radius-full);
-            margin-bottom: 16px;
+            padding: 80px 0;
         }
 
         .section-title {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-size: 2.8rem;
             font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
 
         .section-title .highlight {
-            color: var(--green-primary);
+            color: var(--green);
             position: relative;
         }
 
         .section-title .highlight::after {
             content: '';
             position: absolute;
-            bottom: 4px;
+            bottom: 2px;
             left: 0;
             width: 100%;
-            height: 12px;
+            height: 8px;
             background: rgba(45, 106, 79, 0.15);
             border-radius: 4px;
             z-index: -1;
@@ -148,1045 +97,1013 @@
 
         .section-subtitle {
             font-size: 1.15rem;
-            color: var(--gray-500);
-            max-width: 560px;
+            color: #555;
+            max-width: 640px;
             line-height: 1.8;
         }
 
         .text-center {
             text-align: center;
         }
-
         .mx-auto {
             margin-left: auto;
             margin-right: auto;
         }
 
-        .flex-center {
-            display: flex;
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 10px;
+            padding: 14px 34px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
-        .gap-4 {
-            gap: 16px;
-        }
-        .gap-6 {
-            gap: 24px;
-        }
-        .gap-8 {
-            gap: 32px;
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
         }
 
-        /* ============================================
-                   SKELETON LOADER — PREMIUM
-                   ============================================ */
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: white;
+            box-shadow: 0 4px 16px rgba(45, 106, 79, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--green-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(45, 106, 79, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-brown {
+            background: var(--brown);
+            color: white;
+            box-shadow: 0 4px 16px rgba(139, 90, 43, 0.3);
+        }
+
+        .btn-brown:hover {
+            background: var(--brown-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(139, 90, 43, 0.4);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        /* ===== SKELETON LOADER ===== */
         #skeleton-loader {
             position: fixed;
-            inset: 0;
-            background: var(--white-pure);
-            z-index: 99999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+            transition: opacity 0.6s ease;
         }
 
         #skeleton-loader.hidden {
             opacity: 0;
-            visibility: hidden;
+            pointer-events: none;
         }
 
-        .skeleton-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 32px;
-        }
-
-        .skeleton-lady {
-            width: 140px;
-            height: 190px;
-            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
-            background-size: 300% 100%;
-            animation: shimmerLoad 1.8s infinite;
-            border-radius: 70px 70px 24px 24px;
-            position: relative;
-            box-shadow: var(--shadow-md);
-        }
-
-        .skeleton-lady::after {
-            content: '';
-            position: absolute;
-            bottom: -48px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
-            background-size: 300% 100%;
-            animation: shimmerLoad 1.8s infinite;
-            border-radius: 50%;
-        }
-
-        .skeleton-lines {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .skeleton-line {
-            height: 14px;
-            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
-            background-size: 300% 100%;
-            animation: shimmerLoad 1.8s infinite;
-            border-radius: var(--radius-full);
-        }
-
-        .skeleton-line:nth-child(1) { width: 320px; }
-        .skeleton-line:nth-child(2) { width: 260px; }
-        .skeleton-line:nth-child(3) { width: 200px; }
-
-        .skeleton-badge {
+        .skeleton-logo {
             width: 120px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--gray-100) 30%, var(--gray-200) 50%, var(--gray-100) 70%);
-            background-size: 300% 100%;
-            animation: shimmerLoad 1.8s infinite;
-            border-radius: var(--radius-full);
-            margin-top: 8px;
+            height: 120px;
+            animation: zoomPulse 1.8s ease-in-out infinite;
+            margin-bottom: 24px;
         }
 
-        @keyframes shimmerLoad {
-            0% { background-position: -300% 0; }
-            100% { background-position: 300% 0; }
-        }
-
-        .skeleton-progress {
-            margin-top: 20px;
-            width: 200px;
-            height: 3px;
-            background: var(--gray-200);
-            border-radius: var(--radius-full);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skeleton-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .skeleton-logo img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, var(--green-primary), transparent);
-            animation: progressLoad 1.5s infinite;
+            object-fit: contain;
         }
 
-        @keyframes progressLoad {
-            0% { left: -100%; }
-            100% { left: 100%; }
+        @keyframes zoomPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
         }
 
-        /* ============================================
-                   HEADER / NAV — INDUSTRIAL GRADE
-                   ============================================ */
-        .header {
+        .skeleton-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--green);
+            letter-spacing: 1px;
+            animation: fadePulse 2s ease-in-out infinite;
+        }
+
+        .skeleton-name span {
+            color: var(--brown);
+        }
+
+        @keyframes fadePulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 10000;
-            padding: 18px 0;
-            transition: all var(--transition-base);
-            background: transparent;
+            padding: 16px 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            z-index: 1000;
+            transition: var(--transition);
         }
 
-        .header.scrolled {
-            padding: 12px 0;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            box-shadow: var(--shadow-sm);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
         }
 
-        .header.scrolled .logo-text {
-            color: var(--black);
-        }
-
-        .header-inner {
+        .nav-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--green);
+            letter-spacing: -0.5px;
             display: flex;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
-            z-index: 10001;
         }
 
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, var(--green-primary), var(--green-mature));
-            border-radius: var(--radius-md);
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+
+        .logo span {
+            color: var(--brown);
+        }
+
+        .nav-links {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 800;
-            box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+            gap: 24px;
+            flex-wrap: wrap;
         }
 
-        .logo-text {
-            font-size: 1.35rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: var(--white-pure);
-            transition: color var(--transition-fast);
-        }
-
-        .header.scrolled .logo-text {
-            color: var(--black);
-        }
-
-        .logo-text span {
-            color: var(--green-light);
-        }
-
-        /* Navigation */
-        .nav-primary {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-
-        .nav-primary a {
-            font-size: 0.875rem;
+        .nav-links a {
+            font-size: 0.9rem;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            transition: all var(--transition-fast);
+            color: var(--black);
+            transition: var(--transition);
             position: relative;
-            padding: 4px 0;
-            letter-spacing: 0.01em;
         }
 
-        .header.scrolled .nav-primary a {
-            color: var(--gray-600);
-        }
-
-        .nav-primary a::after {
+        .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -2px;
+            bottom: -4px;
             left: 0;
-            width: 0;
+            width: 0%;
             height: 2.5px;
-            background: var(--green-primary);
-            border-radius: var(--radius-full);
-            transition: width var(--transition-base);
+            background: var(--green);
+            transition: var(--transition);
+            border-radius: 2px;
         }
 
-        .nav-primary a:hover::after,
-        .nav-primary a.active::after {
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
             width: 100%;
         }
 
-        .nav-primary a:hover {
-            color: var(--white-pure);
+        .nav-links a:hover {
+            color: var(--green);
         }
 
-        .header.scrolled .nav-primary a:hover {
-            color: var(--black);
+        .nav-donate-btn {
+            background: var(--green);
+            color: white !important;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 600;
         }
 
-        .nav-primary a.active {
-            color: var(--white-pure);
+        .nav-donate-btn::after {
+            display: none !important;
         }
 
-        .header.scrolled .nav-primary a.active {
-            color: var(--black);
+        .nav-donate-btn:hover {
+            background: var(--green-light);
+            transform: scale(1.04);
         }
 
-        /* Language Toggle — Premium */
+        /* Language Toggle */
         .lang-wrapper {
             position: relative;
         }
 
-        .lang-trigger {
+        .lang-toggle {
             display: flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.10);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: var(--radius-full);
-            padding: 8px 16px 8px 20px;
+            background: var(--white);
+            border: 1.5px solid var(--gray);
+            border-radius: 40px;
+            padding: 4px 12px 4px 16px;
             cursor: pointer;
-            transition: all var(--transition-fast);
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.8rem;
+            transition: var(--transition);
+            font-size: 0.85rem;
             font-weight: 500;
         }
 
-        .header.scrolled .lang-trigger {
-            background: var(--gray-50);
-            border-color: var(--gray-200);
-            color: var(--gray-600);
+        .lang-toggle:hover {
+            border-color: var(--green);
         }
 
-        .lang-trigger:hover {
-            background: rgba(255, 255, 255, 0.20);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .header.scrolled .lang-trigger:hover {
-            background: var(--gray-100);
-        }
-
-        .lang-trigger i {
-            font-size: 0.85rem;
+        .lang-toggle i {
+            font-size: 0.9rem;
+            color: var(--green);
         }
 
         .lang-dropdown {
+            display: none;
             position: absolute;
-            top: calc(100% + 12px);
+            top: 48px;
             right: 0;
-            min-width: 200px;
-            background: var(--white-pure);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-lg);
-            padding: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-8px);
-            transition: all var(--transition-base);
-            border: 1px solid var(--gray-100);
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 12px 0;
+            min-width: 180px;
+            border: 1px solid var(--gray);
+            z-index: 1100;
         }
 
         .lang-dropdown.open {
+            display: block;
+        }
+
+        .lang-dropdown li {
+            padding: 8px 24px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .lang-dropdown li:hover {
+            background: var(--green);
+            color: white;
+        }
+
+        .lang-dropdown li.active-lang {
+            background: var(--green);
+            color: white;
+        }
+
+        /* Scroll Progress */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green), var(--brown));
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            padding: 160px 0 80px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin-top: 16px;
+            line-height: 1.8;
+        }
+
+        .page-hero .breadcrumb {
+            display: flex;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        .page-hero .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+
+        .page-hero .breadcrumb a:hover {
+            color: white;
+        }
+
+        /* ===== STORY SECTION ===== */
+        .story-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .story-content p {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .story-content .dropcap::first-letter {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--green);
+            float: left;
+            line-height: 1;
+            margin-right: 12px;
+            margin-top: 4px;
+        }
+
+        .story-content h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--green);
+            margin: 40px 0 16px;
+        }
+
+        .story-content .highlight-box {
+            background: var(--gray-light);
+            padding: 30px 36px;
+            border-radius: var(--radius-sm);
+            border-left: 5px solid var(--green);
+            margin: 30px 0;
+        }
+
+        .story-content .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: #333;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--green);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 0;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 50px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+            padding-left: 50px;
+            text-align: left;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--green);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--green);
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-item .year {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--green);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 4px 0;
+        }
+
+        .timeline-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== MISSION & VISION ===== */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .mv-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--green);
+            transition: var(--transition);
+        }
+
+        .mv-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .mv-card.vision {
+            border-top-color: var(--brown);
+        }
+
+        .mv-card .icon {
+            font-size: 2.4rem;
+            color: var(--green);
+            margin-bottom: 16px;
+        }
+
+        .mv-card.vision .icon {
+            color: var(--brown);
+        }
+
+        .mv-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* ===== CORE VALUES ===== */
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 30px 24px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-bottom-color: var(--green);
+        }
+
+        .value-card .icon {
+            font-size: 2rem;
+            color: var(--green);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .value-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* ===== FOUNDER PREVIEW ===== */
+        .founder-preview {
+            background: var(--gray-light);
+        }
+
+        .founder-preview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .founder-preview-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .founder-preview-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .founder-preview-content h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .founder-preview-content .title {
+            color: var(--brown);
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .founder-preview-content p {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--green-dark), var(--green));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--green);
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(45, 106, 79, 0.4);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 900;
+        }
+
+        #back-to-top.visible {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
 
-        .lang-dropdown li {
-            padding: 10px 16px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--gray-600);
-            transition: all var(--transition-fast);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            list-style: none;
-        }
-
-        .lang-dropdown li:hover {
-            background: var(--green-pale);
-            color: var(--green-primary);
-        }
-
-        .lang-dropdown li.active-lang {
-            background: var(--green-primary);
-            color: var(--white-pure);
-        }
-
-        .lang-dropdown li .lang-flag {
-            font-size: 1.1rem;
-        }
-
-        /* Hamburger */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 4px;
-            z-index: 10001;
-            background: none;
-            border: none;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 2.5px;
-            background: var(--white-pure);
-            border-radius: var(--radius-full);
-            transition: all var(--transition-base);
-            transform-origin: center;
-        }
-
-        .header.scrolled .hamburger span {
-            background: var(--black);
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        /* ============================================
-                   HERO — CINEMATIC
-                   ============================================ */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: var(--black);
-            overflow: hidden;
-            padding: 120px 0 80px;
-        }
-
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .hero-bg .gradient-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.5;
-        }
-
-        .hero-bg .orb-1 {
-            width: 600px;
-            height: 600px;
-            top: -200px;
-            right: -100px;
-            background: radial-gradient(circle, var(--green-primary), transparent);
-            animation: floatOrb 20s ease-in-out infinite;
-        }
-
-        .hero-bg .orb-2 {
-            width: 400px;
-            height: 400px;
-            bottom: -100px;
-            left: -100px;
-            background: radial-gradient(circle, var(--brown-primary), transparent);
-            animation: floatOrb 25s ease-in-out infinite reverse;
-        }
-
-        .hero-bg .orb-3 {
-            width: 300px;
-            height: 300px;
-            top: 40%;
-            left: 40%;
-            background: radial-gradient(circle, rgba(82, 183, 136, 0.3), transparent);
-            animation: floatOrb 18s ease-in-out infinite 2s;
-        }
-
-        @keyframes floatOrb {
-            0%,
-            100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -30px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-        }
-
-        .hero-grid-overlay {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at center, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.7) 100%);
-            z-index: 2;
-        }
-
-        .hero-grid {
-            position: relative;
-            z-index: 3;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content {
-            color: var(--white-pure);
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            padding: 8px 20px 8px 16px;
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 28px;
-        }
-
-        .hero-badge .dot {
-            width: 8px;
-            height: 8px;
+        #back-to-top:hover {
             background: var(--green-light);
-            border-radius: 50%;
-            animation: pulseDot 2s ease-in-out infinite;
+            transform: translateY(-4px);
         }
 
-        @keyframes pulseDot {
-            0%,
-            100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
-        }
-
-        .hero-content h1 {
-            font-size: clamp(2.8rem, 7vw, 5.2rem);
-            font-weight: 900;
-            line-height: 1.05;
-            letter-spacing: -0.03em;
-            margin-bottom: 24px;
-        }
-
-        .hero-content h1 .gradient-text {
-            background: linear-gradient(135deg, var(--green-light), var(--green-primary), var(--brown-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 520px;
-            line-height: 1.9;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        /* Buttons — Premium */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 36px;
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all var(--transition-base);
-            border: none;
-            cursor: pointer;
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
             position: relative;
             overflow: hidden;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--green-primary), var(--green-mature));
-            color: var(--white-pure);
-            box-shadow: 0 4px 20px rgba(45, 106, 79, 0.35);
-        }
-
-        .btn-primary::before {
+        .footer::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, var(--green-mature), var(--green-light));
-            opacity: 0;
-            transition: opacity var(--transition-base);
-            border-radius: inherit;
+            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/file_00000000480881f4873ad238c15f892d_h3guqm.png');
+            background-size: 400px auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
         }
 
-        .btn-primary:hover::before {
-            opacity: 1;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 32px rgba(45, 106, 79, 0.45);
-        }
-
-        .btn-primary:active {
-            transform: translateY(-1px);
-        }
-
-        .btn-primary span,
-        .btn-primary i {
+        .footer .container {
             position: relative;
             z-index: 1;
         }
 
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            border: 1.5px solid rgba(255, 255, 255, 0.15);
-            color: var(--white-pure);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-        }
-
-        .btn-brown {
-            background: linear-gradient(135deg, var(--brown-primary), var(--brown-deep));
-            color: var(--white-pure);
-            box-shadow: 0 4px 20px rgba(139, 90, 43, 0.3);
-        }
-
-        .btn-brown:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 32px rgba(139, 90, 43, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--green-primary);
-            color: var(--green-primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--green-primary);
-            color: var(--white-pure);
-            transform: translateY(-3px);
-        }
-
-        /* Hero Visual */
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-art {
-            position: relative;
-            width: 100%;
-            max-width: 480px;
-            aspect-ratio: 1;
-        }
-
-        .hero-art .ring-container {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-art .ring {
-            position: absolute;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            animation: spinRing 30s linear infinite;
-        }
-
-        .hero-art .ring:nth-child(1) {
-            width: 100%;
-            height: 100%;
-            animation-duration: 25s;
-        }
-
-        .hero-art .ring:nth-child(2) {
-            width: 80%;
-            height: 80%;
-            animation-duration: 18s;
-            animation-direction: reverse;
-            border-color: rgba(82, 183, 136, 0.15);
-        }
-
-        .hero-art .ring:nth-child(3) {
-            width: 60%;
-            height: 60%;
-            animation-duration: 22s;
-            border-color: rgba(184, 124, 75, 0.15);
-        }
-
-        @keyframes spinRing {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .hero-art .center-icon {
-            width: 180px;
-            height: 180px;
-            background: linear-gradient(135deg, rgba(45, 106, 79, 0.2), rgba(139, 90, 43, 0.2));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            animation: floatCenter 6s ease-in-out infinite;
-            position: relative;
-            z-index: 2;
-        }
-
-        @keyframes floatCenter {
-            0%,
-            100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-
-        .hero-art .center-icon .emoji-bg {
-            font-size: 5.5rem;
-            filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.3));
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 48px;
-            margin-top: 48px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .hero-stat .number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--white-pure);
-            letter-spacing: -0.02em;
-        }
-
-        .hero-stat .label {
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 400;
-        }
-
-        /* ============================================
-                   RESPONSIVE
-                   ============================================ */
-        @media (max-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-content p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-actions {
-                justify-content: center;
-            }
-
-            .hero-stats {
-                justify-content: center;
-            }
-
-            .hero-art {
-                max-width: 360px;
-                margin: 0 auto;
-            }
-
-            .hero-art .center-icon {
-                width: 140px;
-                height: 140px;
-                font-size: 3.5rem;
-            }
-
-            .hero-art .center-icon .emoji-bg {
-                font-size: 4rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            .section-padding {
-                padding: 60px 0;
-            }
-
-            /* Nav */
-            .nav-primary {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 360px;
-                height: 100vh;
-                background: var(--white-pure);
-                flex-direction: column;
-                padding: 100px 40px 40px;
-                gap: 20px;
-                transition: right var(--transition-base);
-                box-shadow: var(--shadow-xl);
-                overflow-y: auto;
-            }
-
-            .nav-primary.open {
-                right: 0;
-            }
-
-            .nav-primary a {
-                color: var(--gray-600) !important;
-                font-size: 1.1rem;
-                padding: 8px 0;
-                width: 100%;
-                border-bottom: 1px solid var(--gray-100);
-            }
-
-            .nav-primary a::after {
-                display: none;
-            }
-
-            .nav-primary a.active {
-                color: var(--green-primary) !important;
-            }
-
-            .nav-primary a:hover {
-                color: var(--green-primary) !important;
-            }
-
-            .lang-wrapper {
-                width: 100%;
-                margin-top: 8px;
-            }
-
-            .lang-trigger {
-                width: 100%;
-                justify-content: center;
-                background: var(--gray-50) !important;
-                border-color: var(--gray-200) !important;
-                color: var(--gray-600) !important;
-            }
-
-            .lang-dropdown {
-                right: auto;
-                left: 0;
-                width: 100%;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            /* Mobile overlay */
-            .nav-overlay {
-                position: fixed;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.4);
-                z-index: 9999;
-                opacity: 0;
-                visibility: hidden;
-                transition: all var(--transition-base);
-            }
-
-            .nav-overlay.open {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .hero {
-                padding: 100px 0 60px;
-                min-height: 90vh;
-            }
-
-            .hero-content h1 {
-                font-size: 2.4rem;
-            }
-
-            .hero-content p {
-                font-size: 1rem;
-            }
-
-            .hero-stats {
-                gap: 24px;
-                flex-wrap: wrap;
-            }
-
-            .hero-stat .number {
-                font-size: 1.5rem;
-            }
-
-            .btn {
-                padding: 14px 28px;
-                font-size: 0.85rem;
-            }
-
-            .hero-art .center-icon {
-                width: 110px;
-                height: 110px;
-                font-size: 2.8rem;
-            }
-
-            .hero-art .center-icon .emoji-bg {
-                font-size: 3.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-actions .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .logo-text {
-                font-size: 1.1rem;
-            }
-
-            .logo-icon {
-                width: 36px;
-                height: 36px;
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-        }
-
-        /* ============================================
-                   FOOTER — PREMIUM
-                   ============================================ */
-        .footer {
-            background: var(--black-light);
-            color: var(--gray-400);
-            padding: 60px 0 32px;
-            border-top: 2px solid var(--green-primary);
-        }
-
-        .footer-content {
+        .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 48px;
+            gap: 40px;
             margin-bottom: 40px;
         }
 
-        .footer-brand .logo-text {
-            color: var(--white-pure) !important;
-            font-size: 1.5rem;
+        .footer-brand .logo {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand .logo span {
+            color: var(--brown-light);
         }
 
         .footer-brand p {
-            margin-top: 16px;
-            font-size: 0.9rem;
-            max-width: 320px;
-            color: var(--gray-500);
-            line-height: 1.8;
+            opacity: 0.7;
+            font-size: 0.95rem;
+            max-width: 300px;
+            line-height: 1.7;
         }
 
-        .footer-col h4 {
-            color: var(--white-pure);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
+        .footer h4 {
+            font-size: 1rem;
+            font-weight: 700;
             margin-bottom: 16px;
+            color: white;
         }
 
-        .footer-col a {
+        .footer-links a {
             display: block;
-            color: var(--gray-500);
-            text-decoration: none;
+            opacity: 0.7;
             font-size: 0.9rem;
-            padding: 4px 0;
-            transition: color var(--transition-fast);
+            transition: var(--transition);
+            margin-bottom: 8px;
         }
 
-        .footer-col a:hover {
+        .footer-links a:hover {
+            opacity: 1;
             color: var(--green-light);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            font-size: 0.8rem;
         }
 
         .footer-social {
             display: flex;
-            gap: 16px;
+            gap: 14px;
+            margin-top: 16px;
         }
 
         .footer-social a {
-            color: var(--gray-500);
-            transition: color var(--transition-fast);
-            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: white;
+            font-size: 1rem;
         }
 
         .footer-social a:hover {
-            color: var(--green-light);
+            background: var(--green);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 899;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ===== COOKIE BANNER ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            color: white;
+            padding: 16px 24px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            z-index: 999;
+        }
+
+        .cookie-banner.show {
+            display: flex;
+        }
+
+        .cookie-banner p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            max-width: 70%;
+        }
+
+        .cookie-banner .btn {
+            padding: 8px 24px;
+            font-size: 0.85rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .founder-preview-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .page-hero h1 {
+                font-size: 2.8rem;
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+            .timeline-item:nth-child(odd) {
+                padding-right: 0;
+            }
+            .timeline-item:nth-child(even) {
+                margin-left: 0;
+            }
+            .timeline-item::after {
+                left: 10px !important;
+                right: auto !important;
+            }
         }
 
         @media (max-width: 768px) {
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
+            .hamburger {
+                display: block;
+                font-size: 1.6rem;
+                cursor: pointer;
+                color: var(--black);
+                background: none;
+                border: none;
             }
 
-            .footer-bottom {
+            .nav-links {
+                display: none;
                 flex-direction: column;
+                width: 100%;
+                padding: 20px 0 10px;
+                gap: 14px;
+                border-top: 1px solid var(--gray);
+                margin-top: 12px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-donate-btn {
+                align-self: center;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
                 text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .footer-social {
+                justify-content: center;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .story-content .dropcap::first-letter {
+                font-size: 3rem;
             }
         }
 
         @media (max-width: 480px) {
-            .footer-content {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 0.9rem;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .values-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
-
-            .footer-brand p {
-                margin-left: auto;
-                margin-right: auto;
+            .section-padding {
+                padding: 50px 0;
             }
-
-            .footer-social {
-                justify-content: center;
+            .logo {
+                font-size: 1rem;
+            }
+            .logo img {
+                height: 40px;
+            }
+            .whatsapp-float {
+                bottom: 80px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+                font-size: 1.6rem;
+            }
+            #back-to-top {
+                bottom: 16px;
+                right: 16px;
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+            }
+            .cookie-banner p {
+                max-width: 100%;
             }
         }
 
-        /* ============================================
-                   PAGE TRANSITION
-                   ============================================ */
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-children>* {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stagger-children.visible>*:nth-child(1) { transition-delay: 0.05s; }
+        .stagger-children.visible>*:nth-child(2) { transition-delay: 0.1s; }
+        .stagger-children.visible>*:nth-child(3) { transition-delay: 0.15s; }
+        .stagger-children.visible>*:nth-child(4) { transition-delay: 0.2s; }
+        .stagger-children.visible>*:nth-child(5) { transition-delay: 0.25s; }
+        .stagger-children.visible>*:nth-child(6) { transition-delay: 0.3s; }
+        .stagger-children.visible>*:nth-child(7) { transition-delay: 0.35s; }
+        .stagger-children.visible>*:nth-child(8) { transition-delay: 0.4s; }
+
+        .stagger-children.visible>* {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         #main-content {
             opacity: 0;
             transition: opacity 0.8s ease;
@@ -1195,512 +1112,480 @@
         #main-content.visible {
             opacity: 1;
         }
-
-        /* ============================================
-                   SCROLL INDICATOR
-                   ============================================ */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 32px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            animation: bounceDown 2.5s ease-in-out infinite;
-        }
-
-        .scroll-indicator .mouse {
-            width: 24px;
-            height: 38px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            position: relative;
-        }
-
-        .scroll-indicator .mouse::after {
-            content: '';
-            position: absolute;
-            top: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 10px;
-            background: var(--green-light);
-            border-radius: var(--radius-full);
-            animation: scrollWheel 2s ease-in-out infinite;
-        }
-
-        @keyframes scrollWheel {
-            0%,
-            100% { transform: translateX(-50%) translateY(0); opacity: 1; }
-            50% { transform: translateX(-50%) translateY(12px); opacity: 0.3; }
-        }
-
-        @keyframes bounceDown {
-            0%,
-            100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(6px); }
-        }
-
-        @media (max-width: 768px) {
-            .scroll-indicator {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
 
     <!-- ===== SKELETON LOADER ===== -->
     <div id="skeleton-loader" aria-hidden="true">
-        <div class="skeleton-container">
-            <div class="skeleton-lady"></div>
-            <div class="skeleton-lines">
-                <div class="skeleton-line"></div>
-                <div class="skeleton-line"></div>
-                <div class="skeleton-line"></div>
-            </div>
-            <div class="skeleton-badge"></div>
-            <div class="skeleton-progress"></div>
+        <div class="skeleton-logo">
+            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/file_00000000480881f4873ad238c15f892d_h3guqm.png" alt="PHINEHAS GENERATION" />
         </div>
+        <div class="skeleton-name">PHINEHAS <span>GENERATION</span></div>
     </div>
+
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div id="scroll-progress"></div>
 
     <!-- ===== MAIN CONTENT ===== -->
     <div id="main-content">
 
         <!-- ===== HEADER ===== -->
-        <header class="header" id="header" role="banner">
-            <div class="container header-inner">
-                <a href="index.html" class="logo" aria-label="Finish as Generation Home">
-                    <div class="logo-icon">🌱</div>
-                    <span class="logo-text">Finish<span>As</span>Generation</span>
+        <header id="header">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/file_00000000480881f4873ad238c15f892d_h3guqm.png" alt="PHINEHAS GENERATION FOUNDATION Logo" />
+                    <span>PHINEHAS</span>
                 </a>
 
-                <!-- Mobile Overlay -->
-                <div class="nav-overlay" id="navOverlay"></div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-                <nav class="nav-primary" id="navPrimary" role="navigation" aria-label="Main Navigation">
-                    <a href="index.html" class="active" data-key="navHome">Home</a>
-                    <a href="about.html" data-key="navAbout">About</a>
-                    <a href="sponsor.html" data-key="navSponsor">Sponsor</a>
-                    <a href="blog.html" data-key="navBlog">Blog</a>
-                    <a href="journey.html" data-key="navJourney">Journey</a>
-                    <a href="contact.html" data-key="navContact">Contact</a>
-                    <a href="admin.html" data-key="navAdmin">Admin</a>
+                <nav class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About Us</a>
+                    <a href="programs.html">Our Programs</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog / News</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="donate.html" class="nav-donate-btn"><i class="fas fa-heart"></i> Donate Now</a>
 
                     <div class="lang-wrapper">
-                        <div class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-globe"></i>
-                            <span id="currentLangLabel">EN</span>
-                            <i class="fas fa-chevron-down" style="font-size:0.6rem;"></i>
+                        <div class="lang-toggle" id="langToggle">
+                            <i class="fas fa-globe"></i> <span id="currentLangLabel">EN (UK)</span> <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i>
                         </div>
-                        <ul class="lang-dropdown" id="langDropdown" role="menu">
-                            <li data-lang="en-uk" class="active-lang" role="menuitem">
-                                <span class="lang-flag">🇬🇧</span> English (UK)
-                            </li>
-                            <li data-lang="en-us" role="menuitem">
-                                <span class="lang-flag">🇺🇸</span> English (US)
-                            </li>
-                            <li data-lang="de" role="menuitem">
-                                <span class="lang-flag">🇩🇪</span> Deutsch
-                            </li>
-                            <li data-lang="fr" role="menuitem">
-                                <span class="lang-flag">🇫🇷</span> Français
-                            </li>
-                            <li data-lang="pt" role="menuitem">
-                                <span class="lang-flag">🇵🇹</span> Português
-                            </li>
-                            <li data-lang="zh" role="menuitem">
-                                <span class="lang-flag">🇨🇳</span> 中文
-                            </li>
+                        <ul class="lang-dropdown" id="langDropdown">
+                            <li data-lang="en-uk" class="active-lang">🇬🇧 English (UK)</li>
+                            <li data-lang="en-us">🇺🇸 English (US)</li>
+                            <li data-lang="de">🇩🇪 Deutsch</li>
+                            <li data-lang="fr">🇫🇷 Français</li>
+                            <li data-lang="pt">🇵🇹 Português</li>
+                            <li data-lang="zh">🇨🇳 中文</li>
                         </ul>
                     </div>
                 </nav>
-
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
         </header>
 
-        <!-- ===== HERO ===== -->
-        <section class="hero" id="hero" aria-label="Hero Section">
-            <div class="hero-bg">
-                <div class="gradient-orb orb-1"></div>
-                <div class="gradient-orb orb-2"></div>
-                <div class="gradient-orb orb-3"></div>
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/1784935469955_gbrx1h.jpg');">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>A Journey of Compassion, Hope, and Generational Transformation</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>About Us</span>
+                </div>
             </div>
-            <div class="hero-grid-overlay"></div>
+        </section>
 
-            <div class="container hero-grid">
-                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="hero-badge">
-                        <span class="dot"></span>
-                        <span data-key="heroBadge">Global Impact NGO • Est. 2016</span>
-                    </div>
+        <!-- ===== OUR STORY ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="story-content">
+                    <h2 class="section-title text-center">Our <span class="highlight">Story</span></h2>
+                    <p class="text-center" style="color:#555; margin-bottom:40px;">A Vision That Began with One Heart and Grew into a Movement</p>
 
-                    <h1>
-                        <span data-key="heroTitle1">From</span><br />
-                        <span class="gradient-text" data-key="heroTitle2">Training</span><br />
-                        <span data-key="heroTitle3">to Flourishing</span>
-                    </h1>
-
-                    <p data-key="heroDesc">
-                        Empowering young women and children across the globe to become 
-                        self-sufficient, healthy, and happy — because every generation 
-                        deserves to flourish.
+                    <p class="dropcap">
+                        Every meaningful journey begins with a single step. For PHINEHAS GENERATION FOUNDATION, that step was taken in 2016 by Mrs. Oluwatosin Balogun Akano, whose compassion for people became the seed of a vision that continues to transform lives today.
                     </p>
 
-                    <div class="hero-actions">
-                        <a href="sponsor.html" class="btn btn-primary">
-                            <i class="fas fa-seedling"></i>
-                            <span data-key="heroBtn1">Get Involved</span>
-                        </a>
-                        <a href="about.html" class="btn btn-secondary">
-                            <i class="fas fa-play-circle"></i>
-                            <span data-key="heroBtn2">Our Story</span>
-                        </a>
-                        <a href="sponsor.html" class="btn btn-brown">
-                            <i class="fas fa-heart"></i>
-                            <span data-key="heroBtn3">Sponsor Now</span>
-                        </a>
+                    <p>
+                        At a time when many teenagers were silently struggling with low self-esteem, depression, peer pressure, abuse, and uncertainty about their future, Mrs. Akano recognized a pressing need for guidance and mentorship. She believed that with the right support, every young person could discover purpose, make wise decisions, and become a positive influence in society.
+                    </p>
+
+                    <p>
+                        Driven by this conviction, she established PHINEHAS GENERATION FOUNDATION as a platform where teenagers could learn, grow, ask questions freely, and receive practical guidance on issues that shape their lives. What began as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people.
+                    </p>
+
+                    <h3>A Landmark Moment</h3>
+
+                    <p>
+                        One of the foundation's landmark moments came in 2018, when teenagers from different communities gathered at the Obasanjo Presidential Library in Abeokuta for a life-changing youth hangout. Through mentorship, interactive sessions, and inspirational talks, many participants discovered new confidence, clarified their goals, and found renewed purpose. Today, many of those young people have completed higher education and are contributing meaningfully to society as graduates and professionals.
+                    </p>
+
+                    <div class="highlight-box">
+                        <p>
+                            "What started as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people."
+                        </p>
                     </div>
 
-                    <div class="hero-stats">
-                        <div class="hero-stat">
-                            <div class="number" data-key="stat1">10K+</div>
-                            <div class="label" data-key="stat1Label">Lives Impacted</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="number" data-key="stat2">12</div>
-                            <div class="label" data-key="stat2Label">Countries</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="number" data-key="stat3">8</div>
-                            <div class="label" data-key="stat3Label">Years of Service</div>
-                        </div>
-                    </div>
+                    <h3>Expanding the Vision</h3>
+
+                    <p>
+                        As the foundation expanded its activities across Abeokuta and later into Magodo, Lagos, another need became increasingly evident. During community visits and outreach programs, the team encountered many elderly men and women who had been left behind by society. Some struggled with poor health, failing eyesight, loneliness, and financial hardship. Others simply longed for someone to listen, care, and remind them that they still mattered.
+                    </p>
+
+                    <p>
+                        These encounters transformed the foundation's mission. Recognizing that a truly compassionate society must care for both its future and its past, PHINEHAS GENERATION FOUNDATION broadened its focus to include elderly care. Medical outreaches, free eye examinations, cataract interventions, prescription glasses, food distribution, financial support, and regular welfare visits became integral to the organization's work.
+                    </p>
+
+                    <h3>A Story of Restored Hope</h3>
+
+                    <p>
+                        One particularly memorable outreach took place in Igbore, Abeokuta, where Mrs. Lawal Abeke, an elderly woman living with severe cataracts, received life-changing medical attention. Following successful treatment and the provision of prescription glasses, she regained her sight and expressed overwhelming joy that the hope she thought she had lost had finally been restored. Her story remains a powerful reminder of why the foundation exists—to restore hope where it has faded and to remind every person that they are valued.
+                    </p>
+
+                    <h3>Looking Ahead</h3>
+
+                    <p>
+                        Over the years, PHINEHAS GENERATION FOUNDATION has grown beyond its humble beginnings. What started as a local initiative in Ogun State has expanded into Lagos and now reaches communities in the United Kingdom, building partnerships and extending its impact across borders while remaining rooted in its original mission of service.
+                    </p>
+
+                    <p>
+                        Today, PHINEHAS GENERATION FOUNDATION stands as a bridge between generations. We empower teenagers to become confident, responsible, and purpose-driven leaders while ensuring that elderly people receive the dignity, care, and respect they deserve.
+                    </p>
+
+                    <p>
+                        Although our reach continues to grow, our purpose remains unchanged. Every program we organize, every community we visit, every volunteer we mobilize, and every life we touch reflects our unwavering commitment to building a society where no young person is left without guidance and no elderly person is forgotten.
+                    </p>
+
+                    <p>
+                        <strong>Our story is still being written.</strong> With every life transformed, every partnership formed, and every act of kindness shared, we move one step closer to realizing our vision of a world where compassion unites generations, hope overcomes hardship, and every individual has the opportunity to thrive.
+                    </p>
+
+                    <p style="font-size:1.2rem; font-weight:600; color:var(--green); margin-top:30px;">
+                        This is our history. This is our purpose. This is the legacy we are building—one life, one family, and one generation at a time.
+                    </p>
                 </div>
+            </div>
+        </section>
 
-                <div class="hero-visual" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <div class="hero-art">
-                        <div class="ring-container">
-                            <div class="ring"></div>
-                            <div class="ring"></div>
-                            <div class="ring"></div>
+        <!-- ===== TIMELINE ===== -->
+        <section class="section-padding" style="background: var(--gray-light);">
+            <div class="container">
+                <h2 class="section-title text-center">Our <span class="highlight">Journey</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 40px;">Key milestones in our history</p>
+
+                <div class="timeline">
+                    <div class="timeline-item fade-up">
+                        <div>
+                            <div class="year">2016</div>
+                            <h4>Foundation Established</h4>
+                            <p>PHINEHAS GENERATION FOUNDATION was founded by Mrs. Oluwatosin Balogun Akano in Abeokuta, Ogun State, Nigeria.</p>
                         </div>
-                        <div class="center-icon">
-                            <span class="emoji-bg">🌱</span>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div>
+                            <div class="year">2018</div>
+                            <h4>Landmark Youth Event</h4>
+                            <p>Hundreds of teenagers gathered at the Obasanjo Presidential Library, Abeokuta, for a transformative youth hangout and mentorship program.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div>
+                            <div class="year">2019</div>
+                            <h4>Expansion to Lagos</h4>
+                            <p>The foundation expanded its operations into Magodo, Lagos, reaching more young people and communities.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div>
+                            <div class="year">2020</div>
+                            <h4>Elderly Care Initiative</h4>
+                            <p>Mission expanded to include elderly care, medical outreaches, and humanitarian support for senior citizens.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div>
+                            <div class="year">2022</div>
+                            <h4>International Presence</h4>
+                            <p>The foundation established a presence in the United Kingdom, extending its impact across borders.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div>
+                            <div class="year">Present</div>
+                            <h4>Continuing the Mission</h4>
+                            <p>Empowering teenagers and restoring dignity to elderly people across Nigeria, the UK, and beyond.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="scroll-indicator" aria-hidden="true">
-                <div class="mouse"></div>
-                <span>Scroll</span>
+        <!-- ===== MISSION & VISION ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mv-card fade-up">
+                        <span class="icon"><i class="fas fa-bullseye"></i></span>
+                        <h3>Our Mission</h3>
+                        <p>To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.</p>
+                    </div>
+                    <div class="mv-card vision fade-up">
+                        <span class="icon"><i class="fas fa-eye"></i></span>
+                        <h3>Our Vision</h3>
+                        <p>To build a world where no child is neglected and no elderly person is abandoned.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CORE VALUES ===== -->
+        <section class="section-padding" style="background: var(--gray-light);">
+            <div class="container">
+                <h2 class="section-title text-center">Our <span class="highlight">Core Values</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 40px;">The principles that guide everything we do</p>
+                <div class="values-grid stagger-children">
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <h4>Compassion</h4>
+                        <p>We serve every individual with love, empathy, and genuine care.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-shield-alt"></i></span>
+                        <h4>Integrity</h4>
+                        <p>We uphold honesty, transparency, and accountability in all we do.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-seedling"></i></span>
+                        <h4>Empowerment</h4>
+                        <p>We equip people with the knowledge, skills, and confidence to succeed.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-star"></i></span>
+                        <h4>Excellence</h4>
+                        <p>We pursue the highest standards in service and impact.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-handshake"></i></span>
+                        <h4>Respect</h4>
+                        <p>We honour the dignity and worth of every human life.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-hands-helping"></i></span>
+                        <h4>Service</h4>
+                        <p>We believe true leadership begins with serving others.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <h4>Collaboration</h4>
+                        <p>We create lasting impact by working with communities and partners.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-sun"></i></span>
+                        <h4>Hope</h4>
+                        <p>We inspire confidence for a brighter future, regardless of life's challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOUNDER PREVIEW ===== -->
+        <section class="founder-preview section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Meet Our <span class="highlight">Founder</span></h2>
+                <div class="founder-preview-grid" style="margin-top:40px;">
+                    <div class="founder-preview-image fade-up">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/1784935469955_gbrx1h.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder" />
+                    </div>
+                    <div class="founder-preview-content fade-up">
+                        <h3>Mrs. Oluwatosin Balogun Akano</h3>
+                        <span class="title">Founder & Executive Director</span>
+                        <p>
+                            With a heart for service and a vision for transformation, Mrs. Oluwatosin Balogun Akano founded PHINEHAS GENERATION FOUNDATION in 2016. Her passion for empowering young people and caring for the elderly has driven the organization's growth from a small mentorship initiative in Abeokuta to a movement reaching communities across Nigeria and the United Kingdom.
+                        </p>
+                        <p>
+                            A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.
+                        </p>
+                        <a href="founder.html" class="btn btn-primary">Learn More About Our Founder <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>You Can Change a Life Today</h2>
+                <p>Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.</p>
+                <div class="cta-buttons">
+                    <a href="donate.html" class="btn btn-brown"><i class="fas fa-heart"></i> Donate Now</a>
+                    <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+                </div>
             </div>
         </section>
 
         <!-- ===== FOOTER ===== -->
-        <footer class="footer" role="contentinfo">
+        <footer class="footer">
             <div class="container">
-                <div class="footer-content">
+                <div class="footer-grid">
                     <div class="footer-brand">
-                        <div class="logo" style="margin-bottom:8px;">
-                            <div class="logo-icon">🌱</div>
-                            <span class="logo-text" style="color:white;">Finish<span>As</span>Generation</span>
+                        <a href="index.html" class="logo" style="color:white;">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/file_00000000480881f4873ad238c15f892d_h3guqm.png" alt="Logo" style="height:48px; display:inline-block;" />
+                            <span>PHINEHAS</span>
+                        </a>
+                        <p>Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
-                        <p data-key="footerDesc">
-                            Nurturing lives and growing futures through education, 
-                            health, and empowerment for young women and children worldwide.
-                        </p>
                     </div>
-                    <div class="footer-col">
-                        <h4 data-key="footerNavTitle">Navigation</h4>
-                        <a href="index.html" data-key="navHome">Home</a>
-                        <a href="about.html" data-key="navAbout">About</a>
-                        <a href="sponsor.html" data-key="navSponsor">Sponsor</a>
-                        <a href="blog.html" data-key="navBlog">Blog</a>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="programs.html">Our Programs</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="blog.html">Blog / News</a>
+                        <a href="volunteer.html">Volunteer</a>
+                        <a href="contact.html">Contact Us</a>
                     </div>
-                    <div class="footer-col">
-                        <h4 data-key="footerSupportTitle">Support</h4>
-                        <a href="contact.html" data-key="navContact">Contact</a>
-                        <a href="sponsor.html" data-key="footerDonate">Donate</a>
-                        <a href="journey.html" data-key="footerJourney">Our Journey</a>
+                    <div class="footer-links">
+                        <h4>Programs</h4>
+                        <a href="programs.html#youth">Youth Development</a>
+                        <a href="programs.html#elderly">Elderly Care</a>
+                        <a href="programs.html#medical">Medical Outreach</a>
+                        <a href="programs.html#community">Community Development</a>
+                        <a href="programs.html#leadership">Leadership Training</a>
                     </div>
-                    <div class="footer-col">
-                        <h4 data-key="footerLegal">Legal</h4>
-                        <a href="#" data-key="footerPrivacy">Privacy Policy</a>
-                        <a href="#" data-key="footerTerms">Terms of Service</a>
-                        <a href="#" data-key="footerCookies">Cookie Policy</a>
+                    <div class="footer-links">
+                        <h4>Contact</h4>
+                        <a href="tel:+2348161370219"><i class="fas fa-phone"></i> +234 816 137 0219</a>
+                        <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> UK Office</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Nigeria Office</a>
                     </div>
                 </div>
-
                 <div class="footer-bottom">
-                    <span data-key="footerCopyright">
-                        &copy; 2026 Finish as Generation. All rights reserved.
-                    </span>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <p>&copy; 2026 <strong>PHINEHAS GENERATION FOUNDATION</strong> — Registered Charity. All rights reserved.</p>
                 </div>
             </div>
         </footer>
 
     </div>
 
-    <!-- ============================================
-    JAVASCRIPT — INDUSTRIAL GRADE
-    ============================================ -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#" style="color: var(--green-light);">Cookie Policy</a>.</p>
+        <div style="display:flex; gap:12px;">
+            <button class="btn btn-primary" id="acceptCookies">Accept</button>
+            <button class="btn btn-secondary" style="background:transparent; border-color:rgba(255,255,255,0.3); color:white;" id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
         (function() {
             'use strict';
 
-            // ===== AOS INIT =====
-            AOS.init({
-                once: true,
-                offset: 40,
-                duration: 800,
-                easing: 'ease-out-cubic',
-            });
-
-            // ===== TRANSLATIONS =====
+            // ===== LANGUAGE DATA =====
             const translations = {
                 'en-uk': {
                     navHome: 'Home',
-                    navAbout: 'About',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Journey',
-                    navContact: 'Contact',
-                    navAdmin: 'Admin',
-                    heroBadge: 'Global Impact NGO • Est. 2016',
-                    heroTitle1: 'From',
-                    heroTitle2: 'Training',
-                    heroTitle3: 'to Flourishing',
-                    heroDesc: 'Empowering young women and children across the globe to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
-                    heroBtn1: 'Get Involved',
-                    heroBtn2: 'Our Story',
-                    heroBtn3: 'Sponsor Now',
-                    stat1: '10K+',
-                    stat1Label: 'Lives Impacted',
-                    stat2: '12',
-                    stat2Label: 'Countries',
-                    stat3: '8',
-                    stat3Label: 'Years of Service',
-                    footerDesc: 'Nurturing lives and growing futures through education, health, and empowerment for young women and children worldwide.',
-                    footerNavTitle: 'Navigation',
-                    footerSupportTitle: 'Support',
-                    footerDonate: 'Donate',
-                    footerJourney: 'Our Journey',
-                    footerLegal: 'Legal',
-                    footerPrivacy: 'Privacy Policy',
-                    footerTerms: 'Terms of Service',
-                    footerCookies: 'Cookie Policy',
-                    footerCopyright: '© 2026 Finish as Generation. All rights reserved.'
-                },
-                'en-us': {
-                    navHome: 'Home',
-                    navAbout: 'About',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Journey',
-                    navContact: 'Contact',
-                    navAdmin: 'Admin',
-                    heroBadge: 'Global Impact NGO • Est. 2016',
-                    heroTitle1: 'From',
-                    heroTitle2: 'Training',
-                    heroTitle3: 'to Flourishing',
-                    heroDesc: 'Empowering young women and children across the globe to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
-                    heroBtn1: 'Get Involved',
-                    heroBtn2: 'Our Story',
-                    heroBtn3: 'Sponsor Now',
-                    stat1: '10K+',
-                    stat1Label: 'Lives Impacted',
-                    stat2: '12',
-                    stat2Label: 'Countries',
-                    stat3: '8',
-                    stat3Label: 'Years of Service',
-                    footerDesc: 'Nurturing lives and growing futures through education, health, and empowerment for young women and children worldwide.',
-                    footerNavTitle: 'Navigation',
-                    footerSupportTitle: 'Support',
-                    footerDonate: 'Donate',
-                    footerJourney: 'Our Journey',
-                    footerLegal: 'Legal',
-                    footerPrivacy: 'Privacy Policy',
-                    footerTerms: 'Terms of Service',
-                    footerCookies: 'Cookie Policy',
-                    footerCopyright: '© 2026 Finish as Generation. All rights reserved.'
+                    navAbout: 'About Us',
+                    navPrograms: 'Our Programs',
+                    navGallery: 'Gallery',
+                    navBlog: 'Blog / News',
+                    navVolunteer: 'Volunteer',
+                    navContact: 'Contact Us',
+                    navDonate: 'Donate Now',
+                    heroTitle: 'About Us',
+                    heroSub: 'A Journey of Compassion, Hope, and Generational Transformation',
+                    storyTitle: 'Our Story',
+                    storySub: 'A Vision That Began with One Heart and Grew into a Movement',
+                    journeyTitle: 'Our Journey',
+                    journeySub: 'Key milestones in our history',
+                    missionTitle: 'Our Mission',
+                    missionText: 'To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.',
+                    visionTitle: 'Our Vision',
+                    visionText: 'To build a world where no child is neglected and no elderly person is abandoned.',
+                    valuesTitle: 'Our Core Values',
+                    valuesSub: 'The principles that guide everything we do',
+                    founderTitle: 'Meet Our Founder',
+                    founderName: 'Mrs. Oluwatosin Balogun Akano',
+                    founderRole: 'Founder & Executive Director',
+                    founderBio: 'With a heart for service and a vision for transformation, Mrs. Oluwatosin Balogun Akano founded PHINEHAS GENERATION FOUNDATION in 2016. Her passion for empowering young people and caring for the elderly has driven the organization\'s growth from a small mentorship initiative in Abeokuta to a movement reaching communities across Nigeria and the United Kingdom.',
+                    founderBio2: 'A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.',
+                    founderBtn: 'Learn More About Our Founder',
+                    ctaTitle: 'You Can Change a Life Today',
+                    ctaText: 'Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.',
+                    ctaBtn1: 'Donate Now',
+                    ctaBtn2: 'Become a Volunteer',
+                    footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
+                    footerQuick: 'Quick Links',
+                    footerPrograms: 'Programs',
+                    footerContact: 'Contact',
+                    footerCopy: 'Registered Charity. All rights reserved.'
                 },
                 'de': {
                     navHome: 'Startseite',
                     navAbout: 'Über uns',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Reise',
+                    navPrograms: 'Unsere Programme',
+                    navGallery: 'Galerie',
+                    navBlog: 'Blog / Neuigkeiten',
+                    navVolunteer: 'Mithelfen',
                     navContact: 'Kontakt',
-                    navAdmin: 'Admin',
-                    heroBadge: 'Globales Impact-NGO • Gegr. 2016',
-                    heroTitle1: 'Von',
-                    heroTitle2: 'Training',
-                    heroTitle3: 'zum Aufblühen',
-                    heroDesc: 'Junge Frauen und Kinder weltweit befähigen, selbstständig, gesund und glücklich zu werden — denn jede Generation verdient es, aufzublühen.',
-                    heroBtn1: 'Mitmachen',
-                    heroBtn2: 'Unsere Geschichte',
-                    heroBtn3: 'Jetzt Spenden',
-                    stat1: '10K+',
-                    stat1Label: 'Leben berührt',
-                    stat2: '12',
-                    stat2Label: 'Länder',
-                    stat3: '8',
-                    stat3Label: 'Jahre Einsatz',
-                    footerDesc: 'Leben fördern und Zukunft wachsen lassen durch Bildung, Gesundheit und Empowerment für junge Frauen und Kinder weltweit.',
-                    footerNavTitle: 'Navigation',
-                    footerSupportTitle: 'Unterstützung',
-                    footerDonate: 'Spenden',
-                    footerJourney: 'Unsere Reise',
-                    footerLegal: 'Rechtliches',
-                    footerPrivacy: 'Datenschutz',
-                    footerTerms: 'AGB',
-                    footerCookies: 'Cookie-Richtlinie',
-                    footerCopyright: '© 2026 Finish as Generation. Alle Rechte vorbehalten.'
-                },
-                'fr': {
-                    navHome: 'Accueil',
-                    navAbout: 'À propos',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Parcours',
-                    navContact: 'Contact',
-                    navAdmin: 'Admin',
-                    heroBadge: 'ONG à Impact Global • Établie en 2016',
-                    heroTitle1: 'De',
-                    heroTitle2: 'la formation',
-                    heroTitle3: "à l'épanouissement",
-                    heroDesc: "Autonomiser les jeunes femmes et les enfants du monde entier pour qu'ils deviennent autonomes, en bonne santé et heureux — parce que chaque génération mérite de s'épanouir.",
-                    heroBtn1: "S'impliquer",
-                    heroBtn2: 'Notre histoire',
-                    heroBtn3: 'Parrainer',
-                    stat1: '10K+',
-                    stat1Label: 'Vies impactées',
-                    stat2: '12',
-                    stat2Label: 'Pays',
-                    stat3: '8',
-                    stat3Label: "Années d'engagement",
-                    footerDesc: "Nourrir les vies et faire grandir l'avenir par l'éducation, la santé et l'autonomisation des jeunes femmes et des enfants dans le monde.",
-                    footerNavTitle: 'Navigation',
-                    footerSupportTitle: 'Soutien',
-                    footerDonate: 'Faire un don',
-                    footerJourney: 'Notre parcours',
-                    footerLegal: 'Mentions légales',
-                    footerPrivacy: 'Politique de confidentialité',
-                    footerTerms: "Conditions d'utilisation",
-                    footerCookies: 'Politique des cookies',
-                    footerCopyright: '© 2026 Finish as Generation. Tous droits réservés.'
-                },
-                'pt': {
-                    navHome: 'Início',
-                    navAbout: 'Sobre',
-                    navSponsor: 'Patrocinar',
-                    navBlog: 'Blog',
-                    navJourney: 'Jornada',
-                    navContact: 'Contacto',
-                    navAdmin: 'Admin',
-                    heroBadge: 'ONG de Impacto Global • Fundada em 2016',
-                    heroTitle1: 'Da',
-                    heroTitle2: 'formação',
-                    heroTitle3: 'ao florescimento',
-                    heroDesc: 'Capacitar jovens mulheres e crianças em todo o mundo para se tornarem autossuficientes, saudáveis e felizes — porque cada geração merece florescer.',
-                    heroBtn1: 'Envolver-se',
-                    heroBtn2: 'Nossa história',
-                    heroBtn3: 'Apoiar agora',
-                    stat1: '10K+',
-                    stat1Label: 'Vidas impactadas',
-                    stat2: '12',
-                    stat2Label: 'Países',
-                    stat3: '8',
-                    stat3Label: 'Anos de serviço',
-                    footerDesc: 'Nutrir vidas e cultivar futuros através da educação, saúde e capacitação de jovens mulheres e crianças em todo o mundo.',
-                    footerNavTitle: 'Navegação',
-                    footerSupportTitle: 'Apoio',
-                    footerDonate: 'Doar',
-                    footerJourney: 'Nossa jornada',
-                    footerLegal: 'Legal',
-                    footerPrivacy: 'Política de Privacidade',
-                    footerTerms: 'Termos de Serviço',
-                    footerCookies: 'Política de Cookies',
-                    footerCopyright: '© 2026 Finish as Generation. Todos os direitos reservados.'
-                },
-                'zh': {
-                    navHome: '首页',
-                    navAbout: '关于我们',
-                    navSponsor: '赞助',
-                    navBlog: '博客',
-                    navJourney: '历程',
-                    navContact: '联系',
-                    navAdmin: '管理',
-                    heroBadge: '全球影响力非政府组织 • 成立于2016年',
-                    heroTitle1: '从',
-                    heroTitle2: '训练',
-                    heroTitle3: '到繁荣',
-                    heroDesc: '赋能全球年轻女性和儿童，使他们自立、健康、快乐 — 因为每一代人都值得繁荣。',
-                    heroBtn1: '参与',
-                    heroBtn2: '我们的故事',
-                    heroBtn3: '立即赞助',
-                    stat1: '10K+',
-                    stat1Label: '影响生命',
-                    stat2: '12',
-                    stat2Label: '国家',
-                    stat3: '8',
-                    stat3Label: '服务年限',
-                    footerDesc: '通过教育、健康和赋权，滋养生命，培育未来，服务全球年轻女性和儿童。',
-                    footerNavTitle: '导航',
-                    footerSupportTitle: '支持',
-                    footerDonate: '捐赠',
-                    footerJourney: '我们的历程',
-                    footerLegal: '法律',
-                    footerPrivacy: '隐私政策',
-                    footerTerms: '服务条款',
-                    footerCookies: 'Cookie政策',
-                    footerCopyright: '© 2026 Finish as Generation。保留所有权利。'
+                    navDonate: 'Jetzt spenden',
+                    heroTitle: 'Über uns',
+                    heroSub: 'Eine Reise der Barmherzigkeit, Hoffnung und generationenübergreifenden Transformation',
+                    storyTitle: 'Unsere Geschichte',
+                    storySub: 'Eine Vision, die mit einem Herzen begann und zu einer Bewegung wurde',
+                    journeyTitle: 'Unsere Reise',
+                    journeySub: 'Meilensteine in unserer Geschichte',
+                    missionTitle: 'Unsere Mission',
+                    missionText: 'Junge Menschen durch Mentoring, Bildung und Führungsentwicklung zu befähigen und gleichzeitig älteren Menschen durch mitfühlende Betreuung und humanitäre Hilfe Würde, Hoffnung und Glück zurückzugeben.',
+                    visionTitle: 'Unsere Vision',
+                    visionText: 'Eine Welt zu schaffen, in der kein Kind vernachlässigt und kein älterer Mensch vergessen wird.',
+                    valuesTitle: 'Unsere Kernwerte',
+                    valuesSub: 'Die Prinzipien, die alles leiten, was wir tun',
+                    founderTitle: 'Unsere Gründerin',
+                    founderName: 'Mrs. Oluwatosin Balogun Akano',
+                    founderRole: 'Gründerin & Geschäftsführerin',
+                    founderBio: 'Mit Herz für den Dienst und einer Vision für Veränderung gründete Mrs. Oluwatosin Balogun Akano 2016 die PHINEHAS GENERATION FOUNDATION. Ihre Leidenschaft für die Stärkung junger Menschen und die Betreuung älterer Menschen hat das Wachstum der Organisation von einer kleinen Mentoring-Initiative in Abeokuta zu einer Bewegung vorangetrieben, die Gemeinschaften in Nigeria und im Vereinigten Königreich erreicht.',
+                    founderBio2: 'Als engagierte Humanistin und Gemeindeleiterin glaubt sie, dass jede Generation Hoffnung verdient und dass nachhaltiger Wandel mit Investitionen in Menschen beginnt.',
+                    founderBtn: 'Mehr über unsere Gründerin erfahren',
+                    ctaTitle: 'Sie können heute ein Leben verändern',
+                    ctaText: 'Jede kleine Tat der Freundlichkeit erzeugt eine Welle der Hoffnung. Ob Sie sich ehrenamtlich engagieren, spenden oder mit uns zusammenarbeiten – Sie werden Teil einer Bewegung, die Jugendliche stärkt und älteren Menschen Würde zurückgibt.',
+                    ctaBtn1: 'Jetzt spenden',
+                    ctaBtn2: 'Mithelfer werden',
+                    footerTag: 'Jugendliche stärken. Ältere ehren. Bessere Gemeinschaften aufbauen.',
+                    footerQuick: 'Schnelllinks',
+                    footerPrograms: 'Programme',
+                    footerContact: 'Kontakt',
+                    footerCopy: 'Eingetragene Wohltätigkeitsorganisation. Alle Rechte vorbehalten.'
                 }
             };
 
-            // ===== STATE =====
-            let currentLang = localStorage.getItem('finishLang') || 'en-uk';
-            const allTranslatable = document.querySelectorAll('[data-key]');
+            // For other languages, fallback to English
+            const fallbackLang = 'en-uk';
+            let currentLang = localStorage.getItem('phinehasLang') || 'en-uk';
 
             // ===== DOM REFS =====
-            const header = document.getElementById('header');
-            const hamburger = document.getElementById('hamburger');
-            const navPrimary = document.getElementById('navPrimary');
-            const navOverlay = document.getElementById('navOverlay');
-            const langTrigger = document.getElementById('langTrigger');
+            const langToggle = document.getElementById('langToggle');
             const langDropdown = document.getElementById('langDropdown');
             const currentLangLabel = document.getElementById('currentLangLabel');
+            const allTranslatable = document.querySelectorAll('[data-key]');
             const skeleton = document.getElementById('skeleton-loader');
             const mainContent = document.getElementById('main-content');
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const scrollProgress = document.getElementById('scroll-progress');
+            const backToTop = document.getElementById('back-to-top');
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
 
-            // ===== APPLY LANGUAGE =====
+            // ===== FUNCTIONS =====
             function applyLanguage(lang) {
-                if (!translations[lang]) return;
-                const dict = translations[lang];
-
+                const dict = translations[lang] || translations[fallbackLang];
                 allTranslatable.forEach(el => {
                     const key = el.getAttribute('data-key');
                     if (dict[key] !== undefined) {
@@ -1717,122 +1602,117 @@
                         }
                     }
                 });
-
-                // Update dropdown
                 document.querySelectorAll('.lang-dropdown li').forEach(li => {
                     li.classList.toggle('active-lang', li.dataset.lang === lang);
                 });
-
-                // Update label
-                const langMap = {
-                    'en-uk': 'EN',
-                    'en-us': 'EN',
+                const langNames = {
+                    'en-uk': 'EN (UK)',
+                    'en-us': 'EN (US)',
                     'de': 'DE',
                     'fr': 'FR',
                     'pt': 'PT',
                     'zh': '中文'
                 };
-                currentLangLabel.textContent = langMap[lang] || 'EN';
-
-                localStorage.setItem('finishLang', lang);
+                currentLangLabel.textContent = langNames[lang] || 'EN';
+                localStorage.setItem('phinehasLang', lang);
                 currentLang = lang;
             }
 
-            // ===== LANG DROPDOWN =====
-            langTrigger.addEventListener('click', function(e) {
+            function toggleDropdown(e) {
                 e.stopPropagation();
-                const isOpen = langDropdown.classList.contains('open');
                 langDropdown.classList.toggle('open');
-                this.setAttribute('aria-expanded', !isOpen);
-            });
+            }
 
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.lang-wrapper')) {
-                    langDropdown.classList.remove('open');
-                    langTrigger.setAttribute('aria-expanded', 'false');
-                }
-            });
+            function closeDropdown() {
+                langDropdown.classList.remove('open');
+            }
 
+            // ===== EVENT LISTENERS =====
+            langToggle.addEventListener('click', toggleDropdown);
             langDropdown.querySelectorAll('li').forEach(li => {
                 li.addEventListener('click', function() {
                     const lang = this.dataset.lang;
                     applyLanguage(lang);
-                    langDropdown.classList.remove('open');
-                    langTrigger.setAttribute('aria-expanded', 'false');
+                    closeDropdown();
                 });
             });
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.lang-wrapper')) {
+                    closeDropdown();
+                }
+            });
 
-            // ===== HAMBURGER =====
+            // Hamburger
             hamburger.addEventListener('click', function() {
-                const isOpen = navPrimary.classList.contains('open');
-                navPrimary.classList.toggle('open');
-                navOverlay.classList.toggle('open');
-                this.classList.toggle('active');
-                this.setAttribute('aria-expanded', !isOpen);
-                document.body.style.overflow = isOpen ? '' : 'hidden';
+                navLinks.classList.toggle('open');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
             });
-
-            navOverlay.addEventListener('click', function() {
-                navPrimary.classList.remove('open');
-                navOverlay.classList.remove('open');
-                hamburger.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            });
-
-            // Close nav on link click
-            navPrimary.querySelectorAll('a').forEach(link => {
+            navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
-                    navPrimary.classList.remove('open');
-                    navOverlay.classList.remove('open');
-                    hamburger.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
+                    navLinks.classList.remove('open');
+                    const icon = hamburger.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
                 });
             });
 
-            // ===== HEADER SCROLL =====
-            let lastScroll = 0;
+            // Header scroll
             window.addEventListener('scroll', function() {
-                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                header.classList.toggle('scrolled', currentScroll > 20);
-                lastScroll = currentScroll;
-            }, { passive: true });
+                const scrollY = window.scrollY;
+                header.classList.toggle('scrolled', scrollY > 20);
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                scrollProgress.style.width = scrollPercent + '%';
+                backToTop.classList.toggle('visible', scrollY > 400);
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
 
             // ===== SKELETON LOADER =====
             window.addEventListener('load', function() {
                 setTimeout(() => {
                     skeleton.classList.add('hidden');
                     mainContent.classList.add('visible');
-                }, 1500);
+                    document.querySelectorAll('.fade-up').forEach((el, i) => {
+                        setTimeout(() => el.classList.add('visible'), 200 + i * 100);
+                    });
+                    document.querySelectorAll('.stagger-children').forEach((el) => {
+                        el.classList.add('visible');
+                    });
+                }, 1000);
+            });
+
+            // ===== COOKIE BANNER =====
+            if (!localStorage.getItem('cookiesAccepted')) {
+                cookieBanner.classList.add('show');
+            }
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+            declineCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieBanner.classList.remove('show');
+            });
+
+            // ===== NAV ACTIVE STATE =====
+            const currentPath = window.location.pathname.split('/').pop() || 'about.html';
+            navLinks.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else if (href !== 'index.html' && href !== 'about.html') {
+                    // Don't mark other pages as active
+                }
             });
 
             // ===== APPLY INITIAL LANGUAGE =====
             applyLanguage(currentLang);
-
-            // ===== ACTIVE NAV STATE =====
-            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            navPrimary.querySelectorAll('a').forEach(link => {
-                const href = link.getAttribute('href');
-                if (href === currentPath) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-
-            // ===== KEYBOARD ACCESSIBILITY =====
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    navPrimary.classList.remove('open');
-                    navOverlay.classList.remove('open');
-                    hamburger.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    langDropdown.classList.remove('open');
-                    langTrigger.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
-                }
-            });
 
         })();
     </script>
