@@ -14,6 +14,7 @@
     <meta name="twitter:title" content="PHINEHAS GENERATION FOUNDATION" />
     <meta name="twitter:description" content="Bridging generations through mentorship, healthcare, and community outreach." />
     <link rel="canonical" href="https://phinehasgeneration.org" />
+    <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" type="image/png" />
     <title>PHINEHAS GENERATION FOUNDATION | Empowering Teenagers. Honouring the Elderly.</title>
 
     <!-- Font Awesome -->
@@ -345,7 +346,6 @@
             line-height: 1.7;
         }
 
-        /* ===== UPDATED: Stat Image Row ===== */
         .stat-image-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -379,7 +379,6 @@
             font-size: 0.95rem;
         }
 
-        /* ===== UPDATED: Enhanced Program Cards ===== */
         .program-card-enhanced {
             background: white;
             border-radius: var(--radius-lg);
@@ -424,7 +423,6 @@
             line-height: 1.5;
         }
 
-        /* ===== UPDATED: Image Divider ===== */
         .image-divider {
             height: 400px;
             background-size: cover;
@@ -454,7 +452,6 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
-        /* ===== UPDATED: Founder Gallery ===== */
         .founder-gallery {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -473,7 +470,6 @@
             box-shadow: var(--shadow);
         }
 
-        /* ===== UPDATED: Testimonial with Avatar ===== */
         .testimonial-header {
             display: flex;
             align-items: center;
@@ -488,7 +484,67 @@
             border: 3px solid var(--gold);
         }
 
-        /* Skip to content */
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+            cursor: pointer;
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .blog-card .blog-thumb {
+            height: 160px;
+            overflow: hidden;
+            background: var(--gray-light);
+        }
+        .blog-card .blog-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .blog-card:hover .blog-thumb img {
+            transform: scale(1.08);
+        }
+        .blog-card .blog-info {
+            padding: 18px 16px 20px;
+        }
+        .blog-card .blog-topic {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+        .blog-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--black);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .blog-card .blog-date {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 8px;
+        }
+
         .skip-link {
             position: absolute;
             top: -100px;
@@ -573,6 +629,24 @@
         .btn-white:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
+        }
+
+        /* Admin button - faint and barely noticeable */
+        .admin-link {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            opacity: 0.08;
+            font-size: 0.6rem;
+            color: var(--gray);
+            z-index: 1;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        .admin-link:hover {
+            opacity: 0.3;
         }
 
         /* ===== HEADER / NAV ===== */
@@ -667,9 +741,10 @@
             transform: scale(1.03);
         }
 
-        /* Language Toggle */
         .lang-wrapper {
             position: relative;
+            display: flex;
+            align-items: center;
         }
         .lang-toggle {
             display: flex;
@@ -726,7 +801,6 @@
             font-weight: 600;
         }
 
-        /* Hamburger */
         .hamburger {
             display: none;
             font-size: 1.5rem;
@@ -869,7 +943,7 @@
             background: rgba(255, 255, 255, 0.7);
         }
 
-        /* ===== STAT DEMOGRAPHICS SECTION (Quick Overview) ===== */
+        /* ===== STAT DEMOGRAPHICS SECTION ===== */
         .stats-section {
             background: var(--white);
             padding: 70px 0;
@@ -1629,10 +1703,11 @@
             .stat-cards-row {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            /* UPDATED: Stat Image Row responsive */
             .stat-image-row {
                 grid-template-columns: 1fr;
+            }
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -1713,8 +1788,6 @@
                 width: 100px;
                 font-size: 0.7rem;
             }
-
-            /* UPDATED: Image Divider responsive */
             .image-divider {
                 height: 280px;
                 background-attachment: scroll;
@@ -1722,10 +1795,11 @@
             .divider-overlay blockquote {
                 font-size: 1.4rem;
             }
-
-            /* UPDATED: Founder Gallery responsive */
             .founder-gallery {
                 grid-template-columns: 1fr;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -1765,6 +1839,9 @@
                 width: 80px;
                 font-size: 0.65rem;
             }
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -1789,7 +1866,6 @@
                 <a href="index.html" class="active" data-i18n="navHome">Home</a>
                 <a href="about.html" data-i18n="navAbout">About Us</a>
                 <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
-                <a href="gallery.html" data-i18n="navGallery">Gallery</a>
                 <a href="blog.html" data-i18n="navBlog">Blog / News</a>
                 <a href="volunteer.html" data-i18n="navVolunteer">Volunteer</a>
                 <a href="contact.html" data-i18n="navContact">Contact Us</a>
@@ -1814,11 +1890,11 @@
         <!-- ===== HERO ===== -->
         <section class="hero" id="hero">
             <div class="hero-slides" id="heroSlides">
-                <div class="hero-slide active" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');"></div>
-                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784785469497_wgtrih.jpg');"></div>
-                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784938756_fom806.jpg');"></div>
-                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg');"></div>
-                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784229854_ktdfci.jpg');"></div>
+                <div class="hero-slide active" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784938657/1784785469497_wgtrih.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784938657/1784784938756_fom806.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg');"></div>
             </div>
 
             <div class="hero-overlay">
@@ -1937,7 +2013,6 @@
                 </div>
             </div>
 
-            <!-- UPDATED: Enhanced Donut Chart -->
             <div class="container mt-48">
                 <div class="chart-grid">
                     <div class="chart-visual fade-up">
@@ -1953,32 +2028,20 @@
                                     <stop offset="50%" style="stop-color:#6b8f71;stop-opacity:1"/>
                                     <stop offset="100%" style="stop-color:#3d5a42;stop-opacity:1"/>
                                 </linearGradient>
-                                <filter id="glowGold">
-                                    <feGaussianBlur stdDeviation="6" result="blur"/>
-                                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-                                </filter>
-                                <filter id="innerShadow">
-                                    <feOffset dx="0" dy="2"/>
-                                    <feGaussianBlur stdDeviation="3" result="offset-blur"/>
-                                    <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
-                                    <feFlood flood-color="black" flood-opacity="0.15" result="color"/>
-                                    <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
-                                    <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
-                                </filter>
                             </defs>
                             <circle cx="200" cy="200" r="150" fill="none" stroke="#f5f2ec" stroke-width="45" />
                             <circle cx="200" cy="200" r="150" fill="none" stroke="url(#donutGold)" stroke-width="45"
                                 stroke-dasharray="753.98 942.48" stroke-dashoffset="0" transform="rotate(-90 200 200)"
-                                stroke-linecap="round" filter="url(#glowGold)" class="chart-animate" />
+                                stroke-linecap="round" class="chart-animate" />
                             <circle cx="200" cy="200" r="150" fill="none" stroke="url(#donutGreen)" stroke-width="45"
                                 stroke-dasharray="188.50 942.48" stroke-dashoffset="-753.98" transform="rotate(-90 200 200)"
                                 stroke-linecap="round" class="chart-animate" />
-                            <circle cx="200" cy="200" r="105" fill="white" filter="url(#innerShadow)" />
+                            <circle cx="200" cy="200" r="105" fill="white" />
                             <circle cx="200" cy="200" r="100" fill="#fafaf9" />
                             <text x="200" y="185" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="900" fill="#c8943e">80%</text>
-                            <text x="200" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" fill="#5a5a5a" letter-spacing="0.5">of older people</text>
+                            <text x="200" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" fill="#5a5a5a">of older people</text>
                             <text x="200" y="232" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#9a9a9a">will live in LMICs</text>
-                            <text x="200" y="255" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#c8943e" font-weight="700" letter-spacing="2">BY 2050</text>
+                            <text x="200" y="255" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#c8943e" font-weight="700" letter-spacing="2px">BY 2050</text>
                             <g transform="translate(50, 340)">
                                 <rect x="0" y="0" width="14" height="14" rx="3" fill="url(#donutGold)"/>
                                 <text x="20" y="12" font-family="'Inter', sans-serif" font-size="11" fill="#5a5a5a">Low &amp; Middle-Income Countries</text>
@@ -1996,7 +2059,6 @@
                     </div>
                 </div>
 
-                <!-- Mini Stat Cards -->
                 <div class="stat-cards-row mt-48 fade-up">
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-users"></i></div>
@@ -2020,19 +2082,17 @@
                     </div>
                 </div>
 
-                <!-- UPDATED: Elderly Portrait Images -->
                 <div class="stat-image-row mt-48 fade-up">
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Elderly woman with dignity and wisdom — representing the millions of seniors PHINEHAS GENERATION serves" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Elderly woman with dignity and wisdom — representing the millions of seniors PHINEHAS GENERATION serves" loading="lazy" />
                         <div class="stat-image-overlay">Dignity knows no age — every elderly person deserves care</div>
                     </div>
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972754947_uulto2.jpg" alt="Community health outreach providing medical care to elderly persons" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972754947_uulto2.jpg" alt="Community health outreach providing medical care to elderly persons" loading="lazy" />
                         <div class="stat-image-overlay">Medical outreach restoring hope and health to communities</div>
                     </div>
                 </div>
 
-                <!-- Conclusion Box -->
                 <div class="conclusion-box fade-up mt-48">
                     <h4 data-i18n="ageConclusionTitle">Why PHINEHAS GENERATION Is Responding</h4>
                     <p data-i18n="ageConclusionText">These numbers are not abstract. They represent grandmothers, grandfathers, widows, and retired community builders — people who have given their best years to society and now face isolation, untreated medical conditions, and poverty. PHINEHAS GENERATION FOUNDATION exists to restore dignity to these lives through medical outreach, food support, companionship, and compassionate care. We believe that honouring the elderly is not charity — it is a moral obligation.</p>
@@ -2061,7 +2121,6 @@
                 </div>
             </div>
 
-            <!-- UPDATED: Enhanced Bar Chart -->
             <div class="container mt-48">
                 <div class="chart-grid">
                     <div class="chart-insight fade-up">
@@ -2083,49 +2142,31 @@
                                     <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1"/>
                                     <stop offset="100%" style="stop-color:#5a5a5a;stop-opacity:1"/>
                                 </linearGradient>
-                                <filter id="barShadow">
-                                    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#00000012"/>
-                                </filter>
                             </defs>
-                            <!-- Grid lines -->
                             <g stroke="#e8e6e1" stroke-width="1" stroke-dasharray="4,4" opacity="0.5">
                                 <line x1="120" y1="60" x2="480" y2="60"/>
                                 <line x1="120" y1="120" x2="480" y2="120"/>
                                 <line x1="120" y1="180" x2="480" y2="180"/>
                                 <line x1="120" y1="240" x2="480" y2="240"/>
                             </g>
-                            <!-- Bar 1 -->
-                            <g filter="url(#barShadow)">
-                                <rect x="120" y="40" width="360" height="28" rx="14" fill="url(#barGold)" class="bar-animate" data-width="360"/>
-                            </g>
+                            <rect x="120" y="40" width="360" height="28" rx="14" fill="url(#barGold)" class="bar-animate" data-width="360"/>
                             <text x="105" y="59" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">Under 25</text>
                             <text x="488" y="59" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#c8943e">3 bn+</text>
-                            <!-- Bar 2 -->
-                            <g filter="url(#barShadow)">
-                                <rect x="120" y="100" width="155" height="28" rx="14" fill="url(#barGreen)" class="bar-animate" data-width="155"/>
-                            </g>
+                            <rect x="120" y="100" width="155" height="28" rx="14" fill="url(#barGreen)" class="bar-animate" data-width="155"/>
                             <text x="105" y="119" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">Adolescents (10-19)</text>
                             <text x="283" y="119" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#6b8f71">1.3 bn</text>
-                            <!-- Bar 3 -->
-                            <g filter="url(#barShadow)">
-                                <rect x="120" y="160" width="324" height="28" rx="14" fill="url(#barDark)" class="bar-animate" data-width="324"/>
-                            </g>
+                            <rect x="120" y="160" width="324" height="28" rx="14" fill="url(#barDark)" class="bar-animate" data-width="324"/>
                             <text x="105" y="179" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">In LMICs</text>
                             <text x="452" y="179" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#2a2a2a">~90%</text>
-                            <!-- Bar 4 -->
-                            <g filter="url(#barShadow)">
-                                <rect x="120" y="220" width="50" height="28" rx="14" fill="url(#barGold)" class="bar-animate" data-width="50"/>
-                            </g>
+                            <rect x="120" y="220" width="50" height="28" rx="14" fill="url(#barGold)" class="bar-animate" data-width="50"/>
                             <text x="105" y="239" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">Mental health affected</text>
                             <text x="178" y="239" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#c8943e">1 in 7</text>
-                            <!-- Title -->
                             <text x="250" y="295" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="14" font-weight="700" fill="#2a2a2a">Global Youth Demographics</text>
                             <text x="250" y="312" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#9a9a9a">Source: WHO, UN DESA, World Population Prospects 2024</text>
                         </svg>
                     </div>
                 </div>
 
-                <!-- Mini Stat Cards -->
                 <div class="stat-cards-row mt-48 fade-up">
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-child"></i></div>
@@ -2149,19 +2190,17 @@
                     </div>
                 </div>
 
-                <!-- UPDATED: Youth Group Images -->
                 <div class="stat-image-row mt-48 fade-up">
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784229854_ktdfci.jpg" alt="Youth group engaged in community activities — the next generation of leaders" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg" alt="Youth group engaged in community activities — the next generation of leaders" loading="lazy" />
                         <div class="stat-image-overlay">The largest youth generation in history deserves guidance</div>
                     </div>
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972471198_hxwsgc.jpg" alt="School children outreach program by PHINEHAS GENERATION FOUNDATION" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972471198_hxwsgc.jpg" alt="School children outreach program by PHINEHAS GENERATION FOUNDATION" loading="lazy" />
                         <div class="stat-image-overlay">Education and mentorship reaching the next generation</div>
                     </div>
                 </div>
 
-                <!-- Conclusion Box -->
                 <div class="conclusion-box fade-up mt-48" style="border-left-color: var(--green);">
                     <h4 data-i18n="youthConclusionTitle">Why PHINEHAS GENERATION Invests in Youth</h4>
                     <p data-i18n="youthConclusionText">Every statistic above represents a young person with dreams, potential, and the capacity to lead — if given the right tools. PHINEHAS GENERATION FOUNDATION runs mentorship programs, self-esteem workshops, mental health awareness campaigns, and educational outreach specifically designed to equip teenagers with confidence, character, and purpose. We are not simply filling gaps; we are building the next generation of ethical, capable leaders.</p>
@@ -2179,7 +2218,6 @@
                 <p class="section-subtitle mx-auto" data-i18n="challengesSub">Beyond demographics, there are pressing social crises that disproportionately affect the populations we serve. These statistics are not merely numbers — they are the reasons our programs exist.</p>
             </div>
 
-            <!-- Sub-section A: Mental Health -->
             <div class="container mt-32">
                 <div class="section-divider">
                     <div class="line"></div>
@@ -2189,7 +2227,6 @@
 
                 <div class="chart-grid mt-32">
                     <div class="chart-visual fade-up">
-                        <!-- UPDATED: Enhanced Mental Health Pie Chart -->
                         <svg viewBox="0 0 400 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart showing 280 million people live with depression worldwide">
                             <defs>
                                 <linearGradient id="pieGoldMH" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -2206,14 +2243,11 @@
                                     <stop offset="50%" style="stop-color:#6b8f71"/>
                                     <stop offset="100%" style="stop-color:#3d5a42"/>
                                 </linearGradient>
-                                <filter id="pieShadow">
-                                    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000015"/>
-                                </filter>
                             </defs>
                             <circle cx="200" cy="200" r="140" fill="none" stroke="#f0ede8" stroke-width="40" />
                             <circle cx="200" cy="200" r="140" fill="none" stroke="url(#pieGoldMH)" stroke-width="40"
                                 stroke-dasharray="439.82 879.65" stroke-dashoffset="0" transform="rotate(-90 200 200)"
-                                stroke-linecap="butt" filter="url(#pieShadow)" class="chart-animate" />
+                                stroke-linecap="butt" class="chart-animate" />
                             <circle cx="200" cy="200" r="140" fill="none" stroke="url(#pieDarkMH)" stroke-width="40"
                                 stroke-dasharray="31.82 879.65" stroke-dashoffset="-439.82" transform="rotate(-90 200 200)"
                                 stroke-linecap="butt" class="chart-animate" />
@@ -2236,20 +2270,18 @@
                     <p data-i18n="mhConclusionText">PHINEHAS GENERATION FOUNDATION addresses this crisis directly through our <strong>Mental Health Awareness</strong> program. We educate teenagers on depression, emotional wellbeing, and resilience — creating safe spaces for conversation in schools and communities where the topic is often taboo. Early intervention saves lives.</p>
                 </div>
 
-                <!-- UPDATED: Mental Health & Founder with Teenagers images -->
                 <div class="stat-image-row mt-48 fade-up">
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972754947_uulto2.jpg" alt="Mental health awareness and community support circle" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972754947_uulto2.jpg" alt="Mental health awareness and community support circle" loading="lazy" />
                         <div class="stat-image-overlay">Creating safe spaces for mental health conversations</div>
                     </div>
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786485653_gth2i5.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with teenagers after a seminar" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with teenagers after a seminar" loading="lazy" />
                         <div class="stat-image-overlay">Mentorship that shapes character and builds confidence</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Sub-section B: Violence Against Women & Girls -->
             <div class="container mt-48">
                 <div class="section-divider">
                     <div class="line"></div>
@@ -2281,7 +2313,6 @@
                 </div>
             </div>
 
-            <!-- Sub-section C: Drug Use & Addiction -->
             <div class="container mt-48">
                 <div class="section-divider">
                     <div class="line"></div>
@@ -2315,22 +2346,21 @@
                     <p data-i18n="drugConclusionText">PHINEHAS GENERATION FOUNDATION's youth mentorship and <strong>Sexual Purity</strong> programs equip teenagers with the self-esteem, decision-making skills, and positive peer networks necessary to resist destructive behaviours. We believe that a guided teenager is far less likely to become a statistic.</p>
                 </div>
 
-                <!-- UPDATED: Founder with Children & Medical Outreach images -->
                 <div class="stat-image-row mt-48 fade-up">
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with children during community outreach" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786312206_lbfedq.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with children during community outreach" loading="lazy" />
                         <div class="stat-image-overlay">Building tomorrow's leaders through compassion and guidance</div>
                     </div>
                     <div class="stat-image-card">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938660/1784785403963_qyohyv.jpg" alt="Medical outreach providing healthcare to community members" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg" alt="Medical outreach providing healthcare to community members" loading="lazy" />
                         <div class="stat-image-overlay">Healthcare access changing lives in underserved communities</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== UPDATED: Sunrise Image Divider ===== -->
-        <section class="image-divider" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784981609/sunrise-wildlife-shots_bn7p3z.jpg');">
+        <!-- ===== IMAGE DIVIDER ===== -->
+        <section class="image-divider" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784981609/sunrise-wildlife-shots_bn7p3z.jpg');">
             <div class="divider-overlay">
                 <blockquote>"Raising tomorrow's leaders while honouring yesterday's heroes."</blockquote>
             </div>
@@ -2341,7 +2371,7 @@
             <div class="container">
                 <div class="about-preview">
                     <div class="about-image fade-up">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg" alt="PHINEHAS GENERATION FOUNDATION Team during a community outreach event in 2019" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg" alt="PHINEHAS GENERATION FOUNDATION Team during a community outreach event in 2019" loading="lazy" />
                         <span class="image-badge">Est. 2016</span>
                     </div>
                     <div class="about-content fade-up">
@@ -2390,7 +2420,7 @@
                 </div>
                 <div class="serve-grid">
                     <div class="serve-card fade-up">
-                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');"></div>
+                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg');"></div>
                         <div class="serve-content">
                             <span class="serve-icon" style="color:var(--gold);"><i class="fas fa-user-graduate"></i></span>
                             <h3 data-i18n="serveTeen">Teenagers</h3>
@@ -2398,7 +2428,7 @@
                         </div>
                     </div>
                     <div class="serve-card fade-up">
-                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973206/1784972430153_u0b6q2.jpg');"></div>
+                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973206/1784972430153_u0b6q2.jpg');"></div>
                         <div class="serve-content">
                             <span class="serve-icon" style="color:var(--green);"><i class="fas fa-heart"></i></span>
                             <h3 data-i18n="serveElder">Elderly People</h3>
@@ -2430,7 +2460,7 @@
             </div>
         </section>
 
-        <!-- ===== UPDATED: PROGRAMS WITH ENHANCED CARDS ===== -->
+        <!-- ===== PROGRAMS ===== -->
         <section class="section-padding" style="background: var(--white-soft);">
             <div class="container">
                 <div class="text-center" style="margin-bottom: 40px;">
@@ -2441,7 +2471,7 @@
                 <div class="programs-grid" id="programsGrid">
                     <div class="program-card-enhanced fade-up">
                         <div class="program-thumb">
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786485653_gth2i5.jpg" alt="Self-Esteem Development workshop with teenagers" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg" alt="Self-Esteem Development workshop with teenagers" loading="lazy" />
                         </div>
                         <div class="program-info">
                             <span class="icon"><i class="fas fa-star"></i></span>
@@ -2451,7 +2481,7 @@
                     </div>
                     <div class="program-card-enhanced fade-up">
                         <div class="program-thumb">
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972471198_hxwsgc.jpg" alt="School outreach promoting respect and responsibility" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972471198_hxwsgc.jpg" alt="School outreach promoting respect and responsibility" loading="lazy" />
                         </div>
                         <div class="program-info">
                             <span class="icon"><i class="fas fa-shield-alt"></i></span>
@@ -2461,7 +2491,7 @@
                     </div>
                     <div class="program-card-enhanced fade-up">
                         <div class="program-thumb">
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg" alt="Founder teaching healthy values to children" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786312206_lbfedq.jpg" alt="Founder teaching healthy values to children" loading="lazy" />
                         </div>
                         <div class="program-info">
                             <span class="icon"><i class="fas fa-dove"></i></span>
@@ -2471,7 +2501,7 @@
                     </div>
                     <div class="program-card-enhanced fade-up">
                         <div class="program-thumb">
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972754947_uulto2.jpg" alt="Mental health awareness session with youth" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972754947_uulto2.jpg" alt="Mental health awareness session with youth" loading="lazy" />
                         </div>
                         <div class="program-info">
                             <span class="icon"><i class="fas fa-brain"></i></span>
@@ -2481,7 +2511,7 @@
                     </div>
                     <div class="program-card-enhanced fade-up">
                         <div class="program-thumb">
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938660/1784785403963_qyohyv.jpg" alt="Medical outreach providing free healthcare services" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg" alt="Medical outreach providing free healthcare services" loading="lazy" />
                         </div>
                         <div class="program-info">
                             <span class="icon"><i class="fas fa-stethoscope"></i></span>
@@ -2491,7 +2521,7 @@
                     </div>
                     <div class="program-card-enhanced fade-up">
                         <div class="program-thumb">
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Community welfare supporting vulnerable elderly people" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Community welfare supporting vulnerable elderly people" loading="lazy" />
                         </div>
                         <div class="program-info">
                             <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
@@ -2502,6 +2532,23 @@
                 </div>
                 <div class="text-center" style="margin-top: 36px;">
                     <a href="programs.html" class="btn btn-dark" data-i18n="programsBtn">View All Programs <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BLOG POSTS (Latest 4) ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <span class="section-label" data-i18n="blogLabel">Latest Stories</span>
+                    <h2 class="section-title" data-i18n="blogTitle">From Our <span class="highlight">Blog</span></h2>
+                    <p class="section-subtitle mx-auto" data-i18n="blogSub">Stories of impact, hope, and transformation</p>
+                </div>
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog posts will be dynamically loaded from localStorage -->
+                </div>
+                <div class="text-center" style="margin-top: 32px;">
+                    <a href="blog.html" class="btn btn-dark" data-i18n="blogViewAll">View All Posts <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -2533,7 +2580,7 @@
                 </div>
                 <div class="founder-grid">
                     <div class="founder-image fade-up">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938653/1784934975518_slmphx.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder and Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938653/1784934975518_slmphx.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder and Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
                         <span class="founder-badge"><i class="fas fa-crown"></i> <span data-i18n="founderBadge">Founder</span></span>
                     </div>
                     <div class="founder-content fade-up">
@@ -2547,10 +2594,9 @@
                         </p>
                         <p class="founder-quote" data-i18n="founderQuote">"Raising tomorrow's leaders while honouring yesterday's heroes."</p>
 
-                        <!-- UPDATED: Founder Gallery Images -->
                         <div class="founder-gallery">
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg" alt="Founder with children during community outreach" loading="lazy" />
-                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786485653_gth2i5.jpg" alt="Founder with teenagers after seminar program" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786312206_lbfedq.jpg" alt="Founder with children during community outreach" loading="lazy" />
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg" alt="Founder with teenagers after seminar program" loading="lazy" />
                         </div>
 
                         <a href="founder.html" class="btn btn-dark" style="margin-top:16px;" data-i18n="founderBtn">Read Her Story <i class="fas fa-arrow-right"></i></a>
@@ -2569,7 +2615,7 @@
                 </div>
                 <div class="stories-grid">
                     <div class="story-card fade-up">
-                        <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938656/1784785406845_bfvjb3.jpg');"></div>
+                        <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg');"></div>
                         <div class="story-content">
                             <span class="story-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="story1Location">Igbore, Abeokuta, Ogun State, Nigeria</span></span>
                             <h4 data-i18n="story1Title">Restoring Hope Through Sight</h4>
@@ -2577,7 +2623,7 @@
                         </div>
                     </div>
                     <div class="story-card fade-up">
-                        <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786350528_z8qsei.jpg');"></div>
+                        <div class="story-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786350528_z8qsei.jpg');"></div>
                         <div class="story-content">
                             <span class="story-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="story2Location">Obasanjo Presidential Library, Abeokuta (2018)</span></span>
                             <h4 data-i18n="story2Title">Inspiring Purpose in the Next Generation</h4>
@@ -2655,7 +2701,6 @@
                     <a href="index.html" data-i18n="footerHome">Home</a>
                     <a href="about.html" data-i18n="footerAbout">About Us</a>
                     <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
-                    <a href="gallery.html" data-i18n="footerGallery">Gallery</a>
                     <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
                     <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
                     <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
@@ -2688,6 +2733,9 @@
 
     <!-- ===== WHATSAPP FLOAT ===== -->
     <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- ===== ADMIN LINK (Faint, barely noticeable) ===== -->
+    <a href="admin.html" class="admin-link" aria-label="Admin Panel">⚙ admin</a>
 
     <!-- ===== COOKIE BANNER ===== -->
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
@@ -2727,20 +2775,100 @@
         (function() {
             'use strict';
 
+            // ===== BLOG DATA =====
+            // Sample blog posts - these would normally come from adminconsole.html
+            const defaultBlogPosts = [
+                {
+                    id: 1,
+                    topic: "Mental Health",
+                    title: "Breaking the Silence: Mental Health Awareness Among Nigerian Youth",
+                    image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972754947_uulto2.jpg",
+                    date: "July 20, 2026",
+                    excerpt: "Mental health remains a taboo subject in many Nigerian communities. Our latest outreach program is changing that..."
+                },
+                {
+                    id: 2,
+                    topic: "Community Outreach",
+                    title: "Bringing Free Healthcare to Underserved Communities",
+                    image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg",
+                    date: "July 15, 2026",
+                    excerpt: "Our medical outreach team recently visited three communities in Ogun State, providing free healthcare services..."
+                },
+                {
+                    id: 3,
+                    topic: "Youth Development",
+                    title: "Building Self-Esteem: How Mentorship Changes Lives",
+                    image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg",
+                    date: "July 10, 2026",
+                    excerpt: "Teenagers who participated in our self-esteem development program showed remarkable improvement in confidence..."
+                },
+                {
+                    id: 4,
+                    topic: "Elderly Care",
+                    title: "Honouring Our Heroes: Supporting Elderly People in Nigeria",
+                    image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
+                    date: "July 5, 2026",
+                    excerpt: "Our community welfare program continues to provide food, medical care, and companionship to elderly people..."
+                }
+            ];
+
+            // Load blog posts from localStorage or use defaults
+            function getBlogPosts() {
+                const stored = localStorage.getItem('phinehasBlogPosts');
+                if (stored) {
+                    try {
+                        const parsed = JSON.parse(stored);
+                        if (Array.isArray(parsed) && parsed.length > 0) {
+                            return parsed;
+                        }
+                    } catch(e) {
+                        // If parsing fails, use defaults
+                    }
+                }
+                // If no stored posts, save defaults and return them
+                localStorage.setItem('phinehasBlogPosts', JSON.stringify(defaultBlogPosts));
+                return defaultBlogPosts;
+            }
+
+            // Render blog posts
+            function renderBlogPosts() {
+                const blogGrid = document.getElementById('blogGrid');
+                if (!blogGrid) return;
+                
+                const posts = getBlogPosts();
+                // Get only the 4 most recent posts
+                const latestPosts = posts.slice(0, 4);
+                
+                if (latestPosts.length === 0) {
+                    blogGrid.innerHTML = '<p style="text-align:center;color:var(--gray-dark);grid-column:1/-1;">No blog posts yet. Check back soon!</p>';
+                    return;
+                }
+
+                blogGrid.innerHTML = latestPosts.map(post => `
+                    <div class="blog-card" onclick="window.location.href='blog.html?post=${post.id}'" role="link" tabindex="0">
+                        <div class="blog-thumb">
+                            <img src="${post.image || 'https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg'}" alt="${post.title}" loading="lazy" />
+                        </div>
+                        <div class="blog-info">
+                            <div class="blog-topic">${post.topic || 'News'}</div>
+                            <h4>${post.title}</h4>
+                            <div class="blog-date"><i class="far fa-calendar-alt"></i> ${post.date || 'Recent'}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
             // ===== TRANSLATIONS =====
             const translations = {
                 'en': {
-                    // Nav
-                    navHome: 'Home', navAbout: 'About Us', navPrograms: 'Our Programs', navGallery: 'Gallery',
+                    navHome: 'Home', navAbout: 'About Us', navPrograms: 'Our Programs',
                     navBlog: 'Blog / News', navVolunteer: 'Volunteer', navContact: 'Contact Us', navDonate: 'Donate Now',
-                    // Hero
                     heroTag: 'PHINEHAS GENERATION FOUNDATION',
                     heroTitle: 'Bridging Generations.<br /><span class="highlight">Inspiring Hope.</span><br />Transforming Lives.',
                     heroDesc: 'Empowering teenagers with knowledge, mentorship, and life-changing opportunities while restoring dignity, hope, and joy to elderly people through compassionate care and community outreach.',
                     heroBtn1: '<i class="fas fa-hands-helping"></i> Become a Volunteer',
                     heroBtn2: '<i class="fas fa-heart"></i> Donate Now',
                     heroStat: 'Founded with a vision to serve two generations — teenagers and the elderly — across Nigeria and beyond.',
-                    // Stats Quick Overview
                     statsLabel: 'The Need Is Urgent',
                     statsTitleAgeing: 'Demographics at a Glance: <span class="highlight">An Ageing World</span>',
                     statAge1: 'people will be aged 60 years or over by 2030',
@@ -2755,7 +2883,6 @@
                     statYouth4: 'adolescents account for over 16% of the global population',
                     statsSource: 'Sources: WHO, UN DESA, World Population Prospects',
                     statsReadMore: 'Read the full story behind the numbers <i class="fas fa-arrow-down"></i>',
-                    // Section 1: Ageing World
                     ageEyebrow: 'The Global Reality',
                     ageTitle: 'An <span class="highlight">Ageing World</span> That Cannot Be Ignored',
                     ageChartTitle1: 'Where the Burden Falls Heaviest',
@@ -2767,7 +2894,6 @@
                     ageStat4: 'people aged 80+ by 2050 — the most vulnerable group',
                     ageConclusionTitle: 'Why PHINEHAS GENERATION Is Responding',
                     ageConclusionText: 'These numbers are not abstract. They represent grandmothers, grandfathers, widows, and retired community builders — people who have given their best years to society and now face isolation, untreated medical conditions, and poverty. PHINEHAS GENERATION FOUNDATION exists to restore dignity to these lives through medical outreach, food support, companionship, and compassionate care. We believe that honouring the elderly is not charity — it is a moral obligation.',
-                    // Section 2: Next Generation
                     youthEyebrow: 'The Future Is Young',
                     youthTitle: 'The <span class="highlight">Largest Generation</span> of Young People in History',
                     youthChartTitle1: 'A Demographic Snapshot of Global Youth',
@@ -2778,7 +2904,6 @@
                     youthStat4: 'adolescents experience a mental disorder',
                     youthConclusionTitle: 'Why PHINEHAS GENERATION Invests in Youth',
                     youthConclusionText: 'Every statistic above represents a young person with dreams, potential, and the capacity to lead — if given the right tools. PHINEHAS GENERATION FOUNDATION runs mentorship programs, self-esteem workshops, mental health awareness campaigns, and educational outreach specifically designed to equip teenagers with confidence, character, and purpose. We are not simply filling gaps; we are building the next generation of ethical, capable leaders.',
-                    // Section 3: Global Challenges
                     challengesEyebrow: 'The Urgent Issues',
                     challengesTitle: 'Global Challenges <span class="highlight">We Confront</span>',
                     challengesSub: 'Beyond demographics, there are pressing social crises that disproportionately affect the populations we serve. These statistics are not merely numbers — they are the reasons our programs exist.',
@@ -2800,23 +2925,19 @@
                     drugDesc2: 'Young people are disproportionately affected. Substance abuse often begins in adolescence, fueled by peer pressure, trauma, lack of guidance, and economic hopelessness. Without early intervention, addiction derails education, destroys families, and perpetuates cycles of poverty.',
                     drugConclusionTitle: 'Prevention Through Mentorship',
                     drugConclusionText: 'PHINEHAS GENERATION FOUNDATION\'s youth mentorship and <strong>Sexual Purity</strong> programs equip teenagers with the self-esteem, decision-making skills, and positive peer networks necessary to resist destructive behaviours. We believe that a guided teenager is far less likely to become a statistic.',
-                    // About
                     aboutLabel: 'Who We Are',
                     aboutTitle: 'About <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION',
                     aboutP1: 'Founded in 2016 by <strong>Mrs. Oluwatosin Balogun Akano</strong>, PHINEHAS GENERATION FOUNDATION is a non-governmental organization committed to building stronger communities by empowering teenagers and caring for elderly people.',
                     aboutP2: 'What started as a vision to mentor young people has grown into a movement of hope that now reaches families, communities, and senior citizens through education, advocacy, humanitarian outreach, and compassionate service.',
                     aboutP3: 'From our beginnings in Abeokuta to our expansion into Lagos and the United Kingdom, our commitment remains the same: <strong>raising tomorrow\'s leaders while honouring yesterday\'s heroes.</strong>',
                     aboutBtn: 'Read Our Story <i class="fas fa-arrow-right"></i>',
-                    // Mission Vision
                     missionTitle: 'Our Mission',
                     missionText: 'To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.',
                     visionTitle: 'Our Vision',
                     visionText: 'To build a world where no child is neglected and no elderly person is abandoned.',
-                    // Who We Serve
                     serveLabel: 'Our Focus', serveTitle: 'Who <span class="highlight">We Serve</span>', serveSub: 'Two generations that shape every society',
                     serveTeen: 'Teenagers', serveTeenDesc: 'Helping young people develop confidence, character, leadership, and purpose through mentorship, education, and life skills.',
                     serveElder: 'Elderly People', serveElderDesc: 'Providing care, medical outreach, food support, emotional encouragement, and companionship to senior citizens.',
-                    // Values
                     valuesLabel: 'What Guides Us', valuesTitle: 'Our <span class="highlight">Core Values</span>', valuesSub: 'The principles that guide everything we do',
                     val1Title: 'Compassion', val1Desc: 'We serve every individual with love, empathy, and genuine care.',
                     val2Title: 'Integrity', val2Desc: 'We uphold honesty, transparency, and accountability in all we do.',
@@ -2826,7 +2947,6 @@
                     val6Title: 'Service', val6Desc: 'We believe true leadership begins with serving others.',
                     val7Title: 'Collaboration', val7Desc: 'We create lasting impact by working with communities and partners.',
                     val8Title: 'Hope', val8Desc: 'We inspire confidence for a brighter future, regardless of life\'s challenges.',
-                    // Programs
                     programsLabel: 'What We Do', programsTitle: 'Our <span class="highlight">Programs</span>', programsSub: 'Creating impact through targeted initiatives',
                     prog1Title: 'Self-Esteem Development', prog1Desc: 'Helping teenagers discover their worth and confidence.',
                     prog2Title: 'Real Men Don\'t Rape', prog2Desc: 'Promoting respect, responsibility, and gender-based violence prevention.',
@@ -2835,26 +2955,24 @@
                     prog5Title: 'Medical Outreach', prog5Desc: 'Providing free healthcare services, eye tests, and prescription glasses.',
                     prog6Title: 'Community Welfare', prog6Desc: 'Food distribution, financial assistance, and support for vulnerable elderly people.',
                     programsBtn: 'View All Programs <i class="fas fa-arrow-right"></i>',
-                    // Why We Exist
+                    blogLabel: 'Latest Stories', blogTitle: 'From Our <span class="highlight">Blog</span>', blogSub: 'Stories of impact, hope, and transformation',
+                    blogViewAll: 'View All Posts <i class="fas fa-arrow-right"></i>',
                     whyLabel: 'Our Reason', whyTitle: 'Why <span style="color:var(--gold-light);">We Exist</span>', whySub: 'Every generation deserves hope',
                     why1Title: 'Teenagers', why1Desc: 'Deserve guidance',
                     why2Title: 'The Elderly', why2Desc: 'Deserve dignity',
                     why3Title: 'Communities', why3Desc: 'Deserve compassion',
                     why4Title: 'Every Generation', why4Desc: 'Deserves hope',
-                    // Founder
                     founderLabel: 'Our Leader', founderTitle: 'Meet Our <span class="highlight">Founder</span>', founderSub: 'A Vision Born from Compassion',
                     founderBadge: 'Founder', founderName: 'Mrs. Oluwatosin Balogun Akano', founderRole: 'Founder & Executive Director',
                     founderBio1: 'Behind every life transformed by PHINEHAS GENERATION FOUNDATION is a woman whose heart has always been drawn to people. In 2016, Mrs. Oluwatosin Balogun Akano founded the organization with a simple but profound conviction: that every young person deserves guidance, and every elderly person deserves to be valued.',
                     founderBio2: 'What began as a passion to mentor teenagers has grown into a movement that empowers young people, restores dignity to senior citizens, and inspires communities to care for one another. Her unwavering commitment to compassion, service, and human development continues to shape every program, outreach, and life touched by the foundation.',
                     founderQuote: '"Raising tomorrow\'s leaders while honouring yesterday\'s heroes."',
                     founderBtn: 'Read Her Story <i class="fas fa-arrow-right"></i>',
-                    // Stories
                     storiesLabel: 'Impact', storiesTitle: 'Success <span class="highlight">Stories</span>', storiesSub: 'Real lives changed by your support',
                     story1Location: 'Igbore, Abeokuta, Ogun State, Nigeria', story1Title: 'Restoring Hope Through Sight',
                     story1Text: 'Mrs. Lawal Abeke had been living with severe cataracts that significantly impaired her vision. Through our medical outreach, she received comprehensive eye examination, cataract surgery, and prescription glasses — regaining her independence, confidence, and hope.',
                     story2Location: 'Obasanjo Presidential Library, Abeokuta (2018)', story2Title: 'Inspiring Purpose in the Next Generation',
                     story2Text: 'In 2018, we brought together teenagers from different backgrounds for a day of mentorship on self-esteem, leadership, purpose, and healthy relationships. Years later, many have completed university and are making meaningful contributions in their communities.',
-                    // Testimonials
                     testimonialsLabel: 'Testimonials', testimonialsTitle: 'What People <span class="highlight">Say</span>', testimonialsSub: 'Stories of hope and transformation',
                     testimonial1Text: '"Attending the PHINEHAS GENERATION youth conference changed the way I viewed my future. I learned to believe in myself, set meaningful goals, and pursue them with confidence. Today, I am a university graduate, and I remain grateful for the encouragement I received."',
                     testimonial1Author: 'Deborah A.', testimonial1Role: 'Youth Conference Participant',
@@ -2862,25 +2980,23 @@
                     testimonial2Author: 'Mrs. Lawal Abeke', testimonial2Role: 'Medical Outreach Beneficiary',
                     testimonial3Text: '"Volunteering with PHINEHAS GENERATION FOUNDATION has shown me the true meaning of service. Watching young people grow and seeing smiles return to the faces of elderly people has been one of the most rewarding experiences of my life."',
                     testimonial3Author: 'Volunteer', testimonial3Role: 'Community Volunteer',
-                    // CTA
                     ctaTitle: 'You Can Change a Life Today',
                     ctaText: 'Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.',
                     ctaBtn1: '<i class="fas fa-heart"></i> Donate Now', ctaBtn2: '<i class="fas fa-hands-helping"></i> Become a Volunteer',
-                    // Footer
                     footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
                     footerQuick: 'Quick Links', footerHome: 'Home', footerAbout: 'About Us', footerProgramsLink: 'Our Programs',
-                    footerGallery: 'Gallery', footerBlog: 'Blog / News', footerVolunteer: 'Volunteer', footerContactLink: 'Contact Us', footerDonate: 'Donate',
+                    footerBlog: 'Blog / News', footerVolunteer: 'Volunteer', footerContactLink: 'Contact Us', footerDonate: 'Donate',
                     footerPrograms: 'Programs', footerProg1: 'Youth Development', footerProg2: 'Elderly Care', footerProg3: 'Medical Outreach',
                     footerProg4: 'Community Development', footerProg5: 'Leadership Training',
                     footerContact: 'Contact', footerUK: 'UK Office, London', footerNigeria: 'Nigeria Office, Lagos',
                     footerCopy: 'Registered Charity. All rights reserved.', footerPrivacy: 'Privacy Policy',
-                    // Cookie
                     cookieText: '🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.',
                     cookieAccept: 'Accept', cookieDecline: 'Decline'
                 },
                 'fr': {
-                    navHome: 'Accueil', navAbout: 'À propos', navPrograms: 'Nos programmes', navGallery: 'Galerie',
-                    navBlog: 'Blog / Actualités', navVolunteer: 'Bénévolat', navContact: 'Contact', navDonate: 'Faire un don',
+                    // French translations (kept minimal for brevity)
+                    navHome: 'Accueil', navAbout: 'À propos', navPrograms: 'Programmes',
+                    navBlog: 'Blog / Actualités', navVolunteer: 'Bénévolat', navContact: 'Contact', navDonate: 'Don',
                     heroTag: 'PHINEHAS GENERATION FOUNDATION',
                     heroTitle: 'Relier les générations.<br /><span class="highlight">Inspirer l\'espoir.</span><br />Transformer des vies.',
                     heroDesc: 'Autonomiser les adolescents par le savoir, le mentorat et des opportunités qui changent la vie, tout en redonnant dignité, espoir et joie aux personnes âgées grâce à des soins compatissants et à la solidarité communautaire.',
@@ -2971,6 +3087,8 @@
                     prog5Title: 'Services médicaux', prog5Desc: 'Fournir des services de santé gratuits, des tests de vue et des lunettes de prescription.',
                     prog6Title: 'Aide communautaire', prog6Desc: 'Distribution alimentaire, aide financière et soutien aux personnes âgées vulnérables.',
                     programsBtn: 'Voir tous les programmes <i class="fas fa-arrow-right"></i>',
+                    blogLabel: 'Dernières histoires', blogTitle: 'De notre <span class="highlight">blog</span>', blogSub: 'Histoires d\'impact, d\'espoir et de transformation',
+                    blogViewAll: 'Voir tous les articles <i class="fas fa-arrow-right"></i>',
                     whyLabel: 'Notre raison', whyTitle: 'Pourquoi <span style="color:var(--gold-light);">nous existons</span>', whySub: 'Chaque génération mérite l\'espoir',
                     why1Title: 'Adolescents', why1Desc: 'Méritent des conseils',
                     why2Title: 'Personnes âgées', why2Desc: 'Méritent la dignité',
@@ -2999,7 +3117,7 @@
                     ctaBtn1: '<i class="fas fa-heart"></i> Faire un don', ctaBtn2: '<i class="fas fa-hands-helping"></i> Devenir bénévole',
                     footerTag: 'Autonomiser les adolescents. Honorer les personnes âgées. Bâtir des communautés meilleures.',
                     footerQuick: 'Liens rapides', footerHome: 'Accueil', footerAbout: 'À propos', footerProgramsLink: 'Nos programmes',
-                    footerGallery: 'Galerie', footerBlog: 'Blog / Actualités', footerVolunteer: 'Bénévolat', footerContactLink: 'Contact', footerDonate: 'Faire un don',
+                    footerBlog: 'Blog / Actualités', footerVolunteer: 'Bénévolat', footerContactLink: 'Contact', footerDonate: 'Don',
                     footerPrograms: 'Programmes', footerProg1: 'Développement des jeunes', footerProg2: 'Soins aux personnes âgées', footerProg3: 'Actions médicales',
                     footerProg4: 'Développement communautaire', footerProg5: 'Formation au leadership',
                     footerContact: 'Contact', footerUK: 'Bureau UK, Londres', footerNigeria: 'Bureau Nigeria, Lagos',
@@ -3008,8 +3126,9 @@
                     cookieAccept: 'Accepter', cookieDecline: 'Refuser'
                 },
                 'de': {
-                    navHome: 'Startseite', navAbout: 'Über uns', navPrograms: 'Programme', navGallery: 'Galerie',
-                    navBlog: 'Blog / News', navVolunteer: 'Mithelfen', navContact: 'Kontakt', navDonate: 'Jetzt spenden',
+                    // German translations (kept minimal for brevity)
+                    navHome: 'Startseite', navAbout: 'Über uns', navPrograms: 'Programme',
+                    navBlog: 'Blog / News', navVolunteer: 'Mithelfen', navContact: 'Kontakt', navDonate: 'Spenden',
                     heroTag: 'PHINEHAS GENERATION FOUNDATION',
                     heroTitle: 'Generationen verbinden.<br /><span class="highlight">Hoffnung wecken.</span><br />Leben verändern.',
                     heroDesc: 'Jugendliche durch Wissen, Mentoring und lebensverändernde Chancen stärken und gleichzeitig älteren Menschen durch mitfühlende Fürsorge und Gemeinschaftshilfe Würde, Hoffnung und Freude zurückgeben.',
@@ -3100,6 +3219,8 @@
                     prog5Title: 'Medizinische Hilfe', prog5Desc: 'Kostenlose Gesundheitsdienste, Sehtests und verschreibungspflichtige Brillen.',
                     prog6Title: 'Gemeindefürsorge', prog6Desc: 'Lebensmittelverteilung, finanzielle Unterstützung und Hilfe für gefährdete ältere Menschen.',
                     programsBtn: 'Alle Programme ansehen <i class="fas fa-arrow-right"></i>',
+                    blogLabel: 'Neueste Geschichten', blogTitle: 'Aus unserem <span class="highlight">Blog</span>', blogSub: 'Geschichten von Wirkung, Hoffnung und Wandel',
+                    blogViewAll: 'Alle Beiträge ansehen <i class="fas fa-arrow-right"></i>',
                     whyLabel: 'Unser Grund', whyTitle: 'Warum <span style="color:var(--gold-light);">wir existieren</span>', whySub: 'Jede Generation verdient Hoffnung',
                     why1Title: 'Jugendliche', why1Desc: 'Verdienen Führung',
                     why2Title: 'Ältere Menschen', why2Desc: 'Verdienen Würde',
@@ -3128,7 +3249,7 @@
                     ctaBtn1: '<i class="fas fa-heart"></i> Jetzt spenden', ctaBtn2: '<i class="fas fa-hands-helping"></i> Freiwilliger werden',
                     footerTag: 'Jugendliche stärken. Ältere ehren. Bessere Gemeinschaften aufbauen.',
                     footerQuick: 'Schnelllinks', footerHome: 'Startseite', footerAbout: 'Über uns', footerProgramsLink: 'Programme',
-                    footerGallery: 'Galerie', footerBlog: 'Blog / News', footerVolunteer: 'Mithelfen', footerContactLink: 'Kontakt', footerDonate: 'Spenden',
+                    footerBlog: 'Blog / News', footerVolunteer: 'Mithelfen', footerContactLink: 'Kontakt', footerDonate: 'Spenden',
                     footerPrograms: 'Programme', footerProg1: 'Jugendentwicklung', footerProg2: 'Altenpflege', footerProg3: 'Medizinische Hilfe',
                     footerProg4: 'Gemeindeentwicklung', footerProg5: 'Führungstraining',
                     footerContact: 'Kontakt', footerUK: 'Büro UK, London', footerNigeria: 'Büro Nigeria, Lagos',
@@ -3179,50 +3300,60 @@
             }
 
             // ===== LANGUAGE TOGGLE =====
-            langToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const isOpen = langDropdown.classList.toggle('open');
-                langToggle.setAttribute('aria-expanded', isOpen);
-            });
-            langDropdown.querySelectorAll('li').forEach(li => {
-                li.addEventListener('click', function() {
-                    applyLanguage(this.dataset.lang);
-                    langDropdown.classList.remove('open');
-                    langToggle.setAttribute('aria-expanded', 'false');
+            if (langToggle) {
+                langToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isOpen = langDropdown.classList.toggle('open');
+                    langToggle.setAttribute('aria-expanded', isOpen);
                 });
-            });
+            }
+            if (langDropdown) {
+                langDropdown.querySelectorAll('li').forEach(li => {
+                    li.addEventListener('click', function() {
+                        applyLanguage(this.dataset.lang);
+                        langDropdown.classList.remove('open');
+                        if (langToggle) langToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.lang-wrapper')) {
-                    langDropdown.classList.remove('open');
-                    langToggle.setAttribute('aria-expanded', 'false');
+                    if (langDropdown) langDropdown.classList.remove('open');
+                    if (langToggle) langToggle.setAttribute('aria-expanded', 'false');
                 }
             });
 
             // ===== HAMBURGER =====
-            hamburger.addEventListener('click', function() {
-                const isOpen = navLinks.classList.toggle('open');
-                hamburger.setAttribute('aria-expanded', isOpen);
-                const icon = this.querySelector('i');
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            });
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('open');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    const icon = hamburger.querySelector('i');
-                    if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    const isOpen = navLinks.classList.toggle('open');
+                    hamburger.setAttribute('aria-expanded', isOpen);
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
                 });
-            });
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('open');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                        const icon = hamburger.querySelector('i');
+                        if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+                    });
+                });
+            }
 
             // ===== HEADER SCROLL =====
             window.addEventListener('scroll', function() {
-                header.classList.toggle('scrolled', window.scrollY > 20);
-                backToTop.classList.toggle('visible', window.scrollY > 400);
+                if (header) header.classList.toggle('scrolled', window.scrollY > 20);
+                if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 400);
             });
-            backToTop.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+            if (backToTop) {
+                backToTop.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
             // ===== HERO SLIDESHOW =====
             const slides = document.querySelectorAll('.hero-slide');
@@ -3236,15 +3367,20 @@
                 currentSlide = index;
             }
             function nextSlide() { goToSlide((currentSlide + 1) % slides.length); }
-            function startSlideshow() { slideInterval = setInterval(nextSlide, 5000); }
+            function startSlideshow() { 
+                if (slideInterval) clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000); 
+            }
 
-            dots.forEach((dot, i) => {
-                dot.addEventListener('click', function() {
-                    clearInterval(slideInterval);
-                    goToSlide(i);
-                    startSlideshow();
+            if (dots.length > 0) {
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', function() {
+                        clearInterval(slideInterval);
+                        goToSlide(i);
+                        startSlideshow();
+                    });
                 });
-            });
+            }
 
             const heroSection = document.getElementById('hero');
             if (heroSection) {
@@ -3252,17 +3388,18 @@
                 heroSection.addEventListener('mouseleave', startSlideshow);
             }
 
-            goToSlide(0);
-            startSlideshow();
+            if (slides.length > 0) {
+                goToSlide(0);
+                startSlideshow();
+            }
 
-            // ===== UPDATED: SCROLL ANIMATIONS (with enhanced chart animations) =====
+            // ===== SCROLL ANIMATIONS =====
             const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
 
-                        // Animate bar charts
                         const barFills = entry.target.querySelectorAll('.bar-fill');
                         barFills.forEach(bar => {
                             setTimeout(() => {
@@ -3270,15 +3407,16 @@
                             }, 200);
                         });
 
-                        // Enhanced SVG chart circle animations
                         const chartCircles = entry.target.querySelectorAll('.chart-animate');
                         chartCircles.forEach((circle, index) => {
                             const originalDash = circle.getAttribute('stroke-dasharray');
-                            circle.style.strokeDasharray = '0 1000';
-                            setTimeout(() => {
-                                circle.style.transition = `stroke-dasharray 1.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.2}s`;
-                                circle.style.strokeDasharray = originalDash;
-                            }, 300);
+                            if (originalDash) {
+                                circle.style.strokeDasharray = '0 1000';
+                                setTimeout(() => {
+                                    circle.style.transition = `stroke-dasharray 1.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.2}s`;
+                                    circle.style.strokeDasharray = originalDash;
+                                }, 300);
+                            }
                         });
 
                         observer.unobserve(entry.target);
@@ -3290,28 +3428,42 @@
 
             // ===== COOKIE BANNER =====
             if (!localStorage.getItem('cookiesAccepted')) {
-                cookieBanner.classList.add('show');
+                if (cookieBanner) cookieBanner.classList.add('show');
             }
-            acceptCookies.addEventListener('click', function() {
-                localStorage.setItem('cookiesAccepted', 'true');
-                cookieBanner.classList.remove('show');
-            });
-            declineCookies.addEventListener('click', function() {
-                localStorage.setItem('cookiesAccepted', 'false');
-                cookieBanner.classList.remove('show');
-            });
+            if (acceptCookies) {
+                acceptCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    if (cookieBanner) cookieBanner.classList.remove('show');
+                });
+            }
+            if (declineCookies) {
+                declineCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookiesAccepted', 'false');
+                    if (cookieBanner) cookieBanner.classList.remove('show');
+                });
+            }
 
             // ===== NAV ACTIVE STATE =====
             const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            navLinks.querySelectorAll('a').forEach(link => {
-                const href = link.getAttribute('href');
-                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-                    link.classList.add('active');
-                }
-            });
+            if (navLinks) {
+                navLinks.querySelectorAll('a').forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
 
             // ===== INIT =====
             applyLanguage(currentLang);
+            renderBlogPosts();
+
+            // ===== LISTEN FOR STORAGE CHANGES (for blog updates from admin) =====
+            window.addEventListener('storage', function(e) {
+                if (e.key === 'phinehasBlogPosts') {
+                    renderBlogPosts();
+                }
+            });
 
         })();
     </script>
