@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Read the latest stories and updates from PHINEHAS GENERATION FOUNDATION." />
+    <meta name="theme-color" content="#1a1a1a" />
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Blog Post | PHINEHAS GENERATION FOUNDATION" />
+    <meta property="og:description" content="Read stories of impact, hope, and transformation from PHINEHAS GENERATION FOUNDATION." />
+    <meta property="og:url" content="https://phinehasgeneration.org/blog-post.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <link rel="canonical" href="https://phinehasgeneration.org/blog-post.html" />
+    <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" type="image/png" />
+    <title>Blog Post | PHINEHAS GENERATION FOUNDATION</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --gold: #c8943e;
+            --gold-light: #d4a94e;
+            --gold-dark: #a67a2e;
+            --gold-pale: #fdf8f0;
+            --gold-gradient: linear-gradient(135deg, #c8943e, #dab86a);
+            --black: #1a1a1a;
+            --black-soft: #2a2a2a;
+            --green: #6b8f71;
+            --green-light: #8aab90;
+            --green-pale: #e8efe9;
+            --green-paler: #f4f7f4;
+            --white: #ffffff;
+            --white-soft: #fafaf9;
+            --gray-light: #e8e6e1;
+            --gray-border: #e0ddd8;
+            --gray: #9a9a9a;
+            --gray-dark: #5a5a5a;
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            border-radius: 0 0 var(--radius-sm) 0;
+        }
+        .skip-link:focus { top: 0; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+        .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+        .section-padding { padding: 90px 0; }
+
+        /* ===== SKELETON LOADER ===== */
+        #skeleton-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease;
+        }
+        #skeleton-loader.hidden { opacity: 0; pointer-events: none; }
+        .skeleton-logo {
+            width: 120px;
+            height: 120px;
+            animation: zoomPulse 1.8s ease-in-out infinite;
+            margin-bottom: 24px;
+        }
+        .skeleton-logo img { width: 100%; height: 100%; object-fit: contain; }
+        @keyframes zoomPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+        .skeleton-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 1px;
+            animation: fadePulse 2s ease-in-out infinite;
+        }
+        .skeleton-name span { color: var(--gold-dark); }
+        @keyframes fadePulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+        /* ===== ADMIN LINK ===== */
+        .admin-link {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            opacity: 0.08;
+            font-size: 0.6rem;
+            color: var(--gray);
+            z-index: 1;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        .admin-link:hover { opacity: 0.3; }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 36px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.2px;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+        .btn:hover::after { transform: translateX(0); }
+        .btn-primary { background: var(--gold); color: var(--white); box-shadow: 0 4px 20px rgba(200, 148, 62, 0.3); }
+        .btn-primary:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(200, 148, 62, 0.4); }
+        .btn-dark { background: var(--black); color: var(--white); box-shadow: 0 4px 20px rgba(26, 26, 26, 0.25); }
+        .btn-dark:hover { background: var(--black-soft); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(26, 26, 26, 0.35); }
+        .btn-outline { background: transparent; color: var(--black); border: 2px solid var(--black); }
+        .btn-outline:hover { background: var(--black); color: var(--white); transform: translateY(-3px); }
+
+        /* ===== SCROLL PROGRESS ===== */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 14px 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img { height: 44px; width: auto; }
+        .logo .logo-gold { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--black-soft);
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+            border-radius: 1px;
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover { color: var(--gold-dark); }
+        .nav-donate-btn {
+            background: var(--gold);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .nav-donate-btn::after { display: none !important; }
+        .nav-donate-btn:hover { background: var(--gold-light); color: var(--white) !important; transform: scale(1.03); }
+
+        .lang-wrapper { position: relative; }
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1.5px solid var(--gray-light);
+            border-radius: var(--radius-full);
+            padding: 6px 14px 6px 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--black-soft);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .lang-toggle:hover { border-color: var(--gold); }
+        .lang-toggle i { font-size: 0.85rem; color: var(--gold); }
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 46px;
+            right: 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 8px 0;
+            min-width: 180px;
+            border: 1px solid var(--gray-light);
+            z-index: 1100;
+        }
+        .lang-dropdown.open { display: block; }
+        .lang-dropdown li {
+            padding: 10px 22px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.88rem;
+            color: var(--black-soft);
+        }
+        .lang-dropdown li:hover { background: var(--green-pale); color: var(--black); }
+        .lang-dropdown li.active-lang { background: var(--gold); color: var(--white); font-weight: 600; }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--black);
+            background: none;
+            border: none;
+            padding: 6px;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            padding: 160px 0 50px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 30vh;
+            display: flex;
+            align-items: center;
+        }
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.35) 100%);
+        }
+        .page-hero .container { position: relative; z-index: 2; }
+        .page-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .page-hero .hero-meta {
+            display: flex;
+            gap: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .page-hero .hero-meta i { margin-right: 4px; }
+        .page-hero .hero-meta .topic {
+            background: var(--gold);
+            color: var(--white);
+            padding: 2px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .page-hero .breadcrumb {
+            display: flex;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-top: 12px;
+        }
+        .page-hero .breadcrumb a { color: rgba(255, 255, 255, 0.8); transition: var(--transition); }
+        .page-hero .breadcrumb a:hover { color: var(--gold-light); }
+        .page-hero .breadcrumb .current { color: var(--gold-light); }
+
+        /* ===== BLOG POST ===== */
+        .post-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .post-content .featured-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+        .post-content .featured-image img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .post-content .post-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: var(--gray);
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        .post-content .post-meta i { margin-right: 4px; }
+        .post-content .post-meta .topic {
+            background: var(--gold-pale);
+            color: var(--gold-dark);
+            padding: 2px 14px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .post-content h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .post-content .content-body {
+            font-size: 1.05rem;
+            color: var(--gray-dark);
+            line-height: 1.9;
+        }
+        .post-content .content-body p { margin-bottom: 18px; }
+        .post-content .content-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin: 36px 0 16px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .post-content .content-body h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--black-soft);
+            margin: 28px 0 12px;
+        }
+        .post-content .content-body ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 18px;
+        }
+        .post-content .content-body ul li { margin-bottom: 8px; }
+        .post-content .content-body blockquote {
+            border-left: 4px solid var(--gold);
+            padding: 16px 24px;
+            margin: 24px 0;
+            background: var(--gold-pale);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-style: italic;
+            color: var(--black-soft);
+        }
+        .post-content .content-body img {
+            border-radius: var(--radius-sm);
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        /* ===== SHARE & LIKES ===== */
+        .post-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 0;
+            border-top: 2px solid var(--gray-light);
+            border-bottom: 2px solid var(--gray-light);
+            margin: 30px 0;
+        }
+        .post-actions .like-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            border: 2px solid var(--gray-light);
+            background: transparent;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--gray-dark);
+        }
+        .post-actions .like-btn:hover { border-color: var(--gold); color: var(--gold); }
+        .post-actions .like-btn.liked { background: var(--gold); border-color: var(--gold); color: var(--white); }
+        .post-actions .share-buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+        .post-actions .share-buttons .share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .post-actions .share-buttons .share-btn:hover { transform: translateY(-2px); }
+        .post-actions .share-buttons .share-btn.fb { background: #1877f2; }
+        .post-actions .share-buttons .share-btn.tw { background: #1da1f2; }
+        .post-actions .share-buttons .share-btn.wa { background: #25d366; }
+        .post-actions .share-buttons .share-btn.lk { background: #0a66c2; }
+
+        /* ===== COMMENTS ===== */
+        .comments-section {
+            margin-top: 40px;
+        }
+        .comments-section h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            font-family: 'Playfair Display', Georgia, serif;
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 12px;
+        }
+        .comments-section .comment {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        .comments-section .comment .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gold-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+        .comments-section .comment .comment-body {
+            flex: 1;
+        }
+        .comments-section .comment .comment-body .name {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .comments-section .comment .comment-body .date {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-left: 8px;
+        }
+        .comments-section .comment .comment-body p {
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+            margin-top: 4px;
+            line-height: 1.6;
+        }
+        .comments-section .comment .comment-body .comment-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 6px;
+            font-size: 0.78rem;
+        }
+        .comments-section .comment .comment-body .comment-actions button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-family: 'Inter', system-ui, sans-serif;
+            transition: var(--transition);
+        }
+        .comments-section .comment .comment-body .comment-actions button:hover { color: var(--gold); }
+        .comments-section .comment .comment-body .comment-actions .liked { color: var(--gold); }
+
+        .comment-form {
+            margin-top: 30px;
+            padding: 24px 28px;
+            background: var(--white-soft);
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-light);
+        }
+        .comment-form h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .comment-form .form-group {
+            margin-bottom: 14px;
+        }
+        .comment-form .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--black-soft);
+            margin-bottom: 4px;
+        }
+        .comment-form .form-group input,
+        .comment-form .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            transition: var(--transition);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .comment-form .form-group input:focus,
+        .comment-form .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(200, 148, 62, 0.1);
+        }
+        .comment-form .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .comment-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(160deg, var(--black) 0%, var(--black-soft) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: rgba(200, 148, 62, 0.06);
+            border-radius: 50%;
+        }
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 250px;
+            height: 250px;
+            background: rgba(107, 143, 113, 0.08);
+            border-radius: 50%;
+        }
+        .cta-section .container { position: relative; z-index: 1; }
+        .cta-section h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 560px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* ===== BACK TO TOP ===== */
+        #back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(16px);
+            z-index: 900;
+        }
+        #back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        #back-to-top:hover { background: var(--gold); transform: translateY(-4px); }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 88px;
+            right: 28px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #25d366;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+            z-index: 899;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45); }
+
+        /* ===== COOKIE BANNER ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            color: var(--white);
+            padding: 14px 24px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            z-index: 999;
+            font-size: 0.85rem;
+        }
+        .cookie-banner.show { display: flex; }
+        .cookie-banner p { opacity: 0.7; max-width: 65%; line-height: 1.5; }
+        .cookie-banner a { color: var(--gold-light); text-decoration: underline; }
+        .cookie-banner .btn-sm {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .cookie-banner .btn-accept { background: var(--gold); color: var(--white); }
+        .cookie-banner .btn-accept:hover { background: var(--gold-light); }
+        .cookie-banner .btn-decline { background: transparent; border: 1px solid rgba(255, 255, 255, 0.3); color: var(--white); }
+        .cookie-banner .btn-decline:hover { background: rgba(255, 255, 255, 0.1); }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png');
+            background-size: 300px auto;
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            opacity: 0.04;
+            z-index: 0;
+        }
+        .footer .container { position: relative; z-index: 1; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand .logo { color: var(--white); font-size: 1.3rem; margin-bottom: 12px; }
+        .footer-brand .logo .logo-gold { color: var(--gold-light); }
+        .footer-brand p { opacity: 0.6; font-size: 0.9rem; max-width: 280px; line-height: 1.7; }
+        .footer h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; color: var(--white); letter-spacing: 0.5px; text-transform: uppercase; }
+        .footer-links a { display: block; opacity: 0.6; font-size: 0.88rem; transition: var(--transition); margin-bottom: 8px; }
+        .footer-links a:hover { opacity: 1; color: var(--gold-light); }
+        .footer-links a i { width: 18px; margin-right: 4px; font-size: 0.75rem; color: var(--gold-light); }
+        .footer-social { display: flex; gap: 12px; margin-top: 16px; }
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+        .footer-social a:hover { background: var(--gold); transform: translateY(-2px); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        .footer-bottom a { color: var(--gold-light); text-decoration: underline; }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up { opacity: 0; transform: translateY(40px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        #main-content { opacity: 0; transition: opacity 0.8s ease; }
+        #main-content.visible { opacity: 1; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .page-hero h1 { font-size: 2.4rem; }
+            .post-content h1 { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 18px 0 10px;
+                gap: 12px;
+                border-top: 1px solid var(--gray-light);
+                margin-top: 12px;
+            }
+            .nav-links.open { display: flex; }
+            .page-hero { padding: 140px 0 40px; min-height: 25vh; }
+            .page-hero h1 { font-size: 2rem; }
+            .post-content h1 { font-size: 1.8rem; }
+            .post-content .content-body { font-size: 0.98rem; }
+            .post-actions { flex-direction: column; align-items: stretch; }
+            .post-actions .share-buttons { margin-left: 0; justify-content: center; }
+            .comment-form .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-brand p { max-width: 100%; }
+            .footer-social { justify-content: center; }
+            .cta-section h2 { font-size: 2rem; }
+            .whatsapp-float { bottom: 80px; right: 14px; width: 44px; height: 44px; font-size: 1.4rem; }
+            #back-to-top { bottom: 14px; right: 14px; width: 40px; height: 40px; font-size: 0.9rem; }
+            .cookie-banner p { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 1.6rem; }
+            .btn { padding: 12px 24px; font-size: 0.85rem; }
+            .container { padding: 0 16px; }
+            .section-padding { padding: 50px 0; }
+            .logo { font-size: 1rem; }
+            .logo img { height: 34px; }
+            .post-content h1 { font-size: 1.5rem; }
+            .post-content .content-body { font-size: 0.92rem; }
+            .comment-form { padding: 18px 16px; }
+            .cta-section h2 { font-size: 1.6rem; }
+            .post-actions .like-btn { font-size: 0.8rem; padding: 6px 16px; }
+            .post-actions .share-buttons .share-btn { width: 34px; height: 34px; font-size: 0.85rem; }
+            .page-hero .hero-meta { gap: 10px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== SKIP TO CONTENT ===== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== SKELETON LOADER ===== -->
+    <div id="skeleton-loader" aria-hidden="true">
+        <div class="skeleton-logo">
+            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION" />
+        </div>
+        <div class="skeleton-name">PHINEHAS <span>GENERATION</span></div>
+    </div>
+
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div id="scroll-progress" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- ===== ADMIN LINK ===== -->
+    <a href="admin.html" class="admin-link" aria-label="Admin Panel">⚙ admin</a>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="main-content">
+
+        <!-- ===== HEADER ===== -->
+        <header id="header" role="banner">
+            <div class="container nav-container">
+                <a href="index.html" class="logo" aria-label="PHINEHAS GENERATION FOUNDATION Home">
+                    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" width="44" height="44" />
+                    PHINEHAS <span class="logo-gold">GENERATION</span>
+                </a>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" data-i18n="navHome">Home</a>
+                    <a href="about.html" data-i18n="navAbout">About Us</a>
+                    <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
+                    <a href="blog.html" data-i18n="navBlog">Blog / News</a>
+                    <a href="volunteer.html" data-i18n="navVolunteer">Volunteer</a>
+                    <a href="contact.html" data-i18n="navContact">Contact Us</a>
+                    <a href="donate.html" class="nav-donate-btn" data-i18n="navDonate"><i class="fas fa-heart"></i> Donate Now</a>
+
+                    <div class="lang-wrapper">
+                        <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+                            <i class="fas fa-globe"></i> <span id="currentLangLabel">EN</span> <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i>
+                        </button>
+                        <ul class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Language options">
+                            <li role="option" data-lang="en" class="active-lang" aria-selected="true">🇬🇧 English</li>
+                            <li role="option" data-lang="fr" aria-selected="false">🇫🇷 Français</li>
+                            <li role="option" data-lang="de" aria-selected="false">🇩🇪 Deutsch</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero" id="postHero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg');" aria-label="Blog post hero image">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html" data-i18n="navHome">Home</a>
+                    <span>/</span>
+                    <a href="blog.html" data-i18n="navBlog">Blog</a>
+                    <span>/</span>
+                    <span class="current" id="postBreadcrumb">Post</span>
+                </div>
+                <h1 id="postTitle">Loading...</h1>
+                <div class="hero-meta" id="postMeta">
+                    <span><i class="far fa-calendar-alt"></i> <span id="postDate">-</span></span>
+                    <span><i class="far fa-user"></i> <span id="postAuthor">-</span></span>
+                    <span id="postTopicBadge" class="topic">-</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BLOG POST ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="post-content" id="postContent">
+                    <div class="featured-image" id="postFeaturedImage">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="content-body" id="postBody">
+                        <!-- Rendered by JavaScript -->
+                    </div>
+
+                    <!-- Post Actions -->
+                    <div class="post-actions">
+                        <button class="like-btn" id="likeBtn"><i class="fas fa-heart"></i> <span id="likeCount">0</span> Likes</button>
+                        <div class="share-buttons">
+                            <button class="share-btn fb" onclick="sharePost('facebook')" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                            <button class="share-btn tw" onclick="sharePost('twitter')" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                            <button class="share-btn wa" onclick="sharePost('whatsapp')" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></button>
+                            <button class="share-btn lk" onclick="sharePost('linkedin')" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="comments-section" id="commentsSection">
+                        <h3>Comments (<span id="commentCount">0</span>)</h3>
+                        <div id="commentsList">
+                            <!-- Rendered by JavaScript -->
+                        </div>
+
+                        <div class="comment-form" id="commentForm">
+                            <h4 data-i18n="leaveComment">Leave a Comment</h4>
+                            <form id="commentSubmitForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="commentName" data-i18n="commentName">Your Name</label>
+                                        <input type="text" id="commentName" placeholder="Enter your name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="commentEmail" data-i18n="commentEmail">Your Email</label>
+                                        <input type="email" id="commentEmail" placeholder="Enter your email" required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="commentText" data-i18n="commentText">Your Comment</label>
+                                    <textarea id="commentText" placeholder="Write your comment here..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" data-i18n="submitComment"><i class="fas fa-paper-plane"></i> Submit Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 data-i18n="ctaTitle">Want to Share Your Story?</h2>
+                <p data-i18n="ctaText">We'd love to hear from you. Whether you've been impacted by our work or want to share your experience, reach out to us.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary" data-i18n="ctaBtn1"><i class="fas fa-envelope"></i> Contact Us</a>
+                    <a href="volunteer.html" class="btn btn-outline-light" data-i18n="ctaBtn2"><i class="fas fa-hands-helping"></i> Join Our Mission</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo" style="color:var(--white);">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" style="height:40px;" width="40" height="40" loading="lazy" />
+                            PHINEHAS <span class="logo-gold">GENERATION</span>
+                        </a>
+                        <p data-i18n="footerTag">Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerQuick">Quick Links</h4>
+                        <a href="index.html" data-i18n="footerHome">Home</a>
+                        <a href="about.html" data-i18n="footerAbout">About Us</a>
+                        <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
+                        <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
+                        <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
+                        <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
+                        <a href="donate.html" data-i18n="footerDonate">Donate</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerPrograms">Programs</h4>
+                        <a href="programs.html" data-i18n="footerProg1">Youth Development</a>
+                        <a href="programs.html" data-i18n="footerProg2">Elderly Care</a>
+                        <a href="programs.html" data-i18n="footerProg3">Medical Outreach</a>
+                        <a href="programs.html" data-i18n="footerProg4">Community Development</a>
+                        <a href="programs.html" data-i18n="footerProg5">Leadership Training</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerContact">Contact</h4>
+                        <a href="tel:+2348161370219"><i class="fas fa-phone"></i> +234 816 137 0219</a>
+                        <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerUK">UK Office, London</span></a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerNigeria">Nigeria Office, Lagos</span></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="currentYear">2026</span> <strong>PHINEHAS GENERATION FOUNDATION</strong> — <span data-i18n="footerCopy">Registered Charity. All rights reserved.</span> | <a href="#" data-i18n="footerPrivacy">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+        <p data-i18n="cookieText">🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
+        <div style="display:flex; gap:10px;">
+            <button class="btn-sm btn-accept" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
+            <button class="btn-sm btn-decline" id="declineCookies" data-i18n="cookieDecline">Decline</button>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== DYNAMIC COPYRIGHT YEAR =====
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // ===== BLOG DATA =====
+            const STORAGE_KEY = 'phinehasBlogPosts';
+
+            function getDefaultPosts() {
+                return [
+                    {
+                        id: 1,
+                        topic: "Mental Health",
+                        title: "Breaking the Silence: Mental Health Awareness Among Nigerian Youth",
+                        image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784973209/1784972754947_uulto2.jpg",
+                        date: "July 20, 2026",
+                        author: "PHINEHAS GENERATION FOUNDATION",
+                        content: "<p>Mental health remains a taboo subject in many Nigerian communities. Young people often suffer in silence, afraid to speak up about depression, anxiety, and emotional struggles.</p><p>Our latest outreach program is changing that by creating safe spaces for young people to talk about mental health openly. Through workshops, counseling sessions, and peer support groups, we are breaking down the stigma surrounding mental illness.</p><p><strong>Key highlights from our program:</strong></p><ul><li>Over 200 teenagers reached through school mental health workshops</li><li>12 trained peer counselors now supporting their communities</li><li>Partnership with mental health professionals providing free consultations</li></ul><p>The impact has been profound. Young people who once felt alone now have a community of support. Parents are learning to recognize signs of depression in their children. And conversations that were once unthinkable are now happening openly.</p><p>Our work continues. Mental health is not a luxury—it is a necessity. And every young person deserves access to the support they need to thrive.</p>",
+                        comments: [
+                            { id: 1, name: "Sarah O.", text: "This is such an important initiative. Thank you for addressing this issue!", date: "July 21, 2026", likes: 5 },
+                            { id: 2, name: "Michael A.", text: "I wish I had this kind of support when I was a teenager. Keep up the great work!", date: "July 22, 2026", likes: 3 }
+                        ],
+                        likes: 12
+                    },
+                    {
+                        id: 2,
+                        topic: "Community Outreach",
+                        title: "Bringing Free Healthcare to Underserved Communities",
+                        image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg",
+                        date: "July 15, 2026",
+                        author: "PHINEHAS GENERATION FOUNDATION",
+                        content: "<p>Access to healthcare remains a significant challenge for many communities across Nigeria. Thousands of people—especially the elderly and vulnerable—go without essential medical care simply because they cannot afford it or live too far from health facilities.</p><p>Our medical outreach team recently visited three communities in Ogun State, providing free healthcare services to over 200 people. Services included:</p><ul><li>General medical consultations</li><li>Eye examinations and prescription glasses</li><li>Blood pressure and diabetes screening</li><li>Health education and counselling</li></ul><p>The response was overwhelming. People came from far and wide to receive care. For many, it was the first time they had seen a doctor in years.</p><p>One elderly beneficiary, Mrs. Lawal Abeke, who had been living with severe cataracts, received successful treatment and regained her sight. Her joy was immeasurable—and a powerful reminder of why we do this work.</p><p>We are committed to expanding this program to reach even more communities in the coming months.</p>",
+                        comments: [
+                            { id: 1, name: "Dr. Chidi O.", text: "Thank you for providing this essential service. We need more of this across Nigeria!", date: "July 16, 2026", likes: 8 },
+                            { id: 2, name: "Grace E.", text: "My grandmother was one of those who received treatment. We are so grateful!", date: "July 17, 2026", likes: 4 }
+                        ],
+                        likes: 9
+                    },
+                    {
+                        id: 3,
+                        topic: "Youth Development",
+                        title: "Building Self-Esteem: How Mentorship Changes Lives",
+                        image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg",
+                        date: "July 10, 2026",
+                        author: "PHINEHAS GENERATION FOUNDATION",
+                        content: "<p>Teenagers who participated in our self-esteem development program showed remarkable improvement in confidence and academic performance. Through a series of workshops and mentorship sessions, young people discovered their worth, set meaningful goals, and gained the courage to pursue them.</p><p>The program focused on:</p><ul><li>Building self-confidence and positive self-image</li><li>Developing leadership and communication skills</li><li>Setting and achieving personal goals</li><li>Understanding the importance of character and integrity</li></ul><p>Participants reported feeling more confident in social situations, more motivated to excel in school, and more hopeful about their future. Several have gone on to become peer mentors themselves, paying it forward to the next generation.</p><p>Mentorship matters. When young people have someone who believes in them, they begin to believe in themselves.</p>",
+                        comments: [
+                            { id: 1, name: "Deborah A.", text: "This program changed my life. I am now a university graduate and a peer mentor myself!", date: "July 11, 2026", likes: 12 }
+                        ],
+                        likes: 10
+                    },
+                    {
+                        id: 4,
+                        topic: "Elderly Care",
+                        title: "Honouring Our Heroes: Supporting Elderly People in Nigeria",
+                        image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
+                        date: "July 5, 2026",
+                        author: "PHINEHAS GENERATION FOUNDATION",
+                        content: "<p>Our community welfare program continues to provide food, medical care, and companionship to elderly people across Nigeria. In communities where the elderly are often forgotten, we are reminding them that they still matter.</p><p>Our program includes:</p><ul><li>Regular food distribution to vulnerable elderly families</li><li>Medical check-ups and medication support</li><li>Social visits and companionship</li><li>Financial support for critical needs</li></ul><p>One elderly beneficiary said: 'I thought I had been forgotten. Then PHINEHAS GENERATION came and showed me that I still matter.'</p><p>We believe that honouring the elderly is not just charity—it is a moral obligation. Every senior citizen deserves to live with dignity, and we are committed to making that a reality.</p>",
+                        comments: [
+                            { id: 1, name: "Blessing N.", text: "Thank you for remembering our elderly. They are the foundation of our communities.", date: "July 6, 2026", likes: 6 },
+                            { id: 2, name: "James O.", text: "My father is one of the beneficiaries. I am so grateful for the support.", date: "July 7, 2026", likes: 3 }
+                        ],
+                        likes: 7
+                    },
+                    {
+                        id: 5,
+                        topic: "Healthcare",
+                        title: "Cataract Surgery: Restoring Sight and Hope",
+                        image: "https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg",
+                        date: "June 28, 2026",
+                        author: "PHINEHAS GENERATION FOUNDATION",
+                        content: "<p>Imagine losing your sight and not being able to afford treatment. For many elderly people in Nigeria, this is a daily reality. Cataracts are a leading cause of blindness among seniors, yet treatment is often out of reach for those who need it most.</p><p>PHINEHAS GENERATION FOUNDATION has partnered with medical professionals to provide free cataract surgeries to elderly people in underserved communities. To date, we have restored sight to over 50 individuals.</p><p>One beneficiary, 72-year-old Mrs. Esther O., said: 'I had given up hope of ever seeing clearly again. When PHINEHAS GENERATION came, they gave me back my sight and my hope.'</p><p>We are expanding this program to reach even more communities. No one should have to live in darkness because they cannot afford treatment.</p>",
+                        comments: [
+                            { id: 1, name: "Dr. Femi A.", text: "Cataract surgery is life-changing. Thank you for making it accessible to those who need it.", date: "June 29, 2026", likes: 7 }
+                        ],
+                        likes: 5
+                    }
+                ];
+            }
+
+            function getPosts() {
+                const stored = localStorage.getItem(STORAGE_KEY);
+                if (stored) {
+                    try {
+                        const parsed = JSON.parse(stored);
+                        if (Array.isArray(parsed) && parsed.length > 0) {
+                            return parsed;
+                        }
+                    } catch(e) {}
+                }
+                const defaults = getDefaultPosts();
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(defaults));
+                return defaults;
+            }
+
+            function savePosts(posts) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+            }
+
+            let posts = getPosts();
+
+            // ===== GET POST ID FROM URL =====
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = parseInt(urlParams.get('id')) || 1;
+
+            let currentPost = posts.find(p => p.id === postId);
+            if (!currentPost) {
+                currentPost = posts[0];
+            }
+
+            // ===== DOM REFS =====
+            const skeleton = document.getElementById('skeleton-loader');
+            const mainContent = document.getElementById('main-content');
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const scrollProgress = document.getElementById('scroll-progress');
+            const backToTop = document.getElementById('back-to-top');
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+
+            // ===== RENDER POST =====
+            function renderPost() {
+                if (!currentPost) {
+                    document.getElementById('postTitle').textContent = 'Post Not Found';
+                    document.getElementById('postBody').innerHTML = '<p style="text-align:center;padding:40px 0;">Sorry, this post could not be found.</p>';
+                    return;
+                }
+
+                // Update hero
+                document.getElementById('postTitle').textContent = currentPost.title;
+                document.getElementById('postDate').textContent = currentPost.date || 'Recent';
+                document.getElementById('postAuthor').textContent = currentPost.author || 'PHINEHAS GENERATION';
+                document.getElementById('postTopicBadge').textContent = currentPost.topic || 'News';
+                document.getElementById('postBreadcrumb').textContent = currentPost.title;
+
+                // Update hero background image
+                const hero = document.getElementById('postHero');
+                if (currentPost.image) {
+                    hero.style.backgroundImage = `url('${currentPost.image}')`;
+                }
+
+                // Update featured image
+                const featuredImg = document.querySelector('#postFeaturedImage img');
+                if (currentPost.image) {
+                    featuredImg.src = currentPost.image;
+                    featuredImg.alt = currentPost.title;
+                } else {
+                    document.getElementById('postFeaturedImage').style.display = 'none';
+                }
+
+                // Update content body
+                document.getElementById('postBody').innerHTML = currentPost.content || '<p>No content available.</p>';
+
+                // Update like count
+                document.getElementById('likeCount').textContent = currentPost.likes || 0;
+
+                // Update comment count
+                const comments = currentPost.comments || [];
+                document.getElementById('commentCount').textContent = comments.length;
+
+                // Render comments
+                renderComments(comments);
+
+                // Check if user has liked this post
+                const liked = localStorage.getItem('liked_post_' + currentPost.id);
+                const likeBtn = document.getElementById('likeBtn');
+                if (liked === 'true') {
+                    likeBtn.classList.add('liked');
+                }
+            }
+
+            // ===== RENDER COMMENTS =====
+            function renderComments(comments) {
+                const container = document.getElementById('commentsList');
+                if (!comments || comments.length === 0) {
+                    container.innerHTML = '<p style="color:var(--gray);font-size:0.9rem;padding:12px 0;">No comments yet. Be the first to share your thoughts!</p>';
+                    return;
+                }
+
+                container.innerHTML = comments.map(comment => `
+                    <div class="comment">
+                        <div class="avatar">${comment.name.charAt(0).toUpperCase()}</div>
+                        <div class="comment-body">
+                            <div>
+                                <span class="name">${comment.name}</span>
+                                <span class="date">${comment.date || 'Recent'}</span>
+                            </div>
+                            <p>${comment.text}</p>
+                            <div class="comment-actions">
+                                <button class="comment-like-btn" data-id="${comment.id}">
+                                    <i class="fas fa-heart"></i> <span>${comment.likes || 0}</span>
+                                </button>
+                                <button onclick="document.getElementById('commentText').focus()">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Add comment like functionality
+                container.querySelectorAll('.comment-like-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const commentId = parseInt(this.dataset.id);
+                        const comment = currentPost.comments.find(c => c.id === commentId);
+                        if (comment) {
+                            comment.likes = (comment.likes || 0) + 1;
+                            savePosts(posts);
+                            renderComments(currentPost.comments);
+                        }
+                    });
+                });
+            }
+
+            // ===== LIKE POST =====
+            document.getElementById('likeBtn').addEventListener('click', function() {
+                if (!currentPost) return;
+                const liked = localStorage.getItem('liked_post_' + currentPost.id);
+                if (liked === 'true') {
+                    currentPost.likes = (currentPost.likes || 1) - 1;
+                    localStorage.removeItem('liked_post_' + currentPost.id);
+                    this.classList.remove('liked');
+                } else {
+                    currentPost.likes = (currentPost.likes || 0) + 1;
+                    localStorage.setItem('liked_post_' + currentPost.id, 'true');
+                    this.classList.add('liked');
+                }
+                savePosts(posts);
+                document.getElementById('likeCount').textContent = currentPost.likes || 0;
+            });
+
+            // ===== SHARE FUNCTION =====
+            window.sharePost = function(platform) {
+                const url = window.location.href;
+                const title = currentPost ? currentPost.title : 'PHINEHAS GENERATION FOUNDATION';
+                let shareUrl = '';
+
+                switch(platform) {
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'linkedin':
+                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+                        break;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=500');
+                }
+            };
+
+            // ===== SUBMIT COMMENT =====
+            document.getElementById('commentSubmitForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('commentName').value.trim();
+                const email = document.getElementById('commentEmail').value.trim();
+                const text = document.getElementById('commentText').value.trim();
+
+                if (!name || !text) {
+                    alert('Please fill in your name and comment.');
+                    return;
+                }
+
+                const newComment = {
+                    id: Date.now(),
+                    name: name,
+                    text: text,
+                    date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+                    likes: 0
+                };
+
+                if (!currentPost.comments) currentPost.comments = [];
+                currentPost.comments.push(newComment);
+                savePosts(posts);
+
+                this.reset();
+                renderComments(currentPost.comments);
+                document.getElementById('commentCount').textContent = currentPost.comments.length;
+
+                // Scroll to comments
+                document.getElementById('commentsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // ===== TRANSLATIONS =====
+            const translations = {
+                'en': {
+                    navHome: 'Home',
+                    navAbout: 'About Us',
+                    navPrograms: 'Our Programs',
+                    navBlog: 'Blog / News',
+                    navVolunteer: 'Volunteer',
+                    navContact: 'Contact Us',
+                    navDonate: 'Donate Now',
+                    leaveComment: 'Leave a Comment',
+                    commentName: 'Your Name',
+                    commentEmail: 'Your Email',
+                    commentText: 'Your Comment',
+                    submitComment: 'Submit Comment',
+                    ctaTitle: 'Want to Share Your Story?',
+                    ctaText: 'We\'d love to hear from you. Whether you\'ve been impacted by our work or want to share your experience, reach out to us.',
+                    ctaBtn1: '<i class="fas fa-envelope"></i> Contact Us',
+                    ctaBtn2: '<i class="fas fa-hands-helping"></i> Join Our Mission',
+                    footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
+                    footerQuick: 'Quick Links',
+                    footerHome: 'Home',
+                    footerAbout: 'About Us',
+                    footerProgramsLink: 'Our Programs',
+                    footerBlog: 'Blog / News',
+                    footerVolunteer: 'Volunteer',
+                    footerContactLink: 'Contact Us',
+                    footerDonate: 'Donate',
+                    footerPrograms: 'Programs',
+                    footerProg1: 'Youth Development',
+                    footerProg2: 'Elderly Care',
+                    footerProg3: 'Medical Outreach',
+                    footerProg4: 'Community Development',
+                    footerProg5: 'Leadership Training',
+                    footerContact: 'Contact',
+                    footerUK: 'UK Office, London',
+                    footerNigeria: 'Nigeria Office, Lagos',
+                    footerCopy: 'Registered Charity. All rights reserved.',
+                    footerPrivacy: 'Privacy Policy',
+                    cookieText: '🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.',
+                    cookieAccept: 'Accept',
+                    cookieDecline: 'Decline'
+                },
+                'fr': {
+                    navHome: 'Accueil',
+                    navAbout: 'À propos',
+                    navPrograms: 'Nos programmes',
+                    navBlog: 'Blog / Actualités',
+                    navVolunteer: 'Bénévolat',
+                    navContact: 'Contact',
+                    navDonate: 'Faire un don',
+                    leaveComment: 'Laisser un commentaire',
+                    commentName: 'Votre nom',
+                    commentEmail: 'Votre email',
+                    commentText: 'Votre commentaire',
+                    submitComment: 'Envoyer le commentaire',
+                    ctaTitle: 'Vous voulez partager votre histoire ?',
+                    ctaText: 'Nous serions ravis de vous entendre. Que vous ayez été impacté par notre travail ou que vous souhaitiez partager votre expérience, contactez-nous.',
+                    ctaBtn1: '<i class="fas fa-envelope"></i> Contactez-nous',
+                    ctaBtn2: '<i class="fas fa-hands-helping"></i> Rejoignez notre mission',
+                    footerTag: 'Autonomiser les adolescents. Honorer les personnes âgées. Bâtir des communautés meilleures.',
+                    footerQuick: 'Liens rapides',
+                    footerHome: 'Accueil',
+                    footerAbout: 'À propos',
+                    footerProgramsLink: 'Nos programmes',
+                    footerBlog: 'Blog / Actualités',
+                    footerVolunteer: 'Bénévolat',
+                    footerContactLink: 'Contact',
+                    footerDonate: 'Faire un don',
+                    footerPrograms: 'Programmes',
+                    footerProg1: 'Développement des jeunes',
+                    footerProg2: 'Soins aux personnes âgées',
+                    footerProg3: 'Actions médicales',
+                    footerProg4: 'Développement communautaire',
+                    footerProg5: 'Formation au leadership',
+                    footerContact: 'Contact',
+                    footerUK: 'Bureau UK, Londres',
+                    footerNigeria: 'Bureau Nigeria, Lagos',
+                    footerCopy: 'Organisme de bienfaisance enregistré. Tous droits réservés.',
+                    footerPrivacy: 'Politique de confidentialité',
+                    cookieText: '🍪 Nous utilisons des cookies pour améliorer votre expérience. En utilisant notre site, vous acceptez notre <a href="#">politique de cookies</a>.',
+                    cookieAccept: 'Accepter',
+                    cookieDecline: 'Refuser'
+                },
+                'de': {
+                    navHome: 'Startseite',
+                    navAbout: 'Über uns',
+                    navPrograms: 'Programme',
+                    navBlog: 'Blog / News',
+                    navVolunteer: 'Mithelfen',
+                    navContact: 'Kontakt',
+                    navDonate: 'Spenden',
+                    leaveComment: 'Kommentar hinterlassen',
+                    commentName: 'Ihr Name',
+                    commentEmail: 'Ihre E-Mail',
+                    commentText: 'Ihr Kommentar',
+                    submitComment: 'Kommentar absenden',
+                    ctaTitle: 'Möchten Sie Ihre Geschichte teilen?',
+                    ctaText: 'Wir würden uns freuen, von Ihnen zu hören. Ob Sie von unserer Arbeit betroffen sind oder Ihre Erfahrungen teilen möchten, kontaktieren Sie uns.',
+                    ctaBtn1: '<i class="fas fa-envelope"></i> Kontaktieren Sie uns',
+                    ctaBtn2: '<i class="fas fa-hands-helping"></i> Werden Sie Teil unserer Mission',
+                    footerTag: 'Jugendliche stärken. Ältere ehren. Bessere Gemeinschaften aufbauen.',
+                    footerQuick: 'Schnelllinks',
+                    footerHome: 'Startseite',
+                    footerAbout: 'Über uns',
+                    footerProgramsLink: 'Programme',
+                    footerBlog: 'Blog / News',
+                    footerVolunteer: 'Mithelfen',
+                    footerContactLink: 'Kontakt',
+                    footerDonate: 'Spenden',
+                    footerPrograms: 'Programme',
+                    footerProg1: 'Jugendentwicklung',
+                    footerProg2: 'Altenpflege',
+                    footerProg3: 'Medizinische Hilfe',
+                    footerProg4: 'Gemeindeentwicklung',
+                    footerProg5: 'Führungstraining',
+                    footerContact: 'Kontakt',
+                    footerUK: 'Büro UK, London',
+                    footerNigeria: 'Büro Nigeria, Lagos',
+                    footerCopy: 'Eingetragene Wohltätigkeitsorganisation. Alle Rechte vorbehalten.',
+                    footerPrivacy: 'Datenschutzrichtlinie',
+                    cookieText: '🍪 Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website akzeptieren Sie unsere <a href="#">Cookie-Richtlinie</a>.',
+                    cookieAccept: 'Akzeptieren',
+                    cookieDecline: 'Ablehnen'
+                }
+            };
+
+            // ===== LANGUAGE =====
+            let currentLang = localStorage.getItem('phinehasLang') || 'en';
+
+            function applyLanguage(lang) {
+                if (!translations[lang]) lang = 'en';
+                const dict = translations[lang];
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[key] !== undefined) {
+                        if (dict[key].includes('<')) {
+                            el.innerHTML = dict[key];
+                        } else {
+                            el.textContent = dict[key];
+                        }
+                    }
+                });
+                document.querySelectorAll('.lang-dropdown li').forEach(li => {
+                    li.classList.toggle('active-lang', li.dataset.lang === lang);
+                    li.setAttribute('aria-selected', li.dataset.lang === lang ? 'true' : 'false');
+                });
+                const langNames = { en: 'EN', fr: 'FR', de: 'DE' };
+                document.getElementById('currentLangLabel').textContent = langNames[lang] || 'EN';
+                localStorage.setItem('phinehasLang', lang);
+                currentLang = lang;
+                document.documentElement.lang = lang;
+            }
+
+            // ===== LANGUAGE TOGGLE =====
+            document.getElementById('langToggle').addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isOpen = document.getElementById('langDropdown').classList.toggle('open');
+                this.setAttribute('aria-expanded', isOpen);
+            });
+
+            document.querySelectorAll('.lang-dropdown li').forEach(li => {
+                li.addEventListener('click', function() {
+                    applyLanguage(this.dataset.lang);
+                    document.getElementById('langDropdown').classList.remove('open');
+                    document.getElementById('langToggle').setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.lang-wrapper')) {
+                    document.getElementById('langDropdown').classList.remove('open');
+                    document.getElementById('langToggle').setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // ===== HAMBURGER =====
+            hamburger.addEventListener('click', function() {
+                const isOpen = navLinks.classList.toggle('open');
+                this.setAttribute('aria-expanded', isOpen);
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    const icon = hamburger.querySelector('i');
+                    if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+                });
+            });
+
+            // ===== HEADER SCROLL =====
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                header.classList.toggle('scrolled', scrollY > 20);
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                scrollProgress.style.width = scrollPercent + '%';
+                backToTop.classList.toggle('visible', scrollY > 400);
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== SKELETON LOADER =====
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    skeleton.classList.add('hidden');
+                    mainContent.classList.add('visible');
+                    renderPost();
+                    document.querySelectorAll('.fade-up').forEach((el, i) => {
+                        setTimeout(() => el.classList.add('visible'), 200 + i * 100);
+                    });
+                }, 800);
+            });
+
+            // ===== COOKIE BANNER =====
+            if (!localStorage.getItem('cookiesAccepted')) {
+                cookieBanner.classList.add('show');
+            }
+
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+
+            declineCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieBanner.classList.remove('show');
+            });
+
+            // ===== NAV ACTIVE STATE =====
+            const currentPath = window.location.pathname.split('/').pop() || 'blog-post.html';
+            navLinks.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+                if (href === 'blog.html' && currentPath === 'blog-post.html') {
+                    link.classList.add('active');
+                }
+            });
+
+            // ===== INIT =====
+            applyLanguage(currentLang);
+
+        })();
+    </script>
+
+</body>
+</html>
