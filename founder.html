@@ -17,6 +17,7 @@
     <meta name="twitter:description" content="The heart, vision, and leadership behind PHINEHAS GENERATION FOUNDATION." />
 
     <link rel="canonical" href="https://phinehasgeneration.org/founder.html" />
+    <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" type="image/png" />
     <title>Meet Our Founder | PHINEHAS GENERATION FOUNDATION</title>
 
     <!-- Font Awesome -->
@@ -249,6 +250,24 @@
         @keyframes fadePulse {
             0%, 100% { opacity: 0.6; }
             50% { opacity: 1; }
+        }
+
+        /* ===== ADMIN LINK (Faint) ===== */
+        .admin-link {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            opacity: 0.08;
+            font-size: 0.6rem;
+            color: var(--gray);
+            z-index: 1;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        .admin-link:hover {
+            opacity: 0.3;
         }
 
         /* ===== BUTTONS ===== */
@@ -532,7 +551,7 @@
             padding: 6px;
         }
 
-        /* ===== PAGE HERO ===== */
+        /* ===== PAGE HERO (using founder image) ===== */
         .page-hero {
             padding: 160px 0 90px;
             background-size: cover;
@@ -547,7 +566,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.35) 100%);
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(26, 26, 26, 0.45) 100%);
         }
 
         .page-hero .container {
@@ -640,60 +659,136 @@
             margin-right: 8px;
         }
 
-        .founder-content .title {
-            font-size: 1rem;
-            color: var(--gold-dark);
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-            display: block;
+        /* ===== NEWSPAPER STYLE CONTENT ===== */
+        .newspaper-content {
+            max-width: 100%;
         }
 
-        .founder-content .founder-name {
-            font-size: 2.4rem;
-            font-weight: 800;
-            margin-bottom: 4px;
-            font-family: 'Playfair Display', Georgia, serif;
-            color: var(--black);
-        }
-
-        .founder-content .quote-mark {
-            font-size: 3.5rem;
-            color: var(--gold);
-            opacity: 0.25;
-            font-family: Georgia, serif;
-            line-height: 0.8;
-            margin-top: 16px;
-            margin-bottom: -8px;
-        }
-
-        .founder-content .hero-quote {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--gold-dark);
-            line-height: 1.5;
+        .newspaper-content .byline {
+            font-size: 0.85rem;
+            color: var(--gray);
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 12px;
             margin-bottom: 24px;
-            font-style: italic;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .newspaper-content .byline .author {
+            font-weight: 600;
+            color: var(--black-soft);
+        }
+
+        .newspaper-content .byline .date {
+            color: var(--gray);
+        }
+
+        .newspaper-content .byline .date i {
+            margin-right: 4px;
+        }
+
+        .newspaper-content .dropcap {
+            font-size: 1.05rem;
+            color: var(--gray-dark);
+            line-height: 1.9;
+        }
+
+        .newspaper-content .dropcap::first-letter {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            float: left;
+            line-height: 0.8;
+            margin-right: 14px;
+            margin-top: 4px;
             font-family: 'Playfair Display', Georgia, serif;
         }
 
-        .founder-content p {
+        .newspaper-content p {
+            font-size: 1.05rem;
             color: var(--gray-dark);
             line-height: 1.9;
             margin-bottom: 18px;
-            font-size: 1.05rem;
         }
 
-        .founder-content h3 {
-            font-size: 1.5rem;
+        .newspaper-content .subheadline {
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--gold-dark);
             margin: 40px 0 16px;
             font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.3;
         }
 
-        .founder-content .highlight-box {
+        .newspaper-content .subheadline i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+
+        .newspaper-content .pullquote {
+            background: var(--gold-pale);
+            padding: 28px 36px;
+            border-radius: var(--radius-sm);
+            border-left: 5px solid var(--gold);
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--black-soft);
+            line-height: 1.8;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .newspaper-content .pullquote .attribution {
+            display: block;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--gold-dark);
+            margin-top: 8px;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .newspaper-content .news-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .newspaper-content .news-grid .news-item {
+            background: var(--white-soft);
+            padding: 20px 24px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--gray-light);
+        }
+
+        .newspaper-content .news-grid .news-item .item-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .newspaper-content .news-grid .news-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .newspaper-content .news-grid .news-item p {
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .newspaper-content .highlight-box {
             background: var(--gold-pale);
             padding: 30px 36px;
             border-radius: var(--radius-sm);
@@ -701,14 +796,14 @@
             margin: 30px 0;
         }
 
-        .founder-content .highlight-box p {
+        .newspaper-content .highlight-box p {
             margin-bottom: 0;
             font-style: italic;
             color: var(--black-soft);
             font-size: 1.05rem;
         }
 
-        .founder-content .highlight-box .highlight-author {
+        .newspaper-content .highlight-box .highlight-author {
             font-style: normal;
             font-weight: 600;
             color: var(--gold-dark);
@@ -807,6 +902,18 @@
 
         .founder-gallery-grid .gallery-item:hover img {
             transform: scale(1.05);
+        }
+
+        .founder-gallery-grid .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px 16px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
 
         /* ===== VALUES ===== */
@@ -1112,6 +1219,25 @@
             font-family: 'Inter', system-ui, sans-serif;
         }
 
+        .cookie-banner .btn-accept {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        .cookie-banner .btn-accept:hover {
+            background: var(--gold-light);
+        }
+
+        .cookie-banner .btn-decline {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+        }
+
+        .cookie-banner .btn-decline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: var(--black);
@@ -1309,6 +1435,9 @@
             .founder-gallery-grid {
                 grid-template-columns: 1fr 1fr;
             }
+            .newspaper-content .news-grid {
+                grid-template-columns: 1fr;
+            }
             .timeline::before {
                 left: 20px;
             }
@@ -1375,12 +1504,6 @@
             .cta-section h2 {
                 font-size: 2rem;
             }
-            .founder-content .founder-name {
-                font-size: 2rem;
-            }
-            .founder-content .hero-quote {
-                font-size: 1.2rem;
-            }
             .founder-image-wrap img {
                 height: 320px;
             }
@@ -1395,6 +1518,19 @@
             }
             .founder-gallery-grid .gallery-item img {
                 height: 150px;
+            }
+            .newspaper-content .dropcap::first-letter {
+                font-size: 3.5rem;
+            }
+            .newspaper-content p {
+                font-size: 0.98rem;
+            }
+            .newspaper-content .subheadline {
+                font-size: 1.2rem;
+            }
+            .newspaper-content .pullquote {
+                padding: 20px 24px;
+                font-size: 1rem;
             }
             .whatsapp-float {
                 bottom: 80px;
@@ -1441,15 +1577,6 @@
             .section-title {
                 font-size: 1.7rem;
             }
-            .founder-content .founder-name {
-                font-size: 1.6rem;
-            }
-            .founder-content .hero-quote {
-                font-size: 1rem;
-            }
-            .founder-content p {
-                font-size: 0.95rem;
-            }
             .founder-image-wrap img {
                 height: 260px;
             }
@@ -1474,6 +1601,22 @@
                 bottom: 16px;
                 left: 16px;
             }
+            .newspaper-content .dropcap::first-letter {
+                font-size: 2.8rem;
+            }
+            .newspaper-content p {
+                font-size: 0.92rem;
+            }
+            .newspaper-content .subheadline {
+                font-size: 1.1rem;
+            }
+            .newspaper-content .pullquote {
+                font-size: 0.95rem;
+                padding: 16px 18px;
+            }
+            .newspaper-content .news-grid .news-item {
+                padding: 16px 18px;
+            }
         }
     </style>
 </head>
@@ -1492,6 +1635,9 @@
 
     <!-- ===== SCROLL PROGRESS ===== -->
     <div id="scroll-progress" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- ===== ADMIN LINK (Faint) ===== -->
+    <a href="admin.html" class="admin-link" aria-label="Admin Panel">⚙ admin</a>
 
     <!-- ===== MAIN CONTENT ===== -->
     <div id="main-content">
@@ -1512,7 +1658,6 @@
                     <a href="index.html" data-i18n="navHome">Home</a>
                     <a href="about.html" data-i18n="navAbout">About Us</a>
                     <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
-                    <a href="gallery.html" data-i18n="navGallery">Gallery</a>
                     <a href="blog.html" data-i18n="navBlog">Blog / News</a>
                     <a href="volunteer.html" data-i18n="navVolunteer">Volunteer</a>
                     <a href="contact.html" data-i18n="navContact">Contact Us</a>
@@ -1532,8 +1677,8 @@
             </div>
         </header>
 
-        <!-- ===== PAGE HERO ===== -->
-        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');" aria-label="Founder page hero image">
+        <!-- ===== PAGE HERO (using founder image) ===== -->
+        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938653/1784934975518_slmphx.jpg');" aria-label="Founder page hero image">
             <div class="container">
                 <h1 data-i18n="heroTitle">Meet Our Founder</h1>
                 <p class="hero-sub" data-i18n="heroSub">The heart, vision, and leadership behind PHINEHAS GENERATION FOUNDATION</p>
@@ -1555,135 +1700,91 @@
                         <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938653/1784934975518_slmphx.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder and Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
                         <span class="badge"><i class="fas fa-crown"></i> <span data-i18n="founderBadge">Founder & Executive Director</span></span>
                     </div>
-                    <div class="founder-content fade-up">
-                        <span class="title" data-i18n="founderRole">Founder & Executive Director</span>
-                        <h2 class="founder-name" data-i18n="founderName">Mrs. Oluwatosin Balogun Akano</h2>
+                    <div class="newspaper-content fade-up">
+                        <div class="byline">
+                            <span class="author" data-i18n="bylineAuthor">By PHINEHAS GENERATION FOUNDATION</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> <span data-i18n="bylineDate">Published 2026</span></span>
+                        </div>
 
-                        <div class="quote-mark">"</div>
-                        <p class="hero-quote" data-i18n="founderTagline">One person's compassion has the power to transform countless lives.</p>
-
-                        <p data-i18n="founderP1">
-                            Behind every vision that changes lives is someone who chooses to see possibility where others see problems. For Mrs. Oluwatosin Balogun Akano, that choice became the beginning of a journey that has impacted young people, restored hope to elderly citizens, and inspired communities to care more deeply for one another.
+                        <p class="dropcap" data-i18n="founderP1">
+                            In the heart of Abeokuta, Ogun State, a quiet revolution has been unfolding since 2016—one led not by politicians or celebrities, but by a woman whose compassion for people has become the driving force behind a movement that is transforming lives across generations. Mrs. Oluwatosin Balogun Akano, founder and executive director of PHINEHAS GENERATION FOUNDATION, has dedicated her life to bridging the gap between the young and the elderly, ensuring that no one is left behind.
                         </p>
 
                         <p data-i18n="founderP2">
-                            As the Founder and Executive Director of PHINEHAS GENERATION FOUNDATION, Mrs. Akano has devoted herself to building a future where compassion, purpose, and service are not just ideals but everyday realities. Her leadership is rooted in a genuine love for people and an unwavering belief that every individual—regardless of age, background, or circumstance—deserves to be seen, valued, and empowered.
+                            Her journey began with a simple observation: many teenagers were struggling silently. Low self-esteem, peer pressure, depression, abuse, identity crises, and uncertainty about the future had become common challenges among young people. While many recognized these problems, few were willing to step forward and offer solutions. Mrs. Akano chose to be among the few who acted.
                         </p>
 
-                        <h3 data-i18n="founderH3_1">A Vision Born from Compassion</h3>
+                        <div class="subheadline" data-i18n="founderH3_1"><i class="fas fa-seedling"></i> A Vision Born from Compassion</div>
 
                         <p data-i18n="founderP3">
-                            In 2016, while observing the challenges facing many teenagers, Mrs. Akano recognized a growing need for intentional mentorship and guidance. She encountered young people struggling with low self-esteem, peer pressure, depression, abuse, identity crises, and uncertainty about their future. Many possessed incredible potential but lacked the encouragement and support needed to realize it.
+                            In 2016, Mrs. Akano founded PHINEHAS GENERATION FOUNDATION with a clear mission: to provide mentorship, guidance, and leadership development for teenagers. What began as small gatherings in Abeokuta quickly grew into a vibrant movement. Through conferences, seminars, leadership workshops, school outreaches, and community engagements, the foundation created safe spaces where young people could openly discuss issues affecting their lives and receive practical guidance from experienced professionals.
                         </p>
 
                         <p data-i18n="founderP4">
-                            Rather than simply acknowledging these challenges, she chose to respond with action.
+                            Topics such as self-esteem, sexual health, sexual purity, mental wellbeing, leadership, purpose discovery, and character development became central to the foundation's work. The approach was holistic, addressing not just academic or career concerns but the whole person.
                         </p>
 
-                        <p data-i18n="founderP5">
-                            Guided by a desire to see lives transformed, she founded PHINEHAS GENERATION FOUNDATION as a platform where teenagers could receive mentorship, develop leadership skills, build confidence, and discover purpose. Her vision was never limited to organizing events; it was to shape lives and empower a generation to become responsible leaders, compassionate citizens, and agents of positive change.
-                        </p>
-
-                        <h3 data-i18n="founderH3_2">Building a Generation of Purpose</h3>
-
-                        <p data-i18n="founderP6">
-                            What began as a small initiative soon grew into a vibrant movement. Through conferences, mentorship sessions, leadership workshops, school outreaches, and community engagements, Mrs. Akano created safe spaces where young people could openly discuss issues affecting their lives and receive practical guidance from experienced professionals.
-                        </p>
-
-                        <p data-i18n="founderP7">
-                            Topics such as self-esteem, sexual health, sexual purity, mental wellbeing, leadership, purpose discovery, and character development became central to the foundation's work.
-                        </p>
-
-                        <div class="highlight-box">
-                            <p data-i18n="founderHighlight1">
-                                "One of the organization's defining moments came in 2018, when PHINEHAS GENERATION FOUNDATION organized a youth hangout at the Obasanjo Presidential Library, Abeokuta. The event brought together teenagers from different backgrounds for a day of learning, inspiration, and personal development."
-                            </p>
-                            <span class="highlight-author" data-i18n="founderHighlight1Author">— PHINEHAS GENERATION FOUNDATION Archive</span>
+                        <div class="pullquote" data-i18n="founderPullquote1">
+                            "One person's compassion has the power to transform countless lives. I have seen it happen, and I believe it can happen for every person who is willing to care."
+                            <span class="attribution" data-i18n="founderPullquote1Attribution">— Mrs. Oluwatosin Balogun Akano</span>
                         </div>
 
-                        <p data-i18n="founderP8">
-                            Many of those participants have since completed their education and are now graduates contributing meaningfully to their communities—a lasting testament to the power of mentorship and timely intervention.
+                        <div class="subheadline" data-i18n="founderH3_2"><i class="fas fa-users"></i> A Landmark Moment</div>
+
+                        <p data-i18n="founderP5">
+                            One of the organization's defining moments came in 2018, when PHINEHAS GENERATION FOUNDATION organized a youth hangout at the Obasanjo Presidential Library in Abeokuta. The event brought together teenagers from different backgrounds for a day of learning, inspiration, and personal development. Through mentorship, interactive sessions, and inspirational talks, many participants discovered new confidence, clarified their goals, and found renewed purpose.
                         </p>
 
-                        <h3 data-i18n="founderH3_3">Expanding the Vision</h3>
+                        <p data-i18n="founderP6">
+                            Today, many of those young people have completed higher education and are contributing meaningfully to their communities as graduates and professionals. Their success stories stand as a lasting testament to the power of mentorship and timely intervention.
+                        </p>
+
+                        <div class="subheadline" data-i18n="founderH3_3"><i class="fas fa-hand-holding-heart"></i> Expanding the Vision</div>
+
+                        <p data-i18n="founderP7">
+                            As the foundation's work continued to grow, another need began to weigh heavily on Mrs. Akano's heart. While visiting communities, she encountered many elderly men and women living with loneliness, declining health, and limited access to basic care. Some struggled with poor eyesight that affected their daily lives, while others simply longed for companionship and the reassurance that they had not been forgotten.
+                        </p>
+
+                        <p data-i18n="founderP8">
+                            These experiences transformed the direction of the foundation. Mrs. Akano believed that a society cannot truly thrive if it invests only in its future while neglecting those who helped build its past. This conviction led to the expansion of PHINEHAS GENERATION FOUNDATION's mission to include comprehensive care for senior citizens.
+                        </p>
+
+                        <div class="news-grid">
+                            <div class="news-item">
+                                <span class="item-label" data-i18n="newsLabel1">🔍 KEY INITIATIVE</span>
+                                <h4 data-i18n="newsTitle1">Medical Outreach Program</h4>
+                                <p data-i18n="newsDesc1">Providing free healthcare services, eye examinations, cataract surgeries, and prescription glasses to elderly people in underserved communities.</p>
+                            </div>
+                            <div class="news-item">
+                                <span class="item-label" data-i18n="newsLabel2">❤️ IMPACT</span>
+                                <h4 data-i18n="newsTitle2">Community Welfare Support</h4>
+                                <p data-i18n="newsDesc2">Food distribution, financial assistance, regular welfare visits, and emotional care for senior citizens across Nigeria.</p>
+                            </div>
+                        </div>
+
+                        <div class="pullquote" data-i18n="founderPullquote2">
+                            "I believe that every life has value and every person deserves the opportunity to live with dignity, hope, and purpose."
+                            <span class="attribution" data-i18n="founderPullquote2Attribution">— Mrs. Oluwatosin Balogun Akano</span>
+                        </div>
+
+                        <div class="subheadline" data-i18n="founderH3_4"><i class="fas fa-globe-africa"></i> Growing Beyond Borders</div>
 
                         <p data-i18n="founderP9">
-                            As the foundation's work continued to grow, another need began to weigh heavily on Mrs. Akano's heart.
+                            From its beginnings in Abeokuta, PHINEHAS GENERATION FOUNDATION expanded its activities into Lagos and has since extended its reach to the United Kingdom. Under Mrs. Akano's leadership, the organization continues to build partnerships and explore new opportunities to increase its impact while remaining faithful to its founding mission.
                         </p>
 
                         <p data-i18n="founderP10">
-                            While visiting communities, she encountered many elderly men and women living with loneliness, declining health, and limited access to basic care. Some struggled with poor eyesight that affected their daily lives, while others simply longed for companionship and the reassurance that they had not been forgotten.
+                            Today, the foundation serves as a bridge between generations—preparing young people for the future while honoring and caring for the elderly. Mrs. Akano believes that lasting change begins with compassion. She believes that every teenager deserves guidance, every elderly person deserves dignity, and every community becomes stronger when people choose to care for one another.
                         </p>
+
+                        <div class="subheadline" data-i18n="founderH3_5"><i class="fas fa-eye"></i> Looking Ahead</div>
 
                         <p data-i18n="founderP11">
-                            These experiences transformed the direction of the foundation.
-                        </p>
-
-                        <p data-i18n="founderP12">
-                            Mrs. Akano believed that a society cannot truly thrive if it invests only in its future while neglecting those who helped build its past. This conviction led to the expansion of PHINEHAS GENERATION FOUNDATION's mission to include comprehensive care for senior citizens.
-                        </p>
-
-                        <p data-i18n="founderP13">
-                            Today, the foundation provides medical outreaches, eye care services, food distribution, welfare support, financial assistance, and emotional care for elderly people across communities.
-                        </p>
-
-                        <div class="highlight-box">
-                            <p data-i18n="founderHighlight2">
-                                "One particularly memorable outreach took place in Igbore, Abeokuta, where an elderly beneficiary, Mrs. Lawal Abeke, regained her sight after receiving cataract treatment and prescription glasses through the foundation's medical outreach program. Witnessing the joy and renewed hope on her face reaffirmed Mrs. Akano's belief that even a single act of kindness can transform a life."
-                            </p>
-                            <span class="highlight-author" data-i18n="founderHighlight2Author">— PHINEHAS GENERATION FOUNDATION Impact Report</span>
-                        </div>
-
-                        <h3 data-i18n="founderH3_4">A Leader Who Serves</h3>
-
-                        <p data-i18n="founderP14">
-                            Mrs. Akano's leadership is defined not only by the programs she has established but by the values she demonstrates every day. She believes that true leadership is expressed through service, humility, integrity, and compassion.
-                        </p>
-
-                        <p data-i18n="founderP15">
-                            Her approach has always been people-centered. Whether mentoring a teenager, encouraging a volunteer, comforting an elderly beneficiary, or building partnerships with organizations, she leads with empathy and a genuine commitment to making a lasting difference.
-                        </p>
-
-                        <p data-i18n="founderP16">
-                            For her, success is measured not by titles or recognition but by the lives transformed, the hope restored, and the opportunities created for others.
-                        </p>
-
-                        <h3 data-i18n="founderH3_5">Growing Beyond Borders</h3>
-
-                        <p data-i18n="founderP17">
-                            From its beginnings in Abeokuta, Ogun State, PHINEHAS GENERATION FOUNDATION expanded its activities into Lagos and has since extended its reach to the United Kingdom. Under Mrs. Akano's leadership, the organization continues to build partnerships and explore new opportunities to increase its impact while remaining faithful to its founding mission.
-                        </p>
-
-                        <p data-i18n="founderP18">
-                            Today, the foundation serves as a bridge between generations—preparing young people for the future while honoring and caring for the elderly.
-                        </p>
-
-                        <h3 data-i18n="founderH3_6">Her Philosophy</h3>
-
-                        <p data-i18n="founderP19">
-                            Mrs. Akano believes that lasting change begins with compassion.
-                        </p>
-
-                        <p data-i18n="founderP20">
-                            She believes that every teenager deserves guidance, every elderly person deserves dignity, and every community becomes stronger when people choose to care for one another.
-                        </p>
-
-                        <p data-i18n="founderP21">
-                            This philosophy continues to guide every initiative, outreach program, partnership, and decision made by PHINEHAS GENERATION FOUNDATION.
-                        </p>
-
-                        <h3 data-i18n="founderH3_7">Looking Ahead</h3>
-
-                        <p data-i18n="founderP22">
                             Mrs. Akano envisions a future where PHINEHAS GENERATION FOUNDATION reaches even more communities across Nigeria, the United Kingdom, and beyond. Her goal is to expand youth empowerment initiatives, strengthen healthcare and welfare programs for the elderly, establish sustainable community development projects, and build strategic partnerships that multiply the foundation's impact for generations to come.
                         </p>
 
-                        <p data-i18n="founderP23">
-                            Although much has been accomplished since 2016, she believes the journey has only just begun.
-                        </p>
-
-                        <p data-i18n="founderP24">
-                            With faith, compassion, and unwavering commitment, she continues to lead a movement dedicated to empowering the young, honoring the elderly, and transforming communities—one life at a time.
+                        <p data-i18n="founderP12">
+                            Although much has been accomplished since 2016, she believes the journey has only just begun. With faith, compassion, and unwavering commitment, she continues to lead a movement dedicated to empowering the young, honoring the elderly, and transforming communities—one life at a time.
                         </p>
 
                         <!-- ===== SIGNATURE BLOCK ===== -->
@@ -1703,12 +1804,15 @@
                 <div class="founder-gallery-grid stagger-gallery mt-48">
                     <div class="gallery-item">
                         <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with children during community outreach" loading="lazy" />
+                        <div class="caption" data-i18n="galleryCap1">Connecting with the next generation</div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786485653_gth2i5.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with teenagers after seminar program" loading="lazy" />
+                        <div class="caption" data-i18n="galleryCap2">Mentoring young leaders at a seminar</div>
                     </div>
                     <div class="gallery-item">
                         <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972471198_hxwsgc.jpg" alt="Founder Mrs. Oluwatosin Balogun Akano with students during school outreach" loading="lazy" />
+                        <div class="caption" data-i18n="galleryCap3">School outreach and community engagement</div>
                     </div>
                 </div>
             </div>
@@ -1854,7 +1958,6 @@
                         <a href="index.html" data-i18n="footerHome">Home</a>
                         <a href="about.html" data-i18n="footerAbout">About Us</a>
                         <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
-                        <a href="gallery.html" data-i18n="footerGallery">Gallery</a>
                         <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
                         <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
                         <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
@@ -1894,8 +1997,8 @@
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
         <p data-i18n="cookieText">🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
         <div style="display:flex; gap:10px;">
-            <button class="btn-sm" style="background:var(--gold); color:white; border:none; padding:8px 20px; border-radius:9999px; font-weight:600; cursor:pointer;" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
-            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px; padding:8px 20px; cursor:pointer;" id="declineCookies" data-i18n="cookieDecline">Decline</button>
+            <button class="btn-sm btn-accept" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
+            <button class="btn-sm btn-decline" id="declineCookies" data-i18n="cookieDecline">Decline</button>
         </div>
     </div>
 
@@ -1930,63 +2033,52 @@
             // ===== TRANSLATIONS =====
             const translations = {
                 'en': {
-                    // Nav
                     navHome: 'Home',
                     navAbout: 'About Us',
                     navPrograms: 'Our Programs',
-                    navGallery: 'Gallery',
                     navBlog: 'Blog / News',
                     navVolunteer: 'Volunteer',
                     navContact: 'Contact Us',
                     navDonate: 'Donate Now',
                     navFounder: 'Founder',
-                    // Hero
                     heroTitle: 'Meet Our Founder',
                     heroSub: 'The heart, vision, and leadership behind PHINEHAS GENERATION FOUNDATION',
-                    // Founder Profile
                     founderBadge: 'Founder & Executive Director',
-                    founderRole: 'Founder & Executive Director',
-                    founderName: 'Mrs. Oluwatosin Balogun Akano',
-                    founderTagline: 'One person\'s compassion has the power to transform countless lives.',
-                    founderP1: 'Behind every vision that changes lives is someone who chooses to see possibility where others see problems. For Mrs. Oluwatosin Balogun Akano, that choice became the beginning of a journey that has impacted young people, restored hope to elderly citizens, and inspired communities to care more deeply for one another.',
-                    founderP2: 'As the Founder and Executive Director of PHINEHAS GENERATION FOUNDATION, Mrs. Akano has devoted herself to building a future where compassion, purpose, and service are not just ideals but everyday realities. Her leadership is rooted in a genuine love for people and an unwavering belief that every individual—regardless of age, background, or circumstance—deserves to be seen, valued, and empowered.',
+                    bylineAuthor: 'By PHINEHAS GENERATION FOUNDATION',
+                    bylineDate: 'Published 2026',
+                    founderP1: 'In the heart of Abeokuta, Ogun State, a quiet revolution has been unfolding since 2016—one led not by politicians or celebrities, but by a woman whose compassion for people has become the driving force behind a movement that is transforming lives across generations. Mrs. Oluwatosin Balogun Akano, founder and executive director of PHINEHAS GENERATION FOUNDATION, has dedicated her life to bridging the gap between the young and the elderly, ensuring that no one is left behind.',
+                    founderP2: 'Her journey began with a simple observation: many teenagers were struggling silently. Low self-esteem, peer pressure, depression, abuse, identity crises, and uncertainty about the future had become common challenges among young people. While many recognized these problems, few were willing to step forward and offer solutions. Mrs. Akano chose to be among the few who acted.',
                     founderH3_1: 'A Vision Born from Compassion',
-                    founderP3: 'In 2016, while observing the challenges facing many teenagers, Mrs. Akano recognized a growing need for intentional mentorship and guidance. She encountered young people struggling with low self-esteem, peer pressure, depression, abuse, identity crises, and uncertainty about their future. Many possessed incredible potential but lacked the encouragement and support needed to realize it.',
-                    founderP4: 'Rather than simply acknowledging these challenges, she chose to respond with action.',
-                    founderP5: 'Guided by a desire to see lives transformed, she founded PHINEHAS GENERATION FOUNDATION as a platform where teenagers could receive mentorship, develop leadership skills, build confidence, and discover purpose. Her vision was never limited to organizing events; it was to shape lives and empower a generation to become responsible leaders, compassionate citizens, and agents of positive change.',
-                    founderH3_2: 'Building a Generation of Purpose',
-                    founderP6: 'What began as a small initiative soon grew into a vibrant movement. Through conferences, mentorship sessions, leadership workshops, school outreaches, and community engagements, Mrs. Akano created safe spaces where young people could openly discuss issues affecting their lives and receive practical guidance from experienced professionals.',
-                    founderP7: 'Topics such as self-esteem, sexual health, sexual purity, mental wellbeing, leadership, purpose discovery, and character development became central to the foundation\'s work.',
-                    founderHighlight1: '"One of the organization\'s defining moments came in 2018, when PHINEHAS GENERATION FOUNDATION organized a youth hangout at the Obasanjo Presidential Library, Abeokuta. The event brought together teenagers from different backgrounds for a day of learning, inspiration, and personal development."',
-                    founderHighlight1Author: '— PHINEHAS GENERATION FOUNDATION Archive',
-                    founderP8: 'Many of those participants have since completed their education and are now graduates contributing meaningfully to their communities—a lasting testament to the power of mentorship and timely intervention.',
+                    founderP3: 'In 2016, Mrs. Akano founded PHINEHAS GENERATION FOUNDATION with a clear mission: to provide mentorship, guidance, and leadership development for teenagers. What began as small gatherings in Abeokuta quickly grew into a vibrant movement. Through conferences, seminars, leadership workshops, school outreaches, and community engagements, the foundation created safe spaces where young people could openly discuss issues affecting their lives and receive practical guidance from experienced professionals.',
+                    founderP4: 'Topics such as self-esteem, sexual health, sexual purity, mental wellbeing, leadership, purpose discovery, and character development became central to the foundation\'s work. The approach was holistic, addressing not just academic or career concerns but the whole person.',
+                    founderPullquote1: '"One person\'s compassion has the power to transform countless lives. I have seen it happen, and I believe it can happen for every person who is willing to care."',
+                    founderPullquote1Attribution: '— Mrs. Oluwatosin Balogun Akano',
+                    founderH3_2: 'A Landmark Moment',
+                    founderP5: 'One of the organization\'s defining moments came in 2018, when PHINEHAS GENERATION FOUNDATION organized a youth hangout at the Obasanjo Presidential Library in Abeokuta. The event brought together teenagers from different backgrounds for a day of learning, inspiration, and personal development. Through mentorship, interactive sessions, and inspirational talks, many participants discovered new confidence, clarified their goals, and found renewed purpose.',
+                    founderP6: 'Today, many of those young people have completed higher education and are contributing meaningfully to their communities as graduates and professionals. Their success stories stand as a lasting testament to the power of mentorship and timely intervention.',
                     founderH3_3: 'Expanding the Vision',
-                    founderP9: 'As the foundation\'s work continued to grow, another need began to weigh heavily on Mrs. Akano\'s heart.',
-                    founderP10: 'While visiting communities, she encountered many elderly men and women living with loneliness, declining health, and limited access to basic care. Some struggled with poor eyesight that affected their daily lives, while others simply longed for companionship and the reassurance that they had not been forgotten.',
-                    founderP11: 'These experiences transformed the direction of the foundation.',
-                    founderP12: 'Mrs. Akano believed that a society cannot truly thrive if it invests only in its future while neglecting those who helped build its past. This conviction led to the expansion of PHINEHAS GENERATION FOUNDATION\'s mission to include comprehensive care for senior citizens.',
-                    founderP13: 'Today, the foundation provides medical outreaches, eye care services, food distribution, welfare support, financial assistance, and emotional care for elderly people across communities.',
-                    founderHighlight2: '"One particularly memorable outreach took place in Igbore, Abeokuta, where an elderly beneficiary, Mrs. Lawal Abeke, regained her sight after receiving cataract treatment and prescription glasses through the foundation\'s medical outreach program. Witnessing the joy and renewed hope on her face reaffirmed Mrs. Akano\'s belief that even a single act of kindness can transform a life."',
-                    founderHighlight2Author: '— PHINEHAS GENERATION FOUNDATION Impact Report',
-                    founderH3_4: 'A Leader Who Serves',
-                    founderP14: 'Mrs. Akano\'s leadership is defined not only by the programs she has established but by the values she demonstrates every day. She believes that true leadership is expressed through service, humility, integrity, and compassion.',
-                    founderP15: 'Her approach has always been people-centered. Whether mentoring a teenager, encouraging a volunteer, comforting an elderly beneficiary, or building partnerships with organizations, she leads with empathy and a genuine commitment to making a lasting difference.',
-                    founderP16: 'For her, success is measured not by titles or recognition but by the lives transformed, the hope restored, and the opportunities created for others.',
-                    founderH3_5: 'Growing Beyond Borders',
-                    founderP17: 'From its beginnings in Abeokuta, Ogun State, PHINEHAS GENERATION FOUNDATION expanded its activities into Lagos and has since extended its reach to the United Kingdom. Under Mrs. Akano\'s leadership, the organization continues to build partnerships and explore new opportunities to increase its impact while remaining faithful to its founding mission.',
-                    founderP18: 'Today, the foundation serves as a bridge between generations—preparing young people for the future while honoring and caring for the elderly.',
-                    founderH3_6: 'Her Philosophy',
-                    founderP19: 'Mrs. Akano believes that lasting change begins with compassion.',
-                    founderP20: 'She believes that every teenager deserves guidance, every elderly person deserves dignity, and every community becomes stronger when people choose to care for one another.',
-                    founderP21: 'This philosophy continues to guide every initiative, outreach program, partnership, and decision made by PHINEHAS GENERATION FOUNDATION.',
-                    founderH3_7: 'Looking Ahead',
-                    founderP22: 'Mrs. Akano envisions a future where PHINEHAS GENERATION FOUNDATION reaches even more communities across Nigeria, the United Kingdom, and beyond. Her goal is to expand youth empowerment initiatives, strengthen healthcare and welfare programs for the elderly, establish sustainable community development projects, and build strategic partnerships that multiply the foundation\'s impact for generations to come.',
-                    founderP23: 'Although much has been accomplished since 2016, she believes the journey has only just begun.',
-                    founderP24: 'With faith, compassion, and unwavering commitment, she continues to lead a movement dedicated to empowering the young, honoring the elderly, and transforming communities—one life at a time.',
+                    founderP7: 'As the foundation\'s work continued to grow, another need began to weigh heavily on Mrs. Akano\'s heart. While visiting communities, she encountered many elderly men and women living with loneliness, declining health, and limited access to basic care. Some struggled with poor eyesight that affected their daily lives, while others simply longed for companionship and the reassurance that they had not been forgotten.',
+                    founderP8: 'These experiences transformed the direction of the foundation. Mrs. Akano believed that a society cannot truly thrive if it invests only in its future while neglecting those who helped build its past. This conviction led to the expansion of PHINEHAS GENERATION FOUNDATION\'s mission to include comprehensive care for senior citizens.',
+                    newsLabel1: 'KEY INITIATIVE',
+                    newsTitle1: 'Medical Outreach Program',
+                    newsDesc1: 'Providing free healthcare services, eye examinations, cataract surgeries, and prescription glasses to elderly people in underserved communities.',
+                    newsLabel2: 'IMPACT',
+                    newsTitle2: 'Community Welfare Support',
+                    newsDesc2: 'Food distribution, financial assistance, regular welfare visits, and emotional care for senior citizens across Nigeria.',
+                    founderPullquote2: '"I believe that every life has value and every person deserves the opportunity to live with dignity, hope, and purpose."',
+                    founderPullquote2Attribution: '— Mrs. Oluwatosin Balogun Akano',
+                    founderH3_4: 'Growing Beyond Borders',
+                    founderP9: 'From its beginnings in Abeokuta, PHINEHAS GENERATION FOUNDATION expanded its activities into Lagos and has since extended its reach to the United Kingdom. Under Mrs. Akano\'s leadership, the organization continues to build partnerships and explore new opportunities to increase its impact while remaining faithful to its founding mission.',
+                    founderP10: 'Today, the foundation serves as a bridge between generations—preparing young people for the future while honoring and caring for the elderly. Mrs. Akano believes that lasting change begins with compassion. She believes that every teenager deserves guidance, every elderly person deserves dignity, and every community becomes stronger when people choose to care for one another.',
+                    founderH3_5: 'Looking Ahead',
+                    founderP11: 'Mrs. Akano envisions a future where PHINEHAS GENERATION FOUNDATION reaches even more communities across Nigeria, the United Kingdom, and beyond. Her goal is to expand youth empowerment initiatives, strengthen healthcare and welfare programs for the elderly, establish sustainable community development projects, and build strategic partnerships that multiply the foundation\'s impact for generations to come.',
+                    founderP12: 'Although much has been accomplished since 2016, she believes the journey has only just begun. With faith, compassion, and unwavering commitment, she continues to lead a movement dedicated to empowering the young, honoring the elderly, and transforming communities—one life at a time.',
                     founderSignature: '"I believe that every life has value and every person deserves the opportunity to live with dignity, hope, and purpose. Through PHINEHAS GENERATION FOUNDATION, we are committed to raising confident young leaders while restoring hope to elderly people who deserve our love, care, and respect. Together, we can build communities where compassion connects generations and no one is left behind."',
                     founderSignatureName: '— Mrs. Oluwatosin Balogun Akano',
                     founderSignatureRole: 'Founder & Executive Director, PHINEHAS GENERATION FOUNDATION',
-                    // Values
+                    galleryCap1: 'Connecting with the next generation',
+                    galleryCap2: 'Mentoring young leaders at a seminar',
+                    galleryCap3: 'School outreach and community engagement',
                     valuesEyebrow: 'What Guides Her',
                     valuesTitle: 'The Values That <span class="highlight">Guide Her</span>',
                     valuesSub: 'Principles that shape her leadership and the foundation\'s work',
@@ -2006,7 +2098,6 @@
                     val7Desc: 'Creating lasting impact by working with communities and partners.',
                     val8Title: 'Hope',
                     val8Desc: 'Inspiring confidence for a brighter future, regardless of life\'s challenges.',
-                    // Timeline
                     timelineEyebrow: 'Her Journey',
                     timelineTitle: 'Key <span class="highlight">Milestones</span>',
                     timelineSub: 'Moments that shaped her leadership',
@@ -2028,18 +2119,15 @@
                     tYear6: 'Present',
                     tTitle6: 'Continuing to Lead with Purpose',
                     tDesc6: 'Inspiring hope, empowering young leaders, and restoring dignity to the elderly across communities.',
-                    // CTA
                     ctaTitle: 'Join Her in Transforming Lives',
                     ctaText: 'Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.',
                     ctaBtn1: '<i class="fas fa-heart"></i> Donate Now',
                     ctaBtn2: '<i class="fas fa-hands-helping"></i> Become a Volunteer',
-                    // Footer
                     footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
                     footerQuick: 'Quick Links',
                     footerHome: 'Home',
                     footerAbout: 'About Us',
                     footerProgramsLink: 'Our Programs',
-                    footerGallery: 'Gallery',
                     footerBlog: 'Blog / News',
                     footerVolunteer: 'Volunteer',
                     footerContactLink: 'Contact Us',
@@ -2055,7 +2143,6 @@
                     footerNigeria: 'Nigeria Office, Lagos',
                     footerCopy: 'Registered Charity. All rights reserved.',
                     footerPrivacy: 'Privacy Policy',
-                    // Cookie
                     cookieText: '🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.',
                     cookieAccept: 'Accept',
                     cookieDecline: 'Decline'
@@ -2064,7 +2151,6 @@
                     navHome: 'Accueil',
                     navAbout: 'À propos',
                     navPrograms: 'Nos programmes',
-                    navGallery: 'Galerie',
                     navBlog: 'Blog / Actualités',
                     navVolunteer: 'Bénévolat',
                     navContact: 'Contact',
@@ -2073,47 +2159,41 @@
                     heroTitle: 'Notre Fondatrice',
                     heroSub: 'Le cœur, la vision et le leadership derrière PHINEHAS GENERATION FOUNDATION',
                     founderBadge: 'Fondatrice & Directrice Exécutive',
-                    founderRole: 'Fondatrice & Directrice Exécutive',
-                    founderName: 'Mme Oluwatosin Balogun Akano',
-                    founderTagline: 'La compassion d\'une personne a le pouvoir de transformer d\'innombrables vies.',
-                    founderP1: 'Derrière chaque vision qui change des vies se trouve quelqu\'un qui choisit de voir des possibilités là où d\'autres voient des problèmes. Pour Mme Oluwatosin Balogun Akano, ce choix est devenu le début d\'un voyage qui a touché des jeunes, redonné espoir à des citoyens âgés et inspiré des communautés à se soucier davantage les unes des autres.',
-                    founderP2: 'En tant que fondatrice et directrice exécutive de PHINEHAS GENERATION FOUNDATION, Mme Akano s\'est consacrée à construire un avenir où la compassion, le but et le service ne sont pas seulement des idéaux mais des réalités quotidiennes. Son leadership est enraciné dans un amour sincère pour les gens et une croyance inébranlable que chaque individu—quel que soit son âge, son origine ou sa situation—mérite d\'être vu, valorisé et autonomisé.',
+                    bylineAuthor: 'Par PHINEHAS GENERATION FOUNDATION',
+                    bylineDate: 'Publié en 2026',
+                    founderP1: 'Au cœur d\'Abeokuta, dans l\'État d\'Ogun, une révolution silencieuse se déroule depuis 2016—menée non par des politiciens ou des célébrités, mais par une femme dont la compassion pour les gens est devenue la force motrice d\'un mouvement qui transforme des vies à travers les générations. Mme Oluwatosin Balogun Akano, fondatrice et directrice exécutive de PHINEHAS GENERATION FOUNDATION, a consacré sa vie à combler le fossé entre les jeunes et les personnes âgées, veillant à ce que personne ne soit laissé de côté.',
+                    founderP2: 'Son parcours a commencé par une simple observation : de nombreux adolescents luttaient en silence. La faible estime de soi, la pression des pairs, la dépression, les abus, les crises d\'identité et l\'incertitude quant à l\'avenir étaient devenus des défis courants chez les jeunes. Alors que beaucoup reconnaissaient ces problèmes, rares étaient ceux qui étaient prêts à se manifester et à offrir des solutions. Mme Akano a choisi de faire partie des rares qui ont agi.',
                     founderH3_1: 'Une vision née de la compassion',
-                    founderP3: 'En 2016, en observant les défis auxquels sont confrontés de nombreux adolescents, Mme Akano a reconnu un besoin croissant de mentorat et de conseils intentionnels. Elle a rencontré des jeunes aux prises avec une faible estime de soi, la pression des pairs, la dépression, les abus, les crises d\'identité et l\'incertitude quant à leur avenir. Beaucoup possédaient un potentiel incroyable mais manquaient des encouragements et du soutien nécessaires pour le réaliser.',
-                    founderP4: 'Plutôt que de simplement reconnaître ces défis, elle a choisi de répondre par l\'action.',
-                    founderP5: 'Guidée par le désir de voir des vies transformées, elle a fondé PHINEHAS GENERATION FOUNDATION comme une plateforme où les adolescents pouvaient recevoir du mentorat, développer des compétences en leadership, renforcer leur confiance et découvrir leur but. Sa vision ne s\'est jamais limitée à l\'organisation d\'événements; il s\'agissait de façonner des vies et d\'autonomiser une génération pour qu\'elle devienne des leaders responsables, des citoyens compatissants et des agents de changement positif.',
-                    founderH3_2: 'Construire une génération de but',
-                    founderP6: 'Ce qui a commencé comme une petite initiative est rapidement devenu un mouvement dynamique. À travers des conférences, des sessions de mentorat, des ateliers de leadership, des actions scolaires et des engagements communautaires, Mme Akano a créé des espaces sûrs où les jeunes pouvaient discuter ouvertement des problèmes affectant leur vie et recevoir des conseils pratiques de professionnels expérimentés.',
-                    founderP7: 'Des sujets tels que l\'estime de soi, la santé sexuelle, la pureté sexuelle, le bien-être mental, le leadership, la découverte du but et le développement du caractère sont devenus centraux dans le travail de la fondation.',
-                    founderHighlight1: '"L\'un des moments marquants de l\'organisation est survenu en 2018, lorsque PHINEHAS GENERATION FOUNDATION a organisé un rassemblement de jeunes à la Bibliothèque présidentielle Obasanjo, Abeokuta. L\'événement a réuni des adolescents de différents horizons pour une journée d\'apprentissage, d\'inspiration et de développement personnel."',
-                    founderHighlight1Author: '— Archives PHINEHAS GENERATION FOUNDATION',
-                    founderP8: 'Beaucoup de ces participants ont depuis terminé leurs études et sont maintenant diplômés contribuant de manière significative à leurs communautés—un témoignage durable du pouvoir du mentorat et de l\'intervention opportune.',
+                    founderP3: 'En 2016, Mme Akano a fondé PHINEHAS GENERATION FOUNDATION avec une mission claire : offrir du mentorat, des conseils et un développement du leadership aux adolescents. Ce qui a commencé comme de petits rassemblements à Abeokuta est rapidement devenu un mouvement dynamique. À travers des conférences, des séminaires, des ateliers de leadership, des actions scolaires et des engagements communautaires, la fondation a créé des espaces sûrs où les jeunes pouvaient discuter ouvertement des problèmes affectant leur vie et recevoir des conseils pratiques de professionnels expérimentés.',
+                    founderP4: 'Des sujets tels que l\'estime de soi, la santé sexuelle, la pureté sexuelle, le bien-être mental, le leadership, la découverte du but et le développement du caractère sont devenus centraux dans le travail de la fondation. L\'approche était holistique, abordant non seulement les préoccupations académiques ou professionnelles mais la personne dans son ensemble.',
+                    founderPullquote1: '"La compassion d\'une personne a le pouvoir de transformer d\'innombrables vies. Je l\'ai vu se produire, et je crois que cela peut arriver pour chaque personne qui est prête à prendre soin des autres."',
+                    founderPullquote1Attribution: '— Mme Oluwatosin Balogun Akano',
+                    founderH3_2: 'Un moment historique',
+                    founderP5: 'L\'un des moments marquants de l\'organisation est survenu en 2018, lorsque PHINEHAS GENERATION FOUNDATION a organisé un rassemblement de jeunes à la Bibliothèque présidentielle Obasanjo à Abeokuta. L\'événement a réuni des adolescents de différents horizons pour une journée d\'apprentissage, d\'inspiration et de développement personnel. Grâce au mentorat, aux sessions interactives et aux discours inspirants, de nombreux participants ont découvert une nouvelle confiance, clarifié leurs objectifs et trouvé un nouveau but.',
+                    founderP6: 'Aujourd\'hui, beaucoup de ces jeunes ont terminé leurs études supérieures et contribuent de manière significative à leurs communautés en tant que diplômés et professionnels. Leurs histoires de succès témoignent de la puissance du mentorat et de l\'intervention opportune.',
                     founderH3_3: 'Élargir la vision',
-                    founderP9: 'Alors que le travail de la fondation continuait de croître, un autre besoin a commencé à peser lourdement sur le cœur de Mme Akano.',
-                    founderP10: 'Lors de visites communautaires, elle a rencontré de nombreuses personnes âgées vivant dans la solitude, une santé déclinante et un accès limité aux soins de base. Certaines luttaient contre une mauvaise vue qui affectait leur vie quotidienne, tandis que d\'autres aspiraient simplement à la compagnie et à la réassurance qu\'elles n\'avaient pas été oubliées.',
-                    founderP11: 'Ces expériences ont transformé la direction de la fondation.',
-                    founderP12: 'Mme Akano croyait qu\'une société ne peut vraiment prospérer si elle investit uniquement dans son avenir tout en négligeant ceux qui ont contribué à construire son passé. Cette conviction a conduit à l\'expansion de la mission de PHINEHAS GENERATION FOUNDATION pour inclure des soins complets pour les personnes âgées.',
-                    founderP13: 'Aujourd\'hui, la fondation fournit des actions médicales, des services de soins oculaires, de la distribution alimentaire, un soutien social, une assistance financière et des soins émotionnels pour les personnes âgées à travers les communautés.',
-                    founderHighlight2: '"Une action particulièrement mémorable a eu lieu à Igbore, Abeokuta, où une bénéficiaire âgée, Mme Lawal Abeke, a retrouvé la vue après avoir reçu un traitement de la cataracte et des lunettes de prescription dans le cadre du programme d\'action médicale de la fondation. Voir la joie et l\'espoir renouvelé sur son visage a réaffirmé la conviction de Mme Akano qu\'un seul acte de bonté peut transformer une vie."',
-                    founderHighlight2Author: '— Rapport d\'impact PHINEHAS GENERATION FOUNDATION',
-                    founderH3_4: 'Une leader qui sert',
-                    founderP14: 'Le leadership de Mme Akano est défini non seulement par les programmes qu\'elle a établis, mais par les valeurs qu\'elle démontre chaque jour. Elle croit que le véritable leadership s\'exprime par le service, l\'humilité, l\'intégrité et la compassion.',
-                    founderP15: 'Son approche a toujours été centrée sur les personnes. Qu\'il s\'agisse de conseiller un adolescent, d\'encourager un bénévole, de réconforter un bénéficiaire âgé ou de construire des partenariats avec des organisations, elle dirige avec empathie et un engagement sincère à faire une différence durable.',
-                    founderP16: 'Pour elle, le succès ne se mesure pas par les titres ou la reconnaissance, mais par les vies transformées, l\'espoir restauré et les opportunités créées pour les autres.',
-                    founderH3_5: 'Grandir au-delà des frontières',
-                    founderP17: 'De ses débuts à Abeokuta, dans l\'État d\'Ogun, PHINEHAS GENERATION FOUNDATION a étendu ses activités à Lagos et a depuis étendu sa portée au Royaume-Uni. Sous la direction de Mme Akano, l\'organisation continue de construire des partenariats et d\'explorer de nouvelles opportunités pour accroître son impact tout en restant fidèle à sa mission fondatrice.',
-                    founderP18: 'Aujourd\'hui, la fondation sert de pont entre les générations—préparant les jeunes pour l\'avenir tout en honorant et en prenant soin des personnes âgées.',
-                    founderH3_6: 'Sa philosophie',
-                    founderP19: 'Mme Akano croit que le changement durable commence par la compassion.',
-                    founderP20: 'Elle croit que chaque adolescent mérite des conseils, chaque personne âgée mérite la dignité, et chaque communauté devient plus forte lorsque les gens choisissent de prendre soin les uns des autres.',
-                    founderP21: 'Cette philosophie continue de guider chaque initiative, programme d\'action, partenariat et décision prise par PHINEHAS GENERATION FOUNDATION.',
-                    founderH3_7: 'Regarder vers l\'avenir',
-                    founderP22: 'Mme Akano envisage un avenir où PHINEHAS GENERATION FOUNDATION atteindra encore plus de communautés à travers le Nigéria, le Royaume-Uni et au-delà. Son objectif est d\'étendre les initiatives d\'autonomisation des jeunes, de renforcer les programmes de santé et de protection sociale pour les personnes âgées, d\'établir des projets de développement communautaire durable et de construire des partenariats stratégiques qui multiplieront l\'impact de la fondation pour les générations à venir.',
-                    founderP23: 'Bien que beaucoup ait été accompli depuis 2016, elle croit que le voyage ne fait que commencer.',
-                    founderP24: 'Avec la foi, la compassion et un engagement inébranlable, elle continue de diriger un mouvement dédié à l\'autonomisation des jeunes, à l\'honneur des personnes âgées et à la transformation des communautés—une vie à la fois.',
+                    founderP7: 'Alors que le travail de la fondation continuait de croître, un autre besoin a commencé à peser lourdement sur le cœur de Mme Akano. Lors de visites communautaires, elle a rencontré de nombreuses personnes âgées vivant dans la solitude, une santé déclinante et un accès limité aux soins de base. Certaines luttaient contre une mauvaise vue qui affectait leur vie quotidienne, tandis que d\'autres aspiraient simplement à la compagnie et à la réassurance qu\'elles n\'avaient pas été oubliées.',
+                    founderP8: 'Ces expériences ont transformé la direction de la fondation. Mme Akano croyait qu\'une société ne peut vraiment prospérer si elle investit uniquement dans son avenir tout en négligeant ceux qui ont contribué à construire son passé. Cette conviction a conduit à l\'expansion de la mission de PHINEHAS GENERATION FOUNDATION pour inclure des soins complets pour les personnes âgées.',
+                    newsLabel1: 'INITIATIVE CLÉ',
+                    newsTitle1: 'Programme d\'action médicale',
+                    newsDesc1: 'Fournir des services de santé gratuits, des examens de la vue, des chirurgies de la cataracte et des lunettes de prescription aux personnes âgées dans les communautés mal desservies.',
+                    newsLabel2: 'IMPACT',
+                    newsTitle2: 'Soutien social communautaire',
+                    newsDesc2: 'Distribution alimentaire, aide financière, visites de bien-être régulières et soins émotionnels pour les personnes âgées à travers le Nigéria.',
+                    founderPullquote2: '"Je crois que chaque vie a de la valeur et que chaque personne mérite la possibilité de vivre avec dignité, espoir et but."',
+                    founderPullquote2Attribution: '— Mme Oluwatosin Balogun Akano',
+                    founderH3_4: 'Grandir au-delà des frontières',
+                    founderP9: 'De ses débuts à Abeokuta, PHINEHAS GENERATION FOUNDATION a étendu ses activités à Lagos et a depuis étendu sa portée au Royaume-Uni. Sous la direction de Mme Akano, l\'organisation continue de construire des partenariats et d\'explorer de nouvelles opportunités pour accroître son impact tout en restant fidèle à sa mission fondatrice.',
+                    founderP10: 'Aujourd\'hui, la fondation sert de pont entre les générations—préparant les jeunes pour l\'avenir tout en honorant et en prenant soin des personnes âgées. Mme Akano croit que le changement durable commence par la compassion. Elle croit que chaque adolescent mérite des conseils, chaque personne âgée mérite la dignité, et chaque communauté devient plus forte lorsque les gens choisissent de prendre soin les uns des autres.',
+                    founderH3_5: 'Regarder vers l\'avenir',
+                    founderP11: 'Mme Akano envisage un avenir où PHINEHAS GENERATION FOUNDATION atteindra encore plus de communautés à travers le Nigéria, le Royaume-Uni et au-delà. Son objectif est d\'étendre les initiatives d\'autonomisation des jeunes, de renforcer les programmes de santé et de protection sociale pour les personnes âgées, d\'établir des projets de développement communautaire durable et de construire des partenariats stratégiques qui multiplieront l\'impact de la fondation pour les générations à venir.',
+                    founderP12: 'Bien que beaucoup ait été accompli depuis 2016, elle croit que le voyage ne fait que commencer. Avec la foi, la compassion et un engagement inébranlable, elle continue de diriger un mouvement dédié à l\'autonomisation des jeunes, à l\'honneur des personnes âgées et à la transformation des communautés—une vie à la fois.',
                     founderSignature: '"Je crois que chaque vie a de la valeur et que chaque personne mérite la possibilité de vivre avec dignité, espoir et but. À travers PHINEHAS GENERATION FOUNDATION, nous nous engageons à former des jeunes leaders confiants tout en redonnant espoir aux personnes âgées qui méritent notre amour, nos soins et notre respect. Ensemble, nous pouvons construire des communautés où la compassion relie les générations et où personne n\'est laissé de côté."',
                     founderSignatureName: '— Mme Oluwatosin Balogun Akano',
                     founderSignatureRole: 'Fondatrice & Directrice Exécutive, PHINEHAS GENERATION FOUNDATION',
+                    galleryCap1: 'Connecter avec la prochaine génération',
+                    galleryCap2: 'Mentorat de jeunes leaders lors d\'un séminaire',
+                    galleryCap3: 'Action scolaire et engagement communautaire',
                     valuesEyebrow: 'Ce qui la guide',
                     valuesTitle: 'Les valeurs qui <span class="highlight">la guident</span>',
                     valuesSub: 'Des principes qui façonnent son leadership et le travail de la fondation',
@@ -2163,7 +2243,6 @@
                     footerHome: 'Accueil',
                     footerAbout: 'À propos',
                     footerProgramsLink: 'Nos programmes',
-                    footerGallery: 'Galerie',
                     footerBlog: 'Blog / Actualités',
                     footerVolunteer: 'Bénévolat',
                     footerContactLink: 'Contact',
@@ -2187,7 +2266,6 @@
                     navHome: 'Startseite',
                     navAbout: 'Über uns',
                     navPrograms: 'Programme',
-                    navGallery: 'Galerie',
                     navBlog: 'Blog / News',
                     navVolunteer: 'Mithelfen',
                     navContact: 'Kontakt',
@@ -2196,47 +2274,41 @@
                     heroTitle: 'Unsere Gründerin',
                     heroSub: 'Das Herz, die Vision und die Führung hinter PHINEHAS GENERATION FOUNDATION',
                     founderBadge: 'Gründerin & Geschäftsführerin',
-                    founderRole: 'Gründerin & Geschäftsführerin',
-                    founderName: 'Frau Oluwatosin Balogun Akano',
-                    founderTagline: 'Das Mitgefühl einer Person hat die Kraft, unzählige Leben zu verändern.',
-                    founderP1: 'Hinter jeder Vision, die Leben verändert, steht jemand, der sich dafür entscheidet, Möglichkeiten zu sehen, wo andere Probleme sehen. Für Frau Oluwatosin Balogun Akano wurde diese Entscheidung zum Beginn einer Reise, die junge Menschen berührt, älteren Bürgern Hoffnung zurückgegeben und Gemeinschaften dazu inspiriert hat, sich tiefer umeinander zu kümmern.',
-                    founderP2: 'Als Gründerin und Geschäftsführerin von PHINEHAS GENERATION FOUNDATION hat sich Frau Akano dem Aufbau einer Zukunft verschrieben, in der Mitgefühl, Sinn und Dienst nicht nur Ideale, sondern gelebte Realität sind. Ihre Führung ist verwurzelt in einer echten Liebe zu den Menschen und der unerschütterlichen Überzeugung, dass jeder Mensch—unabhängig von Alter, Herkunft oder Umständen—es verdient, gesehen, wertgeschätzt und gestärkt zu werden.',
+                    bylineAuthor: 'Von PHINEHAS GENERATION FOUNDATION',
+                    bylineDate: 'Veröffentlicht 2026',
+                    founderP1: 'Im Herzen von Abeokuta, Bundesstaat Ogun, entfaltet sich seit 2016 eine stille Revolution—angeführt nicht von Politikern oder Prominenten, sondern von einer Frau, deren Mitgefühl für Menschen zur treibenden Kraft einer Bewegung geworden ist, die Leben über Generationen hinweg verändert. Frau Oluwatosin Balogun Akano, Gründerin und Geschäftsführerin von PHINEHAS GENERATION FOUNDATION, hat ihr Leben der Überbrückung der Kluft zwischen Jung und Alt gewidmet, um sicherzustellen, dass niemand zurückgelassen wird.',
+                    founderP2: 'Ihre Reise begann mit einer einfachen Beobachtung: Viele Jugendliche kämpften im Stillen. Geringes Selbstwertgefühl, Gruppenzwang, Depressionen, Missbrauch, Identitätskrisen und Unsicherheit über die Zukunft waren zu häufigen Herausforderungen bei jungen Menschen geworden. Während viele diese Probleme erkannten, waren nur wenige bereit, sich zu melden und Lösungen anzubieten. Frau Akano entschied sich, zu den wenigen zu gehören, die handelten.',
                     founderH3_1: 'Eine Vision, geboren aus Mitgefühl',
-                    founderP3: 'Im Jahr 2016 erkannte Frau Akano bei der Beobachtung der Herausforderungen, denen viele Jugendliche gegenüberstehen, einen wachsenden Bedarf an gezielter Betreuung und Anleitung. Sie traf auf junge Menschen, die mit geringem Selbstwertgefühl, Gruppenzwang, Depressionen, Missbrauch, Identitätskrisen und Unsicherheit über ihre Zukunft zu kämpfen hatten. Viele besaßen ein unglaubliches Potenzial, aber es fehlte ihnen an Ermutigung und Unterstützung, um es zu verwirklichen.',
-                    founderP4: 'Anstatt diese Herausforderungen einfach zur Kenntnis zu nehmen, entschied sie sich, mit Taten zu antworten.',
-                    founderP5: 'Getrieben von dem Wunsch, Leben zu verändern, gründete sie PHINEHAS GENERATION FOUNDATION als Plattform, auf der Jugendliche Mentoring erhalten, Führungsqualitäten entwickeln, Selbstvertrauen aufbauen und ihren Lebenszweck entdecken können. Ihre Vision war nie auf die Organisation von Veranstaltungen beschränkt; es ging darum, Leben zu formen und eine Generation zu befähigen, verantwortungsbewusste Führungskräfte, mitfühlende Bürger und Akteure des positiven Wandels zu werden.',
-                    founderH3_2: 'Eine Generation mit Sinn aufbauen',
-                    founderP6: 'Was als kleine Initiative begann, entwickelte sich schnell zu einer lebendigen Bewegung. Durch Konferenzen, Mentoring-Sitzungen, Führungsworkshops, Schulaktionen und Gemeinschaftsengagement schuf Frau Akano sichere Räume, in denen junge Menschen offen über Themen sprechen konnten, die ihr Leben betreffen, und praktische Anleitung von erfahrenen Fachleuten erhalten konnten.',
-                    founderP7: 'Themen wie Selbstwertgefühl, sexuelle Gesundheit, sexuelle Reinheit, psychisches Wohlbefinden, Führung, Sinnfindung und Charakterentwicklung wurden zum Kern der Arbeit der Stiftung.',
-                    founderHighlight1: '"Einer der prägenden Momente der Organisation war 2018, als PHINEHAS GENERATION FOUNDATION ein Jugendtreffen in der Obasanjo Presidential Library in Abeokuta organisierte. Die Veranstaltung brachte Jugendliche aus verschiedenen Hintergründen für einen Tag des Lernens, der Inspiration und der persönlichen Entwicklung zusammen."',
-                    founderHighlight1Author: '— PHINEHAS GENERATION FOUNDATION Archiv',
-                    founderP8: 'Viele dieser Teilnehmer haben inzwischen ihre Ausbildung abgeschlossen und sind heute Absolventen, die einen bedeutenden Beitrag zu ihren Gemeinschaften leisten—ein bleibendes Zeugnis für die Kraft des Mentorings und rechtzeitiger Intervention.',
+                    founderP3: 'Im Jahr 2016 gründete Frau Akano PHINEHAS GENERATION FOUNDATION mit einer klaren Mission: Jugendlichen Mentoring, Beratung und Führungsentwicklung zu bieten. Was als kleine Zusammenkünfte in Abeokuta begann, entwickelte sich schnell zu einer lebendigen Bewegung. Durch Konferenzen, Seminare, Führungsworkshops, Schulaktionen und Gemeinschaftsengagement schuf die Stiftung sichere Räume, in denen junge Menschen offen über Probleme sprechen konnten, die ihr Leben betreffen, und praktische Anleitung von erfahrenen Fachleuten erhalten konnten.',
+                    founderP4: 'Themen wie Selbstwertgefühl, sexuelle Gesundheit, sexuelle Reinheit, psychisches Wohlbefinden, Führung, Sinnfindung und Charakterentwicklung wurden zum Kern der Arbeit der Stiftung. Der Ansatz war ganzheitlich und behandelte nicht nur akademische oder berufliche Anliegen, sondern den gesamten Menschen.',
+                    founderPullquote1: '"Das Mitgefühl einer Person hat die Kraft, unzählige Leben zu verändern. Ich habe es geschehen sehen, und ich glaube, dass es für jeden Menschen geschehen kann, der bereit ist, sich zu kümmern."',
+                    founderPullquote1Attribution: '— Frau Oluwatosin Balogun Akano',
+                    founderH3_2: 'Ein Meilenstein',
+                    founderP5: 'Einer der prägenden Momente der Organisation war 2018, als PHINEHAS GENERATION FOUNDATION ein Jugendtreffen in der Obasanjo Presidential Library in Abeokuta organisierte. Die Veranstaltung brachte Jugendliche aus verschiedenen Hintergründen für einen Tag des Lernens, der Inspiration und der persönlichen Entwicklung zusammen. Durch Mentoring, interaktive Sitzungen und inspirierende Gespräche entdeckten viele Teilnehmer neues Selbstvertrauen, klärten ihre Ziele und fanden einen neuen Lebenssinn.',
+                    founderP6: 'Heute haben viele dieser jungen Menschen ihr Studium abgeschlossen und leisten als Absolventen und Fachkräfte einen bedeutenden Beitrag zu ihren Gemeinschaften. Ihre Erfolgsgeschichten sind ein bleibendes Zeugnis für die Kraft des Mentorings und rechtzeitiger Intervention.',
                     founderH3_3: 'Die Vision erweitern',
-                    founderP9: 'Als die Arbeit der Stiftung weiter wuchs, begann ein weiteres Bedürfnis schwer auf dem Herzen von Frau Akano zu lasten.',
-                    founderP10: 'Bei Gemeindebesuchen traf sie auf viele ältere Menschen, die mit Einsamkeit, nachlassender Gesundheit und eingeschränktem Zugang zu grundlegender Versorgung lebten. Einige kämpften mit schlechtem Sehvermögen, das ihren Alltag beeinträchtigte, während andere sich einfach nach Gesellschaft und der Gewissheit sehnten, dass sie nicht vergessen worden waren.',
-                    founderP11: 'Diese Erfahrungen veränderten die Ausrichtung der Stiftung.',
-                    founderP12: 'Frau Akano glaubte, dass eine Gesellschaft nicht wirklich gedeihen kann, wenn sie nur in ihre Zukunft investiert und dabei diejenigen vernachlässigt, die zum Aufbau ihrer Vergangenheit beigetragen haben. Diese Überzeugung führte zur Erweiterung der Mission von PHINEHAS GENERATION FOUNDATION um eine umfassende Betreuung von Senioren.',
-                    founderP13: 'Heute bietet die Stiftung medizinische Einsätze, Augenpflege, Lebensmittelverteilung, Sozialhilfe, finanzielle Unterstützung und emotionale Betreuung für ältere Menschen in Gemeinschaften.',
-                    founderHighlight2: '"Ein besonders denkwürdiger Einsatz fand in Igbore, Abeokuta, statt, wo eine ältere Begünstigte, Frau Lawal Abeke, nach einer Kataraktbehandlung und der Bereitstellung einer Brille im Rahmen des medizinischen Programms der Stiftung ihr Augenlicht wiedererlangte. Die Freude und die neu gewonnene Hoffnung in ihrem Gesicht zu sehen, bestärkte Frau Akano in der Überzeugung, dass bereits eine einzige freundliche Tat ein Leben verändern kann."',
-                    founderHighlight2Author: '— PHINEHAS GENERATION FOUNDATION Wirkungsbericht',
-                    founderH3_4: 'Eine Führungskraft, die dient',
-                    founderP14: 'Frau Akanos Führung wird nicht nur durch die von ihr etablierten Programme definiert, sondern durch die Werte, die sie täglich vorlebt. Sie glaubt, dass wahre Führung durch Dienst, Demut, Integrität und Mitgefühl zum Ausdruck kommt.',
-                    founderP15: 'Ihr Ansatz war immer menschenzentriert. Ob sie einen Jugendlichen betreut, einen Freiwilligen ermutigt, einen älteren Begünstigten tröstet oder Partnerschaften mit Organisationen aufbaut—sie führt mit Empathie und einem echten Engagement für nachhaltige Veränderung.',
-                    founderP16: 'Für sie wird Erfolg nicht an Titeln oder Anerkennung gemessen, sondern an den veränderten Leben, der wiederhergestellten Hoffnung und den für andere geschaffenen Möglichkeiten.',
-                    founderH3_5: 'Über Grenzen hinaus wachsen',
-                    founderP17: 'Von den Anfängen in Abeokuta, Bundesstaat Ogun, weitete PHINEHAS GENERATION FOUNDATION ihre Aktivitäten auf Lagos aus und hat seitdem ihre Reichweite bis ins Vereinigte Königreich ausgedehnt. Unter der Führung von Frau Akano baut die Organisation weiterhin Partnerschaften auf und erkundet neue Möglichkeiten, um ihre Wirkung zu vergrößern, während sie ihrer ursprünglichen Mission treu bleibt.',
-                    founderP18: 'Heute dient die Stiftung als Brücke zwischen den Generationen—sie bereitet junge Menschen auf die Zukunft vor und ehrt und versorgt gleichzeitig die Älteren.',
-                    founderH3_6: 'Ihre Philosophie',
-                    founderP19: 'Frau Akano glaubt, dass nachhaltiger Wandel mit Mitgefühl beginnt.',
-                    founderP20: 'Sie glaubt, dass jeder Jugendliche Führung verdient, jeder ältere Mensch Würde verdient und jede Gemeinschaft stärker wird, wenn Menschen sich entscheiden, füreinander zu sorgen.',
-                    founderP21: 'Diese Philosophie leitet weiterhin jede Initiative, jedes Outreach-Programm, jede Partnerschaft und jede Entscheidung von PHINEHAS GENERATION FOUNDATION.',
-                    founderH3_7: 'Blick nach vorn',
-                    founderP22: 'Frau Akano stellt sich eine Zukunft vor, in der PHINEHAS GENERATION FOUNDATION noch mehr Gemeinschaften in Nigeria, Großbritannien und darüber hinaus erreicht. Ihr Ziel ist es, Initiativen zur Jugendförderung auszuweiten, Gesundheits- und Wohlfahrtsprogramme für ältere Menschen zu stärken, nachhaltige Gemeindeentwicklungsprojekte zu etablieren und strategische Partnerschaften aufzubauen, die die Wirkung der Stiftung für kommende Generationen vervielfachen.',
-                    founderP23: 'Obwohl seit 2016 viel erreicht wurde, glaubt sie, dass die Reise gerade erst begonnen hat.',
-                    founderP24: 'Mit Glauben, Mitgefühl und unerschütterlichem Engagement führt sie weiterhin eine Bewegung, die sich der Stärkung der Jugend, der Ehrung der Älteren und der Transformation von Gemeinschaften widmet—ein Leben nach dem anderen.',
+                    founderP7: 'Als die Arbeit der Stiftung weiter wuchs, begann ein weiteres Bedürfnis schwer auf dem Herzen von Frau Akano zu lasten. Bei Gemeindebesuchen traf sie auf viele ältere Menschen, die mit Einsamkeit, nachlassender Gesundheit und eingeschränktem Zugang zu grundlegender Versorgung lebten. Einige kämpften mit schlechtem Sehvermögen, das ihren Alltag beeinträchtigte, während andere sich einfach nach Gesellschaft und der Gewissheit sehnten, dass sie nicht vergessen worden waren.',
+                    founderP8: 'Diese Erfahrungen veränderten die Ausrichtung der Stiftung. Frau Akano glaubte, dass eine Gesellschaft nicht wirklich gedeihen kann, wenn sie nur in ihre Zukunft investiert und dabei diejenigen vernachlässigt, die zum Aufbau ihrer Vergangenheit beigetragen haben. Diese Überzeugung führte zur Erweiterung der Mission von PHINEHAS GENERATION FOUNDATION um eine umfassende Betreuung von Senioren.',
+                    newsLabel1: 'SCHLÜSSELINITIATIVE',
+                    newsTitle1: 'Medizinisches Hilfsprogramm',
+                    newsDesc1: 'Bereitstellung kostenloser Gesundheitsdienste, Augenuntersuchungen, Kataraktoperationen und Brillen für ältere Menschen in unterversorgten Gemeinschaften.',
+                    newsLabel2: 'WIRKUNG',
+                    newsTitle2: 'Gemeindewohlfahrtsunterstützung',
+                    newsDesc2: 'Lebensmittelverteilung, finanzielle Unterstützung, regelmäßige Wohlfahrtsbesuche und emotionale Betreuung für Senioren in ganz Nigeria.',
+                    founderPullquote2: '"Ich glaube, dass jedes Leben wertvoll ist und jeder Mensch die Chance verdient, in Würde, Hoffnung und mit Sinn zu leben."',
+                    founderPullquote2Attribution: '— Frau Oluwatosin Balogun Akano',
+                    founderH3_4: 'Über Grenzen hinaus wachsen',
+                    founderP9: 'Von den Anfängen in Abeokuta weitete PHINEHAS GENERATION FOUNDATION ihre Aktivitäten auf Lagos aus und hat seitdem ihre Reichweite bis ins Vereinigte Königreich ausgedehnt. Unter der Führung von Frau Akano baut die Organisation weiterhin Partnerschaften auf und erkundet neue Möglichkeiten, um ihre Wirkung zu vergrößern, während sie ihrer ursprünglichen Mission treu bleibt.',
+                    founderP10: 'Heute dient die Stiftung als Brücke zwischen den Generationen—sie bereitet junge Menschen auf die Zukunft vor und ehrt und versorgt gleichzeitig die Älteren. Frau Akano glaubt, dass nachhaltiger Wandel mit Mitgefühl beginnt. Sie glaubt, dass jeder Jugendliche Führung verdient, jeder ältere Mensch Würde verdient und jede Gemeinschaft stärker wird, wenn Menschen sich entscheiden, füreinander zu sorgen.',
+                    founderH3_5: 'Blick nach vorn',
+                    founderP11: 'Frau Akano stellt sich eine Zukunft vor, in der PHINEHAS GENERATION FOUNDATION noch mehr Gemeinschaften in Nigeria, Großbritannien und darüber hinaus erreicht. Ihr Ziel ist es, Initiativen zur Jugendförderung auszuweiten, Gesundheits- und Wohlfahrtsprogramme für ältere Menschen zu stärken, nachhaltige Gemeindeentwicklungsprojekte zu etablieren und strategische Partnerschaften aufzubauen, die die Wirkung der Stiftung für kommende Generationen vervielfachen.',
+                    founderP12: 'Obwohl seit 2016 viel erreicht wurde, glaubt sie, dass die Reise gerade erst begonnen hat. Mit Glauben, Mitgefühl und unerschütterlichem Engagement führt sie weiterhin eine Bewegung, die sich der Stärkung der Jugend, der Ehrung der Älteren und der Transformation von Gemeinschaften widmet—ein Leben nach dem anderen.',
                     founderSignature: '"Ich glaube, dass jedes Leben wertvoll ist und jeder Mensch die Chance verdient, in Würde, Hoffnung und mit Sinn zu leben. Durch PHINEHAS GENERATION FOUNDATION setzen wir uns dafür ein, selbstbewusste junge Führungskräfte zu fördern und gleichzeitig älteren Menschen Hoffnung zurückzugeben, die unsere Liebe, Fürsorge und Respekt verdienen. Gemeinsam können wir Gemeinschaften aufbauen, in denen Mitgefühl Generationen verbindet und niemand zurückgelassen wird."',
                     founderSignatureName: '— Frau Oluwatosin Balogun Akano',
                     founderSignatureRole: 'Gründerin & Geschäftsführerin, PHINEHAS GENERATION FOUNDATION',
+                    galleryCap1: 'Verbindung mit der nächsten Generation',
+                    galleryCap2: 'Mentoring junger Führungskräfte bei einem Seminar',
+                    galleryCap3: 'Schulaktion und Gemeinschaftsengagement',
                     valuesEyebrow: 'Was sie leitet',
                     valuesTitle: 'Die Werte, die <span class="highlight">sie leiten</span>',
                     valuesSub: 'Prinzipien, die ihre Führung und die Arbeit der Stiftung prägen',
@@ -2286,7 +2358,6 @@
                     footerHome: 'Startseite',
                     footerAbout: 'Über uns',
                     footerProgramsLink: 'Programme',
-                    footerGallery: 'Galerie',
                     footerBlog: 'Blog / News',
                     footerVolunteer: 'Mithelfen',
                     footerContactLink: 'Kontakt',
@@ -2448,7 +2519,6 @@
                 if (href === currentPath || (currentPath === '' && href === 'index.html')) {
                     link.classList.add('active');
                 }
-                // Also highlight About Us when on Founder page
                 if (href === 'about.html' && currentPath === 'founder.html') {
                     link.classList.add('active');
                 }
