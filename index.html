@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Finish as Generation | NGO</title>
-    
-    <!-- Font Awesome for icons -->
+    <title>PHINEHAS GENERATION FOUNDATION | Empowering Teenagers. Honouring the Elderly.</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
     <style>
         /* ===== RESET & BASE ===== */
         * {
@@ -21,11 +24,16 @@
             --white: #f9f9f9;
             --green: #2d6a4f;
             --green-light: #409f7a;
+            --green-dark: #1b4332;
             --brown: #8b5a2b;
             --brown-light: #b87c4b;
             --gray: #e0e0e0;
-            --shadow: 0 8px 30px rgba(0,0,0,0.12);
-            --transition: 0.3s ease;
+            --gray-light: #f0f0f0;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.18);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 20px;
+            --radius-sm: 12px;
         }
 
         html {
@@ -33,15 +41,25 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background: var(--white);
             color: var(--black);
             line-height: 1.6;
             overflow-x: hidden;
+            cursor: default;
         }
 
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
         .container {
             max-width: 1200px;
@@ -49,11 +67,134 @@
             padding: 0 24px;
         }
 
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title .highlight {
+            color: var(--green);
+            position: relative;
+        }
+
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(45, 106, 79, 0.15);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: #555;
+            max-width: 640px;
+            line-height: 1.8;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 34px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: white;
+            box-shadow: 0 4px 16px rgba(45, 106, 79, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--green-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(45, 106, 79, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-brown {
+            background: var(--brown);
+            color: white;
+            box-shadow: 0 4px 16px rgba(139, 90, 43, 0.3);
+        }
+
+        .btn-brown:hover {
+            background: var(--brown-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(139, 90, 43, 0.4);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
         /* ===== SKELETON LOADER ===== */
         #skeleton-loader {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: var(--white);
             z-index: 9999;
             display: flex;
@@ -103,31 +244,41 @@
             margin: 8px 0;
         }
 
-        .skeleton-text:nth-child(2) { width: 220px; }
-        .skeleton-text:nth-child(3) { width: 180px; }
+        .skeleton-text:nth-child(2) {
+            width: 220px;
+        }
+        .skeleton-text:nth-child(3) {
+            width: 180px;
+        }
 
         @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
         }
 
         /* ===== HEADER / NAV ===== */
         header {
             position: fixed;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             width: 100%;
             padding: 16px 0;
-            background: rgba(255,255,255,0.85);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
             z-index: 1000;
             transition: var(--transition);
         }
 
         header.scrolled {
             padding: 10px 0;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
         }
 
         .nav-container {
@@ -138,10 +289,18 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: var(--green);
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
         }
 
         .logo span {
@@ -151,12 +310,12 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 24px;
             flex-wrap: wrap;
         }
 
         .nav-links a {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--black);
             transition: var(--transition);
@@ -169,9 +328,10 @@
             bottom: -4px;
             left: 0;
             width: 0%;
-            height: 2px;
+            height: 2.5px;
             background: var(--green);
             transition: var(--transition);
+            border-radius: 2px;
         }
 
         .nav-links a:hover::after,
@@ -183,75 +343,33 @@
             color: var(--green);
         }
 
-        /* Language Toggle */
-        .lang-toggle {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--white);
-            border: 1.5px solid var(--gray);
+        .nav-donate-btn {
+            background: var(--green);
+            color: white !important;
+            padding: 8px 22px;
             border-radius: 40px;
-            padding: 4px 12px 4px 16px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        .lang-toggle:hover {
-            border-color: var(--green);
+        .nav-donate-btn::after {
+            display: none !important;
         }
 
-        .lang-toggle i {
-            font-size: 0.9rem;
-            color: var(--green);
+        .nav-donate-btn:hover {
+            background: var(--green-light);
+            transform: scale(1.04);
         }
 
-        .lang-dropdown {
-            display: none;
-            position: absolute;
-            top: 48px;
-            right: 0;
-            background: white;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            padding: 12px 0;
-            min-width: 180px;
-            border: 1px solid var(--gray);
-            z-index: 1100;
-        }
-
-        .lang-dropdown.open {
-            display: block;
-        }
-
-        .lang-dropdown li {
-            padding: 8px 24px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.9rem;
-        }
-
-        .lang-dropdown li:hover {
-            background: var(--green);
-            color: white;
-        }
-
-        .lang-dropdown li.active-lang {
-            background: var(--green);
-            color: white;
-        }
-
-        .lang-wrapper {
-            position: relative;
-        }
-
-        /* Hamburger */
-        .hamburger {
-            display: none;
-            font-size: 1.6rem;
-            cursor: pointer;
-            color: var(--black);
+        /* Scroll Progress */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green), var(--brown));
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s ease;
         }
 
         /* ===== HERO ===== */
@@ -265,15 +383,37 @@
             overflow: hidden;
         }
 
-        .hero::before {
+        .hero-slides {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide::after {
             content: '';
             position: absolute;
-            top: -40%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(45,106,79,0.06) 0%, transparent 70%);
-            border-radius: 50%;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 40px 0;
         }
 
         .hero-grid {
@@ -281,41 +421,30 @@
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
-            position: relative;
-            z-index: 2;
         }
 
         .hero-content h1 {
-            font-size: 3.8rem;
+            font-size: 3.6rem;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 20px;
             letter-spacing: -1px;
+            color: white;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
 
         .hero-content h1 .highlight {
-            color: var(--green);
+            color: #ffd6a8;
             position: relative;
         }
 
-        .hero-content h1 .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: rgba(45,106,79,0.15);
-            border-radius: 4px;
-            z-index: -1;
-        }
-
         .hero-content p {
-            font-size: 1.2rem;
-            color: #444;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.9);
             max-width: 540px;
-            margin-bottom: 36px;
+            margin-bottom: 32px;
             line-height: 1.8;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
         }
 
         .hero-buttons {
@@ -324,135 +453,684 @@
             flex-wrap: wrap;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 34px;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1rem;
+        .hero-slide-text {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease 0.3s;
+        }
+
+        .hero-slide-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Dots */
+        .hero-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 3;
+        }
+
+        .hero-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
             transition: var(--transition);
             border: none;
-            cursor: pointer;
         }
 
-        .btn-primary {
+        .hero-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .hero-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ===== BREAKING LOGO ===== */
+        .breaking-logo {
+            padding: 40px 0;
+            background: white;
+            text-align: center;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        .breaking-logo img {
+            max-height: 80px;
+            width: auto;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .breaking-logo img:hover {
+            opacity: 1;
+            transform: scale(1.04);
+        }
+
+        /* ===== IMPACT COUNTERS ===== */
+        .impact-section {
+            background: var(--green-dark);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .impact-item .number {
+            font-size: 3.2rem;
+            font-weight: 900;
+            display: block;
+            line-height: 1.1;
+        }
+
+        .impact-item .label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .impact-item .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: block;
+            color: var(--brown-light);
+        }
+
+        /* ===== ABOUT PREVIEW ===== */
+        .about-preview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* ===== MISSION & VISION ===== */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .mv-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--green);
+            transition: var(--transition);
+        }
+
+        .mv-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .mv-card.vision {
+            border-top-color: var(--brown);
+        }
+
+        .mv-card .icon {
+            font-size: 2.4rem;
+            color: var(--green);
+            margin-bottom: 16px;
+        }
+
+        .mv-card.vision .icon {
+            color: var(--brown);
+        }
+
+        .mv-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* ===== CORE VALUES ===== */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 30px 24px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-bottom-color: var(--green);
+        }
+
+        .value-card .icon {
+            font-size: 2rem;
+            color: var(--green);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .value-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* ===== WHO WE SERVE ===== */
+        .serve-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .serve-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .serve-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .serve-card .serve-image {
+            height: 260px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .serve-card .serve-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+        }
+
+        .serve-card .serve-content {
+            padding: 28px;
+            background: white;
+        }
+
+        .serve-card .serve-content h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .serve-card .serve-content .icon-badge {
+            display: inline-block;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        /* ===== PROGRAMS ===== */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: var(--radius-sm);
+            padding: 28px 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--green);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: rgba(45, 106, 79, 0.04);
+            border-radius: 0 0 0 80px;
+        }
+
+        .program-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .program-card .icon {
+            font-size: 1.6rem;
+            color: var(--green);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .program-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .program-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* ===== WHY WE EXIST ===== */
+        .why-section {
+            background: var(--green-dark);
+            color: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .why-item .icon {
+            font-size: 2.4rem;
+            color: var(--brown-light);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .why-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .why-item p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* ===== FOUNDER ===== */
+        .founder-section {
+            background: var(--gray-light);
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .founder-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .founder-image .founder-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
             background: var(--green);
             color: white;
-            box-shadow: 0 4px 16px rgba(45,106,79,0.3);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
-        .btn-primary:hover {
-            background: var(--green-light);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(45,106,79,0.35);
+        .founder-content h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 4px;
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--black);
-            border: 2px solid var(--black);
+        .founder-content .title {
+            color: var(--brown);
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
         }
 
-        .btn-secondary:hover {
-            background: var(--black);
-            color: white;
-            transform: translateY(-3px);
+        .founder-content p {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 16px;
         }
 
-        .btn-brown {
-            background: var(--brown);
-            color: white;
-            box-shadow: 0 4px 16px rgba(139,90,43,0.3);
+        .founder-content .signature {
+            font-family: 'Georgia', serif;
+            font-size: 1.4rem;
+            color: var(--green);
+            font-style: italic;
         }
 
-        .btn-brown:hover {
-            background: var(--brown-light);
-            transform: translateY(-3px);
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
         }
 
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image .art-circle {
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--green) 0%, var(--brown) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .testimonial-card {
+            background: white;
+            padding: 32px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
             position: relative;
-            box-shadow: 0 20px 60px rgba(45,106,79,0.2);
         }
 
-        .hero-image .art-circle::after {
-            content: '🌱';
-            font-size: 8rem;
-            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.1));
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
         }
 
-        .art-circle .ring {
+        .testimonial-card .quote {
+            font-size: 2.4rem;
+            color: var(--green);
+            opacity: 0.2;
             position: absolute;
-            border: 2px solid rgba(255,255,255,0.2);
+            top: 16px;
+            right: 24px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .testimonial-card .role {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* ===== PARTNERS ===== */
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        .partner-logo {
+            height: 60px;
+            width: auto;
+            opacity: 0.5;
+            transition: var(--transition);
+            filter: grayscale(1);
+        }
+
+        .partner-logo:hover {
+            opacity: 1;
+            filter: grayscale(0);
+            transform: scale(1.06);
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--green-dark), var(--green));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            animation: spin 20s linear infinite;
+            background: var(--green);
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(45, 106, 79, 0.4);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 900;
         }
 
-        .art-circle .ring:nth-child(1) {
-            width: 90%;
-            height: 90%;
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
 
-        .art-circle .ring:nth-child(2) {
-            width: 70%;
-            height: 70%;
-            animation-duration: 14s;
-            animation-direction: reverse;
+        #back-to-top:hover {
+            background: var(--green-light);
+            transform: translateY(-4px);
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand .logo span {
+            color: var(--brown-light);
+        }
+
+        .footer-brand p {
+            opacity: 0.7;
+            font-size: 0.95rem;
+            max-width: 300px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-links a {
+            display: block;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            margin-bottom: 8px;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--green-light);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .footer-social a:hover {
+            background: var(--green);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
         }
 
         /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 992px) {
             .hero-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
             .hero-content p {
                 margin-left: auto;
                 margin-right: auto;
             }
-
             .hero-buttons {
                 justify-content: center;
             }
-
             .hero-content h1 {
                 font-size: 2.8rem;
             }
-
-            .hero-image .art-circle {
-                width: 300px;
-                height: 300px;
+            .about-preview {
+                grid-template-columns: 1fr;
             }
-
-            .hero-image .art-circle::after {
-                font-size: 5rem;
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+            .serve-grid {
+                grid-template-columns: 1fr;
+            }
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .founder-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
+                font-size: 1.6rem;
+                cursor: pointer;
+                color: var(--black);
+                background: none;
+                border: none;
             }
 
             .nav-links {
@@ -460,7 +1138,7 @@
                 flex-direction: column;
                 width: 100%;
                 padding: 20px 0 10px;
-                gap: 16px;
+                gap: 14px;
                 border-top: 1px solid var(--gray);
                 margin-top: 12px;
             }
@@ -469,36 +1147,51 @@
                 display: flex;
             }
 
-            .lang-wrapper {
-                width: 100%;
-            }
-
-            .lang-toggle {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .lang-dropdown {
-                right: auto;
-                left: 0;
-                width: 100%;
+            .nav-donate-btn {
+                align-self: center;
             }
 
             .hero-content h1 {
                 font-size: 2.2rem;
             }
-
-            .hero {
-                padding: 120px 0 60px;
+            .section-title {
+                font-size: 2rem;
             }
-
-            .hero-image .art-circle {
-                width: 220px;
-                height: 220px;
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
             }
-
-            .hero-image .art-circle::after {
-                font-size: 3.8rem;
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            .impact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            .impact-item .number {
+                font-size: 2.4rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .footer-social {
+                justify-content: center;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .hero-dots {
+                bottom: 16px;
+            }
+            .hero-dot {
+                width: 10px;
+                height: 10px;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -506,36 +1199,86 @@
             .hero-content h1 {
                 font-size: 1.8rem;
             }
-
             .btn {
-                padding: 12px 24px;
+                padding: 12px 22px;
                 font-size: 0.9rem;
             }
-
             .container {
                 padding: 0 16px;
             }
-
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .impact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .impact-item .number {
+                font-size: 1.8rem;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-padding {
+                padding: 50px 0;
+            }
             .logo {
-                font-size: 1.2rem;
+                font-size: 1rem;
+            }
+            .logo img {
+                height: 32px;
             }
         }
 
-        /* ===== FOOTER (minimal for now) ===== */
-        .footer {
-            background: var(--black);
-            color: var(--white);
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 4px solid var(--green);
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .footer a {
-            color: var(--green-light);
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* ===== PAGE TRANSITION ===== */
+        .stagger-children>* {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stagger-children.visible>*:nth-child(1) {
+            transition-delay: 0.05s;
+        }
+        .stagger-children.visible>*:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+        .stagger-children.visible>*:nth-child(3) {
+            transition-delay: 0.15s;
+        }
+        .stagger-children.visible>*:nth-child(4) {
+            transition-delay: 0.2s;
+        }
+        .stagger-children.visible>*:nth-child(5) {
+            transition-delay: 0.25s;
+        }
+        .stagger-children.visible>*:nth-child(6) {
+            transition-delay: 0.3s;
+        }
+        .stagger-children.visible>*:nth-child(7) {
+            transition-delay: 0.35s;
+        }
+        .stagger-children.visible>*:nth-child(8) {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-children.visible>* {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Page transition */
         #main-content {
             opacity: 0;
             transition: opacity 0.8s ease;
@@ -543,6 +1286,84 @@
 
         #main-content.visible {
             opacity: 1;
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 899;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ===== COOKIE BANNER ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            color: white;
+            padding: 16px 24px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            z-index: 999;
+        }
+
+        .cookie-banner.show {
+            display: flex;
+        }
+
+        .cookie-banner p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            max-width: 70%;
+        }
+
+        .cookie-banner .btn {
+            padding: 8px 24px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .cookie-banner p {
+                max-width: 100%;
+            }
+            .whatsapp-float {
+                bottom: 80px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+                font-size: 1.6rem;
+            }
+            #back-to-top {
+                bottom: 16px;
+                right: 16px;
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -557,74 +1378,376 @@
         <p style="margin-top: 20px; color: #aaa; font-weight: 300;">Loading...</p>
     </div>
 
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div id="scroll-progress"></div>
+
     <!-- ===== MAIN CONTENT ===== -->
     <div id="main-content">
 
         <!-- ===== HEADER ===== -->
         <header id="header">
             <div class="container nav-container">
-                <a href="#" class="logo">Finish<span>As</span>Generation</a>
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/file_00000000480881f4873ad238c15f892d_h3guqm.png" alt="PHINEHAS GENERATION FOUNDATION Logo" />
+                    <span>PHINEHAS</span>
+                </a>
 
-                <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
 
                 <nav class="nav-links" id="navLinks">
-                    <a href="index.html" class="active" data-key="navHome">Home</a>
-                    <a href="about.html" data-key="navAbout">About</a>
-                    <a href="sponsor.html" data-key="navSponsor">Sponsor</a>
-                    <a href="blog.html" data-key="navBlog">Blog</a>
-                    <a href="journey.html" data-key="navJourney">Journey</a>
-                    <a href="contact.html" data-key="navContact">Contact</a>
-                    <a href="admin.html" data-key="navAdmin">Admin</a>
-
-                    <div class="lang-wrapper">
-                        <div class="lang-toggle" id="langToggle">
-                            <i class="fas fa-globe"></i> <span id="currentLangLabel">EN (UK)</span> <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i>
-                        </div>
-                        <ul class="lang-dropdown" id="langDropdown">
-                            <li data-lang="en-uk" class="active-lang">🇬🇧 English (UK)</li>
-                            <li data-lang="en-us">🇺🇸 English (US)</li>
-                            <li data-lang="de">🇩🇪 Deutsch</li>
-                            <li data-lang="fr">🇫🇷 Français</li>
-                            <li data-lang="pt">🇵🇹 Português</li>
-                            <li data-lang="zh">🇨🇳 中文</li>
-                        </ul>
-                    </div>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="programs.html">Our Programs</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog / News</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="donate.html" class="nav-donate-btn"><i class="fas fa-heart"></i> Donate Now</a>
                 </nav>
             </div>
         </header>
 
         <!-- ===== HERO SECTION ===== -->
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <h1>
-                        <span data-key="heroTitle1">From</span><br />
-                        <span class="highlight" data-key="heroTitle2">Training</span><br />
-                        <span data-key="heroTitle3">to Flourishing</span>
-                    </h1>
-                    <p data-key="heroDesc">
-                        Empowering young women and children to become self-sufficient, healthy, and happy — 
-                        because every generation deserves to flourish.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#!" class="btn btn-primary" data-key="heroBtn1">
-                            <i class="fas fa-seedling"></i> <span>Get Involved</span>
-                        </a>
-                        <a href="#!" class="btn btn-secondary" data-key="heroBtn2">
-                            <i class="fas fa-play-circle"></i> <span>Our Story</span>
-                        </a>
-                        <a href="#!" class="btn btn-brown" data-key="heroBtn3">
-                            <i class="fas fa-heart"></i> <span>Sponsor</span>
-                        </a>
+        <section class="hero" id="hero">
+            <div class="hero-slides" id="heroSlides">
+                <div class="hero-slide active" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/1784935469955_gbrx1h.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/1784935463883_oeiwu0.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938661/1784785603066_sl0t6n.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938657/1784784229854_ktdfci.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938653/1784934975518_slmphx.jpg');"></div>
+            </div>
+
+            <div class="hero-overlay">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-slide-text visible" id="heroText">
+                            <h1>
+                                Bridging Generations.<br />
+                                <span class="highlight">Inspiring Hope.</span><br />
+                                Transforming Lives.
+                            </h1>
+                            <p id="heroDesc">
+                                Empowering teenagers with knowledge, mentorship, and life-changing opportunities while restoring dignity, hope, and joy to elderly people through compassionate care and community outreach.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="volunteer.html" class="btn btn-primary">
+                                    <i class="fas fa-hands-helping"></i> Become a Volunteer
+                                </a>
+                                <a href="donate.html" class="btn btn-brown">
+                                    <i class="fas fa-heart"></i> Donate Now
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="art-circle">
-                        <span class="ring"></span>
-                        <span class="ring"></span>
+            </div>
+
+            <div class="hero-dots" id="heroDots">
+                <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+                <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+            </div>
+        </section>
+
+        <!-- ===== BREAKING LOGO ===== -->
+        <section class="breaking-logo">
+            <div class="container">
+                <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/file_00000000480881f4873ad238c15f892d_h3guqm.png" alt="PHINEHAS GENERATION FOUNDATION" />
+            </div>
+        </section>
+
+        <!-- ===== IMPACT COUNTERS ===== -->
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="section-title text-center" style="color: white;">Our Impact Since 2016</h2>
+                <p class="text-center" style="color: rgba(255,255,255,0.7); margin-bottom: 40px;">Measurable change we've created together</p>
+                <div class="impact-grid stagger-children" id="impactGrid">
+                    <div class="impact-item">
+                        <span class="icon"><i class="fas fa-user-graduate"></i></span>
+                        <span class="number" data-count="1500">0</span>
+                        <span class="label">Teenagers Mentored</span>
                     </div>
+                    <div class="impact-item">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <span class="number" data-count="500">0</span>
+                        <span class="label">Elderly Reached</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
+                        <span class="number" data-count="50">0</span>
+                        <span class="label">Community Programs</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="icon"><i class="fas fa-globe-africa"></i></span>
+                        <span class="number" data-count="3">0</span>
+                        <span class="label">Countries Reached</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT PREVIEW ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="about-preview">
+                    <div class="about-image fade-up">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/1784935469955_gbrx1h.jpg" alt="PHINEHAS GENERATION FOUNDATION Team" />
+                    </div>
+                    <div class="about-content fade-up">
+                        <h2 class="section-title">About <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION</h2>
+                        <p style="font-size:1.05rem; color:#444; line-height:1.8; margin-bottom:16px;">
+                            Founded in 2016 by <strong>Mrs. Oluwatosin Balogun Akano</strong>, PHINEHAS GENERATION FOUNDATION is a non-governmental organization committed to building stronger communities by empowering teenagers and caring for elderly people.
+                        </p>
+                        <p style="color:#555; line-height:1.8; margin-bottom:24px;">
+                            What started as a vision to mentor young people has grown into a movement of hope that now reaches families, communities, and senior citizens through education, advocacy, humanitarian outreach, and compassionate service.
+                        </p>
+                        <p style="color:#555; line-height:1.8; margin-bottom:24px;">
+                            From our beginnings in Abeokuta to our expansion into Lagos and the United Kingdom, our commitment remains the same: <strong>raising tomorrow's leaders while honouring yesterday's heroes.</strong>
+                        </p>
+                        <a href="about.html" class="btn btn-primary">Read Our Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MISSION & VISION ===== -->
+        <section class="section-padding" style="background: var(--gray-light);">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mv-card fade-up">
+                        <span class="icon"><i class="fas fa-bullseye"></i></span>
+                        <h3>Our Mission</h3>
+                        <p>To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.</p>
+                    </div>
+                    <div class="mv-card vision fade-up">
+                        <span class="icon"><i class="fas fa-eye"></i></span>
+                        <h3>Our Vision</h3>
+                        <p>To build a world where no child is neglected and no elderly person is abandoned.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CORE VALUES ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Our <span class="highlight">Core Values</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 40px;">The principles that guide everything we do</p>
+                <div class="values-grid stagger-children" id="valuesGrid">
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <h4>Compassion</h4>
+                        <p>We serve every individual with love, empathy, and genuine care.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-shield-alt"></i></span>
+                        <h4>Integrity</h4>
+                        <p>We uphold honesty, transparency, and accountability in all we do.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-seedling"></i></span>
+                        <h4>Empowerment</h4>
+                        <p>We equip people with the knowledge, skills, and confidence to succeed.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-star"></i></span>
+                        <h4>Excellence</h4>
+                        <p>We pursue the highest standards in service and impact.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-handshake"></i></span>
+                        <h4>Respect</h4>
+                        <p>We honour the dignity and worth of every human life.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-hands-helping"></i></span>
+                        <h4>Service</h4>
+                        <p>We believe true leadership begins with serving others.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <h4>Collaboration</h4>
+                        <p>We create lasting impact by working with communities and partners.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon"><i class="fas fa-sun"></i></span>
+                        <h4>Hope</h4>
+                        <p>We inspire confidence for a brighter future, regardless of life's challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHO WE SERVE ===== -->
+        <section class="section-padding" style="background: var(--gray-light);">
+            <div class="container">
+                <h2 class="section-title text-center">Who <span class="highlight">We Serve</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 40px;">Two generations that shape every society</p>
+                <div class="serve-grid">
+                    <div class="serve-card fade-up">
+                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/1784935469955_gbrx1h.jpg');"></div>
+                        <div class="serve-content">
+                            <span class="icon-badge"><i class="fas fa-user-graduate" style="color: var(--green);"></i></span>
+                            <h3>Teenagers</h3>
+                            <p>Helping young people develop confidence, character, leadership, and purpose through mentorship, education, and life skills.</p>
+                        </div>
+                    </div>
+                    <div class="serve-card fade-up">
+                        <div class="serve-image" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938661/1784785603066_sl0t6n.jpg');"></div>
+                        <div class="serve-content">
+                            <span class="icon-badge"><i class="fas fa-heart" style="color: var(--brown);"></i></span>
+                            <h3>Elderly People</h3>
+                            <p>Providing care, medical outreach, food support, emotional encouragement, and companionship to senior citizens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== OUR PROGRAMS ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Our <span class="highlight">Programs</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 40px;">Creating impact through targeted initiatives</p>
+                <div class="programs-grid stagger-children" id="programsGrid">
+                    <div class="program-card">
+                        <span class="icon"><i class="fas fa-star"></i></span>
+                        <h4>Self-Esteem Development</h4>
+                        <p>Helping teenagers discover their worth and confidence.</p>
+                    </div>
+                    <div class="program-card">
+                        <span class="icon"><i class="fas fa-shield-alt"></i></span>
+                        <h4>Real Men Don't Rape</h4>
+                        <p>Promoting respect, responsibility, and gender-based violence prevention.</p>
+                    </div>
+                    <div class="program-card">
+                        <span class="icon"><i class="fas fa-dove"></i></span>
+                        <h4>Sexual Purity</h4>
+                        <p>Teaching healthy values and responsible decision-making.</p>
+                    </div>
+                    <div class="program-card">
+                        <span class="icon"><i class="fas fa-brain"></i></span>
+                        <h4>Mental Health Awareness</h4>
+                        <p>Supporting young people through education on depression, emotional wellbeing, and resilience.</p>
+                    </div>
+                    <div class="program-card">
+                        <span class="icon"><i class="fas fa-stethoscope"></i></span>
+                        <h4>Medical Outreach</h4>
+                        <p>Providing free healthcare services, eye tests, and prescription glasses.</p>
+                    </div>
+                    <div class="program-card">
+                        <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
+                        <h4>Community Welfare</h4>
+                        <p>Food distribution, financial assistance, and support for vulnerable elderly people.</p>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="programs.html" class="btn btn-primary">View All Programs <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHY WE EXIST ===== -->
+        <section class="why-section section-padding">
+            <div class="container">
+                <h2 class="section-title text-center" style="color: white;">Why <span style="color: var(--brown-light);">We Exist</span></h2>
+                <p style="text-align:center; color: rgba(255,255,255,0.7); margin-bottom: 40px;">Every generation deserves hope</p>
+                <div class="why-grid stagger-children">
+                    <div class="why-item">
+                        <span class="icon"><i class="fas fa-seedling"></i></span>
+                        <h4>Teenagers</h4>
+                        <p>Deserve guidance</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <h4>The Elderly</h4>
+                        <p>Deserve dignity</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <h4>Communities</h4>
+                        <p>Deserve compassion</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="icon"><i class="fas fa-globe"></i></span>
+                        <h4>Every Generation</h4>
+                        <p>Deserves hope</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOUNDER SECTION ===== -->
+        <section class="founder-section section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Meet Our <span class="highlight">Founder</span></h2>
+                <div class="founder-grid" style="margin-top:40px;">
+                    <div class="founder-image fade-up">
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/1784935469955_gbrx1h.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder" />
+                        <span class="founder-badge"><i class="fas fa-crown"></i> Founder</span>
+                    </div>
+                    <div class="founder-content fade-up">
+                        <h3>Mrs. Oluwatosin Balogun Akano</h3>
+                        <span class="title">Founder & Executive Director</span>
+                        <p>
+                            With a heart for service and a vision for transformation, Mrs. Oluwatosin Balogun Akano founded PHINEHAS GENERATION FOUNDATION in 2016. Her passion for empowering young people and caring for the elderly has driven the organization's growth from a small mentorship initiative in Abeokuta to a movement reaching communities across Nigeria and the United Kingdom.
+                        </p>
+                        <p>
+                            A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.
+                        </p>
+                        <p class="signature">"Raising tomorrow's leaders while honouring yesterday's heroes."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">What People <span class="highlight">Say</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 40px;">Stories of hope and transformation</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-up">
+                        <span class="quote">"</span>
+                        <p>"The mentorship program changed my confidence and helped me discover my purpose. I now know who I am and what I'm capable of."</p>
+                        <div class="author">— Participant</div>
+                    </div>
+                    <div class="testimonial-card fade-up">
+                        <span class="quote">"</span>
+                        <p>"The medical outreach restored my sight and reminded me that people still care. I thought I had been forgotten, but PHINEHAS GENERATION showed me love."</p>
+                        <div class="author">— Elderly Beneficiary</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PARTNERS ===== -->
+        <section class="section-padding" style="background: var(--gray-light);">
+            <div class="container">
+                <h2 class="section-title text-center">Our <span class="highlight">Partners</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 20px;">Working together for greater impact</p>
+                <div class="partners-grid">
+                    <span class="partner-logo" style="font-weight:700; font-size:1.2rem; opacity:0.6;">🏛️ Churches</span>
+                    <span class="partner-logo" style="font-weight:700; font-size:1.2rem; opacity:0.6;">🤝 NGOs</span>
+                    <span class="partner-logo" style="font-weight:700; font-size:1.2rem; opacity:0.6;">🏫 Schools</span>
+                    <span class="partner-logo" style="font-weight:700; font-size:1.2rem; opacity:0.6;">🏥 Hospitals</span>
+                    <span class="partner-logo" style="font-weight:700; font-size:1.2rem; opacity:0.6;">💼 Corporate Sponsors</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CALL TO ACTION ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>You Can Change a Life Today</h2>
+                <p>Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.</p>
+                <div class="cta-buttons">
+                    <a href="donate.html" class="btn btn-brown"><i class="fas fa-heart"></i> Donate Now</a>
+                    <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
                 </div>
             </div>
         </section>
@@ -632,13 +1755,71 @@
         <!-- ===== FOOTER ===== -->
         <footer class="footer">
             <div class="container">
-                <p>&copy; 2026 <strong>Finish as Generation</strong> — <span data-key="footerTag">Nurturing lives, growing futures.</span></p>
-                <p style="margin-top:6px; font-size:0.8rem; opacity:0.6;">
-                    <span data-key="footerCredit">Built with ❤️ for a better world</span>
-                </p>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo" style="color:white;">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938651/file_00000000480881f4873ad238c15f892d_h3guqm.png" alt="Logo" style="height:36px; display:inline-block;" />
+                            <span>PHINEHAS</span>
+                        </a>
+                        <p>Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="programs.html">Our Programs</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="blog.html">Blog / News</a>
+                        <a href="volunteer.html">Volunteer</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Programs</h4>
+                        <a href="programs.html#youth">Youth Development</a>
+                        <a href="programs.html#elderly">Elderly Care</a>
+                        <a href="programs.html#medical">Medical Outreach</a>
+                        <a href="programs.html#community">Community Development</a>
+                        <a href="programs.html#leadership">Leadership Training</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Contact</h4>
+                        <a href="tel:+447123456789"><i class="fas fa-phone"></i> +44 7123 456789</a>
+                        <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> UK Office</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Nigeria Office</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 <strong>PHINEHAS GENERATION FOUNDATION</strong> — Registered Charity. All rights reserved.</p>
+                </div>
             </div>
         </footer>
 
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/447123456789" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#" style="color: var(--green-light);">Cookie Policy</a>.</p>
+        <div style="display:flex; gap:12px;">
+            <button class="btn btn-primary" id="acceptCookies">Accept</button>
+            <button class="btn btn-secondary" style="background:transparent; border-color:rgba(255,255,255,0.3); color:white;" id="declineCookies">Decline</button>
+        </div>
     </div>
 
     <!-- ===== JAVASCRIPT ===== -->
@@ -646,217 +1827,62 @@
         (function() {
             'use strict';
 
-            // ===== LANGUAGE DATA =====
-            const translations = {
-                'en-uk': {
-                    navHome: 'Home',
-                    navAbout: 'About',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Journey',
-                    navContact: 'Contact',
-                    navAdmin: 'Admin',
-                    heroTitle1: 'From',
-                    heroTitle2: 'Training',
-                    heroTitle3: 'to Flourishing',
-                    heroDesc: 'Empowering young women and children to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
-                    heroBtn1: 'Get Involved',
-                    heroBtn2: 'Our Story',
-                    heroBtn3: 'Sponsor',
-                    footerTag: 'Nurturing lives, growing futures.',
-                    footerCredit: 'Built with ❤️ for a better world'
-                },
-                'en-us': {
-                    navHome: 'Home',
-                    navAbout: 'About',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Journey',
-                    navContact: 'Contact',
-                    navAdmin: 'Admin',
-                    heroTitle1: 'From',
-                    heroTitle2: 'Training',
-                    heroTitle3: 'to Flourishing',
-                    heroDesc: 'Empowering young women and children to become self-sufficient, healthy, and happy — because every generation deserves to flourish.',
-                    heroBtn1: 'Get Involved',
-                    heroBtn2: 'Our Story',
-                    heroBtn3: 'Sponsor',
-                    footerTag: 'Nurturing lives, growing futures.',
-                    footerCredit: 'Built with ❤️ for a better world'
-                },
-                'de': {
-                    navHome: 'Startseite',
-                    navAbout: 'Über uns',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Reise',
-                    navContact: 'Kontakt',
-                    navAdmin: 'Admin',
-                    heroTitle1: 'Von',
-                    heroTitle2: 'Training',
-                    heroTitle3: 'zum Aufblühen',
-                    heroDesc: 'Junge Frauen und Kinder befähigen, selbstständig, gesund und glücklich zu werden — denn jede Generation verdient es, aufzublühen.',
-                    heroBtn1: 'Mitmachen',
-                    heroBtn2: 'Unsere Geschichte',
-                    heroBtn3: 'Spenden',
-                    footerTag: 'Leben fördern, Zukunft wachsen.',
-                    footerCredit: 'Mit ❤️ für eine bessere Welt'
-                },
-                'fr': {
-                    navHome: 'Accueil',
-                    navAbout: 'À propos',
-                    navSponsor: 'Sponsor',
-                    navBlog: 'Blog',
-                    navJourney: 'Parcours',
-                    navContact: 'Contact',
-                    navAdmin: 'Admin',
-                    heroTitle1: 'De',
-                    heroTitle2: 'la formation',
-                    heroTitle3: 'à lépanouissement',
-                    heroDesc: 'Autonomiser les jeunes femmes et les enfants pour qu\'ils deviennent autonomes, en bonne santé et heureux — parce que chaque génération mérite de sépanouir.',
-                    heroBtn1: 'S\'impliquer',
-                    heroBtn2: 'Notre histoire',
-                    heroBtn3: 'Parrainer',
-                    footerTag: 'Nourrir les vies, faire grandir l\'avenir.',
-                    footerCredit: 'Construit avec ❤️ pour un monde meilleur'
-                },
-                'pt': {
-                    navHome: 'Início',
-                    navAbout: 'Sobre',
-                    navSponsor: 'Patrocinar',
-                    navBlog: 'Blog',
-                    navJourney: 'Jornada',
-                    navContact: 'Contacto',
-                    navAdmin: 'Admin',
-                    heroTitle1: 'Da',
-                    heroTitle2: 'formação',
-                    heroTitle3: 'ao florescimento',
-                    heroDesc: 'Capacitar jovens mulheres e crianças para se tornarem autossuficientes, saudáveis e felizes — porque cada geração merece florescer.',
-                    heroBtn1: 'Envolver-se',
-                    heroBtn2: 'Nossa História',
-                    heroBtn3: 'Apoiar',
-                    footerTag: 'Nutrir vidas, cultivar futuros.',
-                    footerCredit: 'Feito com ❤️ para um mundo melhor'
-                },
-                'zh': {
-                    navHome: '首页',
-                    navAbout: '关于我们',
-                    navSponsor: '赞助',
-                    navBlog: '博客',
-                    navJourney: '历程',
-                    navContact: '联系',
-                    navAdmin: '管理',
-                    heroTitle1: '从',
-                    heroTitle2: '训练',
-                    heroTitle3: '到繁荣',
-                    heroDesc: '赋能年轻女性和儿童，使他们自立、健康、快乐 — 因为每一代人都值得繁荣。',
-                    heroBtn1: '参与',
-                    heroBtn2: '我们的故事',
-                    heroBtn3: '赞助',
-                    footerTag: '滋养生命，培育未来。',
-                    footerCredit: '用 ❤️ 为更美好的世界而建'
-                }
-            };
-
-            // ===== STATE =====
-            let currentLang = localStorage.getItem('finishLang') || 'en-uk';
-
             // ===== DOM REFS =====
-            const langToggle = document.getElementById('langToggle');
-            const langDropdown = document.getElementById('langDropdown');
-            const currentLangLabel = document.getElementById('currentLangLabel');
-            const allTranslatable = document.querySelectorAll('[data-key]');
             const skeleton = document.getElementById('skeleton-loader');
             const mainContent = document.getElementById('main-content');
             const header = document.getElementById('header');
             const hamburger = document.getElementById('hamburger');
             const navLinks = document.getElementById('navLinks');
+            const scrollProgress = document.getElementById('scroll-progress');
+            const backToTop = document.getElementById('back-to-top');
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
 
-            // ===== FUNCTIONS =====
-            function applyLanguage(lang) {
-                if (!translations[lang]) return;
-
-                const dict = translations[lang];
-                allTranslatable.forEach(el => {
-                    const key = el.getAttribute('data-key');
-                    if (dict[key] !== undefined) {
-                        // Preserve inner HTML if there are child elements like icons
-                        const icon = el.querySelector('i');
-                        if (icon) {
-                            // If there's an icon, keep it and only change text
-                            const textNode = el.childNodes[el.childNodes.length - 1];
-                            if (textNode && textNode.nodeType === 3) {
-                                textNode.textContent = ' ' + dict[key];
-                            } else {
-                                // Fallback: set innerHTML with icon
-                                el.innerHTML = `<i class="${icon.className}"></i> ${dict[key]}`;
-                            }
-                        } else {
-                            el.textContent = dict[key];
-                        }
-                    }
-                });
-
-                // Update dropdown active
-                document.querySelectorAll('.lang-dropdown li').forEach(li => {
-                    li.classList.toggle('active-lang', li.dataset.lang === lang);
-                });
-
-                // Update label
-                const langNames = {
-                    'en-uk': 'EN (UK)',
-                    'en-us': 'EN (US)',
-                    'de': 'DE',
-                    'fr': 'FR',
-                    'pt': 'PT',
-                    'zh': '中文'
-                };
-                currentLangLabel.textContent = langNames[lang] || 'EN';
-
-                localStorage.setItem('finishLang', lang);
-                currentLang = lang;
-            }
-
-            function toggleDropdown(e) {
-                e.stopPropagation();
-                langDropdown.classList.toggle('open');
-            }
-
-            function closeDropdown() {
-                langDropdown.classList.remove('open');
-            }
-
-            // ===== EVENT LISTENERS =====
-            // Language toggle
-            langToggle.addEventListener('click', toggleDropdown);
-
-            // Language selection
-            langDropdown.querySelectorAll('li').forEach(li => {
-                li.addEventListener('click', function(e) {
-                    const lang = this.dataset.lang;
-                    applyLanguage(lang);
-                    closeDropdown();
-                });
+            // ===== SKELETON LOADER =====
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    skeleton.classList.add('hidden');
+                    mainContent.classList.add('visible');
+                    // Trigger fade animations
+                    document.querySelectorAll('.fade-up').forEach((el, i) => {
+                        setTimeout(() => el.classList.add('visible'), 200 + i * 100);
+                    });
+                    document.querySelectorAll('.stagger-children').forEach((el) => {
+                        el.classList.add('visible');
+                    });
+                    // Start counters
+                    startCounters();
+                }, 1000);
             });
 
-            // Close dropdown on outside click
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.lang-wrapper')) {
-                    closeDropdown();
-                }
+            // ===== HEADER SCROLL =====
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                header.classList.toggle('scrolled', scrollY > 20);
+
+                // Scroll progress
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                scrollProgress.style.width = scrollPercent + '%';
+
+                // Back to top
+                backToTop.classList.toggle('visible', scrollY > 400);
             });
 
-            // Hamburger
+            // ===== BACK TO TOP =====
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== HAMBURGER =====
             hamburger.addEventListener('click', function() {
                 navLinks.classList.toggle('open');
                 const icon = this.querySelector('i');
-                if (icon) {
-                    icon.classList.toggle('fa-bars');
-                    icon.classList.toggle('fa-times');
-                }
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
             });
 
-            // Close nav on link click (mobile)
+            // Close nav on link click
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     navLinks.classList.remove('open');
@@ -868,30 +1894,110 @@
                 });
             });
 
-            // Header scroll shadow
-            window.addEventListener('scroll', function() {
-                header.classList.toggle('scrolled', window.scrollY > 20);
-            });
+            // ===== HERO SLIDESHOW =====
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.hero-dot');
+            const heroText = document.getElementById('heroText');
+            const heroDesc = document.getElementById('heroDesc');
+            let currentSlide = 0;
+            let slideInterval;
 
-            // ===== SKELETON LOADER =====
-            window.addEventListener('load', function() {
+            const slideTexts = [
+                'Every Destiny matters, Every Girls Child worth to live',
+                'Raising every boy child to protect themselves from lust and control their lives and value other gender',
+                'They might be forgotten but their need is, every aged need our love, care and attention because they have little to stay with us',
+                'Creating a big family from all languages, region, tribe, religion, countries, color with oneness, love and making world a better place',
+                'We raise them to become responsible individual so that we can all have the peace we prayed for'
+            ];
+
+            function goToSlide(index) {
+                slides.forEach((s, i) => {
+                    s.classList.toggle('active', i === index);
+                });
+                dots.forEach((d, i) => {
+                    d.classList.toggle('active', i === index);
+                });
+                // Update text with slide-in effect
+                heroText.classList.remove('visible');
                 setTimeout(() => {
-                    skeleton.classList.add('hidden');
-                    mainContent.classList.add('visible');
-                }, 1200); // Simulate loading — adjust as needed
+                    heroDesc.textContent = slideTexts[index];
+                    heroText.classList.add('visible');
+                }, 200);
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % slides.length);
+            }
+
+            // Start slideshow
+            function startSlideshow() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            // Dot clicks
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', function() {
+                    clearInterval(slideInterval);
+                    goToSlide(i);
+                    startSlideshow();
+                });
             });
 
-            // ===== APPLY INITIAL LANGUAGE =====
-            applyLanguage(currentLang);
+            // Pause on hover
+            const heroSection = document.getElementById('hero');
+            heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            heroSection.addEventListener('mouseleave', startSlideshow);
 
-            // ===== NAV ACTIVE STATE (simple) =====
+            // Start
+            goToSlide(0);
+            startSlideshow();
+
+            // ===== COUNTER ANIMATION =====
+            function startCounters() {
+                const counters = document.querySelectorAll('.number[data-count]');
+                counters.forEach(counter => {
+                    const target = parseInt(counter.dataset.count);
+                    const duration = 2000;
+                    const startTime = performance.now();
+
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const current = Math.floor(eased * target);
+                        counter.textContent = current.toLocaleString();
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target.toLocaleString();
+                        }
+                    }
+                    requestAnimationFrame(updateCounter);
+                });
+            }
+
+            // ===== COOKIE BANNER =====
+            if (!localStorage.getItem('cookiesAccepted')) {
+                cookieBanner.classList.add('show');
+            }
+
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+
+            declineCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieBanner.classList.remove('show');
+            });
+
+            // ===== NAV ACTIVE STATE =====
             const currentPath = window.location.pathname.split('/').pop() || 'index.html';
             navLinks.querySelectorAll('a').forEach(link => {
                 const href = link.getAttribute('href');
-                if (href === currentPath) {
+                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
                     link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
                 }
             });
 
