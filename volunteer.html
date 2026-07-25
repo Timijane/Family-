@@ -11,7 +11,7 @@
     <meta property="og:description" content="Join us in empowering teenagers and restoring dignity to elderly people through mentorship, healthcare, and community outreach." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://phinehasgeneration.org/volunteer.html" />
-    <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg" />
+    <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Volunteer | PHINEHAS GENERATION FOUNDATION" />
     <meta name="twitter:description" content="Join us in empowering teenagers and restoring dignity to elderly people." />
@@ -90,7 +90,6 @@
             display: block;
         }
 
-        /* Skip to content */
         .skip-link {
             position: absolute;
             top: -100px;
@@ -120,16 +119,6 @@
 
         .section-padding {
             padding: 90px 0;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            color: var(--gold);
-            margin-bottom: 12px;
         }
 
         .section-eyebrow {
@@ -189,12 +178,6 @@
         .mt-48 {
             margin-top: 48px;
         }
-        .mb-32 {
-            margin-bottom: 32px;
-        }
-        .mb-48 {
-            margin-bottom: 48px;
-        }
 
         /* ===== SKELETON LOADER ===== */
         #skeleton-loader {
@@ -211,30 +194,25 @@
             justify-content: center;
             transition: opacity 0.6s ease;
         }
-
         #skeleton-loader.hidden {
             opacity: 0;
             pointer-events: none;
         }
-
         .skeleton-logo {
             width: 120px;
             height: 120px;
             animation: zoomPulse 1.8s ease-in-out infinite;
             margin-bottom: 24px;
         }
-
         .skeleton-logo img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
-
         @keyframes zoomPulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.15); }
         }
-
         .skeleton-name {
             font-size: 1.6rem;
             font-weight: 800;
@@ -242,11 +220,9 @@
             letter-spacing: 1px;
             animation: fadePulse 2s ease-in-out infinite;
         }
-
         .skeleton-name span {
             color: var(--gold-dark);
         }
-
         @keyframes fadePulse {
             0%, 100% { opacity: 0.6; }
             50% { opacity: 1; }
@@ -268,7 +244,6 @@
             overflow: hidden;
             letter-spacing: 0.2px;
         }
-
         .btn::after {
             content: '';
             position: absolute;
@@ -277,7 +252,6 @@
             transform: translateX(-100%);
             transition: transform 0.4s ease;
         }
-
         .btn:hover::after {
             transform: translateX(0);
         }
@@ -287,7 +261,6 @@
             color: var(--white);
             box-shadow: 0 4px 20px rgba(200, 148, 62, 0.3);
         }
-
         .btn-primary:hover {
             background: var(--gold-light);
             transform: translateY(-3px);
@@ -299,23 +272,10 @@
             color: var(--white);
             box-shadow: 0 4px 20px rgba(26, 26, 26, 0.25);
         }
-
         .btn-dark:hover {
             background: var(--black-soft);
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(26, 26, 26, 0.35);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--black);
-            border: 2px solid var(--black);
-        }
-
-        .btn-outline:hover {
-            background: var(--black);
-            color: var(--white);
-            transform: translateY(-3px);
         }
 
         .btn-outline-light {
@@ -323,22 +283,10 @@
             color: var(--white);
             border: 2px solid rgba(255, 255, 255, 0.5);
         }
-
         .btn-outline-light:hover {
             background: var(--white);
             color: var(--black);
             transform: translateY(-3px);
-        }
-
-        .btn-white {
-            background: var(--white);
-            color: var(--black);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .btn-white:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
         }
 
         .btn-success {
@@ -346,7 +294,6 @@
             color: white;
             box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3);
         }
-
         .btn-success:hover {
             background: #047857;
             transform: translateY(-3px);
@@ -379,7 +326,6 @@
             z-index: 1000;
             transition: var(--transition);
         }
-
         header.scrolled {
             padding: 10px 0;
             background: rgba(255, 255, 255, 0.97);
@@ -402,12 +348,10 @@
             align-items: center;
             gap: 10px;
         }
-
         .logo img {
             height: 44px;
             width: auto;
         }
-
         .logo .logo-gold {
             color: var(--gold);
         }
@@ -418,7 +362,6 @@
             gap: 28px;
             flex-wrap: wrap;
         }
-
         .nav-links a {
             font-size: 0.88rem;
             font-weight: 500;
@@ -426,7 +369,6 @@
             transition: var(--transition);
             position: relative;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -438,12 +380,10 @@
             transition: var(--transition);
             border-radius: 1px;
         }
-
         .nav-links a:hover::after,
         .nav-links a.active::after {
             width: 100%;
         }
-
         .nav-links a:hover {
             color: var(--gold-dark);
         }
@@ -456,11 +396,9 @@
             font-weight: 600;
             transition: var(--transition);
         }
-
         .nav-donate-btn::after {
             display: none !important;
         }
-
         .nav-donate-btn:hover {
             background: var(--gold-light);
             color: var(--white) !important;
@@ -471,7 +409,6 @@
         .lang-wrapper {
             position: relative;
         }
-
         .lang-toggle {
             display: flex;
             align-items: center;
@@ -487,16 +424,13 @@
             color: var(--black-soft);
             font-family: 'Inter', system-ui, sans-serif;
         }
-
         .lang-toggle:hover {
             border-color: var(--gold);
         }
-
         .lang-toggle i {
             font-size: 0.85rem;
             color: var(--gold);
         }
-
         .lang-dropdown {
             display: none;
             position: absolute;
@@ -510,11 +444,9 @@
             border: 1px solid var(--gray-light);
             z-index: 1100;
         }
-
         .lang-dropdown.open {
             display: block;
         }
-
         .lang-dropdown li {
             padding: 10px 22px;
             cursor: pointer;
@@ -522,19 +454,16 @@
             font-size: 0.88rem;
             color: var(--black-soft);
         }
-
         .lang-dropdown li:hover {
             background: var(--green-pale);
             color: var(--black);
         }
-
         .lang-dropdown li.active-lang {
             background: var(--gold);
             color: var(--white);
             font-weight: 600;
         }
 
-        /* Hamburger */
         .hamburger {
             display: none;
             font-size: 1.5rem;
@@ -555,19 +484,16 @@
             display: flex;
             align-items: center;
         }
-
         .page-hero::after {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.35) 100%);
         }
-
         .page-hero .container {
             position: relative;
             z-index: 2;
         }
-
         .page-hero h1 {
             font-size: 4rem;
             font-weight: 900;
@@ -576,11 +502,9 @@
             text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             font-family: 'Playfair Display', Georgia, serif;
         }
-
         .page-hero h1 .highlight-gold {
             color: var(--gold-light);
         }
-
         .page-hero .hero-sub {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.85);
@@ -588,7 +512,6 @@
             margin-top: 16px;
             line-height: 1.8;
         }
-
         .page-hero .breadcrumb {
             display: flex;
             gap: 8px;
@@ -596,16 +519,13 @@
             font-size: 0.9rem;
             margin-top: 20px;
         }
-
         .page-hero .breadcrumb a {
             color: rgba(255, 255, 255, 0.8);
             transition: var(--transition);
         }
-
         .page-hero .breadcrumb a:hover {
             color: var(--gold-light);
         }
-
         .page-hero .breadcrumb .current {
             color: var(--gold-light);
         }
@@ -620,14 +540,13 @@
 
         .why-volunteer-card {
             background: var(--white);
-            padding: 40px 28px;
+            padding: 44px 32px;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-sm);
             text-align: center;
             transition: var(--transition);
             border: 1px solid var(--gray-light);
             position: relative;
-            overflow: hidden;
         }
 
         .why-volunteer-card::after {
@@ -642,22 +561,36 @@
             transition: var(--transition);
             transform-origin: left;
         }
-
         .why-volunteer-card:hover::after {
             transform: scaleX(1);
         }
-
         .why-volunteer-card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow);
             border-color: var(--gold);
         }
 
-        .why-volunteer-card .icon {
-            font-size: 2.8rem;
+        .why-volunteer-card .icon-wrapper {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--gold-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+        .why-volunteer-card:hover .icon-wrapper {
+            background: var(--gold);
+        }
+        .why-volunteer-card .icon-wrapper i {
+            font-size: 2rem;
             color: var(--gold);
-            margin-bottom: 16px;
-            display: block;
+            transition: var(--transition);
+        }
+        .why-volunteer-card:hover .icon-wrapper i {
+            color: var(--white);
         }
 
         .why-volunteer-card h4 {
@@ -665,7 +598,6 @@
             font-weight: 700;
             margin-bottom: 8px;
         }
-
         .why-volunteer-card p {
             color: var(--gray-dark);
             font-size: 0.95rem;
@@ -681,26 +613,38 @@
 
         .opportunity-card {
             background: var(--white);
-            padding: 30px 24px;
+            padding: 32px 28px;
             border-radius: var(--radius);
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border: 1px solid var(--gray-light);
-            border-left-width: 4px;
-            border-left-color: var(--gold);
+            position: relative;
+            padding-left: 80px;
         }
 
-        .opportunity-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow);
-            border-color: var(--gold);
+        .opportunity-card .icon-wrapper {
+            position: absolute;
+            left: 28px;
+            top: 32px;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-sm);
+            background: var(--gold-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
         }
-
-        .opportunity-card .icon {
-            font-size: 1.8rem;
+        .opportunity-card:hover .icon-wrapper {
+            background: var(--gold);
+        }
+        .opportunity-card .icon-wrapper i {
+            font-size: 1.2rem;
             color: var(--gold);
-            margin-bottom: 10px;
-            display: block;
+            transition: var(--transition);
+        }
+        .opportunity-card:hover .icon-wrapper i {
+            color: var(--white);
         }
 
         .opportunity-card h4 {
@@ -708,7 +652,6 @@
             font-weight: 700;
             margin-bottom: 6px;
         }
-
         .opportunity-card p {
             color: var(--gray-dark);
             font-size: 0.9rem;
@@ -720,68 +663,13 @@
             display: inline-block;
             background: var(--gold-pale);
             color: var(--gold-dark);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            padding: 4px 16px;
+            padding: 4px 14px;
             border-radius: var(--radius-full);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            border: 1px solid rgba(200, 148, 62, 0.2);
-        }
-
-        /* ===== IMPACT STATS ===== */
-        .impact-stats {
-            background: var(--black);
-            color: var(--white);
-            padding: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .impact-stats::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png');
-            background-size: 300px auto;
-            background-repeat: no-repeat;
-            background-position: 95% 50%;
-            opacity: 0.04;
-            z-index: 0;
-        }
-
-        .impact-stats .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .impact-stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-
-        .impact-stat .icon {
-            font-size: 2rem;
-            margin-bottom: 8px;
-            display: block;
-            color: var(--gold-light);
-        }
-
-        .impact-stat .number {
-            font-size: 3rem;
-            font-weight: 900;
-            display: block;
-            line-height: 1.1;
-            font-family: 'Playfair Display', Georgia, serif;
-            color: var(--gold-light);
-        }
-
-        .impact-stat .label {
-            font-size: 1rem;
-            opacity: 0.7;
-            margin-top: 4px;
+            border: 1px solid rgba(200, 148, 62, 0.15);
         }
 
         /* ===== REQUIREMENTS ===== */
@@ -793,13 +681,12 @@
 
         .requirements-list {
             background: var(--white);
-            padding: 40px;
+            padding: 44px 40px;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--gray-light);
             transition: var(--transition);
         }
-
         .requirements-list:hover {
             box-shadow: var(--shadow);
         }
@@ -811,12 +698,10 @@
             color: var(--gold-dark);
             font-family: 'Playfair Display', Georgia, serif;
         }
-
         .requirements-list h3 i {
             color: var(--gold);
             margin-right: 10px;
         }
-
         .requirements-list ul li {
             padding: 10px 0;
             border-bottom: 1px solid var(--gray-light);
@@ -826,11 +711,9 @@
             font-size: 0.95rem;
             color: var(--gray-dark);
         }
-
         .requirements-list ul li:last-child {
             border-bottom: none;
         }
-
         .requirements-list ul li i {
             color: var(--gold);
             font-size: 1rem;
@@ -856,7 +739,6 @@
         .volunteer-form .form-group {
             margin-bottom: 24px;
         }
-
         .volunteer-form label {
             display: block;
             font-weight: 600;
@@ -864,12 +746,10 @@
             margin-bottom: 6px;
             color: var(--black);
         }
-
         .volunteer-form label .required {
             color: #dc2626;
             margin-left: 2px;
         }
-
         .volunteer-form label .character-count {
             font-weight: 400;
             font-size: 0.78rem;
@@ -890,7 +770,6 @@
             background: var(--white);
             color: var(--black);
         }
-
         .volunteer-form input:focus,
         .volunteer-form select:focus,
         .volunteer-form textarea:focus {
@@ -898,7 +777,6 @@
             border-color: var(--gold);
             box-shadow: 0 0 0 3px rgba(200, 148, 62, 0.12);
         }
-
         .volunteer-form input.error,
         .volunteer-form select.error,
         .volunteer-form textarea.error {
@@ -911,7 +789,6 @@
             margin-top: 4px;
             display: none;
         }
-
         .volunteer-form .error-message.show {
             display: block;
         }
@@ -920,7 +797,6 @@
             resize: vertical;
             min-height: 120px;
         }
-
         .volunteer-form .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -933,7 +809,6 @@
             gap: 8px 16px;
             margin-top: 6px;
         }
-
         .volunteer-form .checkbox-group label {
             display: flex;
             align-items: center;
@@ -943,7 +818,6 @@
             cursor: pointer;
             color: var(--gray-dark);
         }
-
         .volunteer-form .checkbox-group input[type="checkbox"] {
             width: 18px;
             height: 18px;
@@ -966,25 +840,21 @@
             border-radius: var(--radius-lg);
             border: 2px solid var(--green-light);
         }
-
         .form-success.show {
             display: block;
         }
-
         .form-success .icon {
             font-size: 4rem;
             color: var(--green);
             margin-bottom: 16px;
             display: block;
         }
-
         .form-success h3 {
             font-size: 1.6rem;
             color: var(--green-dark);
             margin-bottom: 8px;
             font-family: 'Playfair Display', Georgia, serif;
         }
-
         .form-success p {
             color: var(--gray-dark);
             font-size: 1.05rem;
@@ -1005,7 +875,6 @@
             transition: var(--transition);
             border: 1px solid var(--gray-light);
         }
-
         .faq-item:hover {
             box-shadow: var(--shadow);
         }
@@ -1026,18 +895,15 @@
             font-family: inherit;
             color: var(--black);
         }
-
         .faq-question:hover {
             color: var(--gold-dark);
         }
-
         .faq-question i {
             transition: var(--transition);
             color: var(--gold);
             font-size: 1.2rem;
             flex-shrink: 0;
         }
-
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
@@ -1048,12 +914,10 @@
             transition: max-height 0.4s ease, padding 0.3s ease;
             padding: 0 24px;
         }
-
         .faq-item.active .faq-answer {
             max-height: 300px;
             padding: 0 24px 20px;
         }
-
         .faq-answer p {
             color: var(--gray-dark);
             line-height: 1.7;
@@ -1069,7 +933,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .cta-section::before {
             content: '';
             position: absolute;
@@ -1080,7 +943,6 @@
             background: rgba(200, 148, 62, 0.06);
             border-radius: 50%;
         }
-
         .cta-section::after {
             content: '';
             position: absolute;
@@ -1091,19 +953,16 @@
             background: rgba(107, 143, 113, 0.08);
             border-radius: 50%;
         }
-
         .cta-section .container {
             position: relative;
             z-index: 1;
         }
-
         .cta-section h2 {
             font-size: 2.6rem;
             font-weight: 800;
             margin-bottom: 16px;
             font-family: 'Playfair Display', Georgia, serif;
         }
-
         .cta-section p {
             font-size: 1.1rem;
             opacity: 0.8;
@@ -1111,7 +970,6 @@
             margin: 0 auto 32px;
             line-height: 1.7;
         }
-
         .cta-buttons {
             display: flex;
             gap: 14px;
@@ -1139,13 +997,11 @@
             transform: translateY(16px);
             z-index: 900;
         }
-
         #back-to-top.visible {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-
         #back-to-top:hover {
             background: var(--gold);
             transform: translateY(-4px);
@@ -1169,7 +1025,6 @@
             z-index: 899;
             transition: var(--transition);
         }
-
         .whatsapp-float:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
@@ -1192,22 +1047,18 @@
             z-index: 999;
             font-size: 0.85rem;
         }
-
         .cookie-banner.show {
             display: flex;
         }
-
         .cookie-banner p {
             opacity: 0.7;
             max-width: 65%;
             line-height: 1.5;
         }
-
         .cookie-banner a {
             color: var(--gold-light);
             text-decoration: underline;
         }
-
         .cookie-banner .btn-sm {
             padding: 8px 20px;
             font-size: 0.8rem;
@@ -1227,7 +1078,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .footer::before {
             content: '';
             position: absolute;
@@ -1239,7 +1089,6 @@
             opacity: 0.04;
             z-index: 0;
         }
-
         .footer .container {
             position: relative;
             z-index: 1;
@@ -1251,24 +1100,20 @@
             gap: 40px;
             margin-bottom: 40px;
         }
-
         .footer-brand .logo {
             color: var(--white);
             font-size: 1.3rem;
             margin-bottom: 12px;
         }
-
         .footer-brand .logo .logo-gold {
             color: var(--gold-light);
         }
-
         .footer-brand p {
             opacity: 0.6;
             font-size: 0.9rem;
             max-width: 280px;
             line-height: 1.7;
         }
-
         .footer h4 {
             font-size: 0.9rem;
             font-weight: 700;
@@ -1277,7 +1122,6 @@
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
-
         .footer-links a {
             display: block;
             opacity: 0.6;
@@ -1285,25 +1129,21 @@
             transition: var(--transition);
             margin-bottom: 8px;
         }
-
         .footer-links a:hover {
             opacity: 1;
             color: var(--gold-light);
         }
-
         .footer-links a i {
             width: 18px;
             margin-right: 4px;
             font-size: 0.75rem;
             color: var(--gold-light);
         }
-
         .footer-social {
             display: flex;
             gap: 12px;
             margin-top: 16px;
         }
-
         .footer-social a {
             width: 38px;
             height: 38px;
@@ -1316,7 +1156,6 @@
             color: var(--white);
             font-size: 0.9rem;
         }
-
         .footer-social a:hover {
             background: var(--gold);
             transform: translateY(-2px);
@@ -1329,7 +1168,6 @@
             font-size: 0.8rem;
             opacity: 0.5;
         }
-
         .footer-bottom a {
             color: var(--gold-light);
             text-decoration: underline;
@@ -1341,7 +1179,6 @@
             transform: translateY(40px);
             transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
@@ -1352,14 +1189,12 @@
             transform: translateY(30px);
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .stagger-children.visible>*:nth-child(1) { transition-delay: 0.05s; }
         .stagger-children.visible>*:nth-child(2) { transition-delay: 0.1s; }
         .stagger-children.visible>*:nth-child(3) { transition-delay: 0.15s; }
         .stagger-children.visible>*:nth-child(4) { transition-delay: 0.2s; }
         .stagger-children.visible>*:nth-child(5) { transition-delay: 0.25s; }
         .stagger-children.visible>*:nth-child(6) { transition-delay: 0.3s; }
-
         .stagger-children.visible>* {
             opacity: 1;
             transform: translateY(0);
@@ -1369,7 +1204,6 @@
             opacity: 0;
             transition: opacity 0.8s ease;
         }
-
         #main-content.visible {
             opacity: 1;
         }
@@ -1379,11 +1213,9 @@
             pointer-events: none;
             opacity: 0.7;
         }
-
         .btn-loading .btn-text {
             visibility: hidden;
         }
-
         .btn-loading::before {
             content: '';
             width: 20px;
@@ -1397,7 +1229,6 @@
             top: 50%;
             transform: translate(-50%, -50%);
         }
-
         @keyframes spin {
             to { transform: translate(-50%, -50%) rotate(360deg); }
         }
@@ -1406,9 +1237,6 @@
         @media (max-width: 1024px) {
             .why-volunteer-grid,
             .opportunities-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .impact-stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .footer-grid {
@@ -1426,7 +1254,6 @@
             .hamburger {
                 display: block;
             }
-
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -1436,7 +1263,6 @@
                 border-top: 1px solid var(--gray-light);
                 margin-top: 12px;
             }
-
             .nav-links.open {
                 display: flex;
             }
@@ -1454,9 +1280,6 @@
             .why-volunteer-grid,
             .opportunities-grid {
                 grid-template-columns: 1fr;
-            }
-            .impact-stats-grid {
-                grid-template-columns: 1fr 1fr;
             }
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -1482,6 +1305,14 @@
             }
             .requirements-list {
                 padding: 28px 20px;
+            }
+            .opportunity-card {
+                padding-left: 28px;
+                padding-top: 80px;
+            }
+            .opportunity-card .icon-wrapper {
+                left: 28px;
+                top: 28px;
             }
             .whatsapp-float {
                 bottom: 80px;
@@ -1525,12 +1356,6 @@
             .section-title {
                 font-size: 1.7rem;
             }
-            .impact-stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .impact-stat .number {
-                font-size: 2.2rem;
-            }
             .volunteer-form {
                 padding: 20px 16px;
             }
@@ -1546,6 +1371,16 @@
             .faq-question {
                 font-size: 0.95rem;
                 padding: 16px 18px;
+            }
+            .why-volunteer-card {
+                padding: 30px 20px;
+            }
+            .why-volunteer-card .icon-wrapper {
+                width: 60px;
+                height: 60px;
+            }
+            .why-volunteer-card .icon-wrapper i {
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -1606,7 +1441,7 @@
         </header>
 
         <!-- ===== PAGE HERO ===== -->
-        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');" aria-label="Volunteer hero image">
+        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973209/1784972112406_jecvw8.jpg');" aria-label="Volunteer hero image">
             <div class="container">
                 <h1 data-i18n="heroTitle">Become a <span class="highlight-gold">Volunteer</span></h1>
                 <p class="hero-sub" data-i18n="heroSub">Join us in empowering teenagers and restoring dignity to elderly people. Your time, skills, and compassion can change lives.</p>
@@ -1627,17 +1462,17 @@
 
                 <div class="why-volunteer-grid stagger-children">
                     <div class="why-volunteer-card">
-                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-hand-holding-heart"></i></div>
                         <h4 data-i18n="whyCard1Title">Make a Difference</h4>
                         <p data-i18n="whyCard1Desc">Your time and skills can transform the lives of teenagers and elderly people who need guidance, care, and support.</p>
                     </div>
                     <div class="why-volunteer-card">
-                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-users"></i></div>
                         <h4 data-i18n="whyCard2Title">Build Community</h4>
                         <p data-i18n="whyCard2Desc">Join a passionate team of volunteers who share your commitment to service and creating positive change.</p>
                     </div>
                     <div class="why-volunteer-card">
-                        <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
                         <h4 data-i18n="whyCard3Title">Grow & Learn</h4>
                         <p data-i18n="whyCard3Desc">Develop new skills, gain valuable experience, and deepen your understanding of social impact and humanitarian work.</p>
                     </div>
@@ -1654,68 +1489,40 @@
 
                 <div class="opportunities-grid stagger-children">
                     <div class="opportunity-card">
-                        <span class="icon"><i class="fas fa-user-graduate"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-user-tie"></i></div>
                         <h4 data-i18n="opp1Title">Youth Mentor</h4>
                         <p data-i18n="opp1Desc">Guide and inspire teenagers through mentorship, leadership training, and life skills development.</p>
                         <span class="badge" data-i18n="opp1Badge">Flexible Hours</span>
                     </div>
                     <div class="opportunity-card">
-                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-heart"></i></div>
                         <h4 data-i18n="opp2Title">Elderly Care Volunteer</h4>
                         <p data-i18n="opp2Desc">Provide companionship, emotional support, and practical assistance to elderly people in our communities.</p>
                         <span class="badge" data-i18n="opp2Badge">Weekends</span>
                     </div>
                     <div class="opportunity-card">
-                        <span class="icon"><i class="fas fa-stethoscope"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-stethoscope"></i></div>
                         <h4 data-i18n="opp3Title">Medical Volunteer</h4>
                         <p data-i18n="opp3Desc">Healthcare professionals needed for medical outreaches, eye care, and health screenings.</p>
                         <span class="badge" data-i18n="opp3Badge">Qualified</span>
                     </div>
                     <div class="opportunity-card">
-                        <span class="icon"><i class="fas fa-calendar-check"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-calendar-alt"></i></div>
                         <h4 data-i18n="opp4Title">Event Volunteer</h4>
                         <p data-i18n="opp4Desc">Help organize conferences, youth hangouts, leadership summits, and community outreach events.</p>
                         <span class="badge" data-i18n="opp4Badge">Event-Based</span>
                     </div>
                     <div class="opportunity-card">
-                        <span class="icon"><i class="fas fa-camera"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-camera"></i></div>
                         <h4 data-i18n="opp5Title">Media & Communications</h4>
                         <p data-i18n="opp5Desc">Support our social media, photography, videography, and content creation for the foundation.</p>
                         <span class="badge" data-i18n="opp5Badge">Remote Possible</span>
                     </div>
                     <div class="opportunity-card">
-                        <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
+                        <div class="icon-wrapper"><i class="fas fa-hand-holding-usd"></i></div>
                         <h4 data-i18n="opp6Title">Fundraising Volunteer</h4>
                         <p data-i18n="opp6Desc">Help raise funds and resources to sustain our programs and expand our impact across communities.</p>
                         <span class="badge" data-i18n="opp6Badge">Flexible Hours</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== IMPACT STATS ===== -->
-        <section class="impact-stats" id="impactStats">
-            <div class="container">
-                <div class="impact-stats-grid stagger-children">
-                    <div class="impact-stat">
-                        <span class="icon"><i class="fas fa-hands-helping"></i></span>
-                        <span class="number" data-count="200">0</span>
-                        <span class="label" data-i18n="stat1Label">Active Volunteers</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="icon"><i class="fas fa-clock"></i></span>
-                        <span class="number" data-count="5000">0</span>
-                        <span class="label" data-i18n="stat2Label">Volunteer Hours Donated</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="icon"><i class="fas fa-user-graduate"></i></span>
-                        <span class="number" data-count="1500">0</span>
-                        <span class="label" data-i18n="stat3Label">Teenagers Mentored</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="icon"><i class="fas fa-heart"></i></span>
-                        <span class="number" data-count="500">0</span>
-                        <span class="label" data-i18n="stat4Label">Elderly Reached</span>
                     </div>
                 </div>
             </div>
@@ -2058,7 +1865,6 @@
             // ===== TRANSLATIONS =====
             const translations = {
                 'en': {
-                    // Nav
                     navHome: 'Home',
                     navAbout: 'About Us',
                     navPrograms: 'Our Programs',
@@ -2067,10 +1873,8 @@
                     navVolunteer: 'Volunteer',
                     navContact: 'Contact Us',
                     navDonate: 'Donate Now',
-                    // Hero
                     heroTitle: 'Become a Volunteer',
                     heroSub: 'Join us in empowering teenagers and restoring dignity to elderly people. Your time, skills, and compassion can change lives.',
-                    // Why Volunteer
                     whyEyebrow: 'Join the Movement',
                     whyTitle: 'Why <span class="highlight">Volunteer</span> With Us',
                     whySub: 'Be part of something bigger than yourself',
@@ -2080,7 +1884,6 @@
                     whyCard2Desc: 'Join a passionate team of volunteers who share your commitment to service and creating positive change.',
                     whyCard3Title: 'Grow & Learn',
                     whyCard3Desc: 'Develop new skills, gain valuable experience, and deepen your understanding of social impact and humanitarian work.',
-                    // Opportunities
                     oppEyebrow: 'Find Your Role',
                     oppTitle: 'Volunteer <span class="highlight">Opportunities</span>',
                     oppSub: 'Find the role that fits your passion and skills',
@@ -2102,12 +1905,6 @@
                     opp6Title: 'Fundraising Volunteer',
                     opp6Desc: 'Help raise funds and resources to sustain our programs and expand our impact across communities.',
                     opp6Badge: 'Flexible Hours',
-                    // Stats
-                    stat1Label: 'Active Volunteers',
-                    stat2Label: 'Volunteer Hours Donated',
-                    stat3Label: 'Teenagers Mentored',
-                    stat4Label: 'Elderly Reached',
-                    // Requirements
                     reqEyebrow: 'Get Started',
                     reqTitle: 'Volunteer <span class="highlight">Requirements</span>',
                     reqSub: 'What you need to know before joining us',
@@ -2125,7 +1922,6 @@
                     req2_4: 'Opportunity to make a real difference',
                     req2_5: 'A welcoming and supportive community',
                     req2_6: 'References for future opportunities',
-                    // Form
                     formEyebrow: 'Apply Now',
                     formTitle: 'Apply to <span class="highlight">Volunteer</span>',
                     formSub: 'Complete the form below and we\'ll get back to you within 48 hours',
@@ -2169,11 +1965,9 @@
                     formErrorMotivation: 'Please tell us why you want to volunteer',
                     formErrorAvail: 'Please select your availability',
                     formErrorEmergency: 'Please provide an emergency contact',
-                    // Success
                     successTitle: 'Application Submitted!',
                     successText: 'Thank you for your interest in volunteering with PHINEHAS GENERATION FOUNDATION. We\'ll review your application and get back to you within 48 hours.',
                     successBtn: 'Submit Another Application',
-                    // FAQ
                     faqEyebrow: 'Got Questions?',
                     faqTitle: 'Frequently Asked <span class="highlight">Questions</span>',
                     faqSub: 'Everything you need to know about volunteering',
@@ -2189,12 +1983,10 @@
                     faqA5: 'Volunteers must be at least 18 years old. For volunteers under 18, we offer opportunities through our youth mentorship program where you can participate under supervision.',
                     faqQ6: 'Can I volunteer remotely?',
                     faqA6: 'Yes! We have remote volunteering opportunities in areas such as social media management, content creation, graphic design, and administrative support. Please indicate your interest in remote work on the application form.',
-                    // CTA
                     ctaTitle: 'Ready to Make a Difference?',
                     ctaText: 'Join us in empowering teenagers and restoring dignity to elderly people. Your compassion can change lives.',
                     ctaBtn1: '<i class="fas fa-hands-helping"></i> Apply Now',
                     ctaBtn2: '<i class="fas fa-heart"></i> Support Our Work',
-                    // Footer
                     footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
                     footerQuick: 'Quick Links',
                     footerHome: 'Home',
@@ -2216,7 +2008,6 @@
                     footerNigeria: 'Nigeria Office, Lagos',
                     footerCopy: 'Registered Charity. All rights reserved.',
                     footerPrivacy: 'Privacy Policy',
-                    // Cookie
                     cookieText: '🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.',
                     cookieAccept: 'Accept',
                     cookieDecline: 'Decline'
@@ -2262,10 +2053,6 @@
                     opp6Title: 'Bénévole pour la collecte de fonds',
                     opp6Desc: 'Aidez à collecter des fonds et des ressources pour soutenir nos programmes et étendre notre impact dans les communautés.',
                     opp6Badge: 'Horaires flexibles',
-                    stat1Label: 'Bénévoles actifs',
-                    stat2Label: 'Heures de bénévolat données',
-                    stat3Label: 'Adolescents encadrés',
-                    stat4Label: 'Personnes âgées touchées',
                     reqEyebrow: 'Commencez',
                     reqTitle: 'Conditions <span class="highlight">de bénévolat</span>',
                     reqSub: 'Ce que vous devez savoir avant de nous rejoindre',
@@ -2414,10 +2201,6 @@
                     opp6Title: 'Fundraising-Freiwilliger',
                     opp6Desc: 'Helfen Sie, Spenden und Ressourcen zu sammeln, um unsere Programme zu erhalten und unsere Wirkung zu erweitern.',
                     opp6Badge: 'Flexible Zeiten',
-                    stat1Label: 'Aktive Freiwillige',
-                    stat2Label: 'Gespendete Freiwilligenstunden',
-                    stat3Label: 'Jugendliche betreut',
-                    stat4Label: 'Ältere erreicht',
                     reqEyebrow: 'Loslegen',
                     reqTitle: 'Ehrenamtliche <span class="highlight">Anforderungen</span>',
                     reqSub: 'Was Sie wissen sollten, bevor Sie zu uns kommen',
@@ -2628,51 +2411,11 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== COUNTER ANIMATION (Intersection Observer) =====
-            function startCounters() {
-                const counters = document.querySelectorAll('.number[data-count]');
-                counters.forEach(counter => {
-                    const target = parseInt(counter.dataset.count);
-                    const duration = 2000;
-                    const startTime = performance.now();
-
-                    function updateCounter(currentTime) {
-                        const elapsed = currentTime - startTime;
-                        const progress = Math.min(elapsed / duration, 1);
-                        const eased = 1 - Math.pow(1 - progress, 3);
-                        const current = Math.floor(eased * target);
-                        counter.textContent = current.toLocaleString();
-                        if (progress < 1) {
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.textContent = target.toLocaleString();
-                        }
-                    }
-                    requestAnimationFrame(updateCounter);
-                });
-            }
-
-            // Observe impact stats section
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        startCounters();
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            const impactStats = document.getElementById('impactStats');
-            if (impactStats) {
-                statsObserver.observe(impactStats);
-            }
-
             // ===== FAQ ACCORDION =====
             document.querySelectorAll('.faq-question').forEach(button => {
                 button.addEventListener('click', function() {
                     const item = this.parentElement;
                     const isActive = item.classList.contains('active');
-                    // Close all others
                     document.querySelectorAll('.faq-item').forEach(faq => {
                         faq.classList.remove('active');
                     });
@@ -2705,7 +2448,6 @@
             const submitBtn = document.getElementById('submitBtn');
             const formSuccess = document.getElementById('formSuccess');
 
-            // Show error message for a field
             function showError(field) {
                 const parent = field.closest('.form-group');
                 const errorMsg = parent.querySelector('.error-message');
@@ -2715,7 +2457,6 @@
                 field.classList.add('error');
             }
 
-            // Hide error message for a field
             function hideError(field) {
                 const parent = field.closest('.form-group');
                 const errorMsg = parent.querySelector('.error-message');
@@ -2725,7 +2466,6 @@
                 field.classList.remove('error');
             }
 
-            // Validate a single field
             function validateField(field) {
                 if (field.hasAttribute('required') && !field.value.trim()) {
                     showError(field);
@@ -2742,7 +2482,6 @@
                 return true;
             }
 
-            // Clear error on input
             form.querySelectorAll('input, textarea, select').forEach(field => {
                 field.addEventListener('input', function() {
                     if (this.value.trim()) {
@@ -2756,7 +2495,6 @@
                 });
             });
 
-            // Validate checkbox group
             function validateCheckboxes() {
                 const checkboxes = form.querySelectorAll('input[name="interest"]');
                 const checked = Array.from(checkboxes).some(cb => cb.checked);
@@ -2775,8 +2513,6 @@
                 e.preventDefault();
 
                 let valid = true;
-
-                // Validate all required fields
                 const required = form.querySelectorAll('[required]');
                 required.forEach(field => {
                     if (!validateField(field)) {
@@ -2784,13 +2520,11 @@
                     }
                 });
 
-                // Validate checkboxes
                 if (!validateCheckboxes()) {
                     valid = false;
                 }
 
                 if (!valid) {
-                    // Scroll to first error
                     const firstError = form.querySelector('.error');
                     if (firstError) {
                         firstError.focus();
@@ -2799,7 +2533,6 @@
                     return;
                 }
 
-                // Simulate submission
                 submitBtn.classList.add('btn-loading');
                 submitBtn.disabled = true;
 
@@ -2812,7 +2545,7 @@
                 }, 2000);
             });
 
-            // ===== RESET FORM ON SUCCESS BUTTON =====
+            // ===== RESET FORM ON SUCCESS =====
             const successBtn = formSuccess.querySelector('.btn-primary');
             if (successBtn) {
                 successBtn.addEventListener('click', function(e) {
@@ -2820,10 +2553,8 @@
                     form.reset();
                     form.style.display = 'block';
                     formSuccess.classList.remove('show');
-                    // Reset character counters
                     if (skillsCount) skillsCount.textContent = '0';
                     if (motivationCount) motivationCount.textContent = '0';
-                    // Scroll to form
                     document.getElementById('applyForm').scrollIntoView({ behavior: 'smooth' });
                 });
             }
