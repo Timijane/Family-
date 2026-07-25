@@ -1,0 +1,2876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Volunteer with PHINEHAS GENERATION FOUNDATION — Empower teenagers and restore dignity to elderly people through mentorship, healthcare, and community outreach." />
+    <meta name="theme-color" content="#1a1a1a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Volunteer | PHINEHAS GENERATION FOUNDATION" />
+    <meta property="og:description" content="Join us in empowering teenagers and restoring dignity to elderly people through mentorship, healthcare, and community outreach." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://phinehasgeneration.org/volunteer.html" />
+    <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Volunteer | PHINEHAS GENERATION FOUNDATION" />
+    <meta name="twitter:description" content="Join us in empowering teenagers and restoring dignity to elderly people." />
+
+    <link rel="canonical" href="https://phinehasgeneration.org/volunteer.html" />
+    <title>Volunteer | PHINEHAS GENERATION FOUNDATION</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #c8943e;
+            --gold-light: #d4a94e;
+            --gold-dark: #a67a2e;
+            --gold-pale: #fdf8f0;
+            --gold-gradient: linear-gradient(135deg, #c8943e, #dab86a);
+            --black: #1a1a1a;
+            --black-soft: #2a2a2a;
+            --green: #6b8f71;
+            --green-light: #8aab90;
+            --green-dark: #3d5a42;
+            --green-pale: #e8efe9;
+            --green-paler: #f4f7f4;
+            --white: #ffffff;
+            --white-soft: #fafaf9;
+            --gray-light: #e8e6e1;
+            --gray-border: #e0ddd8;
+            --gray: #9a9a9a;
+            --gray-dark: #5a5a5a;
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            border-radius: 0 0 var(--radius-sm) 0;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.18;
+            margin-bottom: 18px;
+            letter-spacing: -0.6px;
+            color: var(--black);
+        }
+
+        .section-title .highlight {
+            color: var(--gold);
+            position: relative;
+        }
+
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(200, 148, 62, 0.2);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mt-32 {
+            margin-top: 32px;
+        }
+        .mt-48 {
+            margin-top: 48px;
+        }
+        .mb-32 {
+            margin-bottom: 32px;
+        }
+        .mb-48 {
+            margin-bottom: 48px;
+        }
+
+        /* ===== SKELETON LOADER ===== */
+        #skeleton-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease;
+        }
+
+        #skeleton-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .skeleton-logo {
+            width: 120px;
+            height: 120px;
+            animation: zoomPulse 1.8s ease-in-out infinite;
+            margin-bottom: 24px;
+        }
+
+        .skeleton-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes zoomPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        .skeleton-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 1px;
+            animation: fadePulse 2s ease-in-out infinite;
+        }
+
+        .skeleton-name span {
+            color: var(--gold-dark);
+        }
+
+        @keyframes fadePulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 36px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.2px;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(200, 148, 62, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(200, 148, 62, 0.4);
+        }
+
+        .btn-dark {
+            background: var(--black);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(26, 26, 26, 0.25);
+        }
+
+        .btn-dark:hover {
+            background: var(--black-soft);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(26, 26, 26, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+
+        .btn-outline:hover {
+            background: var(--black);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline-light:hover {
+            background: var(--white);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--black);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
+        }
+
+        .btn-success {
+            background: #059669;
+            color: white;
+            box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3);
+        }
+
+        .btn-success:hover {
+            background: #047857;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(5, 150, 105, 0.4);
+        }
+
+        /* ===== SCROLL PROGRESS ===== */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 14px 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 44px;
+            width: auto;
+        }
+
+        .logo .logo-gold {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--black-soft);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+            border-radius: 1px;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-dark);
+        }
+
+        .nav-donate-btn {
+            background: var(--gold);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-donate-btn::after {
+            display: none !important;
+        }
+
+        .nav-donate-btn:hover {
+            background: var(--gold-light);
+            color: var(--white) !important;
+            transform: scale(1.03);
+        }
+
+        /* Language Toggle */
+        .lang-wrapper {
+            position: relative;
+        }
+
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1.5px solid var(--gray-light);
+            border-radius: var(--radius-full);
+            padding: 6px 14px 6px 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--black-soft);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .lang-toggle:hover {
+            border-color: var(--gold);
+        }
+
+        .lang-toggle i {
+            font-size: 0.85rem;
+            color: var(--gold);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 46px;
+            right: 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 8px 0;
+            min-width: 180px;
+            border: 1px solid var(--gray-light);
+            z-index: 1100;
+        }
+
+        .lang-dropdown.open {
+            display: block;
+        }
+
+        .lang-dropdown li {
+            padding: 10px 22px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.88rem;
+            color: var(--black-soft);
+        }
+
+        .lang-dropdown li:hover {
+            background: var(--green-pale);
+            color: var(--black);
+        }
+
+        .lang-dropdown li.active-lang {
+            background: var(--gold);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--black);
+            background: none;
+            border: none;
+            padding: 6px;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            padding: 160px 0 90px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.35) 100%);
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .page-hero h1 .highlight-gold {
+            color: var(--gold-light);
+        }
+
+        .page-hero .hero-sub {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin-top: 16px;
+            line-height: 1.8;
+        }
+
+        .page-hero .breadcrumb {
+            display: flex;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        .page-hero .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+
+        .page-hero .breadcrumb a:hover {
+            color: var(--gold-light);
+        }
+
+        .page-hero .breadcrumb .current {
+            color: var(--gold-light);
+        }
+
+        /* ===== WHY VOLUNTEER ===== */
+        .why-volunteer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .why-volunteer-card {
+            background: var(--white);
+            padding: 40px 28px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-volunteer-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold-gradient);
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: left;
+        }
+
+        .why-volunteer-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .why-volunteer-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-color: var(--gold);
+        }
+
+        .why-volunteer-card .icon {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .why-volunteer-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .why-volunteer-card p {
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== OPPORTUNITIES ===== */
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .opportunity-card {
+            background: var(--white);
+            padding: 30px 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+            border-left-width: 4px;
+            border-left-color: var(--gold);
+        }
+
+        .opportunity-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-color: var(--gold);
+        }
+
+        .opportunity-card .icon {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .opportunity-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .opportunity-card p {
+            color: var(--gray-dark);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .opportunity-card .badge {
+            display: inline-block;
+            background: var(--gold-pale);
+            color: var(--gold-dark);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 16px;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(200, 148, 62, 0.2);
+        }
+
+        /* ===== IMPACT STATS ===== */
+        .impact-stats {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .impact-stats::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png');
+            background-size: 300px auto;
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            opacity: 0.04;
+            z-index: 0;
+        }
+
+        .impact-stats .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .impact-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .impact-stat .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: block;
+            color: var(--gold-light);
+        }
+
+        .impact-stat .number {
+            font-size: 3rem;
+            font-weight: 900;
+            display: block;
+            line-height: 1.1;
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--gold-light);
+        }
+
+        .impact-stat .label {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* ===== REQUIREMENTS ===== */
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .requirements-list {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .requirements-list:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .requirements-list h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--gold-dark);
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .requirements-list h3 i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+
+        .requirements-list ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--gray-dark);
+        }
+
+        .requirements-list ul li:last-child {
+            border-bottom: none;
+        }
+
+        .requirements-list ul li i {
+            color: var(--gold);
+            font-size: 1rem;
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        /* ===== APPLICATION FORM ===== */
+        .form-section {
+            background: var(--green-paler);
+        }
+
+        .volunteer-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+        }
+
+        .volunteer-form .form-group {
+            margin-bottom: 24px;
+        }
+
+        .volunteer-form label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            color: var(--black);
+        }
+
+        .volunteer-form label .required {
+            color: #dc2626;
+            margin-left: 2px;
+        }
+
+        .volunteer-form label .character-count {
+            font-weight: 400;
+            font-size: 0.78rem;
+            color: var(--gray);
+            float: right;
+        }
+
+        .volunteer-form input,
+        .volunteer-form select,
+        .volunteer-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid var(--gray-border);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .volunteer-form input:focus,
+        .volunteer-form select:focus,
+        .volunteer-form textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(200, 148, 62, 0.12);
+        }
+
+        .volunteer-form input.error,
+        .volunteer-form select.error,
+        .volunteer-form textarea.error {
+            border-color: #dc2626;
+        }
+
+        .volunteer-form .error-message {
+            color: #dc2626;
+            font-size: 0.8rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .volunteer-form .error-message.show {
+            display: block;
+        }
+
+        .volunteer-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .volunteer-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .volunteer-form .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 16px;
+            margin-top: 6px;
+        }
+
+        .volunteer-form .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 400;
+            font-size: 0.88rem;
+            cursor: pointer;
+            color: var(--gray-dark);
+        }
+
+        .volunteer-form .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .volunteer-form .form-submit {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* ===== SUCCESS MESSAGE ===== */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 48px 32px;
+            background: var(--green-paler);
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--green-light);
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .form-success .icon {
+            font-size: 4rem;
+            color: var(--green);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .form-success h3 {
+            font-size: 1.6rem;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .form-success p {
+            color: var(--gray-dark);
+            font-size: 1.05rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            background: var(--white);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
+            color: var(--black);
+        }
+
+        .faq-question:hover {
+            color: var(--gold-dark);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--gold);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 24px 20px;
+        }
+
+        .faq-answer p {
+            color: var(--gray-dark);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(160deg, var(--black) 0%, var(--black-soft) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: rgba(200, 148, 62, 0.06);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 250px;
+            height: 250px;
+            background: rgba(107, 143, 113, 0.08);
+            border-radius: 50%;
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 560px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        #back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(16px);
+            z-index: 900;
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #back-to-top:hover {
+            background: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 88px;
+            right: 28px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #25d366;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+            z-index: 899;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+        }
+
+        /* ===== COOKIE BANNER ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            color: var(--white);
+            padding: 14px 24px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            z-index: 999;
+            font-size: 0.85rem;
+        }
+
+        .cookie-banner.show {
+            display: flex;
+        }
+
+        .cookie-banner p {
+            opacity: 0.7;
+            max-width: 65%;
+            line-height: 1.5;
+        }
+
+        .cookie-banner a {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
+        .cookie-banner .btn-sm {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png');
+            background-size: 300px auto;
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            opacity: 0.04;
+            z-index: 0;
+        }
+
+        .footer .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand .logo .logo-gold {
+            color: var(--gold-light);
+        }
+
+        .footer-brand p {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            max-width: 280px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-links a {
+            display: block;
+            opacity: 0.6;
+            font-size: 0.88rem;
+            transition: var(--transition);
+            margin-bottom: 8px;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold-light);
+        }
+
+        .footer-links a i {
+            width: 18px;
+            margin-right: 4px;
+            font-size: 0.75rem;
+            color: var(--gold-light);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        .footer-bottom a {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-children>* {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stagger-children.visible>*:nth-child(1) { transition-delay: 0.05s; }
+        .stagger-children.visible>*:nth-child(2) { transition-delay: 0.1s; }
+        .stagger-children.visible>*:nth-child(3) { transition-delay: 0.15s; }
+        .stagger-children.visible>*:nth-child(4) { transition-delay: 0.2s; }
+        .stagger-children.visible>*:nth-child(5) { transition-delay: 0.25s; }
+        .stagger-children.visible>*:nth-child(6) { transition-delay: 0.3s; }
+
+        .stagger-children.visible>* {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #main-content {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        #main-content.visible {
+            opacity: 1;
+        }
+
+        /* ===== FORM SUBMIT LOADING ===== */
+        .btn-loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .btn-loading .btn-text {
+            visibility: hidden;
+        }
+
+        .btn-loading::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .why-volunteer-grid,
+            .opportunities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .impact-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .page-hero h1 {
+                font-size: 3rem;
+            }
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 18px 0 10px;
+                gap: 12px;
+                border-top: 1px solid var(--gray-light);
+                margin-top: 12px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .page-hero h1 {
+                font-size: 2.4rem;
+            }
+            .page-hero {
+                min-height: 40vh;
+                padding: 140px 0 60px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .why-volunteer-grid,
+            .opportunities-grid {
+                grid-template-columns: 1fr;
+            }
+            .impact-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .footer-social {
+                justify-content: center;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .volunteer-form {
+                padding: 28px 20px;
+            }
+            .volunteer-form .form-row {
+                grid-template-columns: 1fr;
+            }
+            .volunteer-form .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+            .requirements-list {
+                padding: 28px 20px;
+            }
+            .whatsapp-float {
+                bottom: 80px;
+                right: 14px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.4rem;
+            }
+            #back-to-top {
+                bottom: 14px;
+                right: 14px;
+                width: 40px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+            .cookie-banner p {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.85rem;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .section-padding {
+                padding: 50px 0;
+            }
+            .logo {
+                font-size: 1rem;
+            }
+            .logo img {
+                height: 34px;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .impact-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .impact-stat .number {
+                font-size: 2.2rem;
+            }
+            .volunteer-form {
+                padding: 20px 16px;
+            }
+            .form-success {
+                padding: 30px 20px;
+            }
+            .form-success h3 {
+                font-size: 1.3rem;
+            }
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+            .faq-question {
+                font-size: 0.95rem;
+                padding: 16px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== SKIP TO CONTENT ===== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== SKELETON LOADER ===== -->
+    <div id="skeleton-loader" aria-hidden="true">
+        <div class="skeleton-logo">
+            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION" />
+        </div>
+        <div class="skeleton-name">PHINEHAS <span>GENERATION</span></div>
+    </div>
+
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div id="scroll-progress" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="main-content">
+
+        <!-- ===== HEADER ===== -->
+        <header id="header" role="banner">
+            <div class="container nav-container">
+                <a href="index.html" class="logo" aria-label="PHINEHAS GENERATION FOUNDATION Home">
+                    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION FOUNDATION Logo" width="44" height="44" />
+                    PHINEHAS <span class="logo-gold">GENERATION</span>
+                </a>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" data-i18n="navHome">Home</a>
+                    <a href="about.html" data-i18n="navAbout">About Us</a>
+                    <a href="programs.html" data-i18n="navPrograms">Our Programs</a>
+                    <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+                    <a href="blog.html" data-i18n="navBlog">Blog / News</a>
+                    <a href="volunteer.html" class="active" data-i18n="navVolunteer">Volunteer</a>
+                    <a href="contact.html" data-i18n="navContact">Contact Us</a>
+                    <a href="donate.html" class="nav-donate-btn" data-i18n="navDonate"><i class="fas fa-heart"></i> Donate Now</a>
+
+                    <div class="lang-wrapper">
+                        <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+                            <i class="fas fa-globe"></i> <span id="currentLangLabel">EN</span> <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i>
+                        </button>
+                        <ul class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Language options">
+                            <li role="option" data-lang="en" class="active-lang" aria-selected="true">🇬🇧 English</li>
+                            <li role="option" data-lang="fr" aria-selected="false">🇫🇷 Français</li>
+                            <li role="option" data-lang="de" aria-selected="false">🇩🇪 Deutsch</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero" style="background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg');" aria-label="Volunteer hero image">
+            <div class="container">
+                <h1 data-i18n="heroTitle">Become a <span class="highlight-gold">Volunteer</span></h1>
+                <p class="hero-sub" data-i18n="heroSub">Join us in empowering teenagers and restoring dignity to elderly people. Your time, skills, and compassion can change lives.</p>
+                <div class="breadcrumb">
+                    <a href="index.html" data-i18n="navHome">Home</a>
+                    <span>/</span>
+                    <span class="current" data-i18n="navVolunteer">Volunteer</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHY VOLUNTEER ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="whyEyebrow">Join the Movement</span>
+                <h2 class="section-title text-center" data-i18n="whyTitle">Why <span class="highlight">Volunteer</span> With Us</h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="whySub">Be part of something bigger than yourself</p>
+
+                <div class="why-volunteer-grid stagger-children">
+                    <div class="why-volunteer-card">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <h4 data-i18n="whyCard1Title">Make a Difference</h4>
+                        <p data-i18n="whyCard1Desc">Your time and skills can transform the lives of teenagers and elderly people who need guidance, care, and support.</p>
+                    </div>
+                    <div class="why-volunteer-card">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <h4 data-i18n="whyCard2Title">Build Community</h4>
+                        <p data-i18n="whyCard2Desc">Join a passionate team of volunteers who share your commitment to service and creating positive change.</p>
+                    </div>
+                    <div class="why-volunteer-card">
+                        <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                        <h4 data-i18n="whyCard3Title">Grow & Learn</h4>
+                        <p data-i18n="whyCard3Desc">Develop new skills, gain valuable experience, and deepen your understanding of social impact and humanitarian work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VOLUNTEER OPPORTUNITIES ===== -->
+        <section class="section-padding" style="background: var(--green-paler);">
+            <div class="container">
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="oppEyebrow">Find Your Role</span>
+                <h2 class="section-title text-center" data-i18n="oppTitle">Volunteer <span class="highlight">Opportunities</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="oppSub">Find the role that fits your passion and skills</p>
+
+                <div class="opportunities-grid stagger-children">
+                    <div class="opportunity-card">
+                        <span class="icon"><i class="fas fa-user-graduate"></i></span>
+                        <h4 data-i18n="opp1Title">Youth Mentor</h4>
+                        <p data-i18n="opp1Desc">Guide and inspire teenagers through mentorship, leadership training, and life skills development.</p>
+                        <span class="badge" data-i18n="opp1Badge">Flexible Hours</span>
+                    </div>
+                    <div class="opportunity-card">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <h4 data-i18n="opp2Title">Elderly Care Volunteer</h4>
+                        <p data-i18n="opp2Desc">Provide companionship, emotional support, and practical assistance to elderly people in our communities.</p>
+                        <span class="badge" data-i18n="opp2Badge">Weekends</span>
+                    </div>
+                    <div class="opportunity-card">
+                        <span class="icon"><i class="fas fa-stethoscope"></i></span>
+                        <h4 data-i18n="opp3Title">Medical Volunteer</h4>
+                        <p data-i18n="opp3Desc">Healthcare professionals needed for medical outreaches, eye care, and health screenings.</p>
+                        <span class="badge" data-i18n="opp3Badge">Qualified</span>
+                    </div>
+                    <div class="opportunity-card">
+                        <span class="icon"><i class="fas fa-calendar-check"></i></span>
+                        <h4 data-i18n="opp4Title">Event Volunteer</h4>
+                        <p data-i18n="opp4Desc">Help organize conferences, youth hangouts, leadership summits, and community outreach events.</p>
+                        <span class="badge" data-i18n="opp4Badge">Event-Based</span>
+                    </div>
+                    <div class="opportunity-card">
+                        <span class="icon"><i class="fas fa-camera"></i></span>
+                        <h4 data-i18n="opp5Title">Media & Communications</h4>
+                        <p data-i18n="opp5Desc">Support our social media, photography, videography, and content creation for the foundation.</p>
+                        <span class="badge" data-i18n="opp5Badge">Remote Possible</span>
+                    </div>
+                    <div class="opportunity-card">
+                        <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
+                        <h4 data-i18n="opp6Title">Fundraising Volunteer</h4>
+                        <p data-i18n="opp6Desc">Help raise funds and resources to sustain our programs and expand our impact across communities.</p>
+                        <span class="badge" data-i18n="opp6Badge">Flexible Hours</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== IMPACT STATS ===== -->
+        <section class="impact-stats" id="impactStats">
+            <div class="container">
+                <div class="impact-stats-grid stagger-children">
+                    <div class="impact-stat">
+                        <span class="icon"><i class="fas fa-hands-helping"></i></span>
+                        <span class="number" data-count="200">0</span>
+                        <span class="label" data-i18n="stat1Label">Active Volunteers</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="icon"><i class="fas fa-clock"></i></span>
+                        <span class="number" data-count="5000">0</span>
+                        <span class="label" data-i18n="stat2Label">Volunteer Hours Donated</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="icon"><i class="fas fa-user-graduate"></i></span>
+                        <span class="number" data-count="1500">0</span>
+                        <span class="label" data-i18n="stat3Label">Teenagers Mentored</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <span class="number" data-count="500">0</span>
+                        <span class="label" data-i18n="stat4Label">Elderly Reached</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== REQUIREMENTS ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="reqEyebrow">Get Started</span>
+                <h2 class="section-title text-center" data-i18n="reqTitle">Volunteer <span class="highlight">Requirements</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="reqSub">What you need to know before joining us</p>
+
+                <div class="requirements-grid">
+                    <div class="requirements-list fade-up">
+                        <h3><i class="fas fa-check-circle"></i> <span data-i18n="reqList1Title">General Requirements</span></h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req1_1">Must be at least 18 years old</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req1_2">Passion for serving young people and the elderly</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req1_3">Willingness to commit to regular volunteer hours</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req1_4">Ability to work well in a team environment</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req1_5">Respect for all individuals regardless of background</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req1_6">Good communication and interpersonal skills</span></li>
+                        </ul>
+                    </div>
+                    <div class="requirements-list fade-up">
+                        <h3><i class="fas fa-info-circle"></i> <span data-i18n="reqList2Title">What We Provide</span></h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req2_1">Comprehensive volunteer training</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req2_2">Ongoing support and supervision</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req2_3">Certificate of volunteer service</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req2_4">Opportunity to make a real difference</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req2_5">A welcoming and supportive community</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="req2_6">References for future opportunities</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== APPLICATION FORM ===== -->
+        <section class="form-section section-padding" id="applyForm">
+            <div class="container">
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="formEyebrow">Apply Now</span>
+                <h2 class="section-title text-center" data-i18n="formTitle">Apply to <span class="highlight">Volunteer</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="formSub">Complete the form below and we'll get back to you within 48 hours</p>
+
+                <div class="volunteer-form" id="volunteerForm">
+                    <form id="applicationForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName" data-i18n="formFullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                                <div class="error-message" data-i18n="formErrorRequired">Please enter your full name</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="formEmail">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <div class="error-message" data-i18n="formErrorEmail">Please enter a valid email address</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" data-i18n="formPhone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                <div class="error-message" data-i18n="formErrorPhone">Please enter your phone number</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" data-i18n="formDob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address" data-i18n="formAddress">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your full address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="occupation" data-i18n="formOccupation">Occupation / Profession</label>
+                            <input type="text" id="occupation" name="occupation" placeholder="What do you do?">
+                        </div>
+
+                        <div class="form-group">
+                            <label data-i18n="formInterests">Areas of Interest <span class="required">*</span></label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="interest" value="Youth Mentorship"> <span data-i18n="interest1">Youth Mentorship</span></label>
+                                <label><input type="checkbox" name="interest" value="Elderly Care"> <span data-i18n="interest2">Elderly Care</span></label>
+                                <label><input type="checkbox" name="interest" value="Medical Outreach"> <span data-i18n="interest3">Medical Outreach</span></label>
+                                <label><input type="checkbox" name="interest" value="Event Planning"> <span data-i18n="interest4">Event Planning</span></label>
+                                <label><input type="checkbox" name="interest" value="Media & Communications"> <span data-i18n="interest5">Media & Communications</span></label>
+                                <label><input type="checkbox" name="interest" value="Fundraising"> <span data-i18n="interest6">Fundraising</span></label>
+                                <label><input type="checkbox" name="interest" value="Administration"> <span data-i18n="interest7">Administration</span></label>
+                                <label><input type="checkbox" name="interest" value="Other"> <span data-i18n="interest8">Other</span></label>
+                            </div>
+                            <div class="error-message" data-i18n="formErrorInterest">Please select at least one area of interest</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills" data-i18n="formSkills">Skills & Qualifications</label>
+                            <textarea id="skills" name="skills" placeholder="List any relevant skills, experience, or qualifications" maxlength="500"></textarea>
+                            <label><span class="character-count"><span id="skillsCount">0</span>/500</span></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivation" data-i18n="formMotivation">Why do you want to volunteer? <span class="required">*</span></label>
+                            <textarea id="motivation" name="motivation" placeholder="Tell us why you're interested in volunteering with PHINEHAS GENERATION FOUNDATION" required maxlength="1000"></textarea>
+                            <label><span class="character-count"><span id="motivationCount">0</span>/1000</span></label>
+                            <div class="error-message" data-i18n="formErrorMotivation">Please tell us why you want to volunteer</div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="availability" data-i18n="formAvailability">Availability <span class="required">*</span></label>
+                                <select id="availability" name="availability" required>
+                                    <option value="" data-i18n="formAvailSelect">Select your availability</option>
+                                    <option value="Weekdays" data-i18n="formAvail1">Weekdays</option>
+                                    <option value="Weekends" data-i18n="formAvail2">Weekends</option>
+                                    <option value="Evenings" data-i18n="formAvail3">Evenings</option>
+                                    <option value="Flexible" data-i18n="formAvail4">Flexible</option>
+                                    <option value="Specific Days" data-i18n="formAvail5">Specific Days</option>
+                                </select>
+                                <div class="error-message" data-i18n="formErrorAvail">Please select your availability</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="commitment" data-i18n="formCommitment">Commitment Level</label>
+                                <select id="commitment" name="commitment">
+                                    <option value="" data-i18n="formCommitSelect">Select commitment level</option>
+                                    <option value="Weekly" data-i18n="formCommit1">Weekly</option>
+                                    <option value="Bi-weekly" data-i18n="formCommit2">Bi-weekly</option>
+                                    <option value="Monthly" data-i18n="formCommit3">Monthly</option>
+                                    <option value="Event-based" data-i18n="formCommit4">Event-based</option>
+                                    <option value="Flexible" data-i18n="formCommit5">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emergencyContact" data-i18n="formEmergency">Emergency Contact <span class="required">*</span></label>
+                            <input type="text" id="emergencyContact" name="emergencyContact" placeholder="Name and phone number of emergency contact" required>
+                            <div class="error-message" data-i18n="formErrorEmergency">Please provide an emergency contact</div>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-success" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i> <span class="btn-text" data-i18n="formSubmit">Submit Application</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="form-success" id="formSuccess">
+                        <span class="icon"><i class="fas fa-check-circle"></i></span>
+                        <h3 data-i18n="successTitle">Application Submitted!</h3>
+                        <p data-i18n="successText">Thank you for your interest in volunteering with PHINEHAS GENERATION FOUNDATION. We'll review your application and get back to you within 48 hours.</p>
+                        <br>
+                        <a href="volunteer.html" class="btn btn-primary" data-i18n="successBtn">Submit Another Application</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <span class="section-eyebrow text-center" style="display:block; text-align:center;" data-i18n="faqEyebrow">Got Questions?</span>
+                <h2 class="section-title text-center" data-i18n="faqTitle">Frequently Asked <span class="highlight">Questions</span></h2>
+                <p class="section-subtitle text-center mx-auto" style="margin-bottom: 50px;" data-i18n="faqSub">Everything you need to know about volunteering</p>
+
+                <div class="faq-grid">
+                    <div class="faq-item fade-up">
+                        <button class="faq-question">
+                            <span data-i18n="faqQ1">How do I apply to become a volunteer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faqA1">Simply fill out the volunteer application form above. Our team will review your application and contact you within 48 hours to discuss next steps, including orientation and training.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-up">
+                        <button class="faq-question">
+                            <span data-i18n="faqQ2">What training will I receive?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faqA2">All volunteers receive comprehensive training covering our mission, values, policies, safeguarding procedures, and role-specific guidance. We ensure you're fully prepared before beginning any volunteer activities.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-up">
+                        <button class="faq-question">
+                            <span data-i18n="faqQ3">What is the time commitment?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faqA3">We offer flexible volunteer opportunities to accommodate different schedules. Whether you can commit a few hours a week, weekends, or event-based volunteering, we have options that suit your availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-up">
+                        <button class="faq-question">
+                            <span data-i18n="faqQ4">Can I volunteer as a group or with friends?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faqA4">Absolutely! We welcome group volunteering for corporate teams, student groups, church groups, and more. Please contact our volunteer coordinator to discuss group opportunities and availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-up">
+                        <button class="faq-question">
+                            <span data-i18n="faqQ5">Is there a minimum age requirement?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faqA5">Volunteers must be at least 18 years old. For volunteers under 18, we offer opportunities through our youth mentorship program where you can participate under supervision.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-up">
+                        <button class="faq-question">
+                            <span data-i18n="faqQ6">Can I volunteer remotely?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faqA6">Yes! We have remote volunteering opportunities in areas such as social media management, content creation, graphic design, and administrative support. Please indicate your interest in remote work on the application form.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 data-i18n="ctaTitle">Ready to Make a Difference?</h2>
+                <p data-i18n="ctaText">Join us in empowering teenagers and restoring dignity to elderly people. Your compassion can change lives.</p>
+                <div class="cta-buttons">
+                    <a href="#applyForm" class="btn btn-primary" data-i18n="ctaBtn1"><i class="fas fa-hands-helping"></i> Apply Now</a>
+                    <a href="donate.html" class="btn btn-outline-light" data-i18n="ctaBtn2"><i class="fas fa-heart"></i> Support Our Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo" style="color:var(--white);">
+                            <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" style="height:40px;" width="40" height="40" loading="lazy" />
+                            PHINEHAS <span class="logo-gold">GENERATION</span>
+                        </a>
+                        <p data-i18n="footerTag">Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerQuick">Quick Links</h4>
+                        <a href="index.html" data-i18n="footerHome">Home</a>
+                        <a href="about.html" data-i18n="footerAbout">About Us</a>
+                        <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
+                        <a href="gallery.html" data-i18n="footerGallery">Gallery</a>
+                        <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
+                        <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
+                        <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
+                        <a href="donate.html" data-i18n="footerDonate">Donate</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerPrograms">Programs</h4>
+                        <a href="programs.html" data-i18n="footerProg1">Youth Development</a>
+                        <a href="programs.html" data-i18n="footerProg2">Elderly Care</a>
+                        <a href="programs.html" data-i18n="footerProg3">Medical Outreach</a>
+                        <a href="programs.html" data-i18n="footerProg4">Community Development</a>
+                        <a href="programs.html" data-i18n="footerProg5">Leadership Training</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-i18n="footerContact">Contact</h4>
+                        <a href="tel:+2348161370219"><i class="fas fa-phone"></i> +234 816 137 0219</a>
+                        <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerUK">UK Office, London</span></a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerNigeria">Nigeria Office, Lagos</span></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="currentYear">2026</span> <strong>PHINEHAS GENERATION FOUNDATION</strong> — <span data-i18n="footerCopy">Registered Charity. All rights reserved.</span> | <a href="#" data-i18n="footerPrivacy">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+        <p data-i18n="cookieText">🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.</p>
+        <div style="display:flex; gap:10px;">
+            <button class="btn-sm" style="background:var(--gold); color:white; border:none; padding:8px 20px; border-radius:9999px; font-weight:600; cursor:pointer;" id="acceptCookies" data-i18n="cookieAccept">Accept</button>
+            <button class="btn-sm" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; border-radius:9999px; padding:8px 20px; cursor:pointer;" id="declineCookies" data-i18n="cookieDecline">Decline</button>
+        </div>
+    </div>
+
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Volunteer | PHINEHAS GENERATION FOUNDATION",
+        "description": "Join us in empowering teenagers and restoring dignity to elderly people through mentorship, healthcare, and community outreach.",
+        "url": "https://phinehasgeneration.org/volunteer.html",
+        "isPartOf": {
+            "@type": "Organization",
+            "name": "PHINEHAS GENERATION FOUNDATION",
+            "foundingDate": "2016",
+            "areaServed": ["Nigeria", "United Kingdom"],
+            "email": "info@phinehasgeneration.org",
+            "telephone": "+2348161370219"
+        }
+    }
+    </script>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== DYNAMIC COPYRIGHT YEAR =====
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // ===== TRANSLATIONS =====
+            const translations = {
+                'en': {
+                    // Nav
+                    navHome: 'Home',
+                    navAbout: 'About Us',
+                    navPrograms: 'Our Programs',
+                    navGallery: 'Gallery',
+                    navBlog: 'Blog / News',
+                    navVolunteer: 'Volunteer',
+                    navContact: 'Contact Us',
+                    navDonate: 'Donate Now',
+                    // Hero
+                    heroTitle: 'Become a Volunteer',
+                    heroSub: 'Join us in empowering teenagers and restoring dignity to elderly people. Your time, skills, and compassion can change lives.',
+                    // Why Volunteer
+                    whyEyebrow: 'Join the Movement',
+                    whyTitle: 'Why <span class="highlight">Volunteer</span> With Us',
+                    whySub: 'Be part of something bigger than yourself',
+                    whyCard1Title: 'Make a Difference',
+                    whyCard1Desc: 'Your time and skills can transform the lives of teenagers and elderly people who need guidance, care, and support.',
+                    whyCard2Title: 'Build Community',
+                    whyCard2Desc: 'Join a passionate team of volunteers who share your commitment to service and creating positive change.',
+                    whyCard3Title: 'Grow & Learn',
+                    whyCard3Desc: 'Develop new skills, gain valuable experience, and deepen your understanding of social impact and humanitarian work.',
+                    // Opportunities
+                    oppEyebrow: 'Find Your Role',
+                    oppTitle: 'Volunteer <span class="highlight">Opportunities</span>',
+                    oppSub: 'Find the role that fits your passion and skills',
+                    opp1Title: 'Youth Mentor',
+                    opp1Desc: 'Guide and inspire teenagers through mentorship, leadership training, and life skills development.',
+                    opp1Badge: 'Flexible Hours',
+                    opp2Title: 'Elderly Care Volunteer',
+                    opp2Desc: 'Provide companionship, emotional support, and practical assistance to elderly people in our communities.',
+                    opp2Badge: 'Weekends',
+                    opp3Title: 'Medical Volunteer',
+                    opp3Desc: 'Healthcare professionals needed for medical outreaches, eye care, and health screenings.',
+                    opp3Badge: 'Qualified',
+                    opp4Title: 'Event Volunteer',
+                    opp4Desc: 'Help organize conferences, youth hangouts, leadership summits, and community outreach events.',
+                    opp4Badge: 'Event-Based',
+                    opp5Title: 'Media & Communications',
+                    opp5Desc: 'Support our social media, photography, videography, and content creation for the foundation.',
+                    opp5Badge: 'Remote Possible',
+                    opp6Title: 'Fundraising Volunteer',
+                    opp6Desc: 'Help raise funds and resources to sustain our programs and expand our impact across communities.',
+                    opp6Badge: 'Flexible Hours',
+                    // Stats
+                    stat1Label: 'Active Volunteers',
+                    stat2Label: 'Volunteer Hours Donated',
+                    stat3Label: 'Teenagers Mentored',
+                    stat4Label: 'Elderly Reached',
+                    // Requirements
+                    reqEyebrow: 'Get Started',
+                    reqTitle: 'Volunteer <span class="highlight">Requirements</span>',
+                    reqSub: 'What you need to know before joining us',
+                    reqList1Title: 'General Requirements',
+                    req1_1: 'Must be at least 18 years old',
+                    req1_2: 'Passion for serving young people and the elderly',
+                    req1_3: 'Willingness to commit to regular volunteer hours',
+                    req1_4: 'Ability to work well in a team environment',
+                    req1_5: 'Respect for all individuals regardless of background',
+                    req1_6: 'Good communication and interpersonal skills',
+                    reqList2Title: 'What We Provide',
+                    req2_1: 'Comprehensive volunteer training',
+                    req2_2: 'Ongoing support and supervision',
+                    req2_3: 'Certificate of volunteer service',
+                    req2_4: 'Opportunity to make a real difference',
+                    req2_5: 'A welcoming and supportive community',
+                    req2_6: 'References for future opportunities',
+                    // Form
+                    formEyebrow: 'Apply Now',
+                    formTitle: 'Apply to <span class="highlight">Volunteer</span>',
+                    formSub: 'Complete the form below and we\'ll get back to you within 48 hours',
+                    formFullName: 'Full Name',
+                    formEmail: 'Email Address',
+                    formPhone: 'Phone Number',
+                    formDob: 'Date of Birth',
+                    formAddress: 'Address',
+                    formOccupation: 'Occupation / Profession',
+                    formInterests: 'Areas of Interest',
+                    interest1: 'Youth Mentorship',
+                    interest2: 'Elderly Care',
+                    interest3: 'Medical Outreach',
+                    interest4: 'Event Planning',
+                    interest5: 'Media & Communications',
+                    interest6: 'Fundraising',
+                    interest7: 'Administration',
+                    interest8: 'Other',
+                    formSkills: 'Skills & Qualifications',
+                    formMotivation: 'Why do you want to volunteer?',
+                    formAvailability: 'Availability',
+                    formAvailSelect: 'Select your availability',
+                    formAvail1: 'Weekdays',
+                    formAvail2: 'Weekends',
+                    formAvail3: 'Evenings',
+                    formAvail4: 'Flexible',
+                    formAvail5: 'Specific Days',
+                    formCommitment: 'Commitment Level',
+                    formCommitSelect: 'Select commitment level',
+                    formCommit1: 'Weekly',
+                    formCommit2: 'Bi-weekly',
+                    formCommit3: 'Monthly',
+                    formCommit4: 'Event-based',
+                    formCommit5: 'Flexible',
+                    formEmergency: 'Emergency Contact',
+                    formSubmit: 'Submit Application',
+                    formErrorRequired: 'Please fill in this field',
+                    formErrorEmail: 'Please enter a valid email address',
+                    formErrorPhone: 'Please enter your phone number',
+                    formErrorInterest: 'Please select at least one area of interest',
+                    formErrorMotivation: 'Please tell us why you want to volunteer',
+                    formErrorAvail: 'Please select your availability',
+                    formErrorEmergency: 'Please provide an emergency contact',
+                    // Success
+                    successTitle: 'Application Submitted!',
+                    successText: 'Thank you for your interest in volunteering with PHINEHAS GENERATION FOUNDATION. We\'ll review your application and get back to you within 48 hours.',
+                    successBtn: 'Submit Another Application',
+                    // FAQ
+                    faqEyebrow: 'Got Questions?',
+                    faqTitle: 'Frequently Asked <span class="highlight">Questions</span>',
+                    faqSub: 'Everything you need to know about volunteering',
+                    faqQ1: 'How do I apply to become a volunteer?',
+                    faqA1: 'Simply fill out the volunteer application form above. Our team will review your application and contact you within 48 hours to discuss next steps, including orientation and training.',
+                    faqQ2: 'What training will I receive?',
+                    faqA2: 'All volunteers receive comprehensive training covering our mission, values, policies, safeguarding procedures, and role-specific guidance. We ensure you\'re fully prepared before beginning any volunteer activities.',
+                    faqQ3: 'What is the time commitment?',
+                    faqA3: 'We offer flexible volunteer opportunities to accommodate different schedules. Whether you can commit a few hours a week, weekends, or event-based volunteering, we have options that suit your availability.',
+                    faqQ4: 'Can I volunteer as a group or with friends?',
+                    faqA4: 'Absolutely! We welcome group volunteering for corporate teams, student groups, church groups, and more. Please contact our volunteer coordinator to discuss group opportunities and availability.',
+                    faqQ5: 'Is there a minimum age requirement?',
+                    faqA5: 'Volunteers must be at least 18 years old. For volunteers under 18, we offer opportunities through our youth mentorship program where you can participate under supervision.',
+                    faqQ6: 'Can I volunteer remotely?',
+                    faqA6: 'Yes! We have remote volunteering opportunities in areas such as social media management, content creation, graphic design, and administrative support. Please indicate your interest in remote work on the application form.',
+                    // CTA
+                    ctaTitle: 'Ready to Make a Difference?',
+                    ctaText: 'Join us in empowering teenagers and restoring dignity to elderly people. Your compassion can change lives.',
+                    ctaBtn1: '<i class="fas fa-hands-helping"></i> Apply Now',
+                    ctaBtn2: '<i class="fas fa-heart"></i> Support Our Work',
+                    // Footer
+                    footerTag: 'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
+                    footerQuick: 'Quick Links',
+                    footerHome: 'Home',
+                    footerAbout: 'About Us',
+                    footerProgramsLink: 'Our Programs',
+                    footerGallery: 'Gallery',
+                    footerBlog: 'Blog / News',
+                    footerVolunteer: 'Volunteer',
+                    footerContactLink: 'Contact Us',
+                    footerDonate: 'Donate',
+                    footerPrograms: 'Programs',
+                    footerProg1: 'Youth Development',
+                    footerProg2: 'Elderly Care',
+                    footerProg3: 'Medical Outreach',
+                    footerProg4: 'Community Development',
+                    footerProg5: 'Leadership Training',
+                    footerContact: 'Contact',
+                    footerUK: 'UK Office, London',
+                    footerNigeria: 'Nigeria Office, Lagos',
+                    footerCopy: 'Registered Charity. All rights reserved.',
+                    footerPrivacy: 'Privacy Policy',
+                    // Cookie
+                    cookieText: '🍪 We use cookies to improve your experience. By using our site, you accept our <a href="#">Cookie Policy</a>.',
+                    cookieAccept: 'Accept',
+                    cookieDecline: 'Decline'
+                },
+                'fr': {
+                    navHome: 'Accueil',
+                    navAbout: 'À propos',
+                    navPrograms: 'Nos programmes',
+                    navGallery: 'Galerie',
+                    navBlog: 'Blog / Actualités',
+                    navVolunteer: 'Bénévolat',
+                    navContact: 'Contact',
+                    navDonate: 'Faire un don',
+                    heroTitle: 'Devenez Bénévole',
+                    heroSub: 'Rejoignez-nous pour autonomiser les adolescents et redonner leur dignité aux personnes âgées. Votre temps, vos compétences et votre compassion peuvent changer des vies.',
+                    whyEyebrow: 'Rejoignez le mouvement',
+                    whyTitle: 'Pourquoi <span class="highlight">être bénévole</span> avec nous',
+                    whySub: 'Faites partie de quelque chose de plus grand que vous-même',
+                    whyCard1Title: 'Faire la différence',
+                    whyCard1Desc: 'Votre temps et vos compétences peuvent transformer la vie des adolescents et des personnes âgées qui ont besoin de conseils, de soins et de soutien.',
+                    whyCard2Title: 'Construire une communauté',
+                    whyCard2Desc: 'Rejoignez une équipe passionnée de bénévoles qui partagent votre engagement pour le service et le changement positif.',
+                    whyCard3Title: 'Grandir et apprendre',
+                    whyCard3Desc: 'Développez de nouvelles compétences, acquérez une expérience précieuse et approfondissez votre compréhension de l\'impact social et du travail humanitaire.',
+                    oppEyebrow: 'Trouvez votre rôle',
+                    oppTitle: 'Opportunités de <span class="highlight">bénévolat</span>',
+                    oppSub: 'Trouvez le rôle qui correspond à votre passion et à vos compétences',
+                    opp1Title: 'Mentor pour jeunes',
+                    opp1Desc: 'Guidez et inspirez les adolescents par le mentorat, la formation au leadership et le développement des compétences de vie.',
+                    opp1Badge: 'Horaires flexibles',
+                    opp2Title: 'Bénévole pour les personnes âgées',
+                    opp2Desc: 'Offrez de la compagnie, un soutien émotionnel et une aide pratique aux personnes âgées de nos communautés.',
+                    opp2Badge: 'Week-ends',
+                    opp3Title: 'Bénévole médical',
+                    opp3Desc: 'Professionnels de santé nécessaires pour les actions médicales, les soins oculaires et les dépistages de santé.',
+                    opp3Badge: 'Qualifié',
+                    opp4Title: 'Bénévole événementiel',
+                    opp4Desc: 'Aidez à organiser des conférences, des rassemblements de jeunes, des sommets de leadership et des actions communautaires.',
+                    opp4Badge: 'Basé sur des événements',
+                    opp5Title: 'Médias et communications',
+                    opp5Desc: 'Soutenez nos réseaux sociaux, notre photographie, notre vidéo et la création de contenu pour la fondation.',
+                    opp5Badge: 'Possible à distance',
+                    opp6Title: 'Bénévole pour la collecte de fonds',
+                    opp6Desc: 'Aidez à collecter des fonds et des ressources pour soutenir nos programmes et étendre notre impact dans les communautés.',
+                    opp6Badge: 'Horaires flexibles',
+                    stat1Label: 'Bénévoles actifs',
+                    stat2Label: 'Heures de bénévolat données',
+                    stat3Label: 'Adolescents encadrés',
+                    stat4Label: 'Personnes âgées touchées',
+                    reqEyebrow: 'Commencez',
+                    reqTitle: 'Conditions <span class="highlight">de bénévolat</span>',
+                    reqSub: 'Ce que vous devez savoir avant de nous rejoindre',
+                    reqList1Title: 'Conditions générales',
+                    req1_1: 'Avoir au moins 18 ans',
+                    req1_2: 'Passion pour le service aux jeunes et aux personnes âgées',
+                    req1_3: 'Volonté de s\'engager sur des heures régulières',
+                    req1_4: 'Capacité à travailler en équipe',
+                    req1_5: 'Respect de tous les individus sans distinction d\'origine',
+                    req1_6: 'Bonnes compétences en communication et relationnelles',
+                    reqList2Title: 'Ce que nous offrons',
+                    req2_1: 'Formation complète des bénévoles',
+                    req2_2: 'Soutien et supervision continus',
+                    req2_3: 'Certificat de service bénévole',
+                    req2_4: 'Opportunité de faire une réelle différence',
+                    req2_5: 'Une communauté accueillante et solidaire',
+                    req2_6: 'Références pour de futures opportunités',
+                    formEyebrow: 'Postulez maintenant',
+                    formTitle: 'Postulez pour <span class="highlight">être bénévole</span>',
+                    formSub: 'Remplissez le formulaire ci-dessous et nous vous répondrons dans les 48 heures',
+                    formFullName: 'Nom complet',
+                    formEmail: 'Adresse e-mail',
+                    formPhone: 'Numéro de téléphone',
+                    formDob: 'Date de naissance',
+                    formAddress: 'Adresse',
+                    formOccupation: 'Profession',
+                    formInterests: 'Domaines d\'intérêt',
+                    interest1: 'Mentorat pour jeunes',
+                    interest2: 'Soins aux personnes âgées',
+                    interest3: 'Actions médicales',
+                    interest4: 'Planification d\'événements',
+                    interest5: 'Médias et communications',
+                    interest6: 'Collecte de fonds',
+                    interest7: 'Administration',
+                    interest8: 'Autre',
+                    formSkills: 'Compétences et qualifications',
+                    formMotivation: 'Pourquoi voulez-vous être bénévole ?',
+                    formAvailability: 'Disponibilité',
+                    formAvailSelect: 'Sélectionnez votre disponibilité',
+                    formAvail1: 'Jours de semaine',
+                    formAvail2: 'Week-ends',
+                    formAvail3: 'Soirées',
+                    formAvail4: 'Flexible',
+                    formAvail5: 'Jours spécifiques',
+                    formCommitment: 'Niveau d\'engagement',
+                    formCommitSelect: 'Sélectionnez le niveau d\'engagement',
+                    formCommit1: 'Hebdomadaire',
+                    formCommit2: 'Bi-hebdomadaire',
+                    formCommit3: 'Mensuel',
+                    formCommit4: 'Basé sur des événements',
+                    formCommit5: 'Flexible',
+                    formEmergency: 'Contact d\'urgence',
+                    formSubmit: 'Soumettre la candidature',
+                    formErrorRequired: 'Veuillez remplir ce champ',
+                    formErrorEmail: 'Veuillez entrer une adresse e-mail valide',
+                    formErrorPhone: 'Veuillez entrer votre numéro de téléphone',
+                    formErrorInterest: 'Veuillez sélectionner au moins un domaine d\'intérêt',
+                    formErrorMotivation: 'Veuillez nous dire pourquoi vous voulez être bénévole',
+                    formErrorAvail: 'Veuillez sélectionner votre disponibilité',
+                    formErrorEmergency: 'Veuillez fournir un contact d\'urgence',
+                    successTitle: 'Candidature soumise !',
+                    successText: 'Merci de votre intérêt pour le bénévolat avec PHINEHAS GENERATION FOUNDATION. Nous examinerons votre candidature et vous répondrons dans les 48 heures.',
+                    successBtn: 'Soumettre une autre candidature',
+                    faqEyebrow: 'Des questions ?',
+                    faqTitle: 'Questions fréquemment <span class="highlight">posées</span>',
+                    faqSub: 'Tout ce que vous devez savoir sur le bénévolat',
+                    faqQ1: 'Comment postuler pour devenir bénévole ?',
+                    faqA1: 'Remplissez simplement le formulaire de candidature ci-dessus. Notre équipe examinera votre candidature et vous contactera dans les 48 heures pour discuter des prochaines étapes.',
+                    faqQ2: 'Quelle formation vais-je recevoir ?',
+                    faqA2: 'Tous les bénévoles reçoivent une formation complète couvrant notre mission, nos valeurs, nos politiques et des conseils spécifiques à leur rôle.',
+                    faqQ3: 'Quel est l\'engagement en temps ?',
+                    faqA3: 'Nous offrons des opportunités de bénévolat flexibles pour s\'adapter à différents emplois du temps.',
+                    faqQ4: 'Puis-je faire du bénévolat en groupe ou avec des amis ?',
+                    faqA4: 'Absolument ! Nous accueillons favorablement le bénévolat en groupe pour les équipes d\'entreprise, les groupes d\'étudiants, les groupes religieux, etc.',
+                    faqQ5: 'Y a-t-il un âge minimum requis ?',
+                    faqA5: 'Les bénévoles doivent avoir au moins 18 ans. Pour les moins de 18 ans, nous offrons des opportunités par le biais de notre programme de mentorat pour les jeunes.',
+                    faqQ6: 'Puis-je faire du bénévolat à distance ?',
+                    faqA6: 'Oui ! Nous avons des opportunités de bénévolat à distance dans des domaines tels que la gestion des réseaux sociaux, la création de contenu, le design graphique et le soutien administratif.',
+                    ctaTitle: 'Prêt à faire la différence ?',
+                    ctaText: 'Rejoignez-nous pour autonomiser les adolescents et redonner leur dignité aux personnes âgées. Votre compassion peut changer des vies.',
+                    ctaBtn1: '<i class="fas fa-hands-helping"></i> Postuler maintenant',
+                    ctaBtn2: '<i class="fas fa-heart"></i> Soutenir notre travail',
+                    footerTag: 'Autonomiser les adolescents. Honorer les personnes âgées. Bâtir des communautés meilleures.',
+                    footerQuick: 'Liens rapides',
+                    footerHome: 'Accueil',
+                    footerAbout: 'À propos',
+                    footerProgramsLink: 'Nos programmes',
+                    footerGallery: 'Galerie',
+                    footerBlog: 'Blog / Actualités',
+                    footerVolunteer: 'Bénévolat',
+                    footerContactLink: 'Contact',
+                    footerDonate: 'Faire un don',
+                    footerPrograms: 'Programmes',
+                    footerProg1: 'Développement des jeunes',
+                    footerProg2: 'Soins aux personnes âgées',
+                    footerProg3: 'Actions médicales',
+                    footerProg4: 'Développement communautaire',
+                    footerProg5: 'Formation au leadership',
+                    footerContact: 'Contact',
+                    footerUK: 'Bureau UK, Londres',
+                    footerNigeria: 'Bureau Nigeria, Lagos',
+                    footerCopy: 'Organisme de bienfaisance enregistré. Tous droits réservés.',
+                    footerPrivacy: 'Politique de confidentialité',
+                    cookieText: '🍪 Nous utilisons des cookies pour améliorer votre expérience. En utilisant notre site, vous acceptez notre <a href="#">politique de cookies</a>.',
+                    cookieAccept: 'Accepter',
+                    cookieDecline: 'Refuser'
+                },
+                'de': {
+                    navHome: 'Startseite',
+                    navAbout: 'Über uns',
+                    navPrograms: 'Programme',
+                    navGallery: 'Galerie',
+                    navBlog: 'Blog / News',
+                    navVolunteer: 'Mithelfen',
+                    navContact: 'Kontakt',
+                    navDonate: 'Jetzt spenden',
+                    heroTitle: 'Werden Sie Freiwilliger',
+                    heroSub: 'Schließen Sie sich uns an, um Jugendliche zu stärken und älteren Menschen Würde zurückzugeben. Ihre Zeit, Ihre Fähigkeiten und Ihr Mitgefühl können Leben verändern.',
+                    whyEyebrow: 'Werden Sie Teil der Bewegung',
+                    whyTitle: 'Warum <span class="highlight">ehrenamtlich</span> mit uns arbeiten',
+                    whySub: 'Seien Sie Teil von etwas Größerem als sich selbst',
+                    whyCard1Title: 'Einen Unterschied machen',
+                    whyCard1Desc: 'Ihre Zeit und Fähigkeiten können das Leben von Jugendlichen und älteren Menschen verändern, die Führung, Fürsorge und Unterstützung benötigen.',
+                    whyCard2Title: 'Gemeinschaft aufbauen',
+                    whyCard2Desc: 'Schließen Sie sich einem leidenschaftlichen Team von Freiwilligen an, die Ihr Engagement für Dienst und positive Veränderungen teilen.',
+                    whyCard3Title: 'Wachsen und lernen',
+                    whyCard3Desc: 'Entwickeln Sie neue Fähigkeiten, sammeln Sie wertvolle Erfahrungen und vertiefen Sie Ihr Verständnis für soziale Auswirkungen und humanitäre Arbeit.',
+                    oppEyebrow: 'Finden Sie Ihre Rolle',
+                    oppTitle: 'Ehrenamtliche <span class="highlight">Möglichkeiten</span>',
+                    oppSub: 'Finden Sie die Rolle, die zu Ihrer Leidenschaft und Ihren Fähigkeiten passt',
+                    opp1Title: 'Jugendmentor',
+                    opp1Desc: 'Leiten und inspirieren Sie Jugendliche durch Mentoring, Führungstraining und Lebenskompetenzentwicklung.',
+                    opp1Badge: 'Flexible Zeiten',
+                    opp2Title: 'Altenpflege-Freiwilliger',
+                    opp2Desc: 'Bieten Sie Gesellschaft, emotionale Unterstützung und praktische Hilfe für ältere Menschen in unseren Gemeinschaften.',
+                    opp2Badge: 'Wochenenden',
+                    opp3Title: 'Medizinischer Freiwilliger',
+                    opp3Desc: 'Gesundheitsfachkräfte für medizinische Einsätze, Augenpflege und Gesundheitsvorsorge gesucht.',
+                    opp3Badge: 'Qualifiziert',
+                    opp4Title: 'Event-Freiwilliger',
+                    opp4Desc: 'Helfen Sie bei der Organisation von Konferenzen, Jugendtreffen, Führungsgipfeln und Gemeinschaftsaktionen.',
+                    opp4Badge: 'Event-basiert',
+                    opp5Title: 'Medien & Kommunikation',
+                    opp5Desc: 'Unterstützen Sie unsere Social-Media-, Foto-, Video- und Content-Erstellung für die Stiftung.',
+                    opp5Badge: 'Remote möglich',
+                    opp6Title: 'Fundraising-Freiwilliger',
+                    opp6Desc: 'Helfen Sie, Spenden und Ressourcen zu sammeln, um unsere Programme zu erhalten und unsere Wirkung zu erweitern.',
+                    opp6Badge: 'Flexible Zeiten',
+                    stat1Label: 'Aktive Freiwillige',
+                    stat2Label: 'Gespendete Freiwilligenstunden',
+                    stat3Label: 'Jugendliche betreut',
+                    stat4Label: 'Ältere erreicht',
+                    reqEyebrow: 'Loslegen',
+                    reqTitle: 'Ehrenamtliche <span class="highlight">Anforderungen</span>',
+                    reqSub: 'Was Sie wissen sollten, bevor Sie zu uns kommen',
+                    reqList1Title: 'Allgemeine Anforderungen',
+                    req1_1: 'Mindestens 18 Jahre alt',
+                    req1_2: 'Leidenschaft für die Arbeit mit Jugendlichen und älteren Menschen',
+                    req1_3: 'Bereitschaft zu regelmäßigen Einsatzzeiten',
+                    req1_4: 'Fähigkeit zur Teamarbeit',
+                    req1_5: 'Respekt für alle Menschen unabhängig von ihrem Hintergrund',
+                    req1_6: 'Gute Kommunikations- und Sozialkompetenzen',
+                    reqList2Title: 'Was wir bieten',
+                    req2_1: 'Umfassende Freiwilligenschulung',
+                    req2_2: 'Laufende Unterstützung und Betreuung',
+                    req2_3: 'Freiwilligen-Zertifikat',
+                    req2_4: 'Möglichkeit, einen echten Unterschied zu machen',
+                    req2_5: 'Eine einladende und unterstützende Gemeinschaft',
+                    req2_6: 'Referenzen für zukünftige Möglichkeiten',
+                    formEyebrow: 'Jetzt bewerben',
+                    formTitle: 'Bewerben Sie sich als <span class="highlight">Freiwilliger</span>',
+                    formSub: 'Füllen Sie das untenstehende Formular aus und wir melden uns innerhalb von 48 Stunden bei Ihnen',
+                    formFullName: 'Vollständiger Name',
+                    formEmail: 'E-Mail-Adresse',
+                    formPhone: 'Telefonnummer',
+                    formDob: 'Geburtsdatum',
+                    formAddress: 'Adresse',
+                    formOccupation: 'Beruf',
+                    formInterests: 'Interessensgebiete',
+                    interest1: 'Jugendmentoring',
+                    interest2: 'Altenpflege',
+                    interest3: 'Medizinische Einsätze',
+                    interest4: 'Eventplanung',
+                    interest5: 'Medien & Kommunikation',
+                    interest6: 'Fundraising',
+                    interest7: 'Verwaltung',
+                    interest8: 'Sonstiges',
+                    formSkills: 'Fähigkeiten und Qualifikationen',
+                    formMotivation: 'Warum möchten Sie sich ehrenamtlich engagieren?',
+                    formAvailability: 'Verfügbarkeit',
+                    formAvailSelect: 'Wählen Sie Ihre Verfügbarkeit',
+                    formAvail1: 'Wochentage',
+                    formAvail2: 'Wochenenden',
+                    formAvail3: 'Abende',
+                    formAvail4: 'Flexibel',
+                    formAvail5: 'Bestimmte Tage',
+                    formCommitment: 'Engagement-Level',
+                    formCommitSelect: 'Wählen Sie das Engagement-Level',
+                    formCommit1: 'Wöchentlich',
+                    formCommit2: 'Zwei-wöchentlich',
+                    formCommit3: 'Monatlich',
+                    formCommit4: 'Event-basiert',
+                    formCommit5: 'Flexibel',
+                    formEmergency: 'Notfallkontakt',
+                    formSubmit: 'Bewerbung absenden',
+                    formErrorRequired: 'Bitte füllen Sie dieses Feld aus',
+                    formErrorEmail: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+                    formErrorPhone: 'Bitte geben Sie Ihre Telefonnummer ein',
+                    formErrorInterest: 'Bitte wählen Sie mindestens ein Interessensgebiet aus',
+                    formErrorMotivation: 'Bitte teilen Sie uns mit, warum Sie sich ehrenamtlich engagieren möchten',
+                    formErrorAvail: 'Bitte wählen Sie Ihre Verfügbarkeit',
+                    formErrorEmergency: 'Bitte geben Sie einen Notfallkontakt an',
+                    successTitle: 'Bewerbung abgeschickt!',
+                    successText: 'Vielen Dank für Ihr Interesse an einer ehrenamtlichen Mitarbeit bei PHINEHAS GENERATION FOUNDATION. Wir werden Ihre Bewerbung prüfen und uns innerhalb von 48 Stunden bei Ihnen melden.',
+                    successBtn: 'Eine weitere Bewerbung einreichen',
+                    faqEyebrow: 'Fragen?',
+                    faqTitle: 'Häufig gestellte <span class="highlight">Fragen</span>',
+                    faqSub: 'Alles, was Sie über das Ehrenamt wissen müssen',
+                    faqQ1: 'Wie bewerbe ich mich als Freiwilliger?',
+                    faqA1: 'Füllen Sie einfach das Bewerbungsformular oben aus. Unser Team wird Ihre Bewerbung prüfen und sich innerhalb von 48 Stunden mit Ihnen in Verbindung setzen.',
+                    faqQ2: 'Welche Schulung erhalte ich?',
+                    faqA2: 'Alle Freiwilligen erhalten eine umfassende Schulung zu unserer Mission, unseren Werten, unseren Richtlinien und rollenspezifischen Anleitungen.',
+                    faqQ3: 'Wie hoch ist der Zeitaufwand?',
+                    faqA3: 'Wir bieten flexible ehrenamtliche Möglichkeiten, die sich an unterschiedliche Zeitpläne anpassen.',
+                    faqQ4: 'Kann ich als Gruppe oder mit Freunden ehrenamtlich arbeiten?',
+                    faqA4: 'Absolut! Wir begrüßen Gruppen von Unternehmen, Studentengruppen, Kirchengruppen und mehr.',
+                    faqQ5: 'Gibt es eine Mindestaltersgrenze?',
+                    faqA5: 'Freiwillige müssen mindestens 18 Jahre alt sein. Für unter 18-Jährige bieten wir Möglichkeiten über unser Jugendmentoring-Programm an.',
+                    faqQ6: 'Kann ich remote ehrenamtlich arbeiten?',
+                    faqA6: 'Ja! Wir haben remote Ehrenamtsmöglichkeiten in Bereichen wie Social Media Management, Content-Erstellung, Grafikdesign und administrativer Unterstützung.',
+                    ctaTitle: 'Bereit, etwas zu bewegen?',
+                    ctaText: 'Schließen Sie sich uns an, um Jugendliche zu stärken und älteren Menschen Würde zurückzugeben. Ihr Mitgefühl kann Leben verändern.',
+                    ctaBtn1: '<i class="fas fa-hands-helping"></i> Jetzt bewerben',
+                    ctaBtn2: '<i class="fas fa-heart"></i> Unsere Arbeit unterstützen',
+                    footerTag: 'Jugendliche stärken. Ältere ehren. Bessere Gemeinschaften aufbauen.',
+                    footerQuick: 'Schnelllinks',
+                    footerHome: 'Startseite',
+                    footerAbout: 'Über uns',
+                    footerProgramsLink: 'Programme',
+                    footerGallery: 'Galerie',
+                    footerBlog: 'Blog / News',
+                    footerVolunteer: 'Mithelfen',
+                    footerContactLink: 'Kontakt',
+                    footerDonate: 'Spenden',
+                    footerPrograms: 'Programme',
+                    footerProg1: 'Jugendentwicklung',
+                    footerProg2: 'Altenpflege',
+                    footerProg3: 'Medizinische Hilfe',
+                    footerProg4: 'Gemeindeentwicklung',
+                    footerProg5: 'Führungstraining',
+                    footerContact: 'Kontakt',
+                    footerUK: 'Büro UK, London',
+                    footerNigeria: 'Büro Nigeria, Lagos',
+                    footerCopy: 'Eingetragene Wohltätigkeitsorganisation. Alle Rechte vorbehalten.',
+                    footerPrivacy: 'Datenschutzrichtlinie',
+                    cookieText: '🍪 Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website akzeptieren Sie unsere <a href="#">Cookie-Richtlinie</a>.',
+                    cookieAccept: 'Akzeptieren',
+                    cookieDecline: 'Ablehnen'
+                }
+            };
+
+            // ===== STATE =====
+            let currentLang = localStorage.getItem('phinehasLang') || 'en';
+
+            // ===== DOM REFS =====
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const currentLangLabel = document.getElementById('currentLangLabel');
+            const skeleton = document.getElementById('skeleton-loader');
+            const mainContent = document.getElementById('main-content');
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const scrollProgress = document.getElementById('scroll-progress');
+            const backToTop = document.getElementById('back-to-top');
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+
+            // ===== APPLY LANGUAGE =====
+            function applyLanguage(lang) {
+                if (!translations[lang]) {
+                    lang = 'en';
+                }
+                const dict = translations[lang];
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[key] !== undefined) {
+                        if (dict[key].includes('<')) {
+                            el.innerHTML = dict[key];
+                        } else {
+                            el.textContent = dict[key];
+                        }
+                    }
+                });
+                document.querySelectorAll('.lang-dropdown li').forEach(li => {
+                    li.classList.toggle('active-lang', li.dataset.lang === lang);
+                    li.setAttribute('aria-selected', li.dataset.lang === lang ? 'true' : 'false');
+                });
+                const langNames = { en: 'EN', fr: 'FR', de: 'DE' };
+                currentLangLabel.textContent = langNames[lang] || 'EN';
+                localStorage.setItem('phinehasLang', lang);
+                currentLang = lang;
+                document.documentElement.lang = lang;
+            }
+
+            // ===== LANGUAGE TOGGLE =====
+            langToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isOpen = langDropdown.classList.toggle('open');
+                langToggle.setAttribute('aria-expanded', isOpen);
+            });
+
+            langDropdown.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', function() {
+                    applyLanguage(this.dataset.lang);
+                    langDropdown.classList.remove('open');
+                    langToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.lang-wrapper')) {
+                    langDropdown.classList.remove('open');
+                    langToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // ===== HAMBURGER =====
+            hamburger.addEventListener('click', function() {
+                const isOpen = navLinks.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    const icon = hamburger.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // ===== HEADER SCROLL =====
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                header.classList.toggle('scrolled', scrollY > 20);
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                scrollProgress.style.width = scrollPercent + '%';
+                backToTop.classList.toggle('visible', scrollY > 400);
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== COUNTER ANIMATION (Intersection Observer) =====
+            function startCounters() {
+                const counters = document.querySelectorAll('.number[data-count]');
+                counters.forEach(counter => {
+                    const target = parseInt(counter.dataset.count);
+                    const duration = 2000;
+                    const startTime = performance.now();
+
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const current = Math.floor(eased * target);
+                        counter.textContent = current.toLocaleString();
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target.toLocaleString();
+                        }
+                    }
+                    requestAnimationFrame(updateCounter);
+                });
+            }
+
+            // Observe impact stats section
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounters();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const impactStats = document.getElementById('impactStats');
+            if (impactStats) {
+                statsObserver.observe(impactStats);
+            }
+
+            // ===== FAQ ACCORDION =====
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    const isActive = item.classList.contains('active');
+                    // Close all others
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        faq.classList.remove('active');
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // ===== CHARACTER COUNTERS =====
+            const skillsTextarea = document.getElementById('skills');
+            const motivationTextarea = document.getElementById('motivation');
+            const skillsCount = document.getElementById('skillsCount');
+            const motivationCount = document.getElementById('motivationCount');
+
+            if (skillsTextarea && skillsCount) {
+                skillsTextarea.addEventListener('input', function() {
+                    skillsCount.textContent = this.value.length;
+                });
+            }
+
+            if (motivationTextarea && motivationCount) {
+                motivationTextarea.addEventListener('input', function() {
+                    motivationCount.textContent = this.value.length;
+                });
+            }
+
+            // ===== FORM SUBMISSION =====
+            const form = document.getElementById('applicationForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formSuccess = document.getElementById('formSuccess');
+
+            // Show error message for a field
+            function showError(field) {
+                const parent = field.closest('.form-group');
+                const errorMsg = parent.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.classList.add('show');
+                }
+                field.classList.add('error');
+            }
+
+            // Hide error message for a field
+            function hideError(field) {
+                const parent = field.closest('.form-group');
+                const errorMsg = parent.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.classList.remove('show');
+                }
+                field.classList.remove('error');
+            }
+
+            // Validate a single field
+            function validateField(field) {
+                if (field.hasAttribute('required') && !field.value.trim()) {
+                    showError(field);
+                    return false;
+                }
+                if (field.type === 'email' && field.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value.trim())) {
+                        showError(field);
+                        return false;
+                    }
+                }
+                hideError(field);
+                return true;
+            }
+
+            // Clear error on input
+            form.querySelectorAll('input, textarea, select').forEach(field => {
+                field.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        hideError(this);
+                    }
+                });
+                field.addEventListener('change', function() {
+                    if (this.value.trim()) {
+                        hideError(this);
+                    }
+                });
+            });
+
+            // Validate checkbox group
+            function validateCheckboxes() {
+                const checkboxes = form.querySelectorAll('input[name="interest"]');
+                const checked = Array.from(checkboxes).some(cb => cb.checked);
+                const parent = checkboxes[0]?.closest('.form-group');
+                if (!checked) {
+                    const errorMsg = parent?.querySelector('.error-message');
+                    if (errorMsg) errorMsg.classList.add('show');
+                    return false;
+                }
+                const errorMsg = parent?.querySelector('.error-message');
+                if (errorMsg) errorMsg.classList.remove('show');
+                return true;
+            }
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                let valid = true;
+
+                // Validate all required fields
+                const required = form.querySelectorAll('[required]');
+                required.forEach(field => {
+                    if (!validateField(field)) {
+                        valid = false;
+                    }
+                });
+
+                // Validate checkboxes
+                if (!validateCheckboxes()) {
+                    valid = false;
+                }
+
+                if (!valid) {
+                    // Scroll to first error
+                    const firstError = form.querySelector('.error');
+                    if (firstError) {
+                        firstError.focus();
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                // Simulate submission
+                submitBtn.classList.add('btn-loading');
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    submitBtn.classList.remove('btn-loading');
+                    submitBtn.disabled = false;
+                    form.style.display = 'none';
+                    formSuccess.classList.add('show');
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 2000);
+            });
+
+            // ===== RESET FORM ON SUCCESS BUTTON =====
+            const successBtn = formSuccess.querySelector('.btn-primary');
+            if (successBtn) {
+                successBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    form.reset();
+                    form.style.display = 'block';
+                    formSuccess.classList.remove('show');
+                    // Reset character counters
+                    if (skillsCount) skillsCount.textContent = '0';
+                    if (motivationCount) motivationCount.textContent = '0';
+                    // Scroll to form
+                    document.getElementById('applyForm').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // ===== SKELETON LOADER =====
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    skeleton.classList.add('hidden');
+                    mainContent.classList.add('visible');
+                    document.querySelectorAll('.fade-up').forEach((el, i) => {
+                        setTimeout(() => el.classList.add('visible'), 200 + i * 100);
+                    });
+                    document.querySelectorAll('.stagger-children').forEach((el) => {
+                        el.classList.add('visible');
+                    });
+                }, 1000);
+            });
+
+            // ===== COOKIE BANNER =====
+            if (!localStorage.getItem('cookiesAccepted')) {
+                cookieBanner.classList.add('show');
+            }
+
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+
+            declineCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieBanner.classList.remove('show');
+            });
+
+            // ===== NAV ACTIVE STATE =====
+            const currentPath = window.location.pathname.split('/').pop() || 'volunteer.html';
+            navLinks.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+
+            // ===== INIT =====
+            applyLanguage(currentLang);
+
+        })();
+    </script>
+
+</body>
+</html>
