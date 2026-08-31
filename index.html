@@ -14,10 +14,10 @@
     <meta name="twitter:title" content="PHINEHAS GENERATION FOUNDATION" />
     <meta name="twitter:description" content="Bridging generations through mentorship, healthcare, and community outreach." />
     <link rel="canonical" href="https://phinehasgeneration.org" />
-    <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" type="image/png" />
+    <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" type="image/jpeg" />
     <title>PHINEHAS GENERATION FOUNDATION | Empowering Teenagers. Honouring the Elderly.</title>
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 (Pro-style icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <!-- Google Fonts: Inter + Playfair Display -->
@@ -85,6 +85,7 @@
         img {
             max-width: 100%;
             display: block;
+            height: auto;
         }
 
         .container {
@@ -204,6 +205,52 @@
             color: var(--gold);
         }
 
+        /* ===== SOURCE LINK STYLES ===== */
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--gold-dark);
+            font-weight: 600;
+            font-size: 0.78rem;
+            padding: 2px 10px 2px 6px;
+            border-radius: var(--radius-full);
+            background: rgba(200, 148, 62, 0.08);
+            border: 1px solid rgba(200, 148, 62, 0.15);
+            transition: var(--transition);
+            margin: 0 2px;
+            text-decoration: none;
+        }
+        .source-link:hover {
+            background: rgba(200, 148, 62, 0.18);
+            border-color: var(--gold);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(200, 148, 62, 0.15);
+        }
+        .source-link i {
+            font-size: 0.65rem;
+            opacity: 0.7;
+        }
+        .source-link .source-label {
+            font-weight: 400;
+            color: var(--gray);
+            margin-right: 2px;
+        }
+
+        .stat-source {
+            font-size: 0.7rem;
+            color: var(--gray);
+            margin-top: 4px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4px;
+        }
+        .stat-source .source-link {
+            font-size: 0.7rem;
+            padding: 1px 8px 1px 4px;
+        }
+
         .chart-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -251,7 +298,7 @@
             border-color: var(--gold);
         }
         .stat-card-mini .mini-icon {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--gold);
             margin-bottom: 8px;
         }
@@ -272,6 +319,14 @@
             color: var(--gray);
             margin-top: 6px;
             line-height: 1.4;
+        }
+        .stat-card-mini .mini-source {
+            font-size: 0.6rem;
+            margin-top: 4px;
+        }
+        .stat-card-mini .mini-source .source-link {
+            font-size: 0.6rem;
+            padding: 1px 6px 1px 3px;
         }
 
         .bar-chart-wrap {
@@ -356,7 +411,7 @@
             position: relative;
             border-radius: var(--radius-lg);
             overflow: hidden;
-            height: 280px;
+            aspect-ratio: 16/10;
         }
         .stat-image-card img {
             width: 100%;
@@ -392,7 +447,7 @@
             box-shadow: var(--shadow-lg);
         }
         .program-card-enhanced .program-thumb {
-            height: 180px;
+            aspect-ratio: 16/10;
             overflow: hidden;
         }
         .program-card-enhanced .program-thumb img {
@@ -460,7 +515,7 @@
         }
         .founder-gallery img {
             width: 100%;
-            height: 180px;
+            aspect-ratio: 4/3;
             object-fit: cover;
             border-radius: var(--radius-sm);
             transition: var(--transition);
@@ -504,7 +559,7 @@
             box-shadow: var(--shadow-lg);
         }
         .blog-card .blog-thumb {
-            height: 160px;
+            aspect-ratio: 16/10;
             overflow: hidden;
             background: var(--gray-light);
         }
@@ -686,6 +741,7 @@
         .logo img {
             height: 44px;
             width: auto;
+            border-radius: 4px;
         }
         .logo .logo-gold {
             color: var(--gold);
@@ -990,6 +1046,10 @@
             margin-top: 8px;
             line-height: 1.4;
         }
+        .stat-card .stat-source {
+            font-size: 0.65rem;
+            margin-top: 6px;
+        }
         .stat-card.gold-accent {
             border-top: 3px solid var(--gold);
         }
@@ -1044,10 +1104,11 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             position: relative;
+            aspect-ratio: 4/3;
         }
         .about-image img {
             width: 100%;
-            height: 420px;
+            height: 100%;
             object-fit: cover;
             transition: var(--transition-slow);
         }
@@ -1137,7 +1198,7 @@
             box-shadow: var(--shadow);
         }
         .serve-card .serve-image {
-            height: 250px;
+            aspect-ratio: 16/10;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -1249,10 +1310,11 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             position: relative;
+            aspect-ratio: 3/4;
         }
         .founder-image img {
             width: 100%;
-            height: 420px;
+            height: 100%;
             object-fit: cover;
         }
         .founder-image .founder-badge {
@@ -1313,7 +1375,7 @@
             box-shadow: var(--shadow);
         }
         .story-card .story-image {
-            height: 220px;
+            aspect-ratio: 16/10;
             background-size: cover;
             background-position: center;
         }
@@ -1449,7 +1511,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png');
+            background-image: url('https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg');
             background-size: 300px auto;
             background-repeat: no-repeat;
             background-position: 95% 50%;
@@ -1840,6 +1902,9 @@
             .blog-grid {
                 grid-template-columns: 1fr;
             }
+            .stat-image-card {
+                aspect-ratio: 4/3;
+            }
         }
     </style>
 </head>
@@ -1852,7 +1917,7 @@
     <header id="header">
         <div class="container nav-container">
             <a href="index.html" class="logo" aria-label="PHINEHAS GENERATION FOUNDATION Home">
-                <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="PHINEHAS GENERATION FOUNDATION Logo" width="44" height="44" />
+                <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="PHINEHAS GENERATION FOUNDATION Logo" width="44" height="44" />
                 PHINEHAS <span class="logo-gold">GENERATION</span>
             </a>
 
@@ -1933,22 +1998,26 @@
                     <div class="stat-card gold-accent">
                         <div class="stat-icon"><i class="fas fa-users"></i></div>
                         <div class="stat-number">1.4 <span class="stat-unit">bn</span></div>
-                        <div class="stat-label" data-i18n="statAge1">people will be aged 60 years or over by 2030 [citations: 8]</div>
+                        <div class="stat-label" data-i18n="statAge1">people will be aged 60 years or over by 2030</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card gold-accent">
                         <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
                         <div class="stat-number">2.1 <span class="stat-unit">bn</span></div>
-                        <div class="stat-label" data-i18n="statAge2">older people will make up more than one-fifth of the total population by 2050 [citation: 8]</div>
+                        <div class="stat-label" data-i18n="statAge2">older people will make up more than one-fifth of the total population by 2050</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card gold-accent">
                         <div class="stat-icon"><i class="fas fa-globe-africa"></i></div>
                         <div class="stat-number">80 <span class="stat-unit">%</span></div>
-                        <div class="stat-label" data-i18n="statAge3">of older people will live in low- and middle-income countries by 2050 [citation: 8]</div>
+                        <div class="stat-label" data-i18n="statAge3">of older people will live in low- and middle-income countries by 2050</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card gold-accent">
                         <div class="stat-icon"><i class="fas fa-heart"></i></div>
                         <div class="stat-number">426 <span class="stat-unit">m</span></div>
-                        <div class="stat-label" data-i18n="statAge4">the number of people aged ≥ 80 years by 2050 [citation: 8]</div>
+                        <div class="stat-label" data-i18n="statAge4">the number of people aged ≥ 80 years by 2050</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                 </div>
 
@@ -1966,24 +2035,28 @@
                         <div class="stat-icon"><i class="fas fa-child"></i></div>
                         <div class="stat-number">1.3 <span class="stat-unit">bn</span></div>
                         <div class="stat-label" data-i18n="statYouth1">adolescents (aged 10–19 years) worldwide — about one-sixth of the global population</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card green-accent">
                         <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
                         <div class="stat-number">3 <span class="stat-unit">bn+</span></div>
                         <div class="stat-label" data-i18n="statYouth2">people are younger than 25 years — roughly 42% of the global population</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card green-accent">
                         <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="stat-number">~90 <span class="stat-unit">%</span></div>
                         <div class="stat-label" data-i18n="statYouth3">of adolescents aged 10–19 years live in low- and middle-income countries</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card green-accent">
                         <div class="stat-icon"><i class="fas fa-percentage"></i></div>
                         <div class="stat-number">16 <span class="stat-unit">%</span></div>
                         <div class="stat-label" data-i18n="statYouth4">adolescents account for over 16% of the global population</div>
+                        <div class="stat-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website"><span class="source-label">Source:</span> WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                 </div>
-                <p class="text-center" style="margin-top: 20px; font-size: 0.82rem; color: var(--gray);" data-i18n="statsSource">Sources: WHO, UN DESA, World Population Prospects</p>
+                <p class="text-center" style="margin-top: 20px; font-size: 0.82rem; color: var(--gray);" data-i18n="statsSource">Sources: <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" class="source-link" style="font-size:0.75rem;">WHO <i class="fas fa-external-link-alt"></i></a> <a href="https://www.un.org/development/desa/" target="_blank" rel="noopener noreferrer" class="source-link" style="font-size:0.75rem;">UN DESA <i class="fas fa-external-link-alt"></i></a> <a href="https://population.un.org/wpp/" target="_blank" rel="noopener noreferrer" class="source-link" style="font-size:0.75rem;">World Population Prospects <i class="fas fa-external-link-alt"></i></a></p>
                 <div class="stats-read-more">
                     <a href="#ageing-world" data-i18n="statsReadMore">Read the full story behind the numbers <i class="fas fa-arrow-down"></i></a>
                 </div>
@@ -2000,13 +2073,13 @@
 
                 <div class="narrative-text mb-32">
                     <p style="margin-bottom:18px;">
-                        <span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. By 2030, <strong>1.4 billion people</strong> will be aged 60 or over. By 2050, that figure will rise to <strong>2.1 billion</strong> — more than one-fifth of the entire global population [citation: 8].
+                        <span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. By 2030, <strong>1.4 billion people</strong> will be aged 60 or over. By 2050, that figure will rise to <strong>2.1 billion</strong> — more than one-fifth of the entire global population <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>.
                     </p>
                     <p style="margin-bottom:18px;">
-                        What makes this shift even more urgent is where these older people will live. The World Health Organization projects that <strong>80% of older persons will reside in low- and middle-income countries</strong> by 2050 [citation: 8] — nations where social safety nets, healthcare infrastructure, and elderly care systems are often underdeveloped or entirely absent. In these contexts, ageing is not accompanied by security; it is accompanied by vulnerability.
+                        What makes this shift even more urgent is where these older people will live. The World Health Organization projects that <strong>80% of older persons will reside in low- and middle-income countries</strong> by 2050 <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a> — nations where social safety nets, healthcare infrastructure, and elderly care systems are often underdeveloped or entirely absent. In these contexts, ageing is not accompanied by security; it is accompanied by vulnerability.
                     </p>
                     <p>
-                        The fastest-growing segment is the oldest old — those aged 80 years and above. By 2050, <strong>426 million people</strong> will belong to this group [citation: 8]. They face the highest risk of disability, chronic illness, social isolation, and poverty. Without deliberate intervention, millions will spend their final years without dignity, care, or companionship.
+                        The fastest-growing segment is the oldest old — those aged 80 years and above. By 2050, <strong>426 million people</strong> will belong to this group <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>. They face the highest risk of disability, chronic illness, social isolation, and poverty. Without deliberate intervention, millions will spend their final years without dignity, care, or companionship.
                     </p>
                 </div>
             </div>
@@ -2040,6 +2113,7 @@
                             <text x="200" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" fill="#5a5a5a">of older people</text>
                             <text x="200" y="232" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#9a9a9a">will live in LMICs</text>
                             <text x="200" y="255" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#c8943e" font-weight="700" letter-spacing="2px">BY 2050</text>
+                            <text x="200" y="280" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" fill="#9a9a9a"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" style="color:#c8943e;text-decoration:underline;">Source: WHO</a></text>
                             <g transform="translate(50, 340)">
                                 <rect x="0" y="0" width="14" height="14" rx="3" fill="url(#donutGold)"/>
                                 <text x="20" y="12" font-family="'Inter', sans-serif" font-size="11" fill="#5a5a5a">Low &amp; Middle-Income Countries</text>
@@ -2052,10 +2126,10 @@
                     </div>
                     <div class="chart-insight fade-up">
                         <h3 data-i18n="ageChartTitle1">Where the Burden Falls Heaviest</h3>
-                        <p data-i18n="ageChartDesc1">The overwhelming majority of the world's older population will live in countries least equipped to support them [citation: 8]. This means families — often already struggling — must bear the full weight of elder care without institutional support.</p>
+                        <p data-i18n="ageChartDesc1">The overwhelming majority of the world's older population will live in countries least equipped to support them <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>. This means families — often already struggling — must bear the full weight of elder care without institutional support.</p>
                         <p data-i18n="ageChartDesc1b">In Nigeria alone, the traditional extended family structure that once cared for the elderly is eroding under economic pressure, urbanization, and migration. Millions of seniors are left without adequate care.</p>
-                        <p data-i18n="ageChartDesc1c">In light of these realities, it is important to consider the eternal destiny of older people, particularly where they will spend eternity after this earthly life. 2 Corinthians 4:18 states, "While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal."</p>
-                        <p data-i18n="ageChartDesc1d">It has been observed that, despite the fear of death experienced by many older people due to the uncertainty surrounding life after death [citation: 11], some have made little or no preparation for their eternal destiny. This highlights the importance of spiritual preparation in old age. Consequently, Christian older adults are often encouraged to remain committed to their service to God and to cultivate a strong and personal relationship with Jesus Christ. Such commitment provides them with the assurance and hope of eternal life and of reigning with Christ in eternity.</p>
+                        <p data-i18n="ageChartDesc1c">In light of these realities, it is important to consider the eternal destiny of older people, particularly where they will spend eternity after this earthly life. 2 Corinthians 4:18 states, "While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal." <a href="https://www.biblegateway.com/passage/?search=2%20Corinthians%204%3A18&version=NIV" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Read 2 Corinthians 4:18 on Bible Gateway">BibleGateway <i class="fas fa-external-link-alt"></i></a></p>
+                        <p data-i18n="ageChartDesc1d">It has been observed that, despite the fear of death experienced by many older people due to the uncertainty surrounding life after death <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View study on NIH website">NIH Study <i class="fas fa-external-link-alt"></i></a>, some have made little or no preparation for their eternal destiny. This highlights the importance of spiritual preparation in old age. Consequently, Christian older adults are often encouraged to remain committed to their service to God and to cultivate a strong and personal relationship with Jesus Christ. Such commitment provides them with the assurance and hope of eternal life and of reigning with Christ in eternity.</p>
                     </div>
                 </div>
 
@@ -2063,22 +2137,26 @@
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-users"></i></div>
                         <div class="mini-num">1.4 <span class="mini-unit">bn</span></div>
-                        <div class="mini-desc" data-i18n="ageStat1">people aged 60+ by 2030 [citation: 8]</div>
+                        <div class="mini-desc" data-i18n="ageStat1">people aged 60+ by 2030</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-chart-line"></i></div>
                         <div class="mini-num">2.1 <span class="mini-unit">bn</span></div>
-                        <div class="mini-desc" data-i18n="ageStat2">older people by 2050 — over one-fifth of humanity [citation: 8]</div>
+                        <div class="mini-desc" data-i18n="ageStat2">older people by 2050 — over one-fifth of humanity</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-globe-africa"></i></div>
                         <div class="mini-num">80 <span class="mini-unit">%</span></div>
-                        <div class="mini-desc" data-i18n="ageStat3">will live in low- and middle-income countries [citation: 8]</div>
+                        <div class="mini-desc" data-i18n="ageStat3">will live in low- and middle-income countries</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-heart"></i></div>
                         <div class="mini-num">426 <span class="mini-unit">m</span></div>
-                        <div class="mini-desc" data-i18n="ageStat4">people aged 80+ by 2050 — the most vulnerable group [citation: 8]</div>
+                        <div class="mini-desc" data-i18n="ageStat4">people aged 80+ by 2050 — the most vulnerable group</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                 </div>
 
@@ -2110,13 +2188,13 @@
 
                 <div class="narrative-text mb-32">
                     <p style="margin-bottom:18px;">
-                        <span class="dropcap">W</span>hile the world ages, it is simultaneously experiencing the largest youth population in human history. There are <strong>1.3 billion adolescents</strong> aged 10–19 years alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — representing roughly 42% of humanity.
+                        <span class="dropcap">W</span>hile the world ages, it is simultaneously experiencing the largest youth population in human history. There are <strong>1.3 billion adolescents</strong> aged 10–19 years alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — representing roughly 42% of humanity <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>.
                     </p>
                     <p style="margin-bottom:18px;">
-                        The geographic distribution of these young people mirrors the ageing crisis: <strong>nearly 90% of adolescents live in low- and middle-income countries</strong>. These are young people growing up in environments where access to quality education, mentorship, healthcare, and economic opportunity is severely limited. Without intervention, their potential remains untapped — and the consequences ripple across generations.
+                        The geographic distribution of these young people mirrors the ageing crisis: <strong>nearly 90% of adolescents live in low- and middle-income countries</strong> <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>. These are young people growing up in environments where access to quality education, mentorship, healthcare, and economic opportunity is severely limited. Without intervention, their potential remains untapped — and the consequences ripple across generations.
                     </p>
                     <p>
-                        The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people. Yet, in most low-resource settings, mental health services for adolescents are virtually nonexistent.
+                        The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people. Yet, in most low-resource settings, mental health services for adolescents are virtually nonexistent.
                     </p>
                 </div>
             </div>
@@ -2162,7 +2240,7 @@
                             <text x="105" y="239" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#2a2a2a">Mental health affected</text>
                             <text x="178" y="239" text-anchor="start" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#c8943e">1 in 7</text>
                             <text x="250" y="295" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="14" font-weight="700" fill="#2a2a2a">Global Youth Demographics</text>
-                            <text x="250" y="312" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#9a9a9a">Source: WHO, UN DESA, World Population Prospects 2024</text>
+                            <text x="250" y="312" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#9a9a9a"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" style="color:#c8943e;text-decoration:underline;">Source: WHO</a></text>
                         </svg>
                     </div>
                 </div>
@@ -2172,21 +2250,25 @@
                         <div class="mini-icon"><i class="fas fa-child"></i></div>
                         <div class="mini-num">1.3 <span class="mini-unit">bn</span></div>
                         <div class="mini-desc" data-i18n="youthStat1">adolescents aged 10–19 worldwide</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-user-graduate"></i></div>
                         <div class="mini-num">3 <span class="mini-unit">bn+</span></div>
                         <div class="mini-desc" data-i18n="youthStat2">people younger than 25 — 42% of humanity</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="mini-num">~90 <span class="mini-unit">%</span></div>
                         <div class="mini-desc" data-i18n="youthStat3">live in low- and middle-income countries</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini">
                         <div class="mini-icon"><i class="fas fa-brain"></i></div>
                         <div class="mini-num">1 in 7</div>
                         <div class="mini-desc" data-i18n="youthStat4">adolescents experience a mental disorder</div>
+                        <div class="mini-source"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                 </div>
 
@@ -2195,12 +2277,14 @@
                     <div class="stat-card-mini" style="border-color: var(--gold);">
                         <div class="mini-icon"><i class="fas fa-flask"></i></div>
                         <div class="mini-num">12.4 <span class="mini-unit">years</span></div>
-                        <div class="mini-desc" data-i18n="youthInitiationStat">Mean age of substance abuse initiation in Nigeria [citation: 2]</div>
+                        <div class="mini-desc" data-i18n="youthInitiationStat">Mean age of substance abuse initiation in Nigeria</div>
+                        <div class="mini-source"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10514430/" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View study on NIH website">NIH Study <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini" style="border-color: var(--gold);">
                         <div class="mini-icon"><i class="fas fa-heartbeat"></i></div>
                         <div class="mini-num">17.5 <span class="mini-unit">years</span></div>
-                        <div class="mini-desc" data-i18n="youthSexualDebut">Average age of sexual debut for female adolescents in Ibadan [citation: 12]</div>
+                        <div class="mini-desc" data-i18n="youthSexualDebut">Average age of sexual debut for female adolescents in Ibadan</div>
+                        <div class="mini-source"><a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2022.1051625/full" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View study on Frontiers website">Frontiers Study <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                 </div>
 
@@ -2243,17 +2327,19 @@
                     <div class="stat-card-mini" style="border-color: var(--gold);">
                         <div class="mini-icon"><i class="fas fa-skull"></i></div>
                         <div class="mini-num">44.2 <span class="mini-unit">%</span></div>
-                        <div class="mini-desc" data-i18n="deathFearStat">of older adults experience death anxiety [citation: 11]</div>
+                        <div class="mini-desc" data-i18n="deathFearStat">of older adults experience death anxiety</div>
+                        <div class="mini-source"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View study on NIH website">NIH Study <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="stat-card-mini" style="border-color: var(--gold);">
                         <div class="mini-icon"><i class="fas fa-balance-scale"></i></div>
                         <div class="mini-num">92.2 <span class="mini-unit">%</span></div>
-                        <div class="mini-desc" data-i18n="deathFearModerate">of older adults have a moderate level of fear of death [citation: 15]</div>
+                        <div class="mini-desc" data-i18n="deathFearModerate">of older adults have a moderate level of fear of death</div>
+                        <div class="mini-source"><a href="https://pubmed.ncbi.nlm.nih.gov/34893897/" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View study on PubMed website">PubMed Study <i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                 </div>
                 <div class="conclusion-box fade-up mt-32" style="border-left-color: var(--black);">
                     <h4 data-i18n="deathFearConclusionTitle">Addressing the Fear of Death</h4>
-                    <p data-i18n="deathFearConclusionText">Research shows that older adults with a high level of self-evaluation and sense of mastery experience lower levels of death and dying anxiety [citation: 1]. Through our community welfare and medical outreach programs, we help restore dignity and purpose, which can alleviate this existential fear. Additionally, our spiritual guidance provides hope and assurance for eternity.</p>
+                    <p data-i18n="deathFearConclusionText">Research shows that older adults with a high level of self-evaluation and sense of mastery experience lower levels of death and dying anxiety <a href="https://pubmed.ncbi.nlm.nih.gov/20148157/" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View study on PubMed website">PubMed Study <i class="fas fa-external-link-alt"></i></a>. Through our community welfare and medical outreach programs, we help restore dignity and purpose, which can alleviate this existential fear. Additionally, our spiritual guidance provides hope and assurance for eternity.</p>
                 </div>
             </div>
 
@@ -2296,12 +2382,13 @@
                             <text x="200" y="188" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="900" fill="#0d0d0d">280M</text>
                             <text x="200" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#5a5a5a">live with depression</text>
                             <text x="200" y="232" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#c8943e" font-weight="700">worldwide</text>
+                            <text x="200" y="260" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" fill="#9a9a9a"><a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noopener" style="color:#c8943e;text-decoration:underline;">Source: WHO</a></text>
                         </svg>
                     </div>
                     <div class="chart-insight fade-up">
                         <h3 data-i18n="mhTitle">Mental Health: A Silent Epidemic</h3>
-                        <p data-i18n="mhDesc1"><strong>280 million people</strong> worldwide live with depression. Among adults, <strong>5%</strong> experience clinical depression globally. For adolescents, the figure is stark: <strong>1 in 7</strong> young people aged 10–19 experience a mental health disorder.</p>
-                        <p data-i18n="mhDesc2">Most devastatingly, <strong>727,000 people die by suicide every year</strong> — making it the third leading cause of death among 15–29-year-olds. The overwhelming majority of these deaths occur in low- and middle-income countries where mental health services are scarce or stigmatized.</p>
+                        <p data-i18n="mhDesc1"><strong>280 million people</strong> worldwide live with depression <a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>. Among adults, <strong>5%</strong> experience clinical depression globally. For adolescents, the figure is stark: <strong>1 in 7</strong> young people aged 10–19 experience a mental health disorder <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+                        <p data-i18n="mhDesc2">Most devastatingly, <strong>727,000 people die by suicide every year</strong> <a href="https://www.who.int/news-room/fact-sheets/detail/suicide" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a> — making it the third leading cause of death among 15–29-year-olds. The overwhelming majority of these deaths occur in low- and middle-income countries where mental health services are scarce or stigmatized.</p>
                     </div>
                 </div>
                 <div class="conclusion-box fade-up mt-32">
@@ -2331,7 +2418,7 @@
                 <div class="chart-grid mt-32">
                     <div class="chart-insight fade-up">
                         <h3 data-i18n="vawTitle">The Scale of Gender-Based Violence</h3>
-                        <p data-i18n="vawDesc1">The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime. This translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner.</p>
+                        <p data-i18n="vawDesc1">The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on WHO website">WHO <i class="fas fa-external-link-alt"></i></a>. This translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner.</p>
                         <p data-i18n="vawDesc2">Violence against women is not merely a personal tragedy; it is a public health crisis of epidemic proportions. It crosses every border, culture, and socioeconomic class — but its impact is most severe where legal protections are weakest and support services are unavailable.</p>
                     </div>
                     <div class="chart-visual fade-up">
@@ -2343,6 +2430,7 @@
                             <text x="160" y="170" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">women experience</text>
                             <text x="160" y="186" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5c5a55">physical or sexual violence</text>
                             <text x="160" y="202" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#c8943e" font-weight="700">in their lifetime</text>
+                            <text x="160" y="225" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8" fill="#9a9a9a"><a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener" style="color:#c8943e;text-decoration:underline;">Source: WHO</a></text>
                         </svg>
                     </div>
                 </div>
@@ -2372,11 +2460,14 @@
                                 <div class="bar-track"><div class="bar-fill dark" style="--target-width:13.3%;" aria-label="39.5 million need treatment"></div></div>
                                 <div class="bar-value">39.5M</div>
                             </div>
+                            <div style="text-align:center;margin-top:8px;font-size:0.7rem;color:var(--gray);">
+                                <a href="https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2023.html" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on UNODC website">Source: UNODC <i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="chart-insight fade-up">
                         <h3 data-i18n="drugTitle">The Addiction Crisis</h3>
-                        <p data-i18n="drugDesc1">According to the United Nations Office on Drugs and Crime (UNODC), <strong>296 million people</strong> worldwide used drugs in 2021 — a figure that has grown significantly over the past decade. Of these, <strong>39.5 million</strong> suffer from drug use disorders that require professional treatment.</p>
+                        <p data-i18n="drugDesc1">According to the United Nations Office on Drugs and Crime (UNODC), <strong>296 million people</strong> worldwide used drugs in 2021 <a href="https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2023.html" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="View source on UNODC website">UNODC <i class="fas fa-external-link-alt"></i></a> — a figure that has grown significantly over the past decade. Of these, <strong>39.5 million</strong> suffer from drug use disorders that require professional treatment.</p>
                         <p data-i18n="drugDesc2">Young people are disproportionately affected. Substance abuse often begins in adolescence, fueled by peer pressure, trauma, lack of guidance, and economic hopelessness. Without early intervention, addiction derails education, destroys families, and perpetuates cycles of poverty.</p>
                     </div>
                 </div>
@@ -2619,7 +2710,7 @@
                 </div>
                 <div class="founder-grid">
                     <div class="founder-image fade-up">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938653/1784934975518_slmphx.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder and Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg" alt="Mrs. Oluwatosin Balogun Akano - Founder and Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
                         <span class="founder-badge"><i class="fas fa-crown"></i> <span data-i18n="founderBadge">Founder</span></span>
                     </div>
                     <div class="founder-content fade-up">
@@ -2724,7 +2815,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo" style="color:var(--white);">
-                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784973523/file_00000000d29881f491bbe3505fa9de75_ck1fjx.png" alt="Logo" style="height:40px;" width="40" height="40" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="Logo" style="height:40px;" width="40" height="40" loading="lazy" />
                         PHINEHAS <span class="logo-gold">GENERATION</span>
                     </a>
                     <p data-i18n="footerTag">Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
@@ -2890,7 +2981,7 @@
                 `).join('');
             }
 
-            // ===== COMPLETE TRANSLATIONS (English, French, German) =====
+            // ===== COMPLETE TRANSLATIONS =====
             const translations = {
                 'en': {
                     navHome: 'Home', navAbout: 'About Us', navPrograms: 'Our Programs',
@@ -2918,10 +3009,10 @@
                     ageEyebrow: 'The Global Reality',
                     ageTitle: 'An <span class="highlight">Ageing World</span> That Cannot Be Ignored',
                     ageChartTitle1: 'Where the Burden Falls Heaviest',
-                    ageChartDesc1: 'The overwhelming majority of the world\'s older population will live in countries least equipped to support them [citation: 8]. This means families — often already struggling — must bear the full weight of elder care without institutional support.',
+                    ageChartDesc1: 'The overwhelming majority of the world\'s older population will live in countries least equipped to support them. This means families — often already struggling — must bear the full weight of elder care without institutional support.',
                     ageChartDesc1b: 'In Nigeria alone, the traditional extended family structure that once cared for the elderly is eroding under economic pressure, urbanization, and migration. Millions of seniors are left without adequate care.',
                     ageChartDesc1c: 'In light of these realities, it is important to consider the eternal destiny of older people, particularly where they will spend eternity after this earthly life. 2 Corinthians 4:18 states, "While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal."',
-                    ageChartDesc1d: 'It has been observed that, despite the fear of death experienced by many older people due to the uncertainty surrounding life after death [citation: 11], some have made little or no preparation for their eternal destiny. This highlights the importance of spiritual preparation in old age. Consequently, Christian older adults are often encouraged to remain committed to their service to God and to cultivate a strong and personal relationship with Jesus Christ. Such commitment provides them with the assurance and hope of eternal life and of reigning with Christ in eternity.',
+                    ageChartDesc1d: 'It has been observed that, despite the fear of death experienced by many older people due to the uncertainty surrounding life after death, some have made little or no preparation for their eternal destiny. This highlights the importance of spiritual preparation in old age. Consequently, Christian older adults are often encouraged to remain committed to their service to God and to cultivate a strong and personal relationship with Jesus Christ. Such commitment provides them with the assurance and hope of eternal life and of reigning with Christ in eternity.',
                     ageStat1: 'people aged 60+ by 2030',
                     ageStat2: 'older people by 2050 — over one-fifth of humanity',
                     ageStat3: 'will live in low- and middle-income countries',
@@ -2955,7 +3046,7 @@
                     deathFearStat: 'of older adults experience death anxiety',
                     deathFearModerate: 'of older adults have a moderate level of fear of death',
                     deathFearConclusionTitle: 'Addressing the Fear of Death',
-                    deathFearConclusionText: 'Research shows that older adults with a high level of self-evaluation and sense of mastery experience lower levels of death and dying anxiety [citation: 1]. Through our community welfare and medical outreach programs, we help restore dignity and purpose, which can alleviate this existential fear. Additionally, our spiritual guidance provides hope and assurance for eternity.',
+                    deathFearConclusionText: 'Research shows that older adults with a high level of self-evaluation and sense of mastery experience lower levels of death and dying anxiety. Through our community welfare and medical outreach programs, we help restore dignity and purpose, which can alleviate this existential fear. Additionally, our spiritual guidance provides hope and assurance for eternity.',
                     vawTitle: 'The Scale of Gender-Based Violence',
                     vawDesc1: 'The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime. This translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner.',
                     vawDesc2: 'Violence against women is not merely a personal tragedy; it is a public health crisis of epidemic proportions. It crosses every border, culture, and socioeconomic class — but its impact is most severe where legal protections are weakest and support services are unavailable.',
@@ -3060,10 +3151,10 @@
                     ageEyebrow: 'La réalité mondiale',
                     ageTitle: 'Un <span class="highlight">monde vieillissant</span> qu\'on ne peut ignorer',
                     ageChartTitle1: 'Là où le fardeau pèse le plus lourd',
-                    ageChartDesc1: 'La grande majorité des personnes âgées vivra dans les pays les moins équipés pour les soutenir [citation: 8]. Les familles, déjà en difficulté, doivent assumer seules la charge des soins.',
+                    ageChartDesc1: 'La grande majorité des personnes âgées vivra dans les pays les moins équipés pour les soutenir. Les familles, déjà en difficulté, doivent assumer seules la charge des soins.',
                     ageChartDesc1b: 'Au Nigeria, la structure familiale élargie qui prenait soin des aînés s\'érode sous la pression économique. Des millions de seniors restent sans soins adéquats.',
                     ageChartDesc1c: 'À la lumière de ces réalités, il est important de considérer la destinée éternelle des personnes âgées, notamment où elles passeront l\'éternité après cette vie terrestre. 2 Corinthiens 4:18 déclare : "Nous regardons non aux choses visibles, mais à celles qui sont invisibles ; car les choses visibles sont temporelles, et les invisibles sont éternelles."',
-                    ageChartDesc1d: 'Il a été observé que, malgré la peur de la mort ressentie par de nombreuses personnes âgées en raison de l\'incertitude entourant la vie après la mort [citation: 11], certaines n\'ont fait que peu ou pas de préparation pour leur destinée éternelle. Cela souligne l\'importance de la préparation spirituelle dans la vieillesse. Par conséquent, les personnes âgées chrétiennes sont souvent encouragées à rester engagées dans leur service à Dieu et à cultiver une relation personnelle forte avec Jésus-Christ. Un tel engagement leur donne l\'assurance et l\'espoir de la vie éternelle et de régner avec Christ dans l\'éternité.',
+                    ageChartDesc1d: 'Il a été observé que, malgré la peur de la mort ressentie par de nombreuses personnes âgées en raison de l\'incertitude entourant la vie après la mort, certaines n\'ont fait que peu ou pas de préparation pour leur destinée éternelle. Cela souligne l\'importance de la préparation spirituelle dans la vieillesse. Par conséquent, les personnes âgées chrétiennes sont souvent encouragées à rester engagées dans leur service à Dieu et à cultiver une relation personnelle forte avec Jésus-Christ. Un tel engagement leur donne l\'assurance et l\'espoir de la vie éternelle et de régner avec Christ dans l\'éternité.',
                     ageStat1: 'personnes âgées de 60+ d\'ici 2030',
                     ageStat2: 'personnes âgées d\'ici 2050',
                     ageStat3: 'vivront dans des pays à revenu faible ou intermédiaire',
@@ -3097,7 +3188,7 @@
                     deathFearStat: 'des personnes âgées ressentent de l\'anxiété face à la mort',
                     deathFearModerate: 'des personnes âgées ont un niveau modéré de peur de la mort',
                     deathFearConclusionTitle: 'Faire face à la peur de la mort',
-                    deathFearConclusionText: 'La recherche montre que les personnes âgées ayant un niveau élevé d\'estime de soi et de sentiment de maîtrise ressentent moins d\'anxiété face à la mort [citation: 1]. Grâce à nos programmes d\'aide communautaire et de services médicaux, nous aidons à restaurer la dignité et le but, ce qui peut atténuer cette peur existentielle. De plus, nos conseils spirituels offrent espoir et assurance pour l\'éternité.',
+                    deathFearConclusionText: 'La recherche montre que les personnes âgées ayant un niveau élevé d\'estime de soi et de sentiment de maîtrise ressentent moins d\'anxiété face à la mort. Grâce à nos programmes d\'aide communautaire et de services médicaux, nous aidons à restaurer la dignité et le but, ce qui peut atténuer cette peur existentielle. De plus, nos conseils spirituels offrent espoir et assurance pour l\'éternité.',
                     vawTitle: 'L\'ampleur de la violence basée sur le genre',
                     vawDesc1: '<strong>1 femme sur 3</strong> subit des violences physiques ou sexuelles au cours de sa vie — soit <strong>736 millions</strong> de femmes et de filles.',
                     vawDesc2: 'La violence contre les femmes est une crise de santé publique mondiale.',
@@ -3200,10 +3291,10 @@
                     ageEyebrow: 'Die globale Realität',
                     ageTitle: 'Eine <span class="highlight">alternde Welt</span>, die nicht ignoriert werden kann',
                     ageChartTitle1: 'Wo die Last am schwersten wiegt',
-                    ageChartDesc1: 'Die Mehrheit der älteren Menschen wird in Ländern leben, die am wenigsten für sie ausgestattet sind [citation: 8].',
+                    ageChartDesc1: 'Die Mehrheit der älteren Menschen wird in Ländern leben, die am wenigsten für sie ausgestattet sind.',
                     ageChartDesc1b: 'In Nigeria erodiert die traditionelle Familienstruktur unter wirtschaftlichem Druck.',
                     ageChartDesc1c: 'Angesichts dieser Realitäten ist es wichtig, über das ewige Schicksal älterer Menschen nachzudenken, insbesondere darüber, wo sie nach diesem irdischen Leben die Ewigkeit verbringen werden. 2. Korinther 4:18 sagt: "Wir sehen nicht auf das Sichtbare, sondern auf das Unsichtbare; denn das Sichtbare ist vergänglich, das Unsichtbare aber ist ewig."',
-                    ageChartDesc1d: 'Es wurde beobachtet, dass trotz der Todesangst vieler älterer Menschen aufgrund der Ungewissheit über das Leben nach dem Tod [citation: 11] einige wenig oder gar keine Vorbereitung auf ihr ewiges Schicksal getroffen haben. Dies unterstreicht die Bedeutung der spirituellen Vorbereitung im Alter. Folglich werden ältere Christen oft ermutigt, sich weiterhin im Dienst für Gott zu engagieren und eine starke, persönliche Beziehung zu Jesus Christus zu pflegen. Ein solches Engagement gibt ihnen die Gewissheit und Hoffnung auf das ewige Leben und darauf, mit Christus in der Ewigkeit zu regieren.',
+                    ageChartDesc1d: 'Es wurde beobachtet, dass trotz der Todesangst vieler älterer Menschen aufgrund der Ungewissheit über das Leben nach dem Tod einige wenig oder gar keine Vorbereitung auf ihr ewiges Schicksal getroffen haben. Dies unterstreicht die Bedeutung der spirituellen Vorbereitung im Alter. Folglich werden ältere Christen oft ermutigt, sich weiterhin im Dienst für Gott zu engagieren und eine starke, persönliche Beziehung zu Jesus Christus zu pflegen. Ein solches Engagement gibt ihnen die Gewissheit und Hoffnung auf das ewige Leben und darauf, mit Christus in der Ewigkeit zu regieren.',
                     ageStat1: 'Menschen 60+ bis 2030',
                     ageStat2: 'ältere Menschen bis 2050',
                     ageStat3: 'leben in Ländern mit niedrigem Einkommen',
@@ -3237,7 +3328,7 @@
                     deathFearStat: 'der älteren Erwachsenen erleben Todesangst',
                     deathFearModerate: 'der älteren Menschen haben ein mittleres Maß an Todesangst',
                     deathFearConclusionTitle: 'Die Angst vor dem Tod angehen',
-                    deathFearConclusionText: 'Die Forschung zeigt, dass ältere Menschen mit einem hohen Maß an Selbstbewertung und Meisterschaftsgefühl eine geringere Angst vor dem Tod und dem Sterben erleben [citation: 1]. Durch unsere Programme für Gemeinwohl und medizinische Hilfe helfen wir, Würde und Sinn wiederherzustellen, was diese existenzielle Angst lindern kann. Darüber hinaus bietet unsere spirituelle Führung Hoffnung und Gewissheit für die Ewigkeit.',
+                    deathFearConclusionText: 'Die Forschung zeigt, dass ältere Menschen mit einem hohen Maß an Selbstbewertung und Meisterschaftsgefühl eine geringere Angst vor dem Tod und dem Sterben erleben. Durch unsere Programme für Gemeinwohl und medizinische Hilfe helfen wir, Würde und Sinn wiederherzustellen, was diese existenzielle Angst lindern kann. Darüber hinaus bietet unsere spirituelle Führung Hoffnung und Gewissheit für die Ewigkeit.',
                     vawTitle: 'Das Ausmaß geschlechtsspezifischer Gewalt',
                     vawDesc1: '<strong>1 von 3 Frauen</strong> erlebt Gewalt — <strong>736 Millionen</strong> Frauen und Mädchen.',
                     vawDesc2: 'Gewalt gegen Frauen ist eine globale Gesundheitskrise.',
