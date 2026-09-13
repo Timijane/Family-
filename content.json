@@ -1,0 +1,42 @@
+{
+  "_note": "This file controls the welcome page slides. Edit quotes, swap image URLs, or reorder slides. Changes go live for all visitors within ~60 seconds of saving on GitHub.",
+  "_lastUpdated": "2026-09-14",
+  "welcomeSlides": [
+    {
+      "order": 1,
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg",
+      "quote": "Raising tomorrow's leaders while honouring yesterday's heroes.",
+      "attribution": "Our founding conviction"
+    },
+    {
+      "order": 2,
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg",
+      "quote": "Every teenager carries a future the world has not yet seen.",
+      "attribution": "Empowering youth since 2016"
+    },
+    {
+      "order": 3,
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
+      "quote": "No elder should spend their final years unseen, unheard, or uncared for.",
+      "attribution": "Restoring dignity to the elderly"
+    },
+    {
+      "order": 4,
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg",
+      "quote": "When generations connect, communities heal.",
+      "attribution": "Bridging generations"
+    },
+    {
+      "order": 5,
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg",
+      "quote": "Compassion is not a feeling. It is a decision we make every day.",
+      "attribution": "Serving Nigeria and the UK"
+    },
+    {
+      "order": 6,
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784973209/1784972471198_hxwsgc.jpg",
+      "quote": "You are not a visitor here. You are part of the story.",
+      "attribution": "Welcome to PHINEHAS GENERATION"
+    }
+  ]
+}
