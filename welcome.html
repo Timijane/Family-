@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="PHINEHAS GENERATION FOUNDATION — Empowering teenagers and honouring the elderly across Nigeria and the UK." />
+<meta name="theme-color" content="#0d0d0d" />
+<title>Welcome · PHINEHAS GENERATION FOUNDATION</title>
+
+<link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" type="image/jpeg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #c8943e;
+    --gold-light: #e0b866;
+    --black: #0d0d0d;
+    --white: #ffffff;
+    --overlay-dark: rgba(13, 13, 13, 0.55);
+    --overlay-deep: rgba(13, 13, 13, 0.82);
+    --transition-slow: 2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quote: 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html, body { height: 100%; overflow: hidden; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== SLIDESHOW ===== */
+  .stage {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+    will-change: opacity;
+  }
+  .slide.active { opacity: 1; }
+
+  .slide__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.08);
+    transition: transform 12s linear;
+  }
+  .slide.active .slide__img {
+    transform: scale(1);
+  }
+
+  .slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.55) 40%, rgba(13,13,13,0.35) 70%, rgba(13,13,13,0.6) 100%),
+      linear-gradient(to right, rgba(13,13,13,0.75) 0%, rgba(13,13,13,0.15) 55%, rgba(13,13,13,0.5) 100%);
+    pointer-events: none;
+  }
+
+  /* ===== QUOTE ===== */
+  .quote-wrap {
+    position: absolute;
+    left: clamp(28px, 6vw, 110px);
+    bottom: clamp(150px, 22vh, 240px);
+    right: clamp(28px, 6vw, 110px);
+    max-width: 900px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(1.6rem, 3.6vw, 3.2rem);
+    line-height: 1.22;
+    letter-spacing: -0.5px;
+    color: var(--white);
+    text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .attribution {
+    margin-top: 22px;
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .attribution::before {
+    content: '';
+    display: inline-block;
+    width: 42px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.7;
+  }
+
+  /* Quote enters when slide is active */
+  .slide.active ~ .quote-wrap .quote,
+  .quote-wrap.show .quote {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity var(--transition-quote), transform var(--transition-quote);
+  }
+  .slide.active ~ .quote-wrap .attribution,
+  .quote-wrap.show .attribution {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity var(--transition-quote) 0.15s, transform var(--transition-quote) 0.15s;
+  }
+
+  /* ===== BRAND ===== */
+  .brand {
+    position: absolute;
+    top: clamp(20px, 4vh, 44px);
+    left: clamp(24px, 5vw, 68px);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease 0.3s forwards;
+  }
+  .brand img {
+    height: 46px;
+    width: 46px;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+  }
+  .brand-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .brand-text span { color: var(--gold-light); }
+
+  /* ===== ACTION BAR ===== */
+  .actions {
+    position: absolute;
+    bottom: clamp(28px, 5vh, 54px);
+    right: clamp(28px, 6vw, 110px);
+    z-index: 5;
+    display: flex;
+    gap: 14px;
+    opacity: 0;
+    animation: fadeIn 1.4s ease 1.2s forwards;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 38px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.6px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+  }
+
+  .btn--primary {
+    background: var(--gold);
+    color: var(--black);
+    box-shadow: 0 8px 32px rgba(200, 148, 62, 0.4);
+  }
+  .btn--primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(200, 148, 62, 0.55);
+  }
+
+  .btn--ghost {
+    background: rgba(255,255,255,0.06);
+    color: var(--white);
+    border-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .btn--ghost:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-3px);
+  }
+
+  /* ===== PROGRESS DOTS ===== */
+  .dots {
+    position: absolute;
+    bottom: clamp(28px, 5vh, 54px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    gap: 14px;
+    opacity: 0;
+    animation: fadeIn 1.4s ease 1.5s forwards;
+  }
+
+  .dot {
+    width: 42px;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.22);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+  }
+  .dot:hover { background: rgba(255,255,255,0.4); }
+
+  .dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.2s linear;
+  }
+  .dot.active::after {
+    transform: scaleX(1);
+    transition: transform 6s linear;
+  }
+  .dot.active.paused::after {
+    transition: none;
+    transform: scaleX(var(--pause-progress, 0));
+  }
+
+  /* ===== LOADING STATE ===== */
+  .loading {
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease;
+  }
+  .loading.hidden { opacity: 0; pointer-events: none; }
+
+  .loading-mark {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--gold);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== SKIP LINK ===== */
+  .skip {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    background: var(--gold);
+    color: var(--black);
+    padding: 10px 22px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    z-index: 200;
+    transition: top 0.3s ease;
+  }
+  .skip:focus { top: 20px; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 720px) {
+    .quote { font-size: clamp(1.35rem, 6.4vw, 2rem); line-height: 1.28; }
+    .quote-wrap { bottom: clamp(180px, 26vh, 220px); }
+    .attribution { font-size: 0.68rem; letter-spacing: 2px; margin-top: 16px; }
+    .attribution::before { width: 28px; }
+    .brand img { height: 38px; width: 38px; }
+    .brand-text { font-size: 0.78rem; letter-spacing: 1.6px; }
+    .actions {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: calc(100% - 48px);
+      flex-direction: column;
+      gap: 10px;
+    }
+    .btn { width: 100%; justify-content: center; padding: 15px 24px; font-size: 0.88rem; }
+    .dots { bottom: 14px; gap: 10px; }
+    .dot { width: 32px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .slide { transition: opacity 0.3s ease; }
+    .slide__img { transition: none; transform: scale(1) !important; }
+    .quote, .attribution { transition: opacity 0.3s ease !important; transform: none !important; }
+    .dot::after, .dot.active::after { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="skip">Skip to site</a>
+
+<!-- Loading veil -->
+<div class="loading" id="loading" aria-hidden="true">
+  <div class="loading-mark">PHINEHAS</div>
+</div>
+
+<!-- Stage -->
+<main class="stage" id="stage" role="region" aria-label="Welcome slideshow" tabindex="-1">
+
+  <!-- Slides injected here by JS -->
+
+  <div class="brand" aria-label="PHINEHAS GENERATION FOUNDATION">
+    <img
+      src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg"
+      alt=""
+      width="46" height="46"
+    />
+    <div class="brand-text">PHINEHAS <span>GENERATION</span></div>
+  </div>
+
+  <div class="quote-wrap" id="quoteWrap" aria-live="polite">
+    <div class="quote" id="quoteText"></div>
+    <div class="attribution" id="quoteAttribution"></div>
+  </div>
+
+  <div class="dots" id="dots" role="tablist" aria-label="Slide navigation"></div>
+
+  <div class="actions">
+    <a href="index.html" class="btn btn--primary">
+      Enter Site
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+    <a href="donate.html" class="btn btn--ghost">
+      Donate
+    </a>
+  </div>
+
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  // ============================================================
+  //  CONFIGURATION
+  // ============================================================
+  const SLIDE_DURATION = 6000;   // ms each slide stays
+  const FADE_DURATION = 2000;    // ms crossfade between slides
+  const CONTENT_URL = 'content.json';
+
+  // Fallback slides — shown only if content.json fails to load.
+  // Keep this in sync with content.json so the page never breaks.
+  const FALLBACK_SLIDES = [
+    {
+      order: 1,
+      image: 'https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg',
+      quote: "Raising tomorrow's leaders while honouring yesterday's heroes.",
+      attribution: 'Our founding conviction'
+    }
+  ];
+
+  // ============================================================
+  //  STATE
+  // ============================================================
+  let slides = [];
+  let currentIndex = 0;
+  let timer = null;
+  let paused = false;
+  let reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // DOM
+  const stage = document.getElementById('stage');
+  const loading = document.getElementById('loading');
+  const quoteWrap = document.getElementById('quoteWrap');
+  const quoteText = document.getElementById('quoteText');
+  const quoteAttribution = document.getElementById('quoteAttribution');
+  const dotsContainer = document.getElementById('dots');
+
+  // ============================================================
+  //  LOAD CONTENT
+  // ============================================================
+  async function loadContent() {
+    try {
+      const res = await fetch(CONTENT_URL + '?v=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      const list = Array.isArray(data.welcomeSlides) ? data.welcomeSlides : [];
+      if (list.length === 0) throw new Error('No slides in content.json');
+      // sort by order
+      list.sort((a, b) => (a.order || 0) - (b.order || 0));
+      return list;
+    } catch (err) {
+      console.warn('[welcome] Failed to load content.json, using fallback.', err);
+      return FALLBACK_SLIDES;
+    }
+  }
+
+  // ============================================================
+  //  BUILD DOM
+  // ============================================================
+  function buildSlides() {
+    slides.forEach((slide, i) => {
+      // Slide container
+      const slideEl = document.createElement('div');
+      slideEl.className = 'slide' + (i === 0 ? ' active' : '');
+      slideEl.dataset.index = i;
+      slideEl.setAttribute('role', 'group');
+      slideEl.setAttribute('aria-roledescription', 'slide');
+      slideEl.setAttribute('aria-label', (i + 1) + ' of ' + slides.length);
+
+      const img = document.createElement('img');
+      img.className = 'slide__img';
+      img.src = slide.image;
+      img.alt = slide.quote ? 'Slide image: ' + slide.quote : '';
+      img.loading = i === 0 ? 'eager' : 'lazy';
+      img.decoding = 'async';
+      if (i === 0) img.fetchPriority = 'high';
+
+      slideEl.appendChild(img);
+      stage.insertBefore(slideEl, stage.firstChild);
+    });
+
+    // Dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      dot.addEventListener('click', () => goTo(i, true));
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  // ============================================================
+  //  QUOTE TRANSITION
+  // ============================================================
+  function updateQuote(index) {
+    const slide = slides[index];
+    if (!slide) return;
+
+    // Fade quote out
+    quoteWrap.classList.remove('show');
+    quoteText.style.opacity = '0';
+    quoteText.style.transform = 'translateY(-14px)';
+    quoteAttribution.style.opacity = '0';
+    quoteAttribution.style.transform = 'translateY(-10px)';
+
+    // Swap content and fade back in
+    setTimeout(() => {
+      quoteText.textContent = slide.quote || '';
+      quoteAttribution.textContent = slide.attribution || '';
+      requestAnimationFrame(() => {
+        quoteWrap.classList.add('show');
+      });
+    }, 280);
+  }
+
+  // ============================================================
+  //  NAVIGATION
+  // ============================================================
+  function goTo(index, userTriggered) {
+    if (index === currentIndex && !userTriggered) return;
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    const slideEls = stage.querySelectorAll('.slide');
+    const dotEls = dotsContainer.querySelectorAll('.dot');
+
+    slideEls.forEach((el, i) => el.classList.toggle('active', i === index));
+    dotEls.forEach((el, i) => {
+      el.classList.toggle('active', i === index);
+      el.setAttribute('aria-selected', i === index ? 'true' : 'false');
+    });
+
+    currentIndex = index;
+    updateQuote(index);
+
+    if (userTriggered) restartTimer();
+  }
+
+  function next() {
+    goTo((currentIndex + 1) % slides.length);
+  }
+
+  function startTimer() {
+    stopTimer();
+    if (reducedMotion) {
+      // Still rotate, but with the shorter timeout
+      timer = setTimeout(next, SLIDE_DURATION);
+    } else {
+      timer = setTimeout(next, SLIDE_DURATION);
+    }
+  }
+
+  function stopTimer() {
+    if (timer) { clearTimeout(timer); timer = null; }
+  }
+
+  function restartTimer() {
+    stopTimer();
+    if (!paused) startTimer();
+  }
+
+  // ============================================================
+  //  PAUSE ON HOVER / FOCUS / HIDDEN TAB
+  // ============================================================
+  function pause() {
+    paused = true;
+    stopTimer();
+  }
+  function resume() {
+    paused = false;
+    startTimer();
+  }
+
+  stage.addEventListener('mouseenter', pause);
+  stage.addEventListener('mouseleave', resume);
+  stage.addEventListener('focusin', pause);
+  stage.addEventListener('focusout', resume);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) pause();
+    else resume();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(currentIndex + 1, true); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(currentIndex - 1, true); }
+    if (e.key === ' ')          { e.preventDefault(); paused ? resume() : pause(); }
+  });
+
+  // Touch swipe
+  let touchStartX = 0;
+  stage.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    pause();
+  }, { passive: true });
+  stage.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+      goTo(dx < 0 ? currentIndex + 1 : currentIndex - 1, true);
+    }
+    resume();
+  }, { passive: true });
+
+  // ============================================================
+  //  INIT
+  // ============================================================
+  async function init() {
+    slides = await loadContent();
+    buildSlides();
+    updateQuote(0);
+
+    // Hide loading veil once first image is ready
+    const firstImg = stage.querySelector('.slide.active .slide__img');
+    const reveal = () => {
+      loading.classList.add('hidden');
+      setTimeout(() => { loading.style.display = 'none'; }, 900);
+    };
+    if (firstImg && firstImg.complete) reveal();
+    else if (firstImg) firstImg.addEventListener('load', reveal, { once: true });
+    else reveal();
+
+    // Also fail-safe: hide veil after 3s no matter what
+    setTimeout(reveal, 3000);
+
+    startTimer();
+  }
+
+  init();
+})();
+</script>
+
+</body>
+</html>
