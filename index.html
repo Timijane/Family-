@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="PHINEHAS GENERATION FOUNDATION — Empowering teenagers and honouring the elderly through mentorship, healthcare, and community outreach across Nigeria and the UK since 2016." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#0d0d0d" />
+<meta name="description" content="PHINEHAS GENERATION FOUNDATION — Empowering teenagers and honouring the elderly through mentorship, healthcare, and community outreach across Nigeria and the UK since 2016." />
 
-<!-- Open Graph -->
 <meta property="og:title" content="PHINEHAS GENERATION FOUNDATION | Empowering Teenagers. Honouring the Elderly." />
 <meta property="og:description" content="Bridging two generations — through mentorship, healthcare, and community outreach across Nigeria and the UK." />
 <meta property="og:type" content="website" />
@@ -19,1594 +18,36 @@
 <link rel="canonical" href="https://phinehasgeneration.org" />
 <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" type="image/jpeg" />
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet" />
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-<style>
-/* ============================================================
-   PHINEHAS GENERATION FOUNDATION
-   World-standard NGO landing page
-   Mobile-first responsive design
-   ============================================================ */
-
-/* ============================================================
-   1. RESET & BASE
-   ============================================================ */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-:root {
-  /* Brand palette */
-  --gold: #c8943e;
-  --gold-light: #e0b866;
-  --gold-dark: #a67a2e;
-  --gold-pale: #fdf8f0;
-  --black: #0d0d0d;
-  --black-soft: #1a1a1a;
-  --black-mute: #2a2a2a;
-  --green: #6b8f71;
-  --green-dark: #3d5a42;
-  --green-pale: #e8efe9;
-  --cream: #faf7f2;
-  --cream-dark: #f2ede3;
-  --white: #ffffff;
-  --gray-100: #f7f6f3;
-  --gray-200: #e8e6e1;
-  --gray-300: #d4d2cc;
-  --gray-400: #9a9a9a;
-  --gray-500: #6b6b6b;
-  --gray-600: #4a4a4a;
-
-  /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-
-  /* Spacing */
-  --section-pad: clamp(70px, 10vw, 130px);
-  --container-max: 1280px;
-  --container-narrow: 880px;
-
-  /* Radius & shadows */
-  --radius-sm: 10px;
-  --radius: 16px;
-  --radius-lg: 24px;
-  --radius-full: 9999px;
-  --shadow-sm: 0 2px 12px rgba(13,13,13,0.06);
-  --shadow: 0 12px 40px rgba(13,13,13,0.10);
-  --shadow-lg: 0 28px 80px rgba(13,13,13,0.18);
-
-  /* Transitions */
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --transition: 0.35s var(--ease);
-  --transition-slow: 0.7s var(--ease-out);
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  font-family: var(--font-sans);
-  background: var(--white);
-  color: var(--black);
-  line-height: 1.65;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img { max-width: 100%; display: block; height: auto; }
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
-button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
-
-.container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 22px;
-}
-.container-narrow {
-  max-width: var(--container-narrow);
-  margin: 0 auto;
-  padding: 0 22px;
-}
-
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  background: var(--gold);
-  color: var(--white);
-  padding: 10px 20px;
-  z-index: 10000;
-  border-radius: 0 0 var(--radius-sm) 0;
-  transition: top 0.3s;
-}
-.skip-link:focus { top: 0; }
-
-/* ============================================================
-   2. TYPOGRAPHY
-   ============================================================ */
-.section-label {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: var(--gold-dark);
-  margin-bottom: 14px;
-}
-
-.section-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.9rem, 5vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.6px;
-  color: var(--black);
-  margin-bottom: 18px;
-}
-
-.section-title .highlight { color: var(--gold); }
-
-.section-subtitle {
-  font-size: 1.05rem;
-  color: var(--gray-500);
-  max-width: 640px;
-  line-height: 1.75;
-}
-
-/* ============================================================
-   3. BUTTONS
-   ============================================================ */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px 32px;
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  font-size: 0.94rem;
-  letter-spacing: 0.3px;
-  transition: all var(--transition);
-  cursor: pointer;
-  white-space: nowrap;
-  position: relative;
-  overflow: hidden;
-  border: 1.5px solid transparent;
-}
-
-.btn i { font-size: 0.85rem; }
-
-.btn-primary {
-  background: var(--gold);
-  color: var(--white);
-  box-shadow: 0 6px 24px rgba(200,148,62,0.32);
-}
-.btn-primary:hover {
-  background: var(--gold-light);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 34px rgba(200,148,62,0.45);
-}
-
-.btn-dark {
-  background: var(--black);
-  color: var(--white);
-}
-.btn-dark:hover {
-  background: var(--black-mute);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 34px rgba(13,13,13,0.25);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--black);
-  border-color: var(--black);
-}
-.btn-outline:hover {
-  background: var(--black);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
-.btn-outline-light {
-  background: transparent;
-  color: var(--white);
-  border-color: rgba(255,255,255,0.5);
-}
-.btn-outline-light:hover {
-  background: var(--white);
-  color: var(--black);
-  border-color: var(--white);
-  transform: translateY(-2px);
-}
-
-.btn-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  font-size: 0.92rem;
-  color: var(--gold-dark);
-  border-bottom: 1.5px solid transparent;
-  padding-bottom: 2px;
-  transition: var(--transition);
-}
-.btn-link:hover {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-  gap: 12px;
-}
-
-/* ============================================================
-   4. HEADER
-   ============================================================ */
-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  padding: 14px 0;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  transition: transform 0.4s var(--ease), padding 0.3s ease;
-}
-header.scrolled { padding: 10px 0; box-shadow: 0 4px 24px rgba(0,0,0,0.05); }
-header.hidden { transform: translateY(-100%); }
-
-.nav-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  color: var(--black);
-  flex-shrink: 0;
-}
-.logo img {
-  height: 40px; width: 40px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-.logo-text span { color: var(--gold); }
-
-.nav-menu {
-  display: none;
-  align-items: center;
-  gap: 26px;
-}
-.nav-menu a {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--black-soft);
-  position: relative;
-  transition: color var(--transition);
-  padding: 6px 0;
-}
-.nav-menu a::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: 0;
-  width: 0; height: 2px;
-  background: var(--gold);
-  transition: width var(--transition);
-  border-radius: 2px;
-}
-.nav-menu a:hover, .nav-menu a.active { color: var(--gold-dark); }
-.nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
-
-.nav-donate {
-  background: var(--gold);
-  color: var(--white) !important;
-  padding: 10px 24px !important;
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  transition: var(--transition);
-}
-.nav-donate::after { display: none !important; }
-.nav-donate:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-.hamburger {
-  display: block;
-  font-size: 1.4rem;
-  padding: 8px;
-  color: var(--black);
-}
-
-/* Mobile menu open state */
-.nav-menu.open {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0; right: 0;
-  background: var(--white);
-  padding: 24px 22px;
-  gap: 4px;
-  border-top: 1px solid var(--gray-200);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-  align-items: stretch;
-}
-.nav-menu.open a { padding: 14px 0; font-size: 1rem; }
-.nav-menu.open .nav-donate { text-align: center; margin-top: 12px; }
-
-/* ============================================================
-   5. HERO
-   ============================================================ */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  background: var(--black);
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.hero-bg img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transform: scale(1.06);
-  transition: transform 8s ease-out;
-}
-.hero.loaded .hero-bg img { transform: scale(1); }
-
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to top, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.55) 35%, rgba(13,13,13,0.25) 65%, rgba(13,13,13,0.55) 100%),
-    linear-gradient(to right, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.1) 55%, rgba(13,13,13,0.4) 100%);
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 120px 0 80px;
-  color: var(--white);
-}
-
-.hero-content { max-width: 780px; }
-
-.hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 24px;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.3s forwards;
-}
-.hero-eyebrow::before {
-  content: '';
-  width: 36px; height: 1px;
-  background: var(--gold);
-}
-
-.hero h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 7vw, 4.6rem);
-  font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -1px;
-  color: var(--white);
-  margin-bottom: 22px;
-  text-shadow: 0 4px 30px rgba(0,0,0,0.4);
-  opacity: 0;
-  animation: fadeUp 1s ease 0.5s forwards;
-}
-
-.hero-sub {
-  font-size: clamp(1rem, 1.6vw, 1.18rem);
-  color: rgba(255,255,255,0.88);
-  line-height: 1.7;
-  max-width: 600px;
-  margin-bottom: 36px;
-  opacity: 0;
-  animation: fadeUp 1s ease 0.75s forwards;
-}
-
-.hero-cta {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeUp 1s ease 1s forwards;
-}
-
-.hero-proof {
-  margin-top: 32px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  opacity: 0;
-  animation: fadeUp 1s ease 1.4s forwards;
-}
-.hero-proof::before {
-  content: '';
-  width: 30px; height: 1px;
-  background: var(--gold);
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ============================================================
-   6. OPENING STATEMENT
-   ============================================================ */
-.opening {
-  background: var(--cream);
-  padding: var(--section-pad) 0;
-}
-.opening-inner {
-  max-width: 880px;
-  margin: 0 auto;
-  text-align: center;
-}
-.opening p {
-  font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 2.8vw, 1.95rem);
-  line-height: 1.5;
-  color: var(--black-soft);
-  margin-bottom: 24px;
-  font-weight: 500;
-}
-.opening p:first-child { font-weight: 600; }
-.opening p.emphasis {
-  font-weight: 700;
-  color: var(--black);
-  font-size: clamp(1.5rem, 3.4vw, 2.3rem);
-  margin: 40px 0;
-  position: relative;
-}
-.opening p.emphasis::before,
-.opening p.emphasis::after {
-  content: '';
-  display: block;
-  width: 60px; height: 1px;
-  background: var(--gold);
-  margin: 0 auto;
-}
-.opening p.emphasis::before { margin-bottom: 32px; }
-.opening p.emphasis::after { margin-top: 32px; }
-
-/* ============================================================
-   7. ABOUT
-   ============================================================ */
-.about-block {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-}
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
-}
-.about-image {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 4/5;
-  box-shadow: var(--shadow);
-  max-width: 500px;
-  margin: 0 auto;
-  width: 100%;
-}
-.about-image img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-.about-image:hover img { transform: scale(1.04); }
-.about-image .badge {
-  position: absolute;
-  bottom: 20px; left: 20px;
-  background: var(--gold);
-  color: var(--white);
-  padding: 9px 20px;
-  border-radius: var(--radius-full);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.about-content p {
-  font-size: 1.02rem;
-  color: var(--gray-600);
-  line-height: 1.85;
-  margin-bottom: 18px;
-}
-.about-content p:last-of-type { margin-bottom: 28px; }
-
-/* ============================================================
-   8. WHO WE SERVE
-   ============================================================ */
-.serve {
-  padding: var(--section-pad) 0;
-  background: var(--cream);
-}
-.serve-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 60px;
-}
-.serve-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.serve-card {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  min-height: 480px;
-  display: flex;
-  align-items: flex-end;
-  background: var(--black);
-  transition: var(--transition);
-}
-.serve-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.serve-card img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  transition: transform 0.9s ease;
-}
-.serve-card:hover img { transform: scale(1.06); }
-.serve-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.5) 45%, rgba(13,13,13,0.1) 80%);
-  z-index: 1;
-}
-.serve-card-body {
-  position: relative;
-  z-index: 2;
-  padding: 36px 30px;
-  color: var(--white);
-  width: 100%;
-}
-.serve-card-body h3 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
-  font-weight: 700;
-  margin-bottom: 12px;
-  letter-spacing: -0.3px;
-}
-.serve-card-body p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 18px;
-  max-width: 520px;
-}
-.serve-card .btn-link { color: var(--gold-light); }
-.serve-card .btn-link:hover { color: var(--white); border-bottom-color: var(--white); }
-
-.scripture-strip {
-  margin-top: 60px;
-  text-align: center;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 16px;
-}
-.scripture-strip p {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(1.05rem, 2vw, 1.3rem);
-  color: var(--gray-600);
-  line-height: 1.65;
-  margin-bottom: 12px;
-}
-.scripture-strip cite {
-  font-family: var(--font-sans);
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold-dark);
-}
-
-/* ============================================================
-   9. IMPACT
-   ============================================================ */
-.impact {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-  position: relative;
-  overflow: hidden;
-}
-.impact-header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 60px;
-}
-.impact-columns {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.impact-col {
-  padding: 40px 32px;
-  border-radius: var(--radius-lg);
-  background: var(--cream);
-  border: 1px solid var(--gray-200);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-.impact-col:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.impact-col--vision {
-  background: linear-gradient(150deg, #1a1a1a 0%, #2a2a2a 100%);
-  color: var(--white);
-  border-color: transparent;
-}
-.impact-col--vision::before {
-  content: '';
-  position: absolute;
-  top: -60px; right: -60px;
-  width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(200,148,62,0.15) 0%, transparent 70%);
-  border-radius: 50%;
-}
-.impact-col-heading {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-dark);
-  margin-bottom: 18px;
-}
-.impact-col--vision .impact-col-heading { color: var(--gold-light); }
-.impact-col-total {
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 800;
-  line-height: 1.1;
-  color: var(--black);
-  margin-bottom: 28px;
-  letter-spacing: -0.5px;
-}
-.impact-col--vision .impact-col-total { color: var(--white); }
-.impact-group {
-  padding-top: 20px;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  margin-bottom: 20px;
-}
-.impact-col--vision .impact-group { border-top-color: rgba(255,255,255,0.12); }
-.impact-group:last-of-type { margin-bottom: 28px; }
-.impact-group-label {
-  font-size: 1.02rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: var(--black);
-}
-.impact-col--vision .impact-group-label { color: var(--gold-light); }
-.impact-group-detail {
-  font-size: 0.9rem;
-  color: var(--gray-500);
-  line-height: 1.55;
-}
-.impact-col--vision .impact-group-detail { color: rgba(255,255,255,0.7); }
-.impact-footer {
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--gray-500);
-  padding-top: 18px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-.impact-col--vision .impact-footer {
-  color: rgba(255,255,255,0.6);
-  border-top-color: rgba(255,255,255,0.1);
-}
-.impact-closing {
-  text-align: center;
-  margin-top: 50px;
-  font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  font-style: italic;
-  color: var(--gray-600);
-}
-.impact-closing a { display: block; margin-top: 22px; }
-
-/* ============================================================
-   10. FEATURED STORY
-   ============================================================ */
-.story {
-  position: relative;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: var(--black);
-  color: var(--white);
-}
-.story-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.story-bg img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-}
-.story-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.7) 45%, rgba(13,13,13,0.35) 100%);
-}
-.story-inner {
-  position: relative;
-  z-index: 2;
-  padding: 80px 0;
-  width: 100%;
-}
-.story-content { max-width: 620px; }
-.story-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
-  font-style: italic;
-  line-height: 1.35;
-  color: var(--gold-light);
-  margin-bottom: 28px;
-  position: relative;
-  padding-left: 28px;
-}
-.story-quote::before {
-  content: '"';
-  position: absolute;
-  left: 0; top: -12px;
-  font-size: 3.5rem;
-  color: var(--gold);
-  opacity: 0.5;
-  line-height: 1;
-}
-.story-text {
-  font-size: 1.02rem;
-  line-height: 1.8;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 16px;
-}
-.story-text strong { color: var(--white); }
-.story-location {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin: 22px 0 28px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.story-location::before {
-  content: '';
-  width: 30px; height: 1px;
-  background: var(--gold);
-}
-
-/* ============================================================
-   11. THE NEED
-   ============================================================ */
-.need {
-  padding: var(--section-pad) 0;
-  background: var(--cream);
-  position: relative;
-  overflow: hidden;
-}
-.need-inner {
-  max-width: 880px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-.need-number {
-  font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 12vw, 8.5rem);
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -3px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 18px;
-}
-.need-line {
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-  line-height: 1.45;
-  color: var(--black);
-  font-weight: 600;
-  margin-bottom: 18px;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.need-interpretation {
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--gray-500);
-  line-height: 1.7;
-  margin-bottom: 26px;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.need-source {
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gray-400);
-  font-weight: 600;
-  margin-bottom: 36px;
-}
-.need-source::before, .need-source::after {
-  content: '—';
-  margin: 0 10px;
-  color: var(--gold);
-}
-
-/* ============================================================
-   12. PROGRAMS
-   ============================================================ */
-.programs {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-}
-.programs-header {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 50px;
-}
-.programs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.program-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--gray-200);
-  transition: var(--transition);
-  display: block;
-}
-.program-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--gold);
-}
-.program-thumb {
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  background: var(--gray-100);
-}
-.program-thumb img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-.program-card:hover .program-thumb img { transform: scale(1.07); }
-.program-body { padding: 28px 26px; }
-.program-body h3 {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--black);
-  letter-spacing: -0.3px;
-}
-.program-body p {
-  font-size: 0.96rem;
-  color: var(--gray-500);
-  line-height: 1.65;
-  margin-bottom: 16px;
-}
-.program-body .btn-link { font-size: 0.86rem; }
-
-/* ============================================================
-   13. FOUNDER
-   ============================================================ */
-.founder {
-  padding: var(--section-pad) 0;
-  background: var(--cream);
-}
-.founder-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
-}
-.founder-image {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 3/4;
-  box-shadow: var(--shadow-lg);
-  max-width: 420px;
-  margin: 0 auto;
-  width: 100%;
-}
-.founder-image img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-}
-.founder-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(13,13,13,0.35) 0%, transparent 50%);
-}
-.founder-image .founder-badge {
-  position: absolute;
-  bottom: 20px; left: 20px;
-  background: rgba(255,255,255,0.95);
-  color: var(--black);
-  padding: 9px 20px;
-  border-radius: var(--radius-full);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  z-index: 2;
-}
-.founder-content h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 4vw, 2.5rem);
-  font-weight: 800;
-  color: var(--black);
-  margin-bottom: 6px;
-  letter-spacing: -0.6px;
-}
-.founder-role {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-dark);
-  margin-bottom: 26px;
-  display: block;
-}
-.founder-content p {
-  font-size: 1.02rem;
-  color: var(--gray-600);
-  line-height: 1.85;
-  margin-bottom: 18px;
-}
-.founder-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
-  font-style: italic;
-  line-height: 1.45;
-  color: var(--gold-dark);
-  margin: 28px 0;
-  padding-left: 24px;
-  border-left: 3px solid var(--gold);
-}
-
-/* ============================================================
-   14. VOICES
-   ============================================================ */
-.voices {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-}
-.voices-header {
-  text-align: center;
-  max-width: 620px;
-  margin: 0 auto 60px;
-}
-.voices-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.voice {
-  position: relative;
-  padding: 40px 32px;
-  background: var(--cream);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--gray-200);
-  transition: var(--transition);
-}
-.voice:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.voice::before {
-  content: '"';
-  position: absolute;
-  top: 16px; right: 28px;
-  font-family: var(--font-serif);
-  font-size: 4.5rem;
-  line-height: 1;
-  color: var(--gold);
-  opacity: 0.2;
-}
-.voice blockquote {
-  font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
-  font-style: italic;
-  line-height: 1.55;
-  color: var(--black-soft);
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 1;
-}
-.voice-author {
-  font-weight: 700;
-  font-size: 0.96rem;
-  color: var(--black);
-  margin-bottom: 4px;
-}
-.voice-role {
-  font-size: 0.78rem;
-  color: var(--gold-dark);
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-/* ============================================================
-   15. WHERE WE WORK
-   ============================================================ */
-.where {
-  padding: var(--section-pad) 0;
-  background: var(--cream);
-}
-.where-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 60px;
-}
-.where-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.where-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 40px 32px;
-  border: 1px solid var(--gray-200);
-  transition: var(--transition);
-}
-.where-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.where-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--black);
-}
-.where-focus {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold-dark);
-  margin-bottom: 20px;
-  display: block;
-}
-.where-card p {
-  font-size: 0.98rem;
-  color: var(--gray-600);
-  line-height: 1.75;
-  margin-bottom: 16px;
-}
-.where-stats {
-  display: flex;
-  gap: 24px;
-  margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px solid var(--gray-200);
-  flex-wrap: wrap;
-}
-.where-stat {
-  flex: 1;
-  min-width: 100px;
-}
-.where-stat-number {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.where-stat-label {
-  font-size: 0.78rem;
-  color: var(--gray-500);
-  line-height: 1.3;
-}
-
-/* ============================================================
-   16. HOW YOU CAN HELP
-   ============================================================ */
-.help {
-  padding: var(--section-pad) 0;
-  background: var(--black);
-  color: var(--white);
-}
-.help-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 60px;
-}
-.help-header .section-title { color: var(--white); }
-.help-header .section-subtitle { color: rgba(255,255,255,0.7); }
-.help-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.help-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-lg);
-  padding: 40px 32px;
-  transition: var(--transition);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-.help-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255,255,255,0.07);
-  border-color: var(--gold);
-}
-.help-icon {
-  font-size: 1.8rem;
-  color: var(--gold-light);
-  margin-bottom: 20px;
-}
-.help-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--white);
-}
-.help-card p {
-  font-size: 0.98rem;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-.help-card .btn-link { color: var(--gold-light); }
-.help-card .btn-link:hover { color: var(--white); border-bottom-color: var(--white); }
-
-/* ============================================================
-   17. WAYS TO GIVE
-   ============================================================ */
-.give {
-  padding: var(--section-pad) 0;
-  background: linear-gradient(155deg, #0d0d0d 0%, #1a1a1a 55%, #0d0d0d 100%);
-  color: var(--white);
-  position: relative;
-  overflow: hidden;
-}
-.give::before {
-  content: '';
-  position: absolute;
-  top: -100px; right: -100px;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(200,148,62,0.12) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.give::after {
-  content: '';
-  position: absolute;
-  bottom: -120px; left: -100px;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(107,143,113,0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.give-inner { position: relative; z-index: 2; }
-.give-header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 50px;
-}
-.give-header .section-title { color: var(--white); }
-.give-scripture {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(1rem, 1.8vw, 1.22rem);
-  color: rgba(255,255,255,0.8);
-  line-height: 1.6;
-  margin-top: 24px;
-  max-width: 660px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.give-scripture cite {
-  display: block;
-  margin-top: 14px;
-  font-family: var(--font-sans);
-  font-style: normal;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-}
-.give-vision {
-  text-align: center;
-  font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.38rem);
-  font-style: italic;
-  color: var(--gold-light);
-  margin-bottom: 36px;
-}
-.give-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 340px;
-  margin: 0 auto 36px;
-}
-.give-volunteer {
-  text-align: center;
-  padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  max-width: 560px;
-  margin: 0 auto;
-}
-.give-volunteer p {
-  font-size: 0.96rem;
-  color: rgba(255,255,255,0.65);
-  margin-bottom: 12px;
-}
-.give-volunteer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--gold-light);
-  font-weight: 600;
-  font-size: 0.92rem;
-  border-bottom: 1.5px solid transparent;
-  padding-bottom: 2px;
-  transition: var(--transition);
-}
-.give-volunteer a:hover {
-  color: var(--white);
-  border-bottom-color: var(--white);
-  gap: 12px;
-}
-
-/* ============================================================
-   18. FAQ
-   ============================================================ */
-.faq {
-  padding: var(--section-pad) 0;
-  background: var(--cream);
-}
-.faq-header {
-  text-align: center;
-  max-width: 620px;
-  margin: 0 auto 50px;
-}
-.faq-list {
-  max-width: 780px;
-  margin: 0 auto;
-}
-.faq-item {
-  background: var(--white);
-  border-radius: var(--radius);
-  margin-bottom: 14px;
-  border: 1px solid var(--gray-200);
-  overflow: hidden;
-  transition: var(--transition);
-}
-.faq-item:hover { border-color: var(--gold); }
-.faq-question {
-  width: 100%;
-  text-align: left;
-  padding: 22px 26px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--black);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  transition: var(--transition);
-}
-.faq-question i {
-  font-size: 0.85rem;
-  color: var(--gold);
-  transition: transform var(--transition);
-  flex-shrink: 0;
-}
-.faq-item.open .faq-question i { transform: rotate(180deg); }
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s var(--ease);
-}
-.faq-answer-inner {
-  padding: 0 26px 24px;
-  font-size: 0.96rem;
-  color: var(--gray-600);
-  line-height: 1.75;
-}
-.faq-item.open .faq-answer { max-height: 400px; }
-
-/* ============================================================
-   19. FOOTER
-   ============================================================ */
-footer {
-  background: var(--black);
-  color: var(--white);
-  padding: 70px 0 28px;
-  position: relative;
-  overflow: hidden;
-}
-footer::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-  opacity: 0.3;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-.footer-brand .logo { color: var(--white); margin-bottom: 18px; justify-content: center; }
-.footer-brand .logo img { height: 44px; width: 44px; }
-.footer-brand p {
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.7;
-  max-width: 320px;
-  margin: 0 auto 22px;
-}
-.footer-social {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-.footer-social a {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-  font-size: 0.9rem;
-}
-.footer-social a:hover {
-  background: var(--gold);
-  transform: translateY(-3px);
-}
-.footer h4 {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: var(--white);
-}
-.footer-links a {
-  display: block;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.6);
-  padding: 6px 0;
-  transition: var(--transition);
-}
-.footer-links a:hover { color: var(--gold-light); }
-.footer-links a i {
-  width: 18px;
-  margin-right: 8px;
-  color: var(--gold-light);
-  font-size: 0.75rem;
-}
-.footer-bottom {
-  padding-top: 28px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  text-align: center;
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.45);
-}
-.footer-bottom a {
-  color: var(--gold-light);
-  border-bottom: 1px dashed transparent;
-  transition: var(--transition);
-}
-.footer-bottom a:hover { border-bottom-color: var(--gold-light); }
-
-/* ============================================================
-   20. FLOATING ELEMENTS
-   ============================================================ */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px; right: 24px;
-  width: 52px; height: 52px;
-  border-radius: 50%;
-  background: #25d366;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  box-shadow: 0 8px 28px rgba(37,211,102,0.4);
-  z-index: 900;
-  transition: var(--transition);
-}
-.whatsapp-float:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 14px 40px rgba(37,211,102,0.55); }
-
-.back-to-top {
-  position: fixed;
-  bottom: 24px; right: 88px;
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  background: var(--black);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
-  z-index: 899;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: var(--transition);
-}
-.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
-.back-to-top:hover { background: var(--gold); }
-
-/* ============================================================
-   21. SCROLL REVEAL
-   ============================================================ */
-.reveal {
-  opacity: 0;
-  transform: translateY(34px);
-  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
-}
-.reveal.in { opacity: 1; transform: translateY(0); }
-.reveal.delay-1 { transition-delay: 0.1s; }
-.reveal.delay-2 { transition-delay: 0.2s; }
-.reveal.delay-3 { transition-delay: 0.3s; }
-.reveal.delay-4 { transition-delay: 0.4s; }
-
-/* ============================================================
-   22. RESPONSIVE — TABLET (min-width: 640px)
-   ============================================================ */
-@media (min-width: 640px) {
-  .container { padding: 0 28px; }
-  .container-narrow { padding: 0 28px; }
-
-  .hero-inner { padding: 140px 0 100px; }
-  .hero-cta { flex-direction: row; align-items: center; }
-
-  .serve-grid { grid-template-columns: 1fr 1fr; }
-  .programs-grid { grid-template-columns: 1fr 1fr; }
-  .voices-grid { grid-template-columns: 1fr 1fr; }
-  .where-grid { grid-template-columns: 1fr 1fr; }
-  .help-grid { grid-template-columns: 1fr 1fr; }
-  .give-actions { flex-direction: row; max-width: none; justify-content: center; }
-
-  .footer-grid { grid-template-columns: 1fr 1fr; text-align: left; }
-  .footer-brand .logo { justify-content: flex-start; }
-  .footer-brand p { margin-left: 0; margin-right: 0; }
-  .footer-social { justify-content: flex-start; }
-}
-
-/* ============================================================
-   23. RESPONSIVE — DESKTOP (min-width: 900px)
-   ============================================================ */
-@media (min-width: 900px) {
-  .nav-menu { display: flex; }
-  .hamburger { display: none; }
-
-  .about-grid { grid-template-columns: 1fr 1.15fr; gap: 70px; }
-  .about-image { max-width: none; margin: 0; }
-
-  .impact-columns { grid-template-columns: 1fr 1fr; }
-
-  .founder-grid { grid-template-columns: 0.85fr 1.15fr; gap: 80px; }
-  .founder-image { max-width: none; margin: 0; }
-
-  .programs-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .programs-grid { grid-template-columns: repeat(3, 1fr); }
-
-  .where-grid { grid-template-columns: 1fr 1fr; }
-  .help-grid { grid-template-columns: repeat(3, 1fr); }
-
-  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.2fr; }
-}
-
-/* ============================================================
-   24. RESPONSIVE — LARGE (min-width: 1100px)
-   ============================================================ */
-@media (min-width: 1100px) {
-  .hero-inner { padding: 160px 0 120px; }
-  .story-inner { padding: 100px 0; }
-}
-
-/* ============================================================
-   25. REDUCED MOTION
-   ============================================================ */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  .reveal { opacity: 1; transform: none; }
-}
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-logo">
+      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="" />
+    </div>
+    <div class="loader-title">PHINEHAS</div>
+    <div class="loader-sub">Generation Foundation</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<!-- ============ CURSOR ============ -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- ============================================================
-     HEADER
-     ============================================================ -->
-<header id="header">
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
   <div class="container nav-wrap">
     <a href="index.html" class="logo" aria-label="PHINEHAS GENERATION FOUNDATION — Home">
-      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="PHINEHAS GENERATION FOUNDATION logo" width="40" height="40" />
+      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="Logo" width="40" height="40" />
       <span class="logo-text">PHINEHAS <span>GENERATION</span></span>
     </a>
 
@@ -1618,7 +59,7 @@ footer::before {
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="programs.html">Programs</a>
-      <a href="index.html#impact">Impact</a>
+      <a href="#impact">Impact</a>
       <a href="blog.html">Blog</a>
       <a href="volunteer.html">Volunteer</a>
       <a href="contact.html">Contact</a>
@@ -1627,59 +68,98 @@ footer::before {
   </div>
 </header>
 
+<div class="nav-overlay" id="navOverlay"></div>
+
 <main id="main">
 
-<!-- ============================================================
-     1 · HERO
-     ============================================================ -->
+<!-- ============ HERO ============ -->
 <section class="hero" id="hero">
-  <div class="hero-bg">
-    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg" alt="PHINEHAS GENERATION FOUNDATION serving communities across Nigeria and the UK" fetchpriority="high" />
+  <div class="hero-bg" id="heroSlides">
+    <div class="hero-slide active"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg" alt="" /></div>
+    <div class="hero-slide"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg" alt="" /></div>
+    <div class="hero-slide"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="" /></div>
+    <div class="hero-slide"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg" alt="" /></div>
+    <div class="hero-slide"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784973209/1784972471198_hxwsgc.jpg" alt="" /></div>
   </div>
+  <div class="hero-overlay"></div>
+  <canvas class="hero-particles" id="particles"></canvas>
 
-  <div class="hero-inner">
-    <div class="container">
-      <div class="hero-content">
-        <span class="hero-eyebrow">PHINEHAS GENERATION FOUNDATION · Since 2016</span>
-        <h1>Empowering teenagers.<br />Honouring the elderly.</h1>
-        <p class="hero-sub">Bridging two generations — through mentorship, healthcare, and community outreach across Nigeria and the UK. We believe that every young person deserves guidance, and every elderly person deserves to be valued.</p>
-        <div class="hero-cta">
-          <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
-          <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+  <div class="hero-content">
+    <div class="hero-text">
+      <span class="hero-eyebrow">PHINEHAS GENERATION FOUNDATION · Since 2016</span>
+      <h1>Empowering teenagers.<br />Honouring the elderly.</h1>
+      <p class="hero-sub">Bridging two generations — through mentorship, healthcare, and community outreach across Nigeria and the UK. Every young person deserves guidance. Every elder deserves to be valued.</p>
+      <div class="hero-cta">
+        <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
+        <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+      </div>
+    </div>
+
+    <div class="hero-portrait-wrap">
+      <div class="hero-portrait-glow"></div>
+      <div class="hero-portrait">
+        <div class="hero-portrait-frame"></div>
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_900,q_auto,f_auto/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg" alt="Tosin AKANO — Founder" />
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="1000" data-suffix="+">0</div>
+          <div class="hero-stat-label">Lives touched</div>
         </div>
-        <div class="hero-proof">1,000+ lives touched · Nigeria &amp; the UK</div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="700" data-suffix="+">0</div>
+          <div class="hero-stat-label">Youth</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="300" data-suffix="+">0</div>
+          <div class="hero-stat-label">Elders</div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ============================================================
-     2 · OPENING STATEMENT
-     ============================================================ -->
-<section class="opening">
-  <div class="container-narrow opening-inner reveal">
-    <p>Somewhere in the corner of the world, a teenage girl is deciding whether she believes in her own future.</p>
-    <p>A few streets away, an elderly woman is spending another day alone — unseen, unheard, uncared for.</p>
-    <p class="emphasis">They are both the reason we exist.</p>
-    <p>PHINEHAS GENERATION FOUNDATION exists to close the distance between these two lives — to guide one, and to honour the other. We are not a charity that picks a single cause. We are a bridge between generations: young people who need direction, and elders who deserve dignity.</p>
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+    <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+    <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+    <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+    <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <i class="fas fa-chevron-down"></i>
   </div>
 </section>
 
-<!-- ============================================================
-     3 · ABOUT
-     ============================================================ -->
-<section class="about-block">
+<!-- ============ QUOTE BANNER (immediately under hero) ============ -->
+<section class="quote-banner">
+  <div class="quote-banner-bg">
+    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg" alt="" loading="lazy" />
+  </div>
+  <div class="quote-banner-inner reveal">
+    <div class="quote-mark">"</div>
+    <p class="quote-main">Raising tomorrow's leaders while honouring yesterday's heroes.</p>
+    <p class="quote-author">— Tosin AKANO, Founder &amp; Executive Director</p>
+    <div class="quote-divider"></div>
+    <p class="quote-scripture">"Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress."</p>
+    <p class="quote-scripture-ref">James 1:27 (NIV)</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section section-white">
   <div class="container">
     <div class="about-grid">
       <div class="about-image reveal">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg" alt="PHINEHAS GENERATION FOUNDATION team during a community outreach event" loading="lazy" />
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg" alt="PHINEHAS GENERATION team" loading="lazy" />
         <span class="badge">Est. 2016</span>
       </div>
       <div class="about-content reveal delay-1">
         <span class="section-label">Who We Are</span>
-        <h2 class="section-title">About <span class="highlight">PHINEHAS GENERATION</span> FOUNDATION</h2>
-        <p>Founded in 2016 by <strong>Tosin AKANO</strong>, PHINEHAS GENERATION FOUNDATION is a non-governmental organisation committed to building stronger communities by empowering teenagers and caring for elderly people. What began as a vision to mentor young people has grown into a movement of hope that now reaches families and communities across <strong>Nigeria and the United Kingdom</strong>.</p>
-        <p>Our work is built on a simple but profound conviction: that honouring the elderly is not charity — it is a moral obligation. And that guiding a young person today shapes the world for decades to come. Through education, advocacy, humanitarian outreach, and compassionate service, we are building a bridge between two generations that shape every society.</p>
+        <h2 class="section-title">About <span class="highlight">PHINEHAS GENERATION</span></h2>
+        <p>Founded in 2016 by <strong>Tosin AKANO</strong>, PHINEHAS GENERATION FOUNDATION is a non-governmental organisation committed to building stronger communities by empowering teenagers and caring for elderly people.</p>
+        <p>What began as a vision to mentor young people has grown into a movement of hope that now reaches families and communities across <strong>Nigeria and the United Kingdom</strong> — through education, advocacy, humanitarian outreach, and compassionate service.</p>
         <p>In Nigeria, we walk with the next generation. In the UK, we walk with the elderly. Across both, we bridge two worlds — because when generations connect, communities heal.</p>
         <a href="about.html" class="btn-link">Read Our Full Story <i class="fas fa-arrow-right"></i></a>
       </div>
@@ -1687,58 +167,49 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     4 · WHO WE SERVE
-     ============================================================ -->
-<section class="serve">
+<!-- ============ WHO WE SERVE ============ -->
+<section class="section section-cream">
   <div class="container">
-    <header class="serve-header reveal">
+    <header class="section-header reveal">
       <span class="section-label">Our Focus</span>
       <h2 class="section-title">Who <span class="highlight">We Serve</span></h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Two generations that shape every society — youth who need guidance, and elders who deserve dignity.</p>
+      <p class="section-subtitle">Two generations that shape every society — youth who need guidance, and elders who deserve dignity.</p>
     </header>
 
     <div class="serve-grid">
       <article class="serve-card reveal">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1400,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg" alt="Youth group during a PHINEHAS GENERATION mentorship program" loading="lazy" />
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1400,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg" alt="" loading="lazy" />
         <div class="serve-card-body">
           <h3>Youth &amp; Teenagers</h3>
-          <p>Teenagers today carry a future the world hasn't seen yet. We help them see it too — through mentorship, self-esteem programs, and life skills that build character and confidence. Every young person we guide today becomes a leader who will shape communities tomorrow.</p>
+          <p>Teenagers today carry a future the world hasn't seen yet. We help them see it too — through mentorship, self-esteem programs, and life skills that build character and confidence.</p>
           <a href="programs.html#youth" class="btn-link">Explore youth programs <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
 
       <article class="serve-card reveal delay-2">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Elderly woman cared for through PHINEHAS GENERATION's outreach" loading="lazy" />
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1400,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="" loading="lazy" />
         <div class="serve-card-body">
           <h3>Elderly People</h3>
-          <p>Many elderly people spend their final years without care, companionship, or proper healthcare. We bring medicine, food, and dignity back into their lives. Because age should be honoured, not endured — and every elder deserves to know they are not forgotten.</p>
+          <p>Many elderly people spend their final years without care, companionship, or proper healthcare. We bring medicine, food, and dignity back into their lives.</p>
           <a href="programs.html#elderly" class="btn-link">Explore elderly care <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
     </div>
-
-    <div class="scripture-strip reveal">
-      <p>"Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress."</p>
-      <cite>James 1:27 (NIV)</cite>
-    </div>
   </div>
 </section>
 
-<!-- ============================================================
-     5 · IMPACT
-     ============================================================ -->
-<section class="impact" id="impact">
+<!-- ============ IMPACT ============ -->
+<section class="section section-white" id="impact">
   <div class="container">
-    <header class="impact-header reveal">
+    <header class="section-header reveal">
       <span class="section-label">Our Impact</span>
       <h2 class="section-title">Where We Are — <span class="highlight">and Where We're Going</span></h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Real lives. Real numbers. A vision we're building together.</p>
+      <p class="section-subtitle">Real lives. Real numbers. A vision we're building together.</p>
     </header>
 
     <div class="impact-columns">
       <div class="impact-col reveal">
-        <div class="impact-col-heading">Today (as at 2025)</div>
+        <div class="impact-col-heading">Today · December 2025</div>
         <div class="impact-col-total">1,000+ lives touched</div>
         <div class="impact-group">
           <div class="impact-group-label">700+ youth and teenagers</div>
@@ -1773,12 +244,10 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     6 · FEATURED STORY
-     ============================================================ -->
+<!-- ============ FEATURED STORY ============ -->
 <section class="story">
   <div class="story-bg">
-    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg" alt="Mrs. Lawal Abeke — restored sight through PHINEHAS GENERATION's medical outreach" loading="lazy" />
+    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg" alt="" loading="lazy" />
   </div>
   <div class="story-inner">
     <div class="container">
@@ -1794,42 +263,34 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     7 · THE NEED
-     ============================================================ -->
-<section class="need">
+<!-- ============ THE NEED ============ -->
+<section class="section section-cream">
   <div class="container">
     <div class="need-inner reveal">
       <span class="section-label">Why We Exist</span>
       <div class="need-number">2.1 billion</div>
       <p class="need-line">By 2050, 2.1 billion people will be over 60 — and 80% of them will live in countries least equipped to care for them.</p>
-      <p class="need-interpretation">That's not a distant statistic. That's a mother, a father, a grandparent — someone's whole world. It's the elderly woman down the street who hasn't seen a doctor in years. It's the widower who eats alone every day. It's the generation that built the world we now live in, quietly fading into the background.</p>
-      <p class="need-interpretation">At the same time, the world is experiencing the largest youth population in human history. Over 3 billion people are under 25 — and most live in regions where opportunity is scarce. Without guidance, mentorship, and hope, their potential remains untapped.</p>
-      <p class="need-interpretation">PHINEHAS GENERATION FOUNDATION exists at the intersection of these two realities. We are not waiting for governments or institutions to solve these problems. We are building bridges — one teenager, one elder, one community at a time.</p>
+      <p class="need-interpretation">That's not a distant statistic. That's a mother, a father, a grandparent — someone's whole world. At the same time, the world is experiencing the largest youth population in human history. Over 3 billion people are under 25.</p>
+      <p class="need-interpretation">PHINEHAS GENERATION FOUNDATION exists at the intersection of these two realities. We are not waiting for governments or institutions. We are building bridges — one teenager, one elder, one community at a time.</p>
       <div class="need-source">World Health Organization</div>
       <a href="why-we-exist.html" class="btn-link">Read the full story <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     8 · PROGRAMS
-     ============================================================ -->
-<section class="programs">
+<!-- ============ PROGRAMS ============ -->
+<section class="section section-white">
   <div class="container">
-    <header class="programs-header">
-      <div class="reveal">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Our <span class="highlight">Programs</span></h2>
-        <p class="section-subtitle">Targeted initiatives that create lasting change — for youth and for the elderly.</p>
-      </div>
-      <a href="programs.html" class="btn-link reveal delay-2">See all programs <i class="fas fa-arrow-right"></i></a>
+    <header class="section-header reveal">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Our <span class="highlight">Programs</span></h2>
+      <p class="section-subtitle">Targeted initiatives that create lasting change — for youth and for the elderly.</p>
     </header>
 
     <div class="programs-grid">
       <a href="programs.html#self-esteem" class="program-card reveal">
         <div class="program-thumb">
-          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg" alt="Self-esteem development workshop with teenagers" loading="lazy" />
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg" alt="" loading="lazy" />
         </div>
         <div class="program-body">
           <h3>Self-Esteem Development</h3>
@@ -1840,7 +301,7 @@ footer::before {
 
       <a href="programs.html#medical" class="program-card reveal delay-1">
         <div class="program-thumb">
-          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg" alt="Medical outreach providing free healthcare services" loading="lazy" />
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg" alt="" loading="lazy" />
         </div>
         <div class="program-body">
           <h3>Medical Outreach</h3>
@@ -1851,7 +312,7 @@ footer::before {
 
       <a href="programs.html#welfare" class="program-card reveal delay-2">
         <div class="program-thumb">
-          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Community welfare supporting vulnerable elderly people" loading="lazy" />
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="" loading="lazy" />
         </div>
         <div class="program-body">
           <h3>Community Welfare</h3>
@@ -1863,14 +324,12 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     9 · FOUNDER
-     ============================================================ -->
-<section class="founder">
+<!-- ============ FOUNDER ============ -->
+<section class="section section-cream">
   <div class="container">
     <div class="founder-grid">
       <div class="founder-image reveal">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg" alt="Tosin AKANO — Founder & Executive Director of PHINEHAS GENERATION FOUNDATION" loading="lazy" />
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg" alt="Tosin AKANO" loading="lazy" />
         <span class="founder-badge"><i class="fas fa-crown"></i> Founder</span>
       </div>
       <div class="founder-content reveal delay-1">
@@ -1878,7 +337,7 @@ footer::before {
         <h2>Tosin AKANO</h2>
         <span class="founder-role">Founder &amp; Executive Director</span>
         <p>In 2016, Tosin AKANO founded PHINEHAS GENERATION with a conviction: that every young person deserves guidance, and every elderly person deserves to be valued. Eight years later, that conviction still shapes every program we run.</p>
-        <p>What began as a passion to mentor teenagers has grown into a movement that empowers young people, restores dignity to senior citizens, and inspires communities to care for one another. Her unwavering commitment to compassion, service, and human development continues to shape every program, outreach, and life touched by the foundation.</p>
+        <p>What began as a passion to mentor teenagers has grown into a movement that empowers young people, restores dignity to senior citizens, and inspires communities to care for one another.</p>
         <blockquote class="founder-quote">"Raising tomorrow's leaders while honouring yesterday's heroes."</blockquote>
         <a href="founder.html" class="btn btn-dark">Read Her Story <i class="fas fa-arrow-right"></i></a>
       </div>
@@ -1886,15 +345,13 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     10 · VOICES
-     ============================================================ -->
-<section class="voices">
+<!-- ============ VOICES ============ -->
+<section class="section section-white">
   <div class="container">
-    <header class="voices-header reveal">
+    <header class="section-header reveal">
       <span class="section-label">Voices</span>
       <h2 class="section-title">What People <span class="highlight">Say</span></h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Stories of hope and transformation from those we serve.</p>
+      <p class="section-subtitle">Real words from those we serve.</p>
     </header>
 
     <div class="voices-grid">
@@ -1913,15 +370,13 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     11 · WHERE WE WORK
-     ============================================================ -->
-<section class="where">
+<!-- ============ WHERE WE WORK ============ -->
+<section class="section section-cream">
   <div class="container">
-    <header class="where-header reveal">
+    <header class="section-header reveal">
       <span class="section-label">Our Presence</span>
       <h2 class="section-title">Where <span class="highlight">We Work</span></h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Two countries. Two generations. One mission that connects them.</p>
+      <p class="section-subtitle">Two countries. Two generations. One mission.</p>
     </header>
 
     <div class="where-grid">
@@ -1931,14 +386,8 @@ footer::before {
         <p>Our strongest presence. Nigeria is where PHINEHAS GENERATION began, and it remains our primary focus for youth development. Through school outreach, mentorship programs, and leadership training, we are raising the next generation of ethical, capable Nigerian leaders.</p>
         <p>We also serve elderly communities through medical outreach and welfare programs — because honouring the elderly is at the heart of everything we do.</p>
         <div class="where-stats">
-          <div class="where-stat">
-            <div class="where-stat-number">500+</div>
-            <div class="where-stat-label">Youth reached</div>
-          </div>
-          <div class="where-stat">
-            <div class="where-stat-number">100+</div>
-            <div class="where-stat-label">Elderly cared for</div>
-          </div>
+          <div class="where-stat"><div class="where-stat-number">500+</div><div class="where-stat-label">Youth reached</div></div>
+          <div class="where-stat"><div class="where-stat-number">100+</div><div class="where-stat-label">Elders cared for</div></div>
         </div>
       </div>
 
@@ -1948,29 +397,21 @@ footer::before {
         <p>In the UK, our focus is the elderly. Many older people in the UK face isolation, loneliness, and barriers to care. Through companionship programs, welfare support, and community outreach, we bring dignity and connection to those who have given so much to society.</p>
         <p>We also work with young people through mentorship and educational support — because every generation deserves hope.</p>
         <div class="where-stats">
-          <div class="where-stat">
-            <div class="where-stat-number">200+</div>
-            <div class="where-stat-label">Elderly cared for</div>
-          </div>
-          <div class="where-stat">
-            <div class="where-stat-number">200+</div>
-            <div class="where-stat-label">Youth reached</div>
-          </div>
+          <div class="where-stat"><div class="where-stat-number">200+</div><div class="where-stat-label">Elders cared for</div></div>
+          <div class="where-stat"><div class="where-stat-number">200+</div><div class="where-stat-label">Youth reached</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     12 · HOW YOU CAN HELP
-     ============================================================ -->
-<section class="help">
+<!-- ============ HOW YOU CAN HELP ============ -->
+<section class="section section-dark">
   <div class="container">
-    <header class="help-header reveal">
-      <span class="section-label" style="color:var(--gold-light);">Get Involved</span>
+    <header class="section-header reveal">
+      <span class="section-label">Get Involved</span>
       <h2 class="section-title">How You Can <span class="highlight">Help</span></h2>
-      <p class="section-subtitle" style="color:rgba(255,255,255,0.7);margin-left:auto;margin-right:auto;">There is more than one way to change a life. Choose the path that fits you.</p>
+      <p class="section-subtitle">There is more than one way to change a life. Choose the path that fits you.</p>
     </header>
 
     <div class="help-grid">
@@ -1998,12 +439,10 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     13 · WAYS TO GIVE
-     ============================================================ -->
-<section class="give">
+<!-- ============ WAYS TO GIVE ============ -->
+<section class="section give">
   <div class="container give-inner">
-    <header class="give-header reveal">
+    <header class="section-header reveal">
       <span class="section-label" style="color:var(--gold-light);">Take Action</span>
       <h2 class="section-title">You Can Change a Life Today</h2>
       <p class="give-scripture">"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."<cite>2 Corinthians 9:7 (NIV)</cite></p>
@@ -2023,75 +462,38 @@ footer::before {
   </div>
 </section>
 
-<!-- ============================================================
-     14 · FAQ
-     ============================================================ -->
-<section class="faq">
+<!-- ============ FAQ ============ -->
+<section class="section section-cream">
   <div class="container">
-    <header class="faq-header reveal">
+    <header class="section-header reveal">
       <span class="section-label">Questions</span>
       <h2 class="section-title">Frequently <span class="highlight">Asked</span></h2>
     </header>
 
     <div class="faq-list">
       <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          What does PHINEHAS GENERATION FOUNDATION do?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            We are a non-governmental organisation that empowers teenagers and cares for elderly people. Our work spans mentorship, education, medical outreach, food support, and community welfare — across Nigeria and the United Kingdom.
-          </div>
-        </div>
+        <button class="faq-question" aria-expanded="false">What does PHINEHAS GENERATION FOUNDATION do?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><div class="faq-answer-inner">We are a non-governmental organisation that empowers teenagers and cares for elderly people. Our work spans mentorship, education, medical outreach, food support, and community welfare — across Nigeria and the United Kingdom.</div></div>
       </div>
 
       <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          Where do you operate?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            We operate in Nigeria (with a focus on youth development) and the United Kingdom (with a focus on elderly care). Across both countries, we serve both generations — because the need exists everywhere.
-          </div>
-        </div>
+        <button class="faq-question" aria-expanded="false">Where do you operate?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><div class="faq-answer-inner">We operate in Nigeria (with a focus on youth development) and the United Kingdom (with a focus on elderly care). Across both countries, we serve both generations — because the need exists everywhere.</div></div>
       </div>
 
       <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          How can I get involved?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            There are three main ways: <strong>Give</strong> (donate to support our programs), <strong>Volunteer</strong> (give your time and skills), or <strong>Share</strong> (tell others about our work). Visit our Volunteer page or Contact page to learn more.
-          </div>
-        </div>
+        <button class="faq-question" aria-expanded="false">How can I get involved?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><div class="faq-answer-inner">There are three main ways: <strong>Give</strong> (donate), <strong>Volunteer</strong> (give your time and skills), or <strong>Share</strong> (tell others). Visit our Volunteer page or Contact page to learn more.</div></div>
       </div>
 
       <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          Is my donation secure?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            Yes. All donations are processed through secure, industry-standard payment channels. We are committed to transparency and accountability in everything we do.
-          </div>
-        </div>
+        <button class="faq-question" aria-expanded="false">Is my donation secure?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. All donations are processed through secure, industry-standard payment channels. We are committed to transparency and accountability in everything we do.</div></div>
       </div>
 
       <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          Can I volunteer from outside Nigeria or the UK?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            Yes. We welcome remote volunteers who can contribute skills such as design, writing, social media management, translation, or administrative support. Visit our Volunteer page for current opportunities.
-          </div>
-        </div>
+        <button class="faq-question" aria-expanded="false">Can I volunteer from outside Nigeria or the UK?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. We welcome remote volunteers who can contribute skills such as design, writing, social media management, translation, or administrative support.</div></div>
       </div>
     </div>
   </div>
@@ -2099,15 +501,13 @@ footer::before {
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
-<footer>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="PHINEHAS GENERATION FOUNDATION logo" width="44" height="44" loading="lazy" />
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="Logo" width="42" height="42" loading="lazy" />
           <span class="logo-text">PHINEHAS <span>GENERATION</span></span>
         </a>
         <p>Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
@@ -2154,7 +554,6 @@ footer::before {
   </div>
 </footer>
 
-<!-- Floating elements -->
 <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="Contact us on WhatsApp" target="_blank" rel="noopener noreferrer">
   <i class="fab fa-whatsapp"></i>
 </a>
@@ -2163,122 +562,6 @@ footer::before {
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<script>
-(function () {
-  'use strict';
-
-  // ============================================================
-  //  HEADER — hide on scroll down, show on scroll up
-  // ============================================================
-  const header = document.getElementById('header');
-  const backToTop = document.getElementById('backToTop');
-  let lastScroll = 0;
-
-  function handleScroll() {
-    const y = window.scrollY;
-    header.classList.toggle('scrolled', y > 20);
-    if (y > 200 && y > lastScroll) {
-      header.classList.add('hidden');
-    } else {
-      header.classList.remove('hidden');
-    }
-    backToTop.classList.toggle('visible', y > 500);
-    lastScroll = y;
-  }
-
-  window.addEventListener('scroll', handleScroll, { passive: true });
-
-  // ============================================================
-  //  MOBILE MENU
-  // ============================================================
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-
-  hamburger.addEventListener('click', function () {
-    const open = navMenu.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', open);
-    const icon = hamburger.querySelector('i');
-    icon.classList.toggle('fa-bars', !open);
-    icon.classList.toggle('fa-times', open);
-  });
-
-  navMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      const icon = hamburger.querySelector('i');
-      icon.classList.add('fa-bars');
-      icon.classList.remove('fa-times');
-    });
-  });
-
-  // ============================================================
-  //  BACK TO TOP
-  // ============================================================
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // ============================================================
-  //  FAQ ACCORDION
-  // ============================================================
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const item = this.parentElement;
-      const wasOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-      });
-      // Open this one if it wasn't open
-      if (!wasOpen) {
-        item.classList.add('open');
-        this.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-
-  // ============================================================
-  //  SCROLL REVEAL
-  // ============================================================
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-  } else {
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
-  }
-
-  // ============================================================
-  //  HERO — loaded state
-  // ============================================================
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    window.addEventListener('load', () => hero.classList.add('loaded'));
-    setTimeout(() => hero.classList.add('loaded'), 500);
-  }
-
-  // ============================================================
-  //  NAV ACTIVE STATE
-  // ============================================================
-  const currentPath = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  document.querySelectorAll('.nav-menu a').forEach(a => {
-    const href = (a.getAttribute('href') || '').split('#')[0].toLowerCase();
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      a.classList.add('active');
-    }
-  });
-
-})();
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
