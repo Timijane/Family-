@@ -19,43 +19,24 @@
 <title>PHINEHAS GENERATION FOUNDATION | Empowering Teenagers. Honouring the Elderly.</title>
 
 <style>
-/* ============================================================
-   PHINEHAS GENERATION FOUNDATION
-   ============================================================ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-
 :root{
---gold:#c8943e;
---gold-light:#e0b866;
---gold-dark:#a67a2e;
---black:#0d0d0d;
---black-soft:#1a1a1a;
---black-mute:#2a2a2a;
---green:#6b8f71;
---green-dark:#3d5a42;
---cream:#faf7f2;
---white:#ffffff;
---gray-100:#f7f6f3;
---gray-200:#e8e6e1;
---gray-300:#d4d2cc;
---gray-400:#9a9a9a;
---gray-500:#6b6b6b;
---gray-600:#4a4a4a;
+--gold:#c8943e;--gold-light:#e0b866;--gold-dark:#a67a2e;
+--black:#0d0d0d;--black-soft:#1a1a1a;--black-mute:#2a2a2a;
+--green:#6b8f71;--green-dark:#3d5a42;
+--cream:#faf7f2;--white:#ffffff;
+--gray-100:#f7f6f3;--gray-200:#e8e6e1;--gray-300:#d4d2cc;
+--gray-400:#9a9a9a;--gray-500:#6b6b6b;--gray-600:#4a4a4a;
 --font-sans:'Inter',system-ui,-apple-system,sans-serif;
 --font-serif:'Playfair Display',Georgia,serif;
---pad:clamp(60px,9vw,120px);
---maxw:1280px;
---r:16px;
---r-sm:10px;
---r-lg:24px;
---r-full:9999px;
+--pad:clamp(60px,9vw,120px);--maxw:1280px;
+--r:16px;--r-sm:10px;--r-lg:24px;--r-full:9999px;
 --sh-sm:0 2px 12px rgba(13,13,13,0.06);
 --sh:0 12px 40px rgba(13,13,13,0.10);
 --sh-lg:0 28px 80px rgba(13,13,13,0.18);
 --ease:cubic-bezier(0.4,0,0.2,1);
 --ease-out:cubic-bezier(0.22,1,0.36,1);
 }
-
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:var(--font-sans);background:var(--white);color:var(--black);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:100%;position:relative}
 img{max-width:100%;display:block;height:auto}
@@ -67,18 +48,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .skip-link{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--white);padding:10px 20px;z-index:10000;border-radius:0 0 var(--r-sm) 0;transition:top .3s}
 .skip-link:focus{top:0}
 
-/* LOADER */
-.loader{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--black);display:flex;align-items:center;justify-content:center;z-index:999999;transition:opacity .8s ease,visibility .8s ease}
+/* PREMIUM LOADER */
+.loader{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at center,#1a1a1a 0%,#0d0d0d 70%);display:flex;align-items:center;justify-content:center;z-index:999999;transition:opacity .9s ease,visibility .9s ease}
 .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-.loader-inner{text-align:center}
-.loader-logo{width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:3px solid rgba(200,148,62,0.4);box-shadow:0 0 40px rgba(200,148,62,0.3);animation:loaderZoom 2s ease-in-out infinite}
+.loader-inner{text-align:center;position:relative}
+.loader-ring{position:absolute;top:50%;left:50%;width:160px;height:160px;border-radius:50%;border:1px solid rgba(200,148,62,0.15);transform:translate(-50%,-50%);animation:ringPulse 2s ease-in-out infinite}
+.loader-ring:nth-child(2){width:200px;height:200px;animation-delay:.4s;border-color:rgba(200,148,62,0.08)}
+@keyframes ringPulse{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(.95)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.05)}}
+.loader-logo{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 22px;border:3px solid rgba(200,148,62,0.5);box-shadow:0 0 60px rgba(200,148,62,0.4),0 0 0 8px rgba(200,148,62,0.06);animation:loaderZoom 2.4s ease-in-out infinite;position:relative;z-index:2;background:#0d0d0d}
 .loader-logo img{width:100%;height:100%;object-fit:cover}
-@keyframes loaderZoom{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-.loader-title{font-family:var(--font-serif);font-size:1.5rem;font-weight:800;color:var(--gold);letter-spacing:4px;text-transform:uppercase}
-.loader-sub{font-size:.68rem;color:rgba(255,255,255,.5);letter-spacing:4px;margin-top:6px;text-transform:uppercase}
-.loader-bar{width:150px;height:2px;background:rgba(200,148,62,.15);margin:22px auto 0;border-radius:2px;overflow:hidden}
-.loader-bar-fill{height:100%;background:var(--gold);border-radius:2px;animation:loaderBar 1.6s ease-in-out infinite;width:0%}
+@keyframes loaderZoom{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.loader-title{font-family:var(--font-serif);font-size:1.7rem;font-weight:800;color:var(--gold);letter-spacing:6px;text-transform:uppercase;margin-bottom:6px;position:relative;z-index:2;animation:fadeIn 1s ease .2s both}
+.loader-sub{font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:5px;text-transform:uppercase;position:relative;z-index:2;animation:fadeIn 1s ease .4s both}
+.loader-bar{width:180px;height:2px;background:rgba(200,148,62,.12);margin:28px auto 0;border-radius:2px;overflow:hidden;position:relative;z-index:2}
+.loader-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold-light),var(--gold));border-radius:2px;animation:loaderBar 1.8s ease-in-out infinite;width:0%}
 @keyframes loaderBar{0%{width:0;margin-left:0}50%{width:60%;margin-left:20%}100%{width:0;margin-left:100%}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
 /* CURSOR */
 @media(hover:hover) and (pointer:fine){
@@ -107,37 +92,37 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav-overlay.active{opacity:1;visibility:visible;pointer-events:auto}
 
 /* HERO */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;background:var(--black);overflow:hidden;padding:100px 0 60px}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;background:var(--black);overflow:hidden;padding:110px 0 60px}
 .hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
 .hero-slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1.4s var(--ease),transform 1.4s var(--ease);transform:scale(1.08);will-change:opacity,transform}
 .hero-slide.active{opacity:.62;transform:scale(1);z-index:1}
 .hero-slide img{width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(13,13,13,.82) 0%,rgba(13,13,13,.55) 40%,rgba(61,90,66,.35) 100%),linear-gradient(to top,rgba(13,13,13,.85) 0%,transparent 40%);z-index:2;pointer-events:none}
+.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(13,13,13,.82) 0%,rgba(13,13,13,.55) 40%,rgba(61,90,66,.35) 100%),linear-gradient(to top,rgba(13,13,13,.9) 0%,transparent 45%);z-index:2;pointer-events:none}
 .hero-particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none}
-.hero-content{position:relative;z-index:4;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.hero-content{position:relative;z-index:4;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1fr;gap:34px;align-items:end}
 .hero-text{color:var(--white);text-align:center}
-.hero-eyebrow{display:inline-block;background:rgba(200,148,62,.15);border:1px solid rgba(200,148,62,.4);color:var(--gold-light);padding:8px 18px;border-radius:var(--r-full);font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fadeUp .9s ease .9s forwards}
-.hero h1{font-family:var(--font-serif);font-size:clamp(2rem,6.5vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-1px;color:var(--white);margin-bottom:18px;text-shadow:0 4px 30px rgba(0,0,0,.4);opacity:0;animation:fadeUp 1s ease 1.1s forwards}
-.hero-sub{font-size:clamp(.95rem,1.5vw,1.12rem);color:rgba(255,255,255,.85);line-height:1.7;max-width:560px;margin:0 auto 30px;opacity:0;animation:fadeUp 1s ease 1.3s forwards}
+.hero-eyebrow{display:inline-block;background:rgba(200,148,62,.15);border:1px solid rgba(200,148,62,.4);color:var(--gold-light);padding:7px 16px;border-radius:var(--r-full);font-size:.66rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;opacity:0;animation:fadeUp .9s ease .9s forwards}
+.hero h1{font-family:var(--font-serif);font-size:clamp(1.9rem,6vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-1px;color:var(--white);margin-bottom:16px;text-shadow:0 4px 30px rgba(0,0,0,.4);opacity:0;animation:fadeUp 1s ease 1.1s forwards}
+.hero-sub{font-size:clamp(.92rem,1.5vw,1.1rem);color:rgba(255,255,255,.85);line-height:1.7;max-width:560px;margin:0 auto 26px;opacity:0;animation:fadeUp 1s ease 1.3s forwards}
 .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp 1s ease 1.5s forwards}
-.hero-portrait-wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;animation:fadeUp 1s ease 1.4s forwards;position:relative;padding:30px 0}
-.hero-portrait{position:relative;width:100%;max-width:300px;aspect-ratio:3/4;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5);z-index:2}
+.hero-portrait-wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;animation:fadeUp 1s ease 1.4s forwards;position:relative;padding:20px 0}
+.hero-portrait{position:relative;width:100%;max-width:260px;aspect-ratio:3/4;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5);z-index:2}
 .hero-portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.hero-portrait-frame{position:absolute;inset:-14px;border-radius:32px;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--gold-light) 50%,transparent 80%,var(--gold));animation:spinFrame 8s linear infinite;z-index:1;opacity:.55;filter:blur(1px)}
+.hero-portrait-frame{position:absolute;inset:-12px;border-radius:30px;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--gold-light) 50%,transparent 80%,var(--gold));animation:spinFrame 8s linear infinite;z-index:1;opacity:.55;filter:blur(1px)}
 @keyframes spinFrame{to{transform:rotate(360deg)}}
-.hero-portrait::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:24px;box-shadow:inset 0 0 0 2px rgba(200,148,62,.5);pointer-events:none;z-index:3}
-.hero-portrait-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120%;height:70%;background:radial-gradient(circle,rgba(200,148,62,.28) 0%,transparent 65%);animation:glowPulse 3.5s ease-in-out infinite;z-index:0;pointer-events:none}
+.hero-portrait::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:22px;box-shadow:inset 0 0 0 2px rgba(200,148,62,.5);pointer-events:none;z-index:3}
+.hero-portrait-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:130%;height:70%;background:radial-gradient(circle,rgba(200,148,62,.28) 0%,transparent 65%);animation:glowPulse 3.5s ease-in-out infinite;z-index:0;pointer-events:none}
 @keyframes glowPulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.85;transform:translate(-50%,-50%) scale(1.06)}}
-.hero-stats{position:relative;margin-top:22px;width:100%;max-width:300px;background:rgba(13,13,13,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(200,148,62,.35);border-radius:16px;padding:16px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;z-index:3;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.hero-stats{position:relative;margin-top:18px;width:100%;max-width:260px;background:rgba(13,13,13,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(200,148,62,.35);border-radius:14px;padding:14px 10px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;z-index:3;box-shadow:0 20px 60px rgba(0,0,0,.4)}
 .hero-stat{text-align:center;border-right:1px solid rgba(255,255,255,.08);padding:0 4px}
 .hero-stat:last-child{border-right:none}
-.hero-stat-num{font-family:var(--font-serif);font-size:1.35rem;font-weight:800;color:var(--gold-light);line-height:1;margin-bottom:4px;letter-spacing:-.5px}
-.hero-stat-label{font-size:.58rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1.1px;font-weight:600}
-.hero-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:8px}
+.hero-stat-num{font-family:var(--font-serif);font-size:1.2rem;font-weight:800;color:var(--gold-light);line-height:1;margin-bottom:3px;letter-spacing:-.5px}
+.hero-stat-label{font-size:.55rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.hero-dots{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:8px}
 .hero-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.35);transition:all .3s var(--ease);padding:0;border:none}
 .hero-dot.active{background:var(--gold);width:32px;border-radius:10px}
-.scroll-indicator{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);z-index:4;color:rgba(255,255,255,.5);font-size:.62rem;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px;animation:bounceDown 2.4s ease-in-out infinite}
-.scroll-indicator i{font-size:.9rem}
+.scroll-indicator{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);z-index:4;color:rgba(255,255,255,.5);font-size:.6rem;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px;animation:bounceDown 2.4s ease-in-out infinite}
+.scroll-indicator i{font-size:.85rem}
 @keyframes bounceDown{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
@@ -177,6 +162,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .btn-outline-light:hover{background:var(--white);color:var(--black);border-color:var(--white);transform:translateY(-2px)}
 .btn-dark{background:var(--black);color:var(--white)}
 .btn-dark:hover{background:var(--black-mute);transform:translateY(-2px);box-shadow:0 12px 34px rgba(13,13,13,.25)}
+.btn-outline-dark{background:transparent;color:var(--black);border-color:var(--black)}
+.btn-outline-dark:hover{background:var(--black);color:var(--white);transform:translateY(-2px)}
 .btn-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--gold-dark);border-bottom:1.5px solid transparent;padding-bottom:2px;transition:all .35s var(--ease)}
 .btn-link:hover{color:var(--gold);border-bottom-color:var(--gold);gap:12px}
 
@@ -222,6 +209,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .impact-col--vision .impact-footer{color:rgba(255,255,255,.6);border-top-color:rgba(255,255,255,.1)}
 .impact-closing{text-align:center;margin-top:44px;font-family:var(--font-serif);font-style:italic;font-size:clamp(1rem,1.7vw,1.3rem);color:var(--gray-600)}
 .impact-closing a{display:block;margin-top:18px}
+.impact-cta-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:20px}
 
 /* STORY */
 .story{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;background:var(--black);color:var(--white)}
@@ -236,13 +224,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .story-location{font-size:.68rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-light);margin:18px 0 24px;display:flex;align-items:center;gap:12px}
 .story-location::before{content:'';width:30px;height:1px;background:var(--gold)}
 
-/* NEED */
-.need-inner{max-width:880px;margin:0 auto;text-align:center}
-.need-number{font-family:var(--font-serif);font-size:clamp(3rem,11vw,8rem);font-weight:900;line-height:.95;letter-spacing:-3px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;margin-bottom:16px}
-.need-line{font-family:var(--font-serif);font-size:clamp(1.1rem,2.2vw,1.5rem);line-height:1.45;color:var(--black);font-weight:600;margin-bottom:16px;max-width:720px;margin-left:auto;margin-right:auto}
-.need-interpretation{font-size:.94rem;font-style:italic;color:var(--gray-500);line-height:1.7;margin-bottom:22px;max-width:620px;margin-left:auto;margin-right:auto}
-.need-source{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray-400);font-weight:600;margin-bottom:28px}
+/* THE NEED — with world map */
+.need{position:relative;background:#0a0a0a;color:var(--white);overflow:hidden;padding:var(--pad) 0}
+.need-map{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;opacity:.5;pointer-events:none}
+.need-map svg{width:100%;height:100%}
+.need::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,rgba(13,13,13,.4) 0%,rgba(13,13,13,.85) 70%);z-index:1;pointer-events:none}
+.need-inner{position:relative;z-index:2;max-width:880px;margin:0 auto;text-align:center}
+.need-inner .section-label{color:var(--gold-light)}
+.need-number{font-family:var(--font-serif);font-size:clamp(3rem,11vw,8rem);font-weight:900;line-height:.95;letter-spacing:-3px;background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;margin-bottom:16px}
+.need-line{font-family:var(--font-serif);font-size:clamp(1.1rem,2.2vw,1.5rem);line-height:1.45;color:var(--white);font-weight:600;margin-bottom:16px;max-width:720px;margin-left:auto;margin-right:auto}
+.need-interpretation{font-size:.94rem;font-style:italic;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:22px;max-width:620px;margin-left:auto;margin-right:auto}
+.need-source{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:600;margin-bottom:32px}
 .need-source::before,.need-source::after{content:'—';margin:0 10px;color:var(--gold)}
+.need-cta-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 
 /* PROGRAMS */
 .programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -356,32 +350,39 @@ img.lazy.loaded{opacity:1}
 @media(min-width:720px){
 .container,.container-narrow{padding:0 28px}
 .hero-content{padding:0 28px}
+}
+
+/* DESKTOP — portrait LEFT, text RIGHT (pastoryomi layout) */
+@media(min-width:960px){
+.hero{align-items:flex-end}
+.hero-content{grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end}
+.hero-portrait-wrap{justify-content:flex-start;align-items:flex-start;padding:0}
+.hero-portrait{max-width:320px}
+.hero-stats{max-width:320px;margin-left:0;margin-right:auto}
 .hero-text{text-align:left}
 .hero-sub{margin-left:0;margin-right:0}
 .hero-cta{justify-content:flex-start}
-}
-
-/* DESKTOP */
-@media(min-width:960px){
-.hero-content{grid-template-columns:1.15fr .85fr;gap:60px}
-.hero-portrait-wrap{justify-content:flex-end;align-items:flex-end}
-.hero-portrait{max-width:340px}
-.hero-stats{max-width:340px;margin-left:auto;margin-right:0}
-.nav-menu{position:static;width:auto;height:auto;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;flex-direction:row;padding:0;gap:24px;transform:none;box-shadow:none;border:none;overflow:visible}
-.nav-menu a{padding:6px 0;font-size:.86rem;color:rgba(255,255,255,.85)}
-.nav-donate{padding:10px 22px!important;margin-top:0;background:var(--gold)!important;color:var(--white)!important}
+.nav-menu{position:static;width:auto;height:auto;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;flex-direction:row;padding:0;gap:22px;transform:none;box-shadow:none;border:none;overflow:visible}
+.nav-menu a{padding:6px 0;font-size:.82rem;color:rgba(255,255,255,.85)}
+.nav-donate{padding:9px 20px!important;margin-top:0;background:var(--gold)!important;color:var(--white)!important}
 .hamburger{display:none}
 .nav-overlay{display:none}
-.about-image .badge{font-size:.62rem}
 }
 
 @media(min-width:1100px){
-.hero-portrait{max-width:380px}
-.hero-stats{max-width:380px}
+.hero-portrait{max-width:360px}
+.hero-stats{max-width:360px}
+.hero-content{grid-template-columns:.85fr 1.15fr;gap:80px}
 }
 
-/* MOBILE-SHRINK (side-by-side, not stacked) */
+/* MOBILE-SHRINK SIDE-BY-SIDE */
 @media(max-width:640px){
+.hero{padding:90px 0 50px}
+.hero-content{grid-template-columns:1fr;gap:22px}
+.hero-portrait{max-width:200px}
+.hero-stats{max-width:200px;padding:10px 6px}
+.hero-stat-num{font-size:.95rem}
+.hero-stat-label{font-size:.48rem}
 .about-grid{grid-template-columns:42% 1fr;gap:14px}
 .about-content .section-title{font-size:1.1rem;margin-bottom:8px}
 .about-content .section-label{font-size:.58rem;letter-spacing:1.8px;margin-bottom:6px}
@@ -440,6 +441,8 @@ img.lazy.loaded{opacity:1}
 <!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
     <div class="loader-logo"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt=""></div>
     <div class="loader-title">PHINEHAS</div>
     <div class="loader-sub">Generation Foundation</div>
@@ -447,9 +450,7 @@ img.lazy.loaded{opacity:1}
   </div>
 </div>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor" aria-hidden="true"></div>
-
 <a href="#main" class="skip-link">Skip to main content</a>
 
 <!-- HEADER -->
@@ -464,7 +465,8 @@ img.lazy.loaded{opacity:1}
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="programs.html">Programs</a>
-      <a href="#impact">Impact</a>
+      <a href="the-need.html">The Need</a>
+      <a href="our-impact.html">Our Impact</a>
       <a href="blog.html">Blog</a>
       <a href="volunteer.html">Volunteer</a>
       <a href="contact.html">Contact</a>
@@ -489,16 +491,6 @@ img.lazy.loaded{opacity:1}
   <canvas class="hero-particles" id="particles"></canvas>
 
   <div class="hero-content">
-    <div class="hero-text">
-      <span class="hero-eyebrow">PHINEHAS GENERATION FOUNDATION · Since 2016</span>
-      <h1>Empowering teenagers.<br>Honouring the elderly.</h1>
-      <p class="hero-sub">Bridging two generations — through mentorship, healthcare, and community outreach across Nigeria and the UK. Every young person deserves guidance. Every elder deserves to be valued.</p>
-      <div class="hero-cta">
-        <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
-        <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
-      </div>
-    </div>
-
     <div class="hero-portrait-wrap">
       <div class="hero-portrait-glow"></div>
       <div class="hero-portrait">
@@ -509,6 +501,16 @@ img.lazy.loaded{opacity:1}
         <div class="hero-stat"><div class="hero-stat-num" data-count="1000" data-suffix="+">0</div><div class="hero-stat-label">Lives</div></div>
         <div class="hero-stat"><div class="hero-stat-num" data-count="700" data-suffix="+">0</div><div class="hero-stat-label">Youth</div></div>
         <div class="hero-stat"><div class="hero-stat-num" data-count="300" data-suffix="+">0</div><div class="hero-stat-label">Elders</div></div>
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <span class="hero-eyebrow">PHINEHAS GENERATION FOUNDATION · Since 2016</span>
+      <h1>Empowering teenagers.<br>Honouring the elderly.</h1>
+      <p class="hero-sub">Bridging two generations — through mentorship, healthcare, and community outreach across Nigeria and the UK. Every young person deserves guidance. Every elder deserves to be valued.</p>
+      <div class="hero-cta">
+        <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
+        <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
       </div>
     </div>
   </div>
@@ -582,7 +584,7 @@ img.lazy.loaded{opacity:1}
   </div>
 </section>
 
-<!-- IMPACT -->
+<!-- OUR IMPACT -->
 <section class="section section-white" id="impact">
   <div class="container">
     <header class="section-header reveal">
@@ -608,7 +610,10 @@ img.lazy.loaded{opacity:1}
     </div>
     <div class="impact-closing reveal">
       <em>"This is where we are. This is where we're going. Walk with us."</em>
-      <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
+      <div class="impact-cta-row">
+        <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
+        <a href="our-impact.html" class="btn-link">See our impact <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 </section>
@@ -623,22 +628,63 @@ img.lazy.loaded{opacity:1}
         <blockquote class="story-quote">I thank God and PHINEHAS GENERATION FOUNDATION for restoring my hope.</blockquote>
         <p class="story-text"><strong>Mrs. Lawal Abeke</strong> was living with severe cataracts that took her independence. Through our medical outreach, she received a full eye examination, cataract surgery, and prescription glasses. She can see her grandchildren again.</p>
         <div class="story-location">Igbore, Abeokuta, Ogun State</div>
-        <a href="stories.html" class="btn btn-outline-light">Read her story <i class="fas fa-arrow-right"></i></a>
+        <a href="our-impact.html" class="btn btn-outline-light">Read her story <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- NEED -->
-<section class="section section-cream">
+<!-- THE NEED — with world map background -->
+<section class="need" id="the-need">
+  <div class="need-map" aria-hidden="true">
+    <svg viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#e0b866" stop-opacity="1"/>
+          <stop offset="60%" stop-color="#c8943e" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#c8943e" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- Faint world continents -->
+      <g fill="#2a2a2a" stroke="#3d3d3d" stroke-width="0.8">
+        <!-- North America -->
+        <path d="M120,140 L260,120 L340,150 L380,200 L360,290 L320,350 L280,380 L230,340 L200,280 L170,220 Z"/>
+        <!-- South America -->
+        <path d="M300,400 L360,420 L390,480 L380,560 L340,620 L310,600 L290,540 L280,480 Z"/>
+        <!-- Europe -->
+        <path d="M640,140 L740,130 L790,160 L780,210 L740,240 L680,230 L640,200 Z"/>
+        <!-- Africa -->
+        <path d="M640,260 L760,270 L820,320 L840,420 L800,530 L740,600 L680,580 L640,480 L620,380 L610,300 Z"/>
+        <!-- Asia -->
+        <path d="M800,130 L1080,120 L1200,180 L1260,260 L1220,340 L1120,380 L1000,360 L920,300 L840,260 L800,200 Z"/>
+        <!-- Australia -->
+        <path d="M1100,520 L1200,510 L1260,560 L1240,620 L1140,630 L1080,590 Z"/>
+      </g>
+      <!-- Nigeria glow dot -->
+      <circle cx="700" cy="400" r="40" fill="url(#dotGlow)"/>
+      <circle cx="700" cy="400" r="6" fill="#e0b866" stroke="#fff" stroke-width="1.2"/>
+      <!-- UK glow dot -->
+      <circle cx="700" cy="180" r="40" fill="url(#dotGlow)"/>
+      <circle cx="700" cy="180" r="6" fill="#e0b866" stroke="#fff" stroke-width="1.2"/>
+      <!-- Future expansion dots (faint) -->
+      <circle cx="500" cy="300" r="25" fill="url(#dotGlow)" opacity="0.4"/>
+      <circle cx="500" cy="300" r="4" fill="#a67a2e"/>
+      <circle cx="950" cy="450" r="25" fill="url(#dotGlow)" opacity="0.4"/>
+      <circle cx="950" cy="450" r="4" fill="#a67a2e"/>
+      <circle cx="1180" cy="270" r="25" fill="url(#dotGlow)" opacity="0.4"/>
+      <circle cx="1180" cy="270" r="4" fill="#a67a2e"/>
+    </svg>
+  </div>
   <div class="container">
     <div class="need-inner reveal">
-      <span class="section-label">Why We Exist</span>
+      <span class="section-label">The Need</span>
       <div class="need-number">2.1 billion</div>
       <p class="need-line">By 2050, 2.1 billion people will be over 60 — and 80% of them will live in countries least equipped to care for them.</p>
-      <p class="need-interpretation">That's not a distant statistic. That's a mother, a father, a grandparent — someone's whole world.</p>
+      <p class="need-interpretation">That's not a distant statistic. That's a mother, a father, a grandparent — someone's whole world. In Nigeria and the UK, and across the world.</p>
       <div class="need-source">World Health Organization</div>
-      <a href="why-we-exist.html" class="btn-link">Read the full story <i class="fas fa-arrow-right"></i></a>
+      <div class="need-cta-row">
+        <a href="the-need.html" class="btn btn-primary">Read the full story <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 </section>
@@ -842,6 +888,8 @@ img.lazy.loaded{opacity:1}
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="programs.html">Our Programs</a>
+        <a href="the-need.html">The Need</a>
+        <a href="our-impact.html">Our Impact</a>
         <a href="blog.html">Blog / News</a>
         <a href="volunteer.html">Volunteer</a>
         <a href="contact.html">Contact Us</a>
@@ -883,7 +931,7 @@ window.addEventListener('load',function(){
   setTimeout(function(){
     l.classList.add('hidden');
     setTimeout(function(){if(l.parentNode)l.style.display='none';},900);
-  },1400);
+  },1600);
 });
 
 // CURSOR
