@@ -1,10 +1,9 @@
 {
-  "_note": "This file controls the PHINEHAS GENERATION homepage. Edit any text, swap image URLs, or update numbers — changes go live for all visitors within ~60 seconds of saving on GitHub.",
-  "_lastUpdated": "2026-09-14",
+  "_note": "PHINEHAS GENERATION — editable content. Edit any text or image URL here. Changes go live for all visitors within ~60 seconds of saving on GitHub.",
 
   "site": {
-    "name": "PHINEHAS GENERATION FOUNDATION",
-    "tagline": "Empowering Teenagers. Honouring the Elderly.",
+    "name": "PHINEHAS GENERATION",
+    "fullName": "PHINEHAS GENERATION FOUNDATION",
     "phone": "+234 816 137 0219",
     "email": "info@phinehasgeneration.org",
     "whatsapp": "https://wa.me/2348161370219",
@@ -13,193 +12,271 @@
     "instagram": "https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx"
   },
 
-  "landingPage": {
+  "hero": {
+    "eyebrow": "PHINEHAS GENERATION FOUNDATION · Since 2016",
+    "headline": "Empowering teenagers. Honouring the elderly.",
+    "subheadline": "Bridging two generations — through mentorship, healthcare, and community outreach across Nigeria and the UK. Every young person deserves guidance. Every elder deserves to be valued.",
+    "primaryCta": { "label": "Donate Now", "href": "donate.html", "icon": "fas fa-heart" },
+    "secondaryCta": { "label": "Become a Volunteer", "href": "volunteer.html", "icon": "fas fa-hands-helping" },
+    "portrait": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_900,q_auto,f_auto/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg",
+    "slides": [
+      "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg",
+      "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg",
+      "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
+      "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg",
+      "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784973209/1784972471198_hxwsgc.jpg"
+    ],
+    "stats": [
+      { "value": 1000, "suffix": "+", "label": "Lives touched" },
+      { "value": 700, "suffix": "+", "label": "Youth guided" },
+      { "value": 300, "suffix": "+", "label": "Elders cared for" }
+    ]
+  },
 
-    "hero": {
-      "headline": "Empowering teenagers. Honouring the elderly.",
-      "subheadline": "Bridging two generations — through mentorship, healthcare, and community outreach across Nigeria and the UK since 2016.",
-      "primaryCta": { "label": "Donate Now", "href": "donate.html" },
-      "secondaryCta": { "label": "Become a Volunteer", "href": "volunteer.html" },
-      "proofPoint": "1,000+ lives touched · Nigeria & the UK",
-      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg"
+  "quoteBanner": {
+    "backgroundImage": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg",
+    "quote": "Raising tomorrow's leaders while honouring yesterday's heroes.",
+    "author": "Tosin AKANO, Founder & Executive Director",
+    "scripture": "Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress.",
+    "scriptureRef": "James 1:27 (NIV)"
+  },
+
+  "about": {
+    "label": "Who We Are",
+    "title": "About PHINEHAS GENERATION FOUNDATION",
+    "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg",
+    "imageSide": "right",
+    "paragraphs": [
+      "Founded in 2016 by Tosin AKANO, PHINEHAS GENERATION FOUNDATION is a non-governmental organisation committed to building stronger communities by empowering teenagers and caring for elderly people.",
+      "What began as a vision to mentor young people has grown into a movement of hope that now reaches families and communities across Nigeria and the United Kingdom — through education, advocacy, humanitarian outreach, and compassionate service.",
+      "We believe that honouring the elderly is not charity — it is a moral obligation. And that guiding a young person today shapes the world for decades to come."
+    ],
+    "cta": { "label": "Read Our Full Story", "href": "about.html" }
+  },
+
+  "serve": {
+    "label": "Our Focus",
+    "title": "Who We Serve",
+    "subtitle": "Two generations that shape every society — youth who need guidance, and elders who deserve dignity.",
+    "youth": {
+      "title": "Youth & Teenagers",
+      "description": "Teenagers today carry a future the world hasn't seen yet. We help them see it too — through mentorship, self-esteem programs, and life skills that build character and confidence.",
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1400,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg",
+      "cta": { "label": "Explore youth programs", "href": "programs.html#youth" }
     },
-
-    "openingStatement": {
-      "paragraphs": [
-        "Somewhere in the corner of the world, a teenage girl is deciding whether she believes in her own future.",
-        "A few streets away, an elderly woman is spending another day alone — unseen, unheard, uncared for.",
-        "They are both the reason we exist.",
-        "PHINEHAS GENERATION FOUNDATION exists to close the distance between these two lives — to guide one, and to honour the other."
-      ]
-    },
-
-    "about": {
-      "label": "Who We Are",
-      "title": "About PHINEHAS GENERATION FOUNDATION",
-      "paragraphs": [
-        "Founded in 2016 by Tosin AKANO, PHINEHAS GENERATION FOUNDATION is a non-governmental organisation committed to building stronger communities by empowering teenagers and caring for elderly people.",
-        "What began as a vision to mentor young people has grown into a movement of hope that now reaches families and communities across Nigeria and the United Kingdom — through education, advocacy, humanitarian outreach, and compassionate service.",
-        "We believe that honouring the elderly is not charity — it is a moral obligation. And that guiding a young person today shapes the world for decades to come."
-      ],
-      "cta": { "label": "Read Our Full Story", "href": "about.html" },
-      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg"
-    },
-
-    "whoWeServe": {
-      "label": "Our Focus",
-      "title": "Who We Serve",
-      "youth": {
-        "title": "Youth & Teenagers",
-        "description": "Teenagers today carry a future the world hasn't seen yet. We help them see it too — through mentorship, self-esteem programs, and life skills that build character and confidence.",
-        "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg",
-        "cta": { "label": "Explore youth programs", "href": "programs.html#youth" }
-      },
-      "elderly": {
-        "title": "Elderly People",
-        "description": "Many elderly Nigerians spend their final years without care, companionship, or proper healthcare. We bring medicine, food, and dignity back into their lives.",
-        "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
-        "cta": { "label": "Explore elderly care", "href": "programs.html#elderly" }
-      },
-      "scripture": {
-        "text": "Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress.",
-        "reference": "James 1:27 (NIV)"
-      }
-    },
-
-    "impact": {
-      "label": "Our Impact",
-      "title": "Where We Are — and Where We're Going",
-      "intro": "Real lives. Real numbers. A vision we're building together.",
-      "today": {
-        "heading": "Today (as at 2025)",
-        "total": "1,000+ lives touched",
-        "groups": [
-          {
-            "label": "700+ youth and teenagers",
-            "detail": "500 in Nigeria · 200 in the UK"
-          },
-          {
-            "label": "300+ elderly people",
-            "detail": "100 in Nigeria · 200 in the UK"
-          }
-        ],
-        "footer": "Two generations. Two countries. One mission."
-      },
-      "vision": {
-        "heading": "Our Vision for 2050",
-        "total": "25,000 lives transformed",
-        "groups": [
-          {
-            "label": "20,000 youth and teenagers",
-            "detail": "guided toward purpose, character, and hope"
-          },
-          {
-            "label": "5,000 elderly people",
-            "detail": "cared for with dignity, health, and companionship"
-          }
-        ],
-        "footer": "A bridge between generations, across Nigeria and the UK — and beyond."
-      },
-      "closingLine": "This is where we are. This is where we're going. Walk with us.",
-      "cta": { "label": "Donate Now", "href": "donate.html" }
-    },
-
-    "featuredStory": {
-      "label": "Impact",
-      "pullQuote": "I thank God and PHINEHAS GENERATION FOUNDATION for restoring my hope.",
-      "name": "Mrs. Lawal Abeke",
-      "story": "Mrs. Lawal Abeke was living with severe cataracts that took her independence. Through our medical outreach, she received a full eye examination, cataract surgery, and prescription glasses. She can see her grandchildren again.",
-      "location": "Igbore, Abeokuta, Ogun State",
-      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1600,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg",
-      "cta": { "label": "Read her story", "href": "stories.html" }
-    },
-
-    "theNeed": {
-      "label": "Why We Exist",
-      "title": "The Need Is Urgent",
-      "number": "2.1 billion",
-      "line": "By 2050, 2.1 billion people will be over 60 — and 80% of them will live in countries least equipped to care for them.",
-      "interpretation": "That's not a distant statistic. That's a mother, a father, a grandparent — someone's whole world.",
-      "source": "World Health Organization",
-      "cta": { "label": "Read the full story", "href": "why-we-exist.html" }
-    },
-
-    "programs": {
-      "label": "What We Do",
-      "title": "Our Programs",
-      "items": [
-        {
-          "title": "Self-Esteem Development",
-          "description": "Mentoring teenagers to believe in their own worth.",
-          "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg",
-          "href": "programs.html#self-esteem"
-        },
-        {
-          "title": "Medical Outreach",
-          "description": "Free healthcare, eye tests, and prescription glasses for the elderly.",
-          "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg",
-          "href": "programs.html#medical"
-        },
-        {
-          "title": "Community Welfare",
-          "description": "Food, financial support, and companionship for vulnerable seniors.",
-          "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
-          "href": "programs.html#welfare"
-        }
-      ],
-      "cta": { "label": "See all programs", "href": "programs.html" }
-    },
-
-    "founder": {
-      "label": "Our Leader",
-      "name": "Tosin AKANO",
-      "role": "Founder & Executive Director",
-      "bio": "In 2016, Tosin AKANO founded PHINEHAS GENERATION with a conviction: that every young person deserves guidance, and every elderly person deserves to be valued. Eight years later, that conviction still shapes every program we run.",
-      "quote": "Raising tomorrow's leaders while honouring yesterday's heroes.",
-      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg",
-      "cta": { "label": "Read Her Story", "href": "founder.html" }
-    },
-
-    "testimonials": {
-      "label": "Voices",
-      "title": "What People Say",
-      "items": [
-        {
-          "quote": "Attending the PHINEHAS GENERATION youth conference changed the way I viewed my future. Today, I am a university graduate, and I remain grateful.",
-          "author": "Deborah A.",
-          "role": "Youth Conference Participant"
-        },
-        {
-          "quote": "Volunteering here has shown me the true meaning of service. Watching young people grow — and seeing smiles return to elderly faces — has been one of the most rewarding experiences of my life.",
-          "author": "A Volunteer",
-          "role": "Community Volunteer"
-        }
-      ]
-    },
-
-    "waysToGive": {
-      "label": "Take Action",
-      "title": "You Can Change a Life Today",
-      "scripture": "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.",
-      "scriptureRef": "2 Corinthians 9:7 (NIV)",
-      "tiers": [
-        { "amount": "₦5,000", "description": "A full eye examination for one elderly person." },
-        { "amount": "₦25,000", "description": "Prescription glasses for five seniors." },
-        { "amount": "₦100,000", "description": "Cataract surgery restoring sight to one person." }
-      ],
-      "visionLine": "Every gift brings us closer to 25,000 lives by 2050.",
-      "primaryCta": { "label": "Donate Now", "href": "donate.html" },
-      "volunteerLine": "Not able to give today? You can still change a life.",
-      "volunteerCta": { "label": "Become a Volunteer", "href": "volunteer.html" }
+    "elderly": {
+      "title": "Elderly People",
+      "description": "Many elderly people spend their final years without care, companionship, or proper healthcare. We bring medicine, food, and dignity back into their lives.",
+      "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1400,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
+      "cta": { "label": "Explore elderly care", "href": "programs.html#elderly" }
     }
+  },
 
+  "impact": {
+    "label": "Our Impact",
+    "title": "Where We Are — and Where We're Going",
+    "intro": "Real lives. Real numbers. A vision we're building together.",
+    "lastUpdated": "December 2025",
+    "today": {
+      "heading": "Today",
+      "total": "1,000+ lives touched",
+      "groups": [
+        { "label": "700+ youth and teenagers", "detail": "500 in Nigeria · 200 in the UK" },
+        { "label": "300+ elderly people", "detail": "100 in Nigeria · 200 in the UK" }
+      ],
+      "footer": "Two generations. Two countries. One mission."
+    },
+    "vision": {
+      "heading": "Our Vision for 2050",
+      "total": "25,000 lives transformed",
+      "groups": [
+        { "label": "20,000 youth and teenagers", "detail": "guided toward purpose, character, and hope" },
+        { "label": "5,000 elderly people", "detail": "cared for with dignity, health, and companionship" }
+      ],
+      "footer": "A bridge between generations, across Nigeria and the UK — and beyond."
+    },
+    "closingLine": "This is where we are. This is where we're going. Walk with us.",
+    "cta": { "label": "Donate Now", "href": "donate.html" }
+  },
+
+  "featuredStory": {
+    "label": "Impact",
+    "pullQuote": "I thank God and PHINEHAS GENERATION FOUNDATION for restoring my hope.",
+    "name": "Mrs. Lawal Abeke",
+    "paragraphs": [
+      "Mrs. Lawal Abeke was living with severe cataracts that took her independence. Through our medical outreach, she received a full eye examination, cataract surgery, and prescription glasses.",
+      "She can see her grandchildren again. Her story is one of hundreds — every pair of glasses, every surgery, every food pack is a life restored."
+    ],
+    "location": "Igbore, Abeokuta, Ogun State",
+    "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg",
+    "cta": { "label": "Read her story", "href": "stories.html" }
+  },
+
+  "theNeed": {
+    "label": "Why We Exist",
+    "number": "2.1 billion",
+    "line": "By 2050, 2.1 billion people will be over 60 — and 80% of them will live in countries least equipped to care for them.",
+    "interpretation": "That's not a distant statistic. That's a mother, a father, a grandparent — someone's whole world.",
+    "source": "World Health Organization",
+    "cta": { "label": "Read the full story", "href": "why-we-exist.html" }
+  },
+
+  "programs": {
+    "label": "What We Do",
+    "title": "Our Programs",
+    "subtitle": "Targeted initiatives that create lasting change — for youth and for the elderly.",
+    "items": [
+      {
+        "title": "Self-Esteem Development",
+        "description": "Mentoring teenagers to believe in their own worth. We help young people discover their value, build confidence, and develop the character that will carry them through life.",
+        "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg",
+        "href": "programs.html#self-esteem"
+      },
+      {
+        "title": "Medical Outreach",
+        "description": "Free healthcare, eye tests, and prescription glasses for the elderly. We bring medical care to those who cannot access it — restoring sight, health, and dignity.",
+        "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938660/1784785403963_qyohyv.jpg",
+        "href": "programs.html#medical"
+      },
+      {
+        "title": "Community Welfare",
+        "description": "Food, financial support, and companionship for vulnerable seniors. Because no elder should spend their final years hungry, alone, or forgotten.",
+        "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg",
+        "href": "programs.html#welfare"
+      }
+    ]
+  },
+
+  "founder": {
+    "label": "Our Leader",
+    "name": "Tosin AKANO",
+    "role": "Founder & Executive Director",
+    "image": "https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg",
+    "paragraphs": [
+      "In 2016, Tosin AKANO founded PHINEHAS GENERATION with a conviction: that every young person deserves guidance, and every elderly person deserves to be valued. Eight years later, that conviction still shapes every program we run.",
+      "What began as a passion to mentor teenagers has grown into a movement that empowers young people, restores dignity to senior citizens, and inspires communities to care for one another."
+    ],
+    "quote": "Raising tomorrow's leaders while honouring yesterday's heroes.",
+    "cta": { "label": "Read Her Story", "href": "founder.html" }
+  },
+
+  "voices": {
+    "label": "Voices",
+    "title": "What People Say",
+    "subtitle": "Real words from those we serve.",
+    "items": [
+      {
+        "quote": "Attending the PHINEHAS GENERATION youth conference changed the way I viewed my future. Today, I am a university graduate, and I remain grateful.",
+        "author": "Deborah A.",
+        "role": "Youth Conference Participant"
+      },
+      {
+        "quote": "Volunteering here has shown me the true meaning of service. Watching young people grow — and seeing smiles return to elderly faces — has been one of the most rewarding experiences of my life.",
+        "author": "A Volunteer",
+        "role": "Community Volunteer"
+      }
+    ]
+  },
+
+  "whereWeWork": {
+    "label": "Our Presence",
+    "title": "Where We Work",
+    "subtitle": "Two countries. Two generations. One mission that connects them.",
+    "nigeria": {
+      "country": "Nigeria",
+      "focus": "Youth & Teenagers",
+      "paragraphs": [
+        "Our strongest presence. Nigeria is where PHINEHAS GENERATION began, and it remains our primary focus for youth development. Through school outreach, mentorship programs, and leadership training, we are raising the next generation of ethical, capable Nigerian leaders.",
+        "We also serve elderly communities through medical outreach and welfare programs — because honouring the elderly is at the heart of everything we do."
+      ],
+      "stats": [
+        { "number": "500+", "label": "Youth reached" },
+        { "number": "100+", "label": "Elders cared for" }
+      ]
+    },
+    "uk": {
+      "country": "United Kingdom",
+      "focus": "Elderly People",
+      "paragraphs": [
+        "In the UK, our focus is the elderly. Many older people in the UK face isolation, loneliness, and barriers to care. Through companionship programs, welfare support, and community outreach, we bring dignity and connection to those who have given so much to society.",
+        "We also work with young people through mentorship and educational support — because every generation deserves hope."
+      ],
+      "stats": [
+        { "number": "200+", "label": "Elders cared for" },
+        { "number": "200+", "label": "Youth reached" }
+      ]
+    }
+  },
+
+  "howYouCanHelp": {
+    "label": "Get Involved",
+    "title": "How You Can Help",
+    "subtitle": "There is more than one way to change a life. Choose the path that fits you.",
+    "items": [
+      {
+        "icon": "fas fa-hand-holding-heart",
+        "title": "Give",
+        "description": "Your donation funds medical outreach, food support, mentorship programs, and more. Every gift — of any size — brings us closer to a world where no child is neglected and no elder is abandoned.",
+        "cta": { "label": "Donate Now", "href": "donate.html" }
+      },
+      {
+        "icon": "fas fa-hands-helping",
+        "title": "Volunteer",
+        "description": "Give your time, skills, and presence. Whether you can help at events, mentor a teenager, visit an elderly person, or contribute professional skills — we need you.",
+        "cta": { "label": "Become a Volunteer", "href": "volunteer.html" }
+      },
+      {
+        "icon": "fas fa-share-alt",
+        "title": "Share",
+        "description": "Spread the word. Tell your friends, family, and community about our work. Follow us on social media and share our stories. Awareness is the first step to change.",
+        "cta": { "label": "Connect With Us", "href": "contact.html" }
+      }
+    ]
+  },
+
+  "waysToGive": {
+    "label": "Take Action",
+    "title": "You Can Change a Life Today",
+    "scripture": "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.",
+    "scriptureRef": "2 Corinthians 9:7 (NIV)",
+    "visionLine": "Every gift — of any size — brings us closer to 25,000 lives transformed by 2050.",
+    "primaryCta": { "label": "Donate Now", "href": "donate.html" },
+    "volunteerLine": "Not able to give today? You can still change a life.",
+    "volunteerCta": { "label": "Explore volunteering", "href": "volunteer.html" }
+  },
+
+  "faq": {
+    "label": "Questions",
+    "title": "Frequently Asked",
+    "items": [
+      {
+        "q": "What does PHINEHAS GENERATION FOUNDATION do?",
+        "a": "We are a non-governmental organisation that empowers teenagers and cares for elderly people. Our work spans mentorship, education, medical outreach, food support, and community welfare — across Nigeria and the United Kingdom."
+      },
+      {
+        "q": "Where do you operate?",
+        "a": "We operate in Nigeria (with a focus on youth development) and the United Kingdom (with a focus on elderly care). Across both countries, we serve both generations — because the need exists everywhere."
+      },
+      {
+        "q": "How can I get involved?",
+        "a": "There are three main ways: Give (donate to support our programs), Volunteer (give your time and skills), or Share (tell others about our work). Visit our Volunteer page or Contact page to learn more."
+      },
+      {
+        "q": "Is my donation secure?",
+        "a": "Yes. All donations are processed through secure, industry-standard payment channels. We are committed to transparency and accountability in everything we do."
+      },
+      {
+        "q": "Can I volunteer from outside Nigeria or the UK?",
+        "a": "Yes. We welcome remote volunteers who can contribute skills such as design, writing, social media management, translation, or administrative support. Visit our Volunteer page for current opportunities."
+      }
+    ]
   },
 
   "nav": [
     { "label": "Home", "href": "index.html" },
     { "label": "About", "href": "about.html" },
     { "label": "Programs", "href": "programs.html" },
-    { "label": "Impact", "href": "index.html#impact" },
+    { "label": "Impact", "href": "#impact" },
     { "label": "Blog", "href": "blog.html" },
     { "label": "Volunteer", "href": "volunteer.html" },
     { "label": "Contact", "href": "contact.html" }
@@ -216,16 +293,12 @@
       { "label": "Contact Us", "href": "contact.html" },
       { "label": "Donate", "href": "donate.html" }
     ],
-    "programsLinks": [
+    "programs": [
       { "label": "Youth Development", "href": "programs.html#youth" },
       { "label": "Elderly Care", "href": "programs.html#elderly" },
       { "label": "Medical Outreach", "href": "programs.html#medical" },
       { "label": "Community Development", "href": "programs.html#welfare" },
       { "label": "Leadership Training", "href": "programs.html#leadership" }
-    ],
-    "offices": [
-      { "label": "UK Office, London", "href": "#" },
-      { "label": "Nigeria Office, Lagos", "href": "#" }
     ],
     "copyright": "Registered Charity. All rights reserved."
   }
