@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d0d0d">
+<meta name="description" content="Our Impact — Verified numbers, program outcomes, and real stories from PHINEHAS GENERATION FOUNDATION. 1,000+ lives touched across Nigeria and the UK since 2016.">
+<meta property="og:title" content="Our Impact | PHINEHAS GENERATION FOUNDATION">
+<meta property="og:description" content="Verified numbers, program outcomes, and real stories. See how PHINEHAS GENERATION FOUNDATION is responding to the global crisis.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938655/1784786312206_lbfedq.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://phinehasgeneration.org/our-impact.html">
+<link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Our Impact | PHINEHAS GENERATION FOUNDATION</title>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--gold:#c8943e;--gold-light:#e0b866;--gold-dark:#a67a2e;--gold-pale:#fdf8f0;
+--black:#0d0d0d;--black-soft:#1a1a1a;--black-mute:#2a2a2a;
+--green:#6b8f71;--green-dark:#3d5a42;--green-pale:#e8efe9;
+--red:#b85450;--red-dark:#8a3a36;
+--cream:#faf7f2;--white:#ffffff;
+--gray-100:#f7f6f3;--gray-200:#e8e6e1;--gray-300:#d4d2cc;
+--gray-400:#9a9a9a;--gray-500:#6b6b6b;--gray-600:#4a4a4a;
+--font-sans:'Inter',system-ui,-apple-system,sans-serif;
+--font-serif:'Playfair Display',Georgia,serif;
+--pad:clamp(60px,9vw,120px);--maxw:1280px;
+--r:16px;--r-sm:10px;--r-lg:24px;--r-full:9999px;
+--sh-sm:0 2px 12px rgba(13,13,13,0.06);
+--sh:0 12px 40px rgba(13,13,13,0.10);
+--sh-lg:0 28px 80px rgba(13,13,13,0.18);
+--ease:cubic-bezier(0.4,0,0.2,1);
+--ease-out:cubic-bezier(0.22,1,0.36,1);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--white);color:var(--black);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:100%;position:relative}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.container-narrow{max-width:900px;margin:0 auto;padding:0 20px}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--white);padding:10px 20px;z-index:10000;border-radius:0 0 var(--r-sm) 0;transition:top .3s}
+.skip-link:focus{top:0}
+
+/* LOADER */
+.loader{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at center,#1a1a1a 0%,#0d0d0d 70%);display:flex;align-items:center;justify-content:center;z-index:999999;transition:opacity .9s ease,visibility .9s ease}
+.loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-inner{text-align:center;position:relative}
+.loader-ring{position:absolute;top:50%;left:50%;width:160px;height:160px;border-radius:50%;border:1px solid rgba(200,148,62,0.15);transform:translate(-50%,-50%);animation:ringPulse 2s ease-in-out infinite}
+.loader-ring:nth-child(2){width:200px;height:200px;animation-delay:.4s;border-color:rgba(200,148,62,0.08)}
+@keyframes ringPulse{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(.95)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.05)}}
+.loader-logo{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 22px;border:3px solid rgba(200,148,62,0.5);box-shadow:0 0 60px rgba(200,148,62,0.4);animation:loaderZoom 2.4s ease-in-out infinite;position:relative;z-index:2;background:#0d0d0d}
+.loader-logo img{width:100%;height:100%;object-fit:cover}
+@keyframes loaderZoom{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.loader-title{font-family:var(--font-serif);font-size:1.7rem;font-weight:800;color:var(--gold);letter-spacing:6px;text-transform:uppercase;margin-bottom:6px;position:relative;z-index:2}
+.loader-sub{font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:5px;text-transform:uppercase;position:relative;z-index:2}
+.loader-bar{width:180px;height:2px;background:rgba(200,148,62,.12);margin:28px auto 0;border-radius:2px;overflow:hidden;position:relative;z-index:2}
+.loader-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold-light),var(--gold));border-radius:2px;animation:loaderBar 1.8s ease-in-out infinite;width:0%}
+@keyframes loaderBar{0%{width:0;margin-left:0}50%{width:60%;margin-left:20%}100%{width:0;margin-left:100%}}
+
+/* HEADER */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 0;background:rgba(13,13,13,.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:background .4s var(--ease),padding .3s ease,transform .4s var(--ease)}
+.header.scrolled{background:rgba(13,13,13,.94);padding:10px 0;box-shadow:0 4px 30px rgba(0,0,0,.35)}
+.header.hidden{transform:translateY(-100%)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--white);font-weight:800;font-size:1rem;letter-spacing:.4px;z-index:10001;position:relative}
+.logo img{height:40px;width:40px;border-radius:8px;object-fit:cover}
+.logo-text span{color:var(--gold)}
+.hamburger{display:flex;align-items:center;justify-content:center;width:44px;height:44px;font-size:1.4rem;color:var(--white);z-index:10001;position:relative;background:rgba(255,255,255,.06);border-radius:10px;border:none}
+.hamburger:hover{background:rgba(255,255,255,.12)}
+.nav-menu{position:fixed;top:0;right:0;width:320px;max-width:85vw;height:100vh;height:100dvh;background:#ffffff;display:flex;flex-direction:column;padding:90px 30px 0;gap:0;transform:translateX(100%);transition:transform .45s cubic-bezier(.32,.72,0,1);box-shadow:-10px 0 50px rgba(0,0,0,.15);border-left:1px solid rgba(200,148,62,.15);overflow-y:auto;z-index:9998}
+.nav-menu.open{transform:translateX(0)}
+.nav-menu a{color:var(--black-soft);font-size:1.02rem;font-weight:500;padding:13px 0;position:relative;transition:color .3s;display:block;border-bottom:1px solid var(--gray-200)}
+.nav-menu a:hover,.nav-menu a.active{color:var(--gold-dark)}
+.nav-donate{background:var(--gold)!important;color:var(--white)!important;padding:13px 24px!important;border-radius:var(--r-full);text-align:center;margin-top:16px;font-weight:600!important;border-bottom:none!important}
+.nav-menu-kids{margin-top:24px;margin-bottom:0;overflow:hidden;position:relative;margin-left:-30px;margin-right:-30px;width:calc(100% + 60px);flex-shrink:0;background:#ffffff}
+.nav-menu-kids img{width:100%;height:200px;object-fit:cover;object-position:center top;display:block}
+.nav-menu-kids::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(255,255,255,0.15) 0%,transparent 60%)}
+.nav-menu-kids-caption{position:absolute;bottom:14px;left:20px;right:20px;color:var(--white);font-family:var(--font-serif);font-size:.95rem;font-style:italic;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.75)}
+
+/* PAGE HERO */
+.page-hero{position:relative;background:linear-gradient(155deg,#0d0d0d 0%,#1a1a1a 60%,#2a2a2a 100%);overflow:hidden;padding:120px 0 60px;color:var(--white)}
+.page-hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(200,148,62,.14) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
+.page-hero::after{content:'';position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(107,143,113,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
+.page-hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1280px;margin:0 auto;padding:0 20px}
+.page-hero-text{color:var(--white)}
+.page-hero-eyebrow{display:inline-block;background:rgba(200,148,62,.2);border:1px solid rgba(200,148,62,.5);color:var(--gold-light);padding:7px 16px;border-radius:var(--r-full);font-size:.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.page-hero h1{font-family:var(--font-serif);font-size:clamp(1.7rem,3.8vw,3.2rem);font-weight:800;line-height:1.12;letter-spacing:-.8px;color:var(--white);margin-bottom:16px}
+.page-hero h1 .highlight{color:var(--gold-light)}
+.page-hero p{font-size:clamp(.85rem,1.3vw,1.02rem);color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:24px}
+.page-hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.page-hero-cta .btn{padding:12px 24px;font-size:.82rem}
+.page-hero-image{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 70px rgba(0,0,0,.5);border:2px solid rgba(200,148,62,.3)}
+.page-hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+.page-hero-image::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(13,13,13,.4) 0%,transparent 50%);pointer-events:none}
+.page-hero-image-badge{position:absolute;bottom:16px;left:16px;background:rgba(200,148,62,.95);color:var(--white);padding:8px 16px;border-radius:var(--r-full);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;z-index:2}
+
+/* SECTIONS */
+.section{padding:var(--pad) 0}
+.section-cream{background:var(--cream)}
+.section-white{background:var(--white)}
+.section-dark{background:var(--black);color:var(--white)}
+.section-header{text-align:center;max-width:760px;margin:0 auto 60px;padding:0 20px}
+.section-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--gold-dark);margin-bottom:14px}
+.section-dark .section-label{color:var(--gold-light)}
+.section-title{font-family:var(--font-serif);font-size:clamp(1.7rem,3.5vw,2.7rem);font-weight:800;line-height:1.15;letter-spacing:-.6px;color:var(--black);margin-bottom:16px}
+.section-dark .section-title{color:var(--white)}
+.section-title .highlight{color:var(--gold)}
+.section-subtitle{font-size:1rem;color:var(--gray-500);line-height:1.75}
+.section-dark .section-subtitle{color:rgba(255,255,255,.7)}
+
+/* SPLIT */
+.split{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px}
+.split--reverse{grid-template-columns:0.9fr 1.1fr}
+.split--reverse .split-content{order:2}
+.split--reverse .split-image{order:1}
+.split-image{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/5}
+.split-image img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.split-image:hover img{transform:scale(1.04)}
+.split-image .image-badge{position:absolute;bottom:16px;left:16px;background:var(--gold);color:var(--white);padding:8px 16px;border-radius:var(--r-full);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.split-content h3{font-family:var(--font-serif);font-size:clamp(1.3rem,2.4vw,1.9rem);font-weight:800;line-height:1.2;letter-spacing:-.5px;color:var(--black);margin-bottom:16px}
+.split-content p{font-size:clamp(.92rem,1.3vw,1rem);color:var(--gray-600);line-height:1.8;margin-bottom:16px}
+.split-content p strong{color:var(--black)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:var(--r-full);font-weight:600;font-size:.92rem;letter-spacing:.3px;transition:all .35s var(--ease);cursor:pointer;white-space:nowrap;border:1.5px solid transparent;text-align:center}
+.btn i{font-size:.85rem}
+.btn-primary{background:var(--gold);color:var(--white);box-shadow:0 6px 24px rgba(200,148,62,.35)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 34px rgba(200,148,62,.5)}
+.btn-outline-light{background:transparent;color:var(--white);border-color:rgba(255,255,255,.5)}
+.btn-outline-light:hover{background:var(--white);color:var(--black);border-color:var(--white);transform:translateY(-2px)}
+.btn-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--gold-dark);border-bottom:1.5px solid transparent;padding-bottom:2px;transition:all .35s var(--ease)}
+.btn-link:hover{color:var(--gold);border-bottom-color:var(--gold);gap:12px}
+
+/* BIG NUMBERS */
+.big-num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto;padding:0 20px}
+.big-num-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:40px 24px;text-align:center;transition:all .35s var(--ease);position:relative;overflow:hidden}
+.big-num-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--gold)}
+.big-num-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .4s var(--ease);transform-origin:left}
+.big-num-card:hover::before{transform:scaleX(1)}
+.big-num-card:nth-child(2)::before{background:var(--green)}
+.big-num-icon{font-size:1.6rem;color:var(--gold);margin-bottom:12px}
+.big-num-card:nth-child(2) .big-num-icon{color:var(--green)}
+.big-num-value{font-family:var(--font-serif);font-size:clamp(2.4rem,5vw,3.4rem);font-weight:900;color:var(--black);line-height:1;letter-spacing:-1.5px;margin-bottom:8px}
+.big-num-label{font-size:.86rem;color:var(--gray-500);line-height:1.5;font-weight:500}
+.big-num-detail{font-size:.72rem;color:var(--gold-dark);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-top:14px;display:block}
+
+/* PROGRAM CARDS */
+.program-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;padding:0 20px}
+.program-card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--gray-200);transition:all .35s var(--ease);display:flex;flex-direction:column}
+.program-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--gold)}
+.program-thumb{aspect-ratio:16/10;overflow:hidden;background:var(--gray-100);position:relative}
+.program-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.program-card:hover .program-thumb img{transform:scale(1.06)}
+.program-tag{position:absolute;top:14px;left:14px;background:rgba(200,148,62,.95);color:var(--white);padding:6px 12px;border-radius:var(--r-full);font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.program-body{padding:26px 22px;display:flex;flex-direction:column;flex:1}
+.program-body h4{font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--black);margin-bottom:10px;line-height:1.3}
+.program-body p{font-size:.88rem;color:var(--gray-600);line-height:1.65;margin-bottom:16px;flex:1}
+.program-body .btn-link{font-size:.82rem;margin-top:auto}
+
+/* STORY */
+.story{position:relative;background:var(--black);color:var(--white);padding:var(--pad) 0;overflow:hidden}
+.story::before{content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,148,62,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.story-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px}
+.story-image{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5);aspect-ratio:4/5;border:2px solid rgba(200,148,62,.3)}
+.story-image img{width:100%;height:100%;object-fit:cover;display:block}
+.story-content .section-label{color:var(--gold-light)}
+.story-content h2{font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.3rem);font-weight:800;line-height:1.15;letter-spacing:-.6px;color:var(--white);margin-bottom:18px}
+.story-content h2 .highlight{color:var(--gold-light)}
+.story-quote{font-family:var(--font-serif);font-size:clamp(1.05rem,1.8vw,1.35rem);font-style:italic;font-weight:600;line-height:1.4;color:var(--gold-light);padding-left:22px;border-left:3px solid var(--gold);margin:20px 0}
+.story-content p{font-size:.98rem;color:rgba(255,255,255,.85);line-height:1.8;margin-bottom:14px}
+.story-location{font-size:.68rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-light);margin:20px 0 24px;display:flex;align-items:center;gap:12px}
+.story-location::before{content:'';width:30px;height:1px;background:var(--gold)}
+
+/* COMMUNITIES */
+.communities{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1100px;margin:0 auto;padding:0 20px}
+.community-card{background:var(--white);border-radius:var(--r-lg);padding:36px 32px;border:1px solid var(--gray-200);transition:all .35s var(--ease)}
+.community-card:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.community-flag{font-size:1.4rem;color:var(--gold);margin-bottom:14px}
+.community-card h3{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--black);margin-bottom:10px}
+.community-focus{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:16px;display:block}
+.community-card p{font-size:.92rem;color:var(--gray-600);line-height:1.75;margin-bottom:14px}
+.community-places{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding-top:18px;border-top:1px solid var(--gray-200)}
+.community-place{font-size:.72rem;padding:6px 12px;background:var(--cream);border-radius:var(--r-full);color:var(--black-soft);font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.community-place i{color:var(--gold);font-size:.65rem}
+
+/* PHOTO GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1200px;margin:0 auto;padding:0 20px}
+.gallery-item{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1;cursor:pointer;background:var(--gray-100)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.85) 0%,transparent 55%);opacity:0;transition:opacity .35s var(--ease);pointer-events:none}
+.gallery-item:hover::after{opacity:1}
+.gallery-caption{position:absolute;bottom:12px;left:12px;right:12px;color:var(--white);font-size:.72rem;line-height:1.35;font-weight:500;opacity:0;transform:translateY(8px);transition:all .35s var(--ease);z-index:2;pointer-events:none}
+.gallery-item:hover .gallery-caption{opacity:1;transform:translateY(0)}
+.gallery-date{position:absolute;top:12px;right:12px;background:rgba(13,13,13,.85);color:var(--gold-light);padding:4px 10px;border-radius:var(--r-full);font-size:.6rem;font-weight:700;letter-spacing:1px;z-index:2;backdrop-filter:blur(8px)}
+
+/* VOLUNTEER */
+.volunteer-box{background:linear-gradient(155deg,#0d0d0d 0%,#1a1a1a 55%,#0d0d0d 100%);border-radius:var(--r-lg);padding:60px 40px;text-align:center;max-width:900px;margin:0 auto;position:relative;overflow:hidden}
+.volunteer-box::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(200,148,62,.15) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.volunteer-icon{font-size:2rem;color:var(--gold-light);margin-bottom:16px}
+.volunteer-box h3{font-family:var(--font-serif);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:800;color:var(--white);margin-bottom:14px;letter-spacing:-.5px}
+.volunteer-box .volunteer-count{font-family:var(--font-serif);font-size:clamp(2.4rem,5vw,3.4rem);font-weight:900;color:var(--gold-light);line-height:1;letter-spacing:-1px;margin-bottom:8px}
+.volunteer-box .volunteer-label{font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:700;margin-bottom:24px}
+.volunteer-box p{font-size:.98rem;color:rgba(255,255,255,.75);line-height:1.8;max-width:600px;margin:0 auto 26px}
+
+/* REGISTRATION */
+.registration{background:var(--cream);border-left:4px solid var(--gold);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:32px 34px;max-width:900px;margin:0 auto}
+.registration h4{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--black);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.registration h4 i{color:var(--gold)}
+.registration p{font-size:.94rem;color:var(--gray-600);line-height:1.75}
+.registration p strong{color:var(--black)}
+
+/* IMPACT BRIDGE */
+.impact-bridge{background:linear-gradient(155deg,#0d0d0d 0%,#1a1a1a 55%,#0d0d0d 100%);position:relative;overflow:hidden;color:var(--white);padding:var(--pad) 0}
+.impact-bridge::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,148,62,.15) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.impact-bridge-inner{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto;padding:0 20px}
+.impact-bridge-inner .section-title{color:var(--white)}
+.impact-bridge-inner p{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.85;margin-bottom:24px}
+.impact-bridge-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+
+/* FOOTER */
+.footer{background:var(--black);color:var(--white);padding:60px 0 26px;position:relative}
+.footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:.3}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:36px;text-align:center}
+.footer-brand .logo{color:var(--white);margin-bottom:16px;justify-content:center}
+.footer-brand .logo img{height:42px;width:42px}
+.footer-brand p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.7;max-width:320px;margin:0 auto 20px}
+.footer-social{display:flex;gap:12px;justify-content:center}
+.footer-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:all .35s var(--ease);font-size:.9rem}
+.footer-social a:hover{background:var(--gold);transform:translateY(-3px)}
+.footer h4{font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;color:var(--white)}
+.footer-links a{display:block;font-size:.86rem;color:rgba(255,255,255,.6);padding:6px 0;transition:all .35s var(--ease)}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-links a i{width:18px;margin-right:6px;color:var(--gold-light);font-size:.7rem}
+.footer-bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:.76rem;color:rgba(255,255,255,.45)}
+.footer-bottom a{color:var(--gold-light)}
+
+/* FLOATING */
+.whatsapp-float{position:fixed;bottom:20px;right:20px;width:50px;height:50px;border-radius:50%;background:#25d366;color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.35rem;box-shadow:0 8px 28px rgba(37,211,102,.4);z-index:900;transition:all .35s var(--ease)}
+.whatsapp-float:hover{transform:scale(1.1) translateY(-2px)}
+.back-to-top{position:fixed;bottom:20px;right:82px;width:42px;height:42px;border-radius:50%;background:var(--black);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.9rem;box-shadow:0 6px 24px rgba(0,0,0,.2);z-index:899;opacity:0;visibility:hidden;transform:translateY(20px);transition:all .35s var(--ease)}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:var(--gold)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal.delay-1{transition-delay:.1s}
+.reveal.delay-2{transition-delay:.2s}
+.reveal.delay-3{transition-delay:.3s}
+
+/* TABLET */
+@media(min-width:720px){
+.container,.container-narrow{padding:0 28px}
+}
+
+/* DESKTOP */
+@media(min-width:960px){
+.nav-menu{position:static;width:auto;height:auto;background:transparent;flex-direction:row;padding:0;gap:20px;transform:none;box-shadow:none;border:none;overflow:visible;align-items:center}
+.nav-menu a{padding:6px 0;font-size:.8rem;color:rgba(255,255,255,.85);border-bottom:none}
+.nav-menu a:hover,.nav-menu a.active{color:var(--gold-light)}
+.nav-donate{padding:9px 18px!important;margin-top:0;background:var(--gold)!important;color:var(--white)!important;border-bottom:none!important}
+.nav-menu-kids{display:none}
+.hamburger{display:none}
+}
+
+/* MEDIUM */
+@media(max-width:960px){
+.split, .story-inner{grid-template-columns:1fr 1fr;gap:30px}
+.split--reverse{grid-template-columns:1fr 1fr}
+.big-num-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+.program-list{grid-template-columns:1fr 1fr;gap:16px}
+.communities{grid-template-columns:1fr 1fr;gap:16px}
+.gallery-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+}
+
+/* MOBILE */
+@media(max-width:640px){
+.page-hero{padding:100px 0 50px}
+.page-hero-inner{grid-template-columns:1.15fr 0.85fr;gap:14px;padding:0 14px}
+.page-hero-eyebrow{font-size:.5rem;letter-spacing:1.2px;padding:5px 10px;margin-bottom:12px}
+.page-hero h1{font-size:1.35rem;letter-spacing:-.4px;line-height:1.15;margin-bottom:12px}
+.page-hero p{font-size:.72rem;line-height:1.55;margin-bottom:14px}
+.page-hero-cta{flex-direction:column;gap:6px}
+.page-hero-cta .btn{padding:9px 14px;font-size:.65rem;width:100%;justify-content:center}
+.page-hero-cta .btn i{font-size:.6rem}
+.page-hero-image{border-radius:14px;border-width:1.5px}
+.page-hero-image-badge{font-size:.5rem;padding:5px 10px;bottom:8px;left:8px}
+
+.section{padding:50px 0}
+.section-header{margin-bottom:36px;padding:0 16px}
+.section-title{font-size:1.4rem;letter-spacing:-.3px}
+.section-subtitle{font-size:.88rem}
+.section-label{font-size:.6rem;letter-spacing:2px}
+
+.split, .story-inner{grid-template-columns:1.15fr 0.85fr;gap:14px;padding:0 14px;align-items:center}
+.split--reverse{grid-template-columns:0.85fr 1.15fr}
+.split-image, .story-image{aspect-ratio:3/4;border-radius:14px;border-width:1.5px}
+.split-image .image-badge{font-size:.5rem;padding:5px 10px;bottom:8px;left:8px}
+.split-content h3{font-size:.98rem;line-height:1.2;margin-bottom:10px}
+.split-content p{font-size:.72rem;line-height:1.65;margin-bottom:10px}
+.split-content .btn-link{font-size:.7rem}
+
+.big-num-grid{grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 12px}
+.big-num-card{padding:20px 10px}
+.big-num-icon{font-size:1.1rem;margin-bottom:8px}
+.big-num-value{font-size:1.6rem;letter-spacing:-.8px;margin-bottom:6px}
+.big-num-label{font-size:.66rem;line-height:1.4}
+.big-num-detail{font-size:.55rem;margin-top:8px;letter-spacing:1px}
+
+.program-list{grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
+.program-body{padding:16px 12px}
+.program-body h4{font-size:.88rem;margin-bottom:6px}
+.program-body p{font-size:.68rem;line-height:1.5;margin-bottom:10px}
+.program-body .btn-link{font-size:.62rem}
+.program-tag{font-size:.5rem;padding:4px 8px;top:8px;left:8px}
+
+.story-content h2{font-size:1.2rem}
+.story-quote{font-size:.85rem;padding-left:14px;margin:14px 0}
+.story-content p{font-size:.72rem;line-height:1.65;margin-bottom:8px}
+.story-location{font-size:.55rem;letter-spacing:1.5px;margin:14px 0 16px}
+
+.communities{grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
+.community-card{padding:18px 14px}
+.community-flag{font-size:1rem;margin-bottom:8px}
+.community-card h3{font-size:.95rem;margin-bottom:6px}
+.community-focus{font-size:.52rem;letter-spacing:1.5px;margin-bottom:10px}
+.community-card p{font-size:.68rem;line-height:1.55;margin-bottom:8px}
+.community-places{gap:4px;margin-top:10px;padding-top:10px}
+.community-place{font-size:.58rem;padding:3px 8px}
+
+.gallery-grid{grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 12px}
+.gallery-date{font-size:.5rem;padding:3px 6px}
+.gallery-caption{font-size:.58rem;bottom:8px;left:8px;right:8px}
+
+.volunteer-box{padding:40px 24px}
+.volunteer-icon{font-size:1.5rem}
+.volunteer-box h3{font-size:1.15rem}
+.volunteer-box .volunteer-count{font-size:2.4rem}
+.volunteer-box .volunteer-label{font-size:.6rem;letter-spacing:1.8px}
+.volunteer-box p{font-size:.82rem;line-height:1.7}
+
+.registration{padding:24px 20px}
+.registration h4{font-size:.95rem;gap:8px}
+.registration p{font-size:.82rem;line-height:1.7}
+
+.impact-bridge-inner h2{font-size:1.3rem}
+.impact-bridge-inner p{font-size:.85rem;line-height:1.7}
+.impact-bridge-cta{flex-direction:column;align-items:stretch;max-width:280px;margin:20px auto 0}
+.impact-bridge-cta .btn{width:100%}
+
+.footer{padding:50px 0 22px}
+.footer-grid{text-align:center;gap:32px}
+.footer-brand p{font-size:.82rem}
+.footer h4{font-size:.66rem}
+.footer-links a{font-size:.8rem}
+.footer-bottom{font-size:.7rem}
+}
+
+/* VERY SMALL */
+@media(max-width:380px){
+.page-hero h1{font-size:1.15rem}
+.page-hero p{font-size:.68rem}
+.big-num-value{font-size:1.3rem}
+.big-num-label{font-size:.6rem}
+.split-content h3{font-size:.88rem}
+.split-content p{font-size:.68rem}
+.program-list{grid-template-columns:1fr 1fr}
+.gallery-grid{grid-template-columns:1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
+    <div class="loader-logo"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt=""></div>
+    <div class="loader-title">PHINEHAS</div>
+    <div class="loader-sub">Our Impact</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo" aria-label="Home">
+      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="Logo" width="40" height="40">
+      <span class="logo-text">PHINEHAS <span>GENERATION</span></span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu"><i class="fas fa-bars"></i></button>
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="founder.html">Founder</a>
+      <a href="the-need.html">The Need</a>
+      <a href="our-impact.html" class="active">Our Impact</a>
+      <a href="blog.html">Blog</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html" class="nav-donate"><i class="fas fa-heart"></i> Donate</a>
+      <div class="nav-menu-kids">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786312206_lbfedq.jpg" alt="Children of PHINEHAS GENERATION">
+        <div class="nav-menu-kids-caption">"Every child carries a future."</div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-text">
+      <span class="page-hero-eyebrow">Our Impact · 2016 – 2026</span>
+      <h1>This is what we've done.<br><span class="highlight">These are the numbers.</span></h1>
+      <p>Every statistic on our "Need" page corresponds to a real person we've served. Here are the verified numbers, the programs behind them, and the stories that prove the work.</p>
+      <div class="page-hero-cta">
+        <a href="#numbers" class="btn btn-primary">See the numbers <i class="fas fa-arrow-down"></i></a>
+        <a href="donate.html" class="btn btn-outline-light"><i class="fas fa-heart"></i> Donate Now</a>
+      </div>
+    </div>
+    <div class="page-hero-image">
+      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784938655/1784786312206_lbfedq.jpg" alt="Founder with children">
+      <span class="page-hero-image-badge">Since 2016</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="reveal" style="max-width:820px;margin:0 auto;text-align:left">
+      <p style="font-size:1.05rem;color:var(--black-soft);line-height:1.9;margin-bottom:20px"><span style="float:left;font-family:var(--font-serif);font-size:3.8rem;line-height:.85;padding:6px 12px 0 0;font-weight:800;color:var(--gold)">T</span>he Need page told you about the crisis. This page tells you what we've done about it — through verified numbers, program outcomes, and real stories from the people we serve across Nigeria and the United Kingdom.</p>
+      <p style="font-size:1.05rem;color:var(--black-soft);line-height:1.9;margin-bottom:20px">We believe transparency is not a feature of good work — it is a foundation. Every number on this page represents a person we've met, a program we've run, and a community we've served.</p>
+      <p style="font-size:1.05rem;color:var(--black-soft);line-height:1.9"><strong style="color:var(--black)">This is our record. Hold us to it.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR NUMBERS -->
+<section class="section section-white" id="numbers">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-label">Our Numbers</span>
+      <h2 class="section-title">The <span class="highlight">Numbers</span> Behind the Work</h2>
+      <p class="section-subtitle">As at 2026 — since our founding in 2016.</p>
+    </header>
+
+    <div class="big-num-grid">
+      <div class="big-num-card reveal">
+        <div class="big-num-icon"><i class="fas fa-hands-helping"></i></div>
+        <div class="big-num-value" data-count="1000" data-suffix="+">0</div>
+        <div class="big-num-label">Lives touched</div>
+        <span class="big-num-detail">Nigeria &amp; UK</span>
+      </div>
+      <div class="big-num-card reveal delay-1">
+        <div class="big-num-icon"><i class="fas fa-user-graduate"></i></div>
+        <div class="big-num-value" data-count="700" data-suffix="+">0</div>
+        <div class="big-num-label">Youth &amp; teenagers guided</div>
+        <span class="big-num-detail">500 Nigeria · 200 UK</span>
+      </div>
+      <div class="big-num-card reveal delay-2">
+        <div class="big-num-icon"><i class="fas fa-heart"></i></div>
+        <div class="big-num-value" data-count="300" data-suffix="+">0</div>
+        <div class="big-num-label">Elderly people cared for</div>
+        <span class="big-num-detail">100 Nigeria · 200 UK</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section section-cream">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-label">Our Programs</span>
+      <h2 class="section-title">The <span class="highlight">Programs</span> Behind the Numbers</h2>
+      <p class="section-subtitle">Six targeted initiatives — three focused on youth, three on the elderly. Each one exists because the statistics on our Need page demanded a response.</p>
+    </header>
+
+    <div class="program-list">
+      <!-- Self-Esteem Development -->
+      <div class="program-card reveal">
+        <div class="program-thumb">
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786327932_qcshsd.jpg" alt="Self-Esteem Development">
+          <span class="program-tag">Youth</span>
+        </div>
+        <div class="program-body">
+          <h4>Self-Esteem Development</h4>
+          <p>Mentoring teenagers to believe in their own worth. Workshops held in schools and communities across Abeokuta, Ogun State, and the UK.</p>
+          <a href="programs.html#self-esteem" class="btn-link">Read about achievements <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Real Men Don't Rape -->
+      <div class="program-card reveal delay-1">
+        <div class="program-thumb">
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938656/1784785537613_vpdnvj.jpg" alt="Real Men Don't Rape">
+          <span class="program-tag">Prevention</span>
+        </div>
+        <div class="program-body">
+          <h4>Real Men Don't Rape</h4>
+          <p>An educational campaign promoting respect, responsibility, and gender-based violence prevention among teenage boys and young men.</p>
+          <a href="programs.html#real-men" class="btn-link">Read about achievements <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Sexual Purity -->
+      <div class="program-card reveal delay-2">
+        <div class="program-thumb">
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938661/1784786127338_zuspfn.jpg" alt="Sexual Purity">
+          <span class="program-tag">Youth</span>
+        </div>
+        <div class="program-body">
+          <h4>Sexual Purity &amp; Relationships</h4>
+          <p>Teaching healthy values and responsible decision-making. Relationship talks held with teenagers across Abeokuta.</p>
+          <a href="programs.html#purity" class="btn-link">Read about achievements <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Mental Health Awareness -->
+      <div class="program-card reveal">
+        <div class="program-thumb">
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938656/1784784281203_cxpfuo.jpg" alt="Depression Not Me">
+          <span class="program-tag">Mental Health</span>
+        </div>
+        <div class="program-body">
+          <h4>Mental Health Awareness</h4>
+          <p>Our "Depression! Not Me." campaign reached teenagers with education on depression, emotional wellbeing, and resilience.</p>
+          <a href="programs.html#mental-health" class="btn-link">Read about achievements <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Medical Outreach -->
+      <div class="program-card reveal delay-1">
+        <div class="program-thumb">
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938661/1784785603066_sl0t6n.jpg" alt="Medical Outreach Igbore">
+          <span class="program-tag">Elderly</span>
+        </div>
+        <div class="program-body">
+          <h4>Medical Outreach</h4>
+          <p>Free eye examinations, cataract surgeries, prescription glasses, medications, and injections administered to elderly people in Igbore and surrounding communities.</p>
+          <a href="programs.html#medical" class="btn-link">Read about achievements <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Community Welfare -->
+      <div class="program-card reveal delay-2">
+        <div class="program-thumb">
+          <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938656/1784785519625_rike68.jpg" alt="Community Welfare">
+          <span class="program-tag">Elderly</span>
+        </div>
+        <div class="program-body">
+          <h4>Community Welfare</h4>
+          <p>Food, financial support, and companionship for vulnerable seniors. Ongoing outreach in Igbore and surrounding areas of Abeokuta.</p>
+          <a href="programs.html#welfare" class="btn-link">Read about achievements <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED STORY -->
+<section class="story">
+  <div class="story-inner">
+    <div class="story-image reveal">
+      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg" alt="Mrs. Lawal Abeke">
+    </div>
+    <div class="story-content reveal delay-1">
+      <span class="section-label">Featured Story</span>
+      <h2>Restoring Hope <span class="highlight">Through Sight</span></h2>
+      <blockquote class="story-quote">"I thank God and PHINEHAS GENERATION FOUNDATION for restoring my hope."</blockquote>
+      <p><strong>Mrs. Lawal Abeke</strong> had been living with severe cataracts that significantly impaired her vision. She could no longer see the faces of her grandchildren. She had lost her independence.</p>
+      <p>Through our medical outreach, she received a comprehensive eye examination, cataract surgery, and prescription glasses — all free of charge. Today, she can see again.</p>
+      <p>She is one of hundreds. Every pair of glasses, every surgery, every medication administered is a life restored. Not just her sight — her dignity, her confidence, her hope.</p>
+      <div class="story-location">Igbore, Abeokuta, Ogun State</div>
+      <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Support someone like her</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITIES WE SERVE -->
+<section class="section section-cream">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-label">Our Presence</span>
+      <h2 class="section-title">Communities <span class="highlight">We Serve</span></h2>
+      <p class="section-subtitle">Two countries. Multiple communities. One mission.</p>
+    </header>
+
+    <div class="communities">
+      <div class="community-card reveal">
+        <div class="community-flag"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Nigeria</h3>
+        <span class="community-focus">Youth &amp; Elderly</span>
+        <p>Our founding home. Through schools, churches, and community centres across Ogun State, we run mentorship programs for teenagers and outreach initiatives for elderly people.</p>
+        <p>Our medical outreaches and community welfare programs have reached hundreds of vulnerable seniors.</p>
+        <div class="community-places">
+          <span class="community-place"><i class="fas fa-map-pin"></i> Abiola Way, Abeokuta</span>
+          <span class="community-place"><i class="fas fa-map-pin"></i> Igbore, Abeokuta</span>
+          <span class="community-place"><i class="fas fa-map-pin"></i> Obosokoto</span>
+          <span class="community-place"><i class="fas fa-map-pin"></i> Egba Comprehensive High School</span>
+          <span class="community-place"><i class="fas fa-map-pin"></i> OOPL, Abeokuta</span>
+        </div>
+      </div>
+
+      <div class="community-card reveal delay-2">
+        <div class="community-flag"><i class="fas fa-globe-europe"></i></div>
+        <h3>United Kingdom</h3>
+        <span class="community-focus">Elderly People</span>
+        <p>In the UK, our founder works directly with social workers to reach isolated elderly people — providing companionship, welfare support, and connection to vital services.</p>
+        <p>Our approach is partnership-based: we work alongside established welfare systems to fill the gaps where no one else is reaching.</p>
+        <div class="community-places">
+          <span class="community-place"><i class="fas fa-handshake"></i> Working with UK social workers</span>
+          <span class="community-place"><i class="fas fa-heart"></i> Companionship outreach</span>
+          <span class="community-place"><i class="fas fa-users"></i> Community welfare support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="section section-white">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-label">Our Journey</span>
+      <h2 class="section-title">Moments <span class="highlight">That Matter</span></h2>
+      <p class="section-subtitle">A visual record of the people, programs, and communities we've served since 2016.</p>
+    </header>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938655/1784786312206_lbfedq.jpg" alt="Founder with children">
+        <span class="gallery-date">Ongoing</span>
+        <div class="gallery-caption">Founder with children after a program</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938661/1784785603066_sl0t6n.jpg" alt="Igbore outreach">
+        <span class="gallery-date">Igbore</span>
+        <div class="gallery-caption">Igbore outreach to the elders</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938656/1784785537613_vpdnvj.jpg" alt="Real Men Don't Rape">
+        <span class="gallery-date">Campaign</span>
+        <div class="gallery-caption">Real Men Don't Rape program</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938655/1784785544873_q1y8hv.jpg" alt="Walk Against Rape 2018">
+        <span class="gallery-date">2018</span>
+        <div class="gallery-caption">Walk Against Rape — 2018</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784973209/1784972471198_hxwsgc.jpg" alt="Egba Comprehensive High School">
+        <span class="gallery-date">School</span>
+        <div class="gallery-caption">Egba Comprehensive High School, Abeokuta</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938657/1784784278910_k5yejk.jpg" alt="Teenagers hangout 2020">
+        <span class="gallery-date">2020</span>
+        <div class="gallery-caption">One of the teenagers hangouts — 2020</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938656/1784784281203_cxpfuo.jpg" alt="Depression Not Me">
+        <span class="gallery-date">Mental Health</span>
+        <div class="gallery-caption">"Depression! Not Me." program</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784973209/1784972754947_uulto2.jpg" alt="OOPL Abeokuta">
+        <span class="gallery-date">OOPL</span>
+        <div class="gallery-caption">Teenagers hangout at OOPL, Abeokuta</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg" alt="At OOPL">
+        <span class="gallery-date">OOPL</span>
+        <div class="gallery-caption">Gathering at OOPL, Abeokuta</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938655/1784786327932_qcshsd.jpg" alt="Teaching session">
+        <span class="gallery-date">Ongoing</span>
+        <div class="gallery-caption">Ongoing teaching session with the founder</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938660/1784786241102_pdoydb.jpg" alt="31 Days Challenge">
+        <span class="gallery-date">31 Days</span>
+        <div class="gallery-caption">31 Days Challenge — Speak to a Child about Christ</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938661/1784786127338_zuspfn.jpg" alt="Relationship talks Abiola Way">
+        <span class="gallery-date">Abiola Way</span>
+        <div class="gallery-caption">After relationship talks — Abiola Way</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938651/1784935448564_aj8mpw.jpg" alt="Teenagers gathered">
+        <span class="gallery-date">Gathering</span>
+        <div class="gallery-caption">Teenagers gathered after relationship talks</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784973209/1784972112406_jecvw8.jpg" alt="Founder and volunteers 2019">
+        <span class="gallery-date">2019</span>
+        <div class="gallery-caption">The founder and volunteers — 2019</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938656/1784785519625_rike68.jpg" alt="Older program in Igbore">
+        <span class="gallery-date">Igbore</span>
+        <div class="gallery-caption">Earlier Igbore community program</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_600,q_auto,f_auto/v1784938656/1784785500480_h6o2kh.jpg" alt="Press publication">
+        <span class="gallery-date">Press</span>
+        <div class="gallery-caption">Featured by nedalinksreporters.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="volunteer-box reveal">
+      <div class="volunteer-icon"><i class="fas fa-hands-helping"></i></div>
+      <h3>Our Volunteers</h3>
+      <div class="volunteer-count">15</div>
+      <div class="volunteer-label">Volunteers Mobilised</div>
+      <p>Since our founding, 15 dedicated volunteers have given their time, skills, and presence to our work. They are teachers, medical professionals, students, and community members — united by a shared commitment to serve.</p>
+      <a href="volunteer.html" class="btn btn-primary"><i class="fas fa-hands-helping"></i> Join Our Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION -->
+<section class="section section-white">
+  <div class="container">
+    <div class="registration reveal">
+      <h4><i class="fas fa-certificate"></i> Registration in Progress</h4>
+      <p>PHINEHAS GENERATION FOUNDATION is currently in the process of obtaining formal registration with the <strong>Corporate Affairs Commission (CAC)</strong> of Nigeria. This registration will enable us to formalise our operations, access institutional funding, and expand our reach further.</p>
+      <p>In the meantime, we remain committed to full transparency. All our work — every medical outreach, every mentorship program, every community initiative — is conducted with the highest standards of accountability and integrity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT BRIDGE -->
+<section class="impact-bridge">
+  <div class="impact-bridge-inner reveal">
+    <span class="section-label" style="color:var(--gold-light)">Now You Know</span>
+    <h2 class="section-title">You've seen the problem.<br>You've seen our response.</h2>
+    <p>Every number on this page is a person. Every program is a life changed. Every community is a future being built. If this work matters to you, there are three ways to be part of what comes next.</p>
+    <div class="impact-bridge-cta">
+      <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
+      <a href="volunteer.html" class="btn btn-outline-light"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="Logo" width="42" height="42"><span class="logo-text">PHINEHAS <span>GENERATION</span></span></a>
+        <p>Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Our Programs</a>
+        <a href="founder.html">Founder</a>
+        <a href="the-need.html">The Need</a>
+        <a href="our-impact.html">Our Impact</a>
+        <a href="blog.html">Blog / News</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donate.html">Donate</a>
+      </div>
+      <div class="footer-links">
+        <h4>Programs</h4>
+        <a href="programs.html#self-esteem">Self-Esteem Development</a>
+        <a href="programs.html#real-men">Real Men Don't Rape</a>
+        <a href="programs.html#medical">Medical Outreach</a>
+        <a href="programs.html#welfare">Community Welfare</a>
+        <a href="programs.html#mental-health">Mental Health Awareness</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="tel:+2348161370219"><i class="fas fa-phone"></i> +234 816 137 0219</a>
+        <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> UK Office, London</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Nigeria Office, Lagos</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <strong>PHINEHAS GENERATION FOUNDATION</strong> — Registered Charity. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+(function(){
+'use strict';
+
+window.addEventListener('load',function(){
+  var l=document.getElementById('loader');
+  if(!l)return;
+  setTimeout(function(){
+    l.classList.add('hidden');
+    setTimeout(function(){if(l.parentNode)l.style.display='none';},900);
+  },1400);
+});
+
+var header=document.getElementById('header');
+var lastScroll=0;
+window.addEventListener('scroll',function(){
+  var y=window.scrollY;
+  if(header){
+    header.classList.toggle('scrolled',y>40);
+    if(y>220&&y>lastScroll){header.classList.add('hidden');}
+    else{header.classList.remove('hidden');}
+  }
+  var btt=document.getElementById('backToTop');
+  if(btt)btt.classList.toggle('visible',y>500);
+  lastScroll=y;
+},{passive:true});
+
+var hamburger=document.getElementById('hamburger');
+var navMenu=document.getElementById('navMenu');
+function openNav(){
+  if(!navMenu)return;
+  navMenu.classList.add('open');
+  if(hamburger){var ic=hamburger.querySelector('i');if(ic){ic.classList.remove('fa-bars');ic.classList.add('fa-times');}}
+  document.body.style.overflow='hidden';
+}
+function closeNav(){
+  if(!navMenu)return;
+  navMenu.classList.remove('open');
+  if(hamburger){var ic=hamburger.querySelector('i');if(ic){ic.classList.remove('fa-times');ic.classList.add('fa-bars');}}
+  document.body.style.overflow='';
+}
+if(hamburger)hamburger.addEventListener('click',function(e){e.stopPropagation();if(navMenu.classList.contains('open'))closeNav();else openNav();});
+document.querySelectorAll('.nav-menu a').forEach(function(a){a.addEventListener('click',closeNav);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
+
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+}else{
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+}
+
+function animateCount(el){
+  var target=parseFloat(el.dataset.count);
+  if(isNaN(target))return;
+  var suffix=el.dataset.suffix||'';
+  var duration=1600;
+  var start=performance.now();
+  function tick(now){
+    var t=Math.min((now-start)/duration,1);
+    var e=1-Math.pow(1-t,3);
+    var v=Math.floor(e*target);
+    el.textContent=v.toLocaleString()+suffix;
+    if(t<1)requestAnimationFrame(tick);
+    else el.textContent=target.toLocaleString()+suffix;
+  }
+  requestAnimationFrame(tick);
+}
+if('IntersectionObserver' in window){
+  var co=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){animateCount(en.target);co.unobserve(en.target);}
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el);});
+}else{
+  document.querySelectorAll('[data-count]').forEach(animateCount);
+}
+
+var btt=document.getElementById('backToTop');
+if(btt)btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=this.getAttribute('href');
+    if(id==='#'||id.length<2)return;
+    var t=document.querySelector(id);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+})();
+</script>
+
+</body>
+</html>
