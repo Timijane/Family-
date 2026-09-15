@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0d0d0d">
 <meta name="description" content="The Need — Global statistics on ageing, youth, mental health, violence, and poverty that explain why PHINEHAS GENERATION FOUNDATION exists. Sources: WHO, UN, UNODC, NIH.">
 <meta property="og:title" content="The Need | PHINEHAS GENERATION FOUNDATION">
-<meta property="og:description" content="2.1 billion people will be over 60 by 2050. 1 in 3 women experience violence. 1 in 7 adolescents face mental health disorders. This is the world we are responding to.">
+<meta property="og:description" content="2.1 billion people will be over 60 by 2050. 1 in 3 women experience violence. 1 in 7 adolescents face mental health disorders.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -14,7 +14,7 @@
 <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <title>The Need | PHINEHAS GENERATION FOUNDATION</title>
 
@@ -24,6 +24,7 @@
 --gold:#c8943e;--gold-light:#e0b866;--gold-dark:#a67a2e;--gold-pale:#fdf8f0;
 --black:#0d0d0d;--black-soft:#1a1a1a;--black-mute:#2a2a2a;
 --green:#6b8f71;--green-dark:#3d5a42;--green-pale:#e8efe9;
+--red:#b85450;--red-dark:#8a3a36;
 --cream:#faf7f2;--white:#ffffff;
 --gray-100:#f7f6f3;--gray-200:#e8e6e1;--gray-300:#d4d2cc;
 --gray-400:#9a9a9a;--gray-500:#6b6b6b;--gray-600:#4a4a4a;
@@ -86,19 +87,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav-menu-kids::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(255,255,255,0.15) 0%,transparent 60%)}
 .nav-menu-kids-caption{position:absolute;bottom:14px;left:20px;right:20px;color:var(--white);font-family:var(--font-serif);font-size:.95rem;font-style:italic;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.75)}
 
-/* PAGE HERO */
+/* PAGE HERO — WORKS ON MOBILE NOW */
 .page-hero{position:relative;min-height:78vh;min-height:78svh;display:flex;align-items:center;background:var(--black);overflow:hidden;padding:130px 0 80px;color:var(--white)}
 .page-hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
-.page-hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
-.page-hero::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(13,13,13,.9) 0%,rgba(13,13,13,.7) 50%,rgba(61,90,66,.5) 100%);z-index:1}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.page-hero::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(13,13,13,.85) 0%,rgba(13,13,13,.65) 50%,rgba(61,90,66,.55) 100%);z-index:1}
 .page-hero-particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
 .page-hero-inner{position:relative;z-index:3;text-align:center;max-width:920px;margin:0 auto}
-.page-hero-eyebrow{display:inline-block;background:rgba(200,148,62,.15);border:1px solid rgba(200,148,62,.4);color:var(--gold-light);padding:8px 20px;border-radius:var(--r-full);font-size:.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
-.page-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,5.5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--white);margin-bottom:22px}
+.page-hero-eyebrow{display:inline-block;background:rgba(200,148,62,.2);border:1px solid rgba(200,148,62,.5);color:var(--gold-light);padding:8px 18px;border-radius:var(--r-full);font-size:.66rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.page-hero h1{font-family:var(--font-serif);font-size:clamp(1.9rem,5.5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--white);margin-bottom:20px;text-shadow:0 3px 24px rgba(0,0,0,.5)}
 .page-hero h1 .highlight{color:var(--gold-light)}
-.page-hero p{font-size:clamp(1rem,1.6vw,1.15rem);color:rgba(255,255,255,.85);line-height:1.75;max-width:680px;margin:0 auto 32px}
+.page-hero p{font-size:clamp(.95rem,1.6vw,1.13rem);color:rgba(255,255,255,.9);line-height:1.75;max-width:680px;margin:0 auto 30px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
 .page-hero-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.5);font-size:.6rem;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px;animation:bounceDown 2.4s ease-in-out infinite}
+.scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.6);font-size:.6rem;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px;animation:bounceDown 2.4s ease-in-out infinite}
 .scroll-indicator i{font-size:.9rem}
 @keyframes bounceDown{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
@@ -117,11 +118,30 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .section-subtitle{font-size:1.02rem;color:var(--gray-500);line-height:1.75}
 .section-dark .section-subtitle{color:rgba(255,255,255,.7)}
 
-/* NARRATIVE */
-.narrative{max-width:820px;margin:0 auto}
-.narrative p{font-size:1.02rem;color:var(--gray-600);line-height:1.9;margin-bottom:20px}
-.narrative p strong{color:var(--black)}
-.narrative .dropcap{float:left;font-family:var(--font-serif);font-size:4.5rem;line-height:.85;padding:6px 14px 0 0;font-weight:800;color:var(--gold)}
+/* ============ NEWSPAPER-STYLE ARTICLE (mobile-optimized) ============ */
+.article{max-width:780px;margin:0 auto;padding:0 20px}
+.article-meta{display:flex;align-items:center;gap:14px;padding-bottom:20px;margin-bottom:28px;border-bottom:1px solid var(--gray-200);flex-wrap:wrap;font-size:.72rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.article-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.article-meta .source{color:var(--gold-dark)}
+.article h2{font-family:var(--font-serif);font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;line-height:1.2;letter-spacing:-.5px;color:var(--black);margin-bottom:20px}
+.article h3{font-family:var(--font-serif);font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:700;line-height:1.3;color:var(--black);margin:32px 0 16px}
+.article p{font-size:clamp(1rem,1.5vw,1.08rem);color:var(--black-soft);line-height:1.85;margin-bottom:22px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.article p strong{color:var(--black);font-weight:700}
+.article p em{font-style:italic}
+.article p .dropcap{float:left;font-family:var(--font-serif);font-size:4rem;line-height:.85;padding:6px 14px 0 0;font-weight:800;color:var(--gold)}
+.article-pullquote{font-family:var(--font-serif);font-size:clamp(1.15rem,2.2vw,1.4rem);font-style:italic;font-weight:600;line-height:1.4;color:var(--black);padding:24px 0 24px 24px;margin:32px 0;border-left:4px solid var(--gold)}
+.article-image-full{width:100%;border-radius:var(--r-lg);overflow:hidden;margin:32px 0;box-shadow:var(--sh)}
+.article-image-full img{width:100%;height:auto;display:block}
+.article-image-caption{font-size:.78rem;color:var(--gray-500);font-style:italic;padding:12px 0 0;line-height:1.5}
+.article-footnotes{margin-top:36px;padding-top:24px;border-top:1px solid var(--gray-200);font-size:.82rem;color:var(--gray-500);line-height:1.7}
+.article-footnotes strong{color:var(--black);display:block;margin-bottom:10px;font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:700}
+.article-footnotes a{color:var(--gold-dark);font-weight:600;border-bottom:1px dashed rgba(200,148,62,.4);transition:border-color .3s}
+.article-footnotes a:hover{border-bottom-color:var(--gold-dark)}
+
+/* SOURCE INLINE */
+.src{display:inline-flex;align-items:center;gap:5px;color:var(--gold-dark);font-weight:600;font-size:.68rem;padding:2px 8px 2px 6px;border-radius:var(--r-full);background:rgba(200,148,62,0.08);border:1px solid rgba(200,148,62,0.15);transition:all .35s var(--ease);margin:0 2px;text-decoration:none;white-space:nowrap;vertical-align:baseline}
+.src:hover{background:rgba(200,148,62,0.18);border-color:var(--gold)}
+.src i{font-size:.55rem;opacity:.7}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:var(--r-full);font-weight:600;font-size:.92rem;letter-spacing:.3px;transition:all .35s var(--ease);cursor:pointer;white-space:nowrap;border:1.5px solid transparent;text-align:center}
@@ -132,20 +152,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .btn-outline-light:hover{background:var(--white);color:var(--black);border-color:var(--white);transform:translateY(-2px)}
 .btn-dark{background:var(--black);color:var(--white)}
 .btn-dark:hover{background:var(--black-mute);transform:translateY(-2px)}
-.btn-outline-dark{background:transparent;color:var(--black);border-color:var(--black)}
-.btn-outline-dark:hover{background:var(--black);color:var(--white);transform:translateY(-2px)}
 .btn-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--gold-dark);border-bottom:1.5px solid transparent;padding-bottom:2px;transition:all .35s var(--ease)}
 .btn-link:hover{color:var(--gold);border-bottom-color:var(--gold);gap:12px}
 
-/* SOURCE LINK */
-.src{display:inline-flex;align-items:center;gap:5px;color:var(--gold-dark);font-weight:600;font-size:.68rem;padding:2px 8px 2px 6px;border-radius:var(--r-full);background:rgba(200,148,62,0.08);border:1px solid rgba(200,148,62,0.15);transition:all .35s var(--ease);margin:0 2px;text-decoration:none;white-space:nowrap;vertical-align:baseline}
-.src:hover{background:rgba(200,148,62,0.18);border-color:var(--gold)}
-.src i{font-size:.55rem;opacity:.7}
-
-/* BIG NUMBER SECTION WITH BACKGROUND IMAGE */
+/* BIG STAT WITH BG */
 .big-stat{position:relative;padding:clamp(70px,10vw,120px) 0;overflow:hidden;text-align:center;color:var(--white)}
 .big-stat-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
-.big-stat-bg img{width:100%;height:100%;object-fit:cover}
+.big-stat-bg img{width:100%;height:100%;object-fit:cover;display:block}
 .big-stat-overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1}
 .big-stat-overlay--gold{background:linear-gradient(135deg,rgba(13,13,13,.92) 0%,rgba(139,105,20,.75) 50%,rgba(13,13,13,.92) 100%)}
 .big-stat-overlay--green{background:linear-gradient(135deg,rgba(13,13,13,.92) 0%,rgba(61,90,66,.8) 50%,rgba(13,13,13,.92) 100%)}
@@ -176,7 +189,41 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .stat-card-src a:hover{border-bottom-color:var(--gold-dark)}
 .stat-card.green-accent::before{background:var(--green)}
 
-/* TWO COLUMN */
+/* CHART */
+.chart-wrap{max-width:960px;margin:40px auto 0;background:var(--white);border-radius:var(--r-lg);padding:44px 40px;box-shadow:var(--sh);border:1px solid var(--gray-200)}
+.chart-title{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--black);margin-bottom:28px;text-align:center}
+.chart-title small{display:block;font-family:var(--font-sans);font-size:.7rem;font-weight:600;color:var(--gray-500);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:8px}
+.bar-chart{display:flex;flex-direction:column;gap:18px}
+.bar-row{display:flex;align-items:center;gap:14px}
+.bar-label{width:180px;flex-shrink:0;font-size:.82rem;font-weight:600;color:var(--black-soft);text-align:right}
+.bar-track{flex:1;height:28px;background:var(--gray-100);border-radius:var(--r-full);overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:var(--r-full);transition:width 1.8s var(--ease-out);width:0}
+.bar-fill.animated{width:var(--target-width)}
+.bar-fill--gold{background:linear-gradient(90deg,var(--gold-dark),var(--gold-light))}
+.bar-fill--green{background:linear-gradient(90deg,var(--green-dark),var(--green))}
+.bar-fill--dark{background:linear-gradient(90deg,#1a1a1a,#4a4a4a)}
+.bar-fill--red{background:linear-gradient(90deg,var(--red-dark),var(--red))}
+.bar-value{width:72px;flex-shrink:0;font-size:.86rem;font-weight:700;color:var(--black)}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap}
+.donut-svg{max-width:320px;width:100%;height:auto}
+.donut-legend{display:flex;flex-direction:column;gap:14px}
+.donut-legend-item{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--black-soft)}
+.donut-legend-color{width:14px;height:14px;border-radius:3px;flex-shrink:0}
+.donut-legend-color.gold{background:linear-gradient(135deg,var(--gold-dark),var(--gold-light))}
+.donut-legend-color.green{background:linear-gradient(135deg,var(--green-dark),var(--green))}
+.donut-legend-color.dark{background:linear-gradient(135deg,#1a1a1a,#4a4a4a)}
+.donut-legend-color.red{background:linear-gradient(135deg,var(--red-dark),var(--red))}
+.donut-legend-src{font-size:.75rem;color:var(--gray-500);margin-top:8px;border-top:1px solid var(--gray-200);padding-top:12px}
+
+/* CONCLUSION */
+.conclusion{background:linear-gradient(135deg,var(--gold-pale) 0%,rgba(200,148,62,0.08) 100%);border-left:4px solid var(--gold);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:32px 34px;margin-top:40px}
+.conclusion h4{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--black);margin-bottom:10px}
+.conclusion p{font-size:.95rem;color:var(--gray-600);line-height:1.75}
+.conclusion p strong{color:var(--black)}
+.conclusion--green{border-left-color:var(--green);background:linear-gradient(135deg,var(--green-pale) 0%,rgba(107,143,113,0.08) 100%)}
+.conclusion--dark{border-left-color:var(--black);background:linear-gradient(135deg,#f5f5f3 0%,rgba(13,13,13,0.05) 100%)}
+
+/* SPLIT */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
 .split--reverse .split-image{order:2}
 .split-image{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/5}
@@ -187,63 +234,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .split-content p{font-size:1rem;color:var(--gray-600);line-height:1.85;margin-bottom:18px}
 .split-content p strong{color:var(--black)}
 
-/* CHART CONTAINER */
-.chart-wrap{max-width:960px;margin:40px auto 0;background:var(--white);border-radius:var(--r-lg);padding:44px 40px;box-shadow:var(--sh);border:1px solid var(--gray-200)}
-.section-cream .chart-wrap{background:var(--white)}
-.chart-title{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--black);margin-bottom:28px;text-align:center}
-.chart-title small{display:block;font-family:var(--font-sans);font-size:.7rem;font-weight:600;color:var(--gray-500);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:8px}
-
-/* HORIZONTAL BAR CHART */
-.bar-chart{display:flex;flex-direction:column;gap:18px}
-.bar-row{display:flex;align-items:center;gap:14px}
-.bar-label{width:180px;flex-shrink:0;font-size:.82rem;font-weight:600;color:var(--black-soft);text-align:right}
-.bar-track{flex:1;height:28px;background:var(--gray-100);border-radius:var(--r-full);overflow:hidden;position:relative}
-.bar-fill{height:100%;border-radius:var(--r-full);transition:width 1.8s var(--ease-out);width:0;position:relative}
-.bar-fill.animated{width:var(--target-width)}
-.bar-fill--gold{background:linear-gradient(90deg,var(--gold-dark),var(--gold-light))}
-.bar-fill--green{background:linear-gradient(90deg,var(--green-dark),var(--green))}
-.bar-fill--dark{background:linear-gradient(90deg,#1a1a1a,#4a4a4a)}
-.bar-fill--red{background:linear-gradient(90deg,#8a3a36,#b85450)}
-.bar-value{width:72px;flex-shrink:0;font-size:.86rem;font-weight:700;color:var(--black)}
-
-/* DONUT CHART */
-.donut-wrap{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap}
-.donut-svg{max-width:320px;width:100%;height:auto}
-.donut-legend{display:flex;flex-direction:column;gap:14px}
-.donut-legend-item{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--black-soft)}
-.donut-legend-color{width:14px;height:14px;border-radius:3px;flex-shrink:0}
-.donut-legend-color.gold{background:linear-gradient(135deg,var(--gold-dark),var(--gold-light))}
-.donut-legend-color.green{background:linear-gradient(135deg,var(--green-dark),var(--green))}
-.donut-legend-color.dark{background:linear-gradient(135deg,#1a1a1a,#4a4a4a)}
-.donut-legend-color.red{background:linear-gradient(135deg,#8a3a36,#b85450)}
-.donut-legend-src{font-size:.75rem;color:var(--gray-500);margin-top:8px;border-top:1px solid var(--gray-200);padding-top:12px}
-
-/* CONCLUSION BOX */
-.conclusion{background:linear-gradient(135deg,var(--gold-pale) 0%,rgba(200,148,62,0.08) 100%);border-left:4px solid var(--gold);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:32px 34px;margin-top:40px}
-.conclusion h4{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--black);margin-bottom:10px}
-.conclusion p{font-size:.95rem;color:var(--gray-600);line-height:1.75}
-.conclusion p strong{color:var(--black)}
-.conclusion--green{border-left-color:var(--green);background:linear-gradient(135deg,var(--green-pale) 0%,rgba(107,143,113,0.08) 100%)}
-.conclusion--dark{border-left-color:var(--black);background:linear-gradient(135deg,#f5f5f3 0%,rgba(13,13,13,0.05) 100%)}
-
-/* STAT IMAGE ROW */
-.stat-image-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;max-width:1200px;margin-left:auto;margin-right:auto}
-.stat-image-card{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/10}
-.stat-image-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
-.stat-image-card:hover img{transform:scale(1.06)}
-.stat-image-overlay{position:absolute;bottom:0;left:0;right:0;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:var(--white);font-weight:600;font-size:.92rem;line-height:1.4}
-
 /* PULL QUOTE */
 .pull-quote{position:relative;background:var(--black);padding:100px 20px;text-align:center;color:var(--white);overflow:hidden}
 .pull-quote-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
-.pull-quote-bg img{width:100%;height:100%;object-fit:cover;opacity:.18}
+.pull-quote-bg img{width:100%;height:100%;object-fit:cover;opacity:.18;display:block}
 .pull-quote::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(13,13,13,.88) 0%,rgba(13,13,13,.6) 100%);z-index:1}
 .pull-quote-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
 .pull-quote-mark{font-family:var(--font-serif);font-size:5rem;color:var(--gold);opacity:.5;line-height:.6;margin-bottom:16px}
 .pull-quote-text{font-family:var(--font-serif);font-size:clamp(1.3rem,3vw,2rem);font-style:italic;font-weight:600;line-height:1.35;color:var(--white);margin-bottom:22px}
 .pull-quote-author{color:var(--gold-light);font-weight:600;font-size:.85rem;letter-spacing:2px;text-transform:uppercase}
 
-/* CHALLENGE CARDS */
+/* CHALLENGE GRID */
 .challenge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1200px;margin:0 auto}
 .challenge-card{background:var(--white);border-radius:var(--r-lg);border:1px solid var(--gray-200);padding:36px 28px;transition:all .35s var(--ease);position:relative;overflow:hidden}
 .challenge-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--gold)}
@@ -258,16 +259,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .impact-bridge{background:linear-gradient(155deg,#0d0d0d 0%,#1a1a1a 55%,#0d0d0d 100%);position:relative;overflow:hidden;color:var(--white);padding:var(--pad) 0}
 .impact-bridge::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,148,62,.15) 0%,transparent 70%);border-radius:50%;pointer-events:none}
 .impact-bridge::after{content:'';position:absolute;bottom:-120px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(107,143,113,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none}
-.impact-bridge-inner{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+.impact-bridge-inner{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto;padding:0 20px}
 .impact-bridge-inner .section-title{color:var(--white)}
 .impact-bridge-inner p{font-size:1.05rem;color:rgba(255,255,255,.75);line-height:1.85;margin-bottom:24px}
 .impact-bridge-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px}
-
-/* IMAGE DIVIDER */
-.image-divider{height:420px;background-size:cover;background-position:center;background-attachment:fixed;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.image-divider::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(13,13,13,.6) 0%,rgba(13,13,13,.4) 100%);z-index:1}
-.divider-content{position:relative;z-index:2;text-align:center;padding:0 24px}
-.divider-content blockquote{color:var(--white);font-family:var(--font-serif);font-size:clamp(1.4rem,2.8vw,2.1rem);font-style:italic;font-weight:600;max-width:760px;margin:0 auto;text-shadow:0 3px 20px rgba(0,0,0,.5);line-height:1.4}
 
 /* FOOTER */
 .footer{background:var(--black);color:var(--white);padding:60px 0 26px;position:relative}
@@ -300,12 +295,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .reveal.delay-2{transition-delay:.2s}
 .reveal.delay-3{transition-delay:.3s}
 
-/* TABLET */
+/* ============ TABLET ============ */
 @media(min-width:720px){
 .container,.container-narrow{padding:0 28px}
+.article{padding:0 28px}
 }
 
-/* DESKTOP */
+/* ============ DESKTOP ============ */
 @media(min-width:960px){
 .nav-menu{position:static;width:auto;height:auto;background:transparent;flex-direction:row;padding:0;gap:20px;transform:none;box-shadow:none;border:none;overflow:visible;align-items:center}
 .nav-menu a{padding:6px 0;font-size:.8rem;color:rgba(255,255,255,.85);border-bottom:none}
@@ -314,12 +310,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav-menu-kids{display:none}
 .hamburger{display:none}
 }
-
 @media(min-width:1100px){
 .split{gap:80px}
 }
 
-/* RESPONSIVE */
+/* ============ TABLET/MEDIUM ============ */
 @media(max-width:960px){
 .split{grid-template-columns:1fr;gap:32px}
 .split--reverse .split-image{order:0}
@@ -327,46 +322,119 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .challenge-grid{grid-template-columns:1fr 1fr}
 .stats-grid{grid-template-columns:1fr 1fr}
 }
+
+/* ============ MOBILE — NEWSPAPER ARTICLE STYLE ============ */
 @media(max-width:640px){
-.page-hero{min-height:auto;padding:100px 0 60px}
-.page-hero h1{font-size:1.7rem}
-.page-hero p{font-size:.9rem}
+/* HERO — image always shows on mobile */
+.page-hero{min-height:auto;padding:110px 0 70px}
+.page-hero-bg img{object-position:center}
+.page-hero::after{background:linear-gradient(180deg,rgba(13,13,13,.72) 0%,rgba(13,13,13,.62) 40%,rgba(13,13,13,.85) 100%)}
+.page-hero h1{font-size:1.75rem;letter-spacing:-.5px;line-height:1.15}
+.page-hero p{font-size:.92rem;line-height:1.7;color:rgba(255,255,255,.9)}
+.page-hero-eyebrow{font-size:.58rem;letter-spacing:1.8px;padding:6px 14px}
 .page-hero-cta{flex-direction:column;align-items:stretch;max-width:320px;margin:0 auto}
 .page-hero-cta .btn{width:100%}
 .scroll-indicator{display:none}
-.stats-grid{grid-template-columns:1fr 1fr;gap:10px}
-.stats-grid-2{grid-template-columns:1fr}
-.stat-card{padding:20px 14px}
-.stat-card-icon{font-size:1.2rem;margin-bottom:8px}
-.stat-card-num{font-size:1.3rem}
-.stat-card-label{font-size:.72rem;line-height:1.5}
-.challenge-grid{grid-template-columns:1fr 1fr;gap:12px}
-.challenge-card{padding:20px 16px}
-.challenge-card h4{font-size:1rem}
-.challenge-card p{font-size:.78rem;line-height:1.6}
-.challenge-card .challenge-stat{font-size:1.4rem}
-.chart-wrap{padding:24px 18px}
-.bar-label{width:110px;font-size:.72rem}
-.bar-value{width:55px;font-size:.75rem}
+
+/* ARTICLE — real newspaper feel */
+.article{padding:0 22px}
+.article-meta{font-size:.64rem;letter-spacing:1.2px;padding-bottom:14px;margin-bottom:22px;gap:10px}
+.article h2{font-size:1.4rem;line-height:1.2;letter-spacing:-.3px;margin-bottom:16px}
+.article h3{font-size:1.1rem;line-height:1.3;margin:28px 0 12px}
+.article p{font-size:.97rem;line-height:1.8;margin-bottom:18px;text-align:left}
+.article p .dropcap{font-size:3.4rem;padding:4px 10px 0 0}
+.article-pullquote{font-size:1.05rem;padding:18px 0 18px 18px;margin:24px 0;line-height:1.4}
+.article-image-full{margin:24px 0;border-radius:var(--r)}
+.article-footnotes{font-size:.76rem;line-height:1.65}
+
+/* SECTION HEADERS */
+.section{padding:56px 0}
+.section-header{margin:0 auto 40px;padding:0 22px}
+.section-title{font-size:1.5rem;letter-spacing:-.3px}
+.section-subtitle{font-size:.92rem}
+.section-label{font-size:.62rem;letter-spacing:2.2px}
+
+/* BIG STATS — readable on mobile */
+.big-stat{padding:70px 0}
+.big-stat-number{font-size:clamp(3rem,17vw,5.5rem);letter-spacing:-2px;line-height:1}
+.big-stat-label{font-size:1rem;line-height:1.4}
+.big-stat-context{font-size:.86rem;line-height:1.65}
+.big-stat-source{font-size:.62rem;letter-spacing:2px}
+
+/* STATS GRID — 2 columns on mobile */
+.stats-grid{grid-template-columns:1fr 1fr;gap:10px;padding:0 14px}
+.stats-grid-2{grid-template-columns:1fr;padding:0 14px}
+.stat-card{padding:20px 12px}
+.stat-card-icon{font-size:1.1rem;margin-bottom:8px}
+.stat-card-num{font-size:1.25rem}
+.stat-card-label{font-size:.7rem;line-height:1.45;margin-bottom:8px}
+.stat-card-src{font-size:.55rem;letter-spacing:.8px}
+.stat-card-unit{font-size:.62rem}
+
+/* CHART — clean on mobile */
+.chart-wrap{padding:24px 18px;border-radius:var(--r);margin:24px auto 0}
+.chart-title{font-size:1.05rem;margin-bottom:20px}
+.chart-title small{font-size:.62rem;letter-spacing:1.8px}
+.bar-label{width:96px;font-size:.68rem}
+.bar-value{width:52px;font-size:.72rem}
 .bar-track{height:22px}
-.donut-wrap{gap:24px;flex-direction:column}
-.split-content h3{font-size:1.3rem}
-.split-content p{font-size:.88rem}
-.big-stat-number{font-size:clamp(2.8rem,16vw,5rem);letter-spacing:-2px}
-.big-stat-label{font-size:1rem}
-.big-stat-context{font-size:.88rem}
-.pull-quote{padding:60px 20px}
+.bar-chart{gap:12px}
+.donut-wrap{gap:20px;flex-direction:column}
+.donut-legend{font-size:.78rem}
+.donut-legend-item{font-size:.78rem}
+.donut-legend-src{font-size:.68rem}
+
+/* CONCLUSION */
+.conclusion{padding:24px 22px;margin-top:28px;border-radius:0 var(--r) var(--r) 0}
+.conclusion h4{font-size:1rem;margin-bottom:8px}
+.conclusion p{font-size:.86rem;line-height:1.7}
+
+/* SPLIT */
+.split-content h3{font-size:1.25rem}
+.split-content p{font-size:.9rem;line-height:1.75}
+
+/* PULL QUOTE */
+.pull-quote{padding:60px 22px}
 .pull-quote-mark{font-size:3.5rem}
-.pull-quote-text{font-size:1.1rem}
-.stat-image-row{grid-template-columns:1fr}
-.image-divider{height:280px;background-attachment:scroll}
-.divider-content blockquote{font-size:1.15rem}
+.pull-quote-text{font-size:1.05rem;line-height:1.4}
+.pull-quote-author{font-size:.72rem;letter-spacing:1.5px}
+
+/* CHALLENGE GRID */
+.challenge-grid{grid-template-columns:1fr 1fr;gap:12px;padding:0 14px}
+.challenge-card{padding:20px 16px}
+.challenge-card-icon{width:44px;height:44px;font-size:1.05rem;margin-bottom:14px;border-radius:12px}
+.challenge-card h4{font-size:.95rem;margin-bottom:8px}
+.challenge-card p{font-size:.75rem;line-height:1.55;margin-bottom:12px}
+.challenge-card .challenge-stat{font-size:1.35rem}
+.challenge-card .challenge-cta{font-size:.68rem;letter-spacing:1.2px}
+
+/* IMPACT BRIDGE */
+.impact-bridge-inner h2{font-size:1.4rem}
+.impact-bridge-inner p{font-size:.92rem}
+
+/* FOOTER */
+.footer{padding:50px 0 22px}
+.footer-grid{text-align:center;gap:32px}
+.footer-brand p{font-size:.82rem}
+.footer h4{font-size:.66rem}
+.footer-links a{font-size:.8rem}
+.footer-bottom{font-size:.7rem}
+}
+
+/* ============ VERY SMALL ============ */
+@media(max-width:380px){
+.page-hero h1{font-size:1.55rem}
+.page-hero p{font-size:.86rem}
+.article h2{font-size:1.25rem}
+.article p{font-size:.92rem}
+.big-stat-number{font-size:2.7rem}
+.stats-grid{grid-template-columns:1fr}
+.challenge-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader-inner">
     <div class="loader-ring"></div>
@@ -380,7 +448,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- HEADER -->
 <header class="header" id="header">
   <div class="container nav-wrap">
     <a href="index.html" class="logo" aria-label="Home">
@@ -409,9 +476,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 <main id="main">
 
-<!-- PAGE HERO -->
+<!-- PAGE HERO — now displays image properly on mobile -->
 <section class="page-hero">
-  <div class="page-hero-bg"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784972112406_jecvw8.jpg" alt=""></div>
+  <div class="page-hero-bg">
+    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784972112406_jecvw8.jpg" alt="Community gathering">
+  </div>
   <canvas class="page-hero-particles" id="heroParticles"></canvas>
   <div class="container">
     <div class="page-hero-inner">
@@ -427,18 +496,21 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="scroll-indicator" aria-hidden="true"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
 </section>
 
-<!-- INTRO NARRATIVE -->
+<!-- INTRO -->
 <section class="section section-cream">
-  <div class="container">
-    <div class="narrative reveal">
-      <p><span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. Simultaneously, the largest generation of young people ever to exist is coming of age — over three billion under 25.</p>
-      <p>These two shifts — an ageing population and an unprecedented youth bulge — are reshaping societies. They are creating new pressures on families, healthcare systems, and social safety nets. And they are happening fastest in the countries least equipped to handle them.</p>
-      <p><strong>This page is not about abstract statistics.</strong> It is about the real, measurable, and urgent crisis that PHINEHAS GENERATION FOUNDATION exists to respond to. Every number here has a face. Every trend has a cost. And every statistic is a reason someone, somewhere, needs us to act.</p>
+  <div class="article reveal">
+    <div class="article-meta">
+      <span>An Investigation by PHINEHAS GENERATION</span>
+      <span class="dot"></span>
+      <span class="source">Sources: WHO · UN · UNODC · NIH</span>
     </div>
+    <p><span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. Simultaneously, the largest generation of young people ever to exist is coming of age — over three billion under 25.</p>
+    <p>These two shifts — an ageing population and an unprecedented youth bulge — are reshaping societies. They are creating new pressures on families, healthcare systems, and social safety nets. And they are happening fastest in the countries least equipped to handle them.</p>
+    <p><strong>This page is not about abstract statistics.</strong> It is about the real, measurable, and urgent crisis that PHINEHAS GENERATION FOUNDATION exists to respond to. Every number here has a face. Every trend has a cost. And every statistic is a reason someone, somewhere, needs us to act.</p>
   </div>
 </section>
 
-<!-- ============ SECTION 1: AN AGEING WORLD ============ -->
+<!-- SECTION 1 — AGEING -->
 <section class="section section-white" id="ageing">
   <div class="container">
     <header class="section-header reveal">
@@ -446,17 +518,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <h2 class="section-title">An <span class="highlight">Ageing World</span> That Cannot Be Ignored</h2>
       <p class="section-subtitle">The 60+ population is growing faster than any other age group. By 2050, one in five people on Earth will be over 60.</p>
     </header>
-
-    <div class="narrative reveal" style="margin-bottom:60px">
-      <p><span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. By 2030, <strong>1.4 billion people</strong> will be aged 60 or over. By 2050, that figure will rise to <strong>2.1 billion</strong> — more than one-fifth of the entire global population <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
-      <p>What makes this shift even more urgent is where these older people will live. The World Health Organization projects that <strong>80% of older persons will reside in low- and middle-income countries</strong> by 2050 <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a> — nations where social safety nets, healthcare infrastructure, and elderly care systems are often underdeveloped or entirely absent. In these contexts, ageing is not accompanied by security; it is accompanied by vulnerability.</p>
-      <p>The fastest-growing segment is the oldest old — those aged 80 years and above. By 2050, <strong>426 million people</strong> will belong to this group <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. They face the highest risk of disability, chronic illness, social isolation, and poverty. Without deliberate intervention, millions will spend their final years without dignity, care, or companionship.</p>
-    </div>
   </div>
 
-  <!-- BIG STAT 1: 2.1 BILLION with background image -->
+  <div class="article reveal">
+    <h3>For the First Time in Human History</h3>
+    <p><span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. By 2030, <strong>1.4 billion people</strong> will be aged 60 or over. By 2050, that figure will rise to <strong>2.1 billion</strong> — more than one-fifth of the entire global population <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>What makes this shift even more urgent is where these older people will live. The World Health Organization projects that <strong>80% of older persons will reside in low- and middle-income countries</strong> by 2050 <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a> — nations where social safety nets, healthcare infrastructure, and elderly care systems are often underdeveloped or entirely absent. In these contexts, ageing is not accompanied by security; it is accompanied by vulnerability.</p>
+    <p>The fastest-growing segment is the oldest old — those aged 80 years and above. By 2050, <strong>426 million people</strong> will belong to this group <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. They face the highest risk of disability, chronic illness, social isolation, and poverty. Without deliberate intervention, millions will spend their final years without dignity, care, or companionship.</p>
+  </div>
+
+  <!-- Big stat 2.1 billion -->
   <div class="big-stat">
-    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" alt=""></div>
+    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" alt="Earth from space"></div>
     <div class="big-stat-overlay big-stat-overlay--gold"></div>
     <canvas class="big-stat-particles" id="particles1"></canvas>
     <div class="big-stat-inner reveal">
@@ -468,7 +541,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <div class="container" style="margin-top:80px">
+  <div class="container" style="margin-top:70px">
     <div class="stats-grid">
       <div class="stat-card reveal">
         <div class="stat-card-icon"><i class="fas fa-users"></i></div>
@@ -497,23 +570,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <!-- CHART: Donut 80% -->
-  <div class="container" style="margin-top:80px">
+  <div class="container" style="margin-top:70px">
     <div class="chart-wrap reveal">
       <div class="chart-title"><small>Where Older People Will Live by 2050</small>The Burden Falls on Low- and Middle-Income Countries</div>
       <div class="donut-wrap">
-        <svg class="donut-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart showing 80% of older people will live in low and middle-income countries by 2050">
+        <svg class="donut-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart 80% LMIC">
           <defs>
-            <linearGradient id="dnGold" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#f0d078"/>
-              <stop offset="50%" stop-color="#c8943e"/>
-              <stop offset="100%" stop-color="#8b6914"/>
-            </linearGradient>
-            <linearGradient id="dnGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#a8d5b0"/>
-              <stop offset="50%" stop-color="#6b8f71"/>
-              <stop offset="100%" stop-color="#3d5a42"/>
-            </linearGradient>
+            <linearGradient id="dnGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0d078"/><stop offset="50%" stop-color="#c8943e"/><stop offset="100%" stop-color="#8b6914"/></linearGradient>
+            <linearGradient id="dnGreen" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a8d5b0"/><stop offset="50%" stop-color="#6b8f71"/><stop offset="100%" stop-color="#3d5a42"/></linearGradient>
           </defs>
           <circle cx="200" cy="200" r="150" fill="none" stroke="#f5f2ec" stroke-width="45"/>
           <circle cx="200" cy="200" r="150" fill="none" stroke="url(#dnGold)" stroke-width="45" stroke-dasharray="753.98 942.48" stroke-dashoffset="0" transform="rotate(-90 200 200)" stroke-linecap="round" class="chart-animate"/>
@@ -534,27 +598,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <!-- SPLIT: Where the burden falls -->
-  <div class="container" style="margin-top:80px">
-    <div class="split">
-      <div class="split-image reveal">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784981365/Screenshot_2026-07-25-13-08-38-807-edit_com.miui.gallery_nypvtf.jpg" alt="Elderly woman" loading="lazy">
-        <span class="image-badge">Ageing &amp; Dignity</span>
-      </div>
-      <div class="split-content reveal delay-1">
-        <h3>Where the Burden Falls Heaviest</h3>
-        <p>The overwhelming majority of the world's older population will live in countries least equipped to support them <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. This means families — often already struggling — must bear the full weight of elder care without institutional support.</p>
-        <p>In Nigeria alone, the traditional extended family structure that once cared for the elderly is eroding under economic pressure, urbanisation, and migration. <strong>Millions of seniors are left without adequate care.</strong></p>
-        <p>In the United Kingdom, many older people face a different but equally serious crisis: <strong>isolation and loneliness.</strong> Over one million older people in the UK report feeling lonely most or all of the time. Behind every closed door is a person who gave decades to society and now eats alone every day.</p>
-        <p>In light of these realities, it is important to consider the eternal destiny of older people, particularly where they will spend eternity after this earthly life. 2 Corinthians 4:18 states, <em>"While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal."</em></p>
-        <p>It has been observed that, despite the fear of death experienced by many older people due to the uncertainty surrounding life after death <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>, some have made little or no preparation for their eternal destiny. This highlights the importance of spiritual preparation in old age. Consequently, Christian older adults are often encouraged to remain committed to their service to God and to cultivate a strong and personal relationship with Jesus Christ. Such commitment provides them with the assurance and hope of eternal life and of reigning with Christ in eternity.</p>
-        <a href="our-impact.html#elderly" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>Where the Burden Falls Heaviest</h3>
+    <p>The overwhelming majority of the world's older population will live in countries least equipped to support them <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. This means families — often already struggling — must bear the full weight of elder care without institutional support.</p>
+    <p>In Nigeria alone, the traditional extended family structure that once cared for the elderly is eroding under economic pressure, urbanisation, and migration. <strong>Millions of seniors are left without adequate care.</strong></p>
+    <p>In the United Kingdom, many older people face a different but equally serious crisis: <strong>isolation and loneliness.</strong> Over one million older people in the UK report feeling lonely most or all of the time. Behind every closed door is a person who gave decades to society and now eats alone every day.</p>
+
+    <blockquote class="article-pullquote">"While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal."<br><span style="font-size:.85rem;font-style:normal;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;display:block;margin-top:12px">— 2 Corinthians 4:18</span></blockquote>
+
+    <p>In light of these realities, it is important to consider the eternal destiny of older people, particularly where they will spend eternity after this earthly life. It has been observed that, despite the fear of death experienced by many older people due to the uncertainty surrounding life after death <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>, some have made little or no preparation for their eternal destiny. This highlights the importance of spiritual preparation in old age. Consequently, Christian older adults are often encouraged to remain committed to their service to God and to cultivate a strong and personal relationship with Jesus Christ. Such commitment provides them with the assurance and hope of eternal life and of reigning with Christ in eternity.</p>
+
+    <a href="our-impact.html#elderly" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
   </div>
 
-  <!-- CONCLUSION BOX -->
-  <div class="container" style="margin-top:60px">
+  <div class="container" style="margin-top:40px">
     <div class="conclusion reveal">
       <h4>Why PHINEHAS GENERATION Is Responding</h4>
       <p>These numbers are not abstract. They represent grandmothers, grandfathers, widows, and retired community builders — people who have given their best years to society and now face isolation, untreated medical conditions, and poverty. PHINEHAS GENERATION FOUNDATION exists to restore dignity to these lives through medical outreach, food support, companionship, and compassionate care. <strong>We believe that honouring the elderly is not charity — it is a moral obligation.</strong></p>
@@ -572,7 +629,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
 </section>
 
-<!-- ============ SECTION 2: THE NEXT GENERATION ============ -->
+<!-- SECTION 2 — YOUTH -->
 <section class="section section-cream" id="youth">
   <div class="container">
     <header class="section-header reveal">
@@ -580,17 +637,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <h2 class="section-title">The <span class="highlight">Next Generation</span></h2>
       <p class="section-subtitle">While the world ages, it is simultaneously experiencing the largest youth population in human history.</p>
     </header>
-
-    <div class="narrative reveal" style="margin-bottom:40px">
-      <p><span class="dropcap">W</span>hile the world ages, it is simultaneously experiencing the largest youth population in human history. There are <strong>1.3 billion adolescents</strong> aged 10–19 years alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — representing roughly 42% of humanity <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
-      <p>The geographic distribution of these young people mirrors the ageing crisis: <strong>nearly 90% of adolescents live in low- and middle-income countries</strong> <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. These are young people growing up in environments where access to quality education, mentorship, healthcare, and economic opportunity is severely limited. Without intervention, their potential remains untapped — and the consequences ripple across generations.</p>
-      <p>The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people. Yet, in most low-resource settings, mental health services for adolescents are virtually nonexistent.</p>
-    </div>
   </div>
 
-  <!-- BIG STAT 2: 3 BILLION -->
+  <div class="article reveal">
+    <p><span class="dropcap">W</span>hile the world ages, it is simultaneously experiencing the largest youth population in human history. There are <strong>1.3 billion adolescents</strong> aged 10–19 years alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — representing roughly 42% of humanity <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>The geographic distribution of these young people mirrors the ageing crisis: <strong>nearly 90% of adolescents live in low- and middle-income countries</strong> <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. These are young people growing up in environments where access to quality education, mentorship, healthcare, and economic opportunity is severely limited. Without intervention, their potential remains untapped — and the consequences ripple across generations.</p>
+    <p>The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people. Yet, in most low-resource settings, mental health services for adolescents are virtually nonexistent.</p>
+  </div>
+
   <div class="big-stat">
-    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80" alt=""></div>
+    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80" alt="Students"></div>
     <div class="big-stat-overlay big-stat-overlay--green"></div>
     <canvas class="big-stat-particles" id="particles2"></canvas>
     <div class="big-stat-inner reveal">
@@ -602,36 +658,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <!-- CHART: Bar youth -->
-  <div class="container" style="margin-top:80px">
+  <div class="container" style="margin-top:70px">
     <div class="chart-wrap reveal">
       <div class="chart-title"><small>Global Youth Snapshot</small>Where the Young People Are</div>
       <div class="bar-chart">
-        <div class="bar-row">
-          <div class="bar-label">Under 25</div>
-          <div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:100%"></div></div>
-          <div class="bar-value">3 bn+</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">Adolescents (10-19)</div>
-          <div class="bar-track"><div class="bar-fill bar-fill--green" style="--target-width:43%"></div></div>
-          <div class="bar-value">1.3 bn</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">In LMICs</div>
-          <div class="bar-track"><div class="bar-fill bar-fill--dark" style="--target-width:90%"></div></div>
-          <div class="bar-value">~90%</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">Mental health affected</div>
-          <div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:14%"></div></div>
-          <div class="bar-value">1 in 7</div>
-        </div>
+        <div class="bar-row"><div class="bar-label">Under 25</div><div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:100%"></div></div><div class="bar-value">3 bn+</div></div>
+        <div class="bar-row"><div class="bar-label">Adolescents (10-19)</div><div class="bar-track"><div class="bar-fill bar-fill--green" style="--target-width:43%"></div></div><div class="bar-value">1.3 bn</div></div>
+        <div class="bar-row"><div class="bar-label">In LMICs</div><div class="bar-track"><div class="bar-fill bar-fill--dark" style="--target-width:90%"></div></div><div class="bar-value">~90%</div></div>
+        <div class="bar-row"><div class="bar-label">Mental health affected</div><div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:14%"></div></div><div class="bar-value">1 in 7</div></div>
       </div>
     </div>
   </div>
 
-  <div class="container" style="margin-top:60px">
+  <div class="container" style="margin-top:50px">
     <div class="stats-grid">
       <div class="stat-card green-accent reveal">
         <div class="stat-card-icon"><i class="fas fa-child"></i></div>
@@ -660,8 +699,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <!-- Initiation stats -->
-  <div class="container" style="margin-top:60px">
+  <div class="container" style="margin-top:50px">
     <div class="stats-grid stats-grid-2">
       <div class="stat-card reveal" style="border-top:3px solid var(--gold)">
         <div class="stat-card-icon"><i class="fas fa-flask"></i></div>
@@ -678,24 +716,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <!-- SPLIT: youth response -->
-  <div class="container" style="margin-top:80px">
-    <div class="split split--reverse">
-      <div class="split-image reveal">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938657/1784784229854_ktdfci.jpg" alt="Youth group" loading="lazy">
-        <span class="image-badge">Youth &amp; Potential</span>
-      </div>
-      <div class="split-content reveal delay-1">
-        <h3>The Largest Generation of Young People Ever</h3>
-        <p>There are 1.3 billion adolescents aged 10–19 alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — roughly 42% of humanity <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
-        <p>Nearly <strong>90% of adolescents live in low- and middle-income countries</strong> — regions where access to quality education, mentorship, healthcare, and economic opportunity is severely limited.</p>
-        <p>The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people.</p>
-        <a href="our-impact.html#youth" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>The Largest Generation of Young People Ever</h3>
+    <p>There are 1.3 billion adolescents aged 10–19 alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — roughly 42% of humanity <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Nearly <strong>90% of adolescents live in low- and middle-income countries</strong> — regions where access to quality education, mentorship, healthcare, and economic opportunity is severely limited.</p>
+    <p>The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people.</p>
+    <a href="our-impact.html#youth" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
   </div>
 
-  <div class="container" style="margin-top:60px">
+  <div class="container" style="margin-top:40px">
     <div class="conclusion conclusion--green reveal">
       <h4>Why PHINEHAS GENERATION Invests in Youth</h4>
       <p>Every statistic above represents a young person with dreams, potential, and the capacity to lead — if given the right tools. PHINEHAS GENERATION FOUNDATION runs mentorship programs, self-esteem workshops, mental health awareness campaigns, and educational outreach specifically designed to equip teenagers with confidence, character, and purpose. <strong>We are not simply filling gaps; we are building the next generation of ethical, capable leaders.</strong></p>
@@ -703,7 +732,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
 </section>
 
-<!-- ============ SECTION 3: MENTAL HEALTH CRISIS ============ -->
+<!-- SECTION 3 — MENTAL HEALTH -->
 <section class="section section-white" id="mental-health">
   <div class="container">
     <header class="section-header reveal">
@@ -713,9 +742,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </header>
   </div>
 
-  <!-- BIG STAT 3: 280 MILLION -->
   <div class="big-stat">
-    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1920&q=80" alt=""></div>
+    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1920&q=80" alt="Quiet reflection"></div>
     <div class="big-stat-overlay big-stat-overlay--red"></div>
     <canvas class="big-stat-particles" id="particles3"></canvas>
     <div class="big-stat-inner reveal">
@@ -727,7 +755,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <div class="container" style="margin-top:80px">
+  <div class="container" style="margin-top:70px">
     <div class="stats-grid">
       <div class="stat-card reveal">
         <div class="stat-card-icon"><i class="fas fa-brain"></i></div>
@@ -756,27 +784,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <!-- CHART: Mental health pie -->
-  <div class="container" style="margin-top:80px">
+  <div class="container" style="margin-top:70px">
     <div class="chart-wrap reveal">
       <div class="chart-title"><small>Global Mental Health</small>280 Million People Live With Depression</div>
       <div class="donut-wrap">
-        <svg class="donut-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart showing 280 million people live with depression worldwide">
+        <svg class="donut-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart mental health">
           <defs>
-            <linearGradient id="mhGold" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#f0d078"/>
-              <stop offset="50%" stop-color="#c8943e"/>
-              <stop offset="100%" stop-color="#8b6914"/>
-            </linearGradient>
-            <linearGradient id="mhDark" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#4a4a4a"/>
-              <stop offset="100%" stop-color="#2a2a2a"/>
-            </linearGradient>
-            <linearGradient id="mhGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#a8d5b0"/>
-              <stop offset="50%" stop-color="#6b8f71"/>
-              <stop offset="100%" stop-color="#3d5a42"/>
-            </linearGradient>
+            <linearGradient id="mhGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0d078"/><stop offset="50%" stop-color="#c8943e"/><stop offset="100%" stop-color="#8b6914"/></linearGradient>
+            <linearGradient id="mhDark" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a4a4a"/><stop offset="100%" stop-color="#2a2a2a"/></linearGradient>
+            <linearGradient id="mhGreen" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a8d5b0"/><stop offset="50%" stop-color="#6b8f71"/><stop offset="100%" stop-color="#3d5a42"/></linearGradient>
           </defs>
           <circle cx="200" cy="200" r="140" fill="none" stroke="#f0ede8" stroke-width="40"/>
           <circle cx="200" cy="200" r="140" fill="none" stroke="url(#mhGold)" stroke-width="40" stroke-dasharray="439.82 879.65" stroke-dashoffset="0" transform="rotate(-90 200 200)" stroke-linecap="butt" class="chart-animate"/>
@@ -796,25 +812,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <div class="container" style="margin-top:80px">
-    <div class="split">
-      <div class="split-content reveal">
-        <h3>The Silence Around Mental Health</h3>
-        <p>In many of the communities we serve — in Nigeria, in the UK, and across the world — mental health remains a taboo subject. Young people are told to "pray about it" or "get over it." Elderly people assume their despair is simply part of ageing. And those who do speak up often find no services waiting for them.</p>
-        <p>The WHO reports that <strong>most adolescent mental health disorders go undetected and untreated</strong> — especially in low- and middle-income countries <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. The result is not just individual suffering — it is lost potential, broken families, and futures that never unfold.</p>
-        <p>In the older generation, the situation is compounded by isolation. Studies show that <strong>44.2%</strong> of older adults experience death anxiety, and over <strong>92%</strong> report at least a moderate fear of death <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>. Without community, dignity, and purpose, these fears overwhelm.</p>
-        <a href="our-impact.html#mental-health" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="split-image reveal delay-1">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784973209/1784972754947_uulto2.jpg" alt="Mental health awareness" loading="lazy">
-        <span class="image-badge">Mental Health</span>
-      </div>
-    </div>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>The Silence Around Mental Health</h3>
+    <p>In many of the communities we serve — in Nigeria, in the UK, and across the world — mental health remains a taboo subject. Young people are told to "pray about it" or "get over it." Elderly people assume their despair is simply part of ageing. And those who do speak up often find no services waiting for them.</p>
+    <p>The WHO reports that <strong>most adolescent mental health disorders go undetected and untreated</strong> — especially in low- and middle-income countries <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. The result is not just individual suffering — it is lost potential, broken families, and futures that never unfold.</p>
+    <p>In the older generation, the situation is compounded by isolation. Studies show that <strong>44.2%</strong> of older adults experience death anxiety, and over <strong>92%</strong> report at least a moderate fear of death <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>. Without community, dignity, and purpose, these fears overwhelm.</p>
+    <a href="our-impact.html#mental-health" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
   </div>
 
-  <!-- Fear of death -->
-  <div class="container" style="margin-top:80px">
-    <header class="section-header reveal" style="margin-bottom:40px">
+  <div class="container" style="margin-top:50px">
+    <header class="section-header reveal" style="margin-bottom:30px">
       <span class="section-label">Fear of Death in Older People</span>
       <h2 class="section-title">A Fear That <span class="highlight">Goes Unspoken</span></h2>
     </header>
@@ -838,7 +845,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </div>
   </div>
 
-  <div class="container" style="margin-top:60px">
+  <div class="container" style="margin-top:40px">
     <div class="conclusion reveal">
       <h4>Our Mental Health Awareness Program</h4>
       <p>PHINEHAS GENERATION FOUNDATION addresses this crisis directly through our <strong>Mental Health Awareness</strong> program. We educate teenagers on depression, emotional wellbeing, and resilience — creating safe spaces for conversation in schools and communities where the topic is often taboo. Early intervention saves lives.</p>
@@ -846,7 +853,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
 </section>
 
-<!-- ============ SECTION 4: VIOLENCE AGAINST WOMEN ============ -->
+<!-- SECTION 4 — VIOLENCE AGAINST WOMEN -->
 <section class="section section-cream" id="violence">
   <div class="container">
     <header class="section-header reveal">
@@ -855,21 +862,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <p class="section-subtitle">One in three women. A crisis of global proportion that crosses every border, culture, and class.</p>
     </header>
 
-    <!-- CHART: 1 in 3 -->
     <div class="chart-wrap reveal">
       <div class="chart-title"><small>Gender-Based Violence</small>1 in 3 Women Experience Violence in Their Lifetime</div>
       <div class="donut-wrap">
-        <svg class="donut-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chart showing 1 in 3 women experience violence in their lifetime">
+        <svg class="donut-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1 in 3 women">
           <defs>
-            <linearGradient id="vawGold" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#f0d078"/>
-              <stop offset="50%" stop-color="#c8943e"/>
-              <stop offset="100%" stop-color="#8b6914"/>
-            </linearGradient>
-            <linearGradient id="vawDark" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#4a4a4a"/>
-              <stop offset="100%" stop-color="#2a2a2a"/>
-            </linearGradient>
+            <linearGradient id="vawGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0d078"/><stop offset="50%" stop-color="#c8943e"/><stop offset="100%" stop-color="#8b6914"/></linearGradient>
+            <linearGradient id="vawDark" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a4a4a"/><stop offset="100%" stop-color="#2a2a2a"/></linearGradient>
           </defs>
           <circle cx="160" cy="160" r="110" fill="none" stroke="#f0ede8" stroke-width="35"/>
           <circle cx="160" cy="160" r="110" fill="none" stroke="url(#vawDark)" stroke-width="35" stroke-dasharray="345.58 691.15" stroke-dashoffset="0" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate"/>
@@ -886,29 +885,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="split" style="margin-top:80px">
-      <div class="split-image reveal">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784973209/1784972471198_hxwsgc.jpg" alt="Community outreach" loading="lazy">
-        <span class="image-badge">Dignity &amp; Safety</span>
-      </div>
-      <div class="split-content reveal delay-1">
-        <h3>736 Million Women and Girls</h3>
-        <p>The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime. That translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
-        <p>Violence against women is not merely a personal tragedy. It is a public health crisis of epidemic proportions. It crosses every border, culture, and socioeconomic class — but its impact is most severe where legal protections are weakest and support services are unavailable.</p>
-        <p>Prevention starts with <strong>reshaping attitudes early</strong> — teaching boys respect, responsibility, and empathy before violence ever takes root. That is why we invest in youth education as a form of prevention.</p>
-        <a href="our-impact.html#real-men" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>736 Million Women and Girls</h3>
+    <p>The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime. That translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Violence against women is not merely a personal tragedy. It is a public health crisis of epidemic proportions. It crosses every border, culture, and socioeconomic class — but its impact is most severe where legal protections are weakest and support services are unavailable.</p>
+    <p>Prevention starts with <strong>reshaping attitudes early</strong> — teaching boys respect, responsibility, and empathy before violence ever takes root. That is why we invest in youth education as a form of prevention.</p>
+    <a href="our-impact.html#real-men" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
+  </div>
 
-    <div class="conclusion conclusion--dark reveal" style="margin-top:60px">
+  <div class="container" style="margin-top:40px">
+    <div class="conclusion conclusion--dark reveal">
       <h4>Our "Real Men Don't Rape" Initiative</h4>
       <p>PHINEHAS GENERATION FOUNDATION confronts this crisis through our <strong>"Real Men Don't Rape"</strong> program — an educational campaign that promotes respect, responsibility, and gender-based violence prevention among teenage boys and young men. By reshaping attitudes early, we contribute to breaking the cycle of violence before it begins.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ SECTION 5: SUBSTANCE ABUSE ============ -->
+<!-- SECTION 5 — SUBSTANCE ABUSE -->
 <section class="section section-white" id="substance">
   <div class="container">
     <header class="section-header reveal">
@@ -917,43 +912,26 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <p class="section-subtitle">296 million people used drugs in 2021. Young people are hit hardest.</p>
     </header>
 
-    <!-- CHART: substance abuse bar -->
     <div class="chart-wrap reveal">
       <div class="chart-title"><small>Global Drug Use (2021)</small>The Growing Crisis</div>
       <div class="bar-chart">
-        <div class="bar-row">
-          <div class="bar-label">Used drugs</div>
-          <div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:100%"></div></div>
-          <div class="bar-value">296M</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">Need treatment</div>
-          <div class="bar-track"><div class="bar-fill bar-fill--red" style="--target-width:13%"></div></div>
-          <div class="bar-value">39.5M</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">In LMICs</div>
-          <div class="bar-track"><div class="bar-fill bar-fill--dark" style="--target-width:85%"></div></div>
-          <div class="bar-value">~85%</div>
-        </div>
+        <div class="bar-row"><div class="bar-label">Used drugs</div><div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:100%"></div></div><div class="bar-value">296M</div></div>
+        <div class="bar-row"><div class="bar-label">Need treatment</div><div class="bar-track"><div class="bar-fill bar-fill--red" style="--target-width:13%"></div></div><div class="bar-value">39.5M</div></div>
+        <div class="bar-row"><div class="bar-label">In LMICs</div><div class="bar-track"><div class="bar-fill bar-fill--dark" style="--target-width:85%"></div></div><div class="bar-value">~85%</div></div>
       </div>
     </div>
+  </div>
 
-    <div class="split split--reverse" style="margin-top:80px">
-      <div class="split-image reveal">
-        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1784938655/1784786485653_gth2i5.jpg" alt="Youth mentoring" loading="lazy">
-        <span class="image-badge">Prevention</span>
-      </div>
-      <div class="split-content reveal delay-1">
-        <h3>A Crisis That Begins in Adolescence</h3>
-        <p>According to the United Nations Office on Drugs and Crime, <strong>296 million people</strong> worldwide used drugs in 2021 — a figure that has grown significantly over the past decade <a href="https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2023.html" target="_blank" rel="noopener" class="src">UNODC <i class="fas fa-external-link-alt"></i></a>.</p>
-        <p>Young people are disproportionately affected. <strong>Substance abuse often begins in adolescence</strong> — fuelled by peer pressure, trauma, lack of guidance, and economic hopelessness. Studies in Nigeria show the mean age of substance abuse initiation is as young as <strong>12.4 years</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10514430/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>.</p>
-        <p>Without early intervention, addiction derails education, destroys families, and perpetuates cycles of poverty. The most effective prevention is mentorship, self-worth, and community — the very things we invest in.</p>
-        <a href="our-impact.html#prevention" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>A Crisis That Begins in Adolescence</h3>
+    <p>According to the United Nations Office on Drugs and Crime, <strong>296 million people</strong> worldwide used drugs in 2021 — a figure that has grown significantly over the past decade <a href="https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2023.html" target="_blank" rel="noopener" class="src">UNODC <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Young people are disproportionately affected. <strong>Substance abuse often begins in adolescence</strong> — fuelled by peer pressure, trauma, lack of guidance, and economic hopelessness. Studies in Nigeria show the mean age of substance abuse initiation is as young as <strong>12.4 years</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10514430/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Without early intervention, addiction derails education, destroys families, and perpetuates cycles of poverty. The most effective prevention is mentorship, self-worth, and community — the very things we invest in.</p>
+    <a href="our-impact.html#prevention" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
+  </div>
 
-    <div class="conclusion reveal" style="margin-top:60px">
+  <div class="container" style="margin-top:40px">
+    <div class="conclusion reveal">
       <h4>Prevention Through Mentorship</h4>
       <p>PHINEHAS GENERATION FOUNDATION's youth mentorship and <strong>Sexual Purity</strong> programs equip teenagers with the self-esteem, decision-making skills, and positive peer networks necessary to resist destructive behaviours. <strong>We believe that a guided teenager is far less likely to become a statistic.</strong></p>
     </div>
@@ -970,7 +948,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
 </section>
 
-<!-- ============ SECTION 6: THE CONVERGENCE ============ -->
+<!-- SECTION 6 — CONVERGENCE -->
 <section class="section section-cream" id="convergence">
   <div class="container">
     <header class="section-header reveal">
@@ -984,81 +962,74 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <div class="challenge-card-icon"><i class="fas fa-user-graduate"></i></div>
         <div class="challenge-stat">1 in 7</div>
         <h4>Youth Mental Health</h4>
-        <p>Adolescents face a mental health crisis with almost no accessible services. Without early support, the consequences last a lifetime.</p>
+        <p>Adolescents face a mental health crisis with almost no accessible services.</p>
         <a href="our-impact.html#mental-health" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="challenge-card reveal delay-1">
         <div class="challenge-card-icon"><i class="fas fa-heart-broken"></i></div>
         <div class="challenge-stat">1 in 3</div>
         <h4>Violence Prevention</h4>
-        <p>Violence against women begins with attitudes formed in adolescence. Prevention must start with boys and young men.</p>
+        <p>Violence against women begins with attitudes formed in adolescence.</p>
         <a href="our-impact.html#real-men" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="challenge-card reveal delay-2">
         <div class="challenge-card-icon"><i class="fas fa-pills"></i></div>
         <div class="challenge-stat">12.4 yrs</div>
         <h4>Substance Abuse</h4>
-        <p>Substance abuse begins in early adolescence. The most effective prevention is mentorship and self-worth.</p>
+        <p>Substance abuse begins in early adolescence. Prevention starts with mentorship.</p>
         <a href="our-impact.html#prevention" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="challenge-card reveal">
         <div class="challenge-card-icon"><i class="fas fa-users"></i></div>
         <div class="challenge-stat">80%</div>
         <h4>Elderly Care Gap</h4>
-        <p>80% of older people will live in countries least able to care for them — without institutional support, families bear the full weight.</p>
+        <p>80% of older people will live in countries least able to care for them.</p>
         <a href="our-impact.html#elderly" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="challenge-card reveal delay-1">
         <div class="challenge-card-icon"><i class="fas fa-eye"></i></div>
         <div class="challenge-stat">Untreated</div>
         <h4>Preventable Blindness</h4>
-        <p>Millions of elderly people live with cataracts and other treatable eye conditions that take their independence and dignity.</p>
+        <p>Millions of elderly people live with treatable eye conditions that take their independence.</p>
         <a href="our-impact.html#medical" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="challenge-card reveal delay-2">
         <div class="challenge-card-icon"><i class="fas fa-sad-tear"></i></div>
         <div class="challenge-stat">44.2%</div>
         <h4>Fear &amp; Isolation</h4>
-        <p>Nearly half of older adults experience death anxiety. Without community and companionship, their final years are marked by fear.</p>
+        <p>Nearly half of older adults experience death anxiety.</p>
         <a href="our-impact.html#welfare" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 7: WHY PHINEHAS EXISTS -->
+<!-- WHY PHINEHAS EXISTS -->
 <section class="section section-dark">
-  <div class="container">
-    <div class="narrative reveal" style="max-width:820px">
-      <header class="section-header" style="margin-bottom:40px;text-align:left;max-width:100%">
-        <span class="section-label">Our Response</span>
-        <h2 class="section-title" style="color:var(--white)">Why <span class="highlight">PHINEHAS GENERATION</span> Exists</h2>
-      </header>
-      <p style="color:rgba(255,255,255,.8)">These numbers are not abstract. They are grandmothers, grandfathers, teenagers, and children. They are the people we meet at medical outreaches, in schools, and in communities across Nigeria and the UK. They are the reason we were founded in 2016 — and the reason we keep going.</p>
-      <p style="color:rgba(255,255,255,.8)">We are not waiting for governments or institutions to solve these crises. We are building bridges — one teenager, one elder, one community at a time. Through mentorship, medical outreach, community welfare, and compassionate care, we are responding to the very statistics you have just read.</p>
-      <p style="color:rgba(255,255,255,.8)"><strong style="color:var(--gold-light)">We cannot solve the world's problems alone. But we can change one life. And then another. And then another.</strong></p>
-    </div>
+  <div class="article reveal">
+    <span class="section-label" style="color:var(--gold-light)">Our Response</span>
+    <h2 class="section-title" style="color:var(--white);text-align:left">Why <span class="highlight">PHINEHAS GENERATION</span> Exists</h2>
+    <p style="color:rgba(255,255,255,.85)">These numbers are not abstract. They are grandmothers, grandfathers, teenagers, and children. They are the people we meet at medical outreaches, in schools, and in communities across Nigeria and the UK. They are the reason we were founded in 2016 — and the reason we keep going.</p>
+    <p style="color:rgba(255,255,255,.85)">We are not waiting for governments or institutions to solve these crises. We are building bridges — one teenager, one elder, one community at a time. Through mentorship, medical outreach, community welfare, and compassionate care, we are responding to the very statistics you have just read.</p>
+    <p style="color:rgba(255,255,255,.85)"><strong style="color:var(--gold-light)">We cannot solve the world's problems alone. But we can change one life. And then another. And then another.</strong></p>
   </div>
 </section>
 
 <!-- IMPACT BRIDGE -->
 <section class="impact-bridge">
-  <div class="container">
-    <div class="impact-bridge-inner reveal">
-      <span class="section-label" style="color:var(--gold-light)">The Response</span>
-      <h2 class="section-title">This is the problem.<br>Here is what we're doing about it.</h2>
-      <p>Every statistic on this page corresponds to a program we run, a person we serve, and a life we've touched. See the full impact of PHINEHAS GENERATION FOUNDATION — verified, specific, and ongoing.</p>
-      <div class="impact-bridge-cta">
-        <a href="our-impact.html" class="btn btn-primary">See Our Impact <i class="fas fa-arrow-right"></i></a>
-        <a href="donate.html" class="btn btn-outline-light"><i class="fas fa-heart"></i> Donate Now</a>
-      </div>
+  <div class="impact-bridge-inner reveal">
+    <span class="section-label" style="color:var(--gold-light)">The Response</span>
+    <h2 class="section-title">This is the problem.<br>Here is what we're doing about it.</h2>
+    <p>Every statistic on this page corresponds to a program we run, a person we serve, and a life we've touched. See the full impact of PHINEHAS GENERATION FOUNDATION — verified, specific, and ongoing.</p>
+    <div class="impact-bridge-cta">
+      <a href="our-impact.html" class="btn btn-primary">See Our Impact <i class="fas fa-arrow-right"></i></a>
+      <a href="donate.html" class="btn btn-outline-light"><i class="fas fa-heart"></i> Donate Now</a>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -1124,7 +1095,7 @@ window.addEventListener('load',function(){
   },1400);
 });
 
-/* HEADER SCROLL */
+/* HEADER */
 var header=document.getElementById('header');
 var lastScroll=0;
 window.addEventListener('scroll',function(){
@@ -1158,7 +1129,7 @@ if(hamburger)hamburger.addEventListener('click',function(e){e.stopPropagation();
 document.querySelectorAll('.nav-menu a').forEach(function(a){a.addEventListener('click',closeNav);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
 
-/* PARTICLE CANVASES */
+/* PARTICLES */
 function initParticles(canvasId,color){
   var canvas=document.getElementById(canvasId);
   if(!canvas)return;
@@ -1222,15 +1193,13 @@ if('IntersectionObserver' in window){
   document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
 }
 
-/* BAR CHART ANIMATION */
+/* BAR ANIMATION */
 if('IntersectionObserver' in window){
   var barObs=new IntersectionObserver(function(entries){
     entries.forEach(function(en){
       if(en.isIntersecting){
         var bars=en.target.querySelectorAll('.bar-fill');
-        bars.forEach(function(bar,i){
-          setTimeout(function(){bar.classList.add('animated');},i*150);
-        });
+        bars.forEach(function(bar,i){setTimeout(function(){bar.classList.add('animated');},i*150);});
         barObs.unobserve(en.target);
       }
     });
@@ -1238,7 +1207,7 @@ if('IntersectionObserver' in window){
   document.querySelectorAll('.bar-chart').forEach(function(el){barObs.observe(el);});
 }
 
-/* DONUT/PIE CHART ANIMATION */
+/* CHART ANIMATION */
 if('IntersectionObserver' in window){
   var chartObs=new IntersectionObserver(function(entries){
     entries.forEach(function(en){
@@ -1261,24 +1230,6 @@ if('IntersectionObserver' in window){
   document.querySelectorAll('.chart-wrap').forEach(function(el){chartObs.observe(el);});
 }
 
-/* COUNT-UP NUMBERS */
-function animateCount(el){
-  var target=parseFloat(el.dataset.count);
-  if(isNaN(target))return;
-  var suffix=el.dataset.suffix||'';
-  var duration=1400;
-  var start=performance.now();
-  function tick(now){
-    var t=Math.min((now-start)/duration,1);
-    var e=1-Math.pow(1-t,3);
-    var v=Math.floor(e*target);
-    el.textContent=v.toLocaleString()+suffix;
-    if(t<1)requestAnimationFrame(tick);
-    else el.textContent=target.toLocaleString()+suffix;
-  }
-  requestAnimationFrame(tick);
-}
-
 /* BACK TO TOP */
 var btt=document.getElementById('backToTop');
 if(btt)btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
@@ -1292,18 +1243,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
-
-/* CURSOR (desktop) */
-if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
-  var cursor=document.createElement('div');
-  cursor.style.cssText='position:fixed;top:0;left:0;width:22px;height:22px;border:2px solid #c8943e;border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .3s,height .3s,background .3s;mix-blend-mode:difference;';
-  document.body.appendChild(cursor);
-  document.addEventListener('mousemove',function(e){cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';});
-  document.querySelectorAll('a,button,.stat-card,.challenge-card,.bar-row').forEach(function(el){
-    el.addEventListener('mouseenter',function(){cursor.style.width='54px';cursor.style.height='54px';cursor.style.background='rgba(200,148,62,.2)';});
-    el.addEventListener('mouseleave',function(){cursor.style.width='22px';cursor.style.height='22px';cursor.style.background='transparent';});
-  });
-}
 
 })();
 </script>
