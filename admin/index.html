@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d0d0d">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin Panel | PHINEHAS GENERATION</title>
+<link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ============ LOADING OVERLAY ============ -->
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="loading-inner">
+    <div class="loading-ring"></div>
+    <div class="loading-ring"></div>
+    <div class="loading-logo">
+      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="">
+    </div>
+    <div class="loading-title">PHINEHAS</div>
+    <div class="loading-sub">Admin Panel</div>
+  </div>
+</div>
+
+<!-- ============ LOGIN SCREEN ============ -->
+<section id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="login-header">
+      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="" class="login-logo">
+      <h1>Admin Panel</h1>
+      <p>Sign in to manage your website</p>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required autocomplete="current-password">
+          <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+      <div id="loginError" class="login-error"></div>
+      <button type="submit" class="btn btn-primary btn-block" id="loginBtn">
+        <i class="fas fa-sign-in-alt"></i> Sign In
+      </button>
+    </form>
+
+    <div class="login-footer">
+      <a href="#" id="forgotPasswordLink">Forgot password?</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<section id="dashboardScreen" class="dashboard" style="display:none;">
+  <header class="admin-header">
+    <div class="container admin-nav">
+      <a href="#" class="admin-logo">
+        <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="">
+        <span>PHINEHAS <strong>ADMIN</strong></span>
+      </a>
+      <div class="admin-user">
+        <span class="admin-user-email" id="adminUserEmail"></span>
+        <button class="btn-icon" id="logoutBtn" aria-label="Log out" title="Log out">
+          <i class="fas fa-sign-out-alt"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container admin-main">
+    <aside class="admin-sidebar">
+      <nav>
+        <button class="sidebar-btn active" data-panel="welcomeSlides">
+          <i class="fas fa-images"></i> Welcome Slides
+        </button>
+        <button class="sidebar-btn" data-panel="programs">
+          <i class="fas fa-th-large"></i> Programs
+        </button>
+        <button class="sidebar-btn" data-panel="blogPosts">
+          <i class="fas fa-newspaper"></i> Blog Posts
+        </button>
+        <button class="sidebar-btn" data-panel="impactStats">
+          <i class="fas fa-chart-bar"></i> Impact Stats
+        </button>
+        <button class="sidebar-btn" data-panel="testimonials">
+          <i class="fas fa-quote-right"></i> Testimonials
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="../index.html" target="_blank" class="sidebar-link">
+          <i class="fas fa-external-link-alt"></i> View Site
+        </a>
+      </div>
+    </aside>
+
+    <main class="admin-content">
+
+      <!-- ===== WELCOME SLIDES PANEL ===== -->
+      <div class="panel active" id="panel-welcomeSlides">
+        <div class="panel-header">
+          <div>
+            <h2>Welcome Slides</h2>
+            <p>Manage the rotating images and quotes on the welcome page</p>
+          </div>
+          <button class="btn btn-primary" id="addSlideBtn">
+            <i class="fas fa-plus"></i> Add Slide
+          </button>
+        </div>
+
+        <div id="slidesList" class="slides-list">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+
+      <!-- ===== PROGRAMS PANEL ===== -->
+      <div class="panel" id="panel-programs">
+        <div class="panel-header">
+          <div>
+            <h2>Programs</h2>
+            <p>Manage your foundation's programs</p>
+          </div>
+          <button class="btn btn-primary" id="addProgramBtn">
+            <i class="fas fa-plus"></i> Add Program
+          </button>
+        </div>
+
+        <div id="programsList" class="items-list">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+
+      <!-- ===== BLOG POSTS PANEL ===== -->
+      <div class="panel" id="panel-blogPosts">
+        <div class="panel-header">
+          <div>
+            <h2>Blog Posts</h2>
+            <p>Write, edit, and publish blog articles</p>
+          </div>
+          <button class="btn btn-primary" id="addBlogBtn">
+            <i class="fas fa-plus"></i> New Post
+          </button>
+        </div>
+
+        <div id="blogList" class="items-list">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+
+      <!-- ===== IMPACT STATS PANEL ===== -->
+      <div class="panel" id="panel-impactStats">
+        <div class="panel-header">
+          <div>
+            <h2>Impact Stats</h2>
+            <p>Numbers shown on the homepage and impact page</p>
+          </div>
+          <button class="btn btn-primary" id="addStatBtn">
+            <i class="fas fa-plus"></i> Add Stat
+          </button>
+        </div>
+
+        <div id="statsList" class="items-list">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+
+      <!-- ===== TESTIMONIALS PANEL ===== -->
+      <div class="panel" id="panel-testimonials">
+        <div class="panel-header">
+          <div>
+            <h2>Testimonials</h2>
+            <p>Quotes from people you've helped</p>
+          </div>
+          <button class="btn btn-primary" id="addTestimonialBtn">
+            <i class="fas fa-plus"></i> Add Testimonial
+          </button>
+        </div>
+
+        <div id="testimonialsList" class="items-list">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+
+    </main>
+  </div>
+</section>
+
+<!-- ============ EDITOR MODAL ============ -->
+<div id="editorModal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modalTitle">Edit</h3>
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <!-- Dynamic form fields injected by JavaScript -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline-dark" id="modalCancel">Cancel</button>
+      <button class="btn btn-primary" id="modalSave">
+        <i class="fas fa-save"></i> Save
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="toast"></div>
+
+<!-- ============ FIREBASE SDK ============ -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, collection, doc, getDocs, getDoc, addDoc, setDoc, updateDoc, deleteDoc, query, orderBy }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
+
+// ============================================================
+// FIREBASE CONFIG
+// ============================================================
+const firebaseConfig = {
+  apiKey: "AIzaSyCIM65DyrhHLrm8gVZAH2GxOVgdZTN-kh4",
+  authDomain: "educator-387b4.firebaseapp.com",
+  projectId: "educator-387b4",
+  storageBucket: "educator-387b4.firebasestorage.app",
+  messagingSenderId: "594353862636",
+  appId: "1:594353862636:web:56ee7feb764efc52b432c9"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
+
+// Expose to window so admin.js can use them
+window._firebase = {
+  auth, db, storage,
+  signInWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail,
+  collection, doc, getDocs, getDoc, addDoc, setDoc, updateDoc, deleteDoc, query, orderBy,
+  ref, uploadBytes, getDownloadURL, deleteObject
+};
+
+// Dispatch ready event
+window.dispatchEvent(new Event('firebaseReady'));
+</script>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
