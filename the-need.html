@@ -4,22 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0d0d0d">
-<meta name="description" content="Learn about PHINEHAS GENERATION FOUNDATION — our story, mission, vision, and the journey of transforming lives across Nigeria and the UK.">
-<meta property="og:title" content="About Us | PHINEHAS GENERATION FOUNDATION">
-<meta property="og:description" content="Discover the story of PHINEHAS GENERATION FOUNDATION — empowering teenagers and honouring the elderly since 2016.">
+<meta name="description" content="The Need — Global statistics on ageing, youth, mental health, violence, and poverty that explain why PHINEHAS GENERATION FOUNDATION exists. Sources: WHO, UN, UNODC, NIH.">
+<meta property="og:title" content="The Need | PHINEHAS GENERATION FOUNDATION">
+<meta property="og:description" content="2.1 billion people will be over 60 by 2050. 1 in 3 women experience violence. 1 in 7 adolescents face mental health disorders.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://phinehasgeneration.org/about.html">
 <meta property="og:image" content="https://res.cloudinary.com/dcwof2ngn/image/upload/v1784938654/1784786743840_pyjzzf.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About Us | PHINEHAS GENERATION FOUNDATION">
-<meta name="twitter:description" content="Empowering teenagers and honouring the elderly across Nigeria and the UK.">
-<link rel="canonical" href="https://phinehasgeneration.org/about.html">
+<link rel="canonical" href="https://phinehasgeneration.org/the-need.html">
 <link rel="icon" href="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<title>About Us | PHINEHAS GENERATION FOUNDATION</title>
+<title>The Need | PHINEHAS GENERATION FOUNDATION</title>
 
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -27,6 +24,7 @@
 --gold:#c8943e;--gold-light:#e0b866;--gold-dark:#a67a2e;--gold-pale:#fdf8f0;
 --black:#0d0d0d;--black-soft:#1a1a1a;--black-mute:#2a2a2a;
 --green:#6b8f71;--green-dark:#3d5a42;--green-pale:#e8efe9;
+--red:#b85450;--red-dark:#8a3a36;
 --cream:#faf7f2;--white:#ffffff;
 --gray-100:#f7f6f3;--gray-200:#e8e6e1;--gray-300:#d4d2cc;
 --gray-400:#9a9a9a;--gray-500:#6b6b6b;--gray-600:#4a4a4a;
@@ -58,21 +56,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .loader-ring{position:absolute;top:50%;left:50%;width:160px;height:160px;border-radius:50%;border:1px solid rgba(200,148,62,0.15);transform:translate(-50%,-50%);animation:ringPulse 2s ease-in-out infinite}
 .loader-ring:nth-child(2){width:200px;height:200px;animation-delay:.4s;border-color:rgba(200,148,62,0.08)}
 @keyframes ringPulse{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(.95)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.05)}}
-.loader-logo{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 22px;border:3px solid rgba(200,148,62,0.5);box-shadow:0 0 60px rgba(200,148,62,0.4);animation:loaderZoom 2.4s ease-in-out infinite;position:relative;z-index:2;background:#0d0d0d}
+.loader-logo{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 22px;border:3px solid rgba(200,148,62,0.5);box-shadow:0 0 60px rgba(200,148,62,0.4),0 0 0 8px rgba(200,148,62,0.06);animation:loaderZoom 2.4s ease-in-out infinite;position:relative;z-index:2;background:#0d0d0d}
 .loader-logo img{width:100%;height:100%;object-fit:cover}
 @keyframes loaderZoom{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-.loader-title{font-family:var(--font-serif);font-size:1.7rem;font-weight:800;color:var(--gold);letter-spacing:6px;text-transform:uppercase;margin-bottom:6px;position:relative;z-index:2}
-.loader-sub{font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:5px;text-transform:uppercase;position:relative;z-index:2}
+.loader-title{font-family:var(--font-serif);font-size:1.7rem;font-weight:800;color:var(--gold);letter-spacing:6px;text-transform:uppercase;margin-bottom:6px;position:relative;z-index:2;animation:fadeIn 1s ease .2s both}
+.loader-sub{font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:5px;text-transform:uppercase;position:relative;z-index:2;animation:fadeIn 1s ease .4s both}
 .loader-bar{width:180px;height:2px;background:rgba(200,148,62,.12);margin:28px auto 0;border-radius:2px;overflow:hidden;position:relative;z-index:2}
 .loader-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold-light),var(--gold));border-radius:2px;animation:loaderBar 1.8s ease-in-out infinite;width:0%}
 @keyframes loaderBar{0%{width:0;margin-left:0}50%{width:60%;margin-left:20%}100%{width:0;margin-left:100%}}
-
-/* SCROLL PROGRESS */
-.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold-dark),var(--gold-light));z-index:1001;width:0%;transition:width .1s ease}
-
-/* ADMIN LINK */
-.admin-link{position:fixed;bottom:10px;left:10px;opacity:0.08;font-size:.6rem;color:var(--gray);z-index:1;transition:opacity .3s ease;text-decoration:none;font-family:var(--font-sans);letter-spacing:.5px}
-.admin-link:hover{opacity:.3}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
 /* HEADER */
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 0;background:rgba(13,13,13,.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:background .4s var(--ease),padding .3s ease,transform .4s var(--ease)}
@@ -89,51 +81,67 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav-menu a{color:var(--black-soft);font-size:1.02rem;font-weight:500;padding:13px 0;position:relative;transition:color .3s;display:block;border-bottom:1px solid var(--gray-200)}
 .nav-menu a:hover,.nav-menu a.active{color:var(--gold-dark)}
 .nav-donate{background:var(--gold)!important;color:var(--white)!important;padding:13px 24px!important;border-radius:var(--r-full);text-align:center;margin-top:16px;font-weight:600!important;border-bottom:none!important}
-.nav-menu-kids{margin-top:24px;margin-bottom:0;overflow:hidden;position:relative;margin-left:-30px;margin-right:-30px;width:calc(100% + 60px);flex-shrink:0;background:#ffffff}
+.nav-donate:hover{background:var(--gold-light)!important;color:var(--white)!important}
+.nav-menu-kids{margin-top:24px;margin-bottom:0;overflow:hidden;position:relative;margin-left:-30px;margin-right:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);flex-shrink:0;background:#ffffff}
 .nav-menu-kids img{width:100%;height:200px;object-fit:cover;object-position:center top;display:block}
 .nav-menu-kids::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(255,255,255,0.15) 0%,transparent 60%)}
 .nav-menu-kids-caption{position:absolute;bottom:14px;left:20px;right:20px;color:var(--white);font-family:var(--font-serif);font-size:.95rem;font-style:italic;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.75)}
-.lang-wrapper{position:relative;display:flex;align-items:center}
-.lang-toggle{display:flex;align-items:center;gap:8px;background:transparent;border:1.5px solid rgba(255,255,255,.2);border-radius:var(--r-full);padding:6px 12px 6px 14px;cursor:pointer;transition:all .3s var(--ease);font-size:.78rem;font-weight:500;color:rgba(255,255,255,.85);font-family:var(--font-sans)}
-.lang-toggle:hover{border-color:var(--gold)}
-.lang-toggle i{font-size:.8rem;color:var(--gold-light)}
-.lang-dropdown{display:none;position:absolute;top:46px;right:0;background:var(--white);border-radius:var(--r);box-shadow:var(--sh-lg);padding:8px 0;min-width:180px;border:1px solid var(--gray-200);z-index:1100}
-.lang-dropdown.open{display:block}
-.lang-dropdown li{padding:10px 22px;cursor:pointer;transition:all .3s var(--ease);font-size:.86rem;color:var(--black-soft)}
-.lang-dropdown li:hover{background:var(--gold-pale);color:var(--black)}
-.lang-dropdown li.active-lang{background:var(--gold);color:var(--white);font-weight:600}
 
-/* PAGE HERO */
-.page-hero{position:relative;background:linear-gradient(155deg,#0d0d0d 0%,#1a1a1a 60%,#2a2a2a 100%);overflow:hidden;padding:120px 0 60px;color:var(--white)}
-.page-hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(200,148,62,.14) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
-.page-hero::after{content:'';position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(107,143,113,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
-.page-hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1280px;margin:0 auto;padding:0 20px}
-.page-hero-text{color:var(--white)}
-.page-hero-eyebrow{display:inline-block;background:rgba(200,148,62,.2);border:1px solid rgba(200,148,62,.5);color:var(--gold-light);padding:7px 16px;border-radius:var(--r-full);font-size:.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
-.page-hero h1{font-family:var(--font-serif);font-size:clamp(1.7rem,3.8vw,3.2rem);font-weight:800;line-height:1.12;letter-spacing:-.8px;color:var(--white);margin-bottom:16px}
+/* PAGE HERO — WORKS ON MOBILE NOW */
+.page-hero{position:relative;min-height:78vh;min-height:78svh;display:flex;align-items:center;background:var(--black);overflow:hidden;padding:130px 0 80px;color:var(--white)}
+.page-hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.page-hero::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(13,13,13,.85) 0%,rgba(13,13,13,.65) 50%,rgba(61,90,66,.55) 100%);z-index:1}
+.page-hero-particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.page-hero-inner{position:relative;z-index:3;text-align:center;max-width:920px;margin:0 auto}
+.page-hero-eyebrow{display:inline-block;background:rgba(200,148,62,.2);border:1px solid rgba(200,148,62,.5);color:var(--gold-light);padding:8px 18px;border-radius:var(--r-full);font-size:.66rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.page-hero h1{font-family:var(--font-serif);font-size:clamp(1.9rem,5.5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--white);margin-bottom:20px;text-shadow:0 3px 24px rgba(0,0,0,.5)}
 .page-hero h1 .highlight{color:var(--gold-light)}
-.page-hero p{font-size:clamp(.85rem,1.3vw,1.02rem);color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:24px}
-.page-hero-cta{display:flex;gap:10px;flex-wrap:wrap}
-.page-hero-cta .btn{padding:12px 24px;font-size:.82rem}
-.page-hero-image{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 70px rgba(0,0,0,.5);border:2px solid rgba(200,148,62,.3)}
-.page-hero-image img{width:100%;height:100%;object-fit:cover;display:block}
-.page-hero-image::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(13,13,13,.4) 0%,transparent 50%);pointer-events:none}
-.page-hero-image-badge{position:absolute;bottom:16px;left:16px;background:rgba(200,148,62,.95);color:var(--white);padding:8px 16px;border-radius:var(--r-full);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;z-index:2}
+.page-hero p{font-size:clamp(.95rem,1.6vw,1.13rem);color:rgba(255,255,255,.9);line-height:1.75;max-width:680px;margin:0 auto 30px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.page-hero-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.6);font-size:.6rem;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px;animation:bounceDown 2.4s ease-in-out infinite}
+.scroll-indicator i{font-size:.9rem}
+@keyframes bounceDown{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
 /* SECTIONS */
 .section{padding:var(--pad) 0}
 .section-cream{background:var(--cream)}
 .section-white{background:var(--white)}
 .section-dark{background:var(--black);color:var(--white)}
-.section-green{background:var(--green-pale)}
-.section-header{text-align:center;max-width:760px;margin:0 auto 60px;padding:0 20px}
+.section-soft{background:#fafaf9}
+.section-header{text-align:center;max-width:760px;margin:0 auto 60px}
 .section-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--gold-dark);margin-bottom:14px}
 .section-dark .section-label{color:var(--gold-light)}
-.section-title{font-family:var(--font-serif);font-size:clamp(1.7rem,3.5vw,2.7rem);font-weight:800;line-height:1.15;letter-spacing:-.6px;color:var(--black);margin-bottom:16px}
+.section-title{font-family:var(--font-serif);font-size:clamp(1.8rem,4vw,2.9rem);font-weight:800;line-height:1.15;letter-spacing:-.6px;color:var(--black);margin-bottom:16px}
 .section-dark .section-title{color:var(--white)}
 .section-title .highlight{color:var(--gold)}
-.section-subtitle{font-size:1rem;color:var(--gray-500);line-height:1.75}
+.section-subtitle{font-size:1.02rem;color:var(--gray-500);line-height:1.75}
 .section-dark .section-subtitle{color:rgba(255,255,255,.7)}
+
+/* ============ NEWSPAPER-STYLE ARTICLE (mobile-optimized) ============ */
+.article{max-width:780px;margin:0 auto;padding:0 20px}
+.article-meta{display:flex;align-items:center;gap:14px;padding-bottom:20px;margin-bottom:28px;border-bottom:1px solid var(--gray-200);flex-wrap:wrap;font-size:.72rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.article-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.article-meta .source{color:var(--gold-dark)}
+.article h2{font-family:var(--font-serif);font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;line-height:1.2;letter-spacing:-.5px;color:var(--black);margin-bottom:20px}
+.article h3{font-family:var(--font-serif);font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:700;line-height:1.3;color:var(--black);margin:32px 0 16px}
+.article p{font-size:clamp(1rem,1.5vw,1.08rem);color:var(--black-soft);line-height:1.85;margin-bottom:22px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.article p strong{color:var(--black);font-weight:700}
+.article p em{font-style:italic}
+.article p .dropcap{float:left;font-family:var(--font-serif);font-size:4rem;line-height:.85;padding:6px 14px 0 0;font-weight:800;color:var(--gold)}
+.article-pullquote{font-family:var(--font-serif);font-size:clamp(1.15rem,2.2vw,1.4rem);font-style:italic;font-weight:600;line-height:1.4;color:var(--black);padding:24px 0 24px 24px;margin:32px 0;border-left:4px solid var(--gold)}
+.article-image-full{width:100%;border-radius:var(--r-lg);overflow:hidden;margin:32px 0;box-shadow:var(--sh)}
+.article-image-full img{width:100%;height:auto;display:block}
+.article-image-caption{font-size:.78rem;color:var(--gray-500);font-style:italic;padding:12px 0 0;line-height:1.5}
+.article-footnotes{margin-top:36px;padding-top:24px;border-top:1px solid var(--gray-200);font-size:.82rem;color:var(--gray-500);line-height:1.7}
+.article-footnotes strong{color:var(--black);display:block;margin-bottom:10px;font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:700}
+.article-footnotes a{color:var(--gold-dark);font-weight:600;border-bottom:1px dashed rgba(200,148,62,.4);transition:border-color .3s}
+.article-footnotes a:hover{border-bottom-color:var(--gold-dark)}
+
+/* SOURCE INLINE */
+.src{display:inline-flex;align-items:center;gap:5px;color:var(--gold-dark);font-weight:600;font-size:.68rem;padding:2px 8px 2px 6px;border-radius:var(--r-full);background:rgba(200,148,62,0.08);border:1px solid rgba(200,148,62,0.15);transition:all .35s var(--ease);margin:0 2px;text-decoration:none;white-space:nowrap;vertical-align:baseline}
+.src:hover{background:rgba(200,148,62,0.18);border-color:var(--gold)}
+.src i{font-size:.55rem;opacity:.7}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:var(--r-full);font-weight:600;font-size:.92rem;letter-spacing:.3px;transition:all .35s var(--ease);cursor:pointer;white-space:nowrap;border:1.5px solid transparent;text-align:center}
@@ -144,78 +152,117 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .btn-outline-light:hover{background:var(--white);color:var(--black);border-color:var(--white);transform:translateY(-2px)}
 .btn-dark{background:var(--black);color:var(--white)}
 .btn-dark:hover{background:var(--black-mute);transform:translateY(-2px)}
-.btn-outline-dark{background:transparent;color:var(--black);border-color:var(--black)}
-.btn-outline-dark:hover{background:var(--black);color:var(--white);transform:translateY(-2px)}
 .btn-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--gold-dark);border-bottom:1.5px solid transparent;padding-bottom:2px;transition:all .35s var(--ease)}
 .btn-link:hover{color:var(--gold);border-bottom-color:var(--gold);gap:12px}
 
-/* STORY NARRATIVE */
-.story{max-width:820px;margin:0 auto;padding:0 20px}
-.story p{font-size:1.02rem;color:var(--black-soft);line-height:1.9;margin-bottom:20px}
-.story p strong{color:var(--black)}
-.story .dropcap{float:left;font-family:var(--font-serif);font-size:4rem;line-height:.85;padding:6px 14px 0 0;font-weight:800;color:var(--gold)}
-.story h3{font-family:var(--font-serif);font-size:clamp(1.2rem,2.2vw,1.5rem);font-weight:700;line-height:1.3;color:var(--gold-dark);margin:36px 0 16px}
-.story .highlight-box{background:var(--gold-pale);padding:28px 32px;border-radius:0 var(--r-lg) var(--r-lg) 0;border-left:4px solid var(--gold);margin:28px 0}
-.story .highlight-box p{font-style:italic;color:var(--black-soft);font-size:1.02rem;margin-bottom:0}
-.story .story-quote{font-family:var(--font-serif);font-size:clamp(1.15rem,2.2vw,1.4rem);font-style:italic;font-weight:600;color:var(--gold-dark);text-align:center;padding:28px 0;margin-top:28px;border-top:2px solid var(--gold-pale);border-bottom:2px solid var(--gold-pale)}
+/* BIG STAT WITH BG */
+.big-stat{position:relative;padding:clamp(70px,10vw,120px) 0;overflow:hidden;text-align:center;color:var(--white)}
+.big-stat-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.big-stat-bg img{width:100%;height:100%;object-fit:cover;display:block}
+.big-stat-overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1}
+.big-stat-overlay--gold{background:linear-gradient(135deg,rgba(13,13,13,.92) 0%,rgba(139,105,20,.75) 50%,rgba(13,13,13,.92) 100%)}
+.big-stat-overlay--green{background:linear-gradient(135deg,rgba(13,13,13,.92) 0%,rgba(61,90,66,.8) 50%,rgba(13,13,13,.92) 100%)}
+.big-stat-overlay--red{background:linear-gradient(135deg,rgba(13,13,13,.92) 0%,rgba(139,58,54,.75) 50%,rgba(13,13,13,.92) 100%)}
+.big-stat-particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.big-stat-inner{position:relative;z-index:3;max-width:920px;margin:0 auto;padding:0 20px}
+.big-stat .section-label{color:var(--gold-light)}
+.big-stat-number{font-family:var(--font-serif);font-size:clamp(3.5rem,13vw,10rem);font-weight:900;line-height:.95;letter-spacing:-4px;background:linear-gradient(135deg,#ffffff 0%,#f0d078 40%,var(--gold) 70%,var(--gold-light) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;margin-bottom:22px;filter:drop-shadow(0 8px 40px rgba(200,148,62,.4));animation:fadeUp .9s ease both}
+.big-stat-label{font-family:var(--font-serif);font-size:clamp(1.15rem,2.4vw,1.7rem);line-height:1.45;font-weight:600;color:var(--white);margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
+.big-stat-context{font-size:1rem;font-style:italic;color:rgba(255,255,255,.75);line-height:1.75;max-width:680px;margin:0 auto 26px}
+.big-stat-source{font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-light);font-weight:700;display:inline-flex;align-items:center;gap:10px}
+.big-stat-source::before,.big-stat-source::after{content:'';width:36px;height:1px;background:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
-/* STATS BAR */
-.stats-bar{background:var(--black);color:var(--white);padding:60px 0}
-.stats-bar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;max-width:1200px;margin:0 auto;padding:0 20px}
-.stats-bar-item .number{font-family:var(--font-serif);font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:var(--gold-light);line-height:1;margin-bottom:8px}
-.stats-bar-item .label{font-size:.84rem;color:rgba(255,255,255,.7);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+/* STAT GRID */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:0 auto}
+.stats-grid-2{grid-template-columns:repeat(2,1fr);max-width:720px}
+.stat-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:32px 22px;text-align:center;transition:all .35s var(--ease);position:relative;overflow:hidden}
+.stat-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--gold)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .4s var(--ease);transform-origin:left}
+.stat-card:hover::before{transform:scaleX(1)}
+.stat-card-icon{font-size:1.5rem;color:var(--gold);margin-bottom:12px}
+.stat-card-num{font-family:var(--font-serif);font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:900;color:var(--black);line-height:1;letter-spacing:-1px;margin-bottom:6px}
+.stat-card-unit{font-size:.72rem;font-weight:600;color:var(--gold-dark);margin-left:2px;vertical-align:super}
+.stat-card-label{font-size:.84rem;color:var(--gray-600);line-height:1.55;margin-bottom:10px}
+.stat-card-src{font-size:.6rem;color:var(--gray-400);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.stat-card-src a{color:var(--gold-dark);border-bottom:1px solid transparent;transition:border-color .3s}
+.stat-card-src a:hover{border-bottom-color:var(--gold-dark)}
+.stat-card.green-accent::before{background:var(--green)}
 
-/* TIMELINE */
-.timeline{position:relative;padding:20px 0;max-width:900px;margin:0 auto;padding:0 20px}
-.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--gold);transform:translateX(-50%);border-radius:2px}
-.timeline-item{display:flex;justify-content:flex-end;padding:20px 0;position:relative;width:50%}
-.timeline-item:nth-child(odd){padding-right:50px;text-align:right}
-.timeline-item:nth-child(even){margin-left:50%;padding-left:50px;text-align:left}
-.timeline-item::after{content:'';position:absolute;top:30px;width:18px;height:18px;background:var(--gold);border-radius:50%;border:4px solid var(--white);box-shadow:0 0 0 3px var(--gold);z-index:1}
-.timeline-item:nth-child(odd)::after{right:-9px}
-.timeline-item:nth-child(even)::after{left:-9px}
-.timeline-item .year{font-family:var(--font-serif);font-size:1.6rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px}
-.timeline-item h4{font-size:1.05rem;font-weight:700;margin-bottom:6px;color:var(--black)}
-.timeline-item p{color:var(--gray-600);font-size:.92rem;line-height:1.65}
+/* CHART */
+.chart-wrap{max-width:960px;margin:40px auto 0;background:var(--white);border-radius:var(--r-lg);padding:44px 40px;box-shadow:var(--sh);border:1px solid var(--gray-200)}
+.chart-title{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--black);margin-bottom:28px;text-align:center}
+.chart-title small{display:block;font-family:var(--font-sans);font-size:.7rem;font-weight:600;color:var(--gray-500);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:8px}
+.bar-chart{display:flex;flex-direction:column;gap:18px}
+.bar-row{display:flex;align-items:center;gap:14px}
+.bar-label{width:180px;flex-shrink:0;font-size:.82rem;font-weight:600;color:var(--black-soft);text-align:right}
+.bar-track{flex:1;height:28px;background:var(--gray-100);border-radius:var(--r-full);overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:var(--r-full);transition:width 1.8s var(--ease-out);width:0}
+.bar-fill.animated{width:var(--target-width)}
+.bar-fill--gold{background:linear-gradient(90deg,var(--gold-dark),var(--gold-light))}
+.bar-fill--green{background:linear-gradient(90deg,var(--green-dark),var(--green))}
+.bar-fill--dark{background:linear-gradient(90deg,#1a1a1a,#4a4a4a)}
+.bar-fill--red{background:linear-gradient(90deg,var(--red-dark),var(--red))}
+.bar-value{width:72px;flex-shrink:0;font-size:.86rem;font-weight:700;color:var(--black)}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap}
+.donut-svg{max-width:320px;width:100%;height:auto}
+.donut-legend{display:flex;flex-direction:column;gap:14px}
+.donut-legend-item{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--black-soft)}
+.donut-legend-color{width:14px;height:14px;border-radius:3px;flex-shrink:0}
+.donut-legend-color.gold{background:linear-gradient(135deg,var(--gold-dark),var(--gold-light))}
+.donut-legend-color.green{background:linear-gradient(135deg,var(--green-dark),var(--green))}
+.donut-legend-color.dark{background:linear-gradient(135deg,#1a1a1a,#4a4a4a)}
+.donut-legend-color.red{background:linear-gradient(135deg,var(--red-dark),var(--red))}
+.donut-legend-src{font-size:.75rem;color:var(--gray-500);margin-top:8px;border-top:1px solid var(--gray-200);padding-top:12px}
 
-/* MISSION & VISION */
-.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1000px;margin:0 auto;padding:0 20px}
-.mv-card{background:var(--white);padding:44px 36px;border-radius:var(--r-lg);box-shadow:var(--sh-sm);border:1px solid var(--gray-200);transition:all .35s var(--ease);position:relative;overflow:hidden}
-.mv-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gold)}
-.mv-card.vision::before{background:var(--green)}
-.mv-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg)}
-.mv-card .icon{font-size:2rem;color:var(--gold);margin-bottom:16px;display:block}
-.mv-card.vision .icon{color:var(--green)}
-.mv-card h3{font-family:var(--font-serif);font-size:1.4rem;font-weight:700;margin-bottom:12px;color:var(--black)}
-.mv-card p{color:var(--gray-600);line-height:1.8;font-size:1rem}
+/* CONCLUSION */
+.conclusion{background:linear-gradient(135deg,var(--gold-pale) 0%,rgba(200,148,62,0.08) 100%);border-left:4px solid var(--gold);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:32px 34px;margin-top:40px}
+.conclusion h4{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--black);margin-bottom:10px}
+.conclusion p{font-size:.95rem;color:var(--gray-600);line-height:1.75}
+.conclusion p strong{color:var(--black)}
+.conclusion--green{border-left-color:var(--green);background:linear-gradient(135deg,var(--green-pale) 0%,rgba(107,143,113,0.08) 100%)}
+.conclusion--dark{border-left-color:var(--black);background:linear-gradient(135deg,#f5f5f3 0%,rgba(13,13,13,0.05) 100%)}
 
-/* VALUES */
-.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:0 auto;padding:0 20px}
-.value-card{background:var(--white);padding:32px 22px;border-radius:var(--r-lg);text-align:center;transition:all .35s var(--ease);border:1px solid var(--gray-200);position:relative;overflow:hidden}
-.value-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .4s var(--ease);transform-origin:left}
-.value-card:hover::after{transform:scaleX(1)}
-.value-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--gold)}
-.value-card .icon{font-size:1.8rem;color:var(--gold);margin-bottom:14px;display:block}
-.value-card h4{font-size:.98rem;font-weight:700;margin-bottom:6px}
-.value-card p{font-size:.82rem;color:var(--gray-600);line-height:1.55}
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
+.split--reverse .split-image{order:2}
+.split-image{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/5}
+.split-image img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.split-image:hover img{transform:scale(1.04)}
+.split-image .image-badge{position:absolute;bottom:20px;left:20px;background:var(--gold);color:var(--white);padding:9px 20px;border-radius:var(--r-full);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.split-content h3{font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.2;letter-spacing:-.5px;color:var(--black);margin-bottom:18px}
+.split-content p{font-size:1rem;color:var(--gray-600);line-height:1.85;margin-bottom:18px}
+.split-content p strong{color:var(--black)}
 
-/* FOUNDER */
-.founder-split{display:grid;grid-template-columns:0.85fr 1.15fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px}
-.founder-image{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:3/4}
-.founder-image img{width:100%;height:100%;object-fit:cover}
-.founder-image .founder-badge{position:absolute;bottom:20px;left:20px;background:var(--gold);color:var(--white);padding:9px 20px;border-radius:var(--r-full);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;z-index:2}
-.founder-content h2{font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;color:var(--black);margin-bottom:6px;letter-spacing:-.6px}
-.founder-role{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:24px;display:block}
-.founder-content p{font-size:1rem;color:var(--gray-600);line-height:1.85;margin-bottom:16px}
-.founder-content .founder-quote{font-family:var(--font-serif);font-size:clamp(1.05rem,1.8vw,1.3rem);font-style:italic;line-height:1.45;color:var(--gold-dark);margin:24px 0;padding:16px 22px;background:rgba(200,148,62,.08);border-left:3px solid var(--gold);border-radius:0 var(--r-sm) var(--r-sm) 0}
+/* PULL QUOTE */
+.pull-quote{position:relative;background:var(--black);padding:100px 20px;text-align:center;color:var(--white);overflow:hidden}
+.pull-quote-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.pull-quote-bg img{width:100%;height:100%;object-fit:cover;opacity:.18;display:block}
+.pull-quote::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(13,13,13,.88) 0%,rgba(13,13,13,.6) 100%);z-index:1}
+.pull-quote-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.pull-quote-mark{font-family:var(--font-serif);font-size:5rem;color:var(--gold);opacity:.5;line-height:.6;margin-bottom:16px}
+.pull-quote-text{font-family:var(--font-serif);font-size:clamp(1.3rem,3vw,2rem);font-style:italic;font-weight:600;line-height:1.35;color:var(--white);margin-bottom:22px}
+.pull-quote-author{color:var(--gold-light);font-weight:600;font-size:.85rem;letter-spacing:2px;text-transform:uppercase}
 
-/* CTA */
-.cta{background:linear-gradient(155deg,#0d0d0d 0%,#1a1a1a 55%,#0d0d0d 100%);position:relative;overflow:hidden;color:var(--white);padding:var(--pad) 0}
-.cta::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,148,62,.15) 0%,transparent 70%);border-radius:50%;pointer-events:none}
-.cta-inner{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto;padding:0 20px}
-.cta-inner .section-title{color:var(--white)}
-.cta-inner p{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.85;margin-bottom:24px}
-.cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+/* CHALLENGE GRID */
+.challenge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1200px;margin:0 auto}
+.challenge-card{background:var(--white);border-radius:var(--r-lg);border:1px solid var(--gray-200);padding:36px 28px;transition:all .35s var(--ease);position:relative;overflow:hidden}
+.challenge-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--gold)}
+.challenge-card-icon{width:56px;height:56px;border-radius:14px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--gold-dark);margin-bottom:20px}
+.challenge-card h4{font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--black);margin-bottom:12px}
+.challenge-card p{font-size:.9rem;color:var(--gray-600);line-height:1.7;margin-bottom:18px}
+.challenge-card .challenge-stat{font-family:var(--font-serif);font-size:1.8rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:8px;letter-spacing:-.5px}
+.challenge-card .challenge-cta{font-size:.78rem;font-weight:600;color:var(--gold-dark);text-transform:uppercase;letter-spacing:1.5px;display:inline-flex;align-items:center;gap:8px;transition:gap .3s var(--ease)}
+.challenge-card .challenge-cta:hover{gap:14px;color:var(--gold)}
+
+/* IMPACT BRIDGE */
+.impact-bridge{background:linear-gradient(155deg,#0d0d0d 0%,#1a1a1a 55%,#0d0d0d 100%);position:relative;overflow:hidden;color:var(--white);padding:var(--pad) 0}
+.impact-bridge::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,148,62,.15) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.impact-bridge::after{content:'';position:absolute;bottom:-120px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(107,143,113,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.impact-bridge-inner{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto;padding:0 20px}
+.impact-bridge-inner .section-title{color:var(--white)}
+.impact-bridge-inner p{font-size:1.05rem;color:rgba(255,255,255,.75);line-height:1.85;margin-bottom:24px}
+.impact-bridge-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px}
 
 /* FOOTER */
 .footer{background:var(--black);color:var(--white);padding:60px 0 26px;position:relative}
@@ -248,100 +295,124 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .reveal.delay-2{transition-delay:.2s}
 .reveal.delay-3{transition-delay:.3s}
 
-/* TABLET */
+/* ============ TABLET ============ */
 @media(min-width:720px){
 .container,.container-narrow{padding:0 28px}
+.article{padding:0 28px}
 }
 
-/* DESKTOP */
+/* ============ DESKTOP ============ */
 @media(min-width:960px){
-.nav-menu{position:static;width:auto;height:auto;background:transparent;flex-direction:row;padding:0;gap:18px;transform:none;box-shadow:none;border:none;overflow:visible;align-items:center}
-.nav-menu a{padding:6px 0;font-size:.78rem;color:rgba(255,255,255,.85);border-bottom:none}
+.nav-menu{position:static;width:auto;height:auto;background:transparent;flex-direction:row;padding:0;gap:20px;transform:none;box-shadow:none;border:none;overflow:visible;align-items:center}
+.nav-menu a{padding:6px 0;font-size:.8rem;color:rgba(255,255,255,.85);border-bottom:none}
 .nav-menu a:hover,.nav-menu a.active{color:var(--gold-light)}
 .nav-donate{padding:9px 18px!important;margin-top:0;background:var(--gold)!important;color:var(--white)!important;border-bottom:none!important}
 .nav-menu-kids{display:none}
 .hamburger{display:none}
-.lang-dropdown{background:#ffffff}
+}
+@media(min-width:1100px){
+.split{gap:80px}
 }
 
-/* MEDIUM */
+/* ============ TABLET/MEDIUM ============ */
 @media(max-width:960px){
-.mv-grid{grid-template-columns:1fr}
-.values-grid{grid-template-columns:repeat(2,1fr)}
-.stats-bar-grid{grid-template-columns:repeat(2,1fr)}
-.founder-split{grid-template-columns:1fr 1fr;gap:30px}
-.timeline::before{left:20px}
-.timeline-item{width:100%;padding-left:50px !important;padding-right:0 !important;text-align:left !important}
-.timeline-item:nth-child(even){margin-left:0}
-.timeline-item::after{left:11px !important;right:auto !important}
+.split{grid-template-columns:1fr;gap:32px}
+.split--reverse .split-image{order:0}
+.split-image{aspect-ratio:16/10;max-width:520px;margin:0 auto;width:100%}
+.challenge-grid{grid-template-columns:1fr 1fr}
+.stats-grid{grid-template-columns:1fr 1fr}
 }
 
-/* MOBILE */
+/* ============ MOBILE — NEWSPAPER ARTICLE STYLE ============ */
 @media(max-width:640px){
-.page-hero{padding:100px 0 50px}
-.page-hero-inner{grid-template-columns:1.15fr 0.85fr;gap:14px;padding:0 14px}
-.page-hero-eyebrow{font-size:.5rem;letter-spacing:1.2px;padding:5px 10px;margin-bottom:12px}
-.page-hero h1{font-size:1.35rem;letter-spacing:-.4px;line-height:1.15;margin-bottom:12px}
-.page-hero p{font-size:.72rem;line-height:1.55;margin-bottom:14px}
-.page-hero-cta{flex-direction:column;gap:6px}
-.page-hero-cta .btn{padding:9px 14px;font-size:.65rem;width:100%;justify-content:center}
-.page-hero-cta .btn i{font-size:.6rem}
-.page-hero-image{border-radius:14px;border-width:1.5px}
-.page-hero-image-badge{font-size:.5rem;padding:5px 10px;bottom:8px;left:8px}
+/* HERO — image always shows on mobile */
+.page-hero{min-height:auto;padding:110px 0 70px}
+.page-hero-bg img{object-position:center}
+.page-hero::after{background:linear-gradient(180deg,rgba(13,13,13,.72) 0%,rgba(13,13,13,.62) 40%,rgba(13,13,13,.85) 100%)}
+.page-hero h1{font-size:1.75rem;letter-spacing:-.5px;line-height:1.15}
+.page-hero p{font-size:.92rem;line-height:1.7;color:rgba(255,255,255,.9)}
+.page-hero-eyebrow{font-size:.58rem;letter-spacing:1.8px;padding:6px 14px}
+.page-hero-cta{flex-direction:column;align-items:stretch;max-width:320px;margin:0 auto}
+.page-hero-cta .btn{width:100%}
+.scroll-indicator{display:none}
 
-.section{padding:50px 0}
-.section-header{margin-bottom:36px;padding:0 16px}
-.section-title{font-size:1.4rem;letter-spacing:-.3px}
-.section-subtitle{font-size:.88rem}
-.section-label{font-size:.6rem;letter-spacing:2px}
+/* ARTICLE — real newspaper feel */
+.article{padding:0 22px}
+.article-meta{font-size:.64rem;letter-spacing:1.2px;padding-bottom:14px;margin-bottom:22px;gap:10px}
+.article h2{font-size:1.4rem;line-height:1.2;letter-spacing:-.3px;margin-bottom:16px}
+.article h3{font-size:1.1rem;line-height:1.3;margin:28px 0 12px}
+.article p{font-size:.97rem;line-height:1.8;margin-bottom:18px;text-align:left}
+.article p .dropcap{font-size:3.4rem;padding:4px 10px 0 0}
+.article-pullquote{font-size:1.05rem;padding:18px 0 18px 18px;margin:24px 0;line-height:1.4}
+.article-image-full{margin:24px 0;border-radius:var(--r)}
+.article-footnotes{font-size:.76rem;line-height:1.65}
 
-.story{padding:0 16px}
-.story p{font-size:.88rem;line-height:1.8;margin-bottom:14px}
-.story .dropcap{font-size:3rem;padding:4px 10px 0 0}
-.story h3{font-size:1.05rem;margin:24px 0 12px}
-.story .highlight-box{padding:20px 22px;margin:20px 0}
-.story .highlight-box p{font-size:.86rem}
-.story .story-quote{font-size:.98rem;padding:20px 0;margin-top:20px}
+/* SECTION HEADERS */
+.section{padding:56px 0}
+.section-header{margin:0 auto 40px;padding:0 22px}
+.section-title{font-size:1.5rem;letter-spacing:-.3px}
+.section-subtitle{font-size:.92rem}
+.section-label{font-size:.62rem;letter-spacing:2.2px}
 
-.stats-bar{padding:40px 0}
-.stats-bar-grid{grid-template-columns:1fr 1fr;gap:14px;padding:0 12px}
-.stats-bar-item .number{font-size:1.6rem}
-.stats-bar-item .label{font-size:.66rem;letter-spacing:.5px}
+/* BIG STATS — readable on mobile */
+.big-stat{padding:70px 0}
+.big-stat-number{font-size:clamp(3rem,17vw,5.5rem);letter-spacing:-2px;line-height:1}
+.big-stat-label{font-size:1rem;line-height:1.4}
+.big-stat-context{font-size:.86rem;line-height:1.65}
+.big-stat-source{font-size:.62rem;letter-spacing:2px}
 
-.timeline{padding:0 14px}
-.timeline::before{left:14px}
-.timeline-item{padding-left:36px !important;padding-top:14px;padding-bottom:14px}
-.timeline-item::after{left:5px !important;width:14px;height:14px;top:24px}
-.timeline-item .year{font-size:1.2rem}
-.timeline-item h4{font-size:.9rem}
-.timeline-item p{font-size:.76rem;line-height:1.6}
+/* STATS GRID — 2 columns on mobile */
+.stats-grid{grid-template-columns:1fr 1fr;gap:10px;padding:0 14px}
+.stats-grid-2{grid-template-columns:1fr;padding:0 14px}
+.stat-card{padding:20px 12px}
+.stat-card-icon{font-size:1.1rem;margin-bottom:8px}
+.stat-card-num{font-size:1.25rem}
+.stat-card-label{font-size:.7rem;line-height:1.45;margin-bottom:8px}
+.stat-card-src{font-size:.55rem;letter-spacing:.8px}
+.stat-card-unit{font-size:.62rem}
 
-.mv-grid{gap:14px;padding:0 12px}
-.mv-card{padding:24px 20px}
-.mv-card .icon{font-size:1.5rem;margin-bottom:12px}
-.mv-card h3{font-size:1.1rem}
-.mv-card p{font-size:.86rem;line-height:1.7}
+/* CHART — clean on mobile */
+.chart-wrap{padding:24px 18px;border-radius:var(--r);margin:24px auto 0}
+.chart-title{font-size:1.05rem;margin-bottom:20px}
+.chart-title small{font-size:.62rem;letter-spacing:1.8px}
+.bar-label{width:96px;font-size:.68rem}
+.bar-value{width:52px;font-size:.72rem}
+.bar-track{height:22px}
+.bar-chart{gap:12px}
+.donut-wrap{gap:20px;flex-direction:column}
+.donut-legend{font-size:.78rem}
+.donut-legend-item{font-size:.78rem}
+.donut-legend-src{font-size:.68rem}
 
-.values-grid{grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
-.value-card{padding:20px 14px}
-.value-card .icon{font-size:1.3rem;margin-bottom:10px}
-.value-card h4{font-size:.82rem;margin-bottom:4px}
-.value-card p{font-size:.68rem;line-height:1.5}
+/* CONCLUSION */
+.conclusion{padding:24px 22px;margin-top:28px;border-radius:0 var(--r) var(--r) 0}
+.conclusion h4{font-size:1rem;margin-bottom:8px}
+.conclusion p{font-size:.86rem;line-height:1.7}
 
-.founder-split{grid-template-columns:1fr 1.2fr;gap:14px;padding:0 14px;align-items:start}
-.founder-image{aspect-ratio:3/4;border-radius:14px}
-.founder-image .founder-badge{font-size:.5rem;padding:5px 10px;bottom:8px;left:8px}
-.founder-content h2{font-size:1.05rem;margin-bottom:4px}
-.founder-role{font-size:.54rem;letter-spacing:1.6px;margin-bottom:12px}
-.founder-content p{font-size:.72rem;line-height:1.7;margin-bottom:8px}
-.founder-content .founder-quote{font-size:.8rem;margin:14px 0;padding:10px 12px}
-.founder-content .btn{padding:9px 14px;font-size:.66rem}
+/* SPLIT */
+.split-content h3{font-size:1.25rem}
+.split-content p{font-size:.9rem;line-height:1.75}
 
-.cta-inner h2{font-size:1.3rem}
-.cta-inner p{font-size:.85rem;line-height:1.7}
-.cta-actions{flex-direction:column;align-items:stretch;max-width:280px;margin:20px auto 0}
-.cta-actions .btn{width:100%}
+/* PULL QUOTE */
+.pull-quote{padding:60px 22px}
+.pull-quote-mark{font-size:3.5rem}
+.pull-quote-text{font-size:1.05rem;line-height:1.4}
+.pull-quote-author{font-size:.72rem;letter-spacing:1.5px}
 
+/* CHALLENGE GRID */
+.challenge-grid{grid-template-columns:1fr 1fr;gap:12px;padding:0 14px}
+.challenge-card{padding:20px 16px}
+.challenge-card-icon{width:44px;height:44px;font-size:1.05rem;margin-bottom:14px;border-radius:12px}
+.challenge-card h4{font-size:.95rem;margin-bottom:8px}
+.challenge-card p{font-size:.75rem;line-height:1.55;margin-bottom:12px}
+.challenge-card .challenge-stat{font-size:1.35rem}
+.challenge-card .challenge-cta{font-size:.68rem;letter-spacing:1.2px}
+
+/* IMPACT BRIDGE */
+.impact-bridge-inner h2{font-size:1.4rem}
+.impact-bridge-inner p{font-size:.92rem}
+
+/* FOOTER */
 .footer{padding:50px 0 22px}
 .footer-grid{text-align:center;gap:32px}
 .footer-brand p{font-size:.82rem}
@@ -350,36 +421,33 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .footer-bottom{font-size:.7rem}
 }
 
-/* VERY SMALL */
+/* ============ VERY SMALL ============ */
 @media(max-width:380px){
-.page-hero h1{font-size:1.15rem}
-.page-hero p{font-size:.68rem}
-.story h3{font-size:.92rem}
-.story p{font-size:.8rem}
-.values-grid{grid-template-columns:1fr 1fr}
-.stats-bar-item .number{font-size:1.35rem}
+.page-hero h1{font-size:1.55rem}
+.page-hero p{font-size:.86rem}
+.article h2{font-size:1.25rem}
+.article p{font-size:.92rem}
+.big-stat-number{font-size:2.7rem}
+.stats-grid{grid-template-columns:1fr}
+.challenge-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader-inner">
     <div class="loader-ring"></div>
     <div class="loader-ring"></div>
     <div class="loader-logo"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt=""></div>
     <div class="loader-title">PHINEHAS</div>
-    <div class="loader-sub" data-i18n="loaderSub">About Us</div>
+    <div class="loader-sub">The Need</div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
   </div>
 </div>
 
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 <a href="#main" class="skip-link">Skip to main content</a>
-<a href="admin.html" class="admin-link" aria-label="Admin Panel">⚙ admin</a>
 
-<!-- HEADER -->
 <header class="header" id="header">
   <div class="container nav-wrap">
     <a href="index.html" class="logo" aria-label="Home">
@@ -388,26 +456,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu"><i class="fas fa-bars"></i></button>
     <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
-      <a href="index.html" data-i18n="navHome">Home</a>
-      <a href="about.html" class="active" data-i18n="navAbout">About</a>
-      <a href="programs.html" data-i18n="navPrograms">Programs</a>
-      <a href="founder.html" data-i18n="navFounder">Founder</a>
-      <a href="the-need.html" data-i18n="navNeed">The Need</a>
-      <a href="our-impact.html" data-i18n="navImpact">Our Impact</a>
-      <a href="blog.html" data-i18n="navBlog">Blog</a>
-      <a href="volunteer.html" data-i18n="navVolunteer">Volunteer</a>
-      <a href="contact.html" data-i18n="navContact">Contact</a>
-      <a href="donate.html" class="nav-donate" data-i18n="navDonate"><i class="fas fa-heart"></i> Donate</a>
-      <div class="lang-wrapper">
-        <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
-          <i class="fas fa-globe"></i> <span id="currentLangLabel">EN</span> <i class="fas fa-chevron-down" style="font-size:.6rem;"></i>
-        </button>
-        <ul class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Language options">
-          <li role="option" data-lang="en" class="active-lang" aria-selected="true">🇬🇧 English</li>
-          <li role="option" data-lang="fr" aria-selected="false">🇫🇷 Français</li>
-          <li role="option" data-lang="de" aria-selected="false">🇩🇪 Deutsch</li>
-        </ul>
-      </div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="founder.html">Founder</a>
+      <a href="the-need.html" class="active">The Need</a>
+      <a href="our-impact.html">Our Impact</a>
+      <a href="blog.html">Blog</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html" class="nav-donate"><i class="fas fa-heart"></i> Donate</a>
       <div class="nav-menu-kids">
         <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_800,q_auto,f_auto/v1784938655/1784786312206_lbfedq.jpg" alt="Children of PHINEHAS GENERATION">
         <div class="nav-menu-kids-caption">"Every child carries a future."</div>
@@ -418,232 +476,566 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 <main id="main">
 
-<!-- PAGE HERO -->
+<!-- PAGE HERO — now displays image properly on mobile -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <span class="page-hero-eyebrow" data-i18n="pageHeroEyebrow">About Us · Our Story</span>
-      <h1 data-i18n="pageHeroTitle">A Vision That Began<br><span class="highlight">With One Heart.</span></h1>
-      <p data-i18n="pageHeroSub">In 2016, Mrs. Tosin AKANO founded PHINEHAS GENERATION FOUNDATION with a simple conviction: that every young person deserves guidance, and every elderly person deserves to be valued. This is the story of what that conviction built.</p>
+  <div class="page-hero-bg">
+    <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784972112406_jecvw8.jpg" alt="Community gathering">
+  </div>
+  <canvas class="page-hero-particles" id="heroParticles"></canvas>
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="page-hero-eyebrow">The Need · The Global Reality</span>
+      <h1>The world is changing.<br><span class="highlight">Faster than we think.</span></h1>
+      <p>Two billion elders. Three billion young people. Rising mental health crises, gender-based violence, and substance abuse. This is the world PHINEHAS GENERATION FOUNDATION was founded to respond to — across Nigeria and the United Kingdom.</p>
       <div class="page-hero-cta">
-        <a href="#our-story" class="btn btn-primary" data-i18n="pageHeroCta1">Read our story <i class="fas fa-arrow-down"></i></a>
-        <a href="our-impact.html" class="btn btn-outline-light" data-i18n="pageHeroCta2">See our impact <i class="fas fa-arrow-right"></i></a>
+        <a href="#ageing" class="btn btn-primary">See the numbers <i class="fas fa-arrow-down"></i></a>
+        <a href="our-impact.html" class="btn btn-outline-light">See our response <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
-    <div class="page-hero-image">
-      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1200,q_auto,f_auto/v1784938654/1784786743840_pyjzzf.jpg" alt="PHINEHAS GENERATION FOUNDATION">
-      <span class="page-hero-image-badge" data-i18n="pageHeroBadge">Since 2016</span>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- INTRO -->
+<section class="section section-cream">
+  <div class="article reveal">
+    <div class="article-meta">
+      <span>An Investigation by PHINEHAS GENERATION</span>
+      <span class="dot"></span>
+      <span class="source">Sources: WHO · UN · UNODC · NIH</span>
     </div>
+    <p><span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. Simultaneously, the largest generation of young people ever to exist is coming of age — over three billion under 25.</p>
+    <p>These two shifts — an ageing population and an unprecedented youth bulge — are reshaping societies. They are creating new pressures on families, healthcare systems, and social safety nets. And they are happening fastest in the countries least equipped to handle them.</p>
+    <p><strong>This page is not about abstract statistics.</strong> It is about the real, measurable, and urgent crisis that PHINEHAS GENERATION FOUNDATION exists to respond to. Every number here has a face. Every trend has a cost. And every statistic is a reason someone, somewhere, needs us to act.</p>
   </div>
 </section>
 
-<!-- OUR STORY -->
-<section class="section section-white" id="our-story">
+<!-- SECTION 1 — AGEING -->
+<section class="section section-white" id="ageing">
   <div class="container">
     <header class="section-header reveal">
-      <span class="section-label" data-i18n="storyLabel">Our Story</span>
-      <h2 class="section-title" data-i18n="storyTitle">A Vision That Began with <span class="highlight">One Heart</span></h2>
-      <p class="section-subtitle" data-i18n="storySub">And grew into a movement of hope.</p>
+      <span class="section-label">Section One</span>
+      <h2 class="section-title">An <span class="highlight">Ageing World</span> That Cannot Be Ignored</h2>
+      <p class="section-subtitle">The 60+ population is growing faster than any other age group. By 2050, one in five people on Earth will be over 60.</p>
     </header>
   </div>
 
-  <div class="story reveal">
-    <p data-i18n="storyP1"><span class="dropcap">E</span>very meaningful journey begins with a single step. For PHINEHAS GENERATION FOUNDATION, that step was taken in 2016 by Mrs. Tosin AKANO, whose compassion for people became the seed of a vision that continues to transform lives today.</p>
+  <div class="article reveal">
+    <h3>For the First Time in Human History</h3>
+    <p><span class="dropcap">T</span>he world is undergoing a profound demographic transformation — one that carries immense social, economic, humanitarian, and spiritual implications. For the first time in human history, the number of people aged 60 years and older is projected to surpass the number of children under five. By 2030, <strong>1.4 billion people</strong> will be aged 60 or over. By 2050, that figure will rise to <strong>2.1 billion</strong> — more than one-fifth of the entire global population <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>What makes this shift even more urgent is where these older people will live. The World Health Organization projects that <strong>80% of older persons will reside in low- and middle-income countries</strong> by 2050 <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a> — nations where social safety nets, healthcare infrastructure, and elderly care systems are often underdeveloped or entirely absent. In these contexts, ageing is not accompanied by security; it is accompanied by vulnerability.</p>
+    <p>The fastest-growing segment is the oldest old — those aged 80 years and above. By 2050, <strong>426 million people</strong> will belong to this group <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. They face the highest risk of disability, chronic illness, social isolation, and poverty. Without deliberate intervention, millions will spend their final years without dignity, care, or companionship.</p>
+  </div>
 
-    <p data-i18n="storyP2">At a time when many teenagers were silently struggling with low self-esteem, depression, peer pressure, abuse, and uncertainty about their future, Mrs. AKANO recognised a pressing need for guidance and mentorship. She believed that with the right support, every young person could discover purpose, make wise decisions, and become a positive influence in society.</p>
-
-    <p data-i18n="storyP3">Driven by this conviction, she established PHINEHAS GENERATION FOUNDATION as a platform where teenagers could learn, grow, ask questions freely, and receive practical guidance on issues that shape their lives. What began as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people.</p>
-
-    <h3 data-i18n="storyH3_1">A Landmark Moment</h3>
-
-    <p data-i18n="storyP4">One of the foundation's landmark moments came in 2018, when teenagers from different communities gathered at the Obasanjo Presidential Library in Abeokuta for a life-changing youth hangout. Through mentorship, interactive sessions, and inspirational talks, many participants discovered new confidence, clarified their goals, and found renewed purpose. Today, many of those young people have completed higher education and are contributing meaningfully to society as graduates and professionals.</p>
-
-    <div class="highlight-box">
-      <p data-i18n="storyHighlight">"What started as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people."</p>
+  <!-- Big stat 2.1 billion -->
+  <div class="big-stat">
+    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" alt="Earth from space"></div>
+    <div class="big-stat-overlay big-stat-overlay--gold"></div>
+    <canvas class="big-stat-particles" id="particles1"></canvas>
+    <div class="big-stat-inner reveal">
+      <span class="section-label">The Number That Defines Our Era</span>
+      <div class="big-stat-number">2.1 billion</div>
+      <p class="big-stat-label">By 2050, 2.1 billion people will be aged 60 or over — more than one-fifth of the entire global population.</p>
+      <p class="big-stat-context">That's not a distant statistic. That's a mother, a father, a grandparent — someone's whole world.</p>
+      <div class="big-stat-source">World Health Organization</div>
     </div>
+  </div>
 
-    <h3 data-i18n="storyH3_2">Expanding the Vision</h3>
+  <div class="container" style="margin-top:70px">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-card-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-card-num">1.4<span class="stat-card-unit">bn</span></div>
+        <div class="stat-card-label">people aged 60+ by 2030</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card reveal delay-1">
+        <div class="stat-card-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="stat-card-num">1 in 5</div>
+        <div class="stat-card-label">people will be 60+ by 2050</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card reveal delay-2">
+        <div class="stat-card-icon"><i class="fas fa-globe-africa"></i></div>
+        <div class="stat-card-num">80<span class="stat-card-unit">%</span></div>
+        <div class="stat-card-label">of older people will live in low- and middle-income countries</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card reveal delay-3">
+        <div class="stat-card-icon"><i class="fas fa-heart"></i></div>
+        <div class="stat-card-num">426<span class="stat-card-unit">m</span></div>
+        <div class="stat-card-label">people aged 80+ by 2050 — the most vulnerable</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+    </div>
+  </div>
 
-    <p data-i18n="storyP5">As the foundation expanded its activities across Abeokuta and later into Lagos, another need became increasingly evident. During community visits and outreach programs, the team encountered many elderly men and women who had been left behind by society. Some struggled with poor health, failing eyesight, loneliness, and financial hardship. Others simply longed for someone to listen, care, and remind them that they still mattered.</p>
+  <div class="container" style="margin-top:70px">
+    <div class="chart-wrap reveal">
+      <div class="chart-title"><small>Where Older People Will Live by 2050</small>The Burden Falls on Low- and Middle-Income Countries</div>
+      <div class="donut-wrap">
+        <svg class="donut-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart 80% LMIC">
+          <defs>
+            <linearGradient id="dnGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0d078"/><stop offset="50%" stop-color="#c8943e"/><stop offset="100%" stop-color="#8b6914"/></linearGradient>
+            <linearGradient id="dnGreen" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a8d5b0"/><stop offset="50%" stop-color="#6b8f71"/><stop offset="100%" stop-color="#3d5a42"/></linearGradient>
+          </defs>
+          <circle cx="200" cy="200" r="150" fill="none" stroke="#f5f2ec" stroke-width="45"/>
+          <circle cx="200" cy="200" r="150" fill="none" stroke="url(#dnGold)" stroke-width="45" stroke-dasharray="753.98 942.48" stroke-dashoffset="0" transform="rotate(-90 200 200)" stroke-linecap="round" class="chart-animate"/>
+          <circle cx="200" cy="200" r="150" fill="none" stroke="url(#dnGreen)" stroke-width="45" stroke-dasharray="188.50 942.48" stroke-dashoffset="-753.98" transform="rotate(-90 200 200)" stroke-linecap="round" class="chart-animate"/>
+          <circle cx="200" cy="200" r="105" fill="white"/>
+          <circle cx="200" cy="200" r="100" fill="#fafaf9"/>
+          <text x="200" y="185" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="900" fill="#c8943e">80%</text>
+          <text x="200" y="212" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#5a5a5a">of older people</text>
+          <text x="200" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#9a9a9a">will live in LMICs</text>
+          <text x="200" y="255" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#c8943e" font-weight="700" letter-spacing="2px">BY 2050</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="donut-legend-item"><div class="donut-legend-color gold"></div><strong>80%</strong> — Low &amp; Middle-Income Countries</div>
+          <div class="donut-legend-item"><div class="donut-legend-color green"></div><strong>20%</strong> — High-Income Countries</div>
+          <div class="donut-legend-src">Source: <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" style="color:var(--gold-dark);font-weight:600">WHO</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <p data-i18n="storyP6">These encounters transformed the foundation's mission. Recognising that a truly compassionate society must care for both its future and its past, PHINEHAS GENERATION FOUNDATION broadened its focus to include elderly care. Medical outreaches, free eye examinations, cataract interventions, prescription glasses, food distribution, financial support, and regular welfare visits became integral to the organisation's work.</p>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>Where the Burden Falls Heaviest</h3>
+    <p>The overwhelming majority of the world's older population will live in countries least equipped to support them <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. This means families — often already struggling — must bear the full weight of elder care without institutional support.</p>
+    <p>In Nigeria alone, the traditional extended family structure that once cared for the elderly is eroding under economic pressure, urbanisation, and migration. <strong>Millions of seniors are left without adequate care.</strong></p>
+    <p>In the United Kingdom, many older people face a different but equally serious crisis: <strong>isolation and loneliness.</strong> Over one million older people in the UK report feeling lonely most or all of the time. Behind every closed door is a person who gave decades to society and now eats alone every day.</p>
 
-    <h3 data-i18n="storyH3_3">A Story of Restored Hope</h3>
+    <blockquote class="article-pullquote">"While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal."<br><span style="font-size:.85rem;font-style:normal;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;display:block;margin-top:12px">— 2 Corinthians 4:18</span></blockquote>
 
-    <p data-i18n="storyP7">One particularly memorable outreach took place in Igbore, Abeokuta, where Mrs. Lawal Abeke, an elderly woman living with severe cataracts, received life-changing medical attention. Following successful treatment and the provision of prescription glasses, she regained her sight and expressed overwhelming joy that the hope she thought she had lost had finally been restored. Her story remains a powerful reminder of why the foundation exists — to restore hope where it has faded and to remind every person that they are valued.</p>
+    <p>In light of these realities, it is important to consider the eternal destiny of older people, particularly where they will spend eternity after this earthly life. It has been observed that, despite the fear of death experienced by many older people due to the uncertainty surrounding life after death <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>, some have made little or no preparation for their eternal destiny. This highlights the importance of spiritual preparation in old age. Consequently, Christian older adults are often encouraged to remain committed to their service to God and to cultivate a strong and personal relationship with Jesus Christ. Such commitment provides them with the assurance and hope of eternal life and of reigning with Christ in eternity.</p>
 
-    <h3 data-i18n="storyH3_4">Looking Ahead</h3>
+    <a href="our-impact.html#elderly" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
+  </div>
 
-    <p data-i18n="storyP8">Over the years, PHINEHAS GENERATION FOUNDATION has grown beyond its humble beginnings. What started as a local initiative in Ogun State has expanded into Lagos and now reaches communities in the United Kingdom, building partnerships and extending its impact across borders while remaining rooted in its original mission of service.</p>
-
-    <p data-i18n="storyP9">Today, PHINEHAS GENERATION FOUNDATION stands as a bridge between generations. We empower teenagers to become confident, responsible, and purpose-driven leaders while ensuring that elderly people receive the dignity, care, and respect they deserve.</p>
-
-    <p data-i18n="storyP10">Although our reach continues to grow, our purpose remains unchanged. Every program we organise, every community we visit, every volunteer we mobilise, and every life we touch reflects our unwavering commitment to building a society where no young person is left without guidance and no elderly person is forgotten.</p>
-
-    <p data-i18n="storyP11"><strong>Our story is still being written.</strong> With every life transformed, every partnership formed, and every act of kindness shared, we move one step closer to realising our vision of a world where compassion unites generations, hope overcomes hardship, and every individual has the opportunity to thrive.</p>
-
-    <p class="story-quote" data-i18n="storyQuote">"This is our history. This is our purpose. This is the legacy we are building — one life, one family, and one generation at a time."</p>
+  <div class="container" style="margin-top:40px">
+    <div class="conclusion reveal">
+      <h4>Why PHINEHAS GENERATION Is Responding</h4>
+      <p>These numbers are not abstract. They represent grandmothers, grandfathers, widows, and retired community builders — people who have given their best years to society and now face isolation, untreated medical conditions, and poverty. PHINEHAS GENERATION FOUNDATION exists to restore dignity to these lives through medical outreach, food support, companionship, and compassionate care. <strong>We believe that honouring the elderly is not charity — it is a moral obligation.</strong></p>
+    </div>
   </div>
 </section>
 
-<!-- STATS BAR -->
-<section class="stats-bar">
-  <div class="stats-bar-grid">
-    <div class="stats-bar-item reveal"><div class="number">2016</div><div class="label" data-i18n="stat1">Year Founded</div></div>
-    <div class="stats-bar-item reveal delay-1"><div class="number">1,000+</div><div class="label" data-i18n="stat2">Lives Touched</div></div>
-    <div class="stats-bar-item reveal delay-2"><div class="number">700+</div><div class="label" data-i18n="stat3">Youth Guided</div></div>
-    <div class="stats-bar-item reveal delay-3"><div class="number">2</div><div class="label" data-i18n="stat4">Countries Reached</div></div>
+<!-- PULL QUOTE -->
+<section class="pull-quote">
+  <div class="pull-quote-bg"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784938656/1784785406845_bfvjb3.jpg" alt=""></div>
+  <div class="pull-quote-inner reveal">
+    <div class="pull-quote-mark">"</div>
+    <p class="pull-quote-text">So we fix our eyes not on what is seen, but on what is unseen, since what is seen is temporary, but what is unseen is eternal.</p>
+    <div class="pull-quote-author">— 2 Corinthians 4:18 (NIV)</div>
   </div>
 </section>
 
-<!-- TIMELINE -->
-<section class="section section-cream" id="timeline">
+<!-- SECTION 2 — YOUTH -->
+<section class="section section-cream" id="youth">
   <div class="container">
     <header class="section-header reveal">
-      <span class="section-label" data-i18n="timelineLabel">Our Journey</span>
-      <h2 class="section-title" data-i18n="timelineTitle">Key <span class="highlight">Milestones</span></h2>
-      <p class="section-subtitle" data-i18n="timelineSub">The moments that shaped our mission.</p>
+      <span class="section-label">Section Two</span>
+      <h2 class="section-title">The <span class="highlight">Next Generation</span></h2>
+      <p class="section-subtitle">While the world ages, it is simultaneously experiencing the largest youth population in human history.</p>
     </header>
   </div>
 
-  <div class="timeline">
-    <div class="timeline-item reveal">
-      <div>
-        <div class="year">2016</div>
-        <h4 data-i18n="tTitle1">Foundation Established</h4>
-        <p data-i18n="tDesc1">PHINEHAS GENERATION FOUNDATION was founded by Mrs. Tosin AKANO in Abeokuta, Ogun State, Nigeria.</p>
+  <div class="article reveal">
+    <p><span class="dropcap">W</span>hile the world ages, it is simultaneously experiencing the largest youth population in human history. There are <strong>1.3 billion adolescents</strong> aged 10–19 years alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — representing roughly 42% of humanity <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>The geographic distribution of these young people mirrors the ageing crisis: <strong>nearly 90% of adolescents live in low- and middle-income countries</strong> <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. These are young people growing up in environments where access to quality education, mentorship, healthcare, and economic opportunity is severely limited. Without intervention, their potential remains untapped — and the consequences ripple across generations.</p>
+    <p>The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people. Yet, in most low-resource settings, mental health services for adolescents are virtually nonexistent.</p>
+  </div>
+
+  <div class="big-stat">
+    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80" alt="Students"></div>
+    <div class="big-stat-overlay big-stat-overlay--green"></div>
+    <canvas class="big-stat-particles" id="particles2"></canvas>
+    <div class="big-stat-inner reveal">
+      <span class="section-label">The Largest Youth Generation Ever</span>
+      <div class="big-stat-number">3 billion</div>
+      <p class="big-stat-label">people are under 25 years old — roughly 42% of the global population. 1.3 billion of them are adolescents aged 10 to 19.</p>
+      <p class="big-stat-context">Every one of them carries a future the world has not yet seen.</p>
+      <div class="big-stat-source">World Health Organization</div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:70px">
+    <div class="chart-wrap reveal">
+      <div class="chart-title"><small>Global Youth Snapshot</small>Where the Young People Are</div>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">Under 25</div><div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:100%"></div></div><div class="bar-value">3 bn+</div></div>
+        <div class="bar-row"><div class="bar-label">Adolescents (10-19)</div><div class="bar-track"><div class="bar-fill bar-fill--green" style="--target-width:43%"></div></div><div class="bar-value">1.3 bn</div></div>
+        <div class="bar-row"><div class="bar-label">In LMICs</div><div class="bar-track"><div class="bar-fill bar-fill--dark" style="--target-width:90%"></div></div><div class="bar-value">~90%</div></div>
+        <div class="bar-row"><div class="bar-label">Mental health affected</div><div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:14%"></div></div><div class="bar-value">1 in 7</div></div>
       </div>
     </div>
-    <div class="timeline-item reveal">
-      <div>
-        <div class="year">2018</div>
-        <h4 data-i18n="tTitle2">Landmark Youth Event</h4>
-        <p data-i18n="tDesc2">Hundreds of teenagers gathered at the Obasanjo Presidential Library, Abeokuta, for a transformative youth hangout and mentorship program.</p>
+  </div>
+
+  <div class="container" style="margin-top:50px">
+    <div class="stats-grid">
+      <div class="stat-card green-accent reveal">
+        <div class="stat-card-icon"><i class="fas fa-child"></i></div>
+        <div class="stat-card-num">1.3<span class="stat-card-unit">bn</span></div>
+        <div class="stat-card-label">adolescents aged 10–19 worldwide</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card green-accent reveal delay-1">
+        <div class="stat-card-icon"><i class="fas fa-user-graduate"></i></div>
+        <div class="stat-card-num">3<span class="stat-card-unit">bn+</span></div>
+        <div class="stat-card-label">people younger than 25 — 42% of humanity</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card green-accent reveal delay-2">
+        <div class="stat-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="stat-card-num">~90<span class="stat-card-unit">%</span></div>
+        <div class="stat-card-label">live in low- and middle-income countries</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card green-accent reveal delay-3">
+        <div class="stat-card-icon"><i class="fas fa-brain"></i></div>
+        <div class="stat-card-num">1 in 7</div>
+        <div class="stat-card-label">adolescents experience a mental disorder</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener">WHO</a></div>
       </div>
     </div>
-    <div class="timeline-item reveal">
-      <div>
-        <div class="year">2019</div>
-        <h4 data-i18n="tTitle3">Expansion to Lagos</h4>
-        <p data-i18n="tDesc3">The foundation expanded its operations into Lagos, reaching more young people and communities.</p>
+  </div>
+
+  <div class="container" style="margin-top:50px">
+    <div class="stats-grid stats-grid-2">
+      <div class="stat-card reveal" style="border-top:3px solid var(--gold)">
+        <div class="stat-card-icon"><i class="fas fa-flask"></i></div>
+        <div class="stat-card-num">12.4<span class="stat-card-unit">yrs</span></div>
+        <div class="stat-card-label">Mean age of substance abuse initiation in Nigeria</div>
+        <div class="stat-card-src"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10514430/" target="_blank" rel="noopener">NIH Study</a></div>
+      </div>
+      <div class="stat-card reveal delay-1" style="border-top:3px solid var(--gold)">
+        <div class="stat-card-icon"><i class="fas fa-heartbeat"></i></div>
+        <div class="stat-card-num">17.5<span class="stat-card-unit">yrs</span></div>
+        <div class="stat-card-label">Average age of sexual debut for female adolescents in Ibadan</div>
+        <div class="stat-card-src"><a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2022.1051625/full" target="_blank" rel="noopener">Frontiers Study</a></div>
       </div>
     </div>
-    <div class="timeline-item reveal">
-      <div>
-        <div class="year">2020</div>
-        <h4 data-i18n="tTitle4">Elderly Care Initiative</h4>
-        <p data-i18n="tDesc4">Mission expanded to include elderly care, medical outreaches, and humanitarian support for senior citizens.</p>
-      </div>
-    </div>
-    <div class="timeline-item reveal">
-      <div>
-        <div class="year">2022</div>
-        <h4 data-i18n="tTitle5">International Presence</h4>
-        <p data-i18n="tDesc5">The foundation established a presence in the United Kingdom, extending its impact across borders.</p>
-      </div>
-    </div>
-    <div class="timeline-item reveal">
-      <div>
-        <div class="year" data-i18n="tYear6">Present</div>
-        <h4 data-i18n="tTitle6">Continuing the Mission</h4>
-        <p data-i18n="tDesc6">Empowering teenagers and restoring dignity to elderly people across Nigeria, the UK, and beyond.</p>
-      </div>
+  </div>
+
+  <div class="article reveal" style="margin-top:70px">
+    <h3>The Largest Generation of Young People Ever</h3>
+    <p>There are 1.3 billion adolescents aged 10–19 alive today — approximately one-sixth of the global population. When expanded to include all young people under 25, the figure exceeds <strong>3 billion</strong> — roughly 42% of humanity <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Nearly <strong>90% of adolescents live in low- and middle-income countries</strong> — regions where access to quality education, mentorship, healthcare, and economic opportunity is severely limited.</p>
+    <p>The World Health Organization reports that <strong>1 in 7 adolescents</strong> experiences a mental health disorder. Depression, anxiety, and behavioural disorders are among the leading causes of illness and disability among young people.</p>
+    <a href="our-impact.html#youth" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <div class="container" style="margin-top:40px">
+    <div class="conclusion conclusion--green reveal">
+      <h4>Why PHINEHAS GENERATION Invests in Youth</h4>
+      <p>Every statistic above represents a young person with dreams, potential, and the capacity to lead — if given the right tools. PHINEHAS GENERATION FOUNDATION runs mentorship programs, self-esteem workshops, mental health awareness campaigns, and educational outreach specifically designed to equip teenagers with confidence, character, and purpose. <strong>We are not simply filling gaps; we are building the next generation of ethical, capable leaders.</strong></p>
     </div>
   </div>
 </section>
 
-<!-- MISSION & VISION -->
-<section class="section section-white" id="mission-vision">
+<!-- SECTION 3 — MENTAL HEALTH -->
+<section class="section section-white" id="mental-health">
   <div class="container">
     <header class="section-header reveal">
-      <span class="section-label" data-i18n="mvLabel">What Drives Us</span>
-      <h2 class="section-title" data-i18n="mvTitle">Our Mission <span class="highlight">&amp; Vision</span></h2>
+      <span class="section-label">Section Three</span>
+      <h2 class="section-title">The <span class="highlight">Mental Health</span> Crisis</h2>
+      <p class="section-subtitle">A silent epidemic that cuts across every age, culture, and continent — but hits hardest where services are scarcest.</p>
     </header>
   </div>
-  <div class="mv-grid">
-    <div class="mv-card reveal">
-      <span class="icon"><i class="fas fa-bullseye"></i></span>
-      <h3 data-i18n="missionTitle">Our Mission</h3>
-      <p data-i18n="missionText">To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.</p>
+
+  <div class="big-stat">
+    <div class="big-stat-bg"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1920&q=80" alt="Quiet reflection"></div>
+    <div class="big-stat-overlay big-stat-overlay--red"></div>
+    <canvas class="big-stat-particles" id="particles3"></canvas>
+    <div class="big-stat-inner reveal">
+      <span class="section-label">A Silent Epidemic</span>
+      <div class="big-stat-number">280 million</div>
+      <p class="big-stat-label">people worldwide live with depression. That's more than the entire population of Nigeria.</p>
+      <p class="big-stat-context">And that is only the people who are counted. Millions more suffer in silence — undiagnosed, untreated, and unseen.</p>
+      <div class="big-stat-source">World Health Organization</div>
     </div>
-    <div class="mv-card vision reveal delay-1">
-      <span class="icon"><i class="fas fa-eye"></i></span>
-      <h3 data-i18n="visionTitle">Our Vision</h3>
-      <p data-i18n="visionText">To build a world where no child is neglected and no elderly person is abandoned.</p>
+  </div>
+
+  <div class="container" style="margin-top:70px">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-card-icon"><i class="fas fa-brain"></i></div>
+        <div class="stat-card-num">1 in 7</div>
+        <div class="stat-card-label">adolescents (10-19) experience a mental disorder</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card reveal delay-1">
+        <div class="stat-card-icon"><i class="fas fa-percentage"></i></div>
+        <div class="stat-card-num">5<span class="stat-card-unit">%</span></div>
+        <div class="stat-card-label">of adults globally experience clinical depression</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card reveal delay-2">
+        <div class="stat-card-icon"><i class="fas fa-heart-broken"></i></div>
+        <div class="stat-card-num">727<span class="stat-card-unit">k</span></div>
+        <div class="stat-card-label">people die by suicide every year</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/suicide" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+      <div class="stat-card reveal delay-3">
+        <div class="stat-card-icon"><i class="fas fa-sort-numeric-up"></i></div>
+        <div class="stat-card-num">3rd</div>
+        <div class="stat-card-label">leading cause of death among 15-29 year olds</div>
+        <div class="stat-card-src"><a href="https://www.who.int/news-room/fact-sheets/detail/suicide" target="_blank" rel="noopener">WHO</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:70px">
+    <div class="chart-wrap reveal">
+      <div class="chart-title"><small>Global Mental Health</small>280 Million People Live With Depression</div>
+      <div class="donut-wrap">
+        <svg class="donut-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart mental health">
+          <defs>
+            <linearGradient id="mhGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0d078"/><stop offset="50%" stop-color="#c8943e"/><stop offset="100%" stop-color="#8b6914"/></linearGradient>
+            <linearGradient id="mhDark" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a4a4a"/><stop offset="100%" stop-color="#2a2a2a"/></linearGradient>
+            <linearGradient id="mhGreen" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a8d5b0"/><stop offset="50%" stop-color="#6b8f71"/><stop offset="100%" stop-color="#3d5a42"/></linearGradient>
+          </defs>
+          <circle cx="200" cy="200" r="140" fill="none" stroke="#f0ede8" stroke-width="40"/>
+          <circle cx="200" cy="200" r="140" fill="none" stroke="url(#mhGold)" stroke-width="40" stroke-dasharray="439.82 879.65" stroke-dashoffset="0" transform="rotate(-90 200 200)" stroke-linecap="butt" class="chart-animate"/>
+          <circle cx="200" cy="200" r="140" fill="none" stroke="url(#mhDark)" stroke-width="40" stroke-dasharray="31.82 879.65" stroke-dashoffset="-439.82" transform="rotate(-90 200 200)" stroke-linecap="butt" class="chart-animate"/>
+          <circle cx="200" cy="200" r="140" fill="none" stroke="url(#mhGreen)" stroke-width="40" stroke-dasharray="125.66 879.65" stroke-dashoffset="-471.64" transform="rotate(-90 200 200)" stroke-linecap="butt" class="chart-animate"/>
+          <text x="200" y="188" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="900" fill="#0d0d0d">280M</text>
+          <text x="200" y="212" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#5a5a5a">live with depression</text>
+          <text x="200" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#c8943e" font-weight="700">worldwide</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="donut-legend-item"><div class="donut-legend-color gold"></div><strong>280M</strong> — People living with depression</div>
+          <div class="donut-legend-item"><div class="donut-legend-color dark"></div><strong>727k</strong> — Deaths by suicide each year</div>
+          <div class="donut-legend-item"><div class="donut-legend-color green"></div><strong>1 in 7</strong> — Adolescents with a mental disorder</div>
+          <div class="donut-legend-src">Source: <a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noopener" style="color:var(--gold-dark);font-weight:600">WHO</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article reveal" style="margin-top:70px">
+    <h3>The Silence Around Mental Health</h3>
+    <p>In many of the communities we serve — in Nigeria, in the UK, and across the world — mental health remains a taboo subject. Young people are told to "pray about it" or "get over it." Elderly people assume their despair is simply part of ageing. And those who do speak up often find no services waiting for them.</p>
+    <p>The WHO reports that <strong>most adolescent mental health disorders go undetected and untreated</strong> — especially in low- and middle-income countries <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>. The result is not just individual suffering — it is lost potential, broken families, and futures that never unfold.</p>
+    <p>In the older generation, the situation is compounded by isolation. Studies show that <strong>44.2%</strong> of older adults experience death anxiety, and over <strong>92%</strong> report at least a moderate fear of death <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>. Without community, dignity, and purpose, these fears overwhelm.</p>
+    <a href="our-impact.html#mental-health" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <div class="container" style="margin-top:50px">
+    <header class="section-header reveal" style="margin-bottom:30px">
+      <span class="section-label">Fear of Death in Older People</span>
+      <h2 class="section-title">A Fear That <span class="highlight">Goes Unspoken</span></h2>
+    </header>
+    <div class="stats-grid stats-grid-2">
+      <div class="stat-card reveal" style="border-top:3px solid var(--gold)">
+        <div class="stat-card-icon"><i class="fas fa-skull"></i></div>
+        <div class="stat-card-num">44.2<span class="stat-card-unit">%</span></div>
+        <div class="stat-card-label">of older adults experience death anxiety</div>
+        <div class="stat-card-src"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663589/" target="_blank" rel="noopener">NIH Study</a></div>
+      </div>
+      <div class="stat-card reveal delay-1" style="border-top:3px solid var(--gold)">
+        <div class="stat-card-icon"><i class="fas fa-balance-scale"></i></div>
+        <div class="stat-card-num">92.2<span class="stat-card-unit">%</span></div>
+        <div class="stat-card-label">of older adults have a moderate level of fear of death</div>
+        <div class="stat-card-src"><a href="https://pubmed.ncbi.nlm.nih.gov/34893897/" target="_blank" rel="noopener">PubMed Study</a></div>
+      </div>
+    </div>
+    <div class="conclusion conclusion--dark reveal" style="margin-top:32px">
+      <h4>Addressing the Fear of Death</h4>
+      <p>Research shows that older adults with a high level of self-evaluation and sense of mastery experience lower levels of death and dying anxiety <a href="https://pubmed.ncbi.nlm.nih.gov/20148157/" target="_blank" rel="noopener" class="src">PubMed Study <i class="fas fa-external-link-alt"></i></a>. Through our community welfare and medical outreach programs, we help restore dignity and purpose, which can alleviate this existential fear. Additionally, our spiritual guidance provides hope and assurance for eternity.</p>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:40px">
+    <div class="conclusion reveal">
+      <h4>Our Mental Health Awareness Program</h4>
+      <p>PHINEHAS GENERATION FOUNDATION addresses this crisis directly through our <strong>Mental Health Awareness</strong> program. We educate teenagers on depression, emotional wellbeing, and resilience — creating safe spaces for conversation in schools and communities where the topic is often taboo. Early intervention saves lives.</p>
     </div>
   </div>
 </section>
 
-<!-- CORE VALUES -->
-<section class="section section-green" id="values">
+<!-- SECTION 4 — VIOLENCE AGAINST WOMEN -->
+<section class="section section-cream" id="violence">
   <div class="container">
     <header class="section-header reveal">
-      <span class="section-label" data-i18n="valuesLabel">What Guides Us</span>
-      <h2 class="section-title" data-i18n="valuesTitle">Our <span class="highlight">Core Values</span></h2>
-      <p class="section-subtitle" data-i18n="valuesSub">The principles that guide everything we do.</p>
+      <span class="section-label">Section Four</span>
+      <h2 class="section-title">Violence <span class="highlight">Against Women</span></h2>
+      <p class="section-subtitle">One in three women. A crisis of global proportion that crosses every border, culture, and class.</p>
     </header>
+
+    <div class="chart-wrap reveal">
+      <div class="chart-title"><small>Gender-Based Violence</small>1 in 3 Women Experience Violence in Their Lifetime</div>
+      <div class="donut-wrap">
+        <svg class="donut-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1 in 3 women">
+          <defs>
+            <linearGradient id="vawGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0d078"/><stop offset="50%" stop-color="#c8943e"/><stop offset="100%" stop-color="#8b6914"/></linearGradient>
+            <linearGradient id="vawDark" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a4a4a"/><stop offset="100%" stop-color="#2a2a2a"/></linearGradient>
+          </defs>
+          <circle cx="160" cy="160" r="110" fill="none" stroke="#f0ede8" stroke-width="35"/>
+          <circle cx="160" cy="160" r="110" fill="none" stroke="url(#vawDark)" stroke-width="35" stroke-dasharray="345.58 691.15" stroke-dashoffset="0" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate"/>
+          <circle cx="160" cy="160" r="110" fill="none" stroke="url(#vawGold)" stroke-width="35" stroke-dasharray="230.38 691.15" stroke-dashoffset="-345.58" transform="rotate(-90 160 160)" stroke-linecap="butt" class="chart-animate"/>
+          <text x="160" y="148" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="900" fill="#0d0d0d">1 in 3</text>
+          <text x="160" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#5c5a55">women experience</text>
+          <text x="160" y="186" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#5c5a55">physical or sexual violence</text>
+          <text x="160" y="202" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#c8943e" font-weight="700">in their lifetime</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="donut-legend-item"><div class="donut-legend-color dark"></div>Women who have not experienced violence</div>
+          <div class="donut-legend-item"><div class="donut-legend-color gold"></div><strong>30%</strong> — Women who have, globally</div>
+          <div class="donut-legend-src">Source: <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener" style="color:var(--gold-dark);font-weight:600">WHO</a></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="values-grid">
-    <div class="value-card reveal"><span class="icon"><i class="fas fa-heart"></i></span><h4 data-i18n="val1Title">Compassion</h4><p data-i18n="val1Desc">We serve every individual with love, empathy, and genuine care.</p></div>
-    <div class="value-card reveal delay-1"><span class="icon"><i class="fas fa-shield-alt"></i></span><h4 data-i18n="val2Title">Integrity</h4><p data-i18n="val2Desc">We uphold honesty, transparency, and accountability in all we do.</p></div>
-    <div class="value-card reveal delay-2"><span class="icon"><i class="fas fa-seedling"></i></span><h4 data-i18n="val3Title">Empowerment</h4><p data-i18n="val3Desc">We equip people with the knowledge, skills, and confidence to succeed.</p></div>
-    <div class="value-card reveal delay-3"><span class="icon"><i class="fas fa-star"></i></span><h4 data-i18n="val4Title">Excellence</h4><p data-i18n="val4Desc">We pursue the highest standards in service and impact.</p></div>
-    <div class="value-card reveal"><span class="icon"><i class="fas fa-handshake"></i></span><h4 data-i18n="val5Title">Respect</h4><p data-i18n="val5Desc">We honour the dignity and worth of every human life.</p></div>
-    <div class="value-card reveal delay-1"><span class="icon"><i class="fas fa-hands-helping"></i></span><h4 data-i18n="val6Title">Service</h4><p data-i18n="val6Desc">We believe true leadership begins with serving others.</p></div>
-    <div class="value-card reveal delay-2"><span class="icon"><i class="fas fa-users"></i></span><h4 data-i18n="val7Title">Collaboration</h4><p data-i18n="val7Desc">We create lasting impact by working with communities and partners.</p></div>
-    <div class="value-card reveal delay-3"><span class="icon"><i class="fas fa-sun"></i></span><h4 data-i18n="val8Title">Hope</h4><p data-i18n="val8Desc">We inspire confidence for a brighter future, regardless of life's challenges.</p></div>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>736 Million Women and Girls</h3>
+    <p>The World Health Organization estimates that <strong>1 in 3 women</strong> — approximately 30% globally — experience physical or sexual violence during their lifetime. That translates to <strong>736 million women and girls</strong> who have endured violence from an intimate partner or sexual violence from a non-partner <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener" class="src">WHO <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Violence against women is not merely a personal tragedy. It is a public health crisis of epidemic proportions. It crosses every border, culture, and socioeconomic class — but its impact is most severe where legal protections are weakest and support services are unavailable.</p>
+    <p>Prevention starts with <strong>reshaping attitudes early</strong> — teaching boys respect, responsibility, and empathy before violence ever takes root. That is why we invest in youth education as a form of prevention.</p>
+    <a href="our-impact.html#real-men" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <div class="container" style="margin-top:40px">
+    <div class="conclusion conclusion--dark reveal">
+      <h4>Our "Real Men Don't Rape" Initiative</h4>
+      <p>PHINEHAS GENERATION FOUNDATION confronts this crisis through our <strong>"Real Men Don't Rape"</strong> program — an educational campaign that promotes respect, responsibility, and gender-based violence prevention among teenage boys and young men. By reshaping attitudes early, we contribute to breaking the cycle of violence before it begins.</p>
+    </div>
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section class="section section-white" id="founder">
+<!-- SECTION 5 — SUBSTANCE ABUSE -->
+<section class="section section-white" id="substance">
   <div class="container">
     <header class="section-header reveal">
-      <span class="section-label" data-i18n="founderLabel">Our Leader</span>
-      <h2 class="section-title" data-i18n="founderTitle">Meet Our <span class="highlight">Founder</span></h2>
-      <p class="section-subtitle" data-i18n="founderSub">A vision born from compassion.</p>
+      <span class="section-label">Section Five</span>
+      <h2 class="section-title">The <span class="highlight">Addiction</span> Crisis</h2>
+      <p class="section-subtitle">296 million people used drugs in 2021. Young people are hit hardest.</p>
     </header>
+
+    <div class="chart-wrap reveal">
+      <div class="chart-title"><small>Global Drug Use (2021)</small>The Growing Crisis</div>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">Used drugs</div><div class="bar-track"><div class="bar-fill bar-fill--gold" style="--target-width:100%"></div></div><div class="bar-value">296M</div></div>
+        <div class="bar-row"><div class="bar-label">Need treatment</div><div class="bar-track"><div class="bar-fill bar-fill--red" style="--target-width:13%"></div></div><div class="bar-value">39.5M</div></div>
+        <div class="bar-row"><div class="bar-label">In LMICs</div><div class="bar-track"><div class="bar-fill bar-fill--dark" style="--target-width:85%"></div></div><div class="bar-value">~85%</div></div>
+      </div>
+    </div>
   </div>
 
-  <div class="founder-split">
-    <div class="founder-image reveal">
-      <img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1000,q_auto,f_auto/v1788125609/IMG-20260817-WA0005_kz9h6r.jpg" alt="Tosin AKANO — Founder">
-      <span class="founder-badge"><i class="fas fa-crown"></i> <span data-i18n="founderBadge">Founder</span></span>
-    </div>
-    <div class="founder-content reveal delay-1">
-      <h2 data-i18n="founderName">Tosin AKANO</h2>
-      <span class="founder-role" data-i18n="founderRole">Founder &amp; Executive Director</span>
-      <p data-i18n="founderP1">With a heart for service and a vision for transformation, Tosin AKANO founded PHINEHAS GENERATION FOUNDATION in 2016. Her passion for empowering young people and caring for the elderly has driven the organisation's growth from a small mentorship initiative in Abeokuta to a movement reaching communities across Nigeria and the United Kingdom.</p>
-      <p data-i18n="founderP2">A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.</p>
-      <blockquote class="founder-quote" data-i18n="founderQuote">"Raising tomorrow's leaders while honouring yesterday's heroes."</blockquote>
-      <a href="founder.html" class="btn btn-dark" data-i18n="founderBtn">Read Her Full Story <i class="fas fa-arrow-right"></i></a>
+  <div class="article reveal" style="margin-top:70px">
+    <h3>A Crisis That Begins in Adolescence</h3>
+    <p>According to the United Nations Office on Drugs and Crime, <strong>296 million people</strong> worldwide used drugs in 2021 — a figure that has grown significantly over the past decade <a href="https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2023.html" target="_blank" rel="noopener" class="src">UNODC <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Young people are disproportionately affected. <strong>Substance abuse often begins in adolescence</strong> — fuelled by peer pressure, trauma, lack of guidance, and economic hopelessness. Studies in Nigeria show the mean age of substance abuse initiation is as young as <strong>12.4 years</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10514430/" target="_blank" rel="noopener" class="src">NIH Study <i class="fas fa-external-link-alt"></i></a>.</p>
+    <p>Without early intervention, addiction derails education, destroys families, and perpetuates cycles of poverty. The most effective prevention is mentorship, self-worth, and community — the very things we invest in.</p>
+    <a href="our-impact.html#prevention" class="btn-link">See how we respond to this <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <div class="container" style="margin-top:40px">
+    <div class="conclusion reveal">
+      <h4>Prevention Through Mentorship</h4>
+      <p>PHINEHAS GENERATION FOUNDATION's youth mentorship and <strong>Sexual Purity</strong> programs equip teenagers with the self-esteem, decision-making skills, and positive peer networks necessary to resist destructive behaviours. <strong>We believe that a guided teenager is far less likely to become a statistic.</strong></p>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <div class="cta-inner reveal">
-    <span class="section-label" style="color:var(--gold-light)" data-i18n="ctaLabel">Join Us</span>
-    <h2 class="section-title" data-i18n="ctaTitle">You Can Change a Life Today</h2>
-    <p data-i18n="ctaText">Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.</p>
-    <div class="cta-actions">
-      <a href="donate.html" class="btn btn-primary" data-i18n="ctaBtn1"><i class="fas fa-heart"></i> Donate Now</a>
-      <a href="volunteer.html" class="btn btn-outline-light" data-i18n="ctaBtn2"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+<!-- PULL QUOTE 2 -->
+<section class="pull-quote">
+  <div class="pull-quote-bg"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/w_1920,q_auto,f_auto/v1784981609/sunrise-wildlife-shots_bn7p3z.jpg" alt=""></div>
+  <div class="pull-quote-inner reveal">
+    <div class="pull-quote-mark">"</div>
+    <p class="pull-quote-text">Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress.</p>
+    <div class="pull-quote-author">— James 1:27 (NIV)</div>
+  </div>
+</section>
+
+<!-- SECTION 6 — CONVERGENCE -->
+<section class="section section-cream" id="convergence">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-label">Section Six</span>
+      <h2 class="section-title">The <span class="highlight">Convergence</span></h2>
+      <p class="section-subtitle">These crises do not exist in isolation. They overlap, compound, and reinforce each other — especially for the two generations at the heart of our work.</p>
+    </header>
+
+    <div class="challenge-grid">
+      <div class="challenge-card reveal">
+        <div class="challenge-card-icon"><i class="fas fa-user-graduate"></i></div>
+        <div class="challenge-stat">1 in 7</div>
+        <h4>Youth Mental Health</h4>
+        <p>Adolescents face a mental health crisis with almost no accessible services.</p>
+        <a href="our-impact.html#mental-health" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="challenge-card reveal delay-1">
+        <div class="challenge-card-icon"><i class="fas fa-heart-broken"></i></div>
+        <div class="challenge-stat">1 in 3</div>
+        <h4>Violence Prevention</h4>
+        <p>Violence against women begins with attitudes formed in adolescence.</p>
+        <a href="our-impact.html#real-men" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="challenge-card reveal delay-2">
+        <div class="challenge-card-icon"><i class="fas fa-pills"></i></div>
+        <div class="challenge-stat">12.4 yrs</div>
+        <h4>Substance Abuse</h4>
+        <p>Substance abuse begins in early adolescence. Prevention starts with mentorship.</p>
+        <a href="our-impact.html#prevention" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="challenge-card reveal">
+        <div class="challenge-card-icon"><i class="fas fa-users"></i></div>
+        <div class="challenge-stat">80%</div>
+        <h4>Elderly Care Gap</h4>
+        <p>80% of older people will live in countries least able to care for them.</p>
+        <a href="our-impact.html#elderly" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="challenge-card reveal delay-1">
+        <div class="challenge-card-icon"><i class="fas fa-eye"></i></div>
+        <div class="challenge-stat">Untreated</div>
+        <h4>Preventable Blindness</h4>
+        <p>Millions of elderly people live with treatable eye conditions that take their independence.</p>
+        <a href="our-impact.html#medical" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="challenge-card reveal delay-2">
+        <div class="challenge-card-icon"><i class="fas fa-sad-tear"></i></div>
+        <div class="challenge-stat">44.2%</div>
+        <h4>Fear &amp; Isolation</h4>
+        <p>Nearly half of older adults experience death anxiety.</p>
+        <a href="our-impact.html#welfare" class="challenge-cta">Our response <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PHINEHAS EXISTS -->
+<section class="section section-dark">
+  <div class="article reveal">
+    <span class="section-label" style="color:var(--gold-light)">Our Response</span>
+    <h2 class="section-title" style="color:var(--white);text-align:left">Why <span class="highlight">PHINEHAS GENERATION</span> Exists</h2>
+    <p style="color:rgba(255,255,255,.85)">These numbers are not abstract. They are grandmothers, grandfathers, teenagers, and children. They are the people we meet at medical outreaches, in schools, and in communities across Nigeria and the UK. They are the reason we were founded in 2016 — and the reason we keep going.</p>
+    <p style="color:rgba(255,255,255,.85)">We are not waiting for governments or institutions to solve these crises. We are building bridges — one teenager, one elder, one community at a time. Through mentorship, medical outreach, community welfare, and compassionate care, we are responding to the very statistics you have just read.</p>
+    <p style="color:rgba(255,255,255,.85)"><strong style="color:var(--gold-light)">We cannot solve the world's problems alone. But we can change one life. And then another. And then another.</strong></p>
+  </div>
+</section>
+
+<!-- IMPACT BRIDGE -->
+<section class="impact-bridge">
+  <div class="impact-bridge-inner reveal">
+    <span class="section-label" style="color:var(--gold-light)">The Response</span>
+    <h2 class="section-title">This is the problem.<br>Here is what we're doing about it.</h2>
+    <p>Every statistic on this page corresponds to a program we run, a person we serve, and a life we've touched. See the full impact of PHINEHAS GENERATION FOUNDATION — verified, specific, and ongoing.</p>
+    <div class="impact-bridge-cta">
+      <a href="our-impact.html" class="btn btn-primary">See Our Impact <i class="fas fa-arrow-right"></i></a>
+      <a href="donate.html" class="btn btn-outline-light"><i class="fas fa-heart"></i> Donate Now</a>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo"><img src="https://res.cloudinary.com/dcwof2ngn/image/upload/v1788125609/IMG-20260726-WA0007_siohti.jpg" alt="Logo" width="42" height="42"><span class="logo-text">PHINEHAS <span>GENERATION</span></span></a>
-        <p data-i18n="footerTag">Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
+        <p>Empowering Teenagers. Honouring the Elderly. Building Better Communities.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/balogun.oluwatosin.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/tosin_akano?igsh=M2EwZ2EyZDRsYnAx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -652,36 +1044,36 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         </div>
       </div>
       <div class="footer-links">
-        <h4 data-i18n="footerQuick">Quick Links</h4>
-        <a href="index.html" data-i18n="footerHome">Home</a>
-        <a href="about.html" data-i18n="footerAbout">About Us</a>
-        <a href="programs.html" data-i18n="footerProgramsLink">Our Programs</a>
-        <a href="founder.html" data-i18n="footerFounder">Founder</a>
-        <a href="the-need.html" data-i18n="footerNeed">The Need</a>
-        <a href="our-impact.html" data-i18n="footerImpact">Our Impact</a>
-        <a href="blog.html" data-i18n="footerBlog">Blog / News</a>
-        <a href="volunteer.html" data-i18n="footerVolunteer">Volunteer</a>
-        <a href="contact.html" data-i18n="footerContactLink">Contact Us</a>
-        <a href="donate.html" data-i18n="footerDonate">Donate</a>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Our Programs</a>
+        <a href="founder.html">Founder</a>
+        <a href="the-need.html">The Need</a>
+        <a href="our-impact.html">Our Impact</a>
+        <a href="blog.html">Blog / News</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donate.html">Donate</a>
       </div>
       <div class="footer-links">
-        <h4 data-i18n="footerPrograms">Programs</h4>
-        <a href="programs.html#self-esteem" data-i18n="footerProg1">Self-Esteem Development</a>
-        <a href="programs.html#real-men" data-i18n="footerProg2">Real Men Don't Rape</a>
-        <a href="programs.html#medical" data-i18n="footerProg3">Medical Outreach</a>
-        <a href="programs.html#welfare" data-i18n="footerProg4">Community Welfare</a>
-        <a href="programs.html#widows" data-i18n="footerProg5">Widow Support</a>
+        <h4>Programs</h4>
+        <a href="programs.html#youth">Youth Development</a>
+        <a href="programs.html#elderly">Elderly Care</a>
+        <a href="programs.html#medical">Medical Outreach</a>
+        <a href="programs.html#welfare">Community Development</a>
+        <a href="programs.html#leadership">Leadership Training</a>
       </div>
       <div class="footer-links">
-        <h4 data-i18n="footerContact">Contact</h4>
+        <h4>Contact</h4>
         <a href="tel:+2348161370219"><i class="fas fa-phone"></i> +234 816 137 0219</a>
         <a href="mailto:info@phinehasgeneration.org"><i class="fas fa-envelope"></i> info@phinehasgeneration.org</a>
-        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerUK">UK Office, London</span></a>
-        <a href="#"><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerNigeria">Nigeria Office, Lagos</span></a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> UK Office, London</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Nigeria Office, Lagos</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 <strong>PHINEHAS GENERATION FOUNDATION</strong> — <span data-i18n="footerCopy">Registered Charity. All rights reserved.</span> | <a href="#" data-i18n="footerPrivacy">Privacy Policy</a></p>
+      <p>&copy; 2026 <strong>PHINEHAS GENERATION FOUNDATION</strong> — Registered Charity. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </div>
   </div>
 </footer>
@@ -689,339 +1081,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <a href="https://wa.me/2348161370219" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
 <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About Us | PHINEHAS GENERATION FOUNDATION",
-  "description": "Learn about PHINEHAS GENERATION FOUNDATION — our story, mission, vision, and the journey of transforming lives across Nigeria and the UK.",
-  "url": "https://phinehasgeneration.org/about.html",
-  "isPartOf": {
-    "@type": "Organization",
-    "name": "PHINEHAS GENERATION FOUNDATION",
-    "foundingDate": "2016",
-    "founder": {
-      "@type": "Person",
-      "name": "Tosin AKANO",
-      "jobTitle": "Founder & Executive Director"
-    },
-    "areaServed": ["Nigeria", "United Kingdom"],
-    "email": "info@phinehasgeneration.org",
-    "telephone": "+2348161370219"
-  }
-}
-</script>
-
 <script>
 (function(){
 'use strict';
 
-/* ===== TRANSLATIONS ===== */
-const translations = {
-  'en': {
-    navHome:'Home',navAbout:'About',navPrograms:'Programs',navFounder:'Founder',navNeed:'The Need',navImpact:'Our Impact',navBlog:'Blog',navVolunteer:'Volunteer',navContact:'Contact',navDonate:'Donate',
-    loaderSub:'About Us',
-    pageHeroEyebrow:'About Us · Our Story',
-    pageHeroTitle:'A Vision That Began<br><span class="highlight">With One Heart.</span>',
-    pageHeroSub:'In 2016, Mrs. Tosin AKANO founded PHINEHAS GENERATION FOUNDATION with a simple conviction: that every young person deserves guidance, and every elderly person deserves to be valued. This is the story of what that conviction built.',
-    pageHeroCta1:'Read our story <i class="fas fa-arrow-down"></i>',
-    pageHeroCta2:'See our impact <i class="fas fa-arrow-right"></i>',
-    pageHeroBadge:'Since 2016',
-    storyLabel:'Our Story',
-    storyTitle:'A Vision That Began with <span class="highlight">One Heart</span>',
-    storySub:'And grew into a movement of hope.',
-    storyP1:'<span class="dropcap">E</span>very meaningful journey begins with a single step. For PHINEHAS GENERATION FOUNDATION, that step was taken in 2016 by Mrs. Tosin AKANO, whose compassion for people became the seed of a vision that continues to transform lives today.',
-    storyP2:'At a time when many teenagers were silently struggling with low self-esteem, depression, peer pressure, abuse, and uncertainty about their future, Mrs. AKANO recognised a pressing need for guidance and mentorship. She believed that with the right support, every young person could discover purpose, make wise decisions, and become a positive influence in society.',
-    storyP3:'Driven by this conviction, she established PHINEHAS GENERATION FOUNDATION as a platform where teenagers could learn, grow, ask questions freely, and receive practical guidance on issues that shape their lives. What began as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people.',
-    storyH3_1:'A Landmark Moment',
-    storyP4:'One of the foundation\'s landmark moments came in 2018, when teenagers from different communities gathered at the Obasanjo Presidential Library in Abeokuta for a life-changing youth hangout. Through mentorship, interactive sessions, and inspirational talks, many participants discovered new confidence, clarified their goals, and found renewed purpose. Today, many of those young people have completed higher education and are contributing meaningfully to society as graduates and professionals.',
-    storyHighlight:'"What started as small gatherings and mentoring sessions quickly grew into conferences, seminars, leadership workshops, and community outreaches that inspired hundreds of young people."',
-    storyH3_2:'Expanding the Vision',
-    storyP5:'As the foundation expanded its activities across Abeokuta and later into Lagos, another need became increasingly evident. During community visits and outreach programs, the team encountered many elderly men and women who had been left behind by society. Some struggled with poor health, failing eyesight, loneliness, and financial hardship. Others simply longed for someone to listen, care, and remind them that they still mattered.',
-    storyP6:'These encounters transformed the foundation\'s mission. Recognising that a truly compassionate society must care for both its future and its past, PHINEHAS GENERATION FOUNDATION broadened its focus to include elderly care. Medical outreaches, free eye examinations, cataract interventions, prescription glasses, food distribution, financial support, and regular welfare visits became integral to the organisation\'s work.',
-    storyH3_3:'A Story of Restored Hope',
-    storyP7:'One particularly memorable outreach took place in Igbore, Abeokuta, where Mrs. Lawal Abeke, an elderly woman living with severe cataracts, received life-changing medical attention. Following successful treatment and the provision of prescription glasses, she regained her sight and expressed overwhelming joy that the hope she thought she had lost had finally been restored. Her story remains a powerful reminder of why the foundation exists — to restore hope where it has faded and to remind every person that they are valued.',
-    storyH3_4:'Looking Ahead',
-    storyP8:'Over the years, PHINEHAS GENERATION FOUNDATION has grown beyond its humble beginnings. What started as a local initiative in Ogun State has expanded into Lagos and now reaches communities in the United Kingdom, building partnerships and extending its impact across borders while remaining rooted in its original mission of service.',
-    storyP9:'Today, PHINEHAS GENERATION FOUNDATION stands as a bridge between generations. We empower teenagers to become confident, responsible, and purpose-driven leaders while ensuring that elderly people receive the dignity, care, and respect they deserve.',
-    storyP10:'Although our reach continues to grow, our purpose remains unchanged. Every program we organise, every community we visit, every volunteer we mobilise, and every life we touch reflects our unwavering commitment to building a society where no young person is left without guidance and no elderly person is forgotten.',
-    storyP11:'<strong>Our story is still being written.</strong> With every life transformed, every partnership formed, and every act of kindness shared, we move one step closer to realising our vision of a world where compassion unites generations, hope overcomes hardship, and every individual has the opportunity to thrive.',
-    storyQuote:'"This is our history. This is our purpose. This is the legacy we are building — one life, one family, and one generation at a time."',
-    stat1:'Year Founded',stat2:'Lives Touched',stat3:'Youth Guided',stat4:'Countries Reached',
-    timelineLabel:'Our Journey',
-    timelineTitle:'Key <span class="highlight">Milestones</span>',
-    timelineSub:'The moments that shaped our mission.',
-    tTitle1:'Foundation Established',
-    tDesc1:'PHINEHAS GENERATION FOUNDATION was founded by Mrs. Tosin AKANO in Abeokuta, Ogun State, Nigeria.',
-    tTitle2:'Landmark Youth Event',
-    tDesc2:'Hundreds of teenagers gathered at the Obasanjo Presidential Library, Abeokuta, for a transformative youth hangout and mentorship program.',
-    tTitle3:'Expansion to Lagos',
-    tDesc3:'The foundation expanded its operations into Lagos, reaching more young people and communities.',
-    tTitle4:'Elderly Care Initiative',
-    tDesc4:'Mission expanded to include elderly care, medical outreaches, and humanitarian support for senior citizens.',
-    tTitle5:'International Presence',
-    tDesc5:'The foundation established a presence in the United Kingdom, extending its impact across borders.',
-    tYear6:'Present',
-    tTitle6:'Continuing the Mission',
-    tDesc6:'Empowering teenagers and restoring dignity to elderly people across Nigeria, the UK, and beyond.',
-    mvLabel:'What Drives Us',
-    mvTitle:'Our Mission <span class="highlight">&amp; Vision</span>',
-    missionTitle:'Our Mission',
-    missionText:'To empower young people through mentorship, education, and leadership development while restoring dignity, hope, and happiness to elderly people through compassionate care and humanitarian outreach.',
-    visionTitle:'Our Vision',
-    visionText:'To build a world where no child is neglected and no elderly person is abandoned.',
-    valuesLabel:'What Guides Us',
-    valuesTitle:'Our <span class="highlight">Core Values</span>',
-    valuesSub:'The principles that guide everything we do.',
-    val1Title:'Compassion',val1Desc:'We serve every individual with love, empathy, and genuine care.',
-    val2Title:'Integrity',val2Desc:'We uphold honesty, transparency, and accountability in all we do.',
-    val3Title:'Empowerment',val3Desc:'We equip people with the knowledge, skills, and confidence to succeed.',
-    val4Title:'Excellence',val4Desc:'We pursue the highest standards in service and impact.',
-    val5Title:'Respect',val5Desc:'We honour the dignity and worth of every human life.',
-    val6Title:'Service',val6Desc:'We believe true leadership begins with serving others.',
-    val7Title:'Collaboration',val7Desc:'We create lasting impact by working with communities and partners.',
-    val8Title:'Hope',val8Desc:'We inspire confidence for a brighter future, regardless of life\'s challenges.',
-    founderLabel:'Our Leader',
-    founderTitle:'Meet Our <span class="highlight">Founder</span>',
-    founderSub:'A vision born from compassion.',
-    founderBadge:'Founder',
-    founderName:'Tosin AKANO',
-    founderRole:'Founder &amp; Executive Director',
-    founderP1:'With a heart for service and a vision for transformation, Tosin AKANO founded PHINEHAS GENERATION FOUNDATION in 2016. Her passion for empowering young people and caring for the elderly has driven the organisation\'s growth from a small mentorship initiative in Abeokuta to a movement reaching communities across Nigeria and the United Kingdom.',
-    founderP2:'A dedicated humanitarian and community leader, she believes that every generation deserves hope, and that lasting change begins with investing in people.',
-    founderQuote:'"Raising tomorrow\'s leaders while honouring yesterday\'s heroes."',
-    founderBtn:'Read Her Full Story <i class="fas fa-arrow-right"></i>',
-    ctaLabel:'Join Us',
-    ctaTitle:'You Can Change a Life Today',
-    ctaText:'Every act of kindness creates a ripple of hope. Whether you volunteer, donate, or partner with us, you become part of a movement that empowers teenagers and restores dignity to elderly people.',
-    ctaBtn1:'<i class="fas fa-heart"></i> Donate Now',
-    ctaBtn2:'<i class="fas fa-hands-helping"></i> Become a Volunteer',
-    footerTag:'Empowering Teenagers. Honouring the Elderly. Building Better Communities.',
-    footerQuick:'Quick Links',footerHome:'Home',footerAbout:'About Us',footerProgramsLink:'Our Programs',footerFounder:'Founder',footerNeed:'The Need',footerImpact:'Our Impact',footerBlog:'Blog / News',footerVolunteer:'Volunteer',footerContactLink:'Contact Us',footerDonate:'Donate',
-    footerPrograms:'Programs',footerProg1:'Self-Esteem Development',footerProg2:'Real Men Don\'t Rape',footerProg3:'Medical Outreach',footerProg4:'Community Welfare',footerProg5:'Widow Support',
-    footerContact:'Contact',footerUK:'UK Office, London',footerNigeria:'Nigeria Office, Lagos',
-    footerCopy:'Registered Charity. All rights reserved.',footerPrivacy:'Privacy Policy'
-  },
-  'fr': {
-    navHome:'Accueil',navAbout:'À propos',navPrograms:'Programmes',navFounder:'Fondatrice',navNeed:'Le Besoin',navImpact:'Notre Impact',navBlog:'Blog',navVolunteer:'Bénévolat',navContact:'Contact',navDonate:'Don',
-    loaderSub:'À propos',
-    pageHeroEyebrow:'À propos · Notre histoire',
-    pageHeroTitle:'Une vision qui a commencé<br><span class="highlight">avec un cœur.</span>',
-    pageHeroSub:'En 2016, Mme Tosin AKANO a fondé PHINEHAS GENERATION FOUNDATION avec une conviction simple : chaque jeune mérite d\'être guidé, et chaque personne âgée mérite d\'être valorisée. Voici l\'histoire de ce que cette conviction a construit.',
-    pageHeroCta1:'Lire notre histoire <i class="fas fa-arrow-down"></i>',
-    pageHeroCta2:'Voir notre impact <i class="fas fa-arrow-right"></i>',
-    pageHeroBadge:'Depuis 2016',
-    storyLabel:'Notre histoire',
-    storyTitle:'Une vision qui a commencé avec <span class="highlight">un cœur</span>',
-    storySub:'Et qui est devenue un mouvement d\'espoir.',
-    storyP1:'<span class="dropcap">T</span>out voyage significatif commence par un premier pas. Pour PHINEHAS GENERATION FOUNDATION, ce pas a été franchi en 2016 par Mme Tosin AKANO, dont la compassion pour les gens est devenue la graine d\'une vision qui continue de transformer des vies aujourd\'hui.',
-    storyP2:'À une époque où de nombreux adolescents luttaient silencieusement contre une faible estime de soi, la dépression, la pression des pairs, les abus et l\'incertitude quant à leur avenir, Mme AKANO a reconnu un besoin urgent de conseils et de mentorat. Elle croyait qu\'avec le bon soutien, chaque jeune pouvait découvrir un but, prendre des décisions judicieuses et devenir une influence positive dans la société.',
-    storyP3:'Animée par cette conviction, elle a fondé PHINEHAS GENERATION FOUNDATION comme une plateforme où les adolescents pouvaient apprendre, grandir, poser des questions librement et recevoir des conseils pratiques. Ce qui a commencé comme de petits rassemblements s\'est rapidement transformé en conférences, séminaires, ateliers de leadership et actions communautaires qui ont inspiré des centaines de jeunes.',
-    storyH3_1:'Un moment historique',
-    storyP4:'L\'un des moments marquants a eu lieu en 2018, lorsque des adolescents se sont réunis à la Bibliothèque présidentielle Obasanjo à Abeokuta pour une rencontre transformatrice. Aujourd\'hui, beaucoup ont terminé leurs études supérieures et contribuent de manière significative à la société.',
-    storyHighlight:'"Ce qui a commencé comme de petits rassemblements s\'est rapidement transformé en conférences, séminaires, ateliers de leadership et actions communautaires qui ont inspiré des centaines de jeunes."',
-    storyH3_2:'Élargir la vision',
-    storyP5:'Alors que la fondation élargissait ses activités à Abeokuta puis à Lagos, un autre besoin est devenu évident. Lors des visites communautaires, l\'équipe a rencontré de nombreuses personnes âgées laissées pour compte. Certaines luttaient contre une mauvaise santé, la solitude et des difficultés financières. D\'autres aspiraient simplement à ce que quelqu\'un les écoute.',
-    storyP6:'Ces rencontres ont transformé la mission. Reconnaissant qu\'une société vraiment compatissante doit prendre soin de son avenir et de son passé, PHINEHAS GENERATION FOUNDATION a élargi son champ d\'action aux soins aux personnes âgées. Les actions médicales, examens de la vue gratuits, interventions contre la cataracte, lunettes de prescription, distribution de nourriture, soutien financier et visites de bien-être sont devenus partie intégrante du travail.',
-    storyH3_3:'Une histoire d\'espoir retrouvé',
-    storyP7:'Une action mémorable a eu lieu à Igbore, Abeokuta, où Mme Lawal Abeke, souffrant de cataracte sévère, a reçu des soins médicaux transformateurs. Après un traitement réussi et la fourniture de lunettes, elle a retrouvé la vue et exprimé une immense joie. Son histoire reste un rappel puissant de la raison d\'être de la fondation.',
-    storyH3_4:'Regarder vers l\'avenir',
-    storyP8:'Au fil des ans, PHINEHAS GENERATION FOUNDATION a dépassé ses modestes débuts. Ce qui a commencé comme une initiative locale dans l\'État d\'Ogun s\'est étendu à Lagos et atteint maintenant des communautés au Royaume-Uni, créant des partenariats tout en restant enracinée dans sa mission originale.',
-    storyP9:'Aujourd\'hui, PHINEHAS GENERATION FOUNDATION est un pont entre les générations. Nous aidons les adolescents à devenir des leaders confiants et responsables tout en veillant à ce que les personnes âgées reçoivent la dignité et le respect qu\'elles méritent.',
-    storyP10:'Bien que notre portée continue de croître, notre objectif reste inchangé. Chaque programme, chaque communauté visitée, chaque bénévole mobilisé et chaque vie touchée reflète notre engagement à construire une société où aucun jeune n\'est laissé sans conseils et aucune personne âgée n\'est oubliée.',
-    storyP11:'<strong>Notre histoire est encore en cours d\'écriture.</strong> Avec chaque vie transformée, chaque partenariat formé et chaque acte de gentillesse, nous nous rapprochons un peu plus de notre vision d\'un monde où la compassion unit les générations et l\'espoir surmonte les épreuves.',
-    storyQuote:'"C\'est notre histoire. C\'est notre objectif. C\'est l\'héritage que nous construisons — une vie, une famille et une génération à la fois."',
-    stat1:'Année de fondation',stat2:'Vies touchées',stat3:'Jeunes guidés',stat4:'Pays atteints',
-    timelineLabel:'Notre parcours',
-    timelineTitle:'Étapes <span class="highlight">clés</span>',
-    timelineSub:'Les moments qui ont façonné notre mission.',
-    tTitle1:'Fondation de l\'organisation',
-    tDesc1:'PHINEHAS GENERATION FOUNDATION a été fondée par Mme Tosin AKANO à Abeokuta, État d\'Ogun, Nigeria.',
-    tTitle2:'Événement jeunesse marquant',
-    tDesc2:'Des centaines d\'adolescents se sont réunis à la Bibliothèque présidentielle Obasanjo pour un programme de mentorat transformateur.',
-    tTitle3:'Expansion à Lagos',
-    tDesc3:'La fondation a étendu ses opérations à Lagos, atteignant plus de jeunes et de communautés.',
-    tTitle4:'Initiative pour les personnes âgées',
-    tDesc4:'La mission s\'est élargie pour inclure les soins aux personnes âgées et les actions médicales.',
-    tTitle5:'Présence internationale',
-    tDesc5:'La fondation a établi une présence au Royaume-Uni, étendant son impact au-delà des frontières.',
-    tYear6:'Aujourd\'hui',
-    tTitle6:'Poursuite de la mission',
-    tDesc6:'Autonomiser les adolescents et redonner dignité aux personnes âgées au Nigéria, au Royaume-Uni et au-delà.',
-    mvLabel:'Ce qui nous anime',
-    mvTitle:'Notre Mission <span class="highlight">&amp; Vision</span>',
-    missionTitle:'Notre mission',
-    missionText:'Autonomiser les jeunes par le mentorat, l\'éducation et le développement du leadership tout en redonnant dignité, espoir et bonheur aux personnes âgées grâce à des soins compatissants et à l\'aide humanitaire.',
-    visionTitle:'Notre vision',
-    visionText:'Construire un monde où aucun enfant n\'est négligé et aucune personne âgée n\'est abandonnée.',
-    valuesLabel:'Ce qui nous guide',
-    valuesTitle:'Nos <span class="highlight">valeurs fondamentales</span>',
-    valuesSub:'Les principes qui guident tout ce que nous faisons.',
-    val1Title:'Compassion',val1Desc:'Nous servons chaque personne avec amour, empathie et soin véritable.',
-    val2Title:'Intégrité',val2Desc:'Nous respectons l\'honnêteté, la transparence et la responsabilité.',
-    val3Title:'Autonomisation',val3Desc:'Nous équipons les gens avec les connaissances, les compétences et la confiance pour réussir.',
-    val4Title:'Excellence',val4Desc:'Nous poursuivons les normes les plus élevées en matière de service et d\'impact.',
-    val5Title:'Respect',val5Desc:'Nous honorons la dignité et la valeur de chaque vie humaine.',
-    val6Title:'Service',val6Desc:'Nous croyons que le vrai leadership commence par le service aux autres.',
-    val7Title:'Collaboration',val7Desc:'Nous créons un impact durable en travaillant avec les communautés et les partenaires.',
-    val8Title:'Espoir',val8Desc:'Nous inspirons la confiance en un avenir meilleur, quels que soient les défis de la vie.',
-    founderLabel:'Notre leader',
-    founderTitle:'Rencontrez notre <span class="highlight">fondatrice</span>',
-    founderSub:'Une vision née de la compassion.',
-    founderBadge:'Fondatrice',
-    founderName:'Tosin AKANO',
-    founderRole:'Fondatrice &amp; Directrice Exécutive',
-    founderP1:'Avec un cœur pour le service et une vision pour la transformation, Tosin AKANO a fondé PHINEHAS GENERATION FOUNDATION en 2016. Sa passion pour l\'autonomisation des jeunes et les soins aux personnes âgées a fait passer l\'organisation d\'une petite initiative à un mouvement atteignant des communautés au Nigeria et au Royaume-Uni.',
-    founderP2:'Leader humanitaire et communautaire dévouée, elle croit que chaque génération mérite l\'espoir et que le changement durable commence par l\'investissement dans les personnes.',
-    founderQuote:'"Former les leaders de demain tout en honorant les héros d\'hier."',
-    founderBtn:'En savoir plus <i class="fas fa-arrow-right"></i>',
-    ctaLabel:'Rejoignez-nous',
-    ctaTitle:'Vous pouvez changer une vie aujourd\'hui',
-    ctaText:'Chaque acte de bonté crée une onde d\'espoir. Que vous soyez bénévole, donateur ou partenaire, vous faites partie d\'un mouvement qui autonomise les adolescents et redonne dignité aux personnes âgées.',
-    ctaBtn1:'<i class="fas fa-heart"></i> Faire un don',
-    ctaBtn2:'<i class="fas fa-hands-helping"></i> Devenir bénévole',
-    footerTag:'Autonomiser les adolescents. Honorer les personnes âgées. Bâtir des communautés meilleures.',
-    footerQuick:'Liens rapides',footerHome:'Accueil',footerAbout:'À propos',footerProgramsLink:'Nos programmes',footerFounder:'Fondatrice',footerNeed:'Le Besoin',footerImpact:'Notre Impact',footerBlog:'Blog / Actualités',footerVolunteer:'Bénévolat',footerContactLink:'Contact',footerDonate:'Don',
-    footerPrograms:'Programmes',footerProg1:'Développement de l\'estime de soi',footerProg2:'Les vrais hommes ne violent pas',footerProg3:'Actions médicales',footerProg4:'Aide communautaire',footerProg5:'Soutien aux veuves',
-    footerContact:'Contact',footerUK:'Bureau UK, Londres',footerNigeria:'Bureau Nigeria, Lagos',
-    footerCopy:'Organisme de bienfaisance enregistré. Tous droits réservés.',footerPrivacy:'Politique de confidentialité'
-  },
-  'de': {
-    navHome:'Startseite',navAbout:'Über uns',navPrograms:'Programme',navFounder:'Gründerin',navNeed:'Der Bedarf',navImpact:'Unsere Wirkung',navBlog:'Blog',navVolunteer:'Mithelfen',navContact:'Kontakt',navDonate:'Spenden',
-    loaderSub:'Über uns',
-    pageHeroEyebrow:'Über uns · Unsere Geschichte',
-    pageHeroTitle:'Eine Vision, die mit<br><span class="highlight">einem Herzen begann.</span>',
-    pageHeroSub:'2016 gründete Frau Tosin AKANO PHINEHAS GENERATION FOUNDATION mit einer einfachen Überzeugung: Jeder junge Mensch verdient Führung, und jeder ältere Mensch verdient Wertschätzung. Dies ist die Geschichte dessen, was diese Überzeugung aufgebaut hat.',
-    pageHeroCta1:'Unsere Geschichte lesen <i class="fas fa-arrow-down"></i>',
-    pageHeroCta2:'Unsere Wirkung sehen <i class="fas fa-arrow-right"></i>',
-    pageHeroBadge:'Seit 2016',
-    storyLabel:'Unsere Geschichte',
-    storyTitle:'Eine Vision, die mit <span class="highlight">einem Herzen</span> begann',
-    storySub:'Und zu einer Bewegung der Hoffnung wurde.',
-    storyP1:'<span class="dropcap">J</span>ede bedeutungsvolle Reise beginnt mit einem einzigen Schritt. Für PHINEHAS GENERATION FOUNDATION wurde dieser Schritt 2016 von Frau Tosin AKANO getan, deren Mitgefühl zum Samen einer Vision wurde, die bis heute Leben verändert.',
-    storyP2:'Zu einer Zeit, als viele Jugendliche still mit geringem Selbstwertgefühl, Depressionen, Gruppenzwang, Missbrauch und Unsicherheit über ihre Zukunft kämpften, erkannte Frau AKANO den dringenden Bedarf an Beratung und Mentoring. Sie glaubte, dass mit der richtigen Unterstützung jeder junge Mensch einen Sinn entdecken kann.',
-    storyP3:'Getrieben von dieser Überzeugung gründete sie PHINEHAS GENERATION FOUNDATION als Plattform, auf der Jugendliche lernen, wachsen und frei Fragen stellen können. Was als kleine Zusammenkünfte begann, entwickelte sich schnell zu Konferenzen, Seminaren, Führungsworkshops und Gemeinschaftsaktionen, die Hunderte von Jugendlichen inspirierten.',
-    storyH3_1:'Ein Meilenstein',
-    storyP4:'Einer der Meilensteine war 2018, als Jugendliche in der Obasanjo Presidential Library in Abeokuta zusammenkamen. Heute haben viele dieser jungen Menschen ihr Studium abgeschlossen und leisten bedeutende Beiträge zur Gesellschaft.',
-    storyHighlight:'"Was als kleine Zusammenkünfte begann, entwickelte sich schnell zu Konferenzen, Seminaren, Führungsworkshops und Gemeinschaftsaktionen, die Hunderte von Jugendlichen inspirierten."',
-    storyH3_2:'Die Vision erweitern',
-    storyP5:'Als die Stiftung ihre Aktivitäten in Abeokuta und später in Lagos ausweitete, wurde ein weiterer Bedarf deutlich. Bei Gemeindebesuchen traf das Team auf viele ältere Menschen, die von der Gesellschaft zurückgelassen worden waren. Einige kämpften mit schlechter Gesundheit, Einsamkeit und finanziellen Schwierigkeiten.',
-    storyP6:'Diese Begegnungen veränderten die Mission der Stiftung. In der Erkenntnis, dass eine wirklich mitfühlende Gesellschaft sowohl für ihre Zukunft als auch für ihre Vergangenheit sorgen muss, weitete PHINEHAS GENERATION FOUNDATION ihren Fokus auf die Altenpflege aus. Medizinische Einsätze, kostenlose Augenuntersuchungen, Kataraktoperationen, Brillen, Lebensmittelverteilung und regelmäßige Wohlfahrtsbesuche wurden zu einem festen Bestandteil.',
-    storyH3_3:'Eine Geschichte der wiederhergestellten Hoffnung',
-    storyP7:'Ein besonders denkwürdiger Einsatz fand in Igbore, Abeokuta, statt, wo Frau Lawal Abeke mit schwerem Katarakt lebensverändernde medizinische Hilfe erhielt. Nach erfolgreicher Behandlung erlangte sie ihr Augenlicht zurück. Ihre Geschichte bleibt eine kraftvolle Erinnerung daran, warum die Stiftung existiert.',
-    storyH3_4:'Blick nach vorn',
-    storyP8:'Im Laufe der Jahre ist PHINEHAS GENERATION FOUNDATION über ihre bescheidenen Anfänge hinausgewachsen. Was als lokale Initiative im Bundesstaat Ogun begann, hat sich auf Lagos ausgeweitet und erreicht heute Gemeinschaften im Vereinigten Königreich.',
-    storyP9:'Heute steht PHINEHAS GENERATION FOUNDATION als Brücke zwischen den Generationen. Wir befähigen Jugendliche, selbstbewusste und verantwortungsbewusste Führungskräfte zu werden, und stellen gleichzeitig sicher, dass ältere Menschen die Würde und den Respekt erhalten, die sie verdienen.',
-    storyP10:'Obwohl unsere Reichweite weiter wächst, bleibt unser Zweck unverändert. Jedes Programm, jede Gemeinschaft, jeder Freiwillige und jedes Leben, das wir berühren, spiegelt unser Engagement wider, eine Gesellschaft aufzubauen, in der kein junger Mensch ohne Führung und kein älterer Mensch vergessen wird.',
-    storyP11:'<strong>Unsere Geschichte wird noch geschrieben.</strong> Mit jedem veränderten Leben und jedem Akt der Freundlichkeit kommen wir unserem Ziel näher, eine Welt zu schaffen, in der Mitgefühl Generationen verbindet und Hoffnung Schwierigkeiten überwindet.',
-    storyQuote:'"Das ist unsere Geschichte. Das ist unser Zweck. Das ist das Vermächtnis, das wir aufbauen — ein Leben, eine Familie und eine Generation nach der anderen."',
-    stat1:'Gründungsjahr',stat2:'Berührte Leben',stat3:'Geführte Jugendliche',stat4:'Erreichte Länder',
-    timelineLabel:'Unser Weg',
-    timelineTitle:'Wichtige <span class="highlight">Meilensteine</span>',
-    timelineSub:'Die Momente, die unsere Mission geprägt haben.',
-    tTitle1:'Gründung der Stiftung',
-    tDesc1:'PHINEHAS GENERATION FOUNDATION wurde von Frau Tosin AKANO in Abeokuta, Bundesstaat Ogun, Nigeria, gegründet.',
-    tTitle2:'Bedeutendes Jugendevent',
-    tDesc2:'Hunderte von Jugendlichen versammelten sich in der Obasanjo Presidential Library in Abeokuta für ein transformatives Jugendevent.',
-    tTitle3:'Expansion nach Lagos',
-    tDesc3:'Die Stiftung erweiterte ihre Aktivitäten nach Lagos und erreichte mehr junge Menschen und Gemeinschaften.',
-    tTitle4:'Altenpflege-Initiative',
-    tDesc4:'Die Mission wurde um die Altenpflege und medizinische Einsätze erweitert.',
-    tTitle5:'Internationale Präsenz',
-    tDesc5:'Die Stiftung etablierte eine Präsenz im Vereinigten Königreich und erweiterte ihre Wirkung über Grenzen hinweg.',
-    tYear6:'Gegenwart',
-    tTitle6:'Fortsetzung der Mission',
-    tDesc6:'Stärkung von Jugendlichen und Wiederherstellung der Würde älterer Menschen in Nigeria, Großbritannien und darüber hinaus.',
-    mvLabel:'Was uns antreibt',
-    mvTitle:'Unsere Mission <span class="highlight">&amp; Vision</span>',
-    missionTitle:'Unsere Mission',
-    missionText:'Junge Menschen durch Mentoring, Bildung und Führungsentwicklung zu befähigen und gleichzeitig älteren Menschen durch mitfühlende Betreuung und humanitäre Hilfe Würde, Hoffnung und Glück zurückzugeben.',
-    visionTitle:'Unsere Vision',
-    visionText:'Eine Welt zu schaffen, in der kein Kind vernachlässigt und kein älterer Mensch verlassen wird.',
-    valuesLabel:'Was uns leitet',
-    valuesTitle:'Unsere <span class="highlight">Kernwerte</span>',
-    valuesSub:'Die Prinzipien, die alles leiten, was wir tun.',
-    val1Title:'Mitgefühl',val1Desc:'Wir dienen jedem Menschen mit Liebe, Empathie und echter Fürsorge.',
-    val2Title:'Integrität',val2Desc:'Wir wahren Ehrlichkeit, Transparenz und Rechenschaftspflicht.',
-    val3Title:'Ermächtigung',val3Desc:'Wir statten Menschen mit dem Wissen, den Fähigkeiten und dem Selbstvertrauen aus, um erfolgreich zu sein.',
-    val4Title:'Exzellenz',val4Desc:'Wir streben nach höchsten Standards in Dienst und Wirkung.',
-    val5Title:'Respekt',val5Desc:'Wir ehren die Würde und den Wert jedes menschlichen Lebens.',
-    val6Title:'Dienst',val6Desc:'Wir glauben, dass wahre Führung mit dem Dienst an anderen beginnt.',
-    val7Title:'Zusammenarbeit',val7Desc:'Wir schaffen nachhaltige Wirkung durch die Zusammenarbeit mit Gemeinschaften und Partnern.',
-    val8Title:'Hoffnung',val8Desc:'Wir wecken Vertrauen in eine bessere Zukunft, unabhängig von den Herausforderungen des Lebens.',
-    founderLabel:'Unsere Leiterin',
-    founderTitle:'Lernen Sie unsere <span class="highlight">Gründerin</span> kennen',
-    founderSub:'Eine Vision, geboren aus Mitgefühl.',
-    founderBadge:'Gründerin',
-    founderName:'Tosin AKANO',
-    founderRole:'Gründerin &amp; Geschäftsführerin',
-    founderP1:'Mit einem Herzen für den Dienst und einer Vision für die Transformation gründete Frau Tosin AKANO 2016 PHINEHAS GENERATION FOUNDATION. Ihre Leidenschaft für die Stärkung junger Menschen und die Betreuung älterer Menschen hat die Organisation von einer kleinen Mentoring-Initiative in Abeokuta zu einer Bewegung geführt, die Gemeinschaften in Nigeria und dem Vereinigten Königreich erreicht.',
-    founderP2:'Eine engagierte humanitäre und Gemeindeleiterin glaubt sie, dass jede Generation Hoffnung verdient und dass nachhaltige Veränderung mit der Investition in Menschen beginnt.',
-    founderQuote:'"Die Führungskräfte von morgen fördern und gleichzeitig die Helden von gestern ehren."',
-    founderBtn:'Mehr erfahren <i class="fas fa-arrow-right"></i>',
-    ctaLabel:'Machen Sie mit',
-    ctaTitle:'Sie können heute ein Leben verändern',
-    ctaText:'Jede noch so kleine Tat der Freundlichkeit erzeugt eine Welle der Hoffnung. Ob Sie sich ehrenamtlich engagieren, spenden oder mit uns zusammenarbeiten — Sie werden Teil einer Bewegung, die Jugendliche stärkt und älteren Menschen Würde zurückgibt.',
-    ctaBtn1:'<i class="fas fa-heart"></i> Jetzt spenden',
-    ctaBtn2:'<i class="fas fa-hands-helping"></i> Freiwilliger werden',
-    footerTag:'Jugendliche stärken. Ältere ehren. Bessere Gemeinschaften aufbauen.',
-    footerQuick:'Schnelllinks',footerHome:'Startseite',footerAbout:'Über uns',footerProgramsLink:'Programme',footerFounder:'Gründerin',footerNeed:'Der Bedarf',footerImpact:'Unsere Wirkung',footerBlog:'Blog / News',footerVolunteer:'Mithelfen',footerContactLink:'Kontakt',footerDonate:'Spenden',
-    footerPrograms:'Programme',footerProg1:'Selbstwertgefühl-Entwicklung',footerProg2:'Echte Männer vergewaltigen nicht',footerProg3:'Medizinische Hilfe',footerProg4:'Gemeindefürsorge',footerProg5:'Witwenunterstützung',
-    footerContact:'Kontakt',footerUK:'Büro UK, London',footerNigeria:'Büro Nigeria, Lagos',
-    footerCopy:'Eingetragene Wohltätigkeitsorganisation. Alle Rechte vorbehalten.',footerPrivacy:'Datenschutzrichtlinie'
-  }
-};
-
-/* STATE */
-let currentLang = localStorage.getItem('phinehasLang') || 'en';
-const langToggle = document.getElementById('langToggle');
-const langDropdown = document.getElementById('langDropdown');
-const currentLangLabel = document.getElementById('currentLangLabel');
-
-function applyLanguage(lang){
-  if(!translations[lang]) lang='en';
-  const dict=translations[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key=el.getAttribute('data-i18n');
-    if(dict[key]!==undefined){
-      if(dict[key].includes('<')) el.innerHTML=dict[key];
-      else el.textContent=dict[key];
-    }
-  });
-  document.querySelectorAll('.lang-dropdown li').forEach(li=>{
-    li.classList.toggle('active-lang',li.dataset.lang===lang);
-    li.setAttribute('aria-selected',li.dataset.lang===lang?'true':'false');
-  });
-  const names={en:'EN',fr:'FR',de:'DE'};
-  currentLangLabel.textContent=names[lang]||'EN';
-  localStorage.setItem('phinehasLang',lang);
-  currentLang=lang;
-  document.documentElement.lang=lang;
-}
-
-if(langToggle) langToggle.addEventListener('click',function(e){
-  e.stopPropagation();
-  const open=langDropdown.classList.toggle('open');
-  langToggle.setAttribute('aria-expanded',open);
-});
-if(langDropdown) langDropdown.querySelectorAll('li').forEach(li=>{
-  li.addEventListener('click',function(){
-    applyLanguage(this.dataset.lang);
-    langDropdown.classList.remove('open');
-    if(langToggle) langToggle.setAttribute('aria-expanded','false');
-  });
-});
-document.addEventListener('click',function(e){
-  if(!e.target.closest('.lang-wrapper')){
-    if(langDropdown) langDropdown.classList.remove('open');
-    if(langToggle) langToggle.setAttribute('aria-expanded','false');
-  }
+/* LOADER */
+window.addEventListener('load',function(){
+  var l=document.getElementById('loader');
+  if(!l)return;
+  setTimeout(function(){
+    l.classList.add('hidden');
+    setTimeout(function(){if(l.parentNode)l.style.display='none';},900);
+  },1400);
 });
 
-/* HEADER + SCROLL PROGRESS */
+/* HEADER */
 var header=document.getElementById('header');
-var scrollProgress=document.getElementById('scrollProgress');
 var lastScroll=0;
 window.addEventListener('scroll',function(){
   var y=window.scrollY;
@@ -1029,10 +1104,6 @@ window.addEventListener('scroll',function(){
     header.classList.toggle('scrolled',y>40);
     if(y>220&&y>lastScroll){header.classList.add('hidden');}
     else{header.classList.remove('hidden');}
-  }
-  if(scrollProgress){
-    var total=document.documentElement.scrollHeight-window.innerHeight;
-    scrollProgress.style.width=(total>0?(y/total)*100:0)+'%';
   }
   var btt=document.getElementById('backToTop');
   if(btt)btt.classList.toggle('visible',y>500);
@@ -1058,15 +1129,57 @@ if(hamburger)hamburger.addEventListener('click',function(e){e.stopPropagation();
 document.querySelectorAll('.nav-menu a').forEach(function(a){a.addEventListener('click',closeNav);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
 
-/* LOADER */
-window.addEventListener('load',function(){
-  var l=document.getElementById('loader');
-  if(!l)return;
-  setTimeout(function(){
-    l.classList.add('hidden');
-    setTimeout(function(){if(l.parentNode)l.style.display='none';},900);
-  },1400);
-});
+/* PARTICLES */
+function initParticles(canvasId,color){
+  var canvas=document.getElementById(canvasId);
+  if(!canvas)return;
+  var ctx=canvas.getContext('2d');
+  var particles=[];
+  function resize(){
+    var parent=canvas.parentElement;
+    canvas.width=parent.offsetWidth;
+    canvas.height=parent.offsetHeight;
+  }
+  function init(){
+    particles=[];
+    var count=Math.min(45,Math.max(20,Math.floor((canvas.width*canvas.height)/20000)));
+    for(var i=0;i<count;i++){
+      particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*1.6+0.4,
+        vx:(Math.random()-0.5)*0.3,
+        vy:(Math.random()-0.5)*0.3,
+        o:Math.random()*0.5+0.2
+      });
+    }
+  }
+  function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p,i){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
+      if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba('+color+','+p.o+')';ctx.fill();
+      for(var j=i+1;j<particles.length;j++){
+        var dx=p.x-particles[j].x,dy=p.y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<110){
+          ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(particles[j].x,particles[j].y);
+          ctx.strokeStyle='rgba('+color+','+(0.06*(1-d/110))+')';ctx.lineWidth=0.5;ctx.stroke();
+        }
+      }
+    });
+    requestAnimationFrame(animate);
+  }
+  var rd;
+  window.addEventListener('resize',function(){clearTimeout(rd);rd=setTimeout(function(){resize();init();},200);});
+  resize();init();animate();
+}
+initParticles('heroParticles','200,148,62');
+initParticles('particles1','224,184,102');
+initParticles('particles2','168,213,176');
+initParticles('particles3','184,84,80');
 
 /* REVEAL */
 if('IntersectionObserver' in window){
@@ -1078,6 +1191,43 @@ if('IntersectionObserver' in window){
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 }else{
   document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+}
+
+/* BAR ANIMATION */
+if('IntersectionObserver' in window){
+  var barObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var bars=en.target.querySelectorAll('.bar-fill');
+        bars.forEach(function(bar,i){setTimeout(function(){bar.classList.add('animated');},i*150);});
+        barObs.unobserve(en.target);
+      }
+    });
+  },{threshold:0.3});
+  document.querySelectorAll('.bar-chart').forEach(function(el){barObs.observe(el);});
+}
+
+/* CHART ANIMATION */
+if('IntersectionObserver' in window){
+  var chartObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var circles=en.target.querySelectorAll('.chart-animate');
+        circles.forEach(function(circle,index){
+          var originalDash=circle.getAttribute('stroke-dasharray');
+          if(originalDash){
+            circle.style.strokeDasharray='0 1000';
+            setTimeout(function(){
+              circle.style.transition='stroke-dasharray 1.8s cubic-bezier(0.4,0,0.2,1) '+(index*0.2)+'s';
+              circle.style.strokeDasharray=originalDash;
+            },300);
+          }
+        });
+        chartObs.unobserve(en.target);
+      }
+    });
+  },{threshold:0.3});
+  document.querySelectorAll('.chart-wrap').forEach(function(el){chartObs.observe(el);});
 }
 
 /* BACK TO TOP */
@@ -1093,9 +1243,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
-
-/* INIT */
-applyLanguage(currentLang);
 
 })();
 </script>
