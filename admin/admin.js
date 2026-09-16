@@ -6,6 +6,12 @@
   'use strict';
 
   // ============================================================
+  // CLOUDINARY CONFIG
+  // ============================================================
+  const CLOUDINARY_CLOUD_NAME = 'dcwof2ngn';
+  const CLOUDINARY_UPLOAD_PRESET = 'Meet_video';
+
+  // ============================================================
   // STATE
   // ============================================================
   let firebase = null;
@@ -179,36 +185,34 @@
     const snapshot = await firebase.getDocs(q);
     const slides = [];
     snapshot.forEach(function (docSnap) {
-      slides.push({ id: docSnap.id, ...docSnap.data() });
+      slides.push(Object.assign({ id: docSnap.id }, docSnap.data()));
     });
 
     if (slides.length === 0) {
       list.innerHTML = emptyState(
         'No slides yet',
-        'Add your first welcome slide to get started.',
-        'addSlideBtn'
+        'Add your first welcome slide to get started.'
       );
-      document.getElementById('addSlideBtn').addEventListener('click', function () { openSlideEditor(null); });
       return;
     }
 
     list.innerHTML = slides.map(function (slide) {
-      return `
-        <div class="slide-card">
-          <div class="slide-thumb">
-            <img src="${slide.image || ''}" alt="" loading="lazy">
-            <span class="slide-order-badge">${slide.order || 0}</span>
-          </div>
-          <div class="slide-body">
-            <div class="slide-quote">"${escapeHtml(slide.quote || '')}"</div>
-            <div class="slide-attribution">${escapeHtml(slide.attribution || '')}</div>
-            <div class="slide-actions">
-              <button class="btn-edit" data-action="edit" data-id="${slide.id}"><i class="fas fa-edit"></i> Edit</button>
-              <button class="btn-delete" data-action="delete" data-id="${slide.id}"><i class="fas fa-trash"></i> Delete</button>
-            </div>
-          </div>
-        </div>
-      `;
+      return [
+        '<div class="slide-card">',
+          '<div class="slide-thumb">',
+            '<img src="' + (slide.image || '') + '" alt="" loading="lazy">',
+            '<span class="slide-order-badge">' + (slide.order || 0) + '</span>',
+          '</div>',
+          '<div class="slide-body">',
+            '<div class="slide-quote">"' + escapeHtml(slide.quote || '') + '"</div>',
+            '<div class="slide-attribution">' + escapeHtml(slide.attribution || '') + '</div>',
+            '<div class="slide-actions">',
+              '<button class="btn-edit" data-action="edit" data-id="' + slide.id + '"><i class="fas fa-edit"></i> Edit</button>',
+              '<button class="btn-delete" data-action="delete" data-id="' + slide.id + '"><i class="fas fa-trash"></i> Delete</button>',
+            '</div>',
+          '</div>',
+        '</div>'
+      ].join('');
     }).join('');
 
     list.querySelectorAll('button[data-action]').forEach(function (btn) {
@@ -229,46 +233,46 @@
 
     modalTitle.textContent = slide ? 'Edit Slide' : 'Add New Slide';
 
-    modalBody.innerHTML = `
-      <div class="form-group">
-        <label>Image</label>
-        <div class="image-upload">
-          <input type="file" accept="image/*" id="slideImageInput">
-          <div class="image-upload-preview" id="slideImagePreview">
-            ${pendingImageUrl
-              ? `<img src="${pendingImageUrl}" alt="">`
-              : `<i class="fas fa-cloud-upload-alt"></i><span>Click to upload image</span>`}
-          </div>
-        </div>
-        <div class="uploading-bar" id="uploadBar" style="display:none;">
-          <div class="uploading-bar-fill" id="uploadBarFill"></div>
-        </div>
-        <div class="image-upload-hint">Recommended: 1920×1080 or larger, JPG/PNG</div>
-      </div>
+    modalBody.innerHTML = [
+      '<div class="form-group">',
+        '<label>Image</label>',
+        '<div class="image-upload">',
+          '<input type="file" accept="image/*" id="slideImageInput">',
+          '<div class="image-upload-preview" id="slideImagePreview">',
+            (pendingImageUrl
+              ? '<img src="' + pendingImageUrl + '" alt="">'
+              : '<i class="fas fa-cloud-upload-alt"></i><span>Click to upload image</span>'),
+          '</div>',
+        '</div>',
+        '<div class="uploading-bar" id="uploadBar" style="display:none;">',
+          '<div class="uploading-bar-fill" id="uploadBarFill"></div>',
+        '</div>',
+        '<div class="image-upload-hint">Recommended: 1920×1080 or larger, JPG/PNG</div>',
+      '</div>',
 
-      <div class="form-group">
-        <label>Quote</label>
-        <textarea id="slideQuote" rows="3" placeholder="Raising tomorrow's leaders...">${slide ? escapeHtml(slide.quote || '') : ''}</textarea>
-      </div>
+      '<div class="form-group">',
+        '<label>Quote</label>',
+        '<textarea id="slideQuote" rows="3" placeholder="Raising tomorrow\'s leaders...">' + (slide ? escapeHtml(slide.quote || '') : '') + '</textarea>',
+      '</div>',
 
-      <div class="form-group">
-        <label>Attribution</label>
-        <input type="text" id="slideAttribution" placeholder="Our founding conviction" value="${slide ? escapeHtml(slide.attribution || '') : ''}">
-      </div>
+      '<div class="form-group">',
+        '<label>Attribution</label>',
+        '<input type="text" id="slideAttribution" placeholder="Our founding conviction" value="' + (slide ? escapeHtml(slide.attribution || '') : '') + '">',
+      '</div>',
 
-      <div class="form-group">
-        <label>Display Order</label>
-        <input type="number" id="slideOrder" placeholder="1" min="1" value="${slide ? (slide.order || 1) : ''}">
-        <div class="image-upload-hint" style="text-align:left;">Lower numbers appear first</div>
-      </div>
-    `;
+      '<div class="form-group">',
+        '<label>Display Order</label>',
+        '<input type="number" id="slideOrder" placeholder="1" min="1" value="' + (slide ? (slide.order || 1) : '') + '">',
+        '<div class="image-upload-hint" style="text-align:left;">Lower numbers appear first</div>',
+      '</div>'
+    ].join('');
 
     setupImageUpload();
     openModal();
   }
 
   // ============================================================
-  // GENERIC LIST (programs, blogPosts, impactStats, testimonials)
+  // GENERIC LIST
   // ============================================================
   async function loadGenericList(collectionName, targetId) {
     const list = document.getElementById(targetId);
@@ -277,7 +281,7 @@
     const snapshot = await firebase.getDocs(firebase.collection(firebase.db, collectionName));
     const items = [];
     snapshot.forEach(function (docSnap) {
-      items.push({ id: docSnap.id, ...docSnap.data() });
+      items.push(Object.assign({ id: docSnap.id }, docSnap.data()));
     });
 
     if (items.length === 0) {
@@ -290,8 +294,7 @@
       const label = labels[collectionName] || 'item';
       list.innerHTML = emptyState(
         'No ' + label + 's yet',
-        'Add your first ' + label + ' to get started.',
-        null
+        'Add your first ' + label + ' to get started.'
       );
       return;
     }
@@ -317,40 +320,42 @@
     const meta = [];
 
     if (collectionName === 'blogPosts') {
-      if (item.topic) meta.push(`<span><i class="fas fa-tag"></i> ${escapeHtml(item.topic)}</span>`);
-      if (item.date) meta.push(`<span><i class="far fa-calendar"></i> ${escapeHtml(item.date)}</span>`);
+      if (item.topic) meta.push('<span><i class="fas fa-tag"></i> ' + escapeHtml(item.topic) + '</span>');
+      if (item.date) meta.push('<span><i class="far fa-calendar"></i> ' + escapeHtml(item.date) + '</span>');
     } else if (collectionName === 'impactStats') {
-      if (item.value) meta.push(`<span><i class="fas fa-hashtag"></i> ${escapeHtml(String(item.value))}</span>`);
+      if (item.value) meta.push('<span><i class="fas fa-hashtag"></i> ' + escapeHtml(String(item.value)) + '</span>');
     } else if (collectionName === 'testimonials') {
-      if (item.author) meta.push(`<span><i class="far fa-user"></i> ${escapeHtml(item.author)}</span>`);
-      if (item.role) meta.push(`<span><i class="fas fa-briefcase"></i> ${escapeHtml(item.role)}</span>`);
+      if (item.author) meta.push('<span><i class="far fa-user"></i> ' + escapeHtml(item.author) + '</span>');
+      if (item.role) meta.push('<span><i class="fas fa-briefcase"></i> ' + escapeHtml(item.role) + '</span>');
     } else if (collectionName === 'programs') {
-      if (item.category) meta.push(`<span><i class="fas fa-folder"></i> ${escapeHtml(item.category)}</span>`);
+      if (item.category) meta.push('<span><i class="fas fa-folder"></i> ' + escapeHtml(item.category) + '</span>');
     }
 
     const plainDesc = typeof desc === 'string'
       ? desc.replace(/<[^>]*>/g, ' ').substring(0, 120)
       : '';
 
-    return `
-      <div class="item-row">
-        ${thumb ? `<div class="item-thumb"><img src="${thumb}" alt="" loading="lazy"></div>` : ''}
-        <div class="item-info">
-          <h4>${escapeHtml(title)}</h4>
-          ${plainDesc ? `<p>${escapeHtml(plainDesc)}</p>` : ''}
-          ${meta.length ? `<div class="item-meta">${meta.join('')}</div>` : ''}
-        </div>
-        <div class="item-actions">
-          <button class="edit" data-action="edit" data-id="${item.id}" title="Edit"><i class="fas fa-edit"></i></button>
-          <button class="delete" data-action="delete" data-id="${item.id}" title="Delete"><i class="fas fa-trash"></i></button>
-        </div>
-      </div>
-    `;
+    return [
+      '<div class="item-row">',
+        (thumb ? '<div class="item-thumb"><img src="' + thumb + '" alt="" loading="lazy"></div>' : ''),
+        '<div class="item-info">',
+          '<h4>' + escapeHtml(title) + '</h4>',
+          (plainDesc ? '<p>' + escapeHtml(plainDesc) + '</p>' : ''),
+          (meta.length ? '<div class="item-meta">' + meta.join('') + '</div>' : ''),
+        '</div>',
+        '<div class="item-actions">',
+          '<button class="edit" data-action="edit" data-id="' + item.id + '" title="Edit"><i class="fas fa-edit"></i></button>',
+          '<button class="delete" data-action="delete" data-id="' + item.id + '" title="Delete"><i class="fas fa-trash"></i></button>',
+        '</div>',
+      '</div>'
+    ].join('');
   }
 
   function openGenericEditor(collectionName, item) {
     editingType = collectionName;
     editingItem = item;
+    pendingImageFile = null;
+    pendingImageUrl = item && item.image ? item.image : '';
 
     const fields = getFieldsForCollection(collectionName);
     const title = item ? 'Edit ' + humanize(collectionName) : 'Add ' + humanize(collectionName);
@@ -399,63 +404,64 @@
 
   function renderField(field, value) {
     if (field.type === 'image') {
-      return `
-        <div class="form-group">
-          <label>${field.label}</label>
-          <div class="image-upload">
-            <input type="file" accept="image/*" data-field-key="${field.key}">
-            <div class="image-upload-preview" data-preview-key="${field.key}">
-              ${value
-                ? `<img src="${value}" alt="">`
-                : `<i class="fas fa-cloud-upload-alt"></i><span>Click to upload image</span>`}
-            </div>
-          </div>
-          <div class="uploading-bar" data-upload-key="${field.key}" style="display:none;">
-            <div class="uploading-bar-fill"></div>
-          </div>
-        </div>
-      `;
+      return [
+        '<div class="form-group">',
+          '<label>' + field.label + '</label>',
+          '<div class="image-upload">',
+            '<input type="file" accept="image/*" data-field-key="' + field.key + '">',
+            '<div class="image-upload-preview" data-preview-key="' + field.key + '">',
+              (value
+                ? '<img src="' + value + '" alt="">'
+                : '<i class="fas fa-cloud-upload-alt"></i><span>Click to upload image</span>'),
+            '</div>',
+          '</div>',
+          '<div class="uploading-bar" data-upload-key="' + field.key + '" style="display:none;">',
+            '<div class="uploading-bar-fill"></div>',
+          '</div>',
+        '</div>'
+      ].join('');
     }
     if (field.type === 'textarea') {
-      return `
-        <div class="form-group">
-          <label>${field.label}</label>
-          <textarea data-field-key="${field.key}" rows="4" placeholder="${field.placeholder || ''}">${escapeHtml(value)}</textarea>
-        </div>
-      `;
+      return [
+        '<div class="form-group">',
+          '<label>' + field.label + '</label>',
+          '<textarea data-field-key="' + field.key + '" rows="4" placeholder="' + (field.placeholder || '') + '">' + escapeHtml(value) + '</textarea>',
+        '</div>'
+      ].join('');
     }
-    return `
-      <div class="form-group">
-        <label>${field.label}</label>
-        <input type="${field.type}" data-field-key="${field.key}" placeholder="${field.placeholder || ''}" value="${escapeHtml(String(value))}">
-      </div>
-    `;
+    return [
+      '<div class="form-group">',
+        '<label>' + field.label + '</label>',
+        '<input type="' + field.type + '" data-field-key="' + field.key + '" placeholder="' + (field.placeholder || '') + '" value="' + escapeHtml(String(value)) + '">',
+      '</div>'
+    ].join('');
   }
 
   function setupImageUpload() {
-    modalBody.querySelectorAll('input[type="file"][data-field-key], input[type="file"]#slideImageInput').forEach(function (input) {
+    const inputs = modalBody.querySelectorAll('input[type="file"]');
+    inputs.forEach(function (input) {
       input.addEventListener('change', function (e) {
         const file = e.target.files[0];
         if (!file) return;
         const key = input.dataset.fieldKey || 'image';
         pendingImageFile = file;
-        showImagePreview(file, key);
+
+        const reader = new FileReader();
+        reader.onload = function (ev) {
+          let preview = null;
+          if (key === 'image' && modalBody.querySelector('#slideImagePreview')) {
+            preview = modalBody.querySelector('#slideImagePreview');
+          } else {
+            preview = modalBody.querySelector('[data-preview-key="' + key + '"]');
+          }
+          if (preview) {
+            preview.innerHTML = '<img src="' + ev.target.result + '" alt="">';
+          }
+          pendingImageUrl = ev.target.result;
+        };
+        reader.readAsDataURL(file);
       });
     });
-  }
-
-  function showImagePreview(file, key) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const preview = key === 'image' && modalBody.querySelector('#slideImagePreview')
-        ? modalBody.querySelector('#slideImagePreview')
-        : modalBody.querySelector('[data-preview-key="' + key + '"]');
-      if (preview) {
-        preview.innerHTML = `<img src="${e.target.result}" alt="">`;
-      }
-      pendingImageUrl = e.target.result;
-    };
-    reader.readAsDataURL(file);
   }
 
   // ============================================================
@@ -465,7 +471,6 @@
     modalSave.classList.add('btn-loading');
 
     try {
-      // If there's a pending image file, upload it first
       let finalImageUrl = pendingImageUrl;
       if (pendingImageFile) {
         showToast('Uploading image...', 'info');
@@ -512,19 +517,39 @@
     });
 
     if (editingType === 'welcomeSlides') {
-      data.quote = (document.getElementById('slideQuote') || {}).value || '';
-      data.attribution = (document.getElementById('slideAttribution') || {}).value || '';
-      data.order = Number((document.getElementById('slideOrder') || {}).value) || 0;
+      const quote = document.getElementById('slideQuote');
+      const attribution = document.getElementById('slideAttribution');
+      const order = document.getElementById('slideOrder');
+      data.quote = quote ? quote.value : '';
+      data.attribution = attribution ? attribution.value : '';
+      data.order = order ? (Number(order.value) || 0) : 0;
     }
 
     return data;
   }
 
+  // ============================================================
+  // CLOUDINARY UPLOAD
+  // ============================================================
   async function uploadImage(file) {
-    const fileName = Date.now() + '_' + file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
-    const storageRef = firebase.ref(firebase.storage, 'admin-uploads/' + fileName);
-    await firebase.uploadBytes(storageRef, file);
-    return await firebase.getDownloadURL(storageRef);
+    const url = 'https://api.cloudinary.com/v1_1/' + CLOUDINARY_CLOUD_NAME + '/image/upload';
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+    formData.append('folder', 'admin-uploads');
+
+    const response = await fetch(url, {
+      method: 'POST',
+      body: formData
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      throw new Error('Cloudinary upload failed: ' + errText);
+    }
+
+    const data = await response.json();
+    return data.secure_url;
   }
 
   // ============================================================
@@ -609,18 +634,18 @@
     return map[str] || str;
   }
 
-  function emptyState(title, subtitle, bindButtonId) {
-    return `
-      <div class="empty-state">
-        <i class="fas fa-inbox"></i>
-        <h3>${escapeHtml(title)}</h3>
-        <p>${escapeHtml(subtitle)}</p>
-      </div>
-    `;
+  function emptyState(title, subtitle) {
+    return [
+      '<div class="empty-state">',
+        '<i class="fas fa-inbox"></i>',
+        '<h3>' + escapeHtml(title) + '</h3>',
+        '<p>' + escapeHtml(subtitle) + '</p>',
+      '</div>'
+    ].join('');
   }
 
   // ============================================================
-  // ADD BUTTONS (top of panels)
+  // ADD BUTTONS
   // ============================================================
   document.getElementById('addSlideBtn').addEventListener('click', function () { openSlideEditor(null); });
   document.getElementById('addProgramBtn').addEventListener('click', function () { openGenericEditor('programs', null); });
